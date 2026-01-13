@@ -1,0 +1,9 @@
+{
+    "name": "themapis",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "serve": "node ./serve.js",
+        "sprites": "spreet --unique --minify-index-file style/sprites/svg style/sprites/themapis && spreet --retina --unique --minify-index-file style/sprites/svg style/sprites/themapis@2x"
+    }
+}
