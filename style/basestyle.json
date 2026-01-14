@@ -145,8 +145,8 @@
             "type": "fill",
             "filter": ["in", ["get", "man_made"], ["literal", ["pier", "bridge"]]],
             "paint": {
-                "fill-opacity": 0.5,
-                "fill-color": "#fff"
+                "fill-opacity": 0.4,
+                "fill-color": "#d0d0d0"
             }
         },
         {
@@ -194,7 +194,7 @@
                 ["in", ["get", "amenity"], ["literal", ["parking"]]]
             ],
             "paint": {
-                "fill-color": "#DEDFE0"
+                "fill-color": "#f0f0f0"
             },
             "minzoom": 12
         },
@@ -552,46 +552,6 @@
             }
         },
         {
-            "id": "railway-casing",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": [
-                "all",
-                ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
-                ["!", ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]]]
-            ],
-            "paint": {
-                "line-width": 2.5,
-                "line-color": "#969CAC",
-                "line-dasharray": [0.1, 1]
-            }
-        },
-        {
-            "id": "railway",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            },
-            "paint": {
-                "line-opacity": [
-                    "case",
-                    ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]], 0.6,
-                    1
-                ],
-                "line-width": [
-                    "case",
-                    ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]], 1.5,
-                    0.8
-                ],
-                "line-color": "#969CAC"
-            }
-        },
-        {
             "id": "path-route",
             "source": "beefsteak",
             "source-layer": "line",
@@ -661,31 +621,63 @@
             "source": "beefsteak",
             "source-layer": "line",
             "type": "line",
-            "filter": ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street"]]],
+            "filter": ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
             "layout": {
                 "line-join": "round",
-                "line-cap": "round"
+                "line-cap": "butt"
             },
             "paint": {
+                "line-opacity": [
+                    "case",
+                    ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], 0.4,
+                    1
+                ],
                 "line-width": [
                     "interpolate", ["linear"], ["zoom"],
-                    6, [
+                    13, 2,
+                    14, [
                         "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 1.5,
-                        1
-                    ],
-                    13, [
-                        "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 3.3,
-                        1
+                        ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], 10.75,
+                        3.75
                     ],
                     18, [
                         "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 3.3,
-                        12
+                        ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], [
+                            "case",
+                            ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 13,
+                            ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 16,
+                            ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 28,
+                            ["in", ["get", "highway"], ["literal", ["motorway"]]], 36,
+                            21
+                        ],
+                        [
+                            "case",
+                            ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 5.5,
+                            ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 8.5,
+                            ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 20.5,
+                            ["in", ["get", "highway"], ["literal", ["motorway"]]], 27.5,
+                            13.5
+                        ]
                     ]
                 ],
-                "line-color": "#bbb"
+                "line-color": [
+                    "case",
+                    ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], "#d0d0d0",
+                    "#d0d0d0"
+                ],
+                "line-dasharray": [
+                    "case",
+                    [
+                        "any",
+                        [
+                            "all",
+                            ["!", ["has", "surface"]],
+                            ["!", ["in", ["get", "highway"], ["literal", ["track", "path"]]]]
+                        ],
+                        ["in", ["get", "surface"], ["literal", ["asphalt", "paved", "paving_stones", "concrete", "wood", "metal", "sett", "bricks", "cobblestone"]]]
+                    ], ["literal", [1]],
+                    ["literal", [0.85, 1]]
+                ]
             },
             "minzoom": 14
         },
@@ -694,7 +686,7 @@
             "source": "beefsteak",
             "source-layer": "line",
             "type": "line",
-            "filter": ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street"]]],
+            "filter": ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
             "layout": {
                 "line-join": "round",
                 "line-cap": "round"
@@ -702,48 +694,71 @@
             "paint": {
                 "line-width": [
                     "interpolate", ["linear"], ["zoom"],
-                    6, [
-                        "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 1.5,
-                        1
-                    ],
-                    13, [
-                        "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 3.3,
-                        1
-                    ],
+                    13, 1,
+                    14, 1.75,
                     18, [
                         "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 3.3,
-                        10
+                        ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 4,
+                        ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 7,
+                        ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 19,
+                        ["in", ["get", "highway"], ["literal", ["motorway"]]], 26,
+                        12
                     ]
                 ],
                 "line-color": [
-                    "step", ["zoom"], "#F7CF8D",
-                    14,  "#fff"
+                    "step", ["zoom"], [
+                        "case",
+                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], "#F7CF8D",
+                        "#cfcfcf"
+                    ],
+                    14,  [
+                        "case",
+                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], "#FFF2DD",
+                        "#fff"
+                    ]
                 ]
             },
             "minzoom": 12
         },
         {
-            "id": "path",
+            "id": "railway-casing",
             "source": "beefsteak",
             "source-layer": "line",
             "type": "line",
-            "filter": ["in", ["get", "highway"], ["literal", ["track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
+            "filter": [
+                "all",
+                ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
+                ["!", ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]]]
+            ],
+            "paint": {
+                "line-width": 2.5,
+                "line-color": "#969CAC",
+                "line-dasharray": [0.1, 1]
+            }
+        },
+        {
+            "id": "railway",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter": ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
             "layout": {
                 "line-join": "round",
                 "line-cap": "round"
             },
             "paint": {
-                "line-width": [
-                    "interpolate", ["linear"], ["zoom"],
-                    6, 0.85,
-                    18, 1
+                "line-opacity": [
+                    "case",
+                    ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]], 0.6,
+                    1
                 ],
-                "line-color": "#729A6A"
-            },
-            "minzoom": 12
+                "line-width": [
+                    "case",
+                    ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]], 1.5,
+                    0.8
+                ],
+                "line-color": "#969CAC"
+            }
         },
         {
             "id": "powerline-casing",
