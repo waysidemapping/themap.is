@@ -135,18 +135,7 @@
             "type": "fill",
             "filter": ["in", ["get", "natural"], ["literal", ["coastline", "water"]]],
             "paint": {
-                "fill-color": "#D9F0FF"
-            }
-        },
-        {
-            "id": "pier-fill",
-            "source": "beefsteak",
-            "source-layer": "area",
-            "type": "fill",
-            "filter": ["in", ["get", "man_made"], ["literal", ["pier", "bridge"]]],
-            "paint": {
-                "fill-opacity": 0.4,
-                "fill-color": "#d0d0d0"
+                "fill-color": "#D4EEFF"
             }
         },
         {
@@ -180,23 +169,8 @@
                 ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]
             ],
             "paint": {
-                "fill-color": "#ddd"
+                "fill-color": "#D6CCCF"
             }
-        },
-        {
-            "id": "parking-fill",
-            "source": "beefsteak",
-            "source-layer": "area",
-            "type": "fill",
-            "filter": [
-                "all",
-                ["!", ["has", "building"]],
-                ["in", ["get", "amenity"], ["literal", ["parking"]]]
-            ],
-            "paint": {
-                "fill-color": "#f0f0f0"
-            },
-            "minzoom": 12
         },
         {
             "id": "coastline",
@@ -215,6 +189,203 @@
                 "line-color": "#BFD3E0",
                 "line-width": 0.4
             }
+        },
+        {
+            "id": "waterway",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter": ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]],
+            "paint": {
+                "line-width": 1.5,
+                "line-color": "#D4EEFF"
+            },
+            "maxzoom": 12
+        },
+        {
+            "id": "route",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter": ["==", ["get", "route"], "ferry"],
+            "paint": {
+                "line-color": "#7EC2FF",
+                "line-dasharray": [4, 4]
+            }
+        },
+        {
+            "id": "barrier-line",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter": [
+                "any",
+                ["has", "barrier"],
+                ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]],
+                ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]
+            ],
+            "paint": {
+                "line-color": "#ddd",
+                "line-width": [
+                    "case",
+                    [
+                        "any",
+                        ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]],
+                        ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]
+                    ], 3,
+                    1
+                ]
+            },
+            "maxzoom": 12
+        },
+        {
+            "id": "path-route",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter": [
+                "all",
+                [
+                    "any",
+                    ["in", "┃hiking┃", ["get", "r.route"]],
+                    ["in", "┃foot┃", ["get", "r.route"]],
+                    ["in", "┃bicycle┃", ["get", "r.route"]],
+                    ["in", "┃horse┃", ["get", "r.route"]],
+                    ["in", "┃mtb┃", ["get", "r.route"]]
+                ],
+                ["!", ["in", "┃road┃", ["get", "r.route"]]],
+                ["has", "highway"]
+            ],
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate", ["linear"], ["zoom"],
+                    6, 1,
+                    18, 2
+                ],
+                "line-color": "#729A6A",
+                "line-dasharray": [0.5,2]
+            },
+            "maxzoom": 12
+        },
+        {
+            "id": "road-route",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter": [
+                "all",
+                ["in", "┃road┃", ["get", "r.route"]],
+                ["has", "highway"]
+            ],
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            },
+            "paint": {
+                "line-width": [
+                    "interpolate", ["linear"], ["zoom"],
+                    6, [
+                        "case",
+                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 1.5,
+                        1
+                    ],
+                    18, [
+                        "case",
+                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 3.3,
+                        0.85
+                    ]
+                ],
+                "line-color": "#F7CF8D"
+            },
+            "maxzoom": 12
+        },
+        {
+            "id": "railway-casing",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter": [
+                "all",
+                ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
+                ["!", ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]]]
+            ],
+            "paint": {
+                "line-width": 2.5,
+                "line-color": "#969CAC",
+                "line-dasharray": [0.1, 1]
+            },
+            "maxzoom": 12
+        },
+        {
+            "id": "railway",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter": ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            },
+            "paint": {
+                "line-opacity": [
+                    "case",
+                    ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]], 0.6,
+                    1
+                ],
+                "line-width": [
+                    "case",
+                    ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]], 1.5,
+                    0.8
+                ],
+                "line-color": "#969CAC"
+            },
+            "maxzoom": 12
+        },
+        {
+            "id": "powerline-casing",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter": [
+                "all",
+                ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
+                ["!", ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]]]
+            ],
+            "layout": {
+                "line-join": "round",
+                "line-cap": "round"
+            },
+            "paint": {
+                "line-width": 1.9,
+                "line-color": "#D4BADE",
+                "line-dasharray": [0, 8]
+            },
+            "maxzoom": 12
+        },
+        {
+            "id": "powerline",
+            "source": "beefsteak",
+            "source-layer": "line",
+            "type": "line",
+            "filter":  ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
+            "paint": {
+                "line-opacity": [
+                    "case",
+                    ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]], 0.6,
+                    1
+                ],
+                "line-width": [
+                    "case",
+                    ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]], 1.75,
+                    0.85
+                ],
+                "line-color": "#D4BADE"
+            },
+            "maxzoom": 12
         },
         {
             "id": "aboriginal_lands-outline",
@@ -502,319 +673,6 @@
                     ["in", "┃2┃", ["get", "r.admin_level"]], ["literal", [10, 1, 2, 1]],
                     ["in", "┃4┃", ["get", "r.admin_level"]], ["literal", [6, 1, 2, 1, 2, 1]],
                     ["literal", [6, 3, 3, 3]]
-                ]
-            }
-        },
-        {
-            "id": "waterway",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]],
-            "paint": {
-                "line-width": 1.5,
-                "line-color": "#D9F0FF"
-            }
-        },
-        {
-            "id": "route",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": ["==", ["get", "route"], "ferry"],
-            "paint": {
-                "line-color": "#7EC2FF",
-                "line-dasharray": [4, 4]
-            }
-        },
-        {
-            "id": "barrier-line",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": [
-                "any",
-                ["has", "barrier"],
-                ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]],
-                ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]
-            ],
-            "paint": {
-                "line-color": "#ddd",
-                "line-width": [
-                    "case",
-                    [
-                        "any",
-                        ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]],
-                        ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]
-                    ], 3,
-                    1
-                ]
-            }
-        },
-        {
-            "id": "path-route",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": [
-                "all",
-                [
-                    "any",
-                    ["in", "┃hiking┃", ["get", "r.route"]],
-                    ["in", "┃foot┃", ["get", "r.route"]],
-                    ["in", "┃bicycle┃", ["get", "r.route"]],
-                    ["in", "┃horse┃", ["get", "r.route"]],
-                    ["in", "┃mtb┃", ["get", "r.route"]]
-                ],
-                ["!", ["in", "┃road┃", ["get", "r.route"]]],
-                ["has", "highway"]
-            ],
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            },
-            "paint": {
-                "line-width": [
-                    "interpolate", ["linear"], ["zoom"],
-                    6, 1,
-                    18, 2
-                ],
-                "line-color": "#729A6A",
-                "line-dasharray": [0.5,2]
-            },
-            "maxzoom": 12
-        },
-        {
-            "id": "road-route",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": [
-                "all",
-                ["in", "┃road┃", ["get", "r.route"]],
-                ["has", "highway"]
-            ],
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            },
-            "paint": {
-                "line-width": [
-                    "interpolate", ["linear"], ["zoom"],
-                    6, [
-                        "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 1.5,
-                        1
-                    ],
-                    18, [
-                        "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 3.3,
-                        0.85
-                    ]
-                ],
-                "line-color": "#F7CF8D"
-            },
-            "maxzoom": 12
-        },
-        {
-            "id": "road-casing",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
-            "layout": {
-                "line-join": "round",
-                "line-cap": "butt"
-            },
-            "paint": {
-                "line-opacity": [
-                    "case",
-                    ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], 0.4,
-                    1
-                ],
-                "line-width": [
-                    "interpolate", ["linear"], ["zoom"],
-                    13, 2,
-                    14, [
-                        "case",
-                        ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], 10.75,
-                        3.75
-                    ],
-                    18, [
-                        "case",
-                        ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], [
-                            "case",
-                            ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 13,
-                            ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 16,
-                            ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 28,
-                            ["in", ["get", "highway"], ["literal", ["motorway"]]], 36,
-                            21
-                        ],
-                        [
-                            "case",
-                            ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 5.5,
-                            ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 8.5,
-                            ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 20.5,
-                            ["in", ["get", "highway"], ["literal", ["motorway"]]], 27.5,
-                            13.5
-                        ]
-                    ]
-                ],
-                "line-color": [
-                    "case",
-                    ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], "#d0d0d0",
-                    "#d0d0d0"
-                ],
-                "line-dasharray": [
-                    "case",
-                    [
-                        "any",
-                        [
-                            "all",
-                            ["!", ["has", "surface"]],
-                            ["!", ["in", ["get", "highway"], ["literal", ["track", "path"]]]]
-                        ],
-                        ["in", ["get", "surface"], ["literal", ["asphalt", "paved", "paving_stones", "concrete", "wood", "metal", "sett", "bricks", "cobblestone"]]]
-                    ], ["literal", [1]],
-                    ["literal", [0.85, 1]]
-                ]
-            },
-            "minzoom": 14
-        },
-        {
-            "id": "road",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            },
-            "paint": {
-                "line-width": [
-                    "interpolate", ["linear"], ["zoom"],
-                    13, 1,
-                    14, 1.75,
-                    18, [
-                        "case",
-                        ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 4,
-                        ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 7,
-                        ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 19,
-                        ["in", ["get", "highway"], ["literal", ["motorway"]]], 26,
-                        12
-                    ]
-                ],
-                "line-color": [
-                    "step", ["zoom"], [
-                        "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], "#F7CF8D",
-                        "#cfcfcf"
-                    ],
-                    14,  [
-                        "case",
-                        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], "#FFF2DD",
-                        "#fff"
-                    ]
-                ]
-            },
-            "minzoom": 12
-        },
-        {
-            "id": "railway-casing",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": [
-                "all",
-                ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
-                ["!", ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]]]
-            ],
-            "paint": {
-                "line-width": 2.5,
-                "line-color": "#969CAC",
-                "line-dasharray": [0.1, 1]
-            }
-        },
-        {
-            "id": "railway",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            },
-            "paint": {
-                "line-opacity": [
-                    "case",
-                    ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]], 0.6,
-                    1
-                ],
-                "line-width": [
-                    "case",
-                    ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]], 1.5,
-                    0.8
-                ],
-                "line-color": "#969CAC"
-            }
-        },
-        {
-            "id": "powerline-casing",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": [
-                "all",
-                ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
-                ["!", ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]]]
-            ],
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            },
-            "paint": {
-                "line-width": 1.9,
-                "line-color": "#D4BADE",
-                "line-dasharray": [0, 8]
-            },
-            "maxzoom": 12
-        },
-        {
-            "id": "powerline",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter":  ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
-            "paint": {
-                "line-opacity": [
-                    "case",
-                    ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]], 0.6,
-                    1
-                ],
-                "line-width": [
-                    "case",
-                    ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]], 1.75,
-                    0.85
-                ],
-                "line-color": "#D4BADE"
-            }
-        },
-        {
-            "id": "building",
-            "source": "beefsteak",
-            "source-layer": "area",
-            "type": "fill-extrusion",
-            "filter": ["all", ["has", "building"], ["!", ["==", ["get", "building"], "no"]]],
-            "paint": {
-                "fill-extrusion-color": "#807974",
-                "fill-extrusion-opacity": 0.4,
-                "fill-extrusion-height": [
-                    "case",
-                    ["has", "height"], ["to-number", ["get", "height"]],
-                    ["has", "building:levels"], ["*", ["to-number", ["get", "building:levels"]], 4],
-                    4
                 ]
             }
         },
