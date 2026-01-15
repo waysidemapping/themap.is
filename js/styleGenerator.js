@@ -65,6 +65,7 @@ const filters = {
       ["==", ["get", "boundary"], "protected_area"],
       ["in", ["get", "leisure"], ["literal", ["nature_reserve", "park"]]]
     ],
+    ["!", ["in", ["get", "protected_area"], ["literal", ["historic_district"]]]],
     ["==", ["get", "maritime"], "yes"]
   ],
  is_military: [
