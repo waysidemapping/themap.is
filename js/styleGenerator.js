@@ -169,7 +169,7 @@ const colors = {
   power_outline: "#F0D5FA",
   power_text: "#54415C",
   station_fill: "#E3E9FA",
-  station_outline: "#A3B0D3",
+  station_outline: "#C2CCE6",
   station_text: "#3F4963",
   water_fill: "#D4EEFF",
   water_outline: "#BFD3E0",
@@ -607,7 +607,7 @@ export function generateStyle(baseStyleJsonString) {
       "line-opacity": 0.75,
       "line-color": [
         "case",
-        ...insetLanduseIds.map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
+        ...insetLanduseIds.toReversed().map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
         "red"
       ],
       "line-width": 3.6,
@@ -637,7 +637,7 @@ export function generateStyle(baseStyleJsonString) {
     "paint": {
       "line-color": [
         "case",
-        ...outlinedLanduseIds.map(id => [filters['is_' + id], colors[id + '_outline']]).flat(),
+        ...outlinedLanduseIds.toReversed().map(id => [filters['is_' + id], colors[id + '_outline']]).flat(),
         "red"
       ],
       "line-width": 0.4
@@ -865,16 +865,17 @@ export function generateStyle(baseStyleJsonString) {
                 ["in", ["get", "boundary"], ["literal", ["administrative"]]],
                 ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
             ], colors.place_major_text,
-            filters.is_aboriginal_lands, colors.aboriginal_lands_text,
-            filters.is_education, colors.education_text,
+            // These should be in roughly the same order as the fill precendence in case of double tagging (e.g. aeroway and military)
             filters.is_ice, colors.ice_text,
             filters.is_maritime_park, colors.maritime_park_text,
+            filters.is_water_area, colors.water_text,
+            filters.is_power, colors.power_text,
+            filters.is_station, colors.station_text,
+            filters.is_education, colors.education_text,
             filters.is_military, colors.military_text,
             filters.is_national_park, colors.national_park_text,
             filters.is_park, colors.park_text,
-            filters.is_power, colors.power_text,
-            filters.is_station, colors.station_text,
-            filters.is_water_area, colors.water_text,
+            filters.is_aboriginal_lands, colors.aboriginal_lands_text,
             colors.text
         ],
         "text-halo-color": colors.text_halo,
