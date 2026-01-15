@@ -94,6 +94,7 @@ const filters = {
     ["!", ["in", ["get", "protected_area"], ["literal", ["national_park", "historic_district"]]]],
     ["!", ["==", ["get", "maritime"], "yes"]]
   ],
+  is_power: ["in", ["get", "power"], ["literal", ["plant", "substation"]]],
   is_power_line: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
   is_power_support:  ["in", ["get", "power"], ["literal", ["catenary_mast", "pole", "portal", "tower"]]],
   is_station: [
@@ -164,6 +165,9 @@ const colors = {
   parking_fill: "#efefef",
   pier_fill: "#fff",
   place_major_text: "#111",
+  power_fill: "#FBF4FE",
+  power_outline: "#F0D5FA",
+  power_text: "#54415C",
   station_fill: "#E3E9FA",
   station_outline: "#A3B0D3",
   station_text: "#3F4963",
@@ -404,7 +408,8 @@ export function generateStyle(baseStyleJsonString) {
     }
   });
 
-  const filledLanduseIds = ["aboriginal_lands", "developed", "park", "national_park", "military", "education", "station", "water", "maritime_park", "ice"];
+  const filledLanduseIds = ["aboriginal_lands", "developed", "park", "national_park", "military", "education", "station", "power", "water", "maritime_park", "ice"];
+  const highZoomFilledLanduseIds = ["developed", "water", "ice"]
   addLayer({
     "id": "landuse-fill",
     "source": "beefsteak",
@@ -413,7 +418,7 @@ export function generateStyle(baseStyleJsonString) {
     "filter": [
       "any",
       ...filledLanduseIds.map(id => {
-        if (id === "developed" || id === "ice" || id === "water") {
+        if (highZoomFilledLanduseIds.includes(id)) {
           return filters['is_' + id];
         }
         return [
@@ -432,9 +437,17 @@ export function generateStyle(baseStyleJsonString) {
     },
     "paint": {
       "fill-color": [
-        "case",
-        ...filledLanduseIds.map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
-        "red"
+        "step", ["zoom"], [
+          "case",
+          ...filledLanduseIds.toReversed().map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
+          "red"
+        ],
+        // Use step function to avoid incorrect coloring due to double tagging (e.g. landuse=industrial + power=plant)
+        12, [
+          "case",
+          ...highZoomFilledLanduseIds.toReversed().map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
+          "red"
+        ]
       ]
     }
   });
@@ -572,7 +585,7 @@ export function generateStyle(baseStyleJsonString) {
     "maxzoom": 12
   });
 
-  const insetLanduseIds = ["aboriginal_lands", "park", "national_park", "military", "education", "station", "maritime_park"];
+  const insetLanduseIds = ["aboriginal_lands", "park", "national_park", "military", "education", "station", "power", "maritime_park"];
   addLayer({
     "id": "landuse-inset",
     "source": "beefsteak",
@@ -603,7 +616,7 @@ export function generateStyle(baseStyleJsonString) {
     "minzoom": 12
   });
 
-  const outlinedLanduseIds = ["ice", "aboriginal_lands", "park", "national_park", "military", "education", "station", "maritime_park"];
+  const outlinedLanduseIds = ["ice", "aboriginal_lands", "park", "national_park", "military", "education", "station", "power", "maritime_park"];
 
   addLayer({
     "id": "landuse-outline",
@@ -795,6 +808,7 @@ export function generateStyle(baseStyleJsonString) {
         filters.is_aboriginal_lands,
         filters.is_education,
         filters.is_park,
+        filters.is_power,
         filters.is_maritime_park,
         filters.is_military,
         filters.is_national_park,
@@ -858,6 +872,7 @@ export function generateStyle(baseStyleJsonString) {
             filters.is_military, colors.military_text,
             filters.is_national_park, colors.national_park_text,
             filters.is_park, colors.park_text,
+            filters.is_power, colors.power_text,
             filters.is_station, colors.station_text,
             filters.is_water_area, colors.water_text,
             colors.text
