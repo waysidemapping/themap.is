@@ -401,6 +401,7 @@ export function generateStyle(baseStyleJsonString) {
       ]
     },
     "paint": {
+      "line-opacity": 0.75,
       "line-color": [
         "case",
         ...outlinedLanduseIds.map(id => [filters[id], colors[id + '_fill']]).flat(),
