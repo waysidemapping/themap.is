@@ -132,6 +132,7 @@ const colors = {
   highway_minor_high_zoom: "#fff",
   highway_casing: "#d0d0d0",
   railway: "#969CAC",
+  tree: "#268726",
   water: "#D4EEFF",
 
   aboriginal_lands_fill: "#FFF8F2",
@@ -656,6 +657,30 @@ export function generateStyle(baseStyleJsonString) {
               ["literal", [6, 3, 3, 3]]
           ]
       }
+  });
+
+  addLayer({
+    "id": "tree",
+    "source": "beefsteak",
+    "source-layer": "point",
+    "type": "circle",
+    "filter": [
+      "==", ["get", "natural"], "tree" 
+    ],
+    "paint": {
+      "circle-radius": [
+        "interpolate", ["exponential", 2], ["zoom"],
+        15, 1.5,
+        22, 192
+      ],
+      "circle-opacity": [
+        "interpolate", ["linear"], ["zoom"],
+        15, 0.2,
+        22, 0.075
+      ],
+      "circle-color": colors.tree,
+    },
+    "minzoom": 15
   });
 
   addLayer({
