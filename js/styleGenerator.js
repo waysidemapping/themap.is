@@ -1,3 +1,82 @@
+const filters = {
+  aboriginal_lands: ["==", ["get", "boundary"], "aboriginal_lands"],
+  developed: ["in", ["get", "landuse"], ["literal", ["residential", "commercial", "industrial", "retail", "brownfield", "garages", "railway"]]],
+  education: [
+      "all",
+      ["!", ["has", "building"]],
+      [
+          "any",
+          ["has", "education"],
+          ["in", ["get", "amenity"], ["literal", ["school", "college", "university"]]],
+          ["in", ["get", "landuse"], ["literal", ["education"]]]
+      ]
+  ],
+  has_bridge: ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]],
+  has_paving: [
+      "any",
+      [
+          "all",
+          ["!", ["has", "surface"]],
+          ["!", ["in", ["get", "highway"], ["literal", ["track", "path"]]]]
+      ],
+      ["in", ["get", "surface"], ["literal", ["asphalt", "paved", "paving_stones", "concrete", "wood", "metal", "sett", "bricks", "cobblestone"]]]
+  ],
+  has_tunnel: ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]],
+  is_aeroway: ["in", ["get", "aeroway"], ["literal", ["runway", "taxiway"]]],
+  is_barrier: ["any", ["has", "barrier"], ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]],
+  is_minor_barrier: ["all", ["has", "barrier"], ["!", ["any", ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]]]],
+  is_highway: ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
+  is_intermittent: ["==", ["get", "intermittent"], "yes"],
+  is_powerline: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
+  is_traintrack: ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
+  is_watercourse: ["in", ["get", "waterway"], ["literal", ["canal", "ditch", "drain", "fish_pass", "flowline", "link", "river", "stream", "tidal_channel"]]],
+  maritime_park: [
+    "all",
+    [
+      "any",
+      ["==", ["get", "boundary"], "protected_area"],
+      ["in", ["get", "leisure"], ["literal", ["nature_reserve", "park"]]]
+    ],
+    ["==", ["get", "maritime"], "yes"]
+  ],
+  military: [
+    "any",
+    ["==", ["get", "landuse"], "military"],
+    ["==", ["get", "military"], "base"]
+  ],
+  national_park: [
+    "all",
+    ["==", ["get", "boundary"], "protected_area"],
+    ["==", ["get", "protected_area"], "national_park"],
+    ["!", ["==", ["get", "maritime"], "yes"]]
+  ],
+  park: [
+    "all",
+    [
+      "any",
+      ["==", ["get", "boundary"], "protected_area"],
+      ["in", ["get", "leisure"], ["literal", ["nature_reserve", "park"]]]
+    ],
+    ["!", ["==", ["get", "protected_area"], "national_park"]],
+    ["!", ["==", ["get", "maritime"], "yes"]]
+  ],
+  station: [
+    "all",
+    ["!", ["has", "building"]],
+    [
+        "any",
+        ["==", ["get", "public_transport"], "station"],
+        ["==", ["get", "aeroway"], "aerodrome"],
+        ["==", ["get", "railway"], "station"]
+    ]
+  ],
+  water: [
+    "any",
+    ["in", ["get", "natural"], ["literal", ["coastline", "water"]]],
+    ["in", ["get", "leisure"], ["literal", ["swimming_pool"]]]
+  ]
+};
+
 const colors = {
   barrier: "#D6CCCF",
   building: "#807974",
@@ -10,7 +89,25 @@ const colors = {
   highway_minor_high_zoom: "#fff",
   highway_casing: "#d0d0d0",
   railway: "#969CAC",
-  water: "#D4EEFF"
+  water: "#D4EEFF",
+
+  aboriginal_lands_fill: "#FFF8F2",
+  aboriginal_lands_outline: "#DAD1C9",
+  developed_fill: "#F6F6F6",
+  education_fill: "#FFF9DB",
+  education_outline: "#DED08C",
+  maritime_park_fill: "#CEECED",
+  maritime_park_outline: "#A4CED0",
+  military_fill: "#FDEFED",
+  military_outline: "#D6BFBC",
+  national_park_fill: "#DAEDD5",
+  national_park_outline: "#A7C5A2",
+  park_fill: "#ECFAE9",
+  park_outline: "#B5D4AF",
+  station_fill: "#E3E9FA",
+  station_outline: "#A3B0D3",
+  water_fill: "#D4EEFF",
+  water_outline: "#BFD3E0"
 };
 
 const lineCasingLayer = {
@@ -20,75 +117,66 @@ const lineCasingLayer = {
   "type": "line",
   "filter": [
     "any",
-    ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
-    ["in", ["get", "aeroway"], ["literal", ["runway", "taxiway"]]],
-    ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
-    ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]]
+    filters.is_traintrack,
+    ["all", [">=", ["zoom"], 14], filters.is_aeroway],
+    ["all", [">=", ["zoom"], 14], filters.is_highway],
+    filters.is_watercourse
   ],
   "layout": {
-      "line-join": "round",
-      "line-cap": "butt"
+    "line-join": "round",
+    "line-cap": "butt"
   },
   "paint": {
-      "line-opacity": [
-          "case",
-          ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], 1,
-          ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], 0.4,
-          1
+    "line-opacity": [
+      "case",
+      filters.is_traintrack, 1,
+      filters.has_bridge, 0.4,
+      1
+    ],
+    "line-width": [
+      "interpolate", ["linear"], ["zoom"],
+      14, [
+        "case",
+        filters.is_traintrack, 2.24,
+        filters.has_bridge, 10.75,
+        filters.is_watercourse, 2,
+        3.75
       ],
-      "line-width": [
-          "interpolate", ["linear"], ["zoom"],
-          14, [
-              "case",
-              ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], 2.24,
-              ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], 10.75,
-              ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]], 2,
-              3.75
-          ],
-          18, [
-              "case",
-              ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], 3,
-              ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]], [
-                  "case",
-                  ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 13,
-                  ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 16,
-                  ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 28,
-                  ["any", ["in", ["get", "highway"], ["literal", ["motorway"]]], ["in", ["get", "aeroway"], ["literal", ["runway"]]]], 36,
-                  21
-              ],
-              [
-                  "case",
-                  ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]], 3,
-                  ["in", ["get", "waterway"], ["literal", ["river", "canal"]]], 13,
-                  ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 5.5,
-                  ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 8.5,
-                  ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 20.5,
-                  ["any", ["in", ["get", "highway"], ["literal", ["motorway"]]], ["in", ["get", "aeroway"], ["literal", ["runway"]]]], 27.5,
-                  13.5
-              ]
-          ]
-      ],
-      "line-color": [
-          "case",
-          ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], colors.railway,
-          colors.highway_casing
-      ],
-      "line-dasharray": [
-          "case",
-          ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], ["literal", [0.4, 1.5]],
-          [
-              "any",
-              [
-                  "all",
-                  ["!", ["has", "surface"]],
-                  ["!", ["in", ["get", "highway"], ["literal", ["track", "path"]]]]
-              ],
-              ["in", ["get", "surface"], ["literal", ["asphalt", "paved", "paving_stones", "concrete", "wood", "metal", "sett", "bricks", "cobblestone"]]]
-          ], ["literal", [1]],
-          ["literal", [0.85, 1]]
+      18, [
+        "case",
+        filters.is_traintrack, 3,
+        filters.has_bridge, [
+            "case",
+            ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 13,
+            ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 16,
+            ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 28,
+            ["any", ["in", ["get", "highway"], ["literal", ["motorway"]]], ["in", ["get", "aeroway"], ["literal", ["runway"]]]], 36,
+            21
+        ],
+        [
+            "case",
+            ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass", "flowline", "link"]]], 3,
+            ["in", ["get", "waterway"], ["literal", ["river", "canal"]]], 13,
+            ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 5.5,
+            ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 8.5,
+            ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 20.5,
+            ["any", ["in", ["get", "highway"], ["literal", ["motorway"]]], ["in", ["get", "aeroway"], ["literal", ["runway"]]]], 27.5,
+            13.5
+        ]
       ]
-  },
-  "minzoom": 14
+    ],
+    "line-color": [
+      "case",
+      filters.is_traintrack, colors.railway,
+      colors.highway_casing
+    ],
+    "line-dasharray": [
+      "case",
+      filters.is_traintrack, ["literal", [0.4, 1.5]],
+      filters.has_paving, ["literal", [1]],
+      ["literal", [0.85, 1]]
+    ]
+  }
 };
 
 const lineLayer = {
@@ -98,22 +186,22 @@ const lineLayer = {
   "type": "line",
   "filter": [
     "any",
-    ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
-    ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
-    ["in", ["get", "aeroway"], ["literal", ["runway", "taxiway"]]],
-    ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
-    ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]],
-    ["any", ["has", "barrier"], ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]]
+    filters.is_traintrack,
+    ["all", [">=", ["zoom"], 12], filters.is_powerline],
+    filters.is_aeroway,
+    ["all", [">=", ["zoom"], 12], filters.is_highway],
+    filters.is_watercourse,
+    filters.is_barrier
   ],
   "layout": {
     "line-join": "round",
     "line-cap": "butt",
     "line-sort-key": [
       "case",
-      ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]], 40,
-      ["any", ["has", "barrier"], ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]], 30,
-      ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], 20,
-      ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]], 10,
+      filters.is_powerline, 40,
+      filters.is_barrier, 30,
+      filters.is_traintrack, 20,
+      filters.is_watercourse, 10,
       ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], -10,
       0
     ]
@@ -123,22 +211,22 @@ const lineLayer = {
       "interpolate", ["linear"], ["zoom"],
       14, [
         "case",
-        ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]], 0.85,
-        ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], 0.8,
-        ["all", ["has", "barrier"], ["!", ["any", ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]]]], 1,
-        ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]], 2,
+        filters.is_powerline, 0.85,
+        filters.is_traintrack, 0.8,
+        filters.is_minor_barrier, 1,
+        filters.is_watercourse, 2,
         1.75
       ],
       18, [
         "case",
-        ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]], 0.85,
-        ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], 0.8,
-        ["all", ["has", "barrier"], ["!", ["any", ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]]]], 1.5,
+        filters.is_powerline, 0.85,
+        filters.is_traintrack, 0.8,
+        filters.is_minor_barrier, 1.5,
         ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 4,
         ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 7,
         ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 19,
         ["any", ["in", ["get", "highway"], ["literal", ["motorway"]]], ["in", ["get", "aeroway"], ["literal", ["runway"]]]], 26,
-        ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]], 6,
+        ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass", "flowline",  "link"]]], 6,
         ["in", ["get", "waterway"], ["literal", ["river", "canal"]]], 16,
         12
       ]
@@ -146,19 +234,19 @@ const lineLayer = {
     "line-color": [
       "step", ["zoom"], [
         "case",
-        ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], colors.railway,
-        ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]], colors.power,
-        ["any", ["has", "barrier"], ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]], colors.barrier,
-        ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]], colors.water,
+        filters.is_traintrack, colors.railway,
+        filters.is_powerline, colors.power,
+        filters.is_barrier, colors.barrier,
+        filters.is_watercourse, colors.water,
         ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major,
         colors.highway_minor
       ],
       14,  [
         "case",
-        ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]], colors.railway,
-        ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]], colors.power,
-        ["any", ["has", "barrier"], ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]], colors.barrier,
-        ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]], colors.water,
+        filters.is_traintrack, colors.railway,
+        filters.is_powerline, colors.power,
+        filters.is_barrier, colors.barrier,
+        filters.is_watercourse, colors.water,
         ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major_high_zoom,
         colors.highway_minor_high_zoom
       ]
@@ -167,18 +255,17 @@ const lineLayer = {
       "case",
       [
         "all",
-        ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]],
-        ["in", ["get", "waterway"], ["literal", ["river", "stream", "canal", "drain", "ditch", "tidal_channel", "fish_pass", "link"]]]
+        filters.has_tunnel,
+        filters.is_watercourse
       ], 0.5,
       1
     ],
     "line-dasharray": [
       "case",
-      ["==", ["get", "intermittent"], "yes"], ["literal", [3, 2]],
+      filters.is_intermittent, ["literal", [3, 2]],
       ["literal", [1]]
     ]
-  },
-  "minzoom": 12
+  }
 };
 
 const structureLayer = {
@@ -227,6 +314,41 @@ export function generateStyle(baseStyleJsonString) {
     let index = style.layers.findIndex(layer => layer.id === id);
     style.layers.splice(index, 0, layer);
   }
+
+  const filledLanduseIds = ["aboriginal_lands", "developed", "park", "national_park", "military", "education", "station", "water", "maritime_park"];
+  insertLayerBefore({
+    "id": "landuse-fill",
+    "source": "beefsteak",
+    "source-layer": "area",
+    "type": "fill",
+    "filter": [
+      "any",
+      ...filledLanduseIds.map(id => {
+        if (id === "developed" || id === "water") {
+          return filters[id];
+        }
+        return [
+          "all",
+          ["<", ["zoom"], 12],
+          filters[id]
+        ]
+      })
+    ],
+    "layout": {
+      "fill-sort-key": [
+        "case",
+        ...filledLanduseIds.map((id, i) => [filters[id], i]).flat(),
+        0
+      ]
+    },
+    "paint": {
+      "fill-color": [
+        "case",
+        ...filledLanduseIds.map(id => [filters[id], colors[id + '_fill']]).flat(),
+        "red"
+      ]
+    }
+  }, 'barrier-fill');
   
   function forTagLayer(layer, tagLayer) {
     let newLayer = Object.assign({}, layer);
@@ -259,5 +381,62 @@ export function generateStyle(baseStyleJsonString) {
     insertLayerBefore(forTagLayer(lineCasingLayer, tagLayer), 'road-route');
     insertLayerBefore(forTagLayer(lineLayer, tagLayer), 'road-route');
   });
+
+  const outlinedLanduseIds = ["aboriginal_lands", "park", "national_park", "military", "education", "station", "maritime_park"];
+  insertLayerBefore({
+    "id": "landuse-inset",
+    "source": "beefsteak",
+    "source-layer": "area",
+    "type": "line",
+    "filter": [
+      "any",
+      ...outlinedLanduseIds.map(id => filters[id])
+    ],
+    "layout": {
+      "line-join": "round",
+      "line-sort-key": [
+        "case",
+        ...outlinedLanduseIds.map((id, i) => [filters[id], i]).flat(),
+        0
+      ]
+    },
+    "paint": {
+      "line-color": [
+        "case",
+        ...outlinedLanduseIds.map(id => [filters[id], colors[id + '_fill']]).flat(),
+        "red"
+      ],
+      "line-width": 3.6,
+      "line-offset": 1.8
+    },
+    "minzoom": 12
+  }, 'boundary-casing');
+
+  insertLayerBefore({
+    "id": "landuse-outline",
+    "source": "beefsteak",
+    "source-layer": "area",
+    "type": "line",
+    "layout": {
+      "line-sort-key": [
+        "case",
+        ...outlinedLanduseIds.map((id, i) => [filters[id], i]).flat(),
+        0
+      ]
+    },
+    "filter": [
+      "any",
+      ...outlinedLanduseIds.map(id => filters[id])
+    ],
+    "paint": {
+      "line-color": [
+        "case",
+        ...outlinedLanduseIds.map(id => [filters[id], colors[id + '_outline']]).flat(),
+        "red"
+      ],
+      "line-width": 0.4
+    }
+  }, 'boundary-casing');
+
   return style;
 }
