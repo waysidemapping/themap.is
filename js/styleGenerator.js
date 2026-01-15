@@ -369,9 +369,9 @@ export function generateStyle(baseStyleJsonString) {
         ["!", ["has", "layer"]],
         ["==", ["get", "layer"], "0"]
       ];
-    } else if (tagLayer === '-2') {
+    } else if (tagLayer === '-3') {
       layerFilter = ["<=", ["to-number", ["get", "layer"], "0"], -2];
-    } else if (tagLayer === '2') {
+    } else if (tagLayer === '3') {
       layerFilter = [">=", ["to-number", ["get", "layer"], "0"], 2];
     } else {
       layerFilter = ["==", ["get", "layer"], tagLayer];
@@ -384,7 +384,7 @@ export function generateStyle(baseStyleJsonString) {
     return newLayer;
   }
 
-  let supportedTagLayers = ["-2","-1","0","1","2"];
+  let supportedTagLayers = ["-3","-2","-1","0","1","2","3"];
   supportedTagLayers.forEach(tagLayer => {
     insertLayerBefore(forTagLayer(structureLayer, tagLayer), 'road-route');
     insertLayerBefore(forTagLayer(lineCasingLayer, tagLayer), 'road-route');
