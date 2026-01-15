@@ -12,6 +12,7 @@ const filters = {
       ]
   ],
   has_bridge: ["all", ["has", "bridge"], ["!", ["==", ["get", "bridge"], "no"]]],
+  has_intermittence: ["==", ["get", "intermittent"], "yes"],
   has_paving: [
       "any",
       [
@@ -21,12 +22,12 @@ const filters = {
       ],
       ["in", ["get", "surface"], ["literal", ["asphalt", "paved", "paving_stones", "concrete", "wood", "metal", "sett", "bricks", "cobblestone"]]]
   ],
+  has_subsurface_location: ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]],
   has_tunnel: ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]],
   is_aeroway: ["in", ["get", "aeroway"], ["literal", ["runway", "taxiway"]]],
   is_barrier: ["any", ["has", "barrier"], ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]],
   is_minor_barrier: ["all", ["has", "barrier"], ["!", ["any", ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]]]],
   is_highway: ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
-  is_intermittent: ["==", ["get", "intermittent"], "yes"],
   is_powerline: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
   is_traintrack: ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
   is_watercourse: ["in", ["get", "waterway"], ["literal", ["canal", "ditch", "drain", "fish_pass", "flowline", "link", "river", "stream", "tidal_channel"]]],
@@ -117,6 +118,7 @@ const lineCasingLayer = {
   "type": "line",
   "filter": [
     "any",
+    ["all", ["<", ["zoom"], 12], filters.is_powerline, ["!", filters.has_subsurface_location]],
     filters.is_traintrack,
     ["all", [">=", ["zoom"], 14], filters.is_aeroway],
     ["all", [">=", ["zoom"], 14], filters.is_highway],
@@ -137,13 +139,15 @@ const lineCasingLayer = {
       "interpolate", ["linear"], ["zoom"],
       14, [
         "case",
-        filters.is_traintrack, 2.24,
+        filters.is_powerline, 1.9,
+        filters.is_traintrack, 2.25,
         filters.has_bridge, 10.75,
         filters.is_watercourse, 2,
         3.75
       ],
       18, [
         "case",
+        filters.is_powerline, 1.9,
         filters.is_traintrack, 3,
         filters.has_bridge, [
             "case",
@@ -167,11 +171,13 @@ const lineCasingLayer = {
     ],
     "line-color": [
       "case",
+      filters.is_powerline, colors.power,
       filters.is_traintrack, colors.railway,
       colors.highway_casing
     ],
     "line-dasharray": [
       "case",
+      filters.is_powerline, ["literal", [1, 8]],
       filters.is_traintrack, ["literal", [0.4, 1.5]],
       filters.has_paving, ["literal", [1]],
       ["literal", [0.85, 1]]
@@ -187,7 +193,7 @@ const lineLayer = {
   "filter": [
     "any",
     filters.is_traintrack,
-    ["all", [">=", ["zoom"], 12], filters.is_powerline],
+    filters.is_powerline,
     filters.is_aeroway,
     ["all", [">=", ["zoom"], 12], filters.is_highway],
     filters.is_watercourse,
@@ -211,7 +217,10 @@ const lineLayer = {
       "interpolate", ["linear"], ["zoom"],
       14, [
         "case",
-        filters.is_powerline, 0.85,
+        filters.is_powerline, [
+          "case", filters.has_subsurface_location, 1.85,
+          0.85
+        ],
         filters.is_traintrack, 0.8,
         filters.is_minor_barrier, 1,
         filters.is_watercourse, 2,
@@ -219,7 +228,10 @@ const lineLayer = {
       ],
       18, [
         "case",
-        filters.is_powerline, 0.85,
+        filters.is_powerline, [
+          "case", filters.has_subsurface_location, 1.85,
+          0.85
+        ],
         filters.is_traintrack, 0.8,
         filters.is_minor_barrier, 1.5,
         ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 4,
@@ -253,16 +265,13 @@ const lineLayer = {
     ],
     "line-opacity": [
       "case",
-      [
-        "all",
-        filters.has_tunnel,
-        filters.is_watercourse
-      ], 0.5,
+      ["all", filters.has_tunnel, filters.is_watercourse], 0.5,
+      ["all", filters.has_subsurface_location, filters.is_powerline], 0.6,
       1
     ],
     "line-dasharray": [
       "case",
-      filters.is_intermittent, ["literal", [3, 2]],
+      filters.has_intermittence, ["literal", [3, 2]],
       ["literal", [1]]
     ]
   }

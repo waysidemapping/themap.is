@@ -127,48 +127,6 @@
             "maxzoom": 12
         },
         {
-            "id": "powerline-casing",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": [
-                "all",
-                ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
-                ["!", ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]]]
-            ],
-            "layout": {
-                "line-join": "round",
-                "line-cap": "round"
-            },
-            "paint": {
-                "line-width": 1.9,
-                "line-color": "#D4BADE",
-                "line-dasharray": [0, 8]
-            },
-            "maxzoom": 12
-        },
-        {
-            "id": "powerline",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter":  ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
-            "paint": {
-                "line-opacity": [
-                    "case",
-                    ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]], 0.6,
-                    1
-                ],
-                "line-width": [
-                    "case",
-                    ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]], 1.75,
-                    0.85
-                ],
-                "line-color": "#D4BADE"
-            },
-            "maxzoom": 12
-        },
-        {
             "id": "boundary-casing",
             "source": "beefsteak",
             "source-layer": "line",
