@@ -18,21 +18,6 @@
             }
         },
         {
-            "id": "barrier-fill",
-            "source": "beefsteak",
-            "source-layer": "area",
-            "type": "fill",
-            "filter": [
-                "any",
-                ["has", "barrier"],
-                ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]],
-                ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]
-            ],
-            "paint": {
-                "fill-color": "#D6CCCF"
-            }
-        },
-        {
             "id": "coastline",
             "source": "beefsteak",
             "source-layer": "line",
@@ -48,17 +33,6 @@
             "paint": {
                 "line-color": "#BFD3E0",
                 "line-width": 0.4
-            }
-        },
-        {
-            "id": "route",
-            "source": "beefsteak",
-            "source-layer": "line",
-            "type": "line",
-            "filter": ["==", ["get", "route"], "ferry"],
-            "paint": {
-                "line-color": "#7EC2FF",
-                "line-dasharray": [4, 4]
             }
         },
         {

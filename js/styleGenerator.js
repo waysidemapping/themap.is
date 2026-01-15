@@ -26,6 +26,8 @@ const filters = {
   has_tunnel: ["all", ["has", "tunnel"], ["!", ["==", ["get", "tunnel"], "no"]]],
   is_aeroway: ["in", ["get", "aeroway"], ["literal", ["runway", "taxiway"]]],
   is_barrier: ["any", ["has", "barrier"], ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]],
+  is_building: ["all", ["has", "building"], ["!", ["==", ["get", "building"], "no"]]],
+  is_ferry: ["==", ["get", "route"], "ferry"],
   is_minor_barrier: ["all", ["has", "barrier"], ["!", ["any", ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]], ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]]]],
   is_highway: ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
   is_powerline: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
@@ -81,6 +83,7 @@ const filters = {
 const colors = {
   barrier: "#D6CCCF",
   building: "#807974",
+  ferry: "#7EC2FF",
   parking: "#f0f0f0",
   pier: "#fff",
   power: "#D4BADE",
@@ -192,6 +195,7 @@ const lineLayer = {
   "type": "line",
   "filter": [
     "any",
+    filters.is_ferry,
     filters.is_traintrack,
     filters.is_powerline,
     filters.is_aeroway,
@@ -204,9 +208,10 @@ const lineLayer = {
     "line-cap": "butt",
     "line-sort-key": [
       "case",
-      filters.is_powerline, 40,
-      filters.is_barrier, 30,
-      filters.is_traintrack, 20,
+      filters.is_powerline, 50,
+      filters.is_barrier, 40,
+      filters.is_traintrack, 30,
+      filters.is_ferry, 20,
       filters.is_watercourse, 10,
       ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], -10,
       0
@@ -217,6 +222,7 @@ const lineLayer = {
       "interpolate", ["linear"], ["zoom"],
       14, [
         "case",
+        filters.is_ferry, 1,
         filters.is_powerline, [
           "case", filters.has_subsurface_location, 1.85,
           0.85
@@ -228,6 +234,7 @@ const lineLayer = {
       ],
       18, [
         "case",
+        filters.is_ferry, 2,
         filters.is_powerline, [
           "case", filters.has_subsurface_location, 1.85,
           0.85
@@ -246,6 +253,7 @@ const lineLayer = {
     "line-color": [
       "step", ["zoom"], [
         "case",
+        filters.is_ferry, colors.ferry,
         filters.is_traintrack, colors.railway,
         filters.is_powerline, colors.power,
         filters.is_barrier, colors.barrier,
@@ -255,6 +263,7 @@ const lineLayer = {
       ],
       14,  [
         "case",
+        filters.is_ferry, colors.ferry,
         filters.is_traintrack, colors.railway,
         filters.is_powerline, colors.power,
         filters.is_barrier, colors.barrier,
@@ -271,6 +280,7 @@ const lineLayer = {
     ],
     "line-dasharray": [
       "case",
+      filters.is_ferry, ["literal", [4, 4]],
       filters.has_intermittence, ["literal", [3, 2]],
       ["literal", [1]]
     ]
@@ -284,32 +294,36 @@ const structureLayer = {
     "type": "fill",
     "filter": [
       "any",
-      ["has", "building"],
-      ["in", ["get", "man_made"], ["literal", ["pier", "bridge"]]],
-      ["in", ["get", "amenity"], ["literal", ["parking"]]]
+      filters.is_building,
+      filters.is_barrier,
+      ["in", ["get", "amenity"], ["literal", ["parking"]]],
+      ["in", ["get", "man_made"], ["literal", ["pier", "bridge"]]]
     ],
     "layout": {
       "fill-sort-key": [
         "case",
-        ["has", "building"], 2,
-        ["in", ["get", "amenity"], ["literal", ["parking"]]], 1,
+        filters.is_building, 30,
+        filters.is_barrier, 20,
+        ["in", ["get", "amenity"], ["literal", ["parking"]]], 10,
         0
       ]
     },
     "paint": {
       "fill-opacity": [
         "case",
-        ["has", "building"], 0.6,
+        filters.is_building, 0.6,
         ["in", ["get", "man_made"], ["literal", ["bridge"]]], 0.4,
         ["in", ["get", "man_made"], ["literal", ["pier"]]], 0.6,
         1
       ],
       "fill-color": [
         "case",
-        ["has", "building"], colors.building,
+        filters.is_building, colors.building,
+        filters.is_barrier, colors.barrier,
+        ["in", ["get", "amenity"], ["literal", ["parking"]]], colors.parking,
         ["in", ["get", "man_made"], ["literal", ["bridge"]]], colors.highway_casing,
         ["in", ["get", "man_made"], ["literal", ["pier"]]], colors.pier,
-        colors.parking
+        "red"
       ]
     }
 };
@@ -357,7 +371,7 @@ export function generateStyle(baseStyleJsonString) {
         "red"
       ]
     }
-  }, 'barrier-fill');
+  }, 'coastline');
   
   function forTagLayer(layer, tagLayer) {
     let newLayer = Object.assign({}, layer);
