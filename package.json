@@ -3,7 +3,11 @@
     "type": "module",
     "version": "0.0.1",
     "scripts": {
+        "build": "rm -rf dist/ && mkdir -p dist/maplibre && cp -a node_modules/maplibre-gl/dist/. dist/maplibre/",
         "serve": "node ./serve.js",
         "sprites": "spreet --unique --minify-index-file style/sprites/svg style/sprites/themapis && spreet --retina --unique --minify-index-file style/sprites/svg style/sprites/themapis@2x"
+    },
+    "devDependencies": {
+        "maplibre-gl": "~5.16.0"
     }
 }
