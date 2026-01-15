@@ -122,10 +122,7 @@ const filters = {
 const colors = {
   background: "#fff",
   barrier: "#D6CCCF",
-  building: "#807974",
   ferry: "#7EC2FF",
-  parking: "#f0f0f0",
-  pier: "#fff",
   power: "#D4BADE",
   highway_major: "#F7CF8D",
   highway_major_high_zoom: "#FFF2DD",
@@ -138,7 +135,8 @@ const colors = {
 
   aboriginal_lands_fill: "#FFF8F2",
   aboriginal_lands_outline: "#DAD1C9",
-  developed_fill: "#F6F6F6",
+  building_fill: "#807974",
+  developed_fill: "#f9f9f9",
   education_fill: "#FFF9DB",
   education_outline: "#DED08C",
   maritime_park_fill: "#CEECED",
@@ -149,6 +147,8 @@ const colors = {
   national_park_outline: "#A7C5A2",
   park_fill: "#ECFAE9",
   park_outline: "#B5D4AF",
+  parking_fill: "#efefef",
+  pier_fill: "#fff",
   station_fill: "#E3E9FA",
   station_outline: "#A3B0D3",
   water_fill: "#D4EEFF",
@@ -353,18 +353,18 @@ const structureLayer = {
     "paint": {
       "fill-opacity": [
         "case",
-        filters.is_building, 0.6,
+        filters.is_building, 0.4,
         ["in", ["get", "man_made"], ["literal", ["bridge"]]], 0.4,
         ["in", ["get", "man_made"], ["literal", ["pier"]]], 0.6,
         1
       ],
       "fill-color": [
         "case",
-        filters.is_building, colors.building,
+        filters.is_building, colors.building_fill,
         filters.is_barrier, colors.barrier,
-        ["in", ["get", "amenity"], ["literal", ["parking"]]], colors.parking,
+        ["in", ["get", "amenity"], ["literal", ["parking"]]], colors.parking_fill,
         ["in", ["get", "man_made"], ["literal", ["bridge"]]], colors.highway_casing,
-        ["in", ["get", "man_made"], ["literal", ["pier"]]], colors.pier,
+        ["in", ["get", "man_made"], ["literal", ["pier"]]], colors.pier_fill,
         "red"
       ]
     }
