@@ -82,7 +82,7 @@ const filters = {
   is_natural_area: [
     "any",
     ["in", ["get", "place"], ["literal", ["ocean", "sea", "island", "islet", "archipelago"]]],
-    ["in", ["get", "natural"], ["literal", ["bay", "desert", "mountain_range", "peninsula", "strait", "valley", "water"]]]
+    ["in", ["get", "natural"], ["literal", ["bay", "desert", "glacier", "mountain_range", "peninsula", "strait", "valley", "water"]]]
   ],
   is_park: [
     "all",
@@ -91,7 +91,7 @@ const filters = {
       ["==", ["get", "boundary"], "protected_area"],
       ["in", ["get", "leisure"], ["literal", ["nature_reserve", "park"]]]
     ],
-    ["!", ["==", ["get", "protected_area"], "national_park"]],
+    ["!", ["in", ["get", "protected_area"], ["literal", ["national_park", "historic_district"]]]],
     ["!", ["==", ["get", "maritime"], "yes"]]
   ],
   is_power_line: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
@@ -107,6 +107,7 @@ const filters = {
     ]
   ],
   is_railway_track: ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
+  is_ice: ["in", ["get", "natural"], ["literal", ["glacier"]]],
   is_water: [
     "any",
     ["in", ["get", "natural"], ["literal", ["coastline", "water"]]],
@@ -116,12 +117,15 @@ const filters = {
   is_water_area: [
     "any",
     ["in", ["get", "place"], ["literal", ["ocean", "sea"]]],
-    ["in", ["get", "natural"], ["literal", ["bay", "desert", "strait", "water"]]]
+    ["in", ["get", "natural"], ["literal", ["bay", "strait", "water"]]]
   ]
 };
 
 const colors = {
   background: "#fff",
+  text_halo: "#fff",
+  text: "#555",
+
   barrier: "#D6CCCF",
   ferry: "#7EC2FF",
   power: "#D4BADE",
@@ -136,22 +140,33 @@ const colors = {
 
   aboriginal_lands_fill: "#FFF8F2",
   aboriginal_lands_outline: "#DAD1C9",
+  aboriginal_lands_text: "#6B533F",
   building_fill: "#807974",
   developed_fill: "#f9f9f9",
   education_fill: "#FFF9DB",
   education_outline: "#DED08C",
+  education_text: "#5F572B",
+  ice_fill: "#FAFDFF",
+  ice_outline: "#C2DEED",
+  ice_text: "#6193AE",
   maritime_park_fill: "#CEECED",
   maritime_park_outline: "#A4CED0",
+  maritime_park_text: "#3B6769",
   military_fill: "#FDEFED",
   military_outline: "#D6BFBC",
+  military_text: "#624946",
   national_park_fill: "#DAEDD5",
   national_park_outline: "#A7C5A2",
+  national_park_text: "#3C5936",
   park_fill: "#ECFAE9",
   park_outline: "#B5D4AF",
+  park_text: "#46693F",
   parking_fill: "#efefef",
   pier_fill: "#fff",
+  place_major_text: "#111",
   station_fill: "#E3E9FA",
   station_outline: "#A3B0D3",
+  station_text: "#3F4963",
   water_fill: "#D4EEFF",
   water_outline: "#BFD3E0",
   water_text: "#114566"
@@ -168,7 +183,7 @@ const lineCasingLayer = {
     filters.is_railway_track,
     ["all", [">=", ["zoom"], 14], filters.is_aeroway],
     ["all", [">=", ["zoom"], 14], filters.is_highway],
-    filters.is_watercourse
+    ["all", filters.is_watercourse, ["any", filters.has_tunnel, filters.has_bridge]]
   ],
   "layout": {
     "line-join": "round",
@@ -205,7 +220,7 @@ const lineCasingLayer = {
         ],
         [
             "case",
-            ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass", "flowline", "link"]]], 3,
+            ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass", "flowline", "link"]]], 1,
             ["in", ["get", "waterway"], ["literal", ["river", "canal"]]], 13,
             ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 5.5,
             ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 8.5,
@@ -256,7 +271,8 @@ const lineLayer = {
       filters.is_railway_track, 30,
       filters.is_ferry, 20,
       filters.is_watercourse, 10,
-      ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], -10,
+      ["in", ["get", "highway"], ["literal", ["motorway", "trunk"]]], 5,
+      ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk_link"]]], -5,
       0
     ]
   },
@@ -288,7 +304,7 @@ const lineLayer = {
         ["in", ["get", "highway"], ["literal", ["service", "track", "cycleway"]]], 7,
         ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk", "trunk_link", "primary", "secondary", "tertiary"]]], 19,
         ["any", ["in", ["get", "highway"], ["literal", ["motorway"]]], ["in", ["get", "aeroway"], ["literal", ["runway"]]]], 26,
-        ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass", "flowline"]]], 6,
+        ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass", "flowline"]]], 4,
         ["in", ["get", "waterway"], ["literal", ["river", "canal"]]], 16,
         12
       ]
@@ -317,14 +333,14 @@ const lineLayer = {
     ],
     "line-opacity": [
       "case",
-      ["all", filters.has_tunnel, filters.is_watercourse], 0.5,
-      ["all", filters.has_subsurface_location, filters.is_power_line], 0.6,
+      ["all", filters.is_watercourse, filters.has_tunnel, ["!", filters.has_intermittence]], 0.5,
+      ["all", filters.is_power_line, filters.has_subsurface_location], 0.6,
       1
     ],
     "line-dasharray": [
       "case",
       filters.is_ferry, ["literal", [4, 4]],
-      filters.has_intermittence, ["literal", [3, 2]],
+      filters.has_intermittence, ["literal", [2, 2]],
       ["literal", [1]]
     ]
   }
@@ -388,7 +404,7 @@ export function generateStyle(baseStyleJsonString) {
     }
   });
 
-  const filledLanduseIds = ["aboriginal_lands", "developed", "park", "national_park", "military", "education", "station", "water", "maritime_park"];
+  const filledLanduseIds = ["aboriginal_lands", "developed", "park", "national_park", "military", "education", "station", "water", "maritime_park", "ice"];
   addLayer({
     "id": "landuse-fill",
     "source": "beefsteak",
@@ -397,7 +413,7 @@ export function generateStyle(baseStyleJsonString) {
     "filter": [
       "any",
       ...filledLanduseIds.map(id => {
-        if (id === "developed" || id === "water") {
+        if (id === "developed" || id === "ice" || id === "water") {
           return filters['is_' + id];
         }
         return [
@@ -556,7 +572,7 @@ export function generateStyle(baseStyleJsonString) {
     "maxzoom": 12
   });
 
-  const outlinedLanduseIds = ["aboriginal_lands", "park", "national_park", "military", "education", "station", "maritime_park"];
+  const insetLanduseIds = ["aboriginal_lands", "park", "national_park", "military", "education", "station", "maritime_park"];
   addLayer({
     "id": "landuse-inset",
     "source": "beefsteak",
@@ -564,13 +580,13 @@ export function generateStyle(baseStyleJsonString) {
     "type": "line",
     "filter": [
       "any",
-      ...outlinedLanduseIds.map(id => filters['is_' + id])
+      ...insetLanduseIds.map(id => filters['is_' + id])
     ],
     "layout": {
       "line-join": "round",
       "line-sort-key": [
         "case",
-        ...outlinedLanduseIds.map((id, i) => [filters['is_' + id], i]).flat(),
+        ...insetLanduseIds.map((id, i) => [filters['is_' + id], i]).flat(),
         0
       ]
     },
@@ -578,7 +594,7 @@ export function generateStyle(baseStyleJsonString) {
       "line-opacity": 0.75,
       "line-color": [
         "case",
-        ...outlinedLanduseIds.map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
+        ...insetLanduseIds.map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
         "red"
       ],
       "line-width": 3.6,
@@ -586,6 +602,8 @@ export function generateStyle(baseStyleJsonString) {
     },
     "minzoom": 12
   });
+
+  const outlinedLanduseIds = ["ice", "aboriginal_lands", "park", "national_park", "military", "education", "station", "maritime_park"];
 
   addLayer({
     "id": "landuse-outline",
@@ -612,37 +630,37 @@ export function generateStyle(baseStyleJsonString) {
       "line-width": 0.4
     }
   });
-    addLayer({
-      "id": "boundary-casing",
-      "source": "beefsteak",
-      "source-layer": "line",
-      "type": "line",
-      "filter": [
-          "all",
-          ["in", "┃administrative┃", ["get", "r.boundary"]],
-          [
-              "any",
-              ["in", "┃2┃", ["get", "r.admin_level"]],
-              ["in", "┃4┃", ["get", "r.admin_level"]],
-              ["in", "┃6┃", ["get", "r.admin_level"]],
-              ["in", "┃8┃", ["get", "r.admin_level"]]
-          ],
-          ["!", ["==", ["get", "maritime"], "yes"]]
-      ],
-      "paint": {
-          "line-color": "#fff",
-          "line-opacity": 0.5,
-          "line-width": [
-              "case",
-              [
-                  "any",
-                  ["in", "┃6┃", ["get", "r.admin_level"]],
-                  ["in", "┃8┃", ["get", "r.admin_level"]]
-              ], 2,
-              ["in", "┃4┃", ["get", "r.admin_level"]], 2.5,
-              3
-          ]
-      }
+  addLayer({
+    "id": "boundary-casing",
+    "source": "beefsteak",
+    "source-layer": "line",
+    "type": "line",
+    "filter": [
+        "all",
+        ["in", "┃administrative┃", ["get", "r.boundary"]],
+        [
+            "any",
+            ["in", "┃2┃", ["get", "r.admin_level"]],
+            ["in", "┃4┃", ["get", "r.admin_level"]],
+            ["in", "┃6┃", ["get", "r.admin_level"]],
+            ["in", "┃8┃", ["get", "r.admin_level"]]
+        ],
+        ["!", ["==", ["get", "maritime"], "yes"]]
+    ],
+    "paint": {
+        "line-color": "#fff",
+        "line-opacity": 0.5,
+        "line-width": [
+            "case",
+            [
+                "any",
+                ["in", "┃6┃", ["get", "r.admin_level"]],
+                ["in", "┃8┃", ["get", "r.admin_level"]]
+            ], 2,
+            ["in", "┃4┃", ["get", "r.admin_level"]], 2.5,
+            3
+        ]
+    }
   });
   addLayer({
       "id": "boundary",
@@ -731,9 +749,9 @@ export function generateStyle(baseStyleJsonString) {
         "text-color": [
             "case",
             filters.is_watercourse, colors.water_text,
-            "Black"
+            colors.text
         ],
-        "text-halo-color": "#fff",
+        "text-halo-color": colors.text_halo,
         "text-halo-width": 1
     }
   });
@@ -781,7 +799,8 @@ export function generateStyle(baseStyleJsonString) {
         filters.is_military,
         filters.is_national_park,
         filters.is_natural_area,
-        filters.is_station
+        filters.is_station,
+        filters.is_developed
     ],
     "layout": {
         "symbol-placement": "point",
@@ -789,7 +808,7 @@ export function generateStyle(baseStyleJsonString) {
         "text-size":[
             "case",
             filters.is_natural_area, 10,
-            11
+            10.5
         ],
         "text-transform":[
             "case",
@@ -831,11 +850,19 @@ export function generateStyle(baseStyleJsonString) {
                 "all",
                 ["in", ["get", "boundary"], ["literal", ["administrative"]]],
                 ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
-            ], "#111",
+            ], colors.place_major_text,
+            filters.is_aboriginal_lands, colors.aboriginal_lands_text,
+            filters.is_education, colors.education_text,
+            filters.is_ice, colors.ice_text,
+            filters.is_maritime_park, colors.maritime_park_text,
+            filters.is_military, colors.military_text,
+            filters.is_national_park, colors.national_park_text,
+            filters.is_park, colors.park_text,
+            filters.is_station, colors.station_text,
             filters.is_water_area, colors.water_text,
-            "#555"
+            colors.text
         ],
-        "text-halo-color": colors.background,
+        "text-halo-color": colors.text_halo,
         "text-halo-width": 1
     }
   });
