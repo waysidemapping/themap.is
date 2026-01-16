@@ -62,6 +62,14 @@ const filters = {
       ]
     ]
   ],
+  is_parking_lot: [
+    "all",
+    ["!", ["has", "building"]],
+    ["!", ["in", ["get", "parking"], ["literal", ["multi-storey", "underground"]]]],
+    ["in", ["get", "amenity"], ["literal", ["parking"]]]
+  ],
+  is_bridge: ["in", ["get", "man_made"], ["literal", ["bridge"]]],
+  is_pier: ["in", ["get", "man_made"], ["literal", ["pier"]]],
   is_highway: ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
   is_ice: ["in", ["get", "natural"], ["literal", ["glacier"]]],
   is_landform_area_poi: [
@@ -79,7 +87,7 @@ const filters = {
     ["!", ["in", ["get", "protected_area"], ["literal", ["historic_district"]]]],
     ["==", ["get", "maritime"], "yes"]
   ],
- is_military: [
+  is_military: [
     "any",
     ["==", ["get", "landuse"], "military"],
     ["==", ["get", "military"], "base"]
@@ -115,19 +123,23 @@ const filters = {
     ]
   ],
   is_swimming_pool: ["==", ["get", "leisure"], "swimming_pool"],
+  is_water_area_poi: [
+    "any",
+    ["in", ["get", "place"], ["literal", ["ocean", "sea"]]],
+    ["in", ["get", "natural"], ["literal", ["bay", "strait", "water"]]]
+  ],
   is_water_coastal: ["==", ["get", "natural"], "coastline"],
-  is_water_inland: ["==", ["get", "natural"], "water"],
+  is_water_structure: [
+    "all",
+    ["==", ["get", "natural"], "water"],
+    [">", ["to-number", ["get", "layer"], "0"], 0]
+  ],
   is_water_surface: [
     "all",
     ["==", ["get", "natural"], "water"],
     ["<=", ["to-number", ["get", "layer"], "0"], 0]
   ],
   is_watercourse: ["in", ["get", "waterway"], ["literal", ["canal", "ditch", "drain", "fish_pass", "river", "stream", "tidal_channel"]]],
-  is_water_area_poi: [
-    "any",
-    ["in", ["get", "place"], ["literal", ["ocean", "sea"]]],
-    ["in", ["get", "natural"], ["literal", ["bay", "strait", "water"]]]
-  ]
 };
 
 const colors = {
@@ -179,14 +191,15 @@ const colors = {
   station_fill: "#E3E9FA",
   station_outline: "#C2CCE6",
   station_text: "#3F4963",
-  water: "#D4EEFF",
-  water_text: "#114566",
-  water_coastal_fill: "#D4EEFF",
-  water_outline: "#BFD3E0",
-  water_inland_fill: "#D4EEFF",
-  water_surface_fill: "#D4EEFF",
   swimming_pool_fill: "#C4F1FF",
   swimming_pool_outline: "#BDE0EB",
+  water: "#D4EEFF",
+  water_outline: "#BFD3E0",
+  water_text: "#114566",
+  water_coastal_fill: "#D4EEFF",
+  water_structure_fill: "#D4EEFF",
+  water_surface_fill: "#D4EEFF",
+  water_tunnel: "#C8E0F0",
 };
 
 const lineLayerWidth = [
@@ -338,7 +351,7 @@ const lineLayer = {
         filters.is_barrier, colors.barrier,
         filters.is_watercourse, [
           "case",
-          filters.has_tunnel, "#C8E0F0",
+          filters.has_tunnel, colors.water_tunnel,
           colors.water,
         ],
         ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major,
@@ -352,7 +365,7 @@ const lineLayer = {
         filters.is_barrier, colors.barrier,
         filters.is_watercourse, [
           "case",
-          filters.has_tunnel, "#C8E0F0",
+          filters.has_tunnel, colors.water_tunnel,
           colors.water,
         ],
         ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major_high_zoom,
@@ -382,17 +395,14 @@ const structureLayer = {
     "type": "fill",
     "filter": [
       "any",
-      [
-        "all",
-        filters.is_water_inland,
-        [">", ["to-number", ["get", "layer"], "0"], 0]
-      ],
+      filters.is_water_structure,
       filters.is_building,
       filters.is_barrier,
       filters.is_ice,
       filters.is_swimming_pool,
-      ["in", ["get", "amenity"], ["literal", ["parking"]]],
-      ["in", ["get", "man_made"], ["literal", ["pier", "bridge"]]]
+      filters.is_parking_lot,
+      filters.is_bridge,
+      filters.is_pier
     ],
     "layout": {
       "fill-sort-key": [
@@ -400,10 +410,11 @@ const structureLayer = {
         filters.is_building, 30,
         filters.is_swimming_pool, 25,
         filters.is_barrier, 20,
-        ["in", ["get", "amenity"], ["literal", ["parking"]]], 15,
-        ["in", ["get", "man_made"], ["literal", ["pier", "bridge"]]], 10,
+        filters.is_parking_lot, 15,
+        filters.is_bridge, 12,
+        filters.is_pier, 10,
         filters.is_ice, 5,
-        filters.is_water_inland, 1,
+        filters.is_water_structure, 1,
         0
       ]
     },
@@ -411,20 +422,20 @@ const structureLayer = {
       "fill-opacity": [
         "case",
         filters.is_building, 0.5,
-        ["in", ["get", "man_made"], ["literal", ["bridge"]]], 0.4,
+        filters.is_bridge, 0.4,
         [">", ["to-number", ["get", "layer"], "0"], 0], 0.6,
         1
       ],
       "fill-color": [
         "case",
-        filters.is_water_inland, colors.water_inland_fill,
+        filters.is_water_structure, colors.water_structure_fill,
         filters.is_ice, colors.ice_fill,
         filters.is_building, colors.building_fill,
         filters.is_barrier, colors.barrier,
         filters.is_swimming_pool, colors.swimming_pool_fill,
-        ["in", ["get", "amenity"], ["literal", ["parking"]]], colors.parking_fill,
-        ["in", ["get", "man_made"], ["literal", ["bridge"]]], colors.highway_casing,
-        ["in", ["get", "man_made"], ["literal", ["pier"]]], colors.pier_fill,
+        filters.is_parking_lot, colors.parking_fill,
+        filters.is_bridge, colors.highway_casing,
+        filters.is_pier, colors.pier_fill,
         "red"
       ]
     }
@@ -437,11 +448,7 @@ const structureOutlineLayer = {
     "type": "line",
     "filter": [
       "any",
-      [
-        "all",
-        filters.is_water_inland,
-        [">", ["to-number", ["get", "layer"], "0"], 0]
-      ],
+      filters.is_water_structure,
       filters.is_ice,
       filters.is_swimming_pool
     ],
@@ -450,7 +457,7 @@ const structureOutlineLayer = {
         "case",
         filters.is_swimming_pool, 25,
         filters.is_ice, 5,
-        filters.is_water_inland, 1,
+        filters.is_water_structure, 1,
         0
       ]
     },
@@ -463,7 +470,7 @@ const structureOutlineLayer = {
       "line-width": 0.5,
       "line-color": [
         "case",
-        filters.is_water_inland, colors.water_outline,
+        filters.is_water_structure, colors.water_outline,
         filters.is_ice, colors.ice_outline,
         filters.is_swimming_pool, colors.swimming_pool_outline,
         "red"
