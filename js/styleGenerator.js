@@ -544,11 +544,21 @@ export function generateStyle(baseStyleJsonString) {
       "source": "beefsteak",
       "source-layer": "line",
       "type": "line",
-      "filter": [
-        "any",
-        filters.is_coastline,
-        filters.is_water_surface
-      ],
+      "filter": filters.is_coastline,
+      "layout": {
+          "line-join": "round"
+      },
+      "paint": {
+          "line-color": colors.water_outline,
+          "line-width": 0.5
+      }
+  });
+  addLayer({
+      "id": "surface-water-outline",
+      "source": "beefsteak",
+      "source-layer": "area",
+      "type": "line",
+      "filter": filters.is_water_surface,
       "layout": {
           "line-join": "round"
       },
