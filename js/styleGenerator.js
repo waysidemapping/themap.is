@@ -149,23 +149,24 @@ const colors = {
   aboriginal_lands_fill: "#FFF8F2",
   aboriginal_lands_outline: "#DAD1C9",
   aboriginal_lands_text: "#6B533F",
-  admin_boundary: "#ccbdbd",
+  admin_boundary_stroke: "#ccbdbd",
   admin_boundary_casing: "#fff",
-  aerialway: "#be6e85",
-  aerialway_text: "#381a23",
+  aerialway_stroke: "#cb879a",
+  aerialway_text: "#392329",
   background: "#fff",
-  barrier: "#D6CCCF",
+  barrier_fill: "#D6CCCF",
+  barrier_stroke: "#D6CCCF",
   building_fill: "#807974",
   developed_fill: "#f9f9f9",
   education_fill: "#FFF9DB",
   education_outline: "#DED08C",
   education_text: "#575135",
-  ferry: "#7EC2FF",
-  highway_major: "#F7CF8D",
-  highway_major_high_zoom: "#FFF2DD",
-  highway_minor: "#cfcfcf",
-  highway_minor_high_zoom: "#fff",
-  highway_minor_high_zoom_tunnel: "#e6e6e6",
+  ferry_stroke: "#7EC2FF",
+  highway_major_stroke: "#F7CF8D",
+  highway_major_high_zoom_stroke: "#FFF2DD",
+  highway_minor_stroke: "#cfcfcf",
+  highway_minor_high_zoom_stroke: "#fff",
+  highway_minor_high_zoom_tunnel_stroke: "#e6e6e6",
   highway_casing: "#d0d0d0",
   ice_fill: "#FAFDFF",
   ice_outline: "#C2DEED",
@@ -186,11 +187,11 @@ const colors = {
   parking_fill: "#efefef",
   pier_fill: "#fff",
   admin_boundary_major_text: "#111",
-  power_line: "#D4BADE",
+  power_stroke: "#D4BADE",
   power_fill: "#FBF4FE",
   power_outline: "#F0D5FA",
   power_text: "#54415C",
-  railway: "#96a0ac",
+  railway_stroke: "#96a0ac",
   station_fill: "#E3E9FA",
   station_outline: "#C2CCE6",
   station_text: "#3F4963",
@@ -199,8 +200,8 @@ const colors = {
   text: "#555",
   text_halo: "#fff",
   tree: "#268726",
-  watercourse: "#D4EEFF",
-  watercourse_tunnel: "#C8E0F0",
+  watercourse_stroke: "#D4EEFF",
+  watercourse_tunnel_stroke: "#C8E0F0",
   water_fill: "#D4EEFF",
   water_outline: "#BFD3E0",
   water_text: "#114566",
@@ -292,7 +293,7 @@ const structures = [
   },
   {
     filter: filters.is_barrier,
-    fill_color: colors.barrier
+    fill_color: colors.barrier_fill
   },
   {
     filter: filters.is_swimming_pool,
@@ -399,8 +400,8 @@ const lineCasingLayer = {
     ],
     "line-color": [
       "case",
-      filters.is_power_line, colors.power_line,
-      filters.is_railway_track, colors.railway,
+      filters.is_power_line, colors.power_stroke,
+      filters.is_railway_track, colors.railway_stroke,
       colors.highway_casing
     ],
     "line-gap-width": lineLayerWidth,
@@ -460,34 +461,34 @@ const lineLayer = {
     "line-color": [
       "step", ["zoom"], [
         "case",
-        filters.is_aerialway, colors.aerialway,
-        filters.is_ferry, colors.ferry,
-        filters.is_railway_track, colors.railway,
-        filters.is_power_line, colors.power_line,
-        filters.is_barrier, colors.barrier,
+        filters.is_aerialway, colors.aerialway_stroke,
+        filters.is_ferry, colors.ferry_stroke,
+        filters.is_railway_track, colors.railway_stroke,
+        filters.is_power_line, colors.power_stroke,
+        filters.is_barrier, colors.barrier_stroke,
         filters.is_watercourse, [
           "case",
-          filters.has_tunnel, colors.watercourse_tunnel,
-          colors.watercourse,
+          filters.has_tunnel, colors.watercourse_tunnel_stroke,
+          colors.watercourse_stroke,
         ],
-        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major,
-        colors.highway_minor
+        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major_stroke,
+        colors.highway_minor_stroke
       ],
       14,  [
         "case",
-        filters.is_aerialway, colors.aerialway,
-        filters.is_ferry, colors.ferry,
-        filters.is_railway_track, colors.railway,
-        filters.is_power_line, colors.power_line,
-        filters.is_barrier, colors.barrier,
+        filters.is_aerialway, colors.aerialway_stroke,
+        filters.is_ferry, colors.ferry_stroke,
+        filters.is_railway_track, colors.railway_stroke,
+        filters.is_power_line, colors.power_stroke,
+        filters.is_barrier, colors.barrier_stroke,
         filters.is_watercourse, [
           "case",
-          filters.has_tunnel, colors.watercourse_tunnel,
-          colors.watercourse,
+          filters.has_tunnel, colors.watercourse_tunnel_stroke,
+          colors.watercourse_stroke,
         ],
-        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major_high_zoom,
-        filters.has_tunnel, colors.highway_minor_high_zoom_tunnel,
-        colors.highway_minor_high_zoom
+        ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major_high_zoom_stroke,
+        filters.has_tunnel, colors.highway_minor_high_zoom_tunnel_stroke,
+        colors.highway_minor_high_zoom_stroke
       ]
     ],
     "line-opacity": [
@@ -526,7 +527,7 @@ const lineOverlayLayer = {
   },
   "paint": {
     "line-width": 1,
-    "line-color": colors.route_foot,
+    "line-color": colors.route_foot_stroke,
     "line-dasharray": ["literal", [3.125, 1.875]]
   }
 };
@@ -638,8 +639,8 @@ let diegeticPointLayer = {
     "circle-color": [
       "case",
       filters.is_tree, colors.tree,
-      filters.is_power_support, colors.power_line,
-      filters.is_aerialway_support, colors.aerialway,
+      filters.is_power_support, colors.power_stroke,
+      filters.is_aerialway_support, colors.aerialway_stroke,
       "red"
     ]
   },
@@ -877,7 +878,7 @@ export function generateStyle(baseStyleJsonString) {
       ["!", ["==", ["get", "maritime"], "yes"]]
     ],
     "paint": {
-      "line-color": colors.admin_boundary,
+      "line-color": colors.admin_boundary_stroke,
       "line-width": [
         "case",
         ["in", "┃2┃", ["get", "r.admin_level"]], 1.75,
