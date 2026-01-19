@@ -123,6 +123,7 @@ const filters = {
     ]
   ],
   is_swimming_pool: ["==", ["get", "leisure"], "swimming_pool"],
+  is_tree: ["==", ["get", "natural"], "tree"],
   is_water_area_poi: [
     "any",
     ["in", ["get", "place"], ["literal", ["ocean", "sea"]]],
@@ -146,10 +147,10 @@ const colors = {
   aboriginal_lands_fill: "#FFF8F2",
   aboriginal_lands_outline: "#DAD1C9",
   aboriginal_lands_text: "#6B533F",
+  admin_boundary: "#ccbdbd",
+  admin_boundary_casing: "#fff",
   background: "#fff",
   barrier: "#D6CCCF",
-  boundary: "#ccc",
-  boundary_casing: "#fff",
   building_fill: "#807974",
   developed_fill: "#f9f9f9",
   education_fill: "#FFF9DB",
@@ -174,18 +175,18 @@ const colors = {
   national_park_fill: "#DAEDD5",
   national_park_outline: "#C1D6BD",
   national_park_text: "#3C5936",
-  nonmotorized_route: "#9db798",
+  route_foot: "#75ae7f",
   park_fill: "#ECFAE9",
-  park_outline: "#B5D4AF",
+  park_outline: "#d2edcd",
   park_text: "#46693F",
   parking_fill: "#efefef",
   pier_fill: "#fff",
-  place_major_text: "#111",
+  admin_boundary_major_text: "#111",
   power_line: "#D4BADE",
   power_fill: "#FBF4FE",
   power_outline: "#F0D5FA",
   power_text: "#54415C",
-  railway: "#969CAC",
+  railway: "#96a0ac",
   station_fill: "#E3E9FA",
   station_outline: "#C2CCE6",
   station_text: "#3F4963",
@@ -314,7 +315,7 @@ const lineLayerWidth = [
     filters.is_barrier_minor, 1,
     filters.is_watercourse, 2,
     ["any", ["in", ["get", "highway"], ["literal", ["motorway"]]], ["in", ["get", "aeroway"], ["literal", ["runway"]]]], 2,
-    0.75
+    1
   ],
   14, [
     "case",
@@ -401,7 +402,7 @@ const lineCasingLayer = {
     "line-dasharray": [
       "case",
       filters.is_power_line, ["literal", [1.85, 25]],
-      filters.is_railway_track, ["literal", [0.4, 4]],
+      filters.is_railway_track, ["literal", [0.25, 4]],
       ["!", filters.has_paving], ["literal", [3, 2]],
       ["all", ["any", filters.is_highway, filters.is_aeroway, filters.is_watercourse], filters.has_tunnel], ["literal", [8, 4]],
       ["literal", [1]]
@@ -420,7 +421,15 @@ const lineLayer = {
     filters.is_railway_track,
     filters.is_power_line,
     filters.is_aeroway,
-    ["all", [">=", ["zoom"], 12], filters.is_highway],
+    [
+      "all",
+      filters.is_highway,
+      [
+        "any",
+        [">=", ["zoom"], 12],
+        ["in", "┃road┃", ["get", "r.route"]]
+      ]
+    ],
     filters.is_watercourse,
     filters.is_barrier
   ],
@@ -433,9 +442,9 @@ const lineLayer = {
       filters.is_barrier, 40,
       filters.is_railway_track, 30,
       filters.is_ferry, 20,
-      filters.is_watercourse, 10,
       ["in", ["get", "highway"], ["literal", ["motorway", "trunk"]]], 5,
       ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk_link"]]], -5,
+      filters.is_watercourse, -10,
       0
     ]
   },
@@ -487,66 +496,143 @@ const lineLayer = {
   }
 };
 
-const structureLayer = {
-    "id": "structure-fill",
-    "source": "beefsteak",
-    "source-layer": "area",
-    "type": "fill",
-    "filter": [
+const lineOverlayLayer = {
+  "id": "line-overlay",
+  "source": "beefsteak",
+  "source-layer": "line",
+  "type": "line",
+  "filter": [
+    "all",
+    [
       "any",
-      ...structures.map(info => info.filter)
+      ["in", "┃hiking┃", ["get", "r.route"]],
+      ["in", "┃foot┃", ["get", "r.route"]],
+      ["in", "┃portage┃", ["get", "r.route"]]
     ],
-    "layout": {
-      "fill-sort-key": [
-        "case",
-        ...structures.map((info, i) => [info.filter, i]).flat(),
-        0
-      ]
-    },
-    "paint": {
-      "fill-opacity": [
-        "case",
-        ...structures.filter(info => info.fill_opacity).toReversed().map(info => [info.filter, info.fill_opacity]).flat(),
-        [">", ["to-number", ["get", "layer"], "0"], 0], 0.6,
-        1
-      ],
-      "fill-color": [
-        "case",
-        ...structures.toReversed().map(info => [info.filter, info.fill_color]).flat(),
-        "red"
-      ]
-    }
+    ["has", "highway"]
+  ],
+  "layout": {
+    "line-join": "round",
+    "line-cap": "butt"
+  },
+  "paint": {
+    "line-width": 1,
+    "line-color": colors.route_foot,
+    "line-dasharray": ["literal", [3.125, 1.875]]
+  }
+};
+
+const structureLayer = {
+  "id": "structure-fill",
+  "source": "beefsteak",
+  "source-layer": "area",
+  "type": "fill",
+  "filter": [
+    "any",
+    ...structures.map(info => info.filter)
+  ],
+  "layout": {
+    "fill-sort-key": [
+      "case",
+      ...structures.map((info, i) => [info.filter, i]).flat(),
+      0
+    ]
+  },
+  "paint": {
+    "fill-opacity": [
+      "case",
+      ...structures.filter(info => info.fill_opacity).toReversed().map(info => [info.filter, info.fill_opacity]).flat(),
+      [">", ["to-number", ["get", "layer"], "0"], 0], 0.6,
+      1
+    ],
+    "fill-color": [
+      "case",
+      ...structures.toReversed().map(info => [info.filter, info.fill_color]).flat(),
+      "red"
+    ]
+  }
 };
 
 const structureOutlineLayer = {
-    "id": "structure-outline",
-    "source": "beefsteak",
-    "source-layer": "area",
-    "type": "line",
-    "filter": [
-      "any",
-      ...structures.filter(info => info.outline_color).map(info => info.filter)
+  "id": "structure-outline",
+  "source": "beefsteak",
+  "source-layer": "area",
+  "type": "line",
+  "filter": [
+    "any",
+    ...structures.filter(info => info.outline_color).map(info => info.filter)
+  ],
+  "layout": {
+    "line-sort-key": [
+      "case",
+      ...structures.filter(info => info.outline_color).map((info, i) => [info.filter, i]).flat(),
+      0
+    ]
+  },
+  "paint": {
+    "line-opacity": [
+      "case",
+      [">", ["to-number", ["get", "layer"], "0"], 0], 0.75,
+      1
     ],
-    "layout": {
-      "line-sort-key": [
+    "line-width": 0.5,
+    "line-color": [
+      "case",
+      ...structures.filter(info => info.outline_color).toReversed().map(info => [info.filter, info.outline_color]).flat(),
+      "red"
+    ]
+  }
+};
+
+let diegeticPointLayer = {
+  "id": "diegetic-point",
+  "source": "beefsteak",
+  "source-layer": "point",
+  "type": "circle",
+  "filter": [
+    "any",
+    filters.is_power_support,
+    [
+      "all",
+      filters.is_tree,
+      [">=", ["zoom"], 15]
+    ]
+  ],
+  "paint": {
+    "circle-radius": [
+      "interpolate", ["exponential", 2], ["zoom"],
+      15, [
         "case",
-        ...structures.filter(info => info.outline_color).map((info, i) => [info.filter, i]).flat(),
-        0
+        filters.is_tree, 1.5,
+        1.75
+      ],
+      22, [
+        "case",
+        filters.is_tree, 192,
+        16
       ]
-    },
-    "paint": {
-      "line-opacity": [
+    ],
+    "circle-opacity": [
+      "interpolate", ["linear"], ["zoom"],
+      15, [
         "case",
-        [">", ["to-number", ["get", "layer"], "0"], 0], 0.75,
+        filters.is_tree, 0.2,
         1
       ],
-      "line-width": 0.5,
-      "line-color": [
+      22, [
         "case",
-        ...structures.filter(info => info.outline_color).toReversed().map(info => [info.filter, info.outline_color]).flat(),
-        "red"
-      ]
-    }
+        filters.is_tree, 0.075,
+        1
+      ],
+    ],
+    "circle-color": [
+      "case",
+      filters.is_tree, colors.tree,
+      filters.is_power_support, colors.power_line,
+      "red"
+    ]
+  },
+  "minzoom": 13
 };
 
 export function generateStyle(baseStyleJsonString) {
@@ -604,7 +690,35 @@ export function generateStyle(baseStyleJsonString) {
       ]
     }
   });
-
+  addLayer({
+    "id": "landuse-inset",
+    "source": "beefsteak",
+    "source-layer": "area",
+    "type": "line",
+    "filter": [
+      "any",
+      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
+    ],
+    "layout": {
+      "line-join": "round",
+      "line-sort-key": [
+        "case",
+        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
+        0
+      ]
+    },
+    "paint": {
+      "line-opacity": 0.7,
+      "line-color": [
+        "case",
+        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.fill_color]).flat(),
+        "red"
+      ],
+      "line-width": 3.6,
+      "line-offset": 1.8
+    },
+    "minzoom": 12
+  });
   addLayer({
       "id": "coastline",
       "source": "beefsteak",
@@ -640,174 +754,6 @@ export function generateStyle(baseStyleJsonString) {
           "line-width": 0.5
       }
   });
-
-  addLayer({
-    "id": "power-support",
-    "source": "beefsteak",
-    "source-layer": "point",
-    "type": "circle",
-    "filter": filters.is_power_support,
-    "paint": {
-      "circle-radius": [
-        "interpolate", ["linear", 2], ["zoom"],
-        15, 1.5,
-        18, 2
-      ],
-      "circle-color": colors.power_line,
-    },
-    "minzoom": 13
-  });
-  
-  function forTagLayer(layer, tagLayer) {
-    let newLayer = Object.assign({}, layer);
-    newLayer.id += tagLayer;
-    let layerFilter;
-    if (tagLayer === '0') {
-      layerFilter = [
-        "any",
-        ["!", ["has", "layer"]],
-        ["==", ["get", "layer"], "0"]
-      ];
-    } else if (tagLayer === '-3') {
-      layerFilter = ["<=", ["to-number", ["get", "layer"], "0"], -2];
-    } else if (tagLayer === '3') {
-      layerFilter = [">=", ["to-number", ["get", "layer"], "0"], 2];
-    } else {
-      layerFilter = ["==", ["get", "layer"], tagLayer];
-    }
-    newLayer.filter = [
-      "all",
-      layerFilter,
-      newLayer.filter
-    ];
-    return newLayer;
-  }
-
-  ["-3","-2","-1","0","1","2","3"].forEach(tagLayer => {
-    addLayer(forTagLayer(structureLayer, tagLayer));
-    addLayer(forTagLayer(structureOutlineLayer, tagLayer));
-    addLayer(forTagLayer(lineCasingLayer, tagLayer));
-    addLayer(forTagLayer(lineLayer, tagLayer));
-  });
-  addLayer({
-    "id": "path-route",
-    "source": "beefsteak",
-    "source-layer": "line",
-    "type": "line",
-    "filter": [
-        "all",
-        [
-            "any",
-            ["in", "┃hiking┃", ["get", "r.route"]],
-            ["in", "┃foot┃", ["get", "r.route"]],
-            ["in", "┃bicycle┃", ["get", "r.route"]],
-            ["in", "┃horse┃", ["get", "r.route"]],
-            ["in", "┃mtb┃", ["get", "r.route"]]
-        ],
-        ["!", ["in", "┃road┃", ["get", "r.route"]]],
-        ["has", "highway"]
-    ],
-    "layout": {
-        "line-join": "round",
-        "line-cap": "round"
-    },
-    "paint": {
-        "line-width": [
-            "interpolate", ["linear"], ["zoom"],
-            6, 1,
-            18, 2
-        ],
-        "line-color": colors.nonmotorized_route,
-        "line-dasharray": [0.5,2]
-    },
-    "maxzoom": 12
-  });
-  addLayer({
-    "id": "road-route",
-    "source": "beefsteak",
-    "source-layer": "line",
-    "type": "line",
-    "filter": [
-        "all",
-        ["in", "┃road┃", ["get", "r.route"]],
-        ["has", "highway"]
-    ],
-    "layout": {
-        "line-join": "round",
-        "line-cap": "round"
-    },
-    "paint": {
-        "line-width": [
-            "interpolate", ["linear"], ["zoom"],
-            6, [
-                "case",
-                ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 1.5,
-                1
-            ],
-            18, [
-                "case",
-                ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], 3.3,
-                0.85
-            ]
-        ],
-        "line-color": colors.highway_major
-    },
-    "maxzoom": 12
-  });
-  addLayer({
-    "id": "landuse-inset",
-    "source": "beefsteak",
-    "source-layer": "area",
-    "type": "line",
-    "filter": [
-      "any",
-      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
-    ],
-    "layout": {
-      "line-join": "round",
-      "line-sort-key": [
-        "case",
-        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
-        0
-      ]
-    },
-    "paint": {
-      "line-opacity": 0.7,
-      "line-color": [
-        "case",
-        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.fill_color]).flat(),
-        "red"
-      ],
-      "line-width": 3.6,
-      "line-offset": 1.8
-    },
-    "minzoom": 12
-  });
-  addLayer({
-    "id": "landuse-outline",
-    "source": "beefsteak",
-    "source-layer": "area",
-    "type": "line",
-    "filter": [
-      "any",
-      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
-    ],
-    "layout": {
-      "line-sort-key": [
-        "case",
-        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
-        0
-      ]
-    },
-    "paint": {
-      "line-color": [
-        "case",
-        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.outline_color]).flat(),
-        "red"
-      ],
-      "line-width": 0.5
-    }
-  });
   addLayer({
     "id": "boundary-casing",
     "source": "beefsteak",
@@ -826,7 +772,7 @@ export function generateStyle(baseStyleJsonString) {
         ["!", ["==", ["get", "maritime"], "yes"]]
     ],
     "paint": {
-        "line-color": colors.boundary_casing,
+        "line-color": colors.admin_boundary_casing,
         "line-opacity": 0.5,
         "line-width": [
             "case",
@@ -858,7 +804,7 @@ export function generateStyle(baseStyleJsonString) {
           ["!", ["==", ["get", "maritime"], "yes"]]
       ],
       "paint": {
-          "line-color": colors.boundary,
+          "line-color": colors.admin_boundary,
           "line-width": [
               "case",
               ["in", "┃2┃", ["get", "r.admin_level"]], 1.75,
@@ -874,28 +820,64 @@ export function generateStyle(baseStyleJsonString) {
       }
   });
 
+  function forTagLayer(layer, tagLayer) {
+    let newLayer = Object.assign({}, layer);
+    newLayer.id += tagLayer;
+    let layerFilter;
+    if (tagLayer === '0') {
+      layerFilter = [
+        "any",
+        ["!", ["has", "layer"]],
+        ["==", ["get", "layer"], "0"]
+      ];
+    } else if (tagLayer === '-3') {
+      layerFilter = ["<=", ["to-number", ["get", "layer"], "0"], -2];
+    } else if (tagLayer === '3') {
+      layerFilter = [">=", ["to-number", ["get", "layer"], "0"], 2];
+    } else {
+      layerFilter = ["==", ["get", "layer"], tagLayer];
+    }
+    newLayer.filter = [
+      "all",
+      layerFilter,
+      newLayer.filter
+    ];
+    return newLayer;
+  }
+
+  ["-3","-2","-1","0","1","2","3"].forEach(tagLayer => {
+    addLayer(forTagLayer(structureLayer, tagLayer));
+    addLayer(forTagLayer(structureOutlineLayer, tagLayer));
+    addLayer(forTagLayer(lineCasingLayer, tagLayer));
+    addLayer(forTagLayer(lineLayer, tagLayer));
+    addLayer(forTagLayer(lineOverlayLayer, tagLayer));
+    addLayer(forTagLayer(diegeticPointLayer, tagLayer));
+  });
+
   addLayer({
-    "id": "tree",
+    "id": "landuse-outline",
     "source": "beefsteak",
-    "source-layer": "point",
-    "type": "circle",
+    "source-layer": "area",
+    "type": "line",
     "filter": [
-      "==", ["get", "natural"], "tree" 
+      "any",
+      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
     ],
-    "paint": {
-      "circle-radius": [
-        "interpolate", ["exponential", 2], ["zoom"],
-        15, 1.5,
-        22, 192
-      ],
-      "circle-opacity": [
-        "interpolate", ["linear"], ["zoom"],
-        15, 0.2,
-        22, 0.075
-      ],
-      "circle-color": colors.tree,
+    "layout": {
+      "line-sort-key": [
+        "case",
+        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
+        0
+      ]
     },
-    "minzoom": 15
+    "paint": {
+      "line-color": [
+        "case",
+        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.outline_color]).flat(),
+        "red"
+      ],
+      "line-width": 0.5
+    }
   });
 
   addLayer({
@@ -1052,7 +1034,7 @@ export function generateStyle(baseStyleJsonString) {
                 "all",
                 ["in", ["get", "boundary"], ["literal", ["administrative"]]],
                 ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
-            ], colors.place_major_text,
+            ], colors.admin_boundary_major_text,
             // These should be in roughly the same order as the fill precendence in case of double tagging (e.g. aeroway and military)
             filters.is_ice, colors.ice_text,
             filters.is_maritime_park, colors.maritime_park_text,
