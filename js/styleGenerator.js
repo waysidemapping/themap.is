@@ -754,71 +754,6 @@ export function generateStyle(baseStyleJsonString) {
           "line-width": 0.5
       }
   });
-  addLayer({
-    "id": "boundary-casing",
-    "source": "beefsteak",
-    "source-layer": "line",
-    "type": "line",
-    "filter": [
-        "all",
-        ["in", "┃administrative┃", ["get", "r.boundary"]],
-        [
-            "any",
-            ["in", "┃2┃", ["get", "r.admin_level"]],
-            ["in", "┃4┃", ["get", "r.admin_level"]],
-            ["in", "┃6┃", ["get", "r.admin_level"]],
-            ["in", "┃8┃", ["get", "r.admin_level"]]
-        ],
-        ["!", ["==", ["get", "maritime"], "yes"]]
-    ],
-    "paint": {
-        "line-color": colors.admin_boundary_casing,
-        "line-opacity": 0.5,
-        "line-width": [
-            "case",
-            [
-                "any",
-                ["in", "┃6┃", ["get", "r.admin_level"]],
-                ["in", "┃8┃", ["get", "r.admin_level"]]
-            ], 2,
-            ["in", "┃4┃", ["get", "r.admin_level"]], 2.5,
-            3
-        ]
-    }
-  });
-  addLayer({
-      "id": "boundary",
-      "source": "beefsteak",
-      "source-layer": "line",
-      "type": "line",
-      "filter": [
-          "all",
-          ["in", "┃administrative┃", ["get", "r.boundary"]],
-          [
-              "any",
-              ["in", "┃2┃", ["get", "r.admin_level"]],
-              ["in", "┃4┃", ["get", "r.admin_level"]],
-              ["in", "┃6┃", ["get", "r.admin_level"]],
-              ["in", "┃8┃", ["get", "r.admin_level"]]
-          ],
-          ["!", ["==", ["get", "maritime"], "yes"]]
-      ],
-      "paint": {
-          "line-color": colors.admin_boundary,
-          "line-width": [
-              "case",
-              ["in", "┃2┃", ["get", "r.admin_level"]], 1.75,
-              ["in", "┃4┃", ["get", "r.admin_level"]], 1.5,
-              1
-          ],
-          "line-dasharray": [
-              "case",
-              ["in", "┃2┃", ["get", "r.admin_level"]], ["literal", [10, 1, 2, 1]],
-              ["in", "┃4┃", ["get", "r.admin_level"]], ["literal", [6, 1, 2, 1, 2, 1]],
-              ["literal", [6, 3, 3, 3]]
-          ]
-      }
-  });
 
   function forTagLayer(layer, tagLayer) {
     let newLayer = Object.assign({}, layer);
@@ -877,6 +812,73 @@ export function generateStyle(baseStyleJsonString) {
         "red"
       ],
       "line-width": 0.5
+    }
+  });
+
+  addLayer({
+    "id": "boundary-casing",
+    "source": "beefsteak",
+    "source-layer": "line",
+    "type": "line",
+    "filter": [
+        "all",
+        ["in", "┃administrative┃", ["get", "r.boundary"]],
+        [
+          "any",
+          ["in", "┃2┃", ["get", "r.admin_level"]],
+          ["in", "┃4┃", ["get", "r.admin_level"]],
+          ["in", "┃6┃", ["get", "r.admin_level"]],
+          ["in", "┃8┃", ["get", "r.admin_level"]]
+        ],
+        ["!", ["==", ["get", "maritime"], "yes"]]
+    ],
+    "paint": {
+      "line-color": colors.admin_boundary_casing,
+      "line-opacity": 0.5,
+      "line-width": [
+        "case",
+        [
+          "any",
+          ["in", "┃6┃", ["get", "r.admin_level"]],
+          ["in", "┃8┃", ["get", "r.admin_level"]]
+        ], 2,
+        ["in", "┃4┃", ["get", "r.admin_level"]], 2.5,
+        3
+      ]
+    }
+  });
+
+  addLayer({
+    "id": "boundary",
+    "source": "beefsteak",
+    "source-layer": "line",
+    "type": "line",
+    "filter": [
+      "all",
+      ["in", "┃administrative┃", ["get", "r.boundary"]],
+      [
+        "any",
+        ["in", "┃2┃", ["get", "r.admin_level"]],
+        ["in", "┃4┃", ["get", "r.admin_level"]],
+        ["in", "┃6┃", ["get", "r.admin_level"]],
+        ["in", "┃8┃", ["get", "r.admin_level"]]
+      ],
+      ["!", ["==", ["get", "maritime"], "yes"]]
+    ],
+    "paint": {
+      "line-color": colors.admin_boundary,
+      "line-width": [
+        "case",
+        ["in", "┃2┃", ["get", "r.admin_level"]], 1.75,
+        ["in", "┃4┃", ["get", "r.admin_level"]], 1.5,
+        1
+      ],
+      "line-dasharray": [
+        "case",
+        ["in", "┃2┃", ["get", "r.admin_level"]], ["literal", [10, 1, 2, 1]],
+        ["in", "┃4┃", ["get", "r.admin_level"]], ["literal", [6, 1, 2, 1, 2, 1]],
+        ["literal", [6, 3, 3, 3]]
+      ]
     }
   });
 
