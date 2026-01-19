@@ -143,30 +143,25 @@ const filters = {
 };
 
 const colors = {
+  aboriginal_lands_fill: "#FFF8F2",
+  aboriginal_lands_outline: "#DAD1C9",
+  aboriginal_lands_text: "#6B533F",
   background: "#fff",
-  text_halo: "#fff",
-  text: "#555",
-
   barrier: "#D6CCCF",
+  boundary: "#ccc",
+  boundary_casing: "#fff",
+  building_fill: "#807974",
+  developed_fill: "#f9f9f9",
+  education_fill: "#FFF9DB",
+  education_outline: "#DED08C",
+  education_text: "#575135",
   ferry: "#7EC2FF",
-  power: "#D4BADE",
   highway_major: "#F7CF8D",
   highway_major_high_zoom: "#FFF2DD",
   highway_minor: "#cfcfcf",
   highway_minor_high_zoom: "#fff",
   highway_minor_high_zoom_tunnel: "#e6e6e6",
   highway_casing: "#d0d0d0",
-  railway: "#969CAC",
-  tree: "#268726",
-
-  aboriginal_lands_fill: "#FFF8F2",
-  aboriginal_lands_outline: "#DAD1C9",
-  aboriginal_lands_text: "#6B533F",
-  building_fill: "#807974",
-  developed_fill: "#f9f9f9",
-  education_fill: "#FFF9DB",
-  education_outline: "#DED08C",
-  education_text: "#575135",
   ice_fill: "#FAFDFF",
   ice_outline: "#C2DEED",
   ice_text: "#6193AE",
@@ -179,28 +174,132 @@ const colors = {
   national_park_fill: "#DAEDD5",
   national_park_outline: "#C1D6BD",
   national_park_text: "#3C5936",
+  nonmotorized_route: "#9db798",
   park_fill: "#ECFAE9",
   park_outline: "#B5D4AF",
   park_text: "#46693F",
   parking_fill: "#efefef",
   pier_fill: "#fff",
   place_major_text: "#111",
+  power_line: "#D4BADE",
   power_fill: "#FBF4FE",
   power_outline: "#F0D5FA",
   power_text: "#54415C",
+  railway: "#969CAC",
   station_fill: "#E3E9FA",
   station_outline: "#C2CCE6",
   station_text: "#3F4963",
   swimming_pool_fill: "#C4F1FF",
   swimming_pool_outline: "#BDE0EB",
-  water: "#D4EEFF",
+  text: "#555",
+  text_halo: "#fff",
+  tree: "#268726",
+  watercourse: "#D4EEFF",
+  watercourse_tunnel: "#C8E0F0",
+  water_fill: "#D4EEFF",
   water_outline: "#BFD3E0",
   water_text: "#114566",
-  water_coastal_fill: "#D4EEFF",
-  water_structure_fill: "#D4EEFF",
-  water_surface_fill: "#D4EEFF",
-  water_tunnel: "#C8E0F0",
 };
+
+const landuses = [
+  {
+    filter: filters.is_aboriginal_lands,
+    fill_color: colors.aboriginal_lands_fill,
+    outline_color: colors.aboriginal_lands_outline
+  },
+  {
+    filter: filters.is_developed,
+    fill_color: colors.developed_fill,
+    high_zoom: true
+  },
+  {
+    filter: filters.is_park,
+    fill_color: colors.park_fill,
+    outline_color: colors.park_outline
+  },
+  {
+    filter: filters.is_national_park,
+    fill_color: colors.national_park_fill,
+    outline_color: colors.national_park_outline
+  },
+  {
+    filter: filters.is_military,
+    fill_color: colors.military_fill,
+    outline_color: colors.military_outline
+  },
+  {
+    filter: filters.is_education,
+    fill_color: colors.education_fill,
+    outline_color: colors.education_outline
+  },
+  {
+    filter: filters.is_station,
+    fill_color: colors.station_fill,
+    outline_color: colors.station_outline
+  },
+  {
+    filter: filters.is_power,
+    fill_color: colors.power_fill,
+    outline_color: colors.power_outline
+  },
+  {
+    filter: filters.is_water_coastal,
+    fill_color: colors.water_fill,
+    high_zoom: true
+  },
+  {
+    filter: filters.is_water_surface,
+    fill_color: colors.water_fill,
+    outline_color: colors.water_outline,
+    high_zoom: true
+  },
+  {
+    filter: filters.is_maritime_park,
+    fill_color: colors.maritime_park_fill,
+    outline_color: colors.maritime_park_outline
+  },
+  {
+    filter: filters.is_ice,
+    fill_color: colors.ice_fill,
+    outline_color: colors.ice_outline,
+    high_zoom: true
+  }
+];
+
+const structures = [
+  {
+    filter: filters.is_water_structure,
+    fill_color: colors.water_fill,
+    outline_color: colors.water_outline
+  },
+  {
+    filter: filters.is_pier,
+    fill_color: colors.pier_fill,
+  },
+  {
+    filter: filters.is_bridge,
+    fill_color: colors.highway_casing,
+    fill_opacity: 0.4
+  },
+  {
+    filter: filters.is_parking_lot,
+    fill_color: colors.parking_fill,
+  },
+  {
+    filter: filters.is_barrier,
+    fill_color: colors.barrier
+  },
+  {
+    filter: filters.is_swimming_pool,
+    fill_color: colors.swimming_pool_fill,
+    outline_color: colors.swimming_pool_outline
+  },
+  {
+    filter: filters.is_building,
+    fill_color: colors.building_fill,
+    fill_opacity: 0.5
+  },
+];
 
 const lineLayerWidth = [
   "interpolate", ["linear"], ["zoom"],
@@ -294,7 +393,7 @@ const lineCasingLayer = {
     ],
     "line-color": [
       "case",
-      filters.is_power_line, colors.power,
+      filters.is_power_line, colors.power_line,
       filters.is_railway_track, colors.railway,
       colors.highway_casing
     ],
@@ -347,12 +446,12 @@ const lineLayer = {
         "case",
         filters.is_ferry, colors.ferry,
         filters.is_railway_track, colors.railway,
-        filters.is_power_line, colors.power,
+        filters.is_power_line, colors.power_line,
         filters.is_barrier, colors.barrier,
         filters.is_watercourse, [
           "case",
-          filters.has_tunnel, colors.water_tunnel,
-          colors.water,
+          filters.has_tunnel, colors.watercourse_tunnel,
+          colors.watercourse,
         ],
         ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major,
         colors.highway_minor
@@ -361,12 +460,12 @@ const lineLayer = {
         "case",
         filters.is_ferry, colors.ferry,
         filters.is_railway_track, colors.railway,
-        filters.is_power_line, colors.power,
+        filters.is_power_line, colors.power_line,
         filters.is_barrier, colors.barrier,
         filters.is_watercourse, [
           "case",
-          filters.has_tunnel, colors.water_tunnel,
-          colors.water,
+          filters.has_tunnel, colors.watercourse_tunnel,
+          colors.watercourse,
         ],
         ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link"]]], colors.highway_major_high_zoom,
         filters.has_tunnel, colors.highway_minor_high_zoom_tunnel,
@@ -395,47 +494,25 @@ const structureLayer = {
     "type": "fill",
     "filter": [
       "any",
-      filters.is_water_structure,
-      filters.is_building,
-      filters.is_barrier,
-      filters.is_ice,
-      filters.is_swimming_pool,
-      filters.is_parking_lot,
-      filters.is_bridge,
-      filters.is_pier
+      ...structures.map(info => info.filter)
     ],
     "layout": {
       "fill-sort-key": [
         "case",
-        filters.is_building, 30,
-        filters.is_swimming_pool, 25,
-        filters.is_barrier, 20,
-        filters.is_parking_lot, 15,
-        filters.is_bridge, 12,
-        filters.is_pier, 10,
-        filters.is_ice, 5,
-        filters.is_water_structure, 1,
+        ...structures.map((info, i) => [info.filter, i]).flat(),
         0
       ]
     },
     "paint": {
       "fill-opacity": [
         "case",
-        filters.is_building, 0.5,
-        filters.is_bridge, 0.4,
+        ...structures.filter(info => info.fill_opacity).toReversed().map(info => [info.filter, info.fill_opacity]).flat(),
         [">", ["to-number", ["get", "layer"], "0"], 0], 0.6,
         1
       ],
       "fill-color": [
         "case",
-        filters.is_water_structure, colors.water_structure_fill,
-        filters.is_ice, colors.ice_fill,
-        filters.is_building, colors.building_fill,
-        filters.is_barrier, colors.barrier,
-        filters.is_swimming_pool, colors.swimming_pool_fill,
-        filters.is_parking_lot, colors.parking_fill,
-        filters.is_bridge, colors.highway_casing,
-        filters.is_pier, colors.pier_fill,
+        ...structures.toReversed().map(info => [info.filter, info.fill_color]).flat(),
         "red"
       ]
     }
@@ -448,16 +525,12 @@ const structureOutlineLayer = {
     "type": "line",
     "filter": [
       "any",
-      filters.is_water_structure,
-      filters.is_ice,
-      filters.is_swimming_pool
+      ...structures.filter(info => info.outline_color).map(info => info.filter)
     ],
     "layout": {
       "line-sort-key": [
         "case",
-        filters.is_swimming_pool, 25,
-        filters.is_ice, 5,
-        filters.is_water_structure, 1,
+        ...structures.filter(info => info.outline_color).map((info, i) => [info.filter, i]).flat(),
         0
       ]
     },
@@ -470,9 +543,7 @@ const structureOutlineLayer = {
       "line-width": 0.5,
       "line-color": [
         "case",
-        filters.is_water_structure, colors.water_outline,
-        filters.is_ice, colors.ice_outline,
-        filters.is_swimming_pool, colors.swimming_pool_outline,
+        ...structures.filter(info => info.outline_color).toReversed().map(info => [info.filter, info.outline_color]).flat(),
         "red"
       ]
     }
@@ -494,9 +565,6 @@ export function generateStyle(baseStyleJsonString) {
         "background-color": colors.background
     }
   });
-
-  const filledLanduseIds = ["aboriginal_lands", "developed", "park", "national_park", "military", "education", "station", "power", "water_coastal", "water_surface", "maritime_park"];
-  const highZoomFilledLanduseIds = ["developed", "water_coastal", "water_surface"];
   addLayer({
     "id": "landuse-fill",
     "source": "beefsteak",
@@ -504,21 +572,19 @@ export function generateStyle(baseStyleJsonString) {
     "type": "fill",
     "filter": [
       "any",
-      ...filledLanduseIds.map(id => {
-        if (highZoomFilledLanduseIds.includes(id)) {
-          return filters['is_' + id];
-        }
+      ...landuses.map(info => {
+        if (info.high_zoom) return info.filter;
         return [
           "all",
           ["<", ["zoom"], 12],
-          filters['is_' + id]
-        ]
+          info.filter
+        ];
       })
     ],
     "layout": {
       "fill-sort-key": [
         "case",
-        ...filledLanduseIds.map((id, i) => [filters['is_' + id], i]).flat(),
+        ...landuses.map((info, i) => [info.filter, i]).flat(),
         0
       ]
     },
@@ -526,13 +592,13 @@ export function generateStyle(baseStyleJsonString) {
       "fill-color": [
         "step", ["zoom"], [
           "case",
-          ...filledLanduseIds.toReversed().map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
+          ...landuses.toReversed().map(info => [info.filter, info.fill_color]).flat(),
           "red"
         ],
         // Use step function to avoid incorrect coloring due to double tagging (e.g. landuse=industrial + power=plant)
         12, [
           "case",
-          ...highZoomFilledLanduseIds.toReversed().map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
+          ...landuses.filter(info => info.high_zoom).toReversed().map(info => [info.filter, info.fill_color]).flat(),
           "red"
         ]
       ]
@@ -554,16 +620,23 @@ export function generateStyle(baseStyleJsonString) {
       }
   });
   addLayer({
-      "id": "surface-water-outline",
+      "id": "surface-landuse-outline",
       "source": "beefsteak",
       "source-layer": "area",
       "type": "line",
-      "filter": filters.is_water_surface,
+      "filter": [
+        "any",
+        ...landuses.filter(info => info.high_zoom && info.outline_color).map(info => info.filter)
+      ],
       "layout": {
           "line-join": "round"
       },
       "paint": {
-          "line-color": colors.water_outline,
+          "line-color": [
+            "case",
+            ...landuses.filter(info => info.high_zoom && info.outline_color).toReversed().map(info => [info.filter, info.outline_color]).flat(),
+            "red"
+          ],
           "line-width": 0.5
       }
   });
@@ -580,7 +653,7 @@ export function generateStyle(baseStyleJsonString) {
         15, 1.5,
         18, 2
       ],
-      "circle-color": colors.power,
+      "circle-color": colors.power_line,
     },
     "minzoom": 13
   });
@@ -644,7 +717,7 @@ export function generateStyle(baseStyleJsonString) {
             6, 1,
             18, 2
         ],
-        "line-color": "#9db798",
+        "line-color": colors.nonmotorized_route,
         "line-dasharray": [0.5,2]
     },
     "maxzoom": 12
@@ -681,8 +754,6 @@ export function generateStyle(baseStyleJsonString) {
     },
     "maxzoom": 12
   });
-
-  const insetLanduseIds = ["aboriginal_lands", "park", "national_park", "military", "education", "station", "power", "maritime_park"];
   addLayer({
     "id": "landuse-inset",
     "source": "beefsteak",
@@ -690,13 +761,13 @@ export function generateStyle(baseStyleJsonString) {
     "type": "line",
     "filter": [
       "any",
-      ...insetLanduseIds.map(id => filters['is_' + id])
+      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
     ],
     "layout": {
       "line-join": "round",
       "line-sort-key": [
         "case",
-        ...insetLanduseIds.map((id, i) => [filters['is_' + id], i]).flat(),
+        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
         0
       ]
     },
@@ -704,7 +775,7 @@ export function generateStyle(baseStyleJsonString) {
       "line-opacity": 0.7,
       "line-color": [
         "case",
-        ...insetLanduseIds.toReversed().map(id => [filters['is_' + id], colors[id + '_fill']]).flat(),
+        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.fill_color]).flat(),
         "red"
       ],
       "line-width": 3.6,
@@ -712,29 +783,26 @@ export function generateStyle(baseStyleJsonString) {
     },
     "minzoom": 12
   });
-
-  const outlinedLanduseIds = ["aboriginal_lands", "park", "national_park", "military", "education", "station", "power", "maritime_park"];
-
   addLayer({
     "id": "landuse-outline",
     "source": "beefsteak",
     "source-layer": "area",
     "type": "line",
+    "filter": [
+      "any",
+      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
+    ],
     "layout": {
       "line-sort-key": [
         "case",
-        ...outlinedLanduseIds.map((id, i) => [filters['is_' + id], i]).flat(),
+        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
         0
       ]
     },
-    "filter": [
-      "any",
-      ...outlinedLanduseIds.map(id => filters['is_' + id])
-    ],
     "paint": {
       "line-color": [
         "case",
-        ...outlinedLanduseIds.toReversed().map(id => [filters['is_' + id], colors[id + '_outline']]).flat(),
+        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.outline_color]).flat(),
         "red"
       ],
       "line-width": 0.5
@@ -758,7 +826,7 @@ export function generateStyle(baseStyleJsonString) {
         ["!", ["==", ["get", "maritime"], "yes"]]
     ],
     "paint": {
-        "line-color": "#fff",
+        "line-color": colors.boundary_casing,
         "line-opacity": 0.5,
         "line-width": [
             "case",
@@ -790,7 +858,7 @@ export function generateStyle(baseStyleJsonString) {
           ["!", ["==", ["get", "maritime"], "yes"]]
       ],
       "paint": {
-          "line-color": "#ccc",
+          "line-color": colors.boundary,
           "line-width": [
               "case",
               ["in", "┃2┃", ["get", "r.admin_level"]], 1.75,
