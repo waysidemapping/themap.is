@@ -21,6 +21,8 @@ const filters = {
     ["!", ["==", ["get", "tunnel"], "no"]]
   ],
   is_aboriginal_lands: ["==", ["get", "boundary"], "aboriginal_lands"],
+  is_aerialway: ["has", "aerialway"],
+  is_aerialway_support: ["==", ["get", "aerialway"], "pylon"],
   is_aeroway: ["in", ["get", "aeroway"], ["literal", ["runway", "taxiway"]]],
   is_barrier: [
     "any",
@@ -149,6 +151,8 @@ const colors = {
   aboriginal_lands_text: "#6B533F",
   admin_boundary: "#ccbdbd",
   admin_boundary_casing: "#fff",
+  aerialway: "#be6e85",
+  aerialway_text: "#381a23",
   background: "#fff",
   barrier: "#D6CCCF",
   building_fill: "#807974",
@@ -337,6 +341,7 @@ const lineLayerWidth = [
       "case", filters.has_subsurface_location, 1.85,
       0.85
     ],
+    filters.is_aerialway, 1.75,
     filters.is_railway_track, 0.8,
     filters.is_barrier_minor, 1.5,
     ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass"]]], 4,
@@ -420,6 +425,7 @@ const lineLayer = {
     filters.is_ferry,
     filters.is_railway_track,
     filters.is_power_line,
+    filters.is_aerialway,
     filters.is_aeroway,
     [
       "all",
@@ -438,6 +444,7 @@ const lineLayer = {
     "line-cap": "butt",
     "line-sort-key": [
       "case",
+      filters.is_aerialway, 60,
       filters.is_power_line, 50,
       filters.is_barrier, 40,
       filters.is_railway_track, 30,
@@ -453,6 +460,7 @@ const lineLayer = {
     "line-color": [
       "step", ["zoom"], [
         "case",
+        filters.is_aerialway, colors.aerialway,
         filters.is_ferry, colors.ferry,
         filters.is_railway_track, colors.railway,
         filters.is_power_line, colors.power_line,
@@ -467,6 +475,7 @@ const lineLayer = {
       ],
       14,  [
         "case",
+        filters.is_aerialway, colors.aerialway,
         filters.is_ferry, colors.ferry,
         filters.is_railway_track, colors.railway,
         filters.is_power_line, colors.power_line,
@@ -592,6 +601,7 @@ let diegeticPointLayer = {
   "filter": [
     "any",
     filters.is_power_support,
+    filters.is_aerialway_support,
     [
       "all",
       filters.is_tree,
@@ -629,6 +639,7 @@ let diegeticPointLayer = {
       "case",
       filters.is_tree, colors.tree,
       filters.is_power_support, colors.power_line,
+      filters.is_aerialway_support, colors.aerialway,
       "red"
     ]
   },
@@ -889,6 +900,7 @@ export function generateStyle(baseStyleJsonString) {
     "type": "symbol",
     "filter": [
       "any",
+      filters.is_aerialway,
       filters.is_aeroway,
       filters.is_barrier,
       filters.is_ferry,
@@ -910,6 +922,7 @@ export function generateStyle(baseStyleJsonString) {
     "paint": {
         "text-color": [
             "case",
+            filters.is_aerialway, colors.aerialway_text,
             filters.is_power_line, colors.power_text,
             filters.is_watercourse, colors.water_text,
             colors.text
