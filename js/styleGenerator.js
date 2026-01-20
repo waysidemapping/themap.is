@@ -30,6 +30,18 @@ const filters = {
     ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]],
     ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]
   ],
+  is_barrier_minor: [
+    "all",
+    ["has", "barrier"],
+    [
+      "!",
+      [
+        "any",
+        ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]],
+        ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]
+      ]
+    ]
+  ],
   is_building: [
     "all",
     ["has", "building"],
@@ -44,6 +56,7 @@ const filters = {
   is_education: [
     "all",
     ["!", ["has", "building"]],
+    ["!", ["all", ["has", "indoor"], ["!", ["==", ["get", "indoor"], "no"]]]],
     [
       "any",
       ["has", "education"],
@@ -63,18 +76,6 @@ const filters = {
       ["in", "┃portage┃", ["get", "r.route"]]
     ]
   ],
-  is_barrier_minor: [
-    "all",
-    ["has", "barrier"],
-    [
-      "!",
-      [
-        "any",
-        ["in", ["get", "man_made"], ["literal", ["breakwater", "dyke", "groyne"]]],
-        ["in", ["get", "waterway"], ["literal", ["dam", "weir"]]]
-      ]
-    ]
-  ],
   is_parking_lot: [
     "all",
     ["!", ["has", "building"]],
@@ -83,8 +84,39 @@ const filters = {
   ],
   is_bridge: ["==", ["get", "man_made"], "bridge"],
   is_pier: ["==", ["get", "man_made"], "pier"],
+  is_healthcare: [
+    "all",
+    ["!", ["has", "building"]],
+    ["!", ["all", ["has", "indoor"], ["!", ["==", ["get", "indoor"], "no"]]]],
+    [
+      "any",
+      ["has", "healthcare"],
+      ["in", ["get", "amenity"], ["literal", ["hospital", "clinic"]]],
+      ["in", ["get", "landuse"], ["literal", ["healthcare"]]]
+    ]
+  ],
   is_highway: ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
   is_ice: ["in", ["get", "natural"], ["literal", ["glacier"]]],
+  is_outdoor_sports_facility: [
+    "all",
+    ["!", ["has", "building"]],
+    ["!", ["all", ["has", "indoor"], ["!", ["==", ["get", "indoor"], "no"]]]],
+    [
+      "any",
+      ["in", ["get", "leisure"], ["literal", ["golf_course",  "horse_riding"]]],
+      ["in", ["get", "landuse"], ["literal", ["recreation_ground", "winter_sports"]]]
+    ]
+  ],
+  is_outdoor_attraction: [
+    "all",
+    ["!", ["has", "building"]],
+    ["!", ["all", ["has", "indoor"], ["!", ["==", ["get", "indoor"], "no"]]]],
+    [
+      "any",
+      ["in", ["get", "leisure"], ["literal", ["miniature_golf", "water_park"]]],
+      ["in", ["get", "tourism"], ["literal", ["aquarium", "gallery", "museum", "theme_park", "zoo"]]],
+    ]
+  ],
   is_landform_area_poi: [
     "any",
     ["in", ["get", "place"], ["literal", ["island", "islet", "archipelago"]]],
@@ -125,6 +157,16 @@ const filters = {
   is_powerline: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
   is_power_support:  ["in", ["get", "power"], ["literal", ["catenary_mast", "pole", "portal", "tower"]]],
   is_railway: ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
+  is_religious: [
+    "all",
+    ["!", ["has", "building"]],
+    ["!", ["all", ["has", "indoor"], ["!", ["==", ["get", "indoor"], "no"]]]],
+    [
+      "any",
+      ["in", ["get", "amenity"], ["literal", ["place_of_worship"]]],
+      ["in", ["get", "landuse"], ["literal", ["cemetery", "religious"]]]
+    ]
+  ],
   is_station: [
     "all",
     ["!", ["has", "building"]],
@@ -175,6 +217,9 @@ const colors = {
   education_text: "#575135",
   ferry_stroke: "#7EC2FF",
   floating_boom_stroke: "#f9b98f",
+  healthcare_fill: "#ffd8d7",
+  healthcare_outline: "#e1adab",
+  healthcare_text: "#593635",
   highway_major_stroke: "#F7CF8D",
   highway_major_high_zoom_stroke: "#FFF2DD",
   highway_minor_stroke: "#cfcfcf",
@@ -193,6 +238,12 @@ const colors = {
   national_park_fill: "#DAEDD5",
   national_park_outline: "#C1D6BD",
   national_park_text: "#3C5936",
+  outdoor_sports_facility_fill: "#ddffeb",
+  outdoor_sports_facility_outline: "#b4e8c9",
+  outdoor_sports_facility_text: "#405e4c",
+  outdoor_attraction_fill: "#ffdff2",
+  outdoor_attraction_outline: "#e2bbd2",
+  outdoor_attraction_text: "#6b445c",
   route_foot_overlay: "#75ae7f",
   park_fill: "#ECFAE9",
   park_outline: "#d2edcd",
@@ -204,6 +255,9 @@ const colors = {
   power_outline: "#F0D5FA",
   power_text: "#54415C",
   railway_stroke: "#96a0ac",
+  religious_fill: "#ffe9d4",
+  religious_outline: "#dfc4ab",
+  religious_text: "#4f3e2f",
   station_fill: "#E3E9FA",
   station_outline: "#C2CCE6",
   station_text: "#3F4963",
@@ -249,6 +303,26 @@ const landuses = [
     filter: filters.is_education,
     fill_color: colors.education_fill,
     outline_color: colors.education_outline
+  },
+  {
+    filter: filters.is_religious,
+    fill_color: colors.religious_fill,
+    outline_color: colors.religious_outline
+  },
+  {
+    filter: filters.is_outdoor_sports_facility,
+    fill_color: colors.outdoor_sports_facility_fill,
+    outline_color: colors.outdoor_sports_facility_outline
+  },
+  {
+    filter: filters.is_outdoor_attraction,
+    fill_color: colors.outdoor_attraction_fill,
+    outline_color: colors.outdoor_attraction_outline
+  },
+  {
+    filter: filters.is_healthcare,
+    fill_color: colors.healthcare_fill,
+    outline_color: colors.healthcare_outline
   },
   {
     filter: filters.is_station,
@@ -967,133 +1041,141 @@ export function generateStyle(baseStyleJsonString) {
     "source-layer": "point",
     "type": "symbol",
     "filter": [
-        "any",
+      "any",
+      [
+        "all",
         [
+          "any",
+          [
             "all",
-            [
-                "any",
-                [
-                    "all",
-                    ["in", ["get", "admin_level"], ["literal", ["2", "4", "5", "8"]]],
-                    ["in", ["get", "boundary"], ["literal", ["administrative"]]]
-                ],
-                ["in", ["get", "place"], ["literal", ["city", "village", "town", "hamlet"]]]
-            ],
-            [
-                "any",
-                ["in", ["get", "admin_level"], ["literal", ["2", "4"]]],
-                ["in", ["get", "capital"], ["literal", ["2", "4"]]],
-                [
-                    "all",
-                    [">=", ["zoom"], 5],
-                    [">=", ["to-number", ["get", "population"], "0"], 100000]
-                ],
-                [
-                    "all",
-                    [">=", ["zoom"], 8],
-                    [">=", ["to-number", ["get", "population"], "0"], 50000]
-                ],
-                [">=", ["zoom"], 10],
-                [">=", ["to-number", ["get", "population"], "0"], 1000000]
-            ]
+            ["in", ["get", "admin_level"], ["literal", ["2", "4", "5", "8"]]],
+            ["in", ["get", "boundary"], ["literal", ["administrative"]]]
+          ],
+          ["in", ["get", "place"], ["literal", ["city", "village", "town", "hamlet"]]]
         ],
-        filters.is_aboriginal_lands,
-        filters.is_education,
-        filters.is_park,
-        filters.is_power,
-        filters.is_maritime_park,
-        filters.is_military,
-        filters.is_national_park,
-        filters.is_ice,
-        filters.is_landform_area_poi,
-        filters.is_water_area_poi,
-        filters.is_station,
-        filters.is_developed
+        [
+          "any",
+          ["in", ["get", "admin_level"], ["literal", ["2", "4"]]],
+          ["in", ["get", "capital"], ["literal", ["2", "4"]]],
+          [
+            "all",
+            [">=", ["zoom"], 5],
+            [">=", ["to-number", ["get", "population"], "0"], 100000]
+          ],
+          [
+            "all",
+            [">=", ["zoom"], 8],
+            [">=", ["to-number", ["get", "population"], "0"], 50000]
+          ],
+          [">=", ["zoom"], 10],
+          [">=", ["to-number", ["get", "population"], "0"], 1000000]
+        ]
+      ],
+      filters.is_aboriginal_lands,
+      filters.is_education,
+      filters.is_religious,
+      filters.is_park,
+      filters.is_power,
+      filters.is_maritime_park,
+      filters.is_military,
+      filters.is_national_park,
+      filters.is_healthcare,
+      filters.is_ice,
+      filters.is_outdoor_sports_facility,
+      filters.is_outdoor_attraction,
+      filters.is_landform_area_poi,
+      filters.is_water_area_poi,
+      filters.is_station,
+      filters.is_developed
     ],
     "layout": {
-        "symbol-placement": "point",
-        "symbol-sort-key": ["-", ["coalesce", ["get", "c.area"], 0]],
-        "text-size":[
-            "case",
-            [
-              "any",
-              filters.is_ice,
-              filters.is_landform_area_poi,
-              filters.is_water_area_poi
-            ], 10,
-            10.5
-        ],
-        "text-transform":[
-            "case",
-            [
-                "all",
-                ["in", ["get", "boundary"], ["literal", ["administrative"]]],
-                ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
-            ], "uppercase",
-            [
-              "any",
-              filters.is_ice,
-              filters.is_landform_area_poi,
-              filters.is_water_area_poi
-            ], "uppercase",
-            "none"
-        ],
-        "text-font":[
-            "case",
-            [
-                "all",
-                ["in", ["get", "boundary"], ["literal", ["administrative"]]],
-                ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
-            ], ["literal", ["Noto Sans Medium"]],
-            ["any",["in", ["get", "place"], ["literal", ["city"]]],["in", ["get", "boundary"], ["literal", ["administrative"]]]], ["literal", ["Noto Sans Bold"]],
-            [
-              "any",
-              filters.is_ice,
-              filters.is_landform_area_poi,
-              filters.is_water_area_poi
-            ], ["literal", ["Noto Serif Medium Italic"]],
-            ["literal", ["Noto Sans Medium"]]
-        ],
-        "text-letter-spacing":[
-            "case",
-            [
-                "all",
-                ["in", ["get", "boundary"], ["literal", ["administrative"]]],
-                ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
-            ], 0.15,
-            [
-              "any",
-              filters.is_ice,
-              filters.is_landform_area_poi,
-              filters.is_water_area_poi
-            ], 0.1,
-            0
-        ],
-        "text-field": ["coalesce", ["get", "name"], ["get", "ref"]]
+      "symbol-placement": "point",
+      "symbol-sort-key": ["-", ["coalesce", ["get", "c.area"], 0]],
+      "text-size":[
+          "case",
+          [
+            "any",
+            filters.is_ice,
+            filters.is_landform_area_poi,
+            filters.is_water_area_poi
+          ], 10,
+          10.5
+      ],
+      "text-transform":[
+          "case",
+          [
+              "all",
+              ["in", ["get", "boundary"], ["literal", ["administrative"]]],
+              ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
+          ], "uppercase",
+          [
+            "any",
+            filters.is_ice,
+            filters.is_landform_area_poi,
+            filters.is_water_area_poi
+          ], "uppercase",
+          "none"
+      ],
+      "text-font":[
+        "case",
+        [
+          "all",
+          ["in", ["get", "boundary"], ["literal", ["administrative"]]],
+          ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
+        ], ["literal", ["Noto Sans Medium"]],
+        ["any",["in", ["get", "place"], ["literal", ["city"]]],["in", ["get", "boundary"], ["literal", ["administrative"]]]], ["literal", ["Noto Sans Bold"]],
+        [
+          "any",
+          filters.is_ice,
+          filters.is_landform_area_poi,
+          filters.is_water_area_poi
+        ], ["literal", ["Noto Serif Medium Italic"]],
+        ["literal", ["Noto Sans Medium"]]
+      ],
+      "text-letter-spacing":[
+        "case",
+        [
+          "all",
+          ["in", ["get", "boundary"], ["literal", ["administrative"]]],
+          ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
+        ], 0.15,
+        [
+          "any",
+          filters.is_ice,
+          filters.is_landform_area_poi,
+          filters.is_water_area_poi
+        ], 0.1,
+        0
+      ],
+      "text-field": ["coalesce", ["get", "name"], ["get", "ref"]]
     },
     "paint": {
-        "text-color":[
-            "case",
-            [
-                "all",
-                ["in", ["get", "boundary"], ["literal", ["administrative"]]],
-                ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
-            ], colors.admin_boundary_major_text,
-            // These should be in roughly the same order as the fill precendence in case of double tagging (e.g. aeroway and military)
-            filters.is_ice, colors.ice_text,
-            filters.is_maritime_park, colors.maritime_park_text,
-            filters.is_water_area_poi, colors.water_text,
-            filters.is_power, colors.power_text,
-            filters.is_station, colors.station_text,
-            filters.is_education, colors.education_text,
-            filters.is_military, colors.military_text,
-            filters.is_national_park, colors.national_park_text,
-            filters.is_park, colors.park_text,
-            filters.is_aboriginal_lands, colors.aboriginal_lands_text,
-            colors.text
-        ],
-        "text-halo-color": colors.text_halo,
-        "text-halo-width": 1
+      "text-color":[
+        "case",
+        [
+          "all",
+          ["in", ["get", "boundary"], ["literal", ["administrative"]]],
+          ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
+        ], colors.admin_boundary_major_text,
+        // These should be in roughly the same order as the fill precendence in case of double tagging (e.g. aeroway and military)
+        filters.is_ice, colors.ice_text,
+        filters.is_maritime_park, colors.maritime_park_text,
+        filters.is_outdoor_sports_facility, colors.outdoor_sports_facility_text,
+        filters.is_outdoor_attraction, colors.outdoor_attraction_text,
+        filters.is_water_area_poi, colors.water_text,
+        filters.is_power, colors.power_text,
+        filters.is_station, colors.station_text,
+        filters.is_education, colors.education_text,
+        filters.is_healthcare, colors.healthcare_text,
+        filters.is_religious, colors.religious_text,
+        filters.is_military, colors.military_text,
+        filters.is_national_park, colors.national_park_text,
+        filters.is_park, colors.park_text,
+        filters.is_aboriginal_lands, colors.aboriginal_lands_text,
+        colors.text
+      ],
+      "text-halo-color": colors.text_halo,
+      "text-halo-width": 1
     }
   });
 
