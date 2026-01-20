@@ -52,6 +52,7 @@ const filters = {
     ["==", ["get", "natural"], "coastline"],
     ["!", ["==", ["get", "maritime"], "yes"]]
   ],
+  is_continent: ["==", ["get", "place"], "continent"],
   is_developed: ["in", ["get", "landuse"], ["literal", ["residential", "commercial", "industrial", "retail", "brownfield", "garages", "railway"]]],
   is_education: [
     "all",
@@ -752,6 +753,31 @@ let diegeticPointLayer = {
 
 export function generateStyle(baseStyleJsonString) {
 
+  const userLangs = navigator.languages ? navigator.languages : navigator.language ? [navigator.language] : [];
+  const osmLangSuffixes = [];
+  userLangs.forEach(userLang => {
+    const parts = userLang.split('-');
+    while (parts.length) {
+      const builtLang = ':' + parts.join('-');
+      if (!osmLangSuffixes.includes(builtLang)) osmLangSuffixes.push(builtLang);
+      parts.pop();
+    }
+  });
+  osmLangSuffixes.push('');
+
+  const localizedName = ["coalesce", ...osmLangSuffixes.map(suffix => ["get", "name" + suffix]), ["get", "ref"]];
+  // const nativeName = ["coalesce", ["get", "name"], ["get", "ref"]];
+  // const labelTextField = [
+  //   "case",
+  //   [
+  //     "all",
+  //     ["!", ["in", ["get", "place"], ["literal", ["continent", "ocean", "sea"]]]],
+  //     ["!", ["in", localizedName, nativeName]]
+  //   ], ["format", localizedName, {},"\n", {}, nativeName, {"font-scale": 0.85}],
+  //   localizedName
+  // ];
+  const labelTextField = localizedName;
+
   // parse anew every time to avoid object references
   const style = JSON.parse(baseStyleJsonString);
 
@@ -1020,7 +1046,7 @@ export function generateStyle(baseStyleJsonString) {
             filters.is_watercourse, ["literal", ["Noto Serif Italic"]],
             ["literal", ["Noto Sans Regular"]]
         ],
-        "text-field": ["coalesce", ["get", "name"], ["get", "ref"]]
+        "text-field": labelTextField
     },
     "paint": {
         "text-color": [
@@ -1071,6 +1097,11 @@ export function generateStyle(baseStyleJsonString) {
           [">=", ["to-number", ["get", "population"], "0"], 1000000]
         ]
       ],
+      [
+        "all",
+        ["<=", ["zoom"], 3],
+        filters.is_continent
+      ],
       filters.is_aboriginal_lands,
       filters.is_education,
       filters.is_religious,
@@ -1096,6 +1127,7 @@ export function generateStyle(baseStyleJsonString) {
           [
             "any",
             filters.is_ice,
+            filters.is_continent,
             filters.is_landform_area_poi,
             filters.is_water_area_poi
           ], 10,
@@ -1111,6 +1143,7 @@ export function generateStyle(baseStyleJsonString) {
           [
             "any",
             filters.is_ice,
+            filters.is_continent,
             filters.is_landform_area_poi,
             filters.is_water_area_poi
           ], "uppercase",
@@ -1126,8 +1159,12 @@ export function generateStyle(baseStyleJsonString) {
         ["any",["in", ["get", "place"], ["literal", ["city"]]],["in", ["get", "boundary"], ["literal", ["administrative"]]]], ["literal", ["Noto Sans Bold"]],
         [
           "any",
-          filters.is_ice,
+          filters.is_continent,
           filters.is_landform_area_poi,
+        ], ["literal", ["Noto Serif Medium Italic"]],
+        [
+          "any",
+          filters.is_ice,
           filters.is_water_area_poi
         ], ["literal", ["Noto Serif Medium Italic"]],
         ["literal", ["Noto Sans Medium"]]
@@ -1142,12 +1179,13 @@ export function generateStyle(baseStyleJsonString) {
         [
           "any",
           filters.is_ice,
+          filters.is_continent,
           filters.is_landform_area_poi,
           filters.is_water_area_poi
         ], 0.1,
         0
       ],
-      "text-field": ["coalesce", ["get", "name"], ["get", "ref"]]
+      "text-field": labelTextField
     },
     "paint": {
       "text-color":[
