@@ -105,7 +105,7 @@ const filters = {
     [
       "any",
       ["in", ["get", "leisure"], ["literal", ["golf_course",  "horse_riding"]]],
-      ["in", ["get", "landuse"], ["literal", ["recreation_ground", "winter_sports"]]]
+      ["in", ["get", "landuse"], ["literal", ["winter_sports"]]]
     ]
   ],
   is_outdoor_attraction: [
@@ -264,6 +264,7 @@ const colors = {
   station_text: "#3F4963",
   swimming_pool_fill: "#C4F1FF",
   swimming_pool_outline: "#BDE0EB",
+  swimming_pool_text: "#497683",
   text: "#555",
   text_halo: "#fff",
   tree: "#268726",
@@ -404,7 +405,7 @@ const structures = [
     filter: filters.is_swimming_pool,
     fill_color: colors.swimming_pool_fill,
     outline_color: colors.swimming_pool_outline,
-    text_color: colors.text
+    text_color: colors.swimming_pool_text
   },
   {
     filter: filters.is_building,
