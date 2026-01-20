@@ -68,10 +68,10 @@ const filters = {
     "all",
     ["!", ["has", "building"]],
     ["!", ["in", ["get", "parking"], ["literal", ["multi-storey", "underground"]]]],
-    ["in", ["get", "amenity"], ["literal", ["parking"]]]
+    ["==", ["get", "amenity"], "parking"]
   ],
-  is_bridge: ["in", ["get", "man_made"], ["literal", ["bridge"]]],
-  is_pier: ["in", ["get", "man_made"], ["literal", ["pier"]]],
+  is_bridge: ["==", ["get", "man_made"], "bridge"],
+  is_pier: ["==", ["get", "man_made"], "pier"],
   is_highway: ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
   is_ice: ["in", ["get", "natural"], ["literal", ["glacier"]]],
   is_landform_area_poi: [
@@ -111,9 +111,9 @@ const filters = {
     ["!", ["==", ["get", "maritime"], "yes"]]
   ],
   is_power: ["in", ["get", "power"], ["literal", ["plant", "substation"]]],
-  is_power_line: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
+  is_powerline: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
   is_power_support:  ["in", ["get", "power"], ["literal", ["catenary_mast", "pole", "portal", "tower"]]],
-  is_railway_track: ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
+  is_railway: ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
   is_station: [
     "all",
     ["!", ["has", "building"]],
@@ -181,13 +181,13 @@ const colors = {
   national_park_fill: "#DAEDD5",
   national_park_outline: "#C1D6BD",
   national_park_text: "#3C5936",
-  route_foot_stroke: "#75ae7f",
+  route_foot_overlay: "#75ae7f",
   park_fill: "#ECFAE9",
   park_outline: "#d2edcd",
   park_text: "#46693F",
   parking_fill: "#efefef",
   pier_fill: "#fff",
-  power_stroke: "#D4BADE",
+  powerline_stroke: "#D4BADE",
   power_fill: "#FBF4FE",
   power_outline: "#F0D5FA",
   power_text: "#54415C",
@@ -307,16 +307,16 @@ const structures = [
   },
 ];
 
-const lineLayerWidth = [
+const lineLayerLineWidth = [
   "interpolate", ["linear"], ["zoom"],
   12, [
     "case",
     filters.is_ferry, 1,
-    filters.is_power_line, [
+    filters.is_powerline, [
       "case", filters.has_subsurface_location, 1.85,
       0.85
     ],
-    filters.is_railway_track, 0.8,
+    filters.is_railway, 0.8,
     filters.is_barrier_minor, 1,
     filters.is_watercourse, 2,
     ["any", ["in", ["get", "highway"], ["literal", ["motorway"]]], ["in", ["get", "aeroway"], ["literal", ["runway"]]]], 2,
@@ -325,11 +325,11 @@ const lineLayerWidth = [
   14, [
     "case",
     filters.is_ferry, 1,
-    filters.is_power_line, [
+    filters.is_powerline, [
       "case", filters.has_subsurface_location, 1.85,
       0.85
     ],
-    filters.is_railway_track, 0.8,
+    filters.is_railway, 0.8,
     filters.is_barrier_minor, 1,
     filters.is_watercourse, 2,
     ["any", ["in", ["get", "highway"], ["literal", ["motorway"]]], ["in", ["get", "aeroway"], ["literal", ["runway"]]]], 4,
@@ -338,12 +338,12 @@ const lineLayerWidth = [
   18, [
     "case",
     filters.is_ferry, 2,
-    filters.is_power_line, [
+    filters.is_powerline, [
       "case", filters.has_subsurface_location, 1.85,
       0.85
     ],
     filters.is_aerialway, 1.75,
-    filters.is_railway_track, 0.8,
+    filters.is_railway, 0.8,
     filters.is_barrier_minor, 1.5,
     ["in", ["get", "waterway"], ["literal", ["stream", "drain", "ditch", "tidal_channel", "fish_pass"]]], 4,
     ["in", ["get", "highway"], ["literal", ["path", "footway", "steps", "bridleway", "corridor"]]], 2.5,
@@ -362,8 +362,8 @@ const lineCasingLayer = {
   "type": "line",
   "filter": [
     "any",
-    ["all", ["<", ["zoom"], 13], filters.is_power_line, ["!", filters.has_subsurface_location]],
-    filters.is_railway_track,
+    ["all", ["<", ["zoom"], 13], filters.is_powerline, ["!", filters.has_subsurface_location]],
+    filters.is_railway,
     ["all", [">=", ["zoom"], 14], filters.is_aeroway],
     ["all", [">=", ["zoom"], 14], filters.is_highway],
     ["all", filters.is_watercourse, ["any", filters.has_tunnel, filters.has_bridge]]
@@ -376,8 +376,8 @@ const lineCasingLayer = {
     "line-opacity": [
       "case",
       ["all", ["any", filters.is_highway, filters.is_aeroway, filters.is_watercourse], filters.has_tunnel], 0.7,
-      ["all", filters.is_railway_track, filters.has_tunnel], 0.4,
-      filters.is_railway_track, 1,
+      ["all", filters.is_railway, filters.has_tunnel], 0.4,
+      filters.is_railway, 1,
       filters.has_bridge, 0.4,
       1
     ],
@@ -385,30 +385,30 @@ const lineCasingLayer = {
       "interpolate", ["linear"], ["zoom"],
       14, [
         "case",
-        filters.is_power_line, 0.75,
-        filters.is_railway_track, 1.15,
+        filters.is_powerline, 0.75,
+        filters.is_railway, 1.15,
         filters.has_bridge, 2,
         1
       ],
       18, [
         "case",
-        filters.is_power_line, 0.75,
-        filters.is_railway_track, 2,
+        filters.is_powerline, 0.75,
+        filters.is_railway, 2,
         filters.has_bridge, 7,
         1
       ]
     ],
     "line-color": [
       "case",
-      filters.is_power_line, colors.power_stroke,
-      filters.is_railway_track, colors.railway_stroke,
+      filters.is_powerline, colors.powerline_stroke,
+      filters.is_railway, colors.railway_stroke,
       colors.highway_casing
     ],
-    "line-gap-width": lineLayerWidth,
+    "line-gap-width": lineLayerLineWidth,
     "line-dasharray": [
       "case",
-      filters.is_power_line, ["literal", [1.85, 25]],
-      filters.is_railway_track, ["literal", [0.25, 4]],
+      filters.is_powerline, ["literal", [1.85, 25]],
+      filters.is_railway, ["literal", [0.25, 4]],
       ["!", filters.has_paving], ["literal", [3, 2]],
       ["all", ["any", filters.is_highway, filters.is_aeroway, filters.is_watercourse], filters.has_tunnel], ["literal", [8, 4]],
       ["literal", [1]]
@@ -424,8 +424,8 @@ const lineLayer = {
   "filter": [
     "any",
     filters.is_ferry,
-    filters.is_railway_track,
-    filters.is_power_line,
+    filters.is_railway,
+    filters.is_powerline,
     filters.is_aerialway,
     filters.is_aeroway,
     [
@@ -446,9 +446,9 @@ const lineLayer = {
     "line-sort-key": [
       "case",
       filters.is_aerialway, 60,
-      filters.is_power_line, 50,
+      filters.is_powerline, 50,
       filters.is_barrier, 40,
-      filters.is_railway_track, 30,
+      filters.is_railway, 30,
       filters.is_ferry, 20,
       ["in", ["get", "highway"], ["literal", ["motorway", "trunk"]]], 5,
       ["in", ["get", "highway"], ["literal", ["motorway_link", "trunk_link"]]], -5,
@@ -457,14 +457,14 @@ const lineLayer = {
     ]
   },
   "paint": {
-    "line-width": lineLayerWidth,
+    "line-width": lineLayerLineWidth,
     "line-color": [
       "step", ["zoom"], [
         "case",
         filters.is_aerialway, colors.aerialway_stroke,
         filters.is_ferry, colors.ferry_stroke,
-        filters.is_railway_track, colors.railway_stroke,
-        filters.is_power_line, colors.power_stroke,
+        filters.is_railway, colors.railway_stroke,
+        filters.is_powerline, colors.powerline_stroke,
         filters.is_barrier, colors.barrier_stroke,
         filters.is_watercourse, [
           "case",
@@ -478,8 +478,8 @@ const lineLayer = {
         "case",
         filters.is_aerialway, colors.aerialway_stroke,
         filters.is_ferry, colors.ferry_stroke,
-        filters.is_railway_track, colors.railway_stroke,
-        filters.is_power_line, colors.power_stroke,
+        filters.is_railway, colors.railway_stroke,
+        filters.is_powerline, colors.powerline_stroke,
         filters.is_barrier, colors.barrier_stroke,
         filters.is_watercourse, [
           "case",
@@ -493,8 +493,8 @@ const lineLayer = {
     ],
     "line-opacity": [
       "case",
-      ["all", ["any", filters.is_highway, filters.is_aeroway, filters.is_watercourse, filters.is_railway_track], filters.has_tunnel], 0.4,
-      ["all", filters.is_power_line, filters.has_subsurface_location], 0.6,
+      ["all", ["any", filters.is_highway, filters.is_aeroway, filters.is_watercourse, filters.is_railway], filters.has_tunnel], 0.4,
+      ["all", filters.is_powerline, filters.has_subsurface_location], 0.6,
       1
     ],
     "line-dasharray": [
@@ -512,14 +512,17 @@ const lineOverlayLayer = {
   "source-layer": "line",
   "type": "line",
   "filter": [
-    "all",
+    "any",
     [
-      "any",
-      ["in", "┃hiking┃", ["get", "r.route"]],
-      ["in", "┃foot┃", ["get", "r.route"]],
-      ["in", "┃portage┃", ["get", "r.route"]]
-    ],
-    ["has", "highway"]
+      "all",
+      [
+        "any",
+        ["in", "┃hiking┃", ["get", "r.route"]],
+        ["in", "┃foot┃", ["get", "r.route"]],
+        ["in", "┃portage┃", ["get", "r.route"]]
+      ],
+      ["has", "highway"]
+    ]
   ],
   "layout": {
     "line-join": "round",
@@ -527,7 +530,7 @@ const lineOverlayLayer = {
   },
   "paint": {
     "line-width": 1,
-    "line-color": colors.route_foot_stroke,
+    "line-color": colors.route_foot_overlay,
     "line-dasharray": ["literal", [3.125, 1.875]]
   }
 };
@@ -639,7 +642,7 @@ let diegeticPointLayer = {
     "circle-color": [
       "case",
       filters.is_tree, colors.tree,
-      filters.is_power_support, colors.power_stroke,
+      filters.is_power_support, colors.powerline_stroke,
       filters.is_aerialway_support, colors.aerialway_stroke,
       "red"
     ]
@@ -766,6 +769,31 @@ export function generateStyle(baseStyleJsonString) {
           "line-width": 0.5
       }
   });
+  addLayer({
+    "id": "landuse-outline",
+    "source": "beefsteak",
+    "source-layer": "area",
+    "type": "line",
+    "filter": [
+      "any",
+      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
+    ],
+    "layout": {
+      "line-sort-key": [
+        "case",
+        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
+        0
+      ]
+    },
+    "paint": {
+      "line-color": [
+        "case",
+        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.outline_color]).flat(),
+        "red"
+      ],
+      "line-width": 0.5
+    }
+  });
 
   function forTagLayer(layer, tagLayer) {
     let newLayer = Object.assign({}, layer);
@@ -799,32 +827,6 @@ export function generateStyle(baseStyleJsonString) {
     addLayer(forTagLayer(lineLayer, tagLayer));
     addLayer(forTagLayer(lineOverlayLayer, tagLayer));
     addLayer(forTagLayer(diegeticPointLayer, tagLayer));
-  });
-
-  addLayer({
-    "id": "landuse-outline",
-    "source": "beefsteak",
-    "source-layer": "area",
-    "type": "line",
-    "filter": [
-      "any",
-      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
-    ],
-    "layout": {
-      "line-sort-key": [
-        "case",
-        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
-        0
-      ]
-    },
-    "paint": {
-      "line-color": [
-        "case",
-        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.outline_color]).flat(),
-        "red"
-      ],
-      "line-width": 0.5
-    }
   });
 
   addLayer({
@@ -906,8 +908,8 @@ export function generateStyle(baseStyleJsonString) {
       filters.is_barrier,
       filters.is_ferry,
       filters.is_highway,
-      filters.is_power_line,
-      filters.is_railway_track,
+      filters.is_powerline,
+      filters.is_railway,
       filters.is_watercourse
     ],
     "layout": {
@@ -924,7 +926,7 @@ export function generateStyle(baseStyleJsonString) {
         "text-color": [
             "case",
             filters.is_aerialway, colors.aerialway_text,
-            filters.is_power_line, colors.power_text,
+            filters.is_powerline, colors.power_text,
             filters.is_watercourse, colors.water_text,
             colors.text
         ],
