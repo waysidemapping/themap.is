@@ -278,62 +278,74 @@ const landuses = [
   {
     filter: filters.is_aboriginal_lands,
     fill_color: colors.aboriginal_lands_fill,
-    outline_color: colors.aboriginal_lands_outline
+    outline_color: colors.aboriginal_lands_outline,
+    text_color: colors.aboriginal_lands_text
   },
   {
     filter: filters.is_developed,
     fill_color: colors.developed_fill,
+    text_color: colors.text,
     high_zoom: true
   },
   {
     filter: filters.is_park,
     fill_color: colors.park_fill,
-    outline_color: colors.park_outline
+    outline_color: colors.park_outline,
+    text_color: colors.park_text
   },
   {
     filter: filters.is_national_park,
     fill_color: colors.national_park_fill,
-    outline_color: colors.national_park_outline
+    outline_color: colors.national_park_outline,
+    text_color: colors.national_park_text
   },
   {
     filter: filters.is_military,
     fill_color: colors.military_fill,
-    outline_color: colors.military_outline
+    outline_color: colors.military_outline,
+    text_color: colors.military_text
   },
   {
     filter: filters.is_education,
     fill_color: colors.education_fill,
-    outline_color: colors.education_outline
+    outline_color: colors.education_outline,
+    text_color: colors.education_text
   },
   {
     filter: filters.is_religious,
     fill_color: colors.religious_fill,
-    outline_color: colors.religious_outline
+    outline_color: colors.religious_outline,
+    text_color: colors.religious_text
   },
   {
     filter: filters.is_outdoor_sports_facility,
     fill_color: colors.outdoor_sports_facility_fill,
-    outline_color: colors.outdoor_sports_facility_outline
+    outline_color: colors.outdoor_sports_facility_outline,
+    text_color: colors.outdoor_sports_facility_text
   },
   {
     filter: filters.is_outdoor_attraction,
     fill_color: colors.outdoor_attraction_fill,
-    outline_color: colors.outdoor_attraction_outline
+    outline_color: colors.outdoor_attraction_outline,
+    text_color: colors.outdoor_attraction_text
   },
   {
     filter: filters.is_healthcare,
     fill_color: colors.healthcare_fill,
-    outline_color: colors.healthcare_outline
+    outline_color: colors.healthcare_outline,
+    text_color: colors.healthcare_text
   },
   {
     filter: filters.is_station,
     fill_color: colors.station_fill,
-    outline_color: colors.station_outline
+    outline_color: colors.station_outline,
+    text_color: colors.station_text
   },
   {
     filter: filters.is_power,
     fill_color: colors.power_fill,
-    outline_color: colors.power_outline
+    outline_color: colors.power_outline,
+    text_color: colors.power_text
   },
   {
     filter: filters.is_water_coastal,
@@ -349,12 +361,14 @@ const landuses = [
   {
     filter: filters.is_maritime_park,
     fill_color: colors.maritime_park_fill,
-    outline_color: colors.maritime_park_outline
+    outline_color: colors.maritime_park_outline,
+    text_color: colors.maritime_park_text
   },
   {
     filter: filters.is_ice,
     fill_color: colors.ice_fill,
     outline_color: colors.ice_outline,
+    text_color: colors.ice_text,
     high_zoom: true
   }
 ];
@@ -368,24 +382,29 @@ const structures = [
   {
     filter: filters.is_pier,
     fill_color: colors.pier_fill,
+    text_color: colors.text,
   },
   {
     filter: filters.is_bridge,
     fill_color: colors.highway_casing,
+    text_color: colors.text,
     fill_opacity: 0.4
   },
   {
     filter: filters.is_parking_lot,
     fill_color: colors.parking_fill,
+    text_color: colors.text
   },
   {
     filter: filters.is_barrier,
-    fill_color: colors.barrier_fill
+    fill_color: colors.barrier_fill,
+    text_color: colors.text
   },
   {
     filter: filters.is_swimming_pool,
     fill_color: colors.swimming_pool_fill,
-    outline_color: colors.swimming_pool_outline
+    outline_color: colors.swimming_pool_outline,
+    text_color: colors.text
   },
   {
     filter: filters.is_building,
@@ -643,25 +662,25 @@ const structureLayer = {
   "type": "fill",
   "filter": [
     "any",
-    ...structures.map(info => info.filter)
+    ...structures.filter(info => info.fill_color).map(info => info.filter)
   ],
   "layout": {
     "fill-sort-key": [
       "case",
-      ...structures.map((info, i) => [info.filter, i]).flat(),
+      ...structures.filter(info => info.fill_color).map((info, i) => [info.filter, i]).flat(),
       0
     ]
   },
   "paint": {
     "fill-opacity": [
       "case",
-      ...structures.filter(info => info.fill_opacity).toReversed().map(info => [info.filter, info.fill_opacity]).flat(),
+      ...structures.filter(info => info.fill_color && info.fill_opacity).toReversed().map(info => [info.filter, info.fill_opacity]).flat(),
       [">", ["to-number", ["get", "layer"], "0"], 0], 0.6,
       1
     ],
     "fill-color": [
       "case",
-      ...structures.toReversed().map(info => [info.filter, info.fill_color]).flat(),
+      ...structures.filter(info => info.fill_color).toReversed().map(info => [info.filter, info.fill_color]).flat(),
       "red"
     ]
   }
@@ -799,7 +818,7 @@ export function generateStyle(baseStyleJsonString) {
     "type": "fill",
     "filter": [
       "any",
-      ...landuses.map(info => {
+      ...landuses.filter(info => info.fill_color).map(info => {
         if (info.high_zoom) return info.filter;
         return [
           "all",
@@ -811,7 +830,7 @@ export function generateStyle(baseStyleJsonString) {
     "layout": {
       "fill-sort-key": [
         "case",
-        ...landuses.map((info, i) => [info.filter, i]).flat(),
+        ...landuses.filter(info => info.fill_color).map((info, i) => [info.filter, i]).flat(),
         0
       ]
     },
@@ -819,13 +838,13 @@ export function generateStyle(baseStyleJsonString) {
       "fill-color": [
         "step", ["zoom"], [
           "case",
-          ...landuses.toReversed().map(info => [info.filter, info.fill_color]).flat(),
+          ...landuses.filter(info => info.fill_color).toReversed().map(info => [info.filter, info.fill_color]).flat(),
           "red"
         ],
         // Use step function to avoid incorrect coloring due to double tagging (e.g. landuse=industrial + power=plant)
         12, [
           "case",
-          ...landuses.filter(info => info.high_zoom).toReversed().map(info => [info.filter, info.fill_color]).flat(),
+          ...landuses.filter(info => info.fill_color && info.high_zoom).toReversed().map(info => [info.filter, info.fill_color]).flat(),
           "red"
         ]
       ]
@@ -838,13 +857,13 @@ export function generateStyle(baseStyleJsonString) {
     "type": "line",
     "filter": [
       "any",
-      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
+      ...landuses.filter(info => info.fill_color && !info.high_zoom).map(info => info.filter)
     ],
     "layout": {
       "line-join": "round",
       "line-sort-key": [
         "case",
-        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
+        ...landuses.filter(info => info.fill_color && !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
         0
       ]
     },
@@ -852,7 +871,7 @@ export function generateStyle(baseStyleJsonString) {
       "line-opacity": 0.7,
       "line-color": [
         "case",
-        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.fill_color]).flat(),
+        ...landuses.filter(info => info.fill_color && !info.high_zoom).toReversed().map(info => [info.filter, info.fill_color]).flat(),
         "red"
       ],
       "line-width": 3.6,
@@ -881,7 +900,7 @@ export function generateStyle(baseStyleJsonString) {
       "type": "line",
       "filter": [
         "any",
-        ...landuses.filter(info => info.high_zoom && info.outline_color).map(info => info.filter)
+        ...landuses.filter(info => info.outline_color && info.high_zoom).map(info => info.filter)
       ],
       "layout": {
           "line-join": "round"
@@ -889,7 +908,7 @@ export function generateStyle(baseStyleJsonString) {
       "paint": {
           "line-color": [
             "case",
-            ...landuses.filter(info => info.high_zoom && info.outline_color).toReversed().map(info => [info.filter, info.outline_color]).flat(),
+            ...landuses.filter(info => info.outline_color && info.high_zoom).toReversed().map(info => [info.filter, info.outline_color]).flat(),
             "red"
           ],
           "line-width": 0.5
@@ -902,19 +921,19 @@ export function generateStyle(baseStyleJsonString) {
     "type": "line",
     "filter": [
       "any",
-      ...landuses.filter(info => !info.high_zoom).map(info => info.filter)
+      ...landuses.filter(info => info.outline_color && !info.high_zoom).map(info => info.filter)
     ],
     "layout": {
       "line-sort-key": [
         "case",
-        ...landuses.filter(info => !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
+        ...landuses.filter(info => info.outline_color && !info.high_zoom).map((info, i) => [info.filter, i]).flat(),
         0
       ]
     },
     "paint": {
       "line-color": [
         "case",
-        ...landuses.filter(info => !info.high_zoom).toReversed().map(info => [info.filter, info.outline_color]).flat(),
+        ...landuses.filter(info => info.outline_color && !info.high_zoom).toReversed().map(info => [info.filter, info.outline_color]).flat(),
         "red"
       ],
       "line-width": 0.5
@@ -1102,52 +1121,48 @@ export function generateStyle(baseStyleJsonString) {
         ["<=", ["zoom"], 3],
         filters.is_continent
       ],
-      filters.is_aboriginal_lands,
-      filters.is_education,
-      filters.is_religious,
-      filters.is_park,
-      filters.is_power,
-      filters.is_maritime_park,
-      filters.is_military,
-      filters.is_national_park,
-      filters.is_healthcare,
-      filters.is_ice,
-      filters.is_outdoor_sports_facility,
-      filters.is_outdoor_attraction,
+      [
+        "all",
+        // Only label area landuse and structures here
+        ["in", ["get", "osm.type"], ["literal", ["w", "r"]]],
+        [
+          "any",
+          ...structures.filter(info => info.text_color).map(info => info.filter),
+          ...landuses.filter(info => info.text_color).map(info => info.filter),
+        ]
+      ],
       filters.is_landform_area_poi,
-      filters.is_water_area_poi,
-      filters.is_station,
-      filters.is_developed
+      filters.is_water_area_poi
     ],
     "layout": {
       "symbol-placement": "point",
       "symbol-sort-key": ["-", ["coalesce", ["get", "c.area"], 0]],
       "text-size":[
-          "case",
-          [
-            "any",
-            filters.is_ice,
-            filters.is_continent,
-            filters.is_landform_area_poi,
-            filters.is_water_area_poi
-          ], 10,
-          10.5
+        "case",
+        [
+          "any",
+          filters.is_ice,
+          filters.is_continent,
+          filters.is_landform_area_poi,
+          filters.is_water_area_poi
+        ], 10,
+        10.5
       ],
       "text-transform":[
-          "case",
-          [
-              "all",
-              ["in", ["get", "boundary"], ["literal", ["administrative"]]],
-              ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
-          ], "uppercase",
-          [
-            "any",
-            filters.is_ice,
-            filters.is_continent,
-            filters.is_landform_area_poi,
-            filters.is_water_area_poi
-          ], "uppercase",
-          "none"
+        "case",
+        [
+          "all",
+          ["in", ["get", "boundary"], ["literal", ["administrative"]]],
+          ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
+        ], "uppercase",
+        [
+          "any",
+          filters.is_ice,
+          filters.is_continent,
+          filters.is_landform_area_poi,
+          filters.is_water_area_poi
+        ], "uppercase",
+        "none"
       ],
       "text-font":[
         "case",
@@ -1195,21 +1210,9 @@ export function generateStyle(baseStyleJsonString) {
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
           ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
         ], colors.admin_boundary_major_text,
-        // These should be in roughly the same order as the fill precendence in case of double tagging (e.g. aeroway and military)
-        filters.is_ice, colors.ice_text,
-        filters.is_maritime_park, colors.maritime_park_text,
-        filters.is_outdoor_sports_facility, colors.outdoor_sports_facility_text,
-        filters.is_outdoor_attraction, colors.outdoor_attraction_text,
+        ...structures.filter(info => info.text_color).toReversed().map(info => [info.filter, info.text_color]).flat(),
+        ...landuses.filter(info => info.text_color).toReversed().map(info => [info.filter, info.text_color]).flat(),
         filters.is_water_area_poi, colors.water_text,
-        filters.is_power, colors.power_text,
-        filters.is_station, colors.station_text,
-        filters.is_education, colors.education_text,
-        filters.is_healthcare, colors.healthcare_text,
-        filters.is_religious, colors.religious_text,
-        filters.is_military, colors.military_text,
-        filters.is_national_park, colors.national_park_text,
-        filters.is_park, colors.park_text,
-        filters.is_aboriginal_lands, colors.aboriginal_lands_text,
         colors.text
       ],
       "text-halo-color": colors.text_halo,
