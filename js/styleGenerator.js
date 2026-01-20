@@ -374,7 +374,7 @@ const lineCasingLayer = {
   "type": "line",
   "filter": [
     "any",
-    ["all", ["<", ["zoom"], 13], filters.is_powerline, ["!", filters.has_subsurface_location]],
+    ["all", ["<", ["zoom"], 12], filters.is_powerline, ["!", filters.has_subsurface_location]],
     filters.is_railway,
     ["all", [">=", ["zoom"], 14], filters.is_aeroway],
     ["all", [">=", ["zoom"], 14], filters.is_highway],
@@ -673,7 +673,7 @@ let diegeticPointLayer = {
       "red"
     ]
   },
-  "minzoom": 13
+  "minzoom": 12
 };
 
 export function generateStyle(baseStyleJsonString) {
