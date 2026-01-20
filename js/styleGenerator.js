@@ -52,6 +52,17 @@ const filters = {
     ]
   ],
   is_ferry: ["==", ["get", "route"], "ferry"],
+  is_floating_boom: ["==", ["get", "barrier"], "floating_boom"],
+  is_foot_route: [
+    "all",
+    ["has", "highway"],
+    [
+      "any",
+      ["in", "┃hiking┃", ["get", "r.route"]],
+      ["in", "┃foot┃", ["get", "r.route"]],
+      ["in", "┃portage┃", ["get", "r.route"]]
+    ]
+  ],
   is_barrier_minor: [
     "all",
     ["has", "barrier"],
@@ -163,6 +174,7 @@ const colors = {
   education_outline: "#DED08C",
   education_text: "#575135",
   ferry_stroke: "#7EC2FF",
+  floating_boom_stroke: "#f9b98f",
   highway_major_stroke: "#F7CF8D",
   highway_major_high_zoom_stroke: "#FFF2DD",
   highway_minor_stroke: "#cfcfcf",
@@ -465,6 +477,7 @@ const lineLayer = {
         filters.is_ferry, colors.ferry_stroke,
         filters.is_railway, colors.railway_stroke,
         filters.is_powerline, colors.powerline_stroke,
+        filters.is_floating_boom, colors.floating_boom_stroke,
         filters.is_barrier, colors.barrier_stroke,
         filters.is_watercourse, [
           "case",
@@ -480,6 +493,7 @@ const lineLayer = {
         filters.is_ferry, colors.ferry_stroke,
         filters.is_railway, colors.railway_stroke,
         filters.is_powerline, colors.powerline_stroke,
+        filters.is_floating_boom, colors.floating_boom_stroke,
         filters.is_barrier, colors.barrier_stroke,
         filters.is_watercourse, [
           "case",
@@ -513,25 +527,37 @@ const lineOverlayLayer = {
   "type": "line",
   "filter": [
     "any",
-    [
-      "all",
-      [
-        "any",
-        ["in", "┃hiking┃", ["get", "r.route"]],
-        ["in", "┃foot┃", ["get", "r.route"]],
-        ["in", "┃portage┃", ["get", "r.route"]]
-      ],
-      ["has", "highway"]
-    ]
+    filters.is_foot_route,
+    filters.is_floating_boom
   ],
   "layout": {
     "line-join": "round",
-    "line-cap": "butt"
+    "line-cap": "round"
   },
   "paint": {
-    "line-width": 1,
-    "line-color": colors.route_foot_overlay,
-    "line-dasharray": ["literal", [3.125, 1.875]]
+    "line-width": [
+      "interpolate", ["exponential", 2], ["zoom"],
+      12, [
+         "case",
+        filters.is_floating_boom, 2,
+        1
+      ],
+      18, [
+         "case",
+        filters.is_floating_boom, 9,
+        1
+      ],
+    ],
+    "line-color": [
+      "case",
+      filters.is_floating_boom, colors.floating_boom_stroke,
+      colors.route_foot_overlay
+    ],
+    "line-dasharray": [
+      "case",
+      filters.is_floating_boom, ["literal", [0.6, 3]],
+      ["literal", [2.625, 2.375]]
+    ]
   }
 };
 
