@@ -1,0 +1,11 @@
+{
+    "icon": "bench",
+    "terms": [
+        "chair",
+        "seat"
+    ],
+    "tags": {
+        "amenity": "bench"
+    },
+    "name": "Bench"
+}

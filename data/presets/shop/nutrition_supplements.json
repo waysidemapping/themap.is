@@ -1,0 +1,12 @@
+{
+    "terms": [
+        "health",
+        "protein",
+        "supplement",
+        "vitamin"
+    ],
+    "tags": {
+        "shop": "nutrition_supplements"
+    },
+    "name": "Nutrition Supplements Store"
+}

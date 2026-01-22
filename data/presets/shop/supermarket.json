@@ -1,0 +1,15 @@
+{
+    "icon": "shopping_cart",
+    "terms": [
+        "food market",
+        "grocery",
+        "grocery store",
+        "market",
+        "shop",
+        "store"
+    ],
+    "tags": {
+        "shop": "supermarket"
+    },
+    "name": "Supermarket"
+}

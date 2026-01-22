@@ -1,0 +1,18 @@
+{
+    "icon": "water_tap",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "man_made": "water_tap"
+    },
+    "terms": [
+        "drinking water",
+        "water faucet",
+        "water point",
+        "water source",
+        "water spigot"
+    ],
+    "name": "Water Tap"
+}

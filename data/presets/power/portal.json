@@ -1,0 +1,15 @@
+{
+    "geometry": [
+        "vertex",
+        "line"
+    ],
+    "terms": [
+        "anchor gantry",
+        "gantry tower",
+        "h-frame tower"
+    ],
+    "tags": {
+        "power": "portal"
+    },
+    "name": "Anchor Portal"
+}

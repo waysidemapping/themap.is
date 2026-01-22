@@ -1,0 +1,12 @@
+{
+    "icon": "runner",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "funnel_ball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "funnel_ball"
+    },
+    "name": "Funnel Ball Court"
+}

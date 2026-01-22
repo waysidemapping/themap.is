@@ -1,0 +1,13 @@
+{
+    "icon": "fire",
+    "tags": {
+        "amenity": "fire_station"
+    },
+    "terms": [
+        "Fire House",
+        "Fire Hall",
+        "fire fighters",
+        "firehouse"
+    ],
+    "name": "Fire Station"
+}

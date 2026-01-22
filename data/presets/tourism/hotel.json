@@ -1,0 +1,16 @@
+{
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "tourism": "hotel"
+    },
+    "terms": [
+        "concierge",
+        "lodge",
+        "lodging",
+        "overnight accommodations"
+    ],
+    "name": "Hotel"
+}

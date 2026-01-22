@@ -1,0 +1,19 @@
+{
+    "icon": "triangle_up",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "natural": "cave_entrance"
+    },
+    "terms": [
+        "cavern",
+        "cavity",
+        "grotto",
+        "hollow",
+        "shelter"
+    ],
+    "name": "Cave Entrance"
+}

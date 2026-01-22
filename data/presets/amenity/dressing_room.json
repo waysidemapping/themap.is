@@ -1,0 +1,13 @@
+{
+    "icon": "vneck_tshirt",
+    "terms": [
+        "changeroom",
+        "dressing room",
+        "fitting room",
+        "locker room"
+    ],
+    "tags": {
+        "amenity": "dressing_room"
+    },
+    "name": "Changing Room"
+}

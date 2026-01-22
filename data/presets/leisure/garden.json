@@ -1,0 +1,14 @@
+{
+    "icon": "plant-gardenbed",
+    "tags": {
+        "leisure": "garden"
+    },
+    "terms": [
+        "flowers",
+        "fruits",
+        "herbs",
+        "plants",
+        "vegetables"
+    ],
+    "name": "Garden"
+}

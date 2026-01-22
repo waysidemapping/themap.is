@@ -1,0 +1,11 @@
+{
+    "icon": "bolt",
+    "terms": [
+        "power",
+        "wire"
+    ],
+    "tags": {
+        "craft": "electrician"
+    },
+    "name": "Electrician"
+}

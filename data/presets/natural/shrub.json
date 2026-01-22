@@ -1,0 +1,15 @@
+{
+    "icon": "shrub",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "natural": "shrub"
+    },
+    "terms": [
+        "bush",
+        "scrub"
+    ],
+    "name": "Shrub"
+}

@@ -1,0 +1,25 @@
+{
+    "terms": [
+        "breakfast",
+        "cafe",
+        "café",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "french fries",
+        "grill",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "fish_and_chips"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "fish_and_chips"
+    },
+    "name": "Fish & Chips Fast Food"
+}

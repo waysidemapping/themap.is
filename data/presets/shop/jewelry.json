@@ -1,0 +1,22 @@
+{
+    "icon": "jewel_ring",
+    "terms": [
+        "Jewelry Shop",
+        "bracelet",
+        "diamond",
+        "earrings",
+        "gem",
+        "gold",
+        "jeweler",
+        "jeweller",
+        "jewellery",
+        "necklace",
+        "pins",
+        "ring",
+        "silver"
+    ],
+    "tags": {
+        "shop": "jewelry"
+    },
+    "name": "Jewelry Store"
+}

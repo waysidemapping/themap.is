@@ -1,0 +1,15 @@
+{
+    "icon": "runner",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "gaga"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "gaga"
+    },
+    "terms": [
+        "gaga ball"
+    ],
+    "name": "Gaga Pit"
+}

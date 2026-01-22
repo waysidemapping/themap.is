@@ -1,0 +1,22 @@
+{
+    "icon": "no_entry",
+    "geometry": [
+        "vertex",
+        "line"
+    ],
+    "tags": {
+        "barrier": "jersey_barrier"
+    },
+    "terms": [
+        "concrete barrier",
+        "concrete median",
+        "constant-slope barrier",
+        "f-shape barrier",
+        "k-rail",
+        "median",
+        "new jersey wall",
+        "ontario tall wall",
+        "plastic barrier"
+    ],
+    "name": "Jersey Barrier"
+}

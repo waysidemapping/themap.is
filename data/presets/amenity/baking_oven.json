@@ -1,0 +1,17 @@
+{
+    "icon": "baguette",
+    "tags": {
+        "amenity": "baking_oven"
+    },
+    "terms": [
+        "bakehouse",
+        "beehive oven",
+        "bread",
+        "clay oven",
+        "horno",
+        "masonry oven",
+        "pizza oven",
+        "tabun oven"
+    ],
+    "name": "Baking Oven"
+}

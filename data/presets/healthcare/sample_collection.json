@@ -1,0 +1,13 @@
+{
+    "name": "Sample Collection Facility",
+    "terms": [
+        "blood sample collection",
+        "diagnostic",
+        "laboratory",
+        "medical",
+        "urine sample collection"
+    ],
+    "tags": {
+        "healthcare": "sample_collection"
+    }
+}

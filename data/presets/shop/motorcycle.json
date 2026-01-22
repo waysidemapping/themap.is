@@ -1,0 +1,10 @@
+{
+    "terms": [
+        "bike",
+        "motorbike"
+    ],
+    "tags": {
+        "shop": "motorcycle"
+    },
+    "name": "Motorcycle Dealership"
+}

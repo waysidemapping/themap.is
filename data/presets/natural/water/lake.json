@@ -1,0 +1,20 @@
+{
+    "icon": "droplet",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "natural": "water",
+        "water": "lake"
+    },
+    "reference": {
+        "key": "water",
+        "value": "lake"
+    },
+    "terms": [
+        "lakelet",
+        "loch",
+        "mere"
+    ],
+    "name": "Lake"
+}

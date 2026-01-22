@@ -1,0 +1,16 @@
+{
+    "icon": "burger-drink_cup",
+    "terms": [
+        "breakfast",
+        "lox"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "bagel"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "bagel"
+    },
+    "name": "Bagel Fast Food"
+}

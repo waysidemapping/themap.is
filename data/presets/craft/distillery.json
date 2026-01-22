@@ -1,0 +1,27 @@
+{
+    "icon": "storage_fermenter",
+    "terms": [
+        "alcohol",
+        "beverage",
+        "booze",
+        "bourbon",
+        "brandy",
+        "gin",
+        "hooch",
+        "liquor",
+        "mezcal",
+        "moonshine",
+        "rum",
+        "scotch",
+        "spirits",
+        "still",
+        "tequila",
+        "vodka",
+        "whiskey",
+        "whisky"
+    ],
+    "tags": {
+        "craft": "distillery"
+    },
+    "name": "Distillery"
+}

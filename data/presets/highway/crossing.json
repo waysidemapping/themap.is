@@ -1,0 +1,14 @@
+{
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "highway": "crossing"
+    },
+    "terms": [
+        "crosswalk",
+        "foot path crossing",
+        "pedestrian crossing"
+    ],
+    "name": "Crossing"
+}

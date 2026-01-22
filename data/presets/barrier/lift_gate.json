@@ -1,0 +1,17 @@
+{
+    "icon": "lift_gate",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "barrier": "lift_gate"
+    },
+    "terms": [
+        "boom gate",
+        "boom lift",
+        "hinged bar",
+        "lift gate",
+        "pivoted pole"
+    ],
+    "name": "Boom Barrier"
+}

@@ -1,0 +1,13 @@
+{
+    "icon": "circle_stroked",
+    "geometry": [
+        "vertex"
+    ],
+    "terms": [
+        "traffic circle"
+    ],
+    "tags": {
+        "highway": "mini_roundabout"
+    },
+    "name": "Mini-Roundabout"
+}

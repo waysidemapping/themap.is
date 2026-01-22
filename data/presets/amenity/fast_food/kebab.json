@@ -1,0 +1,29 @@
+{
+    "icon": "vertical_rotisserie",
+    "terms": [
+        "bar",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "dine",
+        "dining",
+        "dinner",
+        "doner kebab",
+        "drive-in",
+        "döner kebab",
+        "eat",
+        "grill",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "kebab"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "kebab"
+    },
+    "name": "Kebab Fast Food"
+}

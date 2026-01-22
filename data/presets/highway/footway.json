@@ -1,0 +1,18 @@
+{
+    "icon": "pedestrian",
+    "geometry": [
+        "line"
+    ],
+    "terms": [
+        "hike",
+        "hiking",
+        "promenade",
+        "trackway",
+        "trail",
+        "walk"
+    ],
+    "tags": {
+        "highway": "footway"
+    },
+    "name": "Foot Path"
+}

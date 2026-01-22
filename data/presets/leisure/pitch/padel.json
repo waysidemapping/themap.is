@@ -1,0 +1,16 @@
+{
+    "icon": "tennis_player",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "padel"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "padel"
+    },
+    "terms": [
+        "paddle",
+        "tennis"
+    ],
+    "name": "Padel Court"
+}

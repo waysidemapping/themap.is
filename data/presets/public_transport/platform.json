@@ -1,0 +1,15 @@
+{
+    "icon": "bench-sign",
+    "tags": {
+        "public_transport": "platform"
+    },
+    "terms": [
+        "platform",
+        "public transit",
+        "public transportation",
+        "transit",
+        "transportation"
+    ],
+    "name": "Transit Stop / Platform",
+    "matchScore": 0.6
+}

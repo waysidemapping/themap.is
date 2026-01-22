@@ -1,0 +1,14 @@
+{
+    "icon": "water_glass-faucet",
+    "tags": {
+        "amenity": "water_point"
+    },
+    "terms": [
+        "water faucet",
+        "water point",
+        "water source",
+        "water spigot",
+        "water tap"
+    ],
+    "name": "RV Drinking Water"
+}

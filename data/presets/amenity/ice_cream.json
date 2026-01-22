@@ -1,0 +1,13 @@
+{
+    "terms": [
+        "frozen",
+        "gelato",
+        "sherbet",
+        "sorbet",
+        "yogurt"
+    ],
+    "tags": {
+        "amenity": "ice_cream"
+    },
+    "name": "Ice Cream Shop"
+}

@@ -1,0 +1,17 @@
+{
+    "terms": [
+        "Farm Shop",
+        "Farm Stand",
+        "baked goods",
+        "fresh food",
+        "fruits",
+        "greengrocer",
+        "orchard",
+        "organics",
+        "vegetables"
+    ],
+    "tags": {
+        "shop": "farm"
+    },
+    "name": "Produce Stand"
+}

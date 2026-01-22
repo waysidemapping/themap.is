@@ -1,0 +1,13 @@
+{
+    "tags": {
+        "amenity": "stripclub"
+    },
+    "terms": [
+        "adult*",
+        "cabaret",
+        "gentlemen*",
+        "lap dance",
+        "strip*"
+    ],
+    "name": "Strip club"
+}

@@ -1,0 +1,11 @@
+{
+    "icon": "horse_rider",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "tourism": "trail_riding_station"
+    },
+    "name": "Trail Riding Station"
+}

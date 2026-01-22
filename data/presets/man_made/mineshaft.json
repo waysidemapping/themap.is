@@ -1,0 +1,19 @@
+{
+    "icon": "mineshaft_cage",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "terms": [
+        "cave",
+        "mine shaft",
+        "tunnel",
+        "underground",
+        "vertical mine entrance"
+    ],
+    "tags": {
+        "man_made": "mineshaft"
+    },
+    "name": "Mineshaft"
+}

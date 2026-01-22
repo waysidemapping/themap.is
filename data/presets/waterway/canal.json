@@ -1,0 +1,16 @@
+{
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "waterway": "canal"
+    },
+    "terms": [
+        "headrace",
+        "irrigation",
+        "spillway",
+        "tailrace",
+        "waterpower"
+    ],
+    "name": "Canal"
+}

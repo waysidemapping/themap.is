@@ -1,0 +1,15 @@
+{
+    "icon": "picnic_table",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "terms": [
+        "camp"
+    ],
+    "tags": {
+        "tourism": "picnic_site"
+    },
+    "name": "Picnic Site"
+}

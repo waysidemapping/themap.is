@@ -1,0 +1,13 @@
+{
+    "tags": {
+        "amenity": "charging_station"
+    },
+    "terms": [
+        "charge point",
+        "charging stall",
+        "electric vehicle",
+        "ev",
+        "supercharger"
+    ],
+    "name": "Charging Station"
+}

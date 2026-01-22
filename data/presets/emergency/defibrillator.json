@@ -1,0 +1,10 @@
+{
+    "icon": "heart-ecg",
+    "terms": [
+        "aed"
+    ],
+    "tags": {
+        "emergency": "defibrillator"
+    },
+    "name": "Defibrillator"
+}

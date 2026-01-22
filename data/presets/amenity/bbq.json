@@ -1,0 +1,11 @@
+{
+    "icon": "bbq",
+    "terms": [
+        "bbq",
+        "grill"
+    ],
+    "tags": {
+        "amenity": "bbq"
+    },
+    "name": "Barbecue / Grill"
+}

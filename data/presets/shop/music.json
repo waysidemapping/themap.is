@@ -1,0 +1,16 @@
+{
+    "terms": [
+        "casette",
+        "casette store",
+        "cd store",
+        "cds",
+        "compact discs",
+        "hobby",
+        "tape cassettes",
+        "vinyl records"
+    ],
+    "tags": {
+        "shop": "music"
+    },
+    "name": "Music Store"
+}

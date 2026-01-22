@@ -1,0 +1,14 @@
+{
+    "icon": "storage_drum",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "gas holder"
+    ],
+    "tags": {
+        "man_made": "gasometer"
+    },
+    "name": "Gasometer"
+}

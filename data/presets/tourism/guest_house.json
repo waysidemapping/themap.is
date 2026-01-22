@@ -1,0 +1,20 @@
+{
+    "icon": "sleeper",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "tourism": "guest_house"
+    },
+    "terms": [
+        "b & b",
+        "b and b",
+        "b&b",
+        "bed and breakfast",
+        "bnb",
+        "lodging",
+        "overnight accommodations"
+    ],
+    "name": "Guest House"
+}

@@ -1,0 +1,12 @@
+{
+    "icon": "cup_and_saucer",
+    "terms": [
+        "bistro",
+        "coffee",
+        "tea"
+    ],
+    "tags": {
+        "amenity": "cafe"
+    },
+    "name": "Cafe"
+}

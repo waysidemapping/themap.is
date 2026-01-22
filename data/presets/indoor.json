@@ -1,0 +1,14 @@
+{
+    "icon": "room",
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "indoor": "*"
+    },
+    "matchScore": 0.8,
+    "name": "Indoor Feature"
+}

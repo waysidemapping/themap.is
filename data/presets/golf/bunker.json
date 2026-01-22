@@ -1,0 +1,14 @@
+{
+    "icon": "golfer",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "golf": "bunker"
+    },
+    "terms": [
+        "Bunker",
+        "hazard"
+    ],
+    "name": "Sand Trap"
+}

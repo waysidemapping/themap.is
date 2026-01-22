@@ -1,0 +1,15 @@
+{
+    "icon": "volleyball",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "volleyball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "volleyball"
+    },
+    "terms": [
+        "volleyball net"
+    ],
+    "name": "Volleyball Court"
+}

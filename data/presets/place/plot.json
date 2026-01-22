@@ -1,0 +1,13 @@
+{
+    "icon": "triangle_up_stroked",
+    "tags": {
+        "place": "plot"
+    },
+    "terms": [
+        "land",
+        "lot",
+        "parcel",
+        "tract"
+    ],
+    "name": "Plot"
+}

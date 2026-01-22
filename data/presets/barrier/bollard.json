@@ -1,0 +1,11 @@
+{
+    "icon": "bollard",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "barrier": "bollard"
+    },
+    "name": "Bollard"
+}

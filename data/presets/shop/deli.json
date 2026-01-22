@@ -1,0 +1,13 @@
+{
+    "terms": [
+        "Specialty Food Store",
+        "Gourmet Food Store",
+        "Fine Food Store",
+        "Gourmet Food Shop",
+        "deli"
+    ],
+    "tags": {
+        "shop": "deli"
+    },
+    "name": "Delicatessen"
+}

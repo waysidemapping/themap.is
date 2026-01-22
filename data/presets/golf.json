@@ -1,0 +1,11 @@
+{
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "golf": "*"
+    },
+    "name": "Golf Feature"
+}

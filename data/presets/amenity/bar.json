@@ -1,0 +1,13 @@
+{
+    "icon": "cocktail",
+    "terms": [
+        "beer",
+        "bier",
+        "booze",
+        "dive"
+    ],
+    "tags": {
+        "amenity": "bar"
+    },
+    "name": "Bar"
+}

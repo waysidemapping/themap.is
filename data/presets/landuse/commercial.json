@@ -1,0 +1,12 @@
+{
+    "icon": "suitcase",
+    "tags": {
+        "landuse": "commercial"
+    },
+    "terms": [
+        "depot",
+        "offices"
+    ],
+    "matchScore": 0.9,
+    "name": "Commercial Area"
+}

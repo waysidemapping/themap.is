@@ -1,0 +1,15 @@
+{
+    "icon": "carousel",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "tourism": "theme_park"
+    },
+    "terms": [
+        "amusement park",
+        "fun park"
+    ],
+    "name": "Theme Park"
+}

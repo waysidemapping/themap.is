@@ -1,0 +1,16 @@
+{
+    "icon": "soccer_player",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "futsal"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "futsal"
+    },
+    "terms": [
+        "five-a-side soccer",
+        "minifootball"
+    ],
+    "name": "Futsal Court"
+}

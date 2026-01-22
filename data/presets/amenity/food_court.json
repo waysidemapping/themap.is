@@ -1,0 +1,11 @@
+{
+    "terms": [
+        "fast food",
+        "food",
+        "restaurant"
+    ],
+    "tags": {
+        "amenity": "food_court"
+    },
+    "name": "Food Court"
+}

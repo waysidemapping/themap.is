@@ -1,0 +1,15 @@
+{
+    "icon": "volleyball",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "beachvolleyball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "beachvolleyball"
+    },
+    "terms": [
+        "volleyball"
+    ],
+    "name": "Beach Volleyball Court"
+}

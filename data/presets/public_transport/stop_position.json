@@ -1,0 +1,14 @@
+{
+    "icon": "transit",
+    "tags": {
+        "public_transport": "stop_position"
+    },
+    "terms": [
+        "public transit",
+        "public transportation",
+        "transit",
+        "transportation"
+    ],
+    "name": "Transit Stopping Location",
+    "matchScore": 0.2
+}

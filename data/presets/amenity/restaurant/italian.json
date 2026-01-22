@@ -1,0 +1,29 @@
+{
+    "icon": "fork-knife",
+    "terms": [
+        "bar",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "pasta",
+        "pizza",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "italian"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "italian"
+    },
+    "name": "Italian Restaurant"
+}

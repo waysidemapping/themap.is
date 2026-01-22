@@ -1,0 +1,16 @@
+{
+    "terms": [
+        "Give Box",
+        "donations",
+        "free table",
+        "freebox",
+        "give shelf",
+        "givebox",
+        "library",
+        "share shelf"
+    ],
+    "tags": {
+        "amenity": "give_box"
+    },
+    "name": "Free Box"
+}

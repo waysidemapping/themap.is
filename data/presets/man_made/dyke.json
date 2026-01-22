@@ -1,0 +1,15 @@
+{
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "man_made": "dyke"
+    },
+    "terms": [
+        "dike",
+        "dyke",
+        "floodbank",
+        "stopbank"
+    ],
+    "name": "Levee"
+}

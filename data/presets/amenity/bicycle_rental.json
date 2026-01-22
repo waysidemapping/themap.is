@@ -1,0 +1,18 @@
+{
+    "icon": "bicycle-key",
+    "terms": [
+        "bicycle",
+        "bicycle share",
+        "bike",
+        "bike share",
+        "bikeshare",
+        "cycle dock",
+        "cycle hub",
+        "cycleshare",
+        "cycling"
+    ],
+    "tags": {
+        "amenity": "bicycle_rental"
+    },
+    "name": "Bicycle Rental"
+}

@@ -1,0 +1,16 @@
+{
+    "icon": "american_football",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "american_football"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "american_football"
+    },
+    "terms": [
+        "football",
+        "gridiron"
+    ],
+    "name": "American Football Field"
+}

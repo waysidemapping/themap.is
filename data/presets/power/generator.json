@@ -1,0 +1,17 @@
+{
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "terms": [
+        "hydro",
+        "solar",
+        "turbine",
+        "wind"
+    ],
+    "tags": {
+        "power": "generator"
+    },
+    "name": "Power Generator"
+}

@@ -1,0 +1,10 @@
+{
+    "icon": "plane_taxiing",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "aeroway": "taxiway"
+    },
+    "name": "Taxiway"
+}

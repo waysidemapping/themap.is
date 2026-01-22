@@ -1,0 +1,17 @@
+{
+    "icon": "bicycle-shower",
+    "terms": [
+        "bicycle",
+        "bicycle cleaning",
+        "bicycle wash",
+        "bike",
+        "bike wash",
+        "cycle rinse station",
+        "cycle wash",
+        "cycling"
+    ],
+    "tags": {
+        "amenity": "bicycle_wash"
+    },
+    "name": "Bicycle Wash"
+}

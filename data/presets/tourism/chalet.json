@@ -1,0 +1,22 @@
+{
+    "icon": "cabin",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "chalet",
+        "holiday cabin",
+        "holiday cottage",
+        "holiday home",
+        "lodge",
+        "lodging",
+        "overnight accommodations",
+        "vacation cabin",
+        "vacation home"
+    ],
+    "tags": {
+        "tourism": "chalet"
+    },
+    "name": "Holiday Cottage"
+}

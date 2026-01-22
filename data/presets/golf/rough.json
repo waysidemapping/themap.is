@@ -1,0 +1,10 @@
+{
+    "icon": "golfer",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "golf": "rough"
+    },
+    "name": "Rough"
+}

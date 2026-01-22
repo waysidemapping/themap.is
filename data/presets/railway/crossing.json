@@ -1,0 +1,21 @@
+{
+    "icon": "crossing_rail_striped",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "railway": "crossing"
+    },
+    "terms": [
+        "crossing",
+        "grade crossing",
+        "level crossing",
+        "path railway crossing",
+        "path through railroad",
+        "pedestrian crossing",
+        "railroad crossing",
+        "railway path crossing",
+        "train crossing"
+    ],
+    "name": "Railway-Path Crossing"
+}

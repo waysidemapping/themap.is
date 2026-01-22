@@ -1,0 +1,20 @@
+{
+    "terms": [
+        "antiques",
+        "coins",
+        "collection",
+        "collectors",
+        "comics",
+        "dolls",
+        "figurines",
+        "hobby",
+        "numismatics",
+        "philately",
+        "stamps",
+        "thrift"
+    ],
+    "tags": {
+        "shop": "collector"
+    },
+    "name": "Collectibles Shop"
+}

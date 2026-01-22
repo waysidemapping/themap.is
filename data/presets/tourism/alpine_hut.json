@@ -1,0 +1,26 @@
+{
+    "icon": "cabin",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "Alpine Hut",
+        "Mountain Hut",
+        "Mountain Shelter",
+        "Mountain Refuge",
+        "Mountain Hostel",
+        "cabin",
+        "climbing hut",
+        "lodge",
+        "lodging",
+        "overnight accommodations",
+        "refuge",
+        "refuge hut",
+        "wilderness hut"
+    ],
+    "tags": {
+        "tourism": "alpine_hut"
+    },
+    "name": "Mountain Lodge"
+}

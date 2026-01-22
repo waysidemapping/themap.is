@@ -1,0 +1,18 @@
+{
+    "terms": [
+        "atm",
+        "bill pay",
+        "card",
+        "cash",
+        "ekiosk",
+        "finance",
+        "interactive kiosk",
+        "money transfer",
+        "phone pay",
+        "tax pay"
+    ],
+    "tags": {
+        "amenity": "payment_terminal"
+    },
+    "name": "Payment Terminal"
+}

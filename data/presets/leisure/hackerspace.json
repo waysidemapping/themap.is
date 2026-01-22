@@ -1,0 +1,11 @@
+{
+    "terms": [
+        "hacklab",
+        "hackspace",
+        "makerspace"
+    ],
+    "tags": {
+        "leisure": "hackerspace"
+    },
+    "name": "Hackerspace"
+}

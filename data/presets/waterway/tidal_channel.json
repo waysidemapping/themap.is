@@ -1,0 +1,21 @@
+{
+    "geometry": [
+        "line"
+    ],
+    "terms": [
+        "coastal",
+        "intertidal",
+        "mangroves",
+        "marine",
+        "pill",
+        "salt marsh",
+        "tidal creek",
+        "tidal flat",
+        "tidal inlet",
+        "waterway"
+    ],
+    "tags": {
+        "waterway": "tidal_channel"
+    },
+    "name": "Tidal Channel"
+}

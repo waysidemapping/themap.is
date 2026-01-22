@@ -1,0 +1,30 @@
+{
+    "icon": "building_classical",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "archaeological",
+        "archeological",
+        "art",
+        "cultural",
+        "excavation",
+        "exhibition",
+        "foundation",
+        "gallery",
+        "hall",
+        "history",
+        "institution",
+        "nature",
+        "painting",
+        "photograph",
+        "science",
+        "sculpture",
+        "technology"
+    ],
+    "tags": {
+        "tourism": "museum"
+    },
+    "name": "Museum"
+}

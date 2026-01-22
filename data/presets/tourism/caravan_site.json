@@ -1,0 +1,16 @@
+{
+    "icon": "camper_trailer",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "terms": [
+        "camper",
+        "motor home"
+    ],
+    "tags": {
+        "tourism": "caravan_site"
+    },
+    "name": "RV Park"
+}

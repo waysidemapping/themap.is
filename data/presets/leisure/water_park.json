@@ -1,0 +1,11 @@
+{
+    "terms": [
+        "dive",
+        "pool",
+        "swim"
+    ],
+    "tags": {
+        "leisure": "water_park"
+    },
+    "name": "Water Park"
+}

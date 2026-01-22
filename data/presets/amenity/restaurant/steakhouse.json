@@ -1,0 +1,30 @@
+{
+    "icon": "meat",
+    "terms": [
+        "bar",
+        "beef",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "chop house",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "steak house",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "steak_house"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "steak_house"
+    },
+    "name": "Steakhouse"
+}

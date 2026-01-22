@@ -1,0 +1,14 @@
+{
+    "icon": "banknote_slot",
+    "terms": [
+        "Cash Machine",
+        "Automated Teller Machine",
+        "cash",
+        "machine",
+        "money"
+    ],
+    "tags": {
+        "amenity": "atm"
+    },
+    "name": "ATM"
+}

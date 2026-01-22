@@ -1,0 +1,14 @@
+{
+    "icon": "water_bottle",
+    "terms": [
+        "bottled water",
+        "mineral water",
+        "purified water",
+        "water refilling",
+        "water station"
+    ],
+    "tags": {
+        "shop": "water"
+    },
+    "name": "Drinking Water Shop"
+}

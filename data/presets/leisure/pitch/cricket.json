@@ -1,0 +1,15 @@
+{
+    "icon": "cricket_batter",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "cricket"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "cricket"
+    },
+    "terms": [
+        "cricket pitch"
+    ],
+    "name": "Cricket Field"
+}

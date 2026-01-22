@@ -1,0 +1,15 @@
+{
+    "icon": "cemetery",
+    "terms": [
+        "crematorium",
+        "funeral home",
+        "memorial home",
+        "morgue",
+        "mortuary",
+        "undertaker"
+    ],
+    "tags": {
+        "amenity": "mortuary"
+    },
+    "name": "Morgue"
+}

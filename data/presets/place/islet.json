@@ -1,0 +1,17 @@
+{
+    "icon": "hill-tree-water",
+    "terms": [
+        "archipelago",
+        "atoll",
+        "bar",
+        "cay",
+        "isle",
+        "islet",
+        "key",
+        "reef"
+    ],
+    "tags": {
+        "place": "islet"
+    },
+    "name": "Islet"
+}

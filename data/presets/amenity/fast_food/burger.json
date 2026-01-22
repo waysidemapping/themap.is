@@ -1,0 +1,23 @@
+{
+    "icon": "burger-drink_cup",
+    "terms": [
+        "breakfast",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "burger"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "burger"
+    },
+    "name": "Burger Fast Food"
+}

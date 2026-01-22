@@ -1,0 +1,18 @@
+{
+    "icon": "racetrack_oval_dashed",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "highway": "raceway"
+    },
+    "terms": [
+        "formula one",
+        "kart",
+        "motocross",
+        "nascar",
+        "raceway",
+        "track"
+    ],
+    "name": "Motorsport Racetrack"
+}

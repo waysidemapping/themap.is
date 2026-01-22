@@ -1,0 +1,11 @@
+{
+    "icon": "windsock",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "aeroway": "windsock"
+    },
+    "name": "Windsock"
+}

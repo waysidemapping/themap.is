@@ -1,0 +1,22 @@
+{
+    "terms": [
+        "betting",
+        "bingo",
+        "blackjack",
+        "casino",
+        "craps",
+        "gamble",
+        "gambling",
+        "keno",
+        "lottery",
+        "pachinko",
+        "poker",
+        "roulette",
+        "slot machines",
+        "slots"
+    ],
+    "tags": {
+        "amenity": "gambling"
+    },
+    "name": "Gambling Hall"
+}

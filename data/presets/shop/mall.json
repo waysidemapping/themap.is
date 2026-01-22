@@ -1,0 +1,12 @@
+{
+    "icon": "shopping_bags-user",
+    "terms": [
+        "Shopping Mall",
+        "Shopping Center",
+        "shopping"
+    ],
+    "tags": {
+        "shop": "mall"
+    },
+    "name": "Mall"
+}

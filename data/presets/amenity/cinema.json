@@ -1,0 +1,17 @@
+{
+    "icon": "film_movie_camera",
+    "terms": [
+        "drive-in",
+        "film",
+        "flick",
+        "movie",
+        "picture",
+        "screen",
+        "show",
+        "theater"
+    ],
+    "tags": {
+        "amenity": "cinema"
+    },
+    "name": "Cinema"
+}

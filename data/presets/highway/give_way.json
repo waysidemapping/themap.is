@@ -1,0 +1,15 @@
+{
+    "icon": "triangle_down_stroked",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "highway": "give_way"
+    },
+    "terms": [
+        "give way",
+        "sign",
+        "yield"
+    ],
+    "name": "Yield Sign"
+}

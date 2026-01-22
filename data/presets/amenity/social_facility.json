@@ -1,0 +1,14 @@
+{
+    "icon": "hand_reaching-heart",
+    "tags": {
+        "amenity": "social_facility"
+    },
+    "terms": [
+        "community",
+        "group home",
+        "halfway house",
+        "nonprofit",
+        "social services"
+    ],
+    "name": "Social Facility"
+}

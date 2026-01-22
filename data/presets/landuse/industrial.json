@@ -1,0 +1,13 @@
+{
+    "icon": "building_industrial",
+    "tags": {
+        "landuse": "industrial"
+    },
+    "terms": [
+        "depot",
+        "factory",
+        "manufacturing"
+    ],
+    "matchScore": 0.9,
+    "name": "Industrial Area"
+}

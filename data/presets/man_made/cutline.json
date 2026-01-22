@@ -1,0 +1,10 @@
+{
+    "icon": "chainsaw",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "man_made": "cutline"
+    },
+    "name": "Cut line"
+}

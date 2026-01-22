@@ -1,0 +1,22 @@
+{
+    "icon": "cat",
+    "terms": [
+        "boarding",
+        "cat",
+        "cattery",
+        "dog",
+        "horse",
+        "kennel",
+        "kitten",
+        "pet",
+        "pet boarding",
+        "pet care",
+        "pet hotel",
+        "puppy",
+        "reptile"
+    ],
+    "tags": {
+        "amenity": "animal_boarding"
+    },
+    "name": "Animal Boarding Facility"
+}

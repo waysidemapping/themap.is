@@ -1,0 +1,19 @@
+{
+    "icon": "pier_fixed-water",
+    "geometry": [
+        "line",
+        "area"
+    ],
+    "terms": [
+        "berth",
+        "dock",
+        "jetty",
+        "landing",
+        "promenade",
+        "wharf"
+    ],
+    "tags": {
+        "man_made": "pier"
+    },
+    "name": "Pier"
+}

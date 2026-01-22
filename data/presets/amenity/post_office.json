@@ -1,0 +1,13 @@
+{
+    "icon": "envelope",
+    "terms": [
+        "letter",
+        "mail",
+        "package",
+        "parcel"
+    ],
+    "tags": {
+        "amenity": "post_office"
+    },
+    "name": "Post Office"
+}

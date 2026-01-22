@@ -1,0 +1,14 @@
+{
+    "terms": [
+        "agricultural inputs",
+        "agricultural machines",
+        "agricultural tools",
+        "fertilizer",
+        "pesticides",
+        "seeds"
+    ],
+    "tags": {
+        "shop": "agrarian"
+    },
+    "name": "Farm Supply Shop"
+}

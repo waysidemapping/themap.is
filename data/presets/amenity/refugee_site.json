@@ -1,0 +1,14 @@
+{
+    "icon": "tents",
+    "tags": {
+        "amenity": "refugee_site"
+    },
+    "terms": [
+        "displaced people",
+        "evacuees",
+        "migrants",
+        "ngo",
+        "refugee site"
+    ],
+    "name": "Refugee Camp"
+}

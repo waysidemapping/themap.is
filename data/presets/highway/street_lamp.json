@@ -1,0 +1,18 @@
+{
+    "icon": "street_lamp_arm",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "highway": "street_lamp"
+    },
+    "terms": [
+        "gaslight",
+        "lamp",
+        "light",
+        "street light",
+        "streetlight"
+    ],
+    "name": "Street Lamp"
+}

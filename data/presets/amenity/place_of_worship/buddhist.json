@@ -1,0 +1,21 @@
+{
+    "icon": "buddhism",
+    "terms": [
+        "dojo",
+        "monastery",
+        "pagoda",
+        "stupa",
+        "temple",
+        "vihara",
+        "zendo"
+    ],
+    "tags": {
+        "amenity": "place_of_worship",
+        "religion": "buddhist"
+    },
+    "reference": {
+        "key": "amenity",
+        "value": "place_of_worship"
+    },
+    "name": "Buddhist Temple"
+}

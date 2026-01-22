@@ -1,0 +1,15 @@
+{
+    "icon": "buffer_stop",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "railway": "buffer_stop"
+    },
+    "terms": [
+        "buffer",
+        "halt",
+        "stop"
+    ],
+    "name": "Buffer Stop"
+}

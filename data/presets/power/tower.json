@@ -1,0 +1,16 @@
+{
+    "icon": "power_tower",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "power",
+        "power tower"
+    ],
+    "tags": {
+        "power": "tower"
+    },
+    "matchScore": 1.05,
+    "name": "High-Voltage Tower"
+}

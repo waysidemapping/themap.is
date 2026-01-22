@@ -1,0 +1,18 @@
+{
+    "icon": "manhole",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "man_made": "manhole"
+    },
+    "terms": [
+        "cover",
+        "hole",
+        "sewage",
+        "sewer",
+        "telecom"
+    ],
+    "name": "Manhole"
+}

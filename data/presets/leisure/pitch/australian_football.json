@@ -1,0 +1,17 @@
+{
+    "icon": "american_football",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "australian_football"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "australian_football"
+    },
+    "terms": [
+        "afl",
+        "aussie",
+        "football"
+    ],
+    "name": "Australian Football Field"
+}

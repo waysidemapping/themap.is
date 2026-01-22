@@ -1,0 +1,15 @@
+{
+    "icon": "noodle_bowl-chopsticks",
+    "terms": [
+        "dim sum"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "chinese"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "chinese"
+    },
+    "name": "Chinese Fast Food"
+}

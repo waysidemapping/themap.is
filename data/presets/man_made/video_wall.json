@@ -1,0 +1,20 @@
+{
+    "icon": "billboard",
+    "geometry": [
+        "point",
+        "vertex",
+        "line"
+    ],
+    "terms": [
+        "display",
+        "led wall",
+        "screen",
+        "television",
+        "tv",
+        "video wall"
+    ],
+    "tags": {
+        "man_made": "video_wall"
+    },
+    "name": "Digital Screen"
+}

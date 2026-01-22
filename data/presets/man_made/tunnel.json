@@ -1,0 +1,21 @@
+{
+    "icon": "tunnel",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "man_made": "tunnel"
+    },
+    "reference": {
+        "key": "man_made",
+        "value": "tunnel"
+    },
+    "terms": [
+        "bore",
+        "dig",
+        "shaft",
+        "underground passage",
+        "underpass"
+    ],
+    "name": "Tunnel Area"
+}

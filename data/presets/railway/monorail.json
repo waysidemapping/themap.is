@@ -1,0 +1,10 @@
+{
+    "icon": "monorail",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "railway": "monorail"
+    },
+    "name": "Monorail Track"
+}

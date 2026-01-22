@@ -1,0 +1,15 @@
+{
+    "icon": "elevator",
+    "geometry": [
+        "vertex",
+        "point",
+        "area"
+    ],
+    "tags": {
+        "highway": "elevator"
+    },
+    "terms": [
+        "lift"
+    ],
+    "name": "Elevator"
+}

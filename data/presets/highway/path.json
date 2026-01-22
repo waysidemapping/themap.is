@@ -1,0 +1,16 @@
+{
+    "geometry": [
+        "line"
+    ],
+    "terms": [
+        "hike",
+        "hiking",
+        "trackway",
+        "trail",
+        "walk"
+    ],
+    "tags": {
+        "highway": "path"
+    },
+    "name": "Path"
+}

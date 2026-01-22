@@ -1,0 +1,28 @@
+{
+    "icon": "fork-knife",
+    "terms": [
+        "bar",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "coffee",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "american"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "american"
+    },
+    "name": "American Restaurant"
+}

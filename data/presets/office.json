@@ -1,0 +1,16 @@
+{
+    "icon": "suitcase",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "office": "*"
+    },
+    "terms": [
+        "administration"
+    ],
+    "name": "Office",
+    "matchScore": 0.7
+}

@@ -1,0 +1,16 @@
+{
+    "icon": "windmill",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "mill",
+        "wheel",
+        "wind"
+    ],
+    "tags": {
+        "man_made": "windmill"
+    },
+    "name": "Windmill"
+}

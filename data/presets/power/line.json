@@ -1,0 +1,15 @@
+{
+    "icon": "power_tower",
+    "geometry": [
+        "line"
+    ],
+    "terms": [
+        "electric power transmission line",
+        "high tension line",
+        "high voltage line"
+    ],
+    "tags": {
+        "power": "line"
+    },
+    "name": "Power Line"
+}

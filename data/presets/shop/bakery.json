@@ -1,0 +1,12 @@
+{
+    "icon": "croissant",
+    "tags": {
+        "shop": "bakery"
+    },
+    "terms": [
+        "bread",
+        "cakes",
+        "rolls"
+    ],
+    "name": "Bakery"
+}

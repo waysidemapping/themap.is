@@ -1,0 +1,12 @@
+{
+    "icon": "hydrant",
+    "terms": [
+        "fire plug",
+        "fire water well",
+        "hydrant"
+    ],
+    "tags": {
+        "emergency": "fire_hydrant"
+    },
+    "name": "Fire Hydrant"
+}

@@ -1,0 +1,15 @@
+{
+    "icon": "tree_stump",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "natural": "tree_stump"
+    },
+    "terms": [
+        "cut tree",
+        "removed tree"
+    ],
+    "name": "Tree Stump"
+}

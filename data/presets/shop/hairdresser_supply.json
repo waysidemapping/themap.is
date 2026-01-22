@@ -1,0 +1,14 @@
+{
+    "icon": "hair_dryer",
+    "terms": [
+        "barber",
+        "conditioner",
+        "razor",
+        "shampoo",
+        "shaver"
+    ],
+    "tags": {
+        "shop": "hairdresser_supply"
+    },
+    "name": "Hairdresser Supply Store"
+}

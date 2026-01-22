@@ -1,0 +1,16 @@
+{
+    "geometry": [
+        "point"
+    ],
+    "tags": {
+        "man_made": "charge_point"
+    },
+    "terms": [
+        "charge point",
+        "charging stall",
+        "charging station",
+        "electric vehicle",
+        "ev"
+    ],
+    "name": "EV Charging Point"
+}

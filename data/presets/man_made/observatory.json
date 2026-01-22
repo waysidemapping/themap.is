@@ -1,0 +1,15 @@
+{
+    "icon": "telescope",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "astronomical",
+        "meteorological"
+    ],
+    "tags": {
+        "man_made": "observatory"
+    },
+    "name": "Observatory"
+}

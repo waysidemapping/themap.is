@@ -1,0 +1,27 @@
+{
+    "icon": "temaki",
+    "terms": [
+        "bar",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "sushi"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "sushi"
+    },
+    "name": "Sushi Restaurant"
+}

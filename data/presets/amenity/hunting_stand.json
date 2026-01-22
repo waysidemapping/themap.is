@@ -1,0 +1,21 @@
+{
+    "icon": "hunting_blind",
+    "terms": [
+        "game",
+        "gun",
+        "hide",
+        "lookout",
+        "raised blind",
+        "raised hide",
+        "rifle",
+        "shoot",
+        "stance",
+        "stand",
+        "watch",
+        "wild"
+    ],
+    "tags": {
+        "amenity": "hunting_stand"
+    },
+    "name": "Hunting Stand"
+}

@@ -1,0 +1,16 @@
+{
+    "icon": "picnic_table",
+    "geometry": [
+        "point",
+        "line"
+    ],
+    "terms": [
+        "beater",
+        "rack",
+        "stand"
+    ],
+    "tags": {
+        "man_made": "carpet_hanger"
+    },
+    "name": "Carpet Hanger"
+}

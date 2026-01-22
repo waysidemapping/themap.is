@@ -1,0 +1,12 @@
+{
+    "terms": [
+        "blood check",
+        "diagnostic",
+        "medical lab",
+        "medical laboratory"
+    ],
+    "tags": {
+        "healthcare": "laboratory"
+    },
+    "name": "Medical Laboratory"
+}

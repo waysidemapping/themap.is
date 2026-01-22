@@ -1,0 +1,12 @@
+{
+    "icon": "stethoscope",
+    "terms": [
+        "medic",
+        "medical doctor",
+        "physician"
+    ],
+    "tags": {
+        "healthcare": "doctor"
+    },
+    "name": "Doctor"
+}

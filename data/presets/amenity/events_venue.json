@@ -1,0 +1,22 @@
+{
+    "tags": {
+        "amenity": "events_venue"
+    },
+    "terms": [
+        "banquet hall",
+        "baptism",
+        "bar mitzvah",
+        "bat mitzvah",
+        "birthdays",
+        "celebrations",
+        "conferences",
+        "confirmation",
+        "meetings",
+        "parties",
+        "party",
+        "quinceañera",
+        "reunions",
+        "weddings"
+    ],
+    "name": "Events Venue"
+}

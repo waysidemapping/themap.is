@@ -1,0 +1,28 @@
+{
+    "icon": "mountain_valley",
+    "geometry": [
+        "vertex",
+        "point",
+        "line"
+    ],
+    "tags": {
+        "natural": "valley"
+    },
+    "terms": [
+        "canyon",
+        "dale",
+        "dell",
+        "dene",
+        "depression",
+        "glen",
+        "gorge",
+        "gulley",
+        "gully",
+        "gultch",
+        "hollow",
+        "ravine",
+        "rift",
+        "vale"
+    ],
+    "name": "Valley"
+}

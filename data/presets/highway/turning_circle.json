@@ -1,0 +1,13 @@
+{
+    "icon": "circle",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "highway": "turning_circle"
+    },
+    "terms": [
+        "cul-de-sac"
+    ],
+    "name": "Turning Circle"
+}

@@ -1,0 +1,22 @@
+{
+    "icon": "pawprint-plus",
+    "terms": [
+        "Animal Pharmacy",
+        "animal medication",
+        "animal pharmacy",
+        "pet clinic",
+        "pet doctor",
+        "pet meds",
+        "pet pharmacy",
+        "pet prescriptions",
+        "vet pharmacy",
+        "veterinarian",
+        "veterinary compounding",
+        "veterinary pharmacy",
+        "veterinary supplies"
+    ],
+    "tags": {
+        "amenity": "veterinary_pharmacy"
+    },
+    "name": "Veterinary Pharmacy"
+}

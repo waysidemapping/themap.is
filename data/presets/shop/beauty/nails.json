@@ -1,0 +1,17 @@
+{
+    "icon": "polished_nail",
+    "terms": [
+        "manicure",
+        "nails",
+        "pedicure"
+    ],
+    "tags": {
+        "shop": "beauty",
+        "beauty": "nails"
+    },
+    "reference": {
+        "key": "shop",
+        "value": "beauty"
+    },
+    "name": "Nail Salon"
+}

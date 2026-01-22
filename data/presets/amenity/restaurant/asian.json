@@ -1,0 +1,27 @@
+{
+    "icon": "noodle_bowl-chopsticks",
+    "terms": [
+        "bar",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "asian"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "asian"
+    },
+    "name": "Asian Restaurant"
+}

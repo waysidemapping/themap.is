@@ -1,0 +1,16 @@
+{
+    "icon": "angelfish",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "fish",
+        "sea",
+        "water"
+    ],
+    "tags": {
+        "tourism": "aquarium"
+    },
+    "name": "Aquarium"
+}

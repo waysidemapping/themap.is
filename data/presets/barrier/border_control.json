@@ -1,0 +1,19 @@
+{
+    "icon": "checkpoint-passport",
+    "geometry": [
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "barrier": "border_control"
+    },
+    "terms": [
+        "checkpoint",
+        "customs",
+        "international boundary",
+        "passport check",
+        "port of entry",
+        "visa"
+    ],
+    "name": "Border Control"
+}

@@ -1,0 +1,15 @@
+{
+    "icon": "tennis_player",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "badminton"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "badminton"
+    },
+    "terms": [
+        "badminton net"
+    ],
+    "name": "Badminton Court"
+}

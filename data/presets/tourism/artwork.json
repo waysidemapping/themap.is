@@ -1,0 +1,18 @@
+{
+    "icon": "wall_art",
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "tourism": "artwork"
+    },
+    "terms": [
+        "mural",
+        "sculpture",
+        "statue"
+    ],
+    "name": "Artwork"
+}

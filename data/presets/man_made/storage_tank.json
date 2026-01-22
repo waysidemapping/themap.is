@@ -1,0 +1,18 @@
+{
+    "icon": "storage_drum",
+    "geometry": [
+        "area",
+        "point"
+    ],
+    "terms": [
+        "fuel",
+        "gas",
+        "oil",
+        "petrol",
+        "water"
+    ],
+    "tags": {
+        "man_made": "storage_tank"
+    },
+    "name": "Storage Tank"
+}

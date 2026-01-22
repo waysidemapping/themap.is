@@ -1,0 +1,14 @@
+{
+    "icon": "spade",
+    "terms": [
+        "blackjack",
+        "craps",
+        "gambling",
+        "poker",
+        "roulette"
+    ],
+    "tags": {
+        "amenity": "casino"
+    },
+    "name": "Casino"
+}

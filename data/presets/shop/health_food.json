@@ -1,0 +1,18 @@
+{
+    "terms": [
+        "Health Food Shop",
+        "groceries",
+        "nutritional",
+        "organic",
+        "raw food",
+        "unprocessed",
+        "vegan",
+        "vegetarian",
+        "vitamins",
+        "wholefood"
+    ],
+    "tags": {
+        "shop": "health_food"
+    },
+    "name": "Health Food Store"
+}

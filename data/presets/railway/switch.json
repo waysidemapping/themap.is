@@ -1,0 +1,14 @@
+{
+    "icon": "y_junction",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "railway": "switch"
+    },
+    "terms": [
+        "points",
+        "switch"
+    ],
+    "name": "Railway Switch"
+}

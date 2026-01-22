@@ -1,0 +1,14 @@
+{
+    "icon": "chest_of_drawers",
+    "tags": {
+        "shop": "antiques"
+    },
+    "name": "Antique Shop",
+    "terms": [
+        "Antique Store",
+        "Antiques Shop",
+        "Antiques Store",
+        "old",
+        "vintage"
+    ]
+}

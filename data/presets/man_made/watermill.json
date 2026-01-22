@@ -1,0 +1,18 @@
+{
+    "icon": "watermill-water",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "mill",
+        "water",
+        "water wheel",
+        "waterwheel",
+        "wheel"
+    ],
+    "tags": {
+        "man_made": "watermill"
+    },
+    "name": "Watermill"
+}

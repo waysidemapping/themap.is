@@ -1,0 +1,18 @@
+{
+    "icon": "cliff-falling_rocks",
+    "geometry": [
+        "point",
+        "vertex",
+        "line"
+    ],
+    "tags": {
+        "natural": "cliff"
+    },
+    "terms": [
+        "crag",
+        "escarpment",
+        "rock face",
+        "scarp"
+    ],
+    "name": "Cliff"
+}

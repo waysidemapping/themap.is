@@ -1,0 +1,13 @@
+{
+    "icon": "vacuum_station",
+    "tags": {
+        "amenity": "vacuum_cleaner"
+    },
+    "terms": [
+        "car vacuum cleaner",
+        "car wash",
+        "carvac",
+        "suction"
+    ],
+    "name": "Vacuum Cleaning Station"
+}

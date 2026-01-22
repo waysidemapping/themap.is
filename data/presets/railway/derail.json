@@ -1,0 +1,13 @@
+{
+    "icon": "no_entry",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "railway": "derail"
+    },
+    "terms": [
+        "derailer"
+    ],
+    "name": "Railway Derailer"
+}

@@ -1,0 +1,12 @@
+{
+    "icon": "runner",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "bowls"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "bowls"
+    },
+    "name": "Bowling Green"
+}

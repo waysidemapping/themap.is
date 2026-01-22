@@ -1,0 +1,26 @@
+{
+    "icon": "letter_box",
+    "tags": {
+        "amenity": "letter_box"
+    },
+    "terms": [
+        "curbside delivery box",
+        "direct-to-door delivery box",
+        "home delivery box",
+        "letter hole",
+        "letter plate",
+        "letter slot",
+        "letterbox",
+        "letterhole",
+        "letterplate",
+        "letterslot",
+        "mail box",
+        "mail hole",
+        "mail slot",
+        "mailbox",
+        "mailhole",
+        "mailslot",
+        "through-door delivery box"
+    ],
+    "name": "Letter Box"
+}

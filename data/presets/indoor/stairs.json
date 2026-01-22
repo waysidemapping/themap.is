@@ -1,0 +1,19 @@
+{
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "indoor": "room",
+        "stairs": "yes"
+    },
+    "terms": [
+        "stair",
+        "staircase",
+        "stairs",
+        "stairway",
+        "stairwell",
+        "steps"
+    ],
+    "matchScore": 0.8,
+    "name": "Indoor Stairwell"
+}

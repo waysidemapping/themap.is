@@ -1,0 +1,13 @@
+{
+    "icon": "tree_conifer-flower-mountain",
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "natural": "*"
+    },
+    "name": "Natural Feature"
+}

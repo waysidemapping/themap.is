@@ -1,0 +1,17 @@
+{
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "apiary",
+        "beekeeper",
+        "farm",
+        "honey",
+        "pollination"
+    ],
+    "tags": {
+        "man_made": "beehive"
+    },
+    "name": "Beehive"
+}

@@ -1,0 +1,32 @@
+{
+    "icon": "building_place_of_worship",
+    "terms": [
+        "abbey",
+        "basilica",
+        "bethel",
+        "cathedral",
+        "chancel",
+        "chantry",
+        "chapel",
+        "church",
+        "fold",
+        "house of god",
+        "house of prayer",
+        "house of worship",
+        "minster",
+        "mission",
+        "mosque",
+        "oratory",
+        "parish",
+        "sacellum",
+        "sanctuary",
+        "shrine",
+        "synagogue",
+        "tabernacle",
+        "temple"
+    ],
+    "tags": {
+        "amenity": "place_of_worship"
+    },
+    "name": "Place of Worship"
+}

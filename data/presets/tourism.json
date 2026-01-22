@@ -1,0 +1,13 @@
+{
+    "icon": "camera",
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "tourism": "*"
+    },
+    "name": "Tourism Feature"
+}

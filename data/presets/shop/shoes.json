@@ -1,0 +1,19 @@
+{
+    "icon": "shoe",
+    "tags": {
+        "shop": "shoes"
+    },
+    "terms": [
+        "boots",
+        "cleats",
+        "clogs",
+        "footwear",
+        "heels",
+        "loafers",
+        "oxfords",
+        "sandals",
+        "slippers",
+        "sneakers"
+    ],
+    "name": "Shoe Store"
+}

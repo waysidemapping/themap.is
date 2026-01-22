@@ -1,0 +1,28 @@
+{
+    "icon": "noodle_bowl-chopsticks",
+    "terms": [
+        "bar",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "dim sum",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "chinese"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "chinese"
+    },
+    "name": "Chinese Restaurant"
+}

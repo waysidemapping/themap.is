@@ -1,0 +1,16 @@
+{
+    "icon": "watering_can",
+    "terms": [
+        "landscape",
+        "mulch",
+        "nursery",
+        "plant nursery",
+        "retail plant nursery",
+        "shrub",
+        "tree"
+    ],
+    "tags": {
+        "shop": "garden_centre"
+    },
+    "name": "Garden Center"
+}

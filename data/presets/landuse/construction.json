@@ -1,0 +1,17 @@
+{
+    "icon": "bulldozer",
+    "tags": {
+        "landuse": "construction"
+    },
+    "terms": [
+        "building",
+        "bulldozer",
+        "construction site",
+        "construction zone",
+        "crane",
+        "demolition",
+        "development",
+        "infrastructure"
+    ],
+    "name": "Construction Area"
+}

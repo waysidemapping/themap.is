@@ -1,0 +1,16 @@
+{
+    "icon": "runner",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "tetherball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "tetherball"
+    },
+    "terms": [
+        "swingball",
+        "tether tennis"
+    ],
+    "name": "Tetherball Court"
+}

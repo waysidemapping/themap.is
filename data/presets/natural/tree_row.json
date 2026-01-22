@@ -1,0 +1,13 @@
+{
+    "icon": "tree_row",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "natural": "tree_row"
+    },
+    "terms": [
+        "tree line"
+    ],
+    "name": "Tree Row"
+}

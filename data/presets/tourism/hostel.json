@@ -1,0 +1,18 @@
+{
+    "icon": "bunk_beds",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "tourism": "hostel"
+    },
+    "terms": [
+        "bunk beds",
+        "dormitories",
+        "dorms",
+        "lodging",
+        "overnight accommodations"
+    ],
+    "name": "Hostel"
+}

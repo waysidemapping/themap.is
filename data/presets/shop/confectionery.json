@@ -1,0 +1,15 @@
+{
+    "icon": "candy",
+    "terms": [
+        "Candy Shop",
+        "Confectionery Store",
+        "fudge",
+        "lollipop",
+        "sugar",
+        "sweet"
+    ],
+    "tags": {
+        "shop": "confectionery"
+    },
+    "name": "Candy Store"
+}

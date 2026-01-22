@@ -1,0 +1,15 @@
+{
+    "icon": "storage_fermenter",
+    "terms": [
+        "alcohol",
+        "beer",
+        "beverage",
+        "bier",
+        "booze",
+        "cider"
+    ],
+    "tags": {
+        "craft": "brewery"
+    },
+    "name": "Craft Brewery"
+}

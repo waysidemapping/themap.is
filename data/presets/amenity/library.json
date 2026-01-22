@@ -1,0 +1,10 @@
+{
+    "icon": "book_open",
+    "terms": [
+        "book"
+    ],
+    "tags": {
+        "amenity": "library"
+    },
+    "name": "Library"
+}

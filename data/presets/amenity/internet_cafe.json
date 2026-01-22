@@ -1,0 +1,16 @@
+{
+    "icon": "antenna",
+    "terms": [
+        "cafe",
+        "coffee",
+        "cybercafe",
+        "lanhouse",
+        "net",
+        "taxiphone",
+        "teleboutique"
+    ],
+    "tags": {
+        "amenity": "internet_cafe"
+    },
+    "name": "Internet Cafe"
+}

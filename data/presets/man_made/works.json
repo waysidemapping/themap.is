@@ -1,0 +1,22 @@
+{
+    "icon": "building_industrial",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "assembly",
+        "brewery",
+        "build",
+        "car",
+        "manufacture",
+        "plant",
+        "plastic",
+        "processing",
+        "refinery"
+    ],
+    "tags": {
+        "man_made": "works"
+    },
+    "name": "Factory"
+}

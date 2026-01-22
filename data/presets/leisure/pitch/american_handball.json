@@ -1,0 +1,16 @@
+{
+    "icon": "wall",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "american_handball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "american_handball"
+    },
+    "terms": [
+        "handball",
+        "wallball"
+    ],
+    "name": "American Handball Court"
+}

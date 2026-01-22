@@ -1,0 +1,12 @@
+{
+    "icon": "motorboat-parking_line",
+    "tags": {
+        "amenity": "boat_storage"
+    },
+    "terms": [
+        "boathouse",
+        "dry dock",
+        "marina"
+    ],
+    "name": "Boat Storage"
+}

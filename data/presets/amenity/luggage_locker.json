@@ -1,0 +1,16 @@
+{
+    "icon": "suitcase-key",
+    "tags": {
+        "amenity": "luggage_locker"
+    },
+    "terms": [
+        "baggage",
+        "bags",
+        "locker",
+        "lockers",
+        "luggage",
+        "storage",
+        "travel"
+    ],
+    "name": "Luggage Locker"
+}

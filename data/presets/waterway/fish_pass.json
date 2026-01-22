@@ -1,0 +1,24 @@
+{
+    "icon": "fish-cascade",
+    "geometry": [
+        "line"
+    ],
+    "terms": [
+        "eel ladder",
+        "eel pass",
+        "fish ladder",
+        "fish migration",
+        "fish passage",
+        "fish siphon",
+        "fish steps",
+        "fish way",
+        "fishladder",
+        "fishpass",
+        "fishsteps",
+        "fishway"
+    ],
+    "tags": {
+        "waterway": "fish_pass"
+    },
+    "name": "Fish Pass"
+}

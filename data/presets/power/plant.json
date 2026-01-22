@@ -1,0 +1,19 @@
+{
+    "icon": "building_industrial",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "power": "plant"
+    },
+    "terms": [
+        "coal",
+        "gas",
+        "generator",
+        "hydro",
+        "nuclear",
+        "power",
+        "station"
+    ],
+    "name": "Power Station Grounds"
+}

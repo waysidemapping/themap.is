@@ -1,0 +1,22 @@
+{
+    "icon": "plus",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "healthcare": "*"
+    },
+    "terms": [
+        "clinic",
+        "disease",
+        "doctor",
+        "health",
+        "institution",
+        "sick",
+        "surgery",
+        "wellness"
+    ],
+    "name": "Healthcare Facility",
+    "matchScore": 0.4
+}

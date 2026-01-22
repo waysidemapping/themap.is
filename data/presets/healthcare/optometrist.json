@@ -1,0 +1,13 @@
+{
+    "terms": [
+        "eye",
+        "glasses",
+        "lasik",
+        "lenses",
+        "vision"
+    ],
+    "tags": {
+        "healthcare": "optometrist"
+    },
+    "name": "Optometrist"
+}

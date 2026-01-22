@@ -1,0 +1,16 @@
+{
+    "terms": [
+        "ballot box",
+        "ballot drop",
+        "democracy",
+        "elections",
+        "polling place",
+        "vote",
+        "voting booth",
+        "voting machine"
+    ],
+    "tags": {
+        "amenity": "polling_station"
+    },
+    "name": "Permanent Polling Place"
+}

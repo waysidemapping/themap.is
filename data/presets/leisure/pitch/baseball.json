@@ -1,0 +1,16 @@
+{
+    "icon": "baseball_batter",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "baseball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "baseball"
+    },
+    "terms": [
+        "diamond",
+        "softball"
+    ],
+    "name": "Baseball Field"
+}

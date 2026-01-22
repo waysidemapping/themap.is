@@ -1,0 +1,12 @@
+{
+    "icon": "detergent_bottle",
+    "tags": {
+        "amenity": "lavoir"
+    },
+    "terms": [
+        "clothing",
+        "laundry",
+        "washing"
+    ],
+    "name": "Lavoir"
+}

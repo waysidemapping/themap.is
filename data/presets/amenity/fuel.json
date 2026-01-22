@@ -1,0 +1,17 @@
+{
+    "icon": "gasoline_pump",
+    "terms": [
+        "biodiesel",
+        "cng",
+        "diesel",
+        "fuel",
+        "gasoline",
+        "lng",
+        "petrol",
+        "propane"
+    ],
+    "tags": {
+        "amenity": "fuel"
+    },
+    "name": "Gas Station"
+}

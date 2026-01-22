@@ -1,0 +1,13 @@
+{
+    "icon": "bicycle-parking_line",
+    "terms": [
+        "bike",
+        "bike parking",
+        "cycle parking",
+        "cycling"
+    ],
+    "tags": {
+        "amenity": "bicycle_parking"
+    },
+    "name": "Bicycle Parking"
+}

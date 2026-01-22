@@ -1,0 +1,19 @@
+{
+    "icon": "sewage",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "reclamation plant",
+        "sewage",
+        "wastewater treatment plant",
+        "wastewater treatment works",
+        "water treatment plant",
+        "wwtp"
+    ],
+    "tags": {
+        "man_made": "wastewater_plant"
+    },
+    "name": "Wastewater Plant"
+}

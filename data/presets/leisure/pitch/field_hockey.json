@@ -1,0 +1,15 @@
+{
+    "icon": "field_hockey_stick-ball",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "field_hockey"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "field_hockey"
+    },
+    "terms": [
+        "landhockey"
+    ],
+    "name": "Field Hockey Pitch"
+}

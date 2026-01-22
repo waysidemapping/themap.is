@@ -1,0 +1,18 @@
+{
+    "icon": "sleeper",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "tourism": "apartment"
+    },
+    "terms": [
+        "bnb",
+        "holiday rental",
+        "lodging",
+        "overnight accommodations",
+        "vacation rental"
+    ],
+    "name": "Guest Apartment / Condo"
+}

@@ -1,0 +1,15 @@
+{
+    "icon": "trash_can",
+    "tags": {
+        "amenity": "waste_basket"
+    },
+    "terms": [
+        "Waste Basket",
+        "bin",
+        "garbage",
+        "litter",
+        "rubbish",
+        "trash"
+    ],
+    "name": "Trash Can"
+}

@@ -1,0 +1,13 @@
+{
+    "icon": "plant-gardenbed",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "man_made": "planter"
+    },
+    "matchScore": 0.9,
+    "name": "Planter"
+}

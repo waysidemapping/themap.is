@@ -1,0 +1,10 @@
+{
+    "icon": "droplet",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "natural": "water"
+    },
+    "name": "Water"
+}

@@ -1,0 +1,15 @@
+{
+    "icon": "spotting_scope",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "tourism": "viewpoint"
+    },
+    "terms": [
+        "lookout"
+    ],
+    "name": "Viewpoint"
+}

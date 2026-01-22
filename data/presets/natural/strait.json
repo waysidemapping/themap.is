@@ -1,0 +1,16 @@
+{
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "natural": "strait"
+    },
+    "terms": [
+        "channel",
+        "pass",
+        "passage"
+    ],
+    "name": "Strait"
+}

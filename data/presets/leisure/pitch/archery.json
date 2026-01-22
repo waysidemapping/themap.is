@@ -1,0 +1,16 @@
+{
+    "icon": "archer",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "archery"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "archery"
+    },
+    "terms": [
+        "bow and arrow",
+        "crossbow"
+    ],
+    "name": "Archery Range"
+}

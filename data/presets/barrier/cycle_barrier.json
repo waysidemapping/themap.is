@@ -1,0 +1,19 @@
+{
+    "icon": "bicycle_barrier",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "barrier": "cycle_barrier"
+    },
+    "terms": [
+        "bicycle barrier",
+        "bicycling barrier",
+        "bike barrier",
+        "bike chicane",
+        "bike gates",
+        "chicane",
+        "cycling barrier"
+    ],
+    "name": "Cycle Barrier"
+}

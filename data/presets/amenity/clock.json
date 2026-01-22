@@ -1,0 +1,10 @@
+{
+    "icon": "clock",
+    "terms": [
+        "time"
+    ],
+    "tags": {
+        "amenity": "clock"
+    },
+    "name": "Clock"
+}

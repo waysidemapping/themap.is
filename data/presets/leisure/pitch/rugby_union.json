@@ -1,0 +1,12 @@
+{
+    "icon": "american_football",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "rugby_union"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "rugby_union"
+    },
+    "name": "Rugby Union Field"
+}

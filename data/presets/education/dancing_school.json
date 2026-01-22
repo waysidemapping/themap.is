@@ -1,0 +1,16 @@
+{
+    "terms": [
+        "Dance Studio",
+        "ballet",
+        "ballet studio",
+        "dance teaching",
+        "jive",
+        "swing",
+        "tango",
+        "waltz"
+    ],
+    "tags": {
+        "education": "dancing_school"
+    },
+    "name": "Dance School"
+}

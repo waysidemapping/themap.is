@@ -1,0 +1,11 @@
+{
+    "icon": "stethoscope",
+    "terms": [
+        "medical",
+        "urgentcare"
+    ],
+    "tags": {
+        "healthcare": "clinic"
+    },
+    "name": "Clinic"
+}

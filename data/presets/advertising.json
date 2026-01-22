@@ -1,0 +1,16 @@
+{
+    "icon": "billboard",
+    "geometry": [
+        "poi"
+    ],
+    "tags": {
+        "advertising": "*"
+    },
+    "terms": [
+        "advertising screen",
+        "flag",
+        "neon sign",
+        "sign"
+    ],
+    "name": "Advertising Device"
+}

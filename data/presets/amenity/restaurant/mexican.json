@@ -1,0 +1,32 @@
+{
+    "terms": [
+        "bar",
+        "breakfast",
+        "burritos",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "enchiladas",
+        "fajitas",
+        "grill",
+        "lunch",
+        "nachos",
+        "quesadillas",
+        "salsa",
+        "table",
+        "tacos",
+        "tamales",
+        "tortillas"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "mexican"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "mexican"
+    },
+    "name": "Mexican Restaurant"
+}

@@ -1,0 +1,19 @@
+{
+    "icon": "banknote-hand",
+    "terms": [
+        "bill",
+        "cable",
+        "cash to cash",
+        "check",
+        "currency",
+        "exchange",
+        "finance",
+        "money order",
+        "person to person",
+        "wire transfer"
+    ],
+    "tags": {
+        "amenity": "money_transfer"
+    },
+    "name": "Money Transfer Station"
+}

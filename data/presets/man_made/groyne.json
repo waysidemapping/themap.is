@@ -1,0 +1,15 @@
+{
+    "geometry": [
+        "line",
+        "area"
+    ],
+    "tags": {
+        "man_made": "groyne"
+    },
+    "name": "Groin",
+    "terms": [
+        "Wing Dam",
+        "Wing Dyke",
+        "Spur Dyke"
+    ]
+}

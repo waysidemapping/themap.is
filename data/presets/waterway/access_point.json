@@ -1,0 +1,21 @@
+{
+    "icon": "shore",
+    "geometry": [
+        "vertex"
+    ],
+    "terms": [
+        "boat",
+        "canoe",
+        "kayak",
+        "launch",
+        "paddleboard",
+        "portage",
+        "put-in",
+        "rowboat",
+        "take-out"
+    ],
+    "tags": {
+        "waterway": "access_point"
+    },
+    "name": "Waterway Access Point"
+}

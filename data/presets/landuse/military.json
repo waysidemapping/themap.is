@@ -1,0 +1,18 @@
+{
+    "icon": "medal-star",
+    "tags": {
+        "landuse": "military"
+    },
+    "terms": [
+        "air force",
+        "army",
+        "base",
+        "coast guard",
+        "depot",
+        "marines",
+        "navy",
+        "security"
+    ],
+    "matchScore": 0.9,
+    "name": "Military Area"
+}

@@ -1,0 +1,17 @@
+{
+    "icon": "bicycle-wrench",
+    "terms": [
+        "bike chain",
+        "bike multitool",
+        "bike repair",
+        "bike tools",
+        "compressed air",
+        "cycle pump",
+        "cycle repair",
+        "cycling"
+    ],
+    "tags": {
+        "amenity": "bicycle_repair_station"
+    },
+    "name": "Bicycle Repair Tool Stand"
+}

@@ -1,0 +1,18 @@
+{
+    "icon": "railway_cable_track",
+    "geometry": [
+        "line"
+    ],
+    "terms": [
+        "Cliff Railway Track",
+        "Inclined Railway Track",
+        "cable car",
+        "cable railway",
+        "funicular railway",
+        "venicular"
+    ],
+    "tags": {
+        "railway": "funicular"
+    },
+    "name": "Funicular Track"
+}

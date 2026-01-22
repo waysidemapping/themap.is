@@ -1,0 +1,12 @@
+{
+    "icon": "plug-bolt",
+    "tags": {
+        "amenity": "device_charging_station"
+    },
+    "terms": [
+        "charger",
+        "plug",
+        "usb"
+    ],
+    "name": "Device Charging Station"
+}

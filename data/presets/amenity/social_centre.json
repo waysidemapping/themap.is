@@ -1,0 +1,18 @@
+{
+    "terms": [
+        "event",
+        "fraternal",
+        "fraternity",
+        "hall",
+        "organization",
+        "professional",
+        "society",
+        "sorority",
+        "union",
+        "vetern"
+    ],
+    "tags": {
+        "amenity": "social_centre"
+    },
+    "name": "Social Center"
+}

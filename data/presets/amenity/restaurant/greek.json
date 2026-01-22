@@ -1,0 +1,30 @@
+{
+    "icon": "fork-knife",
+    "terms": [
+        "bar",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "gyros",
+        "lunch",
+        "olives",
+        "pitas",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "greek"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "greek"
+    },
+    "name": "Greek Restaurant"
+}

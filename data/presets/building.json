@@ -1,0 +1,14 @@
+{
+    "icon": "house",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "building": "*"
+    },
+    "matchScore": 0.6,
+    "terms": [
+        "structure"
+    ],
+    "name": "Building"
+}

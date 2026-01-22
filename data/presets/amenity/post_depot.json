@@ -1,0 +1,10 @@
+{
+    "terms": [
+        "mail processing and distribution center",
+        "post depot"
+    ],
+    "tags": {
+        "amenity": "post_depot"
+    },
+    "name": "Post Sorting Office"
+}

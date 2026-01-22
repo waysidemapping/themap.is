@@ -1,0 +1,23 @@
+{
+    "icon": "recycling",
+    "terms": [
+        "Recycling Container",
+        "bin",
+        "bottle",
+        "can",
+        "garbage",
+        "glass",
+        "rubbish",
+        "scrap",
+        "trash"
+    ],
+    "tags": {
+        "amenity": "recycling",
+        "recycling_type": "container"
+    },
+    "reference": {
+        "key": "recycling_type",
+        "value": "container"
+    },
+    "name": "Recycling Bin"
+}

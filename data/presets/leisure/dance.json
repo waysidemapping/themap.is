@@ -1,0 +1,16 @@
+{
+    "terms": [
+        "ballet",
+        "ballet studio",
+        "ballroom",
+        "dance studio",
+        "jive",
+        "swing",
+        "tango",
+        "waltz"
+    ],
+    "tags": {
+        "leisure": "dance"
+    },
+    "name": "Dance Hall"
+}

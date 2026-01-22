@@ -1,0 +1,17 @@
+{
+    "name": "Motorway Link",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "highway": "motorway_link"
+    },
+    "terms": [
+        "exit",
+        "off ramp",
+        "on ramp",
+        "ramp",
+        "road",
+        "street"
+    ]
+}

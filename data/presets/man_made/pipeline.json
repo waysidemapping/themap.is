@@ -1,0 +1,16 @@
+{
+    "geometry": [
+        "line"
+    ],
+    "terms": [
+        "natural gas",
+        "oil",
+        "sewage",
+        "sewer",
+        "water"
+    ],
+    "tags": {
+        "man_made": "pipeline"
+    },
+    "name": "Pipeline"
+}

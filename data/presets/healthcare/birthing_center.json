@@ -1,0 +1,16 @@
+{
+    "terms": [
+        "baby",
+        "childbirth",
+        "delivery",
+        "labor",
+        "labour",
+        "midwive",
+        "pregnancy",
+        "pregnant"
+    ],
+    "tags": {
+        "healthcare": "birthing_centre"
+    },
+    "name": "Birthing Center"
+}

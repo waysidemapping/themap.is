@@ -1,0 +1,16 @@
+{
+    "icon": "conveyor",
+    "geometry": [
+        "line"
+    ],
+    "terms": [
+        "belt conveyor",
+        "chain conveyor",
+        "conveyor belt",
+        "roller conveyor"
+    ],
+    "tags": {
+        "man_made": "goods_conveyor"
+    },
+    "name": "Goods Conveyor"
+}

@@ -1,0 +1,21 @@
+{
+    "icon": "antenna",
+    "geometry": [
+        "point"
+    ],
+    "terms": [
+        "broadcast",
+        "cell",
+        "cell phone",
+        "communication",
+        "mobile phone",
+        "radio",
+        "television",
+        "transmission",
+        "tv"
+    ],
+    "tags": {
+        "man_made": "antenna"
+    },
+    "name": "Antenna"
+}

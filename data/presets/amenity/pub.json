@@ -1,0 +1,15 @@
+{
+    "icon": "pint_glass",
+    "tags": {
+        "amenity": "pub"
+    },
+    "terms": [
+        "alcohol",
+        "beer",
+        "bier",
+        "booze",
+        "dive",
+        "drink"
+    ],
+    "name": "Pub"
+}

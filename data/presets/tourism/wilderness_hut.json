@@ -1,0 +1,28 @@
+{
+    "icon": "cabin",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "Backcountry Hut",
+        "Backcountry Shelter",
+        "Bothy",
+        "alpine hut",
+        "bivouac",
+        "bivouac box",
+        "biwakschachtel",
+        "bothy",
+        "cabin",
+        "lodge",
+        "lodging",
+        "overnight accommodations",
+        "refuge",
+        "sleeping shelter",
+        "wilderness hut"
+    ],
+    "tags": {
+        "tourism": "wilderness_hut"
+    },
+    "name": "Wilderness Hut"
+}

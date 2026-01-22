@@ -1,0 +1,29 @@
+{
+    "icon": "tree-bench",
+    "terms": [
+        "esplanade",
+        "estate",
+        "forest",
+        "garden",
+        "grass",
+        "green",
+        "grounds",
+        "lawn",
+        "lot",
+        "meadow",
+        "parkland",
+        "place",
+        "playground",
+        "plaza",
+        "pleasure garden",
+        "recreation area",
+        "square",
+        "tract",
+        "village green",
+        "woodland"
+    ],
+    "tags": {
+        "leisure": "park"
+    },
+    "name": "Park"
+}

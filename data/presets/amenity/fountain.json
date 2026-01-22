@@ -1,0 +1,11 @@
+{
+    "icon": "fountain",
+    "tags": {
+        "amenity": "fountain"
+    },
+    "terms": [
+        "basin",
+        "water"
+    ],
+    "name": "Fountain"
+}

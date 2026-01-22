@@ -1,0 +1,11 @@
+{
+    "icon": "christianity",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "man_made": "cross"
+    },
+    "name": "Cross"
+}

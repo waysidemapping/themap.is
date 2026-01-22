@@ -1,0 +1,19 @@
+{
+    "icon": "railway_track",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "railway": "rail"
+    },
+    "terms": [
+        "Railway Track",
+        "Railroad Track",
+        "permanent way",
+        "rail",
+        "rail line",
+        "track",
+        "train track"
+    ],
+    "name": "Train Track"
+}

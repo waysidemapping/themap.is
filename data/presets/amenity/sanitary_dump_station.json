@@ -1,0 +1,17 @@
+{
+    "icon": "camper_trailer-waste_dump",
+    "terms": [
+        "camper",
+        "cdp",
+        "chemical toilet",
+        "ctdp",
+        "dump station",
+        "elsan",
+        "motor home",
+        "sanitary"
+    ],
+    "tags": {
+        "amenity": "sanitary_dump_station"
+    },
+    "name": "RV Toilet Disposal"
+}

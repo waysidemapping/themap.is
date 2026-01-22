@@ -1,0 +1,14 @@
+{
+    "icon": "giraffe",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "animal"
+    ],
+    "tags": {
+        "tourism": "zoo"
+    },
+    "name": "Zoo"
+}

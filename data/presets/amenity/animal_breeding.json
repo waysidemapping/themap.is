@@ -1,0 +1,21 @@
+{
+    "icon": "cat",
+    "terms": [
+        "breeding",
+        "bull",
+        "cat",
+        "cow",
+        "dog",
+        "horse",
+        "husbandry",
+        "kitten",
+        "livestock",
+        "pet breeding",
+        "puppy",
+        "reptile"
+    ],
+    "tags": {
+        "amenity": "animal_breeding"
+    },
+    "name": "Animal Breeding Facility"
+}

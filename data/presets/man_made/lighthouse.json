@@ -1,0 +1,12 @@
+{
+    "icon": "lighthouse",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "man_made": "lighthouse"
+    },
+    "name": "Lighthouse"
+}

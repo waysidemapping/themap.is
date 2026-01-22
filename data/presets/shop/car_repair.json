@@ -1,0 +1,21 @@
+{
+    "icon": "car-wrench",
+    "terms": [
+        "Automobile Repair Shop",
+        "Car Mechanic",
+        "Auto Mechanic",
+        "automechanic",
+        "automotive",
+        "garage",
+        "inspection",
+        "mechanic",
+        "oil change",
+        "panel beater",
+        "panelbeater",
+        "service"
+    ],
+    "tags": {
+        "shop": "car_repair"
+    },
+    "name": "Car Repair Shop"
+}

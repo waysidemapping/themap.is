@@ -1,0 +1,16 @@
+{
+    "name": "Trunk Link",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "highway": "trunk_link"
+    },
+    "terms": [
+        "off ramp",
+        "on ramp",
+        "ramp",
+        "road",
+        "street"
+    ]
+}

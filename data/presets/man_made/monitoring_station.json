@@ -1,0 +1,24 @@
+{
+    "icon": "antenna",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "terms": [
+        "air",
+        "bicycle counter",
+        "bike counter",
+        "earthquake",
+        "gps",
+        "measurement station",
+        "seismology",
+        "traffic counter",
+        "water level",
+        "weather"
+    ],
+    "tags": {
+        "man_made": "monitoring_station"
+    },
+    "name": "Monitoring Station"
+}

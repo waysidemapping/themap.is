@@ -1,0 +1,17 @@
+{
+    "icon": "arrow_right-rect_right",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "indoor": "door"
+    },
+    "terms": [
+        "doorframe",
+        "doorway",
+        "portal",
+        "room access",
+        "threshold"
+    ],
+    "name": "Indoor Door"
+}

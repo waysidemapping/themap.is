@@ -1,0 +1,16 @@
+{
+    "icon": "windpump",
+    "geometry": [
+        "point"
+    ],
+    "terms": [
+        "aerorotor",
+        "water pump",
+        "wind pump",
+        "windmill"
+    ],
+    "tags": {
+        "man_made": "windpump"
+    },
+    "name": "Windpump"
+}

@@ -1,0 +1,15 @@
+{
+    "icon": "car-parking_line",
+    "tags": {
+        "amenity": "parking"
+    },
+    "terms": [
+        "automobile parking",
+        "car lot",
+        "car parking",
+        "rv parking",
+        "truck parking",
+        "vehicle parking"
+    ],
+    "name": "Parking Lot"
+}

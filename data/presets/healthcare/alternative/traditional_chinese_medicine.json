@@ -1,0 +1,15 @@
+{
+    "terms": [
+        "die da",
+        "dit da",
+        "reiki",
+        "shiatsu",
+        "tcm",
+        "tui na"
+    ],
+    "tags": {
+        "healthcare": "alternative",
+        "healthcare:speciality": "traditional_chinese_medicine"
+    },
+    "name": "Traditional Chinese Medicine Practitioner"
+}

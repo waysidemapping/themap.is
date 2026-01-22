@@ -1,0 +1,12 @@
+{
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "public_transport": "*"
+    },
+    "name": "Public Transport Feature"
+}

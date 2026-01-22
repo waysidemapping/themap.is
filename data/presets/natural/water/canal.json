@@ -1,0 +1,14 @@
+{
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "natural": "water",
+        "water": "canal"
+    },
+    "reference": {
+        "key": "water",
+        "value": "canal"
+    },
+    "name": "Canal Area"
+}

@@ -1,0 +1,13 @@
+{
+    "icon": "paper-pencil",
+    "terms": [
+        "academy",
+        "elementary school",
+        "high school",
+        "middle school"
+    ],
+    "tags": {
+        "education": "school"
+    },
+    "name": "School Grounds"
+}

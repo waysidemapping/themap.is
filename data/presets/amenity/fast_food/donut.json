@@ -1,0 +1,27 @@
+{
+    "icon": "donut",
+    "terms": [
+        "breakfast",
+        "brunch",
+        "cafe",
+        "canteen",
+        "coffee",
+        "dine",
+        "diner",
+        "dining",
+        "donut",
+        "doughnut",
+        "eat",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "donut"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "donut"
+    },
+    "name": "Donut Fast Food"
+}

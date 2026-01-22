@@ -1,0 +1,18 @@
+{
+    "icon": "droplet",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "natural": "spring"
+    },
+    "terms": [
+        "aquifer",
+        "hydro",
+        "seep",
+        "water source"
+    ],
+    "name": "Spring"
+}

@@ -1,0 +1,10 @@
+{
+    "icon": "shower",
+    "terms": [
+        "rain closet"
+    ],
+    "tags": {
+        "amenity": "shower"
+    },
+    "name": "Shower"
+}

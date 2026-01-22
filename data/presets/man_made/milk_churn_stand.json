@@ -1,0 +1,16 @@
+{
+    "icon": "milk_churn",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "creamery stand",
+        "milk can stand",
+        "milk stand"
+    ],
+    "tags": {
+        "man_made": "milk_churn_stand"
+    },
+    "name": "Milk Churn Stand"
+}

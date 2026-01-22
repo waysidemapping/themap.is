@@ -1,0 +1,10 @@
+{
+    "icon": "car",
+    "terms": [
+        "car inspection"
+    ],
+    "tags": {
+        "amenity": "vehicle_inspection"
+    },
+    "name": "Vehicle Inspection"
+}

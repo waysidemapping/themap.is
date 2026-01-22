@@ -1,0 +1,13 @@
+{
+    "icon": "dagger",
+    "terms": [
+        "ammo",
+        "gun",
+        "knife",
+        "knives"
+    ],
+    "tags": {
+        "shop": "weapons"
+    },
+    "name": "Weapon Shop"
+}

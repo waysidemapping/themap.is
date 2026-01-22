@@ -1,0 +1,17 @@
+{
+    "icon": "height_restrictor",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "barrier": "height_restrictor"
+    },
+    "terms": [
+        "height barrier",
+        "height restriction barrier",
+        "max height",
+        "maxheight",
+        "maximum height measurer"
+    ],
+    "name": "Height Restrictor"
+}

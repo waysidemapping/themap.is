@@ -1,0 +1,12 @@
+{
+    "icon": "shelter",
+    "terms": [
+        "gazebo",
+        "lean-to",
+        "picnic"
+    ],
+    "tags": {
+        "amenity": "shelter"
+    },
+    "name": "Shelter"
+}

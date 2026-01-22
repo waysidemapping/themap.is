@@ -1,0 +1,18 @@
+{
+    "icon": "barricade",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "highway": "construction"
+    },
+    "terms": [
+        "closed road",
+        "closure",
+        "construction",
+        "road closed",
+        "road work",
+        "roadwork"
+    ],
+    "name": "Road Under Construction"
+}

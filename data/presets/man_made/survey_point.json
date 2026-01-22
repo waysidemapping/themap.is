@@ -1,0 +1,20 @@
+{
+    "icon": "benchmark_disk",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "geodetic mark",
+        "geodetic point",
+        "survey marker",
+        "triangulation pillar",
+        "trig point",
+        "trig station",
+        "trigonometrical station"
+    ],
+    "tags": {
+        "man_made": "survey_point"
+    },
+    "name": "Survey Point"
+}

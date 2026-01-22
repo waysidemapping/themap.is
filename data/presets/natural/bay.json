@@ -1,0 +1,22 @@
+{
+    "icon": "shore",
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "natural": "bay"
+    },
+    "terms": [
+        "bight",
+        "cove",
+        "estuary",
+        "fjord",
+        "gulf",
+        "inlet",
+        "sea",
+        "sound"
+    ],
+    "name": "Bay"
+}

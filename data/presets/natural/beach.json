@@ -1,0 +1,14 @@
+{
+    "icon": "shore",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "natural": "beach"
+    },
+    "terms": [
+        "shore"
+    ],
+    "name": "Beach"
+}

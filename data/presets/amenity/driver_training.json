@@ -1,0 +1,11 @@
+{
+    "icon": "car",
+    "tags": {
+        "amenity": "driver_training"
+    },
+    "name": "Driver Training Grounds",
+    "terms": [
+        "Driving Safety Center",
+        "driving school"
+    ]
+}

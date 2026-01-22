@@ -1,0 +1,25 @@
+{
+    "icon": "security_camera",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "alpr",
+        "anpr",
+        "camera",
+        "car plate recognition",
+        "cctv",
+        "guard",
+        "license plate recognition",
+        "monitoring",
+        "number plate recognition",
+        "security",
+        "video",
+        "webcam"
+    ],
+    "tags": {
+        "man_made": "surveillance"
+    },
+    "name": "Surveillance"
+}

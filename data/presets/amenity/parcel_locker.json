@@ -1,0 +1,22 @@
+{
+    "icon": "lockers_terminal",
+    "terms": [
+        "automated postal box",
+        "dropoff",
+        "locker",
+        "mail",
+        "package",
+        "package locker",
+        "packstation",
+        "parcel",
+        "pickup"
+    ],
+    "tags": {
+        "amenity": "parcel_locker"
+    },
+    "reference": {
+        "key": "amenity",
+        "value": "parcel_locker"
+    },
+    "name": "Parcel Locker"
+}

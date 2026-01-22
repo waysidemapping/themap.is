@@ -1,0 +1,13 @@
+{
+    "icon": "car-users",
+    "tags": {
+        "amenity": "car_pooling"
+    },
+    "terms": [
+        "car sharing",
+        "carpooling",
+        "lift sharing",
+        "ride sharing"
+    ],
+    "name": "Car Pooling Station"
+}

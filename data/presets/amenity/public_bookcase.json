@@ -1,0 +1,17 @@
+{
+    "icon": "book_open",
+    "terms": [
+        "book exchange shelf",
+        "book sharing",
+        "book swap",
+        "bookcrossing",
+        "library",
+        "little free library",
+        "share a book",
+        "sharing books"
+    ],
+    "tags": {
+        "amenity": "public_bookcase"
+    },
+    "name": "Public Bookcase"
+}

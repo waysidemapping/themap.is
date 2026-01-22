@@ -1,0 +1,13 @@
+{
+    "terms": [
+        "booth",
+        "camera",
+        "kiosk",
+        "photo",
+        "photobooth"
+    ],
+    "tags": {
+        "amenity": "photo_booth"
+    },
+    "name": "Photo Booth"
+}

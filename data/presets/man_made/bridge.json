@@ -1,0 +1,15 @@
+{
+    "icon": "bridge",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "man_made": "bridge"
+    },
+    "name": "Bridge Area",
+    "terms": [
+        "Bridge",
+        "bridge outline",
+        "viaduct"
+    ]
+}

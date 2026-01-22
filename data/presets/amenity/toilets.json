@@ -1,0 +1,21 @@
+{
+    "icon": "female-male",
+    "terms": [
+        "Toilets",
+        "Bathroom",
+        "Lavatory",
+        "head",
+        "latrine",
+        "outhouse",
+        "privy",
+        "public restroom",
+        "public toilet",
+        "w.c.",
+        "water closet",
+        "wc"
+    ],
+    "tags": {
+        "amenity": "toilets"
+    },
+    "name": "Restroom"
+}

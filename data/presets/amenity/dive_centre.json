@@ -1,0 +1,11 @@
+{
+    "icon": "scuba_diver",
+    "terms": [
+        "diving",
+        "scuba"
+    ],
+    "tags": {
+        "amenity": "dive_centre"
+    },
+    "name": "Dive Center"
+}

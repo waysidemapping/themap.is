@@ -1,0 +1,21 @@
+{
+    "icon": "gasoline_pump",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "biodiesel",
+        "cng",
+        "diesel",
+        "fuel",
+        "gasoline",
+        "lng",
+        "petrol",
+        "propane"
+    ],
+    "tags": {
+        "man_made": "fuel_pump"
+    },
+    "name": "Gas Pump"
+}

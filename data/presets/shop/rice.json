@@ -1,0 +1,10 @@
+{
+    "tags": {
+        "shop": "rice"
+    },
+    "reference": {
+        "key": "shop",
+        "value": "rice"
+    },
+    "name": "Rice Store"
+}

@@ -1,0 +1,15 @@
+{
+    "icon": "vending-ticket",
+    "tags": {
+        "amenity": "ticket_validator"
+    },
+    "terms": [
+        "Ticket Puncher",
+        "Punching Machine",
+        "Ticket Marker",
+        "puncher",
+        "ticket",
+        "validator"
+    ],
+    "name": "Ticket Validator"
+}

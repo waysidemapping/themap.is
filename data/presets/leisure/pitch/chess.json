@@ -1,0 +1,20 @@
+{
+    "tags": {
+        "leisure": "pitch",
+        "sport": "chess"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "chess"
+    },
+    "terms": [
+        "checkerboard",
+        "checkers",
+        "chequerboard",
+        "chessboard",
+        "garden chess",
+        "large chess",
+        "oversize chess"
+    ],
+    "name": "Giant Chess Board"
+}

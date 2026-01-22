@@ -1,0 +1,16 @@
+{
+    "icon": "droplet-plus",
+    "terms": [
+        "apheresis",
+        "blood bank",
+        "blood donation",
+        "blood transfusion",
+        "plasmapheresis",
+        "plateletpheresis",
+        "stem cell donation"
+    ],
+    "tags": {
+        "healthcare": "blood_donation"
+    },
+    "name": "Blood Donor Center"
+}

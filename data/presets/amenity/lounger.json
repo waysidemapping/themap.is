@@ -1,0 +1,12 @@
+{
+    "icon": "lounger",
+    "tags": {
+        "amenity": "lounger"
+    },
+    "terms": [
+        "bench",
+        "chair",
+        "seat"
+    ],
+    "name": "Lounger"
+}

@@ -1,0 +1,11 @@
+{
+    "tags": {
+        "leisure": "pitch",
+        "sport": "paintball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "paintball"
+    },
+    "name": "Paintball Field"
+}

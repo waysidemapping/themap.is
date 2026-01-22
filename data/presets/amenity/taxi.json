@@ -1,0 +1,9 @@
+{
+    "terms": [
+        "cab"
+    ],
+    "tags": {
+        "amenity": "taxi"
+    },
+    "name": "Taxi Stand"
+}

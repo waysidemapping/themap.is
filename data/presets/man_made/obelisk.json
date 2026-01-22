@@ -1,0 +1,12 @@
+{
+    "icon": "obelisk",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "man_made": "obelisk"
+    },
+    "name": "Obelisk"
+}

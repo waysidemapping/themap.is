@@ -1,0 +1,19 @@
+{
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "highway": "trailhead"
+    },
+    "terms": [
+        "hiking",
+        "mile zero",
+        "mountain biking",
+        "mountaineering",
+        "staging area",
+        "trail endpoint",
+        "trail start",
+        "trekking"
+    ],
+    "name": "Trailhead"
+}

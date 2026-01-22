@@ -1,0 +1,36 @@
+{
+    "icon": "horse_rider",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "equestrian"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "equestrian"
+    },
+    "terms": [
+        "Horseback Riding Ring",
+        "arena",
+        "dressage",
+        "dressage arena",
+        "dressage ring",
+        "equestrian arena",
+        "horse",
+        "horse riding",
+        "horse riding ring",
+        "horseback",
+        "horseback riding",
+        "horseback riding arena",
+        "jumping arena",
+        "jumping ring",
+        "longeing",
+        "pen",
+        "polo",
+        "riding",
+        "riding ring",
+        "ring",
+        "rodeo",
+        "round pen"
+    ],
+    "name": "Horseback Riding / Rodeo Arena"
+}

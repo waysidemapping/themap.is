@@ -1,0 +1,11 @@
+{
+    "icon": "burger-drink_cup",
+    "tags": {
+        "amenity": "fast_food"
+    },
+    "terms": [
+        "restaurant",
+        "takeaway"
+    ],
+    "name": "Fast Food"
+}

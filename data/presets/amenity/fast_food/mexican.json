@@ -1,0 +1,31 @@
+{
+    "terms": [
+        "breakfast",
+        "burritos",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "enchiladas",
+        "fajitas",
+        "grill",
+        "lunch",
+        "nachos",
+        "quesadillas",
+        "salsa",
+        "table",
+        "tacos",
+        "tamales",
+        "tortillas"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "mexican"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "mexican"
+    },
+    "name": "Mexican Fast Food"
+}

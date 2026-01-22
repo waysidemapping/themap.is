@@ -1,0 +1,13 @@
+{
+    "terms": [
+        "Produce Store",
+        "Produce Shop",
+        "fruit",
+        "produce",
+        "vegetable"
+    ],
+    "tags": {
+        "shop": "greengrocer"
+    },
+    "name": "Greengrocer"
+}

@@ -1,0 +1,19 @@
+{
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "highway": "footway",
+        "footway": "crossing"
+    },
+    "terms": [
+        "crosswalk",
+        "foot path crossing",
+        "pedestrian crossing"
+    ],
+    "reference": {
+        "key": "footway",
+        "value": "crossing"
+    },
+    "name": "Pedestrian Crossing"
+}

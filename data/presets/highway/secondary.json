@@ -1,0 +1,13 @@
+{
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "highway": "secondary"
+    },
+    "terms": [
+        "road",
+        "street"
+    ],
+    "name": "Secondary Road"
+}

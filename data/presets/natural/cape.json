@@ -1,0 +1,19 @@
+{
+    "icon": "cape_landform",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "natural": "cape"
+    },
+    "terms": [
+        "bay",
+        "coastline",
+        "erosion",
+        "headland",
+        "peninsula",
+        "promontory"
+    ],
+    "name": "Cape"
+}

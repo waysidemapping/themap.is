@@ -1,0 +1,26 @@
+{
+    "icon": "scissors-comb",
+    "terms": [
+        "Barber's",
+        "Barber Shop",
+        "Barbershop",
+        "beard",
+        "groom",
+        "grooming",
+        "hair cut",
+        "hairdresser",
+        "moustache",
+        "razor",
+        "shave",
+        "shaving"
+    ],
+    "tags": {
+        "shop": "hairdresser",
+        "hairdresser": "barber"
+    },
+    "name": "Barber",
+    "reference": {
+        "key": "hairdresser",
+        "value": "barber"
+    }
+}

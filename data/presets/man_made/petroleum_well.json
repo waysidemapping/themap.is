@@ -1,0 +1,21 @@
+{
+    "icon": "pumpjack",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "drilling rig",
+        "oil derrick",
+        "oil drill",
+        "oil horse",
+        "oil pump",
+        "oil rig",
+        "petroleum well",
+        "pumpjack"
+    ],
+    "tags": {
+        "man_made": "petroleum_well"
+    },
+    "name": "Oil Well"
+}

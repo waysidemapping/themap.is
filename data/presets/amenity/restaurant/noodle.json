@@ -1,0 +1,31 @@
+{
+    "icon": "noodle_bowl-chopsticks",
+    "terms": [
+        "bar",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "cellophane noodles",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "rice noodles",
+        "soba noodles",
+        "soup",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "noodle"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "noodle"
+    },
+    "name": "Noodle Restaurant"
+}

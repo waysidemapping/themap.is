@@ -1,0 +1,14 @@
+{
+    "icon": "fork-knife",
+    "terms": [
+        "canteen",
+        "dining hall",
+        "lunchroom",
+        "refectory"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "fast_food": "cafeteria"
+    },
+    "name": "Cafeteria"
+}

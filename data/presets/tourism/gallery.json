@@ -1,0 +1,18 @@
+{
+    "icon": "wall_art",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "art",
+        "exhibition",
+        "painting",
+        "photograph",
+        "sculpture"
+    ],
+    "tags": {
+        "tourism": "gallery"
+    },
+    "name": "Art Gallery"
+}

@@ -1,0 +1,13 @@
+{
+    "icon": "microphone",
+    "terms": [
+        "karaoke club",
+        "karaoke room",
+        "karaoke television",
+        "ktv"
+    ],
+    "tags": {
+        "amenity": "karaoke_box"
+    },
+    "name": "Karaoke Box"
+}

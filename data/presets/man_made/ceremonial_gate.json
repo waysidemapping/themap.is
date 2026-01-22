@@ -1,0 +1,18 @@
+{
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
+    "terms": [
+        "arch",
+        "gate",
+        "paifang",
+        "torii"
+    ],
+    "tags": {
+        "man_made": "ceremonial_gate"
+    },
+    "name": "Ceremonial Gate"
+}

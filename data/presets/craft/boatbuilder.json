@@ -1,0 +1,8 @@
+{
+    "icon": "motorboat-wrench",
+    "tags": {
+        "craft": "boatbuilder"
+    },
+    "matchScore": 0.6,
+    "name": "Boat Builder"
+}

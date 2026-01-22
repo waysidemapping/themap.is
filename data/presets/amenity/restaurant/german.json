@@ -1,0 +1,27 @@
+{
+    "icon": "fork-knife",
+    "terms": [
+        "bar",
+        "breakfast",
+        "cafe",
+        "café",
+        "canteen",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "german"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "german"
+    },
+    "name": "German Restaurant"
+}

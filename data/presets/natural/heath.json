@@ -1,0 +1,15 @@
+{
+    "icon": "shrub_low",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "natural": "heath"
+    },
+    "terms": [
+        "moor",
+        "moorland",
+        "shrubland"
+    ],
+    "name": "Heath"
+}

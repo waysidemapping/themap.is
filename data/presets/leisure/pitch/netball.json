@@ -1,0 +1,15 @@
+{
+    "icon": "volleyball",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "netball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "netball"
+    },
+    "terms": [
+        "basketball"
+    ],
+    "name": "Netball Court"
+}

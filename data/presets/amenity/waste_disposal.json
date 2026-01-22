@@ -1,0 +1,13 @@
+{
+    "tags": {
+        "amenity": "waste_disposal"
+    },
+    "terms": [
+        "garbage",
+        "litter",
+        "rubbish",
+        "trash",
+        "waste disposal"
+    ],
+    "name": "Garbage Dumpster"
+}

@@ -1,0 +1,22 @@
+{
+    "icon": "droplet",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "natural": "water",
+        "water": "pond"
+    },
+    "reference": {
+        "key": "water",
+        "value": "pond"
+    },
+    "terms": [
+        "lakelet",
+        "mere",
+        "millpond",
+        "pool",
+        "tarn"
+    ],
+    "name": "Pond"
+}

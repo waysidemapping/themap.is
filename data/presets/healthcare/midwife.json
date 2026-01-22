@@ -1,0 +1,14 @@
+{
+    "terms": [
+        "baby",
+        "childbirth",
+        "delivery",
+        "labor",
+        "labour",
+        "pregnancy"
+    ],
+    "tags": {
+        "healthcare": "midwife"
+    },
+    "name": "Midwife"
+}

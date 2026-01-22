@@ -1,0 +1,20 @@
+{
+    "icon": "droplet",
+    "geometry": [
+        "point"
+    ],
+    "tags": {
+        "natural": "geyser"
+    },
+    "terms": [
+        "erupting spring",
+        "geiser",
+        "gieser",
+        "guyser",
+        "hot water",
+        "hydrogeology",
+        "hydrothermal explosion",
+        "steam"
+    ],
+    "name": "Geyser"
+}

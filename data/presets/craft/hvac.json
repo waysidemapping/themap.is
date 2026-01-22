@@ -1,0 +1,11 @@
+{
+    "terms": [
+        "air conditioning",
+        "heating",
+        "ventilation"
+    ],
+    "tags": {
+        "craft": "hvac"
+    },
+    "name": "HVAC Workplace"
+}

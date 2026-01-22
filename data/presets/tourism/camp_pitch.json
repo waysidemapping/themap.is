@@ -1,0 +1,16 @@
+{
+    "icon": "campsite",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "terms": [
+        "rv",
+        "tent"
+    ],
+    "tags": {
+        "tourism": "camp_pitch"
+    },
+    "name": "Camp Pitch"
+}

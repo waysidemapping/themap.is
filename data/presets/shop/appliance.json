@@ -1,0 +1,23 @@
+{
+    "icon": "washing_machine",
+    "terms": [
+        "air conditioner",
+        "appliance",
+        "dishwasher",
+        "dryer",
+        "freezer",
+        "fridge",
+        "grill",
+        "kitchen",
+        "oven",
+        "refrigerator",
+        "stove",
+        "washer",
+        "washing machine",
+        "white goods"
+    ],
+    "tags": {
+        "shop": "appliance"
+    },
+    "name": "Appliance Store"
+}

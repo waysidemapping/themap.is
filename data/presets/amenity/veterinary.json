@@ -1,0 +1,13 @@
+{
+    "icon": "pawprint-plus",
+    "terms": [
+        "animal hospital",
+        "pet clinic",
+        "pet doctor",
+        "veterinarian"
+    ],
+    "tags": {
+        "amenity": "veterinary"
+    },
+    "name": "Veterinary"
+}

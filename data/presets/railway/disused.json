@@ -1,0 +1,11 @@
+{
+    "icon": "railway_track",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "railway": "disused"
+    },
+    "matchScore": 0.95,
+    "name": "Disused Railway"
+}

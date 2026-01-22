@@ -1,0 +1,15 @@
+{
+    "icon": "soccer_player",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "soccer"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "soccer"
+    },
+    "terms": [
+        "football"
+    ],
+    "name": "Soccer Field"
+}

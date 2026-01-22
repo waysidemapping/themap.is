@@ -1,0 +1,16 @@
+{
+    "tags": {
+        "shop": "pasta"
+    },
+    "terms": [
+        "Pasta Shop",
+        "fresh pasta",
+        "ravioli",
+        "spaghetti"
+    ],
+    "reference": {
+        "key": "shop",
+        "value": "pasta"
+    },
+    "name": "Pasta Store"
+}

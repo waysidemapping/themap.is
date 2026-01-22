@@ -1,0 +1,16 @@
+{
+    "icon": "horse_rider",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "highway": "bridleway"
+    },
+    "terms": [
+        "bridleway",
+        "equestrian",
+        "horse",
+        "trail"
+    ],
+    "name": "Bridle Path"
+}

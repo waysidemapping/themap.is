@@ -1,0 +1,12 @@
+{
+    "icon": "airport_terminal-plane_takeoff",
+    "geometry": [
+        "vertex",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "aeroway": "*"
+    },
+    "name": "Aeroway Feature"
+}

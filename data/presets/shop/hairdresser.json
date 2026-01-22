@@ -1,0 +1,12 @@
+{
+    "icon": "scissors-comb",
+    "terms": [
+        "Hair Salon",
+        "Hair Stylist",
+        "haircut"
+    ],
+    "tags": {
+        "shop": "hairdresser"
+    },
+    "name": "Hairdresser"
+}

@@ -1,0 +1,15 @@
+{
+    "icon": "train",
+    "tags": {
+        "landuse": "railway"
+    },
+    "terms": [
+        "depot",
+        "rail",
+        "railway",
+        "track",
+        "train",
+        "train depot"
+    ],
+    "name": "Railway Corridor"
+}

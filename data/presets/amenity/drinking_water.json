@@ -1,0 +1,14 @@
+{
+    "icon": "water_glass-faucet",
+    "tags": {
+        "amenity": "drinking_water"
+    },
+    "terms": [
+        "bubbler",
+        "drinking fountain",
+        "potable water source",
+        "water fountain",
+        "water tap"
+    ],
+    "name": "Drinking Water"
+}

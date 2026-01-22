@@ -1,0 +1,22 @@
+{
+    "icon": "banknote",
+    "terms": [
+        "Credit Union",
+        "check",
+        "deposit",
+        "fund",
+        "investment",
+        "repository",
+        "reserve",
+        "safe",
+        "savings",
+        "stock",
+        "treasury",
+        "trust",
+        "vault"
+    ],
+    "tags": {
+        "amenity": "bank"
+    },
+    "name": "Bank"
+}

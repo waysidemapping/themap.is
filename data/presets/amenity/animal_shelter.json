@@ -1,0 +1,23 @@
+{
+    "icon": "cat",
+    "terms": [
+        "adoption",
+        "aspca",
+        "cat",
+        "dog",
+        "horse",
+        "kitten",
+        "pet care",
+        "pet rescue",
+        "pound",
+        "puppy",
+        "raptor",
+        "reptile",
+        "rescue",
+        "spca"
+    ],
+    "tags": {
+        "amenity": "animal_shelter"
+    },
+    "name": "Animal Shelter"
+}

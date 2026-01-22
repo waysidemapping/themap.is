@@ -1,0 +1,11 @@
+{
+    "icon": "cemetery",
+    "terms": [
+        "funeral ceremony",
+        "funeral hall"
+    ],
+    "tags": {
+        "amenity": "funeral_hall"
+    },
+    "name": "Funeral Service Hall"
+}

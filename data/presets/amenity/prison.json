@@ -1,0 +1,12 @@
+{
+    "icon": "door_jail",
+    "terms": [
+        "cell",
+        "correction",
+        "jail"
+    ],
+    "tags": {
+        "amenity": "prison"
+    },
+    "name": "Prison Grounds"
+}

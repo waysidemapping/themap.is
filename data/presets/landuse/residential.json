@@ -1,0 +1,11 @@
+{
+    "icon": "building_residential-tree",
+    "tags": {
+        "landuse": "residential"
+    },
+    "terms": [
+        "housing"
+    ],
+    "matchScore": 0.9,
+    "name": "Residential Area"
+}

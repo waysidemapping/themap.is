@@ -1,0 +1,23 @@
+{
+    "icon": "fork-knife",
+    "terms": [
+        "bar",
+        "breakfast",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "georgian"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "georgian"
+    },
+    "name": "Georgian Restaurant"
+}

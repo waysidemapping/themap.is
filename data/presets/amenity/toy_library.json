@@ -1,0 +1,10 @@
+{
+    "terms": [
+        "game",
+        "toy"
+    ],
+    "tags": {
+        "amenity": "toy_library"
+    },
+    "name": "Toy Library"
+}

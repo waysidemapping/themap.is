@@ -1,0 +1,14 @@
+{
+    "icon": "water_pump_powered_large",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "water treatment plant"
+    ],
+    "tags": {
+        "man_made": "water_works"
+    },
+    "name": "Water Works"
+}

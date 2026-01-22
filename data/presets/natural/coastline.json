@@ -1,0 +1,13 @@
+{
+    "icon": "shore",
+    "geometry": [
+        "line"
+    ],
+    "tags": {
+        "natural": "coastline"
+    },
+    "terms": [
+        "shore"
+    ],
+    "name": "Coastline"
+}

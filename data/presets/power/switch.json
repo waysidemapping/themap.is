@@ -1,0 +1,11 @@
+{
+    "icon": "power_switch-bolt",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "power": "switch"
+    },
+    "name": "Power Switch"
+}

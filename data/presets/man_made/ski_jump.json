@@ -1,0 +1,22 @@
+{
+    "icon": "ski_jumper",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "Ski Jumping Hill Structure",
+        "Ski Jumping Hill In-Run Tower",
+        "in-run",
+        "inrun",
+        "jump",
+        "ski jump",
+        "ski jump in-run tower",
+        "ski jump structure",
+        "ski jumping hill tower"
+    ],
+    "tags": {
+        "man_made": "ski_jump"
+    },
+    "name": "Ski Jumping Tower"
+}

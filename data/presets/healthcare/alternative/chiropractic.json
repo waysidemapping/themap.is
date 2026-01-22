@@ -1,0 +1,12 @@
+{
+    "terms": [
+        "back",
+        "pain",
+        "spine"
+    ],
+    "tags": {
+        "healthcare": "alternative",
+        "healthcare:speciality": "chiropractic"
+    },
+    "name": "Chiropractor"
+}

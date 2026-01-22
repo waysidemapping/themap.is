@@ -1,0 +1,11 @@
+{
+    "icon": "water_tower",
+    "geometry": [
+        "area",
+        "point"
+    ],
+    "tags": {
+        "man_made": "water_tower"
+    },
+    "name": "Water Tower"
+}

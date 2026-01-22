@@ -1,0 +1,25 @@
+{
+    "icon": "campsite",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "tourism": "camp_site"
+    },
+    "terms": [
+        "camp ground",
+        "camp pitch",
+        "camp site",
+        "campers",
+        "campground",
+        "campsite",
+        "caravans",
+        "mobile homes",
+        "recreational vehicles",
+        "rv",
+        "tenting"
+    ],
+    "name": "Campground"
+}

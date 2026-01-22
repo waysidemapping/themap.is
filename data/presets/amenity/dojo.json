@@ -1,0 +1,11 @@
+{
+    "icon": "runner",
+    "terms": [
+        "dojang",
+        "martial arts"
+    ],
+    "tags": {
+        "amenity": "dojo"
+    },
+    "name": "Dojo / Martial Arts Academy"
+}

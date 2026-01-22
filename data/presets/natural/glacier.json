@@ -1,0 +1,14 @@
+{
+    "icon": "snowflake",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "natural": "glacier"
+    },
+    "terms": [
+        "ice",
+        "snow"
+    ],
+    "name": "Glacier"
+}

@@ -1,0 +1,14 @@
+{
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "natural": "tree"
+    },
+    "terms": [
+        "bole",
+        "trunk"
+    ],
+    "name": "Tree"
+}

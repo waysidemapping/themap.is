@@ -1,0 +1,19 @@
+{
+    "icon": "police_officer",
+    "terms": [
+        "badge",
+        "constable",
+        "constabulary",
+        "cop",
+        "detective",
+        "enforcement",
+        "fed",
+        "law",
+        "officer",
+        "patrol"
+    ],
+    "tags": {
+        "amenity": "police"
+    },
+    "name": "Police"
+}

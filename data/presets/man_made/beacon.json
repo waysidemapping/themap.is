@@ -1,0 +1,13 @@
+{
+    "icon": "communications_tower",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "man_made": "beacon"
+    },
+    "name": "Beacon",
+    "matchScore": 0.5
+}

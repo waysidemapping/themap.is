@@ -1,0 +1,15 @@
+{
+    "icon": "runner",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "handball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "handball"
+    },
+    "terms": [
+        "handball"
+    ],
+    "name": "Team Handball Court"
+}

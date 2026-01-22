@@ -1,0 +1,11 @@
+{
+    "icon": "gate",
+    "geometry": [
+        "vertex",
+        "line"
+    ],
+    "tags": {
+        "barrier": "gate"
+    },
+    "name": "Gate"
+}

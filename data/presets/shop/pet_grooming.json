@@ -1,0 +1,13 @@
+{
+    "icon": "dog-comb",
+    "terms": [
+        "cat",
+        "cat grooming",
+        "dog",
+        "dog grooming"
+    ],
+    "tags": {
+        "shop": "pet_grooming"
+    },
+    "name": "Pet Groomer"
+}

@@ -1,0 +1,18 @@
+{
+    "icon": "info",
+    "terms": [
+        "cairn",
+        "painted blaze",
+        "route flag",
+        "route marker",
+        "stone pile",
+        "trail blaze",
+        "trail marker",
+        "trail post",
+        "way marker"
+    ],
+    "tags": {
+        "information": "route_marker"
+    },
+    "name": "Route Marker"
+}

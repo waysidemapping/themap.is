@@ -1,0 +1,16 @@
+{
+    "icon": "transit",
+    "tags": {
+        "public_transport": "station"
+    },
+    "terms": [
+        "public transit",
+        "public transportation",
+        "station",
+        "terminal",
+        "transit",
+        "transportation"
+    ],
+    "name": "Transit Station",
+    "matchScore": 0.2
+}

@@ -1,0 +1,12 @@
+{
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "amenity": "*"
+    },
+    "name": "Amenity"
+}

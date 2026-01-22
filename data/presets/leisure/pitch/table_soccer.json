@@ -1,0 +1,17 @@
+{
+    "tags": {
+        "leisure": "pitch",
+        "sport": "table_soccer"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "table_soccer"
+    },
+    "terms": [
+        "kicker",
+        "table football",
+        "table soccer",
+        "tecball"
+    ],
+    "name": "Foosball Table"
+}

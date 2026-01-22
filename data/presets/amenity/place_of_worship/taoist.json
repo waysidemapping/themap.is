@@ -1,0 +1,17 @@
+{
+    "icon": "taoism",
+    "terms": [
+        "daoist",
+        "monastery",
+        "temple"
+    ],
+    "tags": {
+        "amenity": "place_of_worship",
+        "religion": "taoist"
+    },
+    "reference": {
+        "key": "amenity",
+        "value": "place_of_worship"
+    },
+    "name": "Taoist Temple"
+}

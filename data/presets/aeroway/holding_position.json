@@ -1,0 +1,10 @@
+{
+    "icon": "plane_taxiing",
+    "geometry": [
+        "vertex"
+    ],
+    "tags": {
+        "aeroway": "holding_position"
+    },
+    "name": "Aircraft Holding Position"
+}

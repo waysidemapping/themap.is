@@ -1,0 +1,19 @@
+{
+    "icon": "motorcycle-key",
+    "terms": [
+        "chopper",
+        "cruiser",
+        "dirt bike",
+        "hog",
+        "minibike",
+        "moped",
+        "motor scooter",
+        "motorbike",
+        "sidecar",
+        "sportbike"
+    ],
+    "tags": {
+        "amenity": "motorcycle_rental"
+    },
+    "name": "Motorcycle Rental"
+}

@@ -1,0 +1,20 @@
+{
+    "icon": "tree_conifer",
+    "geometry": [
+        "area"
+    ],
+    "tags": {
+        "natural": "wood"
+    },
+    "terms": [
+        "boreal",
+        "forest",
+        "forrest",
+        "taiga",
+        "tree",
+        "trees",
+        "woodlands",
+        "woods"
+    ],
+    "name": "Natural Wood"
+}

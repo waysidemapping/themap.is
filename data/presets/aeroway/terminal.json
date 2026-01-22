@@ -1,0 +1,15 @@
+{
+    "icon": "airport_terminal-plane_takeoff",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "aeroway": "terminal"
+    },
+    "terms": [
+        "aerodrome",
+        "airport"
+    ],
+    "name": "Airport Terminal"
+}

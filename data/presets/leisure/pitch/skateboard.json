@@ -1,0 +1,19 @@
+{
+    "icon": "skateboard",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "skateboard"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "skateboard"
+    },
+    "terms": [
+        "bmx",
+        "scooter",
+        "skateboarding",
+        "skatepark",
+        "vert"
+    ],
+    "name": "Skate Park"
+}

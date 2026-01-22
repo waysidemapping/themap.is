@@ -1,0 +1,26 @@
+{
+    "icon": "fork-sausage",
+    "terms": [
+        "Barbeque Restaurant",
+        "bar",
+        "bbq",
+        "canteen",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "grill",
+        "lunch",
+        "table"
+    ],
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "barbecue"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "barbecue"
+    },
+    "name": "Barbecue Restaurant"
+}

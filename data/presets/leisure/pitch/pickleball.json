@@ -1,0 +1,16 @@
+{
+    "icon": "tennis_player",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "pickleball"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "pickleball"
+    },
+    "terms": [
+        "paddleball",
+        "tennis"
+    ],
+    "name": "Pickleball Court"
+}

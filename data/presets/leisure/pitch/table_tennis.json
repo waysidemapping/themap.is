@@ -1,0 +1,15 @@
+{
+    "tags": {
+        "leisure": "pitch",
+        "sport": "table_tennis"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "table_tennis"
+    },
+    "terms": [
+        "ping pong",
+        "table tennis"
+    ],
+    "name": "Ping Pong Table"
+}

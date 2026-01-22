@@ -1,0 +1,11 @@
+{
+    "terms": [
+        "cheese",
+        "egg",
+        "milk"
+    ],
+    "tags": {
+        "shop": "dairy"
+    },
+    "name": "Dairy Store"
+}

@@ -1,0 +1,18 @@
+{
+    "icon": "binoculars",
+    "terms": [
+        "observation viewer",
+        "optical ranger",
+        "sight",
+        "spotting scope",
+        "spyglass",
+        "telescope",
+        "tower viewer",
+        "viewfinder",
+        "viewing stand"
+    ],
+    "tags": {
+        "amenity": "binoculars"
+    },
+    "name": "Mounted Binoculars"
+}

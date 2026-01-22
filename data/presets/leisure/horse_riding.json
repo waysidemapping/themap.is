@@ -1,0 +1,20 @@
+{
+    "icon": "horse_rider",
+    "terms": [
+        "equestrian center",
+        "equestrian facility",
+        "horse farm",
+        "horse park",
+        "horse ranch",
+        "horse riding",
+        "horse riding center",
+        "horse riding facility",
+        "riding facility",
+        "riding stables",
+        "stables"
+    ],
+    "tags": {
+        "leisure": "horse_riding"
+    },
+    "name": "Horseback Riding Center"
+}

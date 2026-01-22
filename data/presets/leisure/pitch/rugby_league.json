@@ -1,0 +1,12 @@
+{
+    "icon": "american_football",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "rugby_league"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "rugby_league"
+    },
+    "name": "Rugby League Field"
+}

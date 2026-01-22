@@ -1,0 +1,22 @@
+{
+    "icon": "trench",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "natural": "sinkhole"
+    },
+    "terms": [
+        "cenote",
+        "collapse sink",
+        "doline",
+        "shakehole",
+        "sink",
+        "snake hole",
+        "swallet",
+        "swallow hole"
+    ],
+    "name": "Sinkhole"
+}

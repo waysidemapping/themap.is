@@ -1,0 +1,20 @@
+{
+    "terms": [
+        "ballpark",
+        "frank",
+        "frankfurter",
+        "hotdog stand",
+        "sandwich",
+        "sausage",
+        "wiener"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "hot_dog"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "hot_dog"
+    },
+    "name": "Hot Dog Fast Food"
+}

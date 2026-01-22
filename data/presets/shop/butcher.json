@@ -1,0 +1,17 @@
+{
+    "icon": "cleaver",
+    "terms": [
+        "Butcher Shop",
+        "Pork Store",
+        "Butchery",
+        "beef",
+        "chicken",
+        "lamb",
+        "meat",
+        "pork"
+    ],
+    "tags": {
+        "shop": "butcher"
+    },
+    "name": "Butcher"
+}

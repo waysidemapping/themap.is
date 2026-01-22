@@ -1,0 +1,24 @@
+{
+    "icon": "pizza_slice",
+    "terms": [
+        "deep dish",
+        "dine",
+        "dining",
+        "dinner",
+        "drive-in",
+        "eat",
+        "lunch",
+        "slice",
+        "table",
+        "thin crust"
+    ],
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "pizza"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "pizza"
+    },
+    "name": "Pizza Fast Food"
+}

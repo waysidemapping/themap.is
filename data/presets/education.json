@@ -1,0 +1,18 @@
+{
+    "icon": "paper-pencil",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "education": "*"
+    },
+    "terms": [
+        "classes",
+        "school",
+        "teaching",
+        "training"
+    ],
+    "name": "Education Facility",
+    "matchScore": 0.7
+}

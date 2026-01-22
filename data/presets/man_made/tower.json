@@ -1,0 +1,12 @@
+{
+    "icon": "tower",
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "tags": {
+        "man_made": "tower"
+    },
+    "name": "Tower"
+}

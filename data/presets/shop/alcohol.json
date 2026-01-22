@@ -1,0 +1,12 @@
+{
+    "terms": [
+        "alcohol",
+        "beer",
+        "booze",
+        "wine"
+    ],
+    "tags": {
+        "shop": "alcohol"
+    },
+    "name": "Liquor Store"
+}

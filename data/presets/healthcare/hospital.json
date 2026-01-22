@@ -1,0 +1,20 @@
+{
+    "icon": "plus",
+    "terms": [
+        "clinic",
+        "doctor",
+        "emergency room",
+        "health",
+        "infirmary",
+        "institution",
+        "sanatorium",
+        "sanitarium",
+        "sick",
+        "surgery",
+        "ward"
+    ],
+    "tags": {
+        "healthcare": "hospital"
+    },
+    "name": "Hospital Grounds"
+}

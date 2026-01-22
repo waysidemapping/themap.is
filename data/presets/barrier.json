@@ -1,0 +1,14 @@
+{
+    "icon": "no_entry",
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
+    "tags": {
+        "barrier": "*"
+    },
+    "name": "Barrier",
+    "matchScore": 0.4
+}
