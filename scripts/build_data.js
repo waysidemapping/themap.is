@@ -14,28 +14,12 @@ const allowedKeys = {
 };
 
 function processPreset(id, json) {
-  if (id.includes("/")) {
-    let parentId = id.substring(0, id.lastIndexOf("/"));
-    let parent = presets[parentId];
-    if (!parent) {
-      console.error(`Missing parent preset for ${id}`);
-    } else {
-      for (let key in parent.tags) {
-        if (!json.tags[key] || (parent.tags[key] !== '*' && parent.tags[key] !== json.tags[key])) {
-          console.error(`Unexpected tags for ${id} with parent ${parentId}`);
-        }
-      }
-    }    
-    if (!json.geometry) {
-      json.geometry = parent.geometry;
-    }
-  }
-
   for (let key in json){
     if (!allowedKeys[key]) {
       console.log(`Unexpected key ${key} for ${id}`);
     }
   }
+
   for (let key in allowedKeys){
     if (allowedKeys.required && !json[key]) {
       console.log(`Missing required key ${key} for ${id}`);
@@ -49,6 +33,33 @@ function processPreset(id, json) {
   }
 
   delete json.terms;
+
+  if (id.includes("/")) {
+    let parentId = id.substring(0, id.lastIndexOf("/"));
+
+    let parent = presets[parentId];
+    if (!parent) {
+      console.error(`Missing parent preset for ${id}`);
+    } else {
+      for (let key in parent.tags) {
+        if (!json.tags[key] || (parent.tags[key] !== '*' && parent.tags[key] !== json.tags[key])) {
+          console.error(`Unexpected tags for ${id} with parent ${parentId}`);
+        }
+      }
+    }
+
+    let parentIdParts = parentId.split('/');
+    json.parents = parentIdParts.map((_, i) => parentIdParts.slice(0, i + 1).join('/')).toReversed();
+
+    let parentIcon = json.parents.map(id => presets[id].icon).find(icon => icon);
+    if (json.icon && parentIcon && parentIcon === json.icon) {
+      console.log(`Redundant icon ${json.icon} for ${id}`);
+    }
+    
+    if (!json.geometry) {
+      json.geometry = parent.geometry;
+    }
+  }
 
   presets[id] = json;
 }
