@@ -1,4 +1,4 @@
-import { getSpritesheets } from './spritesheetGenerator.js'; 
+import { getSpritesheets } from './spritesheetGenerator.js';
 
 const filters = {
   has_bridge: [
@@ -772,6 +772,26 @@ let diegeticPointLayer = {
 
 export async function generateStyle(baseStyleJsonString) {
 
+  let icons = {};
+
+  function icon(file, opts) {
+    let id = file;
+    if (opts.fill === 'none') delete opts.fill; // sense check
+    if (opts.fill) {
+      id += ' f-' + opts.fill;
+    }
+    if (opts.stroke) {
+      id += ' s-' + opts.stroke;
+    }
+    if (opts.halo) {
+      id += ' h-' + opts.halo;
+    }
+    opts.id = id
+    opts.file = file;
+    icons[id] = opts;
+    return ["image", id];
+  }
+
   const userLangs = navigator.languages ? navigator.languages : navigator.language ? [navigator.language] : [];
   const osmLangSuffixes = [];
   userLangs.forEach(userLang => {
@@ -1220,7 +1240,7 @@ export async function generateStyle(baseStyleJsonString) {
     }
   });
 
-  let sprites = await getSpritesheets();
+  let sprites = await getSpritesheets(icons);
 
   return {
     style: style,
