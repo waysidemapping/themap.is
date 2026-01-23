@@ -2,6 +2,7 @@
 // https://github.com/rapideditor/temaki/blob/49b592fdc0840ff20052affa20677da5ddd0f809/scripts/check.js
 
 import chalk from 'chalk';
+import path from 'path';
 import fs from 'node:fs';
 import svgPathParse from 'svg-path-parse';
 import xmlbuilder2 from 'xmlbuilder2';
@@ -64,6 +65,9 @@ function checkIcons() {
   console.log(START);
   console.time(END);
 
+  const iconIds = {};
+  const iconIdParts = {};
+
   fs.globSync(`./icons/**/*.svg`).forEach(file => {
     const contents = fs.readFileSync(file, 'utf8');
     let xml;
@@ -75,6 +79,11 @@ function checkIcons() {
       console.error('');
       process.exit(1);
     }
+
+    const id = path.parse(file).name;
+    iconIds[id] = true;
+    const parts = id.split('-');
+    if (parts[0] !== id) parts.forEach(part => iconIdParts[part] = true);
 
     // Make xml declaration consistent
     xml.dec({ version: '1.0', encoding: 'UTF-8' });
@@ -212,6 +221,11 @@ function checkIcons() {
     fs.writeFileSync(file, xml.end({ prettyPrint: true }));
 
   });
+
+  Object.keys(iconIdParts)
+    .sort()
+    .filter(part => !iconIds[part])
+    .forEach(part => console.log(`Missing base icon "${part}"`));
 
   console.timeEnd(END);
 }

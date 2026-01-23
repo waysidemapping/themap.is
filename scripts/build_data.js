@@ -29,9 +29,6 @@ function processPreset(id, json) {
     if (!json.geometry) {
       json.geometry = parent.geometry;
     }
-    if (!json.icon) {
-      json.icon = parent.icon;
-    }
   }
 
   for (let key in json){
@@ -50,6 +47,8 @@ function processPreset(id, json) {
       console.log(`Missing icon file "${json.icon}.svg" for ${id}`)
     }
   }
+
+  delete json.terms;
 
   presets[id] = json;
 }
@@ -83,21 +82,4 @@ walkDir(presetsDir, function(filePath) {
   }
 });
 
-const iconIds = {};
-const iconIdParts = {};
-
-const iconsDir = 'icons/';
-walkDir('icons/', function(filePath) {
-  if (filePath.endsWith(".svg")) {
-    const id = filePath.substring(iconsDir.length, filePath.length - 4);
-    iconIds[id] = true;
-    const parts = id.split('-');
-    if (parts[0] !== id) {
-      parts.forEach(part => iconIdParts[part] = true);
-    }
-  }
-});
-Object.keys(iconIdParts)
-  .sort()
-  .filter(part => !iconIds[part])
-  .forEach(part => console.log(`Missing base icon "${part}"`));
+fs.writeFileSync('./dist/presets.json', JSON.stringify(presets))
