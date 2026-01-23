@@ -3,8 +3,7 @@ import { beefsteakProtocolFunction } from "https://cdn.jsdelivr.net/gh/waysidema
 let map;
 
 let baseStyleJsonString;
-
-let cachedStyles = {};
+let activeStyleInfo;
 
 window.addEventListener('load', function() {
   initializeMap();
@@ -37,11 +36,19 @@ async function initializeMap() {
   const beefsteakEndpoint = JSON.parse(baseStyleJsonString).sources.beefsteak.url;
   const beefsteakEndpointPrefix = /(.*\/\/.*\/)/.exec(beefsteakEndpoint)[1];
   maplibregl.addProtocol('beefsteak', beefsteakProtocolFunction);
-  map.setTransformRequest((url, resourceType) => {
-      if (url.startsWith(beefsteakEndpointPrefix) && resourceType === 'Tile') {
-          return { url: 'beefsteak://' + url };
+    map.setTransformRequest((url, resourceType) => {
+    if (url.startsWith(beefsteakEndpointPrefix) && resourceType === 'Tile') {
+        return { url: 'beefsteak://' + url };
+    }
+    if (activeStyleInfo) {
+      if (resourceType === 'SpriteJSON') {
+        return { url: url.includes('@2x') ? activeStyleInfo.spritesheets["2"].jsonUrl : activeStyleInfo.spritesheets["1"].jsonUrl };
       }
-      return undefined;
+      if (resourceType === 'SpriteImage') {
+        return { url: url.includes('@2x') ? activeStyleInfo.spritesheets["2"].pngUrl : activeStyleInfo.spritesheets["1"].pngUrl };
+      }
+    }
+    return undefined;
   });
 
   // Add zoom and rotation controls to the map.
@@ -63,21 +70,25 @@ async function initializeMap() {
   reloadMapStyle();
 }
 
-function reloadMapStyle() {
+async function reloadMapStyle() {
 
   if (!baseStyleJsonString) return;
 
-  let styleId = "onestylefornow";
-  if (!cachedStyles[styleId]) cachedStyles[styleId] = JSON.stringify(generateStyle(baseStyleJsonString));
-  
-  // always parse from string to avoid stale referenced objects
-  let style = JSON.parse(cachedStyles[styleId]);
+  let styleInfo = await generateStyle(baseStyleJsonString);
 
-  // MapLibre requires an absolute URL for `sprite`
-  style.sprite = window.location.origin + style.sprite;
+  // We can put any absolute URL here since we override it in the transformRequest
+  styleInfo.style.sprite = window.location.origin;
 
-  map.setStyle(style, {
+  if (activeStyleInfo) {
+    URL.revokeObjectURL(styleInfo.spritesheets["1"].pngUrl);
+    URL.revokeObjectURL(styleInfo.spritesheets["1"].jsonUrl);
+    URL.revokeObjectURL(styleInfo.spritesheets["2"].pngUrl);
+    URL.revokeObjectURL(styleInfo.spritesheets["2"].jsonUrl);
+  }
+  activeStyleInfo = styleInfo;
+
+  map.setStyle(styleInfo.style, {
     diff: true,
-    validate: true,
+    validate: true
   });
 }

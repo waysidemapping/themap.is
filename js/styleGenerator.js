@@ -1,3 +1,5 @@
+import { getSpritesheets } from './spritesheetGenerator.js'; 
+
 const filters = {
   has_bridge: [
     "all",
@@ -771,7 +773,7 @@ let diegeticPointLayer = {
   "minzoom": 12
 };
 
-export function generateStyle(baseStyleJsonString) {
+export async function generateStyle(baseStyleJsonString) {
 
   const userLangs = navigator.languages ? navigator.languages : navigator.language ? [navigator.language] : [];
   const osmLangSuffixes = [];
@@ -1221,5 +1223,10 @@ export function generateStyle(baseStyleJsonString) {
     }
   });
 
-  return style;
+  let sprites = await getSpritesheets();
+
+  return {
+    style: style,
+    spritesheets: sprites
+  };
 }
