@@ -55,7 +55,7 @@ const filters = {
     ["!", ["==", ["get", "maritime"], "yes"]]
   ],
   is_continent: ["==", ["get", "place"], "continent"],
-  is_developed: ["in", ["get", "landuse"], ["literal", ["residential", "commercial", "industrial", "retail", "brownfield", "garages", "railway"]]],
+  is_developed: ["in", ["get", "landuse"], ["literal", ["commercial", "construction", "industrial", "railway", "residential", "retail"]]],
   is_education: [
     "all",
     ["!", ["has", "building"]],
@@ -63,8 +63,7 @@ const filters = {
     [
       "any",
       ["has", "education"],
-      ["in", ["get", "amenity"], ["literal", ["school", "college", "university"]]],
-      ["in", ["get", "landuse"], ["literal", ["education"]]]
+      ["in", ["get", "amenity"], ["literal", ["school", "college", "university"]]]
     ]
   ],
   is_ferry: ["==", ["get", "route"], "ferry"],
@@ -94,8 +93,7 @@ const filters = {
     [
       "any",
       ["has", "healthcare"],
-      ["in", ["get", "amenity"], ["literal", ["hospital", "clinic"]]],
-      ["in", ["get", "landuse"], ["literal", ["healthcare"]]]
+      ["in", ["get", "amenity"], ["literal", ["hospital", "clinic"]]]
     ]
   ],
   is_highway: ["in", ["get", "highway"], ["literal", ["motorway", "motorway_link", "trunk", "trunk_link", "primary", "primary_link", "secondary", "secondary_link", "tertiary", "tertiary_link", "residential", "unclassified", "pedestrian", "living_street", "service", "track", "path", "footway", "steps", "cycleway", "bridleway", "corridor"]]],
@@ -106,8 +104,7 @@ const filters = {
     ["!", ["all", ["has", "indoor"], ["!", ["==", ["get", "indoor"], "no"]]]],
     [
       "any",
-      ["in", ["get", "leisure"], ["literal", ["golf_course",  "horse_riding"]]],
-      ["in", ["get", "landuse"], ["literal", ["winter_sports"]]]
+      ["in", ["get", "leisure"], ["literal", ["golf_course",  "horse_riding"]]]
     ]
   ],
   is_outdoor_attraction: [
@@ -123,7 +120,7 @@ const filters = {
   is_landform_area_poi: [
     "any",
     ["in", ["get", "place"], ["literal", ["island", "islet", "archipelago"]]],
-    ["in", ["get", "natural"], ["literal", ["desert", "mountain_range", "peninsula", "valley"]]]
+    ["in", ["get", "natural"], ["literal", ["desert", "mountain_range", "peninsula", "gorge", "valley"]]]
   ],
   is_maritime_park: [
     "all",
@@ -166,8 +163,8 @@ const filters = {
     ["!", ["all", ["has", "indoor"], ["!", ["==", ["get", "indoor"], "no"]]]],
     [
       "any",
-      ["in", ["get", "amenity"], ["literal", ["place_of_worship"]]],
-      ["in", ["get", "landuse"], ["literal", ["cemetery", "religious"]]]
+      ["in", ["get", "amenity"], ["literal", ["place_of_worship", "monastery"]]],
+      ["in", ["get", "landuse"], ["literal", ["cemetery"]]]
     ]
   ],
   is_station: [
@@ -238,7 +235,7 @@ const colors = {
   military_fill: "#FDEFED",
   military_outline: "#D6BFBC",
   military_text: "#624946",
-  national_park_fill: "#DAEDD5",
+  national_park_fill: "#ddeed8",
   national_park_outline: "#C1D6BD",
   national_park_text: "#3C5936",
   outdoor_sports_facility_fill: "#ddffeb",
@@ -249,7 +246,7 @@ const colors = {
   outdoor_attraction_text: "#6b445c",
   route_foot_overlay: "#75ae7f",
   park_fill: "#ECFAE9",
-  park_outline: "#d2edcd",
+  park_outline: "#abd4a4",
   park_text: "#46693F",
   parking_fill: "#efefef",
   pier_fill: "#fff",
