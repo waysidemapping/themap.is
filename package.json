@@ -5,10 +5,17 @@
     "scripts": {
         "build": "rm -rf dist/ && mkdir -p dist/maplibre && cp -a node_modules/maplibre-gl/dist/. dist/maplibre/ && cp -a node_modules/potpack/. dist/potpack/",
         "serve": "node ./serve.js",
-        "sprites": "spreet --unique --minify-index-file style/sprites/svg style/sprites/themapis && spreet --retina --unique --minify-index-file style/sprites/svg style/sprites/themapis@2x"
+        "sprites": "spreet --unique --minify-index-file style/sprites/svg style/sprites/themapis && spreet --retina --unique --minify-index-file style/sprites/svg style/sprites/themapis@2x",
+        "build_data": "node ./scripts/build_data.js",
+        "check_icons": "node ./scripts/check_icons.js"
     },
     "dependencies": {
         "maplibre-gl": "~5.16.0",
         "potpack": "~2.1.0"
+    },
+    "devDependencies": {
+        "chalk": "^5.2.0",
+        "svg-path-parse": "^1.1.3",
+        "xmlbuilder2": "^3.0.2"
     }
 }
