@@ -8,10 +8,13 @@ const allowedKeys = {
   "tags":{required: true},
   "geometry":{required: true},
   "icon":{},
+  "groups":{},
   "terms":{},
   "matchScore":{},
   "reference":{}
 };
+
+const allGroups = {};
 
 function processPreset(id, json) {
   for (let key in json){
@@ -32,6 +35,11 @@ function processPreset(id, json) {
     }
   }
 
+  if (json.groups) {
+    json.groups.forEach(group => allGroups[group] = true);
+  }
+
+  // not needed at the moment
   delete json.terms;
 
   if (id.includes("/")) {
@@ -58,6 +66,9 @@ function processPreset(id, json) {
     
     if (!json.geometry) {
       json.geometry = parent.geometry;
+    }
+    if (!json.groups) {
+      json.groups = parent.groups;
     }
   }
 
@@ -94,3 +105,5 @@ walkDir(presetsDir, function(filePath) {
 });
 
 fs.writeFileSync('./dist/presets.json', JSON.stringify(presets))
+
+console.log("Preset groups: " + Object.keys(allGroups).sort().join(', '))

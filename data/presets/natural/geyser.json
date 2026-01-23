@@ -6,6 +6,9 @@
     "tags": {
         "natural": "geyser"
     },
+    "groups": [
+        "water"
+    ],
     "terms": [
         "erupting spring",
         "geiser",

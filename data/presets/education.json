@@ -7,6 +7,9 @@
     "tags": {
         "education": "*"
     },
+    "groups": [
+        "education"
+    ],
     "terms": [
         "classes",
         "school",

@@ -6,6 +6,9 @@
     "tags": {
         "natural": "glacier"
     },
+    "groups": [
+        "ice"
+    ],
     "terms": [
         "ice",
         "snow"

@@ -3,6 +3,7 @@ import { beefsteakProtocolFunction } from "https://cdn.jsdelivr.net/gh/waysidema
 let map;
 
 let baseStyleJsonString;
+let presetsById;
 let activeStyleInfo;
 
 window.addEventListener('load', function() {
@@ -12,6 +13,7 @@ window.addEventListener('load', function() {
 async function initializeMap() {
 
   baseStyleJsonString = await fetch('/style/basestyle.json').then(response => response.text());
+  presetsById = await fetch('/dist/presets.json').then(response => response.json());
 
   // default
   let initialCenter = [-111.545, 39.546];
@@ -40,7 +42,7 @@ async function initializeMap() {
     if (url.startsWith(beefsteakEndpointPrefix) && resourceType === 'Tile') {
         return { url: 'beefsteak://' + url };
     }
-    if (activeStyleInfo) {
+    if (activeStyleInfo && activeStyleInfo.spritesheets) {
       if (resourceType === 'SpriteJSON') {
         return { url: url.includes('@2x') ? activeStyleInfo.spritesheets["2"].jsonUrl : activeStyleInfo.spritesheets["1"].jsonUrl };
       }
@@ -70,16 +72,43 @@ async function initializeMap() {
   reloadMapStyle();
 }
 
+export const themes = {
+  "books": {
+    name: "books",
+    features: [
+      {
+        preset: "amenity/library",
+      },
+      {
+        preset: "amenity/public_bookcase"
+      },
+      {
+        preset: "shop/books"
+      }
+    ]
+  },
+  "bicycle_rental": {
+    name: "bicycle rental",
+    features: [
+      {
+        preset: "amenity/bicycle_rental",
+      }
+    ]
+  }
+};
+
 async function reloadMapStyle() {
 
-  if (!baseStyleJsonString) return;
+  if (!baseStyleJsonString || !presetsById) return;
 
-  let styleInfo = await generateStyle(baseStyleJsonString);
+  let theme = themes["books"];
+
+  let styleInfo = await generateStyle(baseStyleJsonString, presetsById, theme);
 
   // We can put any absolute URL here since we override it in the transformRequest
   styleInfo.style.sprite = window.location.origin;
 
-  if (activeStyleInfo) {
+  if (activeStyleInfo && activeStyleInfo.spritesheets) {
     URL.revokeObjectURL(styleInfo.spritesheets["1"].pngUrl);
     URL.revokeObjectURL(styleInfo.spritesheets["1"].jsonUrl);
     URL.revokeObjectURL(styleInfo.spritesheets["2"].pngUrl);

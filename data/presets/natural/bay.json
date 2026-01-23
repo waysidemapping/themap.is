@@ -1,5 +1,4 @@
 {
-    "icon": "shore",
     "geometry": [
         "point",
         "line",
@@ -8,6 +7,9 @@
     "tags": {
         "natural": "bay"
     },
+    "groups": [
+        "water"
+    ],
     "terms": [
         "bight",
         "cove",

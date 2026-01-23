@@ -3,6 +3,9 @@
     "geometry": [
         "area"
     ],
+    "groups": [
+        "water"
+    ],
     "tags": {
         "natural": "water"
     },

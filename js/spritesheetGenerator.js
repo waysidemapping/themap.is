@@ -114,7 +114,6 @@ async function rasterizeIcons(icons, scale) {
           });
           string = string.replace(/<\/svg>/, `<clipPath id="halo">${clipPaths.join('')}</clipPath></svg>`);
         }
-        console.log(string);
 
         let canvasWidth = iconWidth * scale;
         let canvasHeight = iconHeight * scale;
@@ -190,8 +189,10 @@ async function getSpritesheet(icons, scale) {
 }
 
 export async function getSpritesheets(icons) {
-    return {
+  if (icons && Object.keys(icons).length) {
+     return {
       "1": await getSpritesheet(icons, 1),
       "2": await getSpritesheet(icons, 2)
     };
+  }
 }

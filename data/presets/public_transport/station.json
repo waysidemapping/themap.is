@@ -3,6 +3,9 @@
     "tags": {
         "public_transport": "station"
     },
+    "groups": [
+        "transport_station"
+    ],
     "terms": [
         "public transit",
         "public transportation",

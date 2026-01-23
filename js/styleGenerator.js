@@ -210,10 +210,11 @@ const colors = {
   background: "#fff",
   barrier_fill: "#dbd6d7",
   barrier_stroke: "#dbd6d7",
-  building_fill: "#807974",
+  building_fill: "#a89f98",
   developed_fill: "#f9f9f9",
   education_fill: "#FFF9DB",
   education_outline: "#DED08C",
+  education_icon: "#b99700",
   education_text: "#575135",
   ferry_stroke: "#7EC2FF",
   floating_boom_stroke: "#f9b98f",
@@ -372,6 +373,30 @@ const landuses = [
     high_zoom: true
   }
 ];
+
+const settingsByPresetGroup = {
+  education: {
+    fill_color: colors.education_fill,
+    outline_color: colors.education_outline,
+    text_color: colors.education_text,
+    icon_color: colors.education_icon
+  },
+  transport_station: {
+    fill_color: colors.station_fill,
+    outline_color: colors.station_outline,
+    text_color: colors.station_text
+  },
+  ice: {
+    fill_color: colors.ice_fill,
+    outline_color: colors.ice_outline,
+    text_color: colors.ice_text
+  },
+  water: {
+    fill_color: colors.water_fill,
+    outline_color: colors.water_outline,
+    text_color: colors.water_text
+  }
+};
 
 const structures = [
   {
@@ -770,26 +795,77 @@ let diegeticPointLayer = {
   "minzoom": 12
 };
 
-export async function generateStyle(baseStyleJsonString) {
+function tagsExp(tags) {
+  let exp = [];
+  for (let key in tags) {
+    let val = tags[key];
+    if (val === '*') {
+      exp.push(['has', key]);
+    } else {
+      exp.push(['==', ['get', key], val]);
+    }
+  }
+  if (exp.length === 1) {
+    return exp[0];
+  } else {
+    exp.unshift("all");
+    return exp;
+  }
+}
+
+export async function generateStyle(baseStyleJsonString, presetsById, theme) {
+
+  let presetsToRender = theme.features.map(item => item.preset);
 
   let icons = {};
-
-  function icon(file, opts) {
+  function iconExp(file, opts) {
     let id = file;
     if (opts.fill === 'none') delete opts.fill; // sense check
     if (opts.fill) {
+      opts.fill = opts.fill.toLowerCase().trim();
       id += ' f-' + opts.fill;
     }
     if (opts.stroke) {
+      opts.stroke = opts.stroke.toLowerCase().trim();
       id += ' s-' + opts.stroke;
     }
     if (opts.halo) {
+      opts.halo = opts.halo.toLowerCase().trim();
       id += ' h-' + opts.halo;
     }
     opts.id = id
     opts.file = file;
     icons[id] = opts;
     return ["image", id];
+  }
+  function presetIconExp(preset) {
+    if (preset.icon) {
+      let opts = {
+        fill: colors.text,
+        halo: colors.text_halo
+      };
+      if (preset.groups) {
+        let groupSettings = preset.groups.map(group => settingsByPresetGroup[group]).filter(Boolean).at(0);
+        let fill = groupSettings.icon_color || groupSettings.text_color;
+        if (fill) {
+          opts.fill = fill;
+        }
+      }
+      return [tagsExp(preset.tags), iconExp(preset.icon, opts)]
+    }
+  }
+  function caseConditionsOutputsForPresets(presets, expressionFunc) {
+    return presets.map(id => {
+      if (id.endsWith('/')) {
+        return Object.keys(presetsById)
+          .filter(id2 => id2.startsWith(id))
+          .map(id => presetsById[id])
+          .sort((a, b) => (b.parents?.length || 0) - (a.parents?.length || 0))
+          .map(expressionFunc).filter(Boolean).flat();
+      } else {
+        return expressionFunc(presetsById[id]);
+      }
+    }).filter(Boolean).flat()
   }
 
   const userLangs = navigator.languages ? navigator.languages : navigator.language ? [navigator.language] : [];
@@ -1152,11 +1228,35 @@ export async function generateStyle(baseStyleJsonString) {
         ]
       ],
       filters.is_landform_area_poi,
-      filters.is_water_area_poi
+      filters.is_water_area_poi,
+      ...presetsToRender.map(id => tagsExp(presetsById[id].tags))
     ],
     "layout": {
       "symbol-placement": "point",
-      "symbol-sort-key": ["-", ["coalesce", ["get", "c.area"], 0]],
+      "text-optional": true,
+      "symbol-sort-key": [
+        "case",
+        [
+          "any",
+          ...presetsToRender.map(id => tagsExp(presetsById[id].tags))
+        ],
+          // Prioritize the focused features by making sure the sort value is always
+          // lower than that of the largest possible Web Mercator feature
+          ["-", -1.6e15, ["coalesce", ["get", "c.area"], 0]],
+        ["-", ["coalesce", ["get", "c.area"], 0]]
+      ],
+      "icon-image": presetsToRender.length ? [
+        "case",
+        ...caseConditionsOutputsForPresets(presetsToRender, presetIconExp),
+        ["image", ""]
+      ] : ["image", ""],
+      "text-variable-anchor-offset": presetsToRender.length ? [
+        "case",
+        ...caseConditionsOutputsForPresets(presetsToRender, function(preset) {
+          if (preset.icon) return [tagsExp(preset.tags), ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]]]
+        }),
+        ["literal", ["center", [0, 0]]]
+      ] : ["literal", ["center", [0, 0]]],
       "text-size":[
         "case",
         [
@@ -1220,6 +1320,7 @@ export async function generateStyle(baseStyleJsonString) {
         ], 0.1,
         0
       ],
+      "text-justify": "auto",
       "text-field": labelTextField
     },
     "paint": {
