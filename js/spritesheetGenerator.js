@@ -91,7 +91,7 @@ async function rasterizeIcons(icons, scale) {
           string = string.replace(/<\/svg>/, `<clipPath id="halo">${clipPathInnerString}</clipPath></svg>`);
         }
         if (info.bg_fill) {
-          let bgRect = `<rect x="${iconX}" y="${iconY}" width="${iconWidth}" height="${iconHeight}" rx="2" fill="${info.bg_fill}"/>`;
+          let bgRect = `<rect x="${iconX}" y="${iconY}" width="${iconWidth}" height="${iconHeight}" rx="4" fill="${info.bg_fill}"/>`;
           string = string.replace(/(<svg\b[^>]*>)/i, `$1\n${bgRect}`);
         }
 
