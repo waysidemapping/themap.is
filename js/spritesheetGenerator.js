@@ -42,26 +42,8 @@ async function getSvg(url) {
   return svgsByUrl[url];
 }
 
-function rectToPath(x, y, width, height, r = 0) {
-  if (r <= 0) {
-    return `M${x} ${y} H${x + width} V${y + height} H${x} Z`;
-  }
-  
-  // Clamp radius to half width/height
-  r = Math.min(r, width / 2, height / 2);
-
-  return `
-    M${x + r} ${y}
-    H${x + width - r}
-    A${r} ${r} 0 0 1 ${x + width} ${y + r}
-    V${y + height - r}
-    A${r} ${r} 0 0 1 ${x + width - r} ${y + height}
-    H${x + r}
-    A${r} ${r} 0 0 1 ${x} ${y + height - r}
-    V${y + r}
-    A${r} ${r} 0 0 1 ${x + r} ${y}
-    Z
-  `.replace(/\s+/g, ' ').trim();
+function rectToPath(x, y, width, height) {
+  return `M${x} ${y} H${x + width} V${y + height} H${x} Z`;
 }
 
 async function rasterizeIcons(icons, scale) {
@@ -74,20 +56,19 @@ async function rasterizeIcons(icons, scale) {
         let string = svgInfo.string;
 
         let padding = 0;
-        let iconWidth = svgInfo.w;
-        let iconHeight = svgInfo.h;
-        let iconX = svgInfo.x;
-        let iconY = svgInfo.y;
-
-        if (info.stroke || info.halo) {
-          // add padding since stroke and halo can be rendered outside the regular bounds
+        if (info.bg_fill) {
+          // leave enough margin to look visually nice
+          padding = 2;
+        } else if (info.stroke || info.halo) {
+          // stroke and halo can be rendered outside the regular bounds
           padding = 1;
-          iconWidth = svgInfo.w + padding * 2;
-          iconHeight = svgInfo.h + padding * 2;
-          iconX = svgInfo.x - padding;
-          iconY = svgInfo.y - padding;
-          string = string.replace(/ viewBox=".+?"/g, ` viewBox="${iconX} ${iconY} ${iconWidth} ${iconHeight}" `);
         }
+
+        const iconWidth = svgInfo.w + padding * 2;
+        const iconHeight = svgInfo.h + padding * 2;
+        const iconX = svgInfo.x - padding;
+        const iconY = svgInfo.y - padding;
+        string = string.replace(/ viewBox=".+?"/g, ` viewBox="${iconX} ${iconY} ${iconWidth} ${iconHeight}" `);
 
         let fill = info.fill || "none";
         string = string.replace(/<path /g, `<path fill="${fill}" `);
@@ -99,20 +80,19 @@ async function rasterizeIcons(icons, scale) {
         // A halo is just an outer stroke that we fake through a double-width stroke clipped to the inverted icon's path
         if (info.halo) {
           // use original paths here so they won't have attributes
-          let iconPaths = svgInfo.string.match(/<path .+?>/g);
-          let haloPathsString = iconPaths.join('').replace(/<path /g, `<path clip-path="url(#halo)" fill="none" stroke="${info.halo}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" `);
+          const iconPaths = svgInfo.string.match(/<path .+?>/g);
+          const haloPathsString = iconPaths.join('').replace(/<path /g, `<path clip-path="url(#halo)" fill="none" stroke="${info.halo}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" `);
           string = string.replace(/<\/svg>/, `${haloPathsString}\n</svg>`);
 
-          let borderD = rectToPath(iconX, iconY, iconWidth, iconHeight);
-          let clipPaths = iconPaths.map(pathInner => {
-            
-            return pathInner
-              // add the bounding box of the icon as an outer ring in order to invert the path
-              .replace(/ d="/, ` d="${borderD} `)
-              // invert the path
-              .replace(/<path /, `<path clip-rule="evenodd" `);
-          });
-          string = string.replace(/<\/svg>/, `<clipPath id="halo">${clipPaths.join('')}</clipPath></svg>`);
+          const borderD = rectToPath(iconX, iconY, iconWidth, iconHeight);
+          const allPathsD = [...iconPaths.join('').matchAll(/<path\b[^>]*\bd="([^"]*)"/gi)].map(match => match[1]).join(' ');
+           // we need to collapse all the paths, plus the border, into a single path in order for the clip-rule to work
+          const clipPathInnerString = `<path clip-rule="evenodd" d="${borderD} ${allPathsD}"/>`;
+          string = string.replace(/<\/svg>/, `<clipPath id="halo">${clipPathInnerString}</clipPath></svg>`);
+        }
+        if (info.bg_fill) {
+          let bgRect = `<rect x="${iconX}" y="${iconY}" width="${iconWidth}" height="${iconHeight}" rx="2" fill="${info.bg_fill}"/>`;
+          string = string.replace(/(<svg\b[^>]*>)/i, `$1\\${bgRect}`);
         }
 
         let canvasWidth = iconWidth * scale;
@@ -174,23 +154,23 @@ function renderSpritesheet(rects, width, height, scale) {
 }
 
 async function getSpritesheet(icons, scale) {
-    const pngIcons = await rasterizeIcons(icons, scale);
-    const spritesheetSize = potpack(pngIcons);
-    const spritesheet = renderSpritesheet(pngIcons, spritesheetSize.w, spritesheetSize.h, scale);
-    const pngUrl = await new Promise(resolve => {
-      spritesheet.png.toBlob(blob => {
-        resolve(URL.createObjectURL(blob));
-      }, 'image/png');
-    });
-    const jsonUrl = URL.createObjectURL(
-        new Blob([JSON.stringify(spritesheet.json)], { type: 'application/json' })
-    );
-    return { pngUrl: pngUrl, jsonUrl: jsonUrl };
+  const pngIcons = await rasterizeIcons(icons, scale);
+  const spritesheetSize = potpack(pngIcons);
+  const spritesheet = renderSpritesheet(pngIcons, spritesheetSize.w, spritesheetSize.h, scale);
+  const pngUrl = await new Promise(resolve => {
+    spritesheet.png.toBlob(blob => {
+      resolve(URL.createObjectURL(blob));
+    }, 'image/png');
+  });
+  const jsonUrl = URL.createObjectURL(
+    new Blob([JSON.stringify(spritesheet.json)], { type: 'application/json' })
+  );
+  return { pngUrl: pngUrl, jsonUrl: jsonUrl };
 }
 
 export async function getSpritesheets(icons) {
   if (icons && Object.keys(icons).length) {
-     return {
+    return {
       "1": await getSpritesheet(icons, 1),
       "2": await getSpritesheet(icons, 2)
     };
