@@ -210,11 +210,11 @@ const colors = {
   background: "#fff",
   barrier_fill: "#dbd6d7",
   barrier_stroke: "#dbd6d7",
-  building_fill: "#a89f98",
+  building_fill: "#c1b7af",
   developed_fill: "#f9f9f9",
   education_fill: "#FFF9DB",
   education_outline: "#DED08C",
-  education_icon: "#b99700",
+  education_icon: "#d89b00",
   education_text: "#575135",
   ferry_stroke: "#7EC2FF",
   floating_boom_stroke: "#f9b98f",
@@ -259,12 +259,14 @@ const colors = {
   religious_fill: "#ffe9d4",
   religious_outline: "#dfc4ab",
   religious_text: "#4f3e2f",
+  shop_icon: "#006d8e",
   station_fill: "#E3E9FA",
   station_outline: "#C2CCE6",
   station_text: "#3F4963",
   swimming_pool_fill: "#C4F1FF",
   swimming_pool_outline: "#BDE0EB",
   swimming_pool_text: "#497683",
+  primary_text: "#333",
   text: "#555",
   text_halo: "#fff",
   tree: "#268726",
@@ -375,13 +377,22 @@ const landuses = [
 ];
 
 const settingsByPresetGroup = {
+  amenity: {
+    fill_color: colors.education_fill,
+    outline_color: colors.education_outline,
+    text_color: colors.education_text,
+    icon_color: colors.education_icon
+  },
   education: {
     fill_color: colors.education_fill,
     outline_color: colors.education_outline,
     text_color: colors.education_text,
     icon_color: colors.education_icon
   },
-  transport_station: {
+  shop: {
+    icon_color: colors.shop_icon
+  },
+  transport: {
     fill_color: colors.station_fill,
     outline_color: colors.station_outline,
     text_color: colors.station_text
@@ -815,7 +826,33 @@ function tagsExp(tags) {
 
 export async function generateStyle(baseStyleJsonString, presetsById, theme) {
 
-  let presetsToRender = theme.features.map(item => item.preset);
+  const featuresToRender = theme.features.map(item => {
+    let feature = Object.assign({}, item);
+    if (item.preset) {
+      Object.assign(feature, presetsById[item.preset]);
+    }
+    feature.exp = tagsExp(feature.tags);
+    if (!feature.class) feature.class = "major";
+    if (feature.icon) {
+      feature.iconOpts = {
+        fill: colors.text,
+        halo: colors.text_halo
+      };
+      if (feature.groups) {
+        let groupSettings = feature.groups.map(group => settingsByPresetGroup[group]).filter(Boolean).at(0);
+        let fill = groupSettings.icon_color || groupSettings.text_color;
+        if (fill) {
+          feature.iconOpts.fill = fill;
+        }
+      }
+      if (feature.class !== 'minor') {
+        feature.iconOpts.bg_fill = feature.iconOpts.fill;
+        feature.iconOpts.fill = colors.text_halo;
+        delete feature.iconOpts.halo;
+      }
+    }
+    return feature;
+  });
 
   let icons = {};
   function iconExp(file, opts) {
@@ -833,40 +870,28 @@ export async function generateStyle(baseStyleJsonString, presetsById, theme) {
       opts.halo = opts.halo.toLowerCase().trim();
       id += ' h-' + opts.halo;
     }
+    if (opts.bg_fill) {
+      opts.bg_fill = opts.bg_fill.toLowerCase().trim();
+      id += ' bg-' + opts.bg_fill;
+    }
     opts.id = id
     opts.file = file;
     icons[id] = opts;
     return ["image", id];
   }
-  function presetIconExp(preset) {
-    if (preset.icon) {
-      let opts = {
-        fill: colors.text,
-        halo: colors.text_halo
-      };
-      if (preset.groups) {
-        let groupSettings = preset.groups.map(group => settingsByPresetGroup[group]).filter(Boolean).at(0);
-        let fill = groupSettings.icon_color || groupSettings.text_color;
-        if (fill) {
-          opts.fill = fill;
-        }
-      }
-      return [tagsExp(preset.tags), iconExp(preset.icon, opts)]
-    }
-  }
-  function caseConditionsOutputsForPresets(presets, expressionFunc) {
-    return presets.map(id => {
-      if (id.endsWith('/')) {
-        return Object.keys(presetsById)
-          .filter(id2 => id2.startsWith(id))
-          .map(id => presetsById[id])
-          .sort((a, b) => (b.parents?.length || 0) - (a.parents?.length || 0))
-          .map(expressionFunc).filter(Boolean).flat();
-      } else {
-        return expressionFunc(presetsById[id]);
-      }
-    }).filter(Boolean).flat()
-  }
+  // function caseConditionsOutputsForFeatures(features, expressionFunc) {
+  //   return presets.map(id => {
+  //     if (id.endsWith('/')) {
+  //       return Object.keys(presetsById)
+  //         .filter(id2 => id2.startsWith(id))
+  //         .map(id => presetsById[id])
+  //         .sort((a, b) => (b.parents?.length || 0) - (a.parents?.length || 0))
+  //         .map(expressionFunc).filter(Boolean).flat();
+  //     } else {
+  //       return expressionFunc(presetsById[id]);
+  //     }
+  //   }).filter(Boolean).flat()
+  // }
 
   const userLangs = navigator.languages ? navigator.languages : navigator.language ? [navigator.language] : [];
   const osmLangSuffixes = [];
@@ -1229,7 +1254,7 @@ export async function generateStyle(baseStyleJsonString, presetsById, theme) {
       ],
       filters.is_landform_area_poi,
       filters.is_water_area_poi,
-      ...presetsToRender.map(id => tagsExp(presetsById[id].tags))
+      ...featuresToRender.map(feature => feature.exp)
     ],
     "layout": {
       "symbol-placement": "point",
@@ -1238,23 +1263,28 @@ export async function generateStyle(baseStyleJsonString, presetsById, theme) {
         "case",
         [
           "any",
-          ...presetsToRender.map(id => tagsExp(presetsById[id].tags))
+          ...featuresToRender.map(feature => feature.exp)
         ],
           // Prioritize the focused features by making sure the sort value is always
           // lower than that of the largest possible Web Mercator feature
           ["-", -1.6e15, ["coalesce", ["get", "c.area"], 0]],
         ["-", ["coalesce", ["get", "c.area"], 0]]
       ],
-      "icon-image": presetsToRender.length ? [
+      "icon-image": featuresToRender.length ? [
         "case",
-        ...caseConditionsOutputsForPresets(presetsToRender, presetIconExp),
+        ...featuresToRender.filter(feature => feature.icon).map(feature => {
+          return [feature.exp, iconExp(feature.icon, feature.iconOpts || {})];
+        }).flat(),
         ["image", ""]
       ] : ["image", ""],
-      "text-variable-anchor-offset": presetsToRender.length ? [
+      "text-variable-anchor-offset": featuresToRender.length ? [
         "case",
-        ...caseConditionsOutputsForPresets(presetsToRender, function(preset) {
-          if (preset.icon) return [tagsExp(preset.tags), ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]]]
-        }),
+        ...featuresToRender.filter(feature => feature.icon && feature.class === "major").map(feature => {
+          return [feature.exp, ["literal", ["left", [1.1, 0], "right", [-1.1, 0]]]]
+        }).flat(),
+        ...featuresToRender.filter(feature => feature.icon && feature.class !== "major").map(feature => {
+          return [feature.exp, ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]]]
+        }).flat(),
         ["literal", ["center", [0, 0]]]
       ] : ["literal", ["center", [0, 0]]],
       "text-size":[
@@ -1286,6 +1316,7 @@ export async function generateStyle(baseStyleJsonString, presetsById, theme) {
       ],
       "text-font":[
         "case",
+        ["any", ...featuresToRender.map(feature => feature.exp)], ["literal", ["Noto Sans Bold"]],
         [
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
@@ -1326,6 +1357,7 @@ export async function generateStyle(baseStyleJsonString, presetsById, theme) {
     "paint": {
       "text-color":[
         "case",
+        ["any", ...featuresToRender.map(feature => feature.exp)], colors.primary_text,
         [
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
@@ -1337,6 +1369,11 @@ export async function generateStyle(baseStyleJsonString, presetsById, theme) {
         colors.text
       ],
       "text-halo-color": colors.text_halo,
+      "text-halo-width": [
+        "case",
+        ["any", ...featuresToRender.map(feature => feature.exp)], 2.5,
+        1
+      ],
       "text-halo-width": 1
     }
   });

@@ -11,6 +11,9 @@
         "retailer",
         "store"
     ],
+    "groups": [
+        "shop"
+    ],
     "name": "Shop",
     "matchScore": 0.7
 }

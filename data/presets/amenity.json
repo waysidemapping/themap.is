@@ -8,5 +8,8 @@
     "tags": {
         "amenity": "*"
     },
+    "groups": [
+        "amenity"
+    ],
     "name": "Amenity"
 }

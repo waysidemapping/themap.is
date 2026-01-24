@@ -5,6 +5,9 @@
         "line",
         "area"
     ],
+    "groups": [
+        "transport"
+    ],
     "tags": {
         "public_transport": "*"
     },

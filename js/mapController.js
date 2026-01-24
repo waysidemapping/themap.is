@@ -77,10 +77,11 @@ export const themes = {
     name: "books",
     features: [
       {
-        preset: "amenity/library",
+        preset: "amenity/library"
       },
       {
-        preset: "amenity/public_bookcase"
+        preset: "amenity/public_bookcase",
+        class: "minor"
       },
       {
         preset: "shop/books"
@@ -91,7 +92,7 @@ export const themes = {
     name: "bicycle rental",
     features: [
       {
-        preset: "amenity/bicycle_rental",
+        preset: "amenity/bicycle_rental"
       }
     ]
   }
@@ -101,7 +102,7 @@ async function reloadMapStyle() {
 
   if (!baseStyleJsonString || !presetsById) return;
 
-  let theme = themes["books"];
+  let theme = themes["bicycle_rental"];
 
   let styleInfo = await generateStyle(baseStyleJsonString, presetsById, theme);
 

@@ -7,7 +7,7 @@
         "aeroway": "aerodrome"
     },
     "groups": [
-        "transport_station"
+        "transport"
     ],
     "terms": [
         "Aerodrome",
