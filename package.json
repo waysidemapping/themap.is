@@ -10,6 +10,7 @@
         "check_icons": "node ./scripts/check_icons.js"
     },
     "dependencies": {
+        "chroma-js": "^3.2.0",
         "maplibre-gl": "~5.16.0",
         "potpack": "~2.1.0"
     },

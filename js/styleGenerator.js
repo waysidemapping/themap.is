@@ -1,4 +1,8 @@
+import chroma from './../node_modules/chroma-js/index.js';
+
 import { getSpritesheets } from './spritesheetGenerator.js';
+
+const noaccessValsLiteral = ["literal", ["no", "private", "discouraged", "limited"]]; // `limited` for `wheelchair`
 
 const filters = {
   has_bridge: [
@@ -266,6 +270,7 @@ const colors = {
   swimming_pool_fill: "#C4F1FF",
   swimming_pool_outline: "#BDE0EB",
   swimming_pool_text: "#497683",
+  swimming_pool_icon: "#0092ba",
   primary_text: "#333",
   text: "#555",
   text_halo: "#fff",
@@ -401,6 +406,12 @@ const settingsByPresetGroup = {
     fill_color: colors.ice_fill,
     outline_color: colors.ice_outline,
     text_color: colors.ice_text
+  },
+  bathing_water: {
+    fill_color: colors.swimming_pool_fill,
+    outline_color: colors.swimming_pool_outline,
+    text_color: colors.swimming_pool_text,
+    icon_color: colors.swimming_pool_icon
   },
   water: {
     fill_color: colors.water_fill,
@@ -1270,14 +1281,26 @@ export async function generateStyle(baseStyleJsonString, presetsById, theme) {
           ["-", -1.6e15, ["coalesce", ["get", "c.area"], 0]],
         ["-", ["coalesce", ["get", "c.area"], 0]]
       ],
-      "icon-image": featuresToRender.length ? [
+      "icon-image": featuresToRender.filter(feature => feature.icon).length ? [
         "case",
         ...featuresToRender.filter(feature => feature.icon).map(feature => {
-          return [feature.exp, iconExp(feature.icon, feature.iconOpts || {})];
+          let noaccessIconOpts = Object.assign({}, feature.iconOpts);
+          if (noaccessIconOpts.fill) {
+            noaccessIconOpts.fill = chroma.mix(noaccessIconOpts.fill, "#eee", 0.5, "rgb").hex();
+          }
+          if (noaccessIconOpts.bg_fill) {
+            noaccessIconOpts.bg_fill = chroma.mix(noaccessIconOpts.bg_fill, "#eee", 0.5, "rgb").hex();
+          }
+          return [feature.exp, [
+            "case",
+            ["in", ["get", "access"], noaccessValsLiteral],
+              iconExp(feature.icon, noaccessIconOpts),
+            iconExp(feature.icon, feature.iconOpts)
+          ]];
         }).flat(),
         ["image", ""]
       ] : ["image", ""],
-      "text-variable-anchor-offset": featuresToRender.length ? [
+      "text-variable-anchor-offset": featuresToRender.filter(feature => feature.icon).length ? [
         "case",
         ...featuresToRender.filter(feature => feature.icon && feature.class === "major").map(feature => {
           return [feature.exp, ["literal", ["left", [1.1, 0], "right", [-1.1, 0]]]]

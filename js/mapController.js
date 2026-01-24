@@ -95,6 +95,18 @@ export const themes = {
         preset: "amenity/bicycle_rental"
       }
     ]
+  },
+  "swimming_pools": {
+    name: "swimming pools",
+    features: [
+      {
+        preset: "leisure/sports_centre/swimming"
+      },
+      {
+        preset: "leisure/swimming_pool",
+        class: "minor"
+      }
+    ]
   }
 };
 
@@ -102,7 +114,7 @@ async function reloadMapStyle() {
 
   if (!baseStyleJsonString || !presetsById) return;
 
-  let theme = themes["bicycle_rental"];
+  let theme = themes["swimming_pools"];
 
   let styleInfo = await generateStyle(baseStyleJsonString, presetsById, theme);
 

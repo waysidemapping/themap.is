@@ -92,7 +92,7 @@ async function rasterizeIcons(icons, scale) {
         }
         if (info.bg_fill) {
           let bgRect = `<rect x="${iconX}" y="${iconY}" width="${iconWidth}" height="${iconHeight}" rx="2" fill="${info.bg_fill}"/>`;
-          string = string.replace(/(<svg\b[^>]*>)/i, `$1\\${bgRect}`);
+          string = string.replace(/(<svg\b[^>]*>)/i, `$1\n${bgRect}`);
         }
 
         let canvasWidth = iconWidth * scale;
