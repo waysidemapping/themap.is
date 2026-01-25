@@ -1,6 +1,6 @@
 import { colors } from './colors.js';
 
-export const themes = {
+const themesById = {
   "bars_and_restaurants": {
     features: [
       {
@@ -97,7 +97,6 @@ const featureDefaultsByGroup = {
 
 async function loadData() {
   const presetsById = await fetch('/dist/presets.json').then(response => response.json());
-
   for (let presetId in presetsById) {
     let preset = presetsById[presetId];
     if (preset.plural) {
@@ -108,8 +107,8 @@ async function loadData() {
         // strip diacritics
         .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-      if (!themes[themeId]) {
-        themes[themeId] = {
+      if (!themesById[themeId]) {
+        themesById[themeId] = {
           name: preset.plural,
           features: [
             {
@@ -121,8 +120,8 @@ async function loadData() {
     }
   }
 
-  for (let id in themes) {
-    let theme = themes[id];
+  for (let id in themesById) {
+    let theme = themesById[id];
     theme.id = id;
     if (!theme.name) theme.name = theme.id.replaceAll('_', ' ');
 
@@ -174,6 +173,7 @@ async function loadData() {
       theme.primaryColor = theme.features.map(feature => [feature.iconOpts?.bg_fill, feature.iconOpts?.fill]).flat().filter(Boolean).at(0);
     }
   }
+  return themesById;
 }
 
-await loadData();
+export const themes = await loadData();
