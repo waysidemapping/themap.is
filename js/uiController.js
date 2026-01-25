@@ -15,6 +15,15 @@ function updateUi () {
   let baseElement = getElementById('ui');
   if (!baseElement) return;
 
+  let theme = state.theme;
+
+  let themeColor = theme?.primaryColor;
+  if (themeColor) {
+    baseElement.style.setProperty("--primary-color", themeColor);
+  } else {
+    baseElement.style.removeProperty("--primary-color");
+  }
+
   baseElement.replaceChildren(
     createElement('div')
       .setAttribute('id', 'header')
@@ -26,7 +35,7 @@ function updateUi () {
               .append('the map is '),
             createElement('span')
               .setAttribute('class', 'maptitle')
-              .append(state.theme?.name)
+              .append(theme?.name)
           )
       )
   );

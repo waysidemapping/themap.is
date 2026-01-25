@@ -28,8 +28,8 @@ export const themes = {
     features: [
       {
         presets: [
-          "amenity/bar",
           "amenity/nightclub",
+          "amenity/bar",
           "amenity/pub"
         ]
       }
@@ -38,10 +38,10 @@ export const themes = {
   "swimming": {
     features: [
       {
-        presets: ["leisure/sports_centre/swimming"]
+        presets: ["leisure/swimming_pool"]
       },
       {
-        presets: ["leisure/swimming_pool"]
+        presets: ["leisure/sports_centre/swimming"]
       }
     ]
   }
@@ -49,43 +49,49 @@ export const themes = {
 
 const featureDefaultsByGroup = {
   amenity: {
-    fill_color: colors.education_fill,
-    outline_color: colors.education_outline,
-    text_color: colors.education_text,
-    icon_color: colors.education_icon
+    iconOpts: { 
+      fill: colors.education_icon
+    }
   },
   bathing_water: {
-    fill_color: colors.swimming_pool_fill,
-    outline_color: colors.swimming_pool_outline,
-    text_color: colors.swimming_pool_text,
-    icon_color: colors.swimming_pool_icon
+    iconOpts: { 
+      fill: colors.swimming_pool_icon
+    }
   },
   education: {
-    fill_color: colors.education_fill,
-    outline_color: colors.education_outline,
-    text_color: colors.education_text,
-    icon_color: colors.education_icon
+    iconOpts: { 
+      fill: colors.education_icon
+    }
+  },
+  food: {
+    iconOpts: { 
+      fill: colors.food_icon
+    }
   },
   ice: {
-    fill_color: colors.ice_fill,
-    outline_color: colors.ice_outline,
-    text_color: colors.ice_text
+    iconOpts: { 
+      fill: colors.ice_text
+    }
   },
   nightlife: {
-    text_color: "#33145e"
+    iconOpts: { 
+      fill: "#33145e"
+    }
   },
   shop: {
-    icon_color: colors.shop_icon
+    iconOpts: { 
+      fill: colors.shop_icon
+    }
   },
   transport: {
-    fill_color: colors.station_fill,
-    outline_color: colors.station_outline,
-    text_color: colors.station_text
+    iconOpts: { 
+      fill: colors.station_text
+    }
   },
   water: {
-    fill_color: colors.water_fill,
-    outline_color: colors.water_outline,
-    text_color: colors.water_text
+    iconOpts: { 
+      fill: colors.water_text
+    }
   }
 };
 
@@ -145,15 +151,16 @@ async function loadData() {
     for (let i in theme.features) {
       let feature = theme.features[i];
       if (feature.icon) {
-        feature.iconOpts = {
+        if (!feature.iconOpts) feature.iconOpts = {
           fill: colors.text,
           halo: colors.text_halo
         };
         if (feature.groups) {
           let groupDefaults = feature.groups.map(group => featureDefaultsByGroup[group]).filter(Boolean).at(0);
-          let fill = groupDefaults?.icon_color || groupDefaults?.text_color;
-          if (fill) {
-            feature.iconOpts.fill = fill;
+          if (groupDefaults) {
+            if (groupDefaults.iconOpts) {
+              Object.assign(feature.iconOpts, groupDefaults.iconOpts);
+            }
           }
         }
         // if (feature.class !== 'minor') {
@@ -162,6 +169,9 @@ async function loadData() {
         //   delete feature.iconOpts.halo;
         // }
       }
+    }
+    if (!theme.primaryColor) {
+      theme.primaryColor = theme.features.map(feature => [feature.iconOpts?.bg_fill, feature.iconOpts?.fill]).flat().filter(Boolean).at(0);
     }
   }
 }
