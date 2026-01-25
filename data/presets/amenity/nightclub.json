@@ -1,4 +1,5 @@
 {
+    "icon": "dancer-sparkles",
     "tags": {
         "amenity": "nightclub"
     },
@@ -10,5 +11,9 @@
         "discotheque",
         "night club"
     ],
+    "groups": [
+        "nightlife"
+    ],
+    "plural": "nightclubs",
     "name": "Nightclub"
 }

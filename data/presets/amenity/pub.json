@@ -11,5 +11,6 @@
         "dive",
         "drink"
     ],
+    "plural": "pubs",
     "name": "Pub"
 }

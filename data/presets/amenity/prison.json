@@ -8,5 +8,6 @@
     "tags": {
         "amenity": "prison"
     },
-    "name": "Prison Grounds"
+    "plural": "prisons",
+    "name": "Prison"
 }

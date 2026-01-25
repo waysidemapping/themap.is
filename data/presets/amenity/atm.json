@@ -10,5 +10,6 @@
     "tags": {
         "amenity": "atm"
     },
+    "plural": "ATMs",
     "name": "ATM"
 }

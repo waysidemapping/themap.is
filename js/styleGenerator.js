@@ -1,4 +1,5 @@
 import chroma from './../node_modules/chroma-js/index.js';
+import { colors } from "./colors.js";
 
 import { getSpritesheets } from './spritesheetGenerator.js';
 
@@ -202,86 +203,6 @@ const filters = {
   is_watercourse: ["in", ["get", "waterway"], ["literal", ["canal", "ditch", "drain", "fish_pass", "river", "stream", "tidal_channel"]]],
 };
 
-const colors = {
-  aboriginal_lands_fill: "#FFF8F2",
-  aboriginal_lands_outline: "#DAD1C9",
-  aboriginal_lands_text: "#6B533F",
-  admin_boundary_stroke: "#ccbdbd",
-  admin_boundary_casing: "#fff",
-  admin_boundary_major_text: "#111",
-  aerialway_stroke: "#cb879a",
-  aerialway_text: "#392329",
-  background: "#fff",
-  barrier_fill: "#dbd6d7",
-  barrier_stroke: "#dbd6d7",
-  building_fill: "#c1b7af",
-  developed_fill: "#f9f9f9",
-  education_fill: "#FFF9DB",
-  education_outline: "#DED08C",
-  education_icon: "#d89b00",
-  education_text: "#575135",
-  ferry_stroke: "#7EC2FF",
-  floating_boom_stroke: "#f9b98f",
-  healthcare_fill: "#ffd8d7",
-  healthcare_outline: "#e1adab",
-  healthcare_text: "#593635",
-  highway_major_stroke: "#F7CF8D",
-  highway_major_high_zoom_stroke: "#FFF2DD",
-  highway_minor_stroke: "#cfcfcf",
-  highway_minor_high_zoom_stroke: "#fff",
-  highway_minor_high_zoom_tunnel_stroke: "#e6e6e6",
-  highway_casing: "#d0d0d0",
-  ice_fill: "#FAFDFF",
-  ice_outline: "#C2DEED",
-  ice_text: "#6193AE",
-  maritime_park_fill: "#CEECED",
-  maritime_park_outline: "#A4CED0",
-  maritime_park_text: "#3B6769",
-  military_fill: "#FDEFED",
-  military_outline: "#D6BFBC",
-  military_text: "#624946",
-  national_park_fill: "#ddeed8",
-  national_park_outline: "#C1D6BD",
-  national_park_text: "#3C5936",
-  outdoor_sports_facility_fill: "#ddffeb",
-  outdoor_sports_facility_outline: "#b4e8c9",
-  outdoor_sports_facility_text: "#405e4c",
-  outdoor_attraction_fill: "#ffdff2",
-  outdoor_attraction_outline: "#e2bbd2",
-  outdoor_attraction_text: "#6b445c",
-  route_foot_overlay: "#75ae7f",
-  park_fill: "#ECFAE9",
-  park_outline: "#abd4a4",
-  park_text: "#46693F",
-  parking_fill: "#efefef",
-  pier_fill: "#fff",
-  powerline_stroke: "#c1adc9",
-  power_fill: "#FBF4FE",
-  power_outline: "#F0D5FA",
-  power_text: "#54415C",
-  railway_stroke: "#96a0ac",
-  religious_fill: "#ffe9d4",
-  religious_outline: "#dfc4ab",
-  religious_text: "#4f3e2f",
-  shop_icon: "#006d8e",
-  station_fill: "#E3E9FA",
-  station_outline: "#C2CCE6",
-  station_text: "#3F4963",
-  swimming_pool_fill: "#C4F1FF",
-  swimming_pool_outline: "#BDE0EB",
-  swimming_pool_text: "#497683",
-  swimming_pool_icon: "#0092ba",
-  primary_text: "#333",
-  text: "#555",
-  text_halo: "#fff",
-  tree: "#268726",
-  watercourse_stroke: "#D4EEFF",
-  watercourse_tunnel_stroke: "#C8E0F0",
-  water_fill: "#D4EEFF",
-  water_outline: "#BFD3E0",
-  water_text: "#114566",
-};
-
 const landuses = [
   {
     filter: filters.is_aboriginal_lands,
@@ -380,45 +301,6 @@ const landuses = [
     high_zoom: true
   }
 ];
-
-const settingsByPresetGroup = {
-  amenity: {
-    fill_color: colors.education_fill,
-    outline_color: colors.education_outline,
-    text_color: colors.education_text,
-    icon_color: colors.education_icon
-  },
-  education: {
-    fill_color: colors.education_fill,
-    outline_color: colors.education_outline,
-    text_color: colors.education_text,
-    icon_color: colors.education_icon
-  },
-  shop: {
-    icon_color: colors.shop_icon
-  },
-  transport: {
-    fill_color: colors.station_fill,
-    outline_color: colors.station_outline,
-    text_color: colors.station_text
-  },
-  ice: {
-    fill_color: colors.ice_fill,
-    outline_color: colors.ice_outline,
-    text_color: colors.ice_text
-  },
-  bathing_water: {
-    fill_color: colors.swimming_pool_fill,
-    outline_color: colors.swimming_pool_outline,
-    text_color: colors.swimming_pool_text,
-    icon_color: colors.swimming_pool_icon
-  },
-  water: {
-    fill_color: colors.water_fill,
-    outline_color: colors.water_outline,
-    text_color: colors.water_text
-  }
-};
 
 const structures = [
   {
@@ -835,35 +717,13 @@ function tagsExp(tags) {
   }
 }
 
-export async function generateStyle(baseStyleJsonString, presetsById, theme) {
+export async function generateStyle(baseStyleJsonString, theme) {
 
-  const featuresToRender = theme.features.map(item => {
+  const featuresToRender = theme ? theme.features.map(item => {
     let feature = Object.assign({}, item);
-    if (item.preset) {
-      Object.assign(feature, presetsById[item.preset]);
-    }
     feature.exp = tagsExp(feature.tags);
-    if (!feature.class) feature.class = "major";
-    if (feature.icon) {
-      feature.iconOpts = {
-        fill: colors.text,
-        halo: colors.text_halo
-      };
-      if (feature.groups) {
-        let groupSettings = feature.groups.map(group => settingsByPresetGroup[group]).filter(Boolean).at(0);
-        let fill = groupSettings.icon_color || groupSettings.text_color;
-        if (fill) {
-          feature.iconOpts.fill = fill;
-        }
-      }
-      if (feature.class !== 'minor') {
-        feature.iconOpts.bg_fill = feature.iconOpts.fill;
-        feature.iconOpts.fill = colors.text_halo;
-        delete feature.iconOpts.halo;
-      }
-    }
     return feature;
-  });
+  }) : [];
 
   let icons = {};
   function iconExp(file, opts) {
@@ -890,19 +750,6 @@ export async function generateStyle(baseStyleJsonString, presetsById, theme) {
     icons[id] = opts;
     return ["image", id];
   }
-  // function caseConditionsOutputsForFeatures(features, expressionFunc) {
-  //   return presets.map(id => {
-  //     if (id.endsWith('/')) {
-  //       return Object.keys(presetsById)
-  //         .filter(id2 => id2.startsWith(id))
-  //         .map(id => presetsById[id])
-  //         .sort((a, b) => (b.parents?.length || 0) - (a.parents?.length || 0))
-  //         .map(expressionFunc).filter(Boolean).flat();
-  //     } else {
-  //       return expressionFunc(presetsById[id]);
-  //     }
-  //   }).filter(Boolean).flat()
-  // }
 
   const userLangs = navigator.languages ? navigator.languages : navigator.language ? [navigator.language] : [];
   const osmLangSuffixes = [];
@@ -1302,10 +1149,10 @@ export async function generateStyle(baseStyleJsonString, presetsById, theme) {
       ] : ["image", ""],
       "text-variable-anchor-offset": featuresToRender.filter(feature => feature.icon).length ? [
         "case",
-        ...featuresToRender.filter(feature => feature.icon && feature.class === "major").map(feature => {
+        ...featuresToRender.filter(feature => feature.icon && feature.iconOpts?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [1.1, 0], "right", [-1.1, 0]]]]
         }).flat(),
-        ...featuresToRender.filter(feature => feature.icon && feature.class !== "major").map(feature => {
+        ...featuresToRender.filter(feature => feature.icon && !feature.iconOpts?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]]]
         }).flat(),
         ["literal", ["center", [0, 0]]]

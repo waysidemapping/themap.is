@@ -11,5 +11,6 @@
         "truck parking",
         "vehicle parking"
     ],
-    "name": "Parking Lot"
+    "plural": "parking",
+    "name": "Parking"
 }

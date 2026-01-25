@@ -19,5 +19,6 @@
     "tags": {
         "amenity": "restaurant"
     },
+    "plural": "restaurants",
     "name": "Restaurant"
 }

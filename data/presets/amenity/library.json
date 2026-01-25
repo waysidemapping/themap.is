@@ -6,5 +6,6 @@
     "tags": {
         "amenity": "library"
     },
+    "plural": "libraries",
     "name": "Library"
 }

@@ -1,9 +1,10 @@
 import { generateStyle } from './styleGenerator.js'; 
+import { state } from "./stateController.js";
 import { beefsteakProtocolFunction } from "https://cdn.jsdelivr.net/gh/waysidemapping/beefsteak-map-tiles/demo/src/beefsteak-protocol.js";
+
 let map;
 
 let baseStyleJsonString;
-let presetsById;
 let activeStyleInfo;
 
 window.addEventListener('load', function() {
@@ -13,7 +14,6 @@ window.addEventListener('load', function() {
 async function initializeMap() {
 
   baseStyleJsonString = await fetch('/style/basestyle.json').then(response => response.text());
-  presetsById = await fetch('/dist/presets.json').then(response => response.json());
 
   // default
   let initialCenter = [-111.545, 39.546];
@@ -69,54 +69,17 @@ async function initializeMap() {
         unit: 'imperial'
     }), "bottom-left");
 
+  state.addEventListener('change-theme', function() {
+    reloadMapStyle();
+  });
   reloadMapStyle();
 }
 
-export const themes = {
-  "books": {
-    name: "books",
-    features: [
-      {
-        preset: "amenity/library"
-      },
-      {
-        preset: "amenity/public_bookcase",
-        class: "minor"
-      },
-      {
-        preset: "shop/books"
-      }
-    ]
-  },
-  "bicycle_rental": {
-    name: "bicycle rental",
-    features: [
-      {
-        preset: "amenity/bicycle_rental"
-      }
-    ]
-  },
-  "swimming_pools": {
-    name: "swimming pools",
-    features: [
-      {
-        preset: "leisure/sports_centre/swimming"
-      },
-      {
-        preset: "leisure/swimming_pool",
-        class: "minor"
-      }
-    ]
-  }
-};
-
 async function reloadMapStyle() {
 
-  if (!baseStyleJsonString || !presetsById) return;
+  if (!baseStyleJsonString) return;
 
-  let theme = themes["swimming_pools"];
-
-  let styleInfo = await generateStyle(baseStyleJsonString, presetsById, theme);
+  let styleInfo = await generateStyle(baseStyleJsonString, state.theme);
 
   // We can put any absolute URL here since we override it in the transformRequest
   styleInfo.style.sprite = window.location.origin;

@@ -17,5 +17,6 @@
     "groups": [
         "transport"
     ],
+    "plural": "bicycle rental",
     "name": "Bicycle Rental"
 }

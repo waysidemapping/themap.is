@@ -6,5 +6,6 @@
     "tags": {
         "amenity": "clock"
     },
+    "plural": "clocks",
     "name": "Clock"
 }

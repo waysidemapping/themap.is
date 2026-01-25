@@ -7,5 +7,6 @@
     "tags": {
         "amenity": "bench"
     },
+    "plural": "benches",
     "name": "Bench"
 }

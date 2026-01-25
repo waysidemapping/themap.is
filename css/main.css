@@ -1,3 +1,20 @@
+@font-face{
+  src: url('fonts/Cooper-SemiBold.otf');
+  font-family: "Cooper";
+  font-weight: 600;
+}
+@font-face{
+  src: url('fonts/Cooper-Bold.otf');
+  font-family: "Cooper";
+  font-weight: 700;
+}
+
+:root {
+  --grid-color: #ddd;
+  --sidebar-width: 360px;
+  --title-font: 'Cooper', Georgia, serif;
+}
+
 b, strong {
   font-weight: bold;
 }
@@ -24,10 +41,36 @@ body {
   line-height: 1.25em;
 }
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
   font-weight: 700;
 }
 
 #map {
   width: 100vw;
   height: 100vh;
+  position: relative;
+}
+
+#ui {
+  position: absolute;
+  z-index: 1;
+}
+#header {
+  max-width: 100vw;/*var(--sidebar-width);*/
+  background: white;
+  border: 1px solid var(--grid-color);
+  border-top: 2px solid #CD070F;
+  border-radius: 0 0 8px 8px;
+  padding: 6px 12px;
+  box-shadow: rgba(0,0,0,0.1) 0 1px 1px;
+}
+.pre-maptitle {
+  font-family: var(--title-font);
+  font-weight: 600;
+}
+h1 {
+  font-size: 16px;
+}
+.maptitle {
+  color: #CD070F;
 }

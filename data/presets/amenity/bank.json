@@ -18,5 +18,6 @@
     "tags": {
         "amenity": "bank"
     },
+    "plural": "banks",
     "name": "Bank"
 }

@@ -9,5 +9,9 @@
     "tags": {
         "amenity": "bar"
     },
+    "groups": [
+        "nightlife"
+    ],
+    "plural": "bars",
     "name": "Bar"
 }

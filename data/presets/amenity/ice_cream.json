@@ -1,4 +1,5 @@
 {
+    "icon": "ice_cream_cone",
     "terms": [
         "frozen",
         "gelato",
@@ -9,5 +10,6 @@
     "tags": {
         "amenity": "ice_cream"
     },
+    "plural": "ice cream shops",
     "name": "Ice Cream Shop"
 }
