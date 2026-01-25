@@ -8,5 +8,9 @@
     "tags": {
         "amenity": "cafe"
     },
-    "name": "Cafe"
+    "groups": [
+        "food"
+    ],
+    "plural": "cafés",
+    "name": "Café"
 }

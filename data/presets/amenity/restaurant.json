@@ -19,6 +19,9 @@
     "tags": {
         "amenity": "restaurant"
     },
+    "groups": [
+        "food"
+    ],
     "plural": "restaurants",
     "name": "Restaurant"
 }

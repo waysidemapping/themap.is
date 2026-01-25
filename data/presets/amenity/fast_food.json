@@ -7,5 +7,9 @@
         "restaurant",
         "takeaway"
     ],
+    "groups": [
+        "food"
+    ],
+    "plural": "fast food",
     "name": "Fast Food"
 }

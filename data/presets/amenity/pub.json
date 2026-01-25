@@ -11,6 +11,9 @@
         "dive",
         "drink"
     ],
+    "groups": [
+        "food"
+    ],
     "plural": "pubs",
     "name": "Pub"
 }

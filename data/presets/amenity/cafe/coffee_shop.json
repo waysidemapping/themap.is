@@ -1,0 +1,34 @@
+{
+    "icon": "hot_drink_cup",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "tags": {
+        "amenity": "cafe",
+        "cuisine": "coffee_shop"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "coffee_shop"
+    },
+    "terms": [
+        "americano",
+        "brew",
+        "cafe",
+        "caffe",
+        "caffè",
+        "café",
+        "cappuccino",
+        "cocoa",
+        "coffee shop",
+        "drip",
+        "espresso",
+        "hot drinks",
+        "latte",
+        "macchiato",
+        "tea"
+    ],
+    "plural": "coffeehouses",
+    "name": "Coffeehouse"
+}
