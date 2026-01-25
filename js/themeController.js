@@ -95,7 +95,13 @@ async function loadData() {
   for (let presetId in presetsById) {
     let preset = presetsById[presetId];
     if (preset.plural) {
-      let themeId = preset.plural.replaceAll(' ', '_').toLowerCase();
+      // id normalization needs to match those in 404.html
+      let themeId = preset.plural
+        .replaceAll(' ', '_')
+        .toLowerCase()
+        // strip diacritics
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
       if (!themes[themeId]) {
         themes[themeId] = {
           name: preset.plural,

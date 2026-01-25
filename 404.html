@@ -7,7 +7,11 @@
       // Encode full client-side route
       let normalizedPathname = decodeURIComponent(pathname)
         // replace runs of underscores or whitespaces with single underscore
-        .replace(/[\s_]+/g, "_").toLowerCase();
+        .replace(/[\s_]+/g, "_")
+        .toLowerCase()
+        // strip diacritics
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
       const fullPath = encodeURI(normalizedPathname) + search + hash;
       // Redirect to homepage with encoded route, to be intercepted in index.html
       window.location.replace("/?__route__=" + encodeURIComponent(fullPath));
