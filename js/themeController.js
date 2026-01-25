@@ -24,6 +24,20 @@ const themesById = {
       }
     ]
   },
+  "eats": {
+    features: [
+      {
+        presets: [
+          "amenity/fast_food",
+          "amenity/food_court",
+          "amenity/cafe",
+          "amenity/ice_cream",
+          "amenity/pub",
+          "amenity/restaurant"
+        ]
+      }
+    ]
+  },
   "nightlife": {
     features: [
       {
@@ -149,25 +163,26 @@ async function loadData() {
 
     for (let i in theme.features) {
       let feature = theme.features[i];
-      if (feature.icon) {
-        if (!feature.iconOpts) feature.iconOpts = {
-          fill: colors.text,
-          halo: colors.text_halo
-        };
-        if (feature.groups) {
-          let groupDefaults = feature.groups.map(group => featureDefaultsByGroup[group]).filter(Boolean).at(0);
-          if (groupDefaults) {
-            if (groupDefaults.iconOpts) {
-              Object.assign(feature.iconOpts, groupDefaults.iconOpts);
-            }
+      if (!feature.icon) {
+        feature.icon = 'dot';
+      }
+      if (!feature.iconOpts) feature.iconOpts = {
+        fill: colors.text,
+        halo: colors.text_halo
+      };
+      if (feature.groups) {
+        let groupDefaults = feature.groups.map(group => featureDefaultsByGroup[group]).filter(Boolean).at(0);
+        if (groupDefaults) {
+          if (groupDefaults.iconOpts) {
+            Object.assign(feature.iconOpts, groupDefaults.iconOpts);
           }
         }
-        // if (feature.class !== 'minor') {
-        //   feature.iconOpts.bg_fill = feature.iconOpts.fill;
-        //   feature.iconOpts.fill = colors.text_halo;
-        //   delete feature.iconOpts.halo;
-        // }
       }
+      // if (feature.class !== 'minor') {
+      //   feature.iconOpts.bg_fill = feature.iconOpts.fill;
+      //   feature.iconOpts.fill = colors.text_halo;
+      //   delete feature.iconOpts.halo;
+      // }
     }
     if (!theme.primaryColor) {
       theme.primaryColor = theme.features.map(feature => [feature.iconOpts?.bg_fill, feature.iconOpts?.fill]).flat().filter(Boolean).at(0);

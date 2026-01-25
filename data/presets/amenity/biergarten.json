@@ -7,5 +7,9 @@
         "bier",
         "booze"
     ],
-    "name": "Biergarten"
+    "groups": [
+        "food"
+    ],
+    "plural": "beer gardens",
+    "name": "Beer Garden"
 }
