@@ -14,6 +14,9 @@ http.createServer(function (request, response) {
         // need to use path.normalize so people can't access directories underneath baseDirectory
         let fsPath = baseDirectory + path.normalize(requestUrl.pathname)
 
+        // default 404 page
+        if(!fs.existsSync(fsPath)) fsPath = baseDirectory + '/404.html';
+
         if (fs.statSync(fsPath).isDirectory()) {
           if (!fsPath.endsWith("/")) fsPath += "/";
           fsPath += "index.html";
@@ -39,8 +42,8 @@ http.createServer(function (request, response) {
           response.writeHead(200)
         })
         fileStream.on('error',function(e) {
-             response.writeHead(404)     // assume the file doesn't exist
-             response.end()
+          response.writeHead(404)     // assume the file doesn't exist
+          response.end()
         })
    } catch(e) {
         response.writeHead(500)

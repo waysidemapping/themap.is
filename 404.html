@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      const { pathname, search, hash } = window.location;
+      // Encode full client-side route
+      let normalizedPathname = decodeURIComponent(pathname)
+        // replace runs of underscores or whitespaces with single underscore
+        .replace(/[\s_]+/g, "_").toLowerCase();
+      const fullPath = encodeURI(normalizedPathname) + search + hash;
+      // Redirect to homepage with encoded route, to be intercepted in index.html
+      window.location.replace("/?__route__=" + encodeURIComponent(fullPath));
+    </script>
+  </head>
+  <body></body>
+</html>

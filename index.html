@@ -4,14 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
     <title>TheMapIs by Wayside Mapping</title>
+    <script type="text/javascript">
+      // setup the URL correctly if we were redirected from 404.html
+      const params = new URLSearchParams(window.location.search);
+      const route = params.get("__route__");
+      if (route) history.replaceState({}, "", route);
+    </script>
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="dist/maplibre/maplibre-gl.css" />
     <script type="text/javascript" src="dist/maplibre/maplibre-gl.js"></script>
   </head>
   <body>
+    <div id="ui"></div>
     <div id="map"></div>
+    <script type="module" src="js/urlController.js"></script>
+    <script type="module" src="js/uiController.js"></script>
     <script type="module" src="js/mapController.js"></script>
-    <script type="module" src="js/hashController.js"></script>
   </body>
 </html>
