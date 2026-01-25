@@ -13,6 +13,11 @@ export function getElementById(...args) {
   return el;
 }
 
+export function getElementsByName(...args) {
+  let els = document.getElementsByName(...args);
+  if (els) return els.map(wrapElementFunctions);
+}
+
 // Wraps certain functions of the element so they return the
 // element itself in order to enable chaining.
 function wrapElementFunctions(el) {
