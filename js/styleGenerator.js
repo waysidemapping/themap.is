@@ -706,7 +706,23 @@ function tagsExp(tags) {
     if (val === '*') {
       exp.push(['has', key]);
     } else {
-      exp.push(['==', ['get', key], val]);
+      exp.push(
+        [
+          "all",
+          ["has", key],
+          [
+            "any",
+            // check if exact match (one item in list)
+            ["==", ["get", key], val],
+            // check if item is listed between others
+            ["in", `;${val};`, ["get", key]],
+            // check if item is first in list
+            ["==", ["slice", ["get", key], 0, ["length", `${val};`]], `${val};`],
+            // check if item is last in list
+            ["==", ["slice", ["get", key], ["-", ["length", ["get", key]], ["length", `;${val}`]]], `;${val}`]
+          ]
+        ]
+      );
     }
   }
   if (exp.length === 1) {
