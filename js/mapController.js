@@ -3,17 +3,26 @@ import { state } from "./stateController.js";
 import { beefsteakProtocolFunction } from "https://cdn.jsdelivr.net/gh/waysidemapping/beefsteak-map-tiles/demo/src/beefsteak-protocol.js";
 
 let map;
-
-let baseStyleJsonString;
 let activeStyleInfo;
+
+const baseStyleJson = {
+    "version": 8,
+    "name": "The Map Is Basemap Style",
+    "glyphs": "https://tiles.openstreetmap.us/fonts/{fontstack}/{range}.pbf",
+    "sources": {
+       "beefsteak": {
+            "type": "vector",
+            "url": "http://159.69.74.234/beefsteak"
+        }
+    },
+    "layers": []
+};
 
 window.addEventListener('load', function() {
   initializeMap();
 });
 
 async function initializeMap() {
-
-  baseStyleJsonString = await fetch('/style/basestyle.json').then(response => response.text());
 
   // default
   let initialCenter = [-111.545, 39.546];
@@ -35,7 +44,7 @@ async function initializeMap() {
     fadeDuration: 0,
   });
 
-  const beefsteakEndpoint = JSON.parse(baseStyleJsonString).sources.beefsteak.url;
+  const beefsteakEndpoint = baseStyleJson.sources.beefsteak.url;
   const beefsteakEndpointPrefix = /(.*\/\/.*\/)/.exec(beefsteakEndpoint)[1];
   maplibregl.addProtocol('beefsteak', beefsteakProtocolFunction);
     map.setTransformRequest((url, resourceType) => {
@@ -77,9 +86,9 @@ async function initializeMap() {
 
 async function reloadMapStyle() {
 
-  if (!baseStyleJsonString) return;
+  if (!map) return;
 
-  let styleInfo = await generateStyle(baseStyleJsonString, state.theme);
+  let styleInfo = await generateStyle(baseStyleJson, state.theme);
 
   // We can put any absolute URL here since we override it in the transformRequest
   styleInfo.style.sprite = window.location.origin;

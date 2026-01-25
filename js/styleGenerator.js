@@ -733,7 +733,10 @@ function tagsExp(tags) {
   }
 }
 
-export async function generateStyle(baseStyleJsonString, theme) {
+export async function generateStyle(baseStyleJson, theme) {
+
+  // parse anew every time to avoid object references
+  const style = JSON.parse(JSON.stringify(baseStyleJson));
 
   const featuresToRender = theme ? theme.features.map(item => {
     let feature = Object.assign({}, item);
@@ -791,9 +794,6 @@ export async function generateStyle(baseStyleJsonString, theme) {
   //   localizedName
   // ];
   const labelTextField = localizedName;
-
-  // parse anew every time to avoid object references
-  const style = JSON.parse(baseStyleJsonString);
 
   function addLayer(layer) {
     style.layers.push(layer);
