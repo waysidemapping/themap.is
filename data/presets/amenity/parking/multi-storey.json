@@ -1,0 +1,21 @@
+{
+    "icon": "car-parking_structure",
+    "tags": {
+        "amenity": "parking",
+        "parking": "multi-storey"
+    },
+    "terms": [
+        "automobile parking",
+        "car lot",
+        "car parking",
+        "rv parking",
+        "truck parking",
+        "vehicle parking"
+    ],
+    "reference": {
+        "key": "parking",
+        "value": "multi-storey"
+    },
+    "plural": "parking garages",
+    "name": "Parking Garage"
+}

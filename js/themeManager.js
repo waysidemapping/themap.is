@@ -38,6 +38,18 @@ const themesById = {
       }
     ]
   },
+  "gambling": {
+    features: [
+      {
+        presets: [
+          "amenity/casino",
+          "leisure/adult_gaming_centre",
+          "shop/bookmaker",
+          "shop/lottery"
+        ]
+      },
+    ]
+  },
   "nightlife": {
     features: [
       {
@@ -64,47 +76,56 @@ const themesById = {
 const featureDefaultsByGroup = {
   amenity: {
     iconOpts: { 
-      fill: colors.education_icon
+      bg_fill: colors.education_icon,
+      fill: colors.text_halo
     }
   },
   bathing_water: {
     iconOpts: { 
-      fill: colors.swimming_pool_icon
+      bg_fill: colors.swimming_pool_icon,
+      fill: colors.text_halo
     }
   },
   education: {
     iconOpts: { 
-      fill: colors.education_icon
+      bg_fill: colors.education_icon,
+      fill: colors.text_halo
     }
   },
   food: {
     iconOpts: { 
-      fill: colors.food_icon
+      bg_fill: colors.food_icon,
+      fill: colors.text_halo
     }
   },
   ice: {
     iconOpts: { 
-      fill: colors.ice_text
+      bg_fill: colors.ice_text,
+      fill: colors.text_halo
     }
   },
   nightlife: {
     iconOpts: { 
-      fill: "#33145e"
+      bg_fill: "#33145e",
+      fill: colors.text_halo
     }
   },
   shop: {
     iconOpts: { 
-      fill: colors.shop_icon
+      bg_fill: colors.shop_icon,
+      fill: colors.text_halo
     }
   },
   transport: {
     iconOpts: { 
-      fill: colors.station_text
+      bg_fill: colors.station_text,
+      fill: colors.text_halo
     }
   },
   water: {
     iconOpts: { 
-      fill: colors.water_text
+      bg_fill: colors.water_text,
+      fill: colors.text_halo
     }
   }
 };
@@ -138,6 +159,9 @@ async function loadData() {
     let theme = themesById[id];
     theme.id = id;
     if (!theme.name) theme.name = theme.id.replaceAll('_', ' ');
+    theme.searchName = theme.name.toLowerCase()
+      // strip diacritics
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
     let expandedFeatures = [];
     for (let i in theme.features) {
@@ -163,12 +187,10 @@ async function loadData() {
 
     for (let i in theme.features) {
       let feature = theme.features[i];
-      if (!feature.icon) {
-        feature.icon = 'dot';
-      }
+      if (!feature.icon) feature.icon = 'dot';
       if (!feature.iconOpts) feature.iconOpts = {
-        fill: colors.text,
-        halo: colors.text_halo
+        bg_fill: colors.text,
+        fill: colors.text_halo
       };
       if (feature.groups) {
         let groupDefaults = feature.groups.map(group => featureDefaultsByGroup[group]).filter(Boolean).at(0);
@@ -191,4 +213,4 @@ async function loadData() {
   return themesById;
 }
 
-export const themes = await loadData();
+export const themesPromise = loadData();

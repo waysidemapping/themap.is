@@ -11,7 +11,12 @@
 
 :root {
   --primary-color: #CD070F;
+  --bg-color: #fff;
+  --hover-bg-color: #eee;
+  --border-radius: 8px;
   --grid-color: #ddd;
+  --active-grid-color: #bbb;
+  --box-shadow: rgba(0,0,0,0.1) 0 1px 1px;
   --sidebar-width: 360px;
   --title-font: 'Cooper', Georgia, serif;
 }
@@ -46,6 +51,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-font);
   font-weight: 700;
 }
+h1 {
+  font-size: 16px;
+}
 button > * {
   display: inline-block;
   vertical-align: middle;
@@ -57,17 +65,31 @@ button > *:not(:first-child) {
   margin-left: 0.2em;
 }
 
-button#explore-maps {
-  background: #fff;
+input[type=search] {
+  border: 1px solid var(--grid-color);
+  width: 100%;
+  font-size: 14px;
+  padding: 0.5em 0.5em 0.5em 2.5em;
+  border-radius: 100px;
+}
+input[type=search]:focus, input[type=search]:active {
+  border: 1px solid var(--active-grid-color);
+}
+
+button {
+  background: var(--bg-color);
   margin: 0;
   border: 0;
-  border-bottom: 1px solid var(--grid-color);
   padding: 6px 12px;
   cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-  color: #666;
   width: 100%;
+}
+button:hover, button:focus {
+  background: var(--hover-bg-color);
+}
+
+.hidden {
+  display: none !important;
 }
 
 #map {
@@ -75,7 +97,6 @@ button#explore-maps {
   height: 100vh;
   position: relative;
 }
-
 #ui {
   position: absolute;
   z-index: 1;
@@ -83,20 +104,70 @@ button#explore-maps {
 #header {
   min-width: 300px;
   max-width: 100vw;/*var(--sidebar-width);*/
-  background: white;
+  background: var(--bg-color);
   border: 1px solid var(--grid-color);
   border-top: 0;
-  border-radius: 0 0 8px 8px;
-  box-shadow: rgba(0,0,0,0.1) 0 1px 1px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+#header h1 {
+  padding: 6px 12px 9px 12px;
+}
+button#explore-maps {
+  font-size: 12px;
+  border-bottom: 1px solid var(--grid-color);
+  font-weight: bold;
+  color: #666;
 }
 .pre-maptitle {
   font-family: var(--title-font);
   font-weight: 600;
 }
-h1 {
-  padding: 6px 12px 9px 12px;
-  font-size: 18px;
-}
 .maptitle {
+  font-weight: bold;
+  font-family: var(--title-font);
   color: var(--primary-color);
+}
+
+#map-explorer {
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--grid-color);
+  box-shadow: var(--box-shadow);
+  position: absolute;
+  margin-left: -1px;
+  margin-top: -1px;
+  max-width: 100vw;
+  max-height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 6px 12px 0 12px;
+}
+.search-wrap {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 6px 6px 12px 6px;
+}
+.search-wrap img {
+  position: absolute;
+  margin-left: 0.75em;
+  pointer-events: none;
+}
+.search-results {
+  overflow: auto;
+  border-top: solid 1px var(--grid-color);
+}
+.search-results:empty {
+  display: none;
+}
+.theme-item button {
+  padding: 6px 0;
+  text-align: unset;
+  font-size: 16px;
+}
+.theme-item:not(:last-child) button {
+  border-bottom: solid 1px var(--grid-color);
 }

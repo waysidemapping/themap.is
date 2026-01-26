@@ -30,4 +30,27 @@ function wrapElementFunctions(el) {
       return el;
     };
   }
-} 
+}
+
+// From ISC-licensed file:
+// https://github.com/openstreetmap/iD/blob/a3990df0af8582172c3d2821b1f6441206fb6c78/modules/util/util.js#L490
+export function editDistance(a, b) {
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+  var matrix = [];
+  var i, j;
+  for (i = 0; i <= b.length; i++) { matrix[i] = [i]; }
+  for (j = 0; j <= a.length; j++) { matrix[0][j] = j; }
+  for (i = 1; i <= b.length; i++) {
+    for (j = 1; j <= a.length; j++) {
+      if (b.charAt(i-1) === a.charAt(j-1)) {
+        matrix[i][j] = matrix[i-1][j-1];
+      } else {
+        matrix[i][j] = Math.min(matrix[i-1][j-1] + 1, // substitution
+          Math.min(matrix[i][j-1] + 1, // insertion
+          matrix[i-1][j] + 1)); // deletion
+      }
+    }
+  }
+  return matrix[b.length][a.length];
+}

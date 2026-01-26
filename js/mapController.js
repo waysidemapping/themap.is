@@ -18,11 +18,9 @@ const baseStyleJson = {
     "layers": []
 };
 
-window.addEventListener('load', function() {
-  initializeMap();
-});
+initializeMap();
 
-async function initializeMap() {
+function initializeMap() {
 
   // default
   let initialCenter = [-111.545, 39.546];
@@ -90,14 +88,15 @@ async function reloadMapStyle() {
 
   let styleInfo = await generateStyle(baseStyleJson, state.theme);
 
-  // We can put any absolute URL here since we override it in the transformRequest
-  styleInfo.style.sprite = window.location.origin;
+  // We can put any absolute URL here since we override it in the transformRequest,
+  // but it has to be unique to the style since MapLibre will cache it
+  styleInfo.style.sprite = window.location.origin + '/' + (state.theme?.id || 'default');
 
   if (activeStyleInfo && activeStyleInfo.spritesheets) {
-    URL.revokeObjectURL(styleInfo.spritesheets["1"].pngUrl);
-    URL.revokeObjectURL(styleInfo.spritesheets["1"].jsonUrl);
-    URL.revokeObjectURL(styleInfo.spritesheets["2"].pngUrl);
-    URL.revokeObjectURL(styleInfo.spritesheets["2"].jsonUrl);
+    URL.revokeObjectURL(activeStyleInfo.spritesheets["1"].pngUrl);
+    URL.revokeObjectURL(activeStyleInfo.spritesheets["1"].jsonUrl);
+    URL.revokeObjectURL(activeStyleInfo.spritesheets["2"].pngUrl);
+    URL.revokeObjectURL(activeStyleInfo.spritesheets["2"].jsonUrl);
   }
   activeStyleInfo = styleInfo;
 
