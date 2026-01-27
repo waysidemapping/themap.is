@@ -9,5 +9,6 @@ This repo incorporates assets, code, or ideas, in full or in part, from the foll
 - https://github.com/openstreetmap/id-tagging-schema ([ISC](https://github.com/openstreetmap/id-tagging-schema/blob/main/LICENSE.md))
 - https://github.com/mapbox/maki ([CC0](https://github.com/mapbox/maki/blob/main/LICENSE.txt))
 - https://github.com/rapideditor/temaki ([CC0](https://github.com/rapideditor/temaki/blob/main/LICENSE.md))
+- https://github.com/openstreetmap-carto/openstreetmap-carto ([CC0](https://github.com/openstreetmap-carto/openstreetmap-carto/blob/master/LICENSE.txt))
 
 Thank you to everyone who practices open source principles. This project would not be possible without you <3
