@@ -1,10 +1,11 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Motorway",
     "tags": {
         "highway": "motorway"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "autobahn",
         "expressway",
@@ -16,6 +17,5 @@
         "street",
         "thruway",
         "turnpike"
-    ],
-    "name": "Motorway"
+    ]
 }

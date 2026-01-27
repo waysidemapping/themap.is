@@ -1,4 +1,6 @@
 {
+    "name": "Bowling Green",
+    "plural": "bowling green",
     "tags": {
         "leisure": "pitch",
         "sport": "bowls"
@@ -6,7 +8,5 @@
     "reference": {
         "key": "sport",
         "value": "bowls"
-    },
-    "plural": "bowling green",
-    "name": "Bowling Green"
+    }
 }

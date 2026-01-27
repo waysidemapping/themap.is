@@ -1,11 +1,11 @@
 {
-    "icon": "fence",
-    "geometry": [
-        "line"
-    ],
+    "name": "Fence",
     "tags": {
         "barrier": "fence"
     },
-    "name": "Fence",
+    "geometry": [
+        "line"
+    ],
+    "icon": "fence",
     "matchScore": 0.25
 }

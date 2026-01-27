@@ -1,8 +1,8 @@
 {
-    "icon": "watch",
+    "name": "watch store",
+    "plural": "watch stores",
     "tags": {
         "shop": "watches"
     },
-    "plural": "watch stores",
-    "name": "watch store"
+    "icon": "watch"
 }

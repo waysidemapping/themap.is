@@ -1,5 +1,6 @@
 {
-    "icon": "baseball_batter",
+    "name": "Baseball Field",
+    "plural": "baseball fields",
     "tags": {
         "leisure": "pitch",
         "sport": "baseball"
@@ -12,6 +13,5 @@
         "diamond",
         "softball"
     ],
-    "plural": "baseball fields",
-    "name": "Baseball Field"
+    "icon": "baseball_batter"
 }

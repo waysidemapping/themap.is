@@ -1,5 +1,6 @@
 {
-    "icon": "shoe",
+    "name": "shoe store",
+    "plural": "shoe stores",
     "tags": {
         "shop": "shoes"
     },
@@ -15,6 +16,5 @@
         "slippers",
         "sneakers"
     ],
-    "plural": "shoe stores",
-    "name": "shoe store"
+    "icon": "shoe"
 }

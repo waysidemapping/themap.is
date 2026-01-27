@@ -1,12 +1,12 @@
 {
-    "icon": "cape_landform",
+    "name": "Peninsula",
+    "tags": {
+        "natural": "peninsula"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "natural": "peninsula"
-    },
     "terms": [
         "bay",
         "cape",
@@ -17,5 +17,5 @@
         "islet",
         "promontory"
     ],
-    "name": "Peninsula"
+    "icon": "cape_landform"
 }

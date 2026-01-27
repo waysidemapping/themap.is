@@ -1,14 +1,14 @@
 {
-    "terms": [
-        "fast food",
-        "food",
-        "restaurant"
+    "name": "Food Court",
+    "groups": [
+        "food"
     ],
     "tags": {
         "amenity": "food_court"
     },
-    "groups": [
-        "food"
-    ],
-    "name": "Food Court"
+    "terms": [
+        "fast food",
+        "food",
+        "restaurant"
+    ]
 }

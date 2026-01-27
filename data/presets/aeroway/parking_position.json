@@ -1,12 +1,12 @@
 {
-    "icon": "plane_taxiing",
+    "name": "Aircraft Parking Position",
+    "tags": {
+        "aeroway": "parking_position"
+    },
     "geometry": [
         "vertex",
         "point",
         "line"
     ],
-    "tags": {
-        "aeroway": "parking_position"
-    },
-    "name": "Aircraft Parking Position"
+    "icon": "plane_taxiing"
 }

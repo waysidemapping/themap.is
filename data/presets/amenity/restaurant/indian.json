@@ -1,4 +1,13 @@
 {
+    "name": "Indian Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "indian"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "indian"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -11,14 +20,5 @@
         "grill",
         "lunch",
         "table"
-    ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "indian"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "indian"
-    },
-    "name": "Indian Restaurant"
+    ]
 }

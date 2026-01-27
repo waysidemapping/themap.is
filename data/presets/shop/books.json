@@ -1,5 +1,10 @@
 {
-    "icon": "book",
+    "name": "bookstore",
+    "plural": "bookstores",
+    "groups": [
+        "books",
+        "stores"
+    ],
     "tags": {
         "shop": "books"
     },
@@ -11,10 +16,5 @@
         "Book Seller",
         "hobby"
     ],
-    "groups": [
-        "books",
-        "stores"
-    ],
-    "plural": "bookstores",
-    "name": "bookstore"
+    "icon": "book"
 }

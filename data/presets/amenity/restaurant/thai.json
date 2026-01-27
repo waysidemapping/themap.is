@@ -1,4 +1,13 @@
 {
+    "name": "Thai Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "thai"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "thai"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -13,14 +22,5 @@
         "grill",
         "lunch",
         "table"
-    ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "thai"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "thai"
-    },
-    "name": "Thai Restaurant"
+    ]
 }

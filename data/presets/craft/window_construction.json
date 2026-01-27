@@ -1,10 +1,10 @@
 {
-    "icon": "window",
-    "terms": [
-        "glass"
-    ],
+    "name": "Window Construction",
     "tags": {
         "craft": "window_construction"
     },
-    "name": "Window Construction"
+    "terms": [
+        "glass"
+    ],
+    "icon": "window"
 }

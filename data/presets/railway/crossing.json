@@ -1,11 +1,11 @@
 {
-    "icon": "crossing_rail_striped",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Railway-Path Crossing",
     "tags": {
         "railway": "crossing"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "crossing",
         "grade crossing",
@@ -17,5 +17,5 @@
         "railway path crossing",
         "train crossing"
     ],
-    "name": "Railway-Path Crossing"
+    "icon": "crossing_rail_striped"
 }

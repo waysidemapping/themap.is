@@ -1,5 +1,8 @@
 {
-    "icon": "bunker_silo",
+    "name": "Bunker Silo",
+    "tags": {
+        "man_made": "bunker_silo"
+    },
     "geometry": [
         "point",
         "area"
@@ -8,8 +11,5 @@
         "silage",
         "storage"
     ],
-    "tags": {
-        "man_made": "bunker_silo"
-    },
-    "name": "Bunker Silo"
+    "icon": "bunker_silo"
 }

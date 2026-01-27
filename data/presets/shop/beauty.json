@@ -1,17 +1,17 @@
 {
-    "icon": "lips-lipstick",
+    "name": "beauty salon",
+    "plural": "beauty salons",
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "tags": {
+        "shop": "beauty"
+    },
     "terms": [
         "salon",
         "spa",
         "tanning"
     ],
-    "tags": {
-        "shop": "beauty"
-    },
-    "groups": [
-        "beauty",
-        "stores"
-    ],
-    "plural": "beauty salons",
-    "name": "beauty salon"
+    "icon": "lips-lipstick"
 }

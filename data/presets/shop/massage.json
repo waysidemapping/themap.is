@@ -1,8 +1,8 @@
 {
-    "icon": "massager-lier",
+    "name": "massage shop",
+    "plural": "massage shops",
     "tags": {
         "shop": "massage"
     },
-    "plural": "massage shops",
-    "name": "massage shop"
+    "icon": "massager-lier"
 }

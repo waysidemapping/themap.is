@@ -1,12 +1,15 @@
 {
-    "icon": "plus",
-    "geometry": [
-        "point",
-        "area"
+    "name": "Healthcare Facility",
+    "groups": [
+        "healthcare"
     ],
     "tags": {
         "healthcare": "*"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "clinic",
         "disease",
@@ -17,9 +20,6 @@
         "surgery",
         "wellness"
     ],
-    "groups": [
-        "healthcare"
-    ],
-    "name": "Healthcare Facility",
+    "icon": "plus",
     "matchScore": 0.4
 }

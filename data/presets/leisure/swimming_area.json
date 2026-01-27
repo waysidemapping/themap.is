@@ -1,11 +1,11 @@
 {
+    "name": "Natural Swimming Area",
+    "tags": {
+        "leisure": "swimming_area"
+    },
     "terms": [
         "aquatics",
         "dive",
         "water"
-    ],
-    "tags": {
-        "leisure": "swimming_area"
-    },
-    "name": "Natural Swimming Area"
+    ]
 }

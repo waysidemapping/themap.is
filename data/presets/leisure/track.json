@@ -1,5 +1,5 @@
 {
-    "icon": "racetrack_oval",
+    "name": "Racetrack",
     "tags": {
         "leisure": "track"
     },
@@ -11,5 +11,5 @@
         "raceway",
         "track"
     ],
-    "name": "Racetrack"
+    "icon": "racetrack_oval"
 }

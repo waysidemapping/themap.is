@@ -1,5 +1,9 @@
 {
-    "icon": "watering_can",
+    "name": "garden center",
+    "plural": "garden centers",
+    "tags": {
+        "shop": "garden_centre"
+    },
     "terms": [
         "landscape",
         "mulch",
@@ -9,9 +13,5 @@
         "shrub",
         "tree"
     ],
-    "tags": {
-        "shop": "garden_centre"
-    },
-    "plural": "garden centers",
-    "name": "garden center"
+    "icon": "watering_can"
 }

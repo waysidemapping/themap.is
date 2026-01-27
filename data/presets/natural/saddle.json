@@ -1,12 +1,12 @@
 {
-    "icon": "mountain_saddle",
+    "name": "Saddle",
+    "tags": {
+        "natural": "saddle"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "natural": "saddle"
-    },
     "terms": [
         "Mountain Pass",
         "col",
@@ -15,5 +15,5 @@
         "pass",
         "top"
     ],
-    "name": "Saddle"
+    "icon": "mountain_saddle"
 }

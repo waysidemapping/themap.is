@@ -1,4 +1,8 @@
 {
+    "name": "Storage Tank",
+    "tags": {
+        "man_made": "storage_tank"
+    },
     "geometry": [
         "area",
         "point"
@@ -9,9 +13,5 @@
         "oil",
         "petrol",
         "water"
-    ],
-    "tags": {
-        "man_made": "storage_tank"
-    },
-    "name": "Storage Tank"
+    ]
 }

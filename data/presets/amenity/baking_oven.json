@@ -1,5 +1,5 @@
 {
-    "icon": "baguette",
+    "name": "Baking Oven",
     "tags": {
         "amenity": "baking_oven"
     },
@@ -13,5 +13,5 @@
         "pizza oven",
         "tabun oven"
     ],
-    "name": "Baking Oven"
+    "icon": "baguette"
 }

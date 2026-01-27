@@ -1,7 +1,7 @@
 {
-    "icon": "triangle_up_stroked",
+    "name": "Hamlet",
     "tags": {
         "place": "hamlet"
     },
-    "name": "Hamlet"
+    "icon": "triangle_up_stroked"
 }

@@ -1,11 +1,11 @@
 {
-    "icon": "bbq-steam",
+    "name": "Barbecue / Grill",
+    "tags": {
+        "amenity": "bbq"
+    },
     "terms": [
         "bbq",
         "grill"
     ],
-    "tags": {
-        "amenity": "bbq"
-    },
-    "name": "Barbecue / Grill"
+    "icon": "bbq-steam"
 }

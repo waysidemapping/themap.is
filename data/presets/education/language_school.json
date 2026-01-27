@@ -1,9 +1,9 @@
 {
-    "terms": [
-        "esl"
-    ],
+    "name": "Language School",
     "tags": {
         "education": "language_school"
     },
-    "name": "Language School"
+    "terms": [
+        "esl"
+    ]
 }

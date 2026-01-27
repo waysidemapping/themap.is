@@ -1,9 +1,6 @@
 {
-    "icon": "hot_drink_cup",
-    "geometry": [
-        "point",
-        "area"
-    ],
+    "name": "Coffeehouse",
+    "plural": "coffeehouses",
     "tags": {
         "amenity": "cafe",
         "cuisine": "coffee_shop"
@@ -12,6 +9,10 @@
         "key": "cuisine",
         "value": "coffee_shop"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "americano",
         "brew",
@@ -29,6 +30,5 @@
         "macchiato",
         "tea"
     ],
-    "plural": "coffeehouses",
-    "name": "Coffeehouse"
+    "icon": "hot_drink_cup"
 }

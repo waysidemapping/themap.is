@@ -1,4 +1,8 @@
 {
+    "name": "Route Marker",
+    "tags": {
+        "information": "route_marker"
+    },
     "terms": [
         "cairn",
         "painted blaze",
@@ -9,9 +13,5 @@
         "trail marker",
         "trail post",
         "way marker"
-    ],
-    "tags": {
-        "information": "route_marker"
-    },
-    "name": "Route Marker"
+    ]
 }

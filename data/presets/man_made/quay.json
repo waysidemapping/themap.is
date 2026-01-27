@@ -1,5 +1,8 @@
 {
-    "icon": "quay",
+    "name": "Quay",
+    "tags": {
+        "man_made": "quay"
+    },
     "geometry": [
         "line",
         "area"
@@ -8,8 +11,5 @@
         "dock",
         "wharf"
     ],
-    "tags": {
-        "man_made": "quay"
-    },
-    "name": "Quay"
+    "icon": "quay"
 }

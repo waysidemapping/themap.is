@@ -1,5 +1,9 @@
 {
-    "icon": "candy",
+    "name": "candy store",
+    "plural": "candy stores",
+    "tags": {
+        "shop": "confectionery"
+    },
     "terms": [
         "Candy Shop",
         "Confectionery Store",
@@ -8,9 +12,5 @@
         "sugar",
         "sweet"
     ],
-    "tags": {
-        "shop": "confectionery"
-    },
-    "plural": "candy stores",
-    "name": "candy store"
+    "icon": "candy"
 }

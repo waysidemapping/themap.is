@@ -1,7 +1,7 @@
 {
-    "icon": "triangle_up_stroked",
+    "name": "City Block",
     "tags": {
         "place": "city_block"
     },
-    "name": "City Block"
+    "icon": "triangle_up_stroked"
 }

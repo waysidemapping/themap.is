@@ -1,16 +1,16 @@
 {
-    "icon": "natural_arch",
+    "name": "Natural Arch",
+    "tags": {
+        "natural": "arch"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "natural": "arch"
-    },
     "terms": [
         "natural arch",
         "natural bridge",
         "rock arch"
     ],
-    "name": "Natural Arch"
+    "icon": "natural_arch"
 }

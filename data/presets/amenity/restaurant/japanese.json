@@ -1,5 +1,13 @@
 {
-    "icon": "noodle_bowl-chopsticks",
+    "name": "Japanese Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "japanese"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "japanese"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -15,13 +23,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "japanese"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "japanese"
-    },
-    "name": "Japanese Restaurant"
+    "icon": "noodle_bowl-chopsticks"
 }

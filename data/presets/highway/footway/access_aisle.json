@@ -1,5 +1,13 @@
 {
-    "icon": "striped_zone",
+    "name": "Access Aisle",
+    "tags": {
+        "highway": "footway",
+        "footway": "access_aisle"
+    },
+    "reference": {
+        "key": "footway",
+        "value": "access_aisle"
+    },
     "geometry": [
         "line"
     ],
@@ -14,13 +22,5 @@
         "towaway zone",
         "wheelchair aisle"
     ],
-    "tags": {
-        "highway": "footway",
-        "footway": "access_aisle"
-    },
-    "reference": {
-        "key": "footway",
-        "value": "access_aisle"
-    },
-    "name": "Access Aisle"
+    "icon": "striped_zone"
 }

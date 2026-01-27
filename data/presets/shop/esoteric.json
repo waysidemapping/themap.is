@@ -1,4 +1,9 @@
 {
+    "name": "esoteric store",
+    "plural": "esoteric stores",
+    "tags": {
+        "shop": "esoteric"
+    },
     "terms": [
         "acupuncture",
         "alternative",
@@ -10,10 +15,5 @@
         "pendant",
         "psychic",
         "woo"
-    ],
-    "tags": {
-        "shop": "esoteric"
-    },
-    "plural": "esoteric stores",
-    "name": "esoteric store"
+    ]
 }

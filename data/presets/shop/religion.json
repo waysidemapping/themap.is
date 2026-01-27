@@ -1,7 +1,7 @@
 {
+    "name": "religious store",
+    "plural": "religious stores",
     "tags": {
         "shop": "religion"
-    },
-    "plural": "religious stores",
-    "name": "religious store"
+    }
 }

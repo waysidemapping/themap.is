@@ -1,9 +1,9 @@
 {
+    "name": "Fishing Spot",
     "tags": {
         "leisure": "fishing"
     },
     "terms": [
         "angler"
-    ],
-    "name": "Fishing Spot"
+    ]
 }

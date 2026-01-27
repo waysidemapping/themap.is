@@ -1,11 +1,11 @@
 {
     "name": "Tertiary Link",
-    "geometry": [
-        "line"
-    ],
     "tags": {
         "highway": "tertiary_link"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "off ramp",
         "on ramp",

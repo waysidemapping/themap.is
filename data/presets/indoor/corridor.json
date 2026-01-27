@@ -1,17 +1,17 @@
 {
-    "icon": "pedestrian",
-    "geometry": [
-        "area"
-    ],
+    "name": "Indoor Corridor",
     "tags": {
         "indoor": "corridor"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "concourse",
         "foyer",
         "hallway",
         "passageway"
     ],
-    "matchScore": 0.8,
-    "name": "Indoor Corridor"
+    "icon": "pedestrian",
+    "matchScore": 0.8
 }

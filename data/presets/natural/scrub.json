@@ -1,14 +1,14 @@
 {
-    "icon": "shrub",
-    "geometry": [
-        "area"
-    ],
+    "name": "Scrub",
     "tags": {
         "natural": "scrub"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "bush",
         "shrubs"
     ],
-    "name": "Scrub"
+    "icon": "shrub"
 }

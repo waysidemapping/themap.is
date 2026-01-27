@@ -1,5 +1,8 @@
 {
-    "icon": "power_tower",
+    "name": "Power Line",
+    "tags": {
+        "power": "line"
+    },
     "geometry": [
         "line"
     ],
@@ -8,8 +11,5 @@
         "high tension line",
         "high voltage line"
     ],
-    "tags": {
-        "power": "line"
-    },
-    "name": "Power Line"
+    "icon": "power_tower"
 }

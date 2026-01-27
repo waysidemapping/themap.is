@@ -1,8 +1,8 @@
 {
-    "icon": "paint_roller",
+    "name": "paint store",
+    "plural": "paint stores",
     "tags": {
         "shop": "paint"
     },
-    "plural": "paint stores",
-    "name": "paint store"
+    "icon": "paint_roller"
 }

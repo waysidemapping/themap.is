@@ -1,5 +1,6 @@
 {
-    "icon": "laptop",
+    "name": "computer store",
+    "plural": "computer stores",
     "tags": {
         "shop": "computer"
     },
@@ -10,6 +11,5 @@
         "operating system",
         "software"
     ],
-    "plural": "computer stores",
-    "name": "computer store"
+    "icon": "laptop"
 }

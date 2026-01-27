@@ -1,11 +1,11 @@
 {
-    "icon": "wrench-hammer",
+    "name": "flooring supply store",
+    "plural": "flooring supply stores",
     "tags": {
         "shop": "flooring"
     },
     "terms": [
         "tile"
     ],
-    "plural": "flooring supply stores",
-    "name": "flooring supply store"
+    "icon": "wrench-hammer"
 }

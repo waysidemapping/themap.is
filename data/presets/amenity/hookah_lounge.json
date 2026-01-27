@@ -1,13 +1,13 @@
 {
+    "name": "Hookah Lounge",
+    "tags": {
+        "amenity": "hookah_lounge"
+    },
     "terms": [
         "Shisha Bar",
         "flavored tobacco",
         "nargile",
         "shisha",
         "waterpipe"
-    ],
-    "tags": {
-        "amenity": "hookah_lounge"
-    },
-    "name": "Hookah Lounge"
+    ]
 }

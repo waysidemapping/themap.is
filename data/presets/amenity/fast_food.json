@@ -1,5 +1,9 @@
 {
-    "icon": "burger-drink_cup",
+    "name": "Fast Food",
+    "plural": "fast food",
+    "groups": [
+        "food"
+    ],
     "tags": {
         "amenity": "fast_food"
     },
@@ -7,9 +11,5 @@
         "restaurant",
         "takeaway"
     ],
-    "groups": [
-        "food"
-    ],
-    "plural": "fast food",
-    "name": "Fast Food"
+    "icon": "burger-drink_cup"
 }

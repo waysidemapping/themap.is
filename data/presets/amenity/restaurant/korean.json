@@ -1,5 +1,13 @@
 {
-    "icon": "noodle_bowl-chopsticks",
+    "name": "Korean Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "korean"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "korean"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -15,13 +23,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "korean"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "korean"
-    },
-    "name": "Korean Restaurant"
+    "icon": "noodle_bowl-chopsticks"
 }

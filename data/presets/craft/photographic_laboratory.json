@@ -1,9 +1,9 @@
 {
-    "terms": [
-        "film"
-    ],
+    "name": "Photographic Laboratory",
     "tags": {
         "craft": "photographic_laboratory"
     },
-    "name": "Photographic Laboratory"
+    "terms": [
+        "film"
+    ]
 }

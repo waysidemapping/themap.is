@@ -1,10 +1,10 @@
 {
-    "icon": "chainsaw",
-    "terms": [
-        "lumber"
-    ],
+    "name": "Sawmill",
     "tags": {
         "craft": "sawmill"
     },
-    "name": "Sawmill"
+    "terms": [
+        "lumber"
+    ],
+    "icon": "chainsaw"
 }

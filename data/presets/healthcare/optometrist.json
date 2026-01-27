@@ -1,5 +1,9 @@
 {
-    "icon": "eyeglasses",
+    "name": "Optometrist",
+    "plural": "optometrists",
+    "tags": {
+        "healthcare": "optometrist"
+    },
     "terms": [
         "eye",
         "glasses",
@@ -7,9 +11,5 @@
         "lenses",
         "vision"
     ],
-    "tags": {
-        "healthcare": "optometrist"
-    },
-    "plural": "optometrists",
-    "name": "Optometrist"
+    "icon": "eyeglasses"
 }

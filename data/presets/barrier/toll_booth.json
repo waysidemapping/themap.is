@@ -1,11 +1,11 @@
 {
-    "icon": "toll_booth",
+    "name": "Toll Booth",
+    "tags": {
+        "barrier": "toll_booth"
+    },
     "geometry": [
         "vertex",
         "area"
     ],
-    "tags": {
-        "barrier": "toll_booth"
-    },
-    "name": "Toll Booth"
+    "icon": "toll_booth"
 }

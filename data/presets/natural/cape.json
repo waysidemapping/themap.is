@@ -1,12 +1,12 @@
 {
-    "icon": "cape_landform",
+    "name": "Cape",
+    "tags": {
+        "natural": "cape"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "natural": "cape"
-    },
     "terms": [
         "bay",
         "coastline",
@@ -15,5 +15,5 @@
         "peninsula",
         "promontory"
     ],
-    "name": "Cape"
+    "icon": "cape_landform"
 }

@@ -1,12 +1,12 @@
 {
-    "icon": "car_battery",
+    "name": "auto parts store",
+    "plural": "auto parts stores",
+    "tags": {
+        "shop": "car_parts"
+    },
     "terms": [
         "automobile",
         "automotive"
     ],
-    "tags": {
-        "shop": "car_parts"
-    },
-    "plural": "auto parts stores",
-    "name": "auto parts store"
+    "icon": "car_battery"
 }

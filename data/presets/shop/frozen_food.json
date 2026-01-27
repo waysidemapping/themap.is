@@ -1,7 +1,7 @@
 {
+    "name": "frozen food store",
+    "plural": "frozen food stores",
     "tags": {
         "shop": "frozen_food"
-    },
-    "plural": "frozen food stores",
-    "name": "frozen food store"
+    }
 }

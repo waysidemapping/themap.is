@@ -1,5 +1,9 @@
 {
-    "icon": "washing_machine",
+    "name": "appliance store",
+    "plural": "appliance stores",
+    "tags": {
+        "shop": "appliance"
+    },
     "terms": [
         "air conditioner",
         "appliance",
@@ -16,9 +20,5 @@
         "washing machine",
         "white goods"
     ],
-    "tags": {
-        "shop": "appliance"
-    },
-    "plural": "appliance stores",
-    "name": "appliance store"
+    "icon": "washing_machine"
 }

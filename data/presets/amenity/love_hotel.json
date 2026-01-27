@@ -1,7 +1,7 @@
 {
-    "icon": "heart",
+    "name": "Love Hotel",
     "tags": {
         "amenity": "love_hotel"
     },
-    "name": "Love Hotel"
+    "icon": "heart"
 }

@@ -1,4 +1,9 @@
 {
+    "name": "farm supply store",
+    "plural": "farm supply stores",
+    "tags": {
+        "shop": "agrarian"
+    },
     "terms": [
         "agricultural inputs",
         "agricultural machines",
@@ -6,10 +11,5 @@
         "fertilizer",
         "pesticides",
         "seeds"
-    ],
-    "tags": {
-        "shop": "agrarian"
-    },
-    "plural": "farm supply stores",
-    "name": "farm supply store"
+    ]
 }

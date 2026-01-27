@@ -1,5 +1,9 @@
 {
-    "icon": "compass",
+    "name": "outdoors store",
+    "plural": "outdoors stores",
+    "tags": {
+        "shop": "outdoor"
+    },
     "terms": [
         "camping",
         "climbing",
@@ -9,9 +13,5 @@
         "outdoor supplies",
         "outfitter"
     ],
-    "tags": {
-        "shop": "outdoor"
-    },
-    "plural": "outdoors stores",
-    "name": "outdoors store"
+    "icon": "compass"
 }

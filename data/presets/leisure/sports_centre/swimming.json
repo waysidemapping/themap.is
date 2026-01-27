@@ -1,13 +1,6 @@
 {
-    "icon": "swimmer-water",
-    "geometry": [
-        "area",
-        "point"
-    ],
-    "terms": [
-        "dive",
-        "water"
-    ],
+    "name": "Swimming Pool Facility",
+    "plural": "swimming pool facilities",
     "tags": {
         "leisure": "sports_centre",
         "sport": "swimming"
@@ -16,6 +9,13 @@
         "key": "sport",
         "value": "swimming"
     },
-    "plural": "swimming pool facilities",
-    "name": "Swimming Pool Facility"
+    "geometry": [
+        "area",
+        "point"
+    ],
+    "terms": [
+        "dive",
+        "water"
+    ],
+    "icon": "swimmer-water"
 }

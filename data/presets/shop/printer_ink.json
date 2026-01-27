@@ -1,13 +1,13 @@
 {
+    "name": "printer ink store",
+    "plural": "printer ink stores",
+    "tags": {
+        "shop": "printer_ink"
+    },
     "terms": [
         "copier ink",
         "fax ink",
         "ink cartridges",
         "toner"
-    ],
-    "tags": {
-        "shop": "printer_ink"
-    },
-    "plural": "printer ink stores",
-    "name": "printer ink store"
+    ]
 }

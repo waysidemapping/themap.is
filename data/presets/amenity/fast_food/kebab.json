@@ -1,5 +1,13 @@
 {
-    "icon": "vertical_rotisserie",
+    "name": "Kebab Fast Food",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "kebab"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "kebab"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -17,13 +25,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "fast_food",
-        "cuisine": "kebab"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "kebab"
-    },
-    "name": "Kebab Fast Food"
+    "icon": "vertical_rotisserie"
 }

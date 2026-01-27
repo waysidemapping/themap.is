@@ -1,8 +1,8 @@
 {
-    "icon": "clothes_hanger",
+    "name": "dry cleaner",
+    "plural": "dry cleaners",
     "tags": {
         "shop": "dry_cleaning"
     },
-    "plural": "dry cleaners",
-    "name": "dry cleaner"
+    "icon": "clothes_hanger"
 }

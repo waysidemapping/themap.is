@@ -1,5 +1,5 @@
 {
-    "icon": "water_glass-faucet",
+    "name": "Drinking Water",
     "tags": {
         "amenity": "drinking_water"
     },
@@ -10,5 +10,5 @@
         "water fountain",
         "water tap"
     ],
-    "name": "Drinking Water"
+    "icon": "water_glass-faucet"
 }

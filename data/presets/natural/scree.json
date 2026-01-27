@@ -1,12 +1,12 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Scree",
     "tags": {
         "natural": "scree"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "loose rocks"
-    ],
-    "name": "Scree"
+    ]
 }

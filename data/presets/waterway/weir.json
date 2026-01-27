@@ -1,5 +1,11 @@
 {
-    "icon": "dam",
+    "name": "Weir",
+    "groups": [
+        "dams"
+    ],
+    "tags": {
+        "waterway": "weir"
+    },
     "geometry": [
         "vertex",
         "line"
@@ -9,11 +15,5 @@
         "low-rise dam",
         "wier"
     ],
-    "tags": {
-        "waterway": "weir"
-    },
-    "groups": [
-        "dams"
-    ],
-    "name": "Weir"
+    "icon": "dam"
 }

@@ -1,13 +1,13 @@
 {
+    "name": "camera store",
+    "plural": "camera stores",
+    "tags": {
+        "shop": "camera"
+    },
     "terms": [
         "camera",
         "film",
         "lens",
         "photo"
-    ],
-    "tags": {
-        "shop": "camera"
-    },
-    "plural": "camera stores",
-    "name": "camera store"
+    ]
 }

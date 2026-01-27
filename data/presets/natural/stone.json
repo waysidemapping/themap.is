@@ -1,16 +1,16 @@
 {
-    "icon": "boulder1",
+    "name": "Unattached Stone / Boulder",
+    "tags": {
+        "natural": "stone"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "natural": "stone"
-    },
     "terms": [
         "boulder",
         "rock",
         "stone"
     ],
-    "name": "Unattached Stone / Boulder"
+    "icon": "boulder1"
 }

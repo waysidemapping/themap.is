@@ -1,11 +1,11 @@
 {
     "name": "Primary Link",
-    "geometry": [
-        "line"
-    ],
     "tags": {
         "highway": "primary_link"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "off ramp",
         "on ramp",

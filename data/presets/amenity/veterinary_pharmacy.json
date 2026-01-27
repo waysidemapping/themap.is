@@ -1,5 +1,8 @@
 {
-    "icon": "pawprint-plus",
+    "name": "Veterinary Pharmacy",
+    "tags": {
+        "amenity": "veterinary_pharmacy"
+    },
     "terms": [
         "Animal Pharmacy",
         "animal medication",
@@ -15,8 +18,5 @@
         "veterinary pharmacy",
         "veterinary supplies"
     ],
-    "tags": {
-        "amenity": "veterinary_pharmacy"
-    },
-    "name": "Veterinary Pharmacy"
+    "icon": "pawprint-plus"
 }

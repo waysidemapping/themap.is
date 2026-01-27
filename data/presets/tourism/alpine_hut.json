@@ -1,5 +1,12 @@
 {
-    "icon": "cabin",
+    "name": "Mountain Lodge",
+    "plural": "mountain lodges",
+    "groups": [
+        "lodging"
+    ],
+    "tags": {
+        "tourism": "alpine_hut"
+    },
     "geometry": [
         "point",
         "area"
@@ -19,12 +26,5 @@
         "refuge hut",
         "wilderness hut"
     ],
-    "tags": {
-        "tourism": "alpine_hut"
-    },
-    "groups": [
-        "lodging"
-    ],
-    "plural": "mountain lodges",
-    "name": "Mountain Lodge"
+    "icon": "cabin"
 }

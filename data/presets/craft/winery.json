@@ -1,7 +1,7 @@
 {
-    "icon": "alcohol_bottle-wine_glass",
+    "name": "Winery",
     "tags": {
         "craft": "winery"
     },
-    "name": "Winery"
+    "icon": "alcohol_bottle-wine_glass"
 }

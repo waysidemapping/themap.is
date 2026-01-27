@@ -1,10 +1,10 @@
 {
-    "icon": "pedestrian",
-    "terms": [
-        "open space"
-    ],
+    "name": "Common",
     "tags": {
         "leisure": "common"
     },
-    "name": "Common"
+    "terms": [
+        "open space"
+    ],
+    "icon": "pedestrian"
 }

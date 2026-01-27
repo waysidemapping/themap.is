@@ -1,5 +1,5 @@
 {
-    "icon": "fire",
+    "name": "Fire Station",
     "tags": {
         "amenity": "fire_station"
     },
@@ -9,5 +9,5 @@
         "fire fighters",
         "firehouse"
     ],
-    "name": "Fire Station"
+    "icon": "fire"
 }

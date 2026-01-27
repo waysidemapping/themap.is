@@ -1,9 +1,5 @@
 {
-    "icon": "bagel_seeded",
-    "terms": [
-        "breakfast",
-        "lox"
-    ],
+    "name": "Bagel Fast Food",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "bagel"
@@ -12,5 +8,9 @@
         "key": "cuisine",
         "value": "bagel"
     },
-    "name": "Bagel Fast Food"
+    "terms": [
+        "breakfast",
+        "lox"
+    ],
+    "icon": "bagel_seeded"
 }

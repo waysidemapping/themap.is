@@ -1,12 +1,5 @@
 {
-    "icon": "building_place_of_worship",
-    "terms": [
-        "christian",
-        "church",
-        "house of god",
-        "house of prayer",
-        "house of worship"
-    ],
+    "name": "Kingdom Hall of Jehovah's Witnesses",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "christian",
@@ -16,5 +9,12 @@
         "key": "denomination",
         "value": "jehovahs_witness"
     },
-    "name": "Kingdom Hall of Jehovah's Witnesses"
+    "terms": [
+        "christian",
+        "church",
+        "house of god",
+        "house of prayer",
+        "house of worship"
+    ],
+    "icon": "building_place_of_worship"
 }

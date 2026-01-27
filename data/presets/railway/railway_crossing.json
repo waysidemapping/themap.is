@@ -1,16 +1,16 @@
 {
-    "icon": "x_oblique",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Railway-Railway Crossing",
     "tags": {
         "railway": "railway_crossing"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "diamond crossing",
         "flat crossing",
         "level junction",
         "railway railway crossing"
     ],
-    "name": "Railway-Railway Crossing"
+    "icon": "x_oblique"
 }

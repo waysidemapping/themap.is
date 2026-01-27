@@ -1,11 +1,11 @@
 {
-    "icon": "chainsaw",
-    "geometry": [
-        "area"
-    ],
+    "name": "Clearcut Forest",
     "tags": {
         "man_made": "clearcut"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "cut",
         "forest",
@@ -13,5 +13,5 @@
         "tree",
         "wood"
     ],
-    "name": "Clearcut Forest"
+    "icon": "chainsaw"
 }

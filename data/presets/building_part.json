@@ -1,15 +1,15 @@
 {
-    "icon": "building",
-    "geometry": [
-        "area"
-    ],
+    "name": "Building Part",
     "tags": {
         "building:part": "*"
     },
-    "matchScore": 0.5,
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "roof",
         "simple 3d buildings"
     ],
-    "name": "Building Part"
+    "icon": "building",
+    "matchScore": 0.5
 }

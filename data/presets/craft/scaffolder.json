@@ -1,7 +1,7 @@
 {
-    "icon": "scaffold",
+    "name": "Scaffolder",
     "tags": {
         "craft": "scaffolder"
     },
-    "name": "Scaffolder"
+    "icon": "scaffold"
 }

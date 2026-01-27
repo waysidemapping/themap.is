@@ -1,10 +1,10 @@
 {
-    "icon": "shoe-hammer",
-    "terms": [
-        "cobbler"
-    ],
+    "name": "Shoemaker",
     "tags": {
         "craft": "shoemaker"
     },
-    "name": "Shoemaker"
+    "terms": [
+        "cobbler"
+    ],
+    "icon": "shoe-hammer"
 }

@@ -1,7 +1,7 @@
 {
-    "icon": "chimney",
+    "name": "Chimney Sweeper",
     "tags": {
         "craft": "chimney_sweeper"
     },
-    "name": "Chimney Sweeper"
+    "icon": "chimney"
 }

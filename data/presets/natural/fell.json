@@ -1,13 +1,13 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Fell",
     "tags": {
         "natural": "fell"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "moor",
         "moorland"
-    ],
-    "name": "Fell"
+    ]
 }

@@ -1,11 +1,11 @@
 {
-    "icon": "building_classical-clocktower",
+    "name": "Community Center",
+    "tags": {
+        "amenity": "community_centre"
+    },
     "terms": [
         "event",
         "hall"
     ],
-    "tags": {
-        "amenity": "community_centre"
-    },
-    "name": "Community Center"
+    "icon": "building_classical-clocktower"
 }

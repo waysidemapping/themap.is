@@ -1,4 +1,8 @@
 {
+    "name": "Waste Transfer Station",
+    "tags": {
+        "amenity": "waste_transfer_station"
+    },
     "terms": [
         "dump",
         "garbage",
@@ -6,9 +10,5 @@
         "rubbish",
         "scrap",
         "trash"
-    ],
-    "tags": {
-        "amenity": "waste_transfer_station"
-    },
-    "name": "Waste Transfer Station"
+    ]
 }

@@ -1,8 +1,8 @@
 {
-    "icon": "wrench-hammer",
+    "name": "tool rental shop",
+    "plural": "tool rental shops",
     "tags": {
         "shop": "tool_hire"
     },
-    "plural": "tool rental shops",
-    "name": "tool rental shop"
+    "icon": "wrench-hammer"
 }

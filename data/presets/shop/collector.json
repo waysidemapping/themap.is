@@ -1,4 +1,9 @@
 {
+    "name": "collectibles shop",
+    "plural": "collectibles shops",
+    "tags": {
+        "shop": "collector"
+    },
     "terms": [
         "antiques",
         "coins",
@@ -12,10 +17,5 @@
         "philately",
         "stamps",
         "thrift"
-    ],
-    "tags": {
-        "shop": "collector"
-    },
-    "plural": "collectibles shops",
-    "name": "collectibles shop"
+    ]
 }

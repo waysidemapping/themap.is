@@ -1,5 +1,13 @@
 {
-    "icon": "noodle_bowl-chopsticks",
+    "name": "Noodle Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "noodle"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "noodle"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -19,13 +27,5 @@
         "soup",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "noodle"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "noodle"
-    },
-    "name": "Noodle Restaurant"
+    "icon": "noodle_bowl-chopsticks"
 }

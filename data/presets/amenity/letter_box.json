@@ -1,5 +1,10 @@
 {
-    "icon": "letter_box",
+    "name": "Letter Box",
+    "plural": "letter boxes",
+    "groups": [
+        "mail",
+        "street_furniture"
+    ],
     "tags": {
         "amenity": "letter_box"
     },
@@ -22,10 +27,5 @@
         "mailslot",
         "through-door delivery box"
     ],
-    "groups": [
-        "mail",
-        "street_furniture"
-    ],
-    "plural": "letter boxes",
-    "name": "Letter Box"
+    "icon": "letter_box"
 }

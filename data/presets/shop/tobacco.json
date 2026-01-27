@@ -1,5 +1,6 @@
 {
-    "icon": "pipe",
+    "name": "tobacco store",
+    "plural": "tobacco stores",
     "tags": {
         "shop": "tobacco"
     },
@@ -7,6 +8,5 @@
         "cigarettes",
         "cigars"
     ],
-    "plural": "tobacco stores",
-    "name": "tobacco store"
+    "icon": "pipe"
 }

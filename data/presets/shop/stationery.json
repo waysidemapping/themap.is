@@ -1,13 +1,13 @@
 {
+    "name": "stationery store",
+    "plural": "stationery stores",
+    "tags": {
+        "shop": "stationery"
+    },
     "terms": [
         "Office Supply Store",
         "card",
         "paper",
         "stationary"
-    ],
-    "tags": {
-        "shop": "stationery"
-    },
-    "plural": "stationery stores",
-    "name": "stationery store"
+    ]
 }

@@ -1,5 +1,6 @@
 {
-    "icon": "camper_trailer",
+    "name": "RV dealership",
+    "plural": "RV dealerships",
     "tags": {
         "shop": "caravan"
     },
@@ -8,6 +9,5 @@
         "camper",
         "recreational vehicle"
     ],
-    "plural": "RV dealerships",
-    "name": "RV dealership"
+    "icon": "camper_trailer"
 }

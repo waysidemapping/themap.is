@@ -1,5 +1,8 @@
 {
-    "icon": "security_camera",
+    "name": "Surveillance",
+    "tags": {
+        "man_made": "surveillance"
+    },
     "geometry": [
         "point",
         "vertex"
@@ -18,8 +21,5 @@
         "video",
         "webcam"
     ],
-    "tags": {
-        "man_made": "surveillance"
-    },
-    "name": "Surveillance"
+    "icon": "security_camera"
 }

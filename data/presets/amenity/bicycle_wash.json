@@ -1,5 +1,8 @@
 {
-    "icon": "bicycle-shower",
+    "name": "Bicycle Wash",
+    "tags": {
+        "amenity": "bicycle_wash"
+    },
     "terms": [
         "bicycle",
         "bicycle cleaning",
@@ -10,8 +13,5 @@
         "cycle wash",
         "cycling"
     ],
-    "tags": {
-        "amenity": "bicycle_wash"
-    },
-    "name": "Bicycle Wash"
+    "icon": "bicycle-shower"
 }

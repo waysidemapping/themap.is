@@ -1,4 +1,6 @@
 {
+    "name": "trophy store",
+    "plural": "trophy stores",
     "tags": {
         "shop": "trophy"
     },
@@ -8,7 +10,5 @@
         "medals",
         "plaques",
         "trophy store"
-    ],
-    "plural": "trophy stores",
-    "name": "trophy store"
+    ]
 }

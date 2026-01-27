@@ -1,4 +1,8 @@
 {
+    "name": "Path",
+    "tags": {
+        "highway": "path"
+    },
     "geometry": [
         "line"
     ],
@@ -8,9 +12,5 @@
         "trackway",
         "trail",
         "walk"
-    ],
-    "tags": {
-        "highway": "path"
-    },
-    "name": "Path"
+    ]
 }

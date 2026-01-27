@@ -1,10 +1,10 @@
 {
-    "icon": "motorboat-key",
+    "name": "Boat Rental",
     "tags": {
         "amenity": "boat_rental"
     },
     "terms": [
         "boat hire"
     ],
-    "name": "Boat Rental"
+    "icon": "motorboat-key"
 }

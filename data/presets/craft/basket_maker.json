@@ -1,7 +1,7 @@
 {
-    "icon": "vase",
+    "name": "Basket Maker",
     "tags": {
         "craft": "basket_maker"
     },
-    "name": "Basket Maker"
+    "icon": "vase"
 }

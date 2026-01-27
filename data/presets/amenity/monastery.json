@@ -1,5 +1,8 @@
 {
-    "icon": "building_place_of_worship",
+    "name": "Monastery Grounds",
+    "tags": {
+        "amenity": "monastery"
+    },
     "terms": [
         "abbey",
         "basilica",
@@ -26,8 +29,5 @@
         "tabernacle",
         "temple"
     ],
-    "tags": {
-        "amenity": "monastery"
-    },
-    "name": "Monastery Grounds"
+    "icon": "building_place_of_worship"
 }

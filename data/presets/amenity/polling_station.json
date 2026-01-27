@@ -1,4 +1,8 @@
 {
+    "name": "Permanent Polling Place",
+    "tags": {
+        "amenity": "polling_station"
+    },
     "terms": [
         "ballot box",
         "ballot drop",
@@ -8,9 +12,5 @@
         "vote",
         "voting booth",
         "voting machine"
-    ],
-    "tags": {
-        "amenity": "polling_station"
-    },
-    "name": "Permanent Polling Place"
+    ]
 }

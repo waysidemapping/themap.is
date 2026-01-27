@@ -1,8 +1,8 @@
 {
-    "icon": "window",
+    "name": "window blind store",
+    "plural": "window blind stores",
     "tags": {
         "shop": "window_blind"
     },
-    "plural": "window blind stores",
-    "name": "window blind store"
+    "icon": "window"
 }

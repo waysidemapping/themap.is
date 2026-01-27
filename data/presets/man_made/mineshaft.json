@@ -1,5 +1,8 @@
 {
-    "icon": "mineshaft_cage",
+    "name": "Mineshaft",
+    "tags": {
+        "man_made": "mineshaft"
+    },
     "geometry": [
         "point",
         "vertex",
@@ -12,8 +15,5 @@
         "underground",
         "vertical mine entrance"
     ],
-    "tags": {
-        "man_made": "mineshaft"
-    },
-    "name": "Mineshaft"
+    "icon": "mineshaft_cage"
 }

@@ -1,5 +1,8 @@
 {
-    "icon": "horse_rider",
+    "name": "Horseback Riding Center",
+    "tags": {
+        "leisure": "horse_riding"
+    },
     "terms": [
         "equestrian center",
         "equestrian facility",
@@ -13,8 +16,5 @@
         "riding stables",
         "stables"
     ],
-    "tags": {
-        "leisure": "horse_riding"
-    },
-    "name": "Horseback Riding Center"
+    "icon": "horse_rider"
 }

@@ -1,11 +1,11 @@
 {
-    "icon": "fish-knife",
+    "name": "seafood shop",
+    "plural": "seafood shops",
     "tags": {
         "shop": "seafood"
     },
-    "plural": "seafood shops",
-    "name": "seafood shop",
     "terms": [
         "Fishmonger"
-    ]
+    ],
+    "icon": "fish-knife"
 }

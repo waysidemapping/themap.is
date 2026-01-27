@@ -1,9 +1,9 @@
 {
+    "name": "Marketplace",
     "tags": {
         "amenity": "marketplace"
     },
     "terms": [
         "bazaar"
-    ],
-    "name": "Marketplace"
+    ]
 }

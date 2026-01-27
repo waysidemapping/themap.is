@@ -1,5 +1,9 @@
 {
-    "icon": "banknote_slot",
+    "name": "ATM",
+    "plural": "ATMs",
+    "tags": {
+        "amenity": "atm"
+    },
     "terms": [
         "Cash Machine",
         "Automated Teller Machine",
@@ -7,9 +11,5 @@
         "machine",
         "money"
     ],
-    "tags": {
-        "amenity": "atm"
-    },
-    "plural": "ATMs",
-    "name": "ATM"
+    "icon": "banknote_slot"
 }

@@ -1,4 +1,5 @@
 {
+    "name": "Public Bath",
     "tags": {
         "amenity": "public_bath"
     },
@@ -6,6 +7,5 @@
         "foot bath",
         "hot springs",
         "onsen"
-    ],
-    "name": "Public Bath"
+    ]
 }

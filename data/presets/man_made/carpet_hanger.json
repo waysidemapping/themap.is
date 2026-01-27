@@ -1,5 +1,8 @@
 {
-    "icon": "picnic_table",
+    "name": "Carpet Hanger",
+    "tags": {
+        "man_made": "carpet_hanger"
+    },
     "geometry": [
         "point",
         "line"
@@ -9,8 +12,5 @@
         "rack",
         "stand"
     ],
-    "tags": {
-        "man_made": "carpet_hanger"
-    },
-    "name": "Carpet Hanger"
+    "icon": "picnic_table"
 }

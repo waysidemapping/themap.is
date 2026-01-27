@@ -1,11 +1,11 @@
 {
     "name": "Trunk Link",
-    "geometry": [
-        "line"
-    ],
     "tags": {
         "highway": "trunk_link"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "off ramp",
         "on ramp",

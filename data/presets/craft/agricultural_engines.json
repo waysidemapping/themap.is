@@ -1,4 +1,5 @@
 {
+    "name": "Agricultural Engines Mechanic",
     "tags": {
         "craft": "agricultural_engines"
     },
@@ -7,6 +8,5 @@
         "farm equipment",
         "harvesters",
         "tractors"
-    ],
-    "name": "Agricultural Engines Mechanic"
+    ]
 }

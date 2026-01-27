@@ -1,5 +1,6 @@
 {
-    "icon": "car-parking_line",
+    "name": "Parking",
+    "plural": "parking",
     "tags": {
         "amenity": "parking"
     },
@@ -11,6 +12,5 @@
         "truck parking",
         "vehicle parking"
     ],
-    "plural": "parking",
-    "name": "Parking"
+    "icon": "car-parking_line"
 }

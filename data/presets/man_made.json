@@ -1,14 +1,14 @@
 {
-    "icon": "storage_drum",
+    "name": "Man-Made Feature",
+    "tags": {
+        "man_made": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
     ],
-    "tags": {
-        "man_made": "*"
-    },
-    "matchScore": 0.4,
-    "name": "Man-Made Feature"
+    "icon": "storage_drum",
+    "matchScore": 0.4
 }

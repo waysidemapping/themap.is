@@ -1,15 +1,15 @@
 {
-    "icon": "droplet",
+    "name": "Covered Reservoir",
+    "tags": {
+        "man_made": "reservoir_covered"
+    },
     "geometry": [
         "area",
         "point"
     ],
-    "tags": {
-        "man_made": "reservoir_covered"
-    },
     "terms": [
         "underground reservoir",
         "water tank"
     ],
-    "name": "Covered Reservoir"
+    "icon": "droplet"
 }

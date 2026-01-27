@@ -1,5 +1,12 @@
 {
-    "icon": "giraffe",
+    "name": "Zoo",
+    "plural": "zoos",
+    "groups": [
+        "amusement"
+    ],
+    "tags": {
+        "tourism": "zoo"
+    },
     "geometry": [
         "point",
         "area"
@@ -7,12 +14,5 @@
     "terms": [
         "animal"
     ],
-    "tags": {
-        "tourism": "zoo"
-    },
-    "groups": [
-        "amusement"
-    ],
-    "plural": "zoos",
-    "name": "Zoo"
+    "icon": "giraffe"
 }

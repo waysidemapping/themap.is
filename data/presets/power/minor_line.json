@@ -1,9 +1,9 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Minor Power Line",
     "tags": {
         "power": "minor_line"
     },
-    "name": "Minor Power Line"
+    "geometry": [
+        "line"
+    ]
 }

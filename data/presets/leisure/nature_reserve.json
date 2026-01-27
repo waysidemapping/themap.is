@@ -1,5 +1,8 @@
 {
-    "icon": "tree_broadleaved",
+    "name": "Nature Reserve",
+    "groups": [
+        "parks"
+    ],
     "tags": {
         "leisure": "nature_reserve"
     },
@@ -7,8 +10,5 @@
         "protected",
         "wildlife"
     ],
-    "groups": [
-        "parks"
-    ],
-    "name": "Nature Reserve"
+    "icon": "tree_broadleaved"
 }

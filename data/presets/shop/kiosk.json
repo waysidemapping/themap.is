@@ -1,5 +1,6 @@
 {
-    "icon": "market_stall",
+    "name": "kiosk",
+    "plural": "kiosks",
     "tags": {
         "shop": "kiosk"
     },
@@ -13,6 +14,5 @@
         "snacks",
         "sweets"
     ],
-    "plural": "kiosks",
-    "name": "kiosk"
+    "icon": "market_stall"
 }

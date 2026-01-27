@@ -1,5 +1,8 @@
 {
-    "icon": "conveyor",
+    "name": "Goods Conveyor",
+    "tags": {
+        "man_made": "goods_conveyor"
+    },
     "geometry": [
         "line"
     ],
@@ -9,8 +12,5 @@
         "conveyor belt",
         "roller conveyor"
     ],
-    "tags": {
-        "man_made": "goods_conveyor"
-    },
-    "name": "Goods Conveyor"
+    "icon": "conveyor"
 }

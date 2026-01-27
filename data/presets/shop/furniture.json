@@ -1,13 +1,13 @@
 {
-    "icon": "couch",
+    "name": "furniture store",
+    "plural": "furniture stores",
+    "tags": {
+        "shop": "furniture"
+    },
     "terms": [
         "chair",
         "sofa",
         "table"
     ],
-    "tags": {
-        "shop": "furniture"
-    },
-    "plural": "furniture stores",
-    "name": "furniture store"
+    "icon": "couch"
 }

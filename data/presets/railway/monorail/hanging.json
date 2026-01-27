@@ -1,8 +1,5 @@
 {
-    "icon": "hanging_rail",
-    "geometry": [
-        "line"
-    ],
+    "name": "Hanging Monorail Track",
     "tags": {
         "railway": "monorail",
         "monorail": "hanging"
@@ -11,8 +8,11 @@
         "key": "monorail",
         "value": "hanging"
     },
-    "name": "Hanging Monorail Track",
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "Suspension Railway Track"
-    ]
+    ],
+    "icon": "hanging_rail"
 }

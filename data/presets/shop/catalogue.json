@@ -1,7 +1,7 @@
 {
+    "name": "catalog showroom",
+    "plural": "catalog showrooms",
     "tags": {
         "shop": "catalogue"
-    },
-    "plural": "catalog showrooms",
-    "name": "catalog showroom"
+    }
 }

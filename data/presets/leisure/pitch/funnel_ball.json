@@ -1,4 +1,6 @@
 {
+    "name": "Funnel Ball Court",
+    "plural": "funnel ball courts",
     "tags": {
         "leisure": "pitch",
         "sport": "funnel_ball"
@@ -6,7 +8,5 @@
     "reference": {
         "key": "sport",
         "value": "funnel_ball"
-    },
-    "plural": "funnel ball courts",
-    "name": "Funnel Ball Court"
+    }
 }

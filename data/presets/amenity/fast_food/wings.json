@@ -1,13 +1,5 @@
 {
-    "terms": [
-        "chicken",
-        "dine",
-        "dining",
-        "dinner",
-        "eat",
-        "lunch",
-        "table"
-    ],
+    "name": "Chicken Wings Fast Food",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "wings"
@@ -16,5 +8,13 @@
         "key": "cuisine",
         "value": "wings"
     },
-    "name": "Chicken Wings Fast Food"
+    "terms": [
+        "chicken",
+        "dine",
+        "dining",
+        "dinner",
+        "eat",
+        "lunch",
+        "table"
+    ]
 }

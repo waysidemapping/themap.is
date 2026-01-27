@@ -1,10 +1,10 @@
 {
-    "geometry": [
-        "area",
-        "point"
-    ],
+    "name": "Substation",
     "tags": {
         "power": "substation"
     },
-    "name": "Substation"
+    "geometry": [
+        "area",
+        "point"
+    ]
 }

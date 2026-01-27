@@ -1,7 +1,7 @@
 {
+    "name": "interior design store",
+    "plural": "interior design stores",
     "tags": {
         "shop": "interior_decoration"
-    },
-    "plural": "interior design stores",
-    "name": "interior design store"
+    }
 }

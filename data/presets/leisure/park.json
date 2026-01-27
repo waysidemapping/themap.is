@@ -1,5 +1,12 @@
 {
-    "icon": "tree-bench",
+    "name": "Park",
+    "plural": "parks",
+    "groups": [
+        "parks"
+    ],
+    "tags": {
+        "leisure": "park"
+    },
     "terms": [
         "esplanade",
         "estate",
@@ -22,12 +29,5 @@
         "village green",
         "woodland"
     ],
-    "tags": {
-        "leisure": "park"
-    },
-    "groups": [
-        "parks"
-    ],
-    "plural": "parks",
-    "name": "Park"
+    "icon": "tree-bench"
 }

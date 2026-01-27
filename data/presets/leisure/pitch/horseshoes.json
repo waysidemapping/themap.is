@@ -1,5 +1,6 @@
 {
-    "icon": "horseshoe-stake",
+    "name": "Horseshoes Pit",
+    "plural": "horseshoes pits",
     "tags": {
         "leisure": "pitch",
         "sport": "horseshoes"
@@ -11,6 +12,5 @@
     "terms": [
         "horse shoes"
     ],
-    "plural": "horseshoes pits",
-    "name": "Horseshoes Pit"
+    "icon": "horseshoe-stake"
 }

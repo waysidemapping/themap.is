@@ -1,5 +1,8 @@
 {
-    "icon": "gasoline_pump",
+    "name": "Gas Pump",
+    "tags": {
+        "man_made": "fuel_pump"
+    },
     "geometry": [
         "point",
         "vertex"
@@ -14,8 +17,5 @@
         "petrol",
         "propane"
     ],
-    "tags": {
-        "man_made": "fuel_pump"
-    },
-    "name": "Gas Pump"
+    "icon": "gasoline_pump"
 }

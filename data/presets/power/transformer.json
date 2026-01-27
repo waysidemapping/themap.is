@@ -1,11 +1,11 @@
 {
-    "icon": "power_transformer-bolt",
+    "name": "Transformer",
+    "tags": {
+        "power": "transformer"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "power": "transformer"
-    },
-    "name": "Transformer"
+    "icon": "power_transformer-bolt"
 }

@@ -1,5 +1,9 @@
 {
-    "icon": "book_open",
+    "name": "Book Return Drop Box",
+    "groups": [
+        "books",
+        "street_furniture"
+    ],
     "tags": {
         "amenity": "library_dropoff"
     },
@@ -10,9 +14,5 @@
         "library drop-off",
         "library return"
     ],
-    "groups": [
-        "books",
-        "street_furniture"
-    ],
-    "name": "Book Return Drop Box"
+    "icon": "book_open"
 }

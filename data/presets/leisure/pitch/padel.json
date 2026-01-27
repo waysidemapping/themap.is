@@ -1,5 +1,6 @@
 {
-    "icon": "tennis_player",
+    "name": "Padel Court",
+    "plural": "padel courts",
     "tags": {
         "leisure": "pitch",
         "sport": "padel"
@@ -12,6 +13,5 @@
         "paddle",
         "tennis"
     ],
-    "plural": "padel courts",
-    "name": "Padel Court"
+    "icon": "tennis_player"
 }

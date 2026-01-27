@@ -1,4 +1,8 @@
 {
+    "name": "Stream",
+    "tags": {
+        "waterway": "stream"
+    },
     "geometry": [
         "line"
     ],
@@ -28,9 +32,5 @@
         "torrent",
         "tributary",
         "watercourse"
-    ],
-    "tags": {
-        "waterway": "stream"
-    },
-    "name": "Stream"
+    ]
 }

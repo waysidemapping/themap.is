@@ -1,21 +1,21 @@
 {
-    "icon": "sleeper",
-    "geometry": [
-        "point",
-        "area"
+    "name": "Hotel",
+    "plural": "hotels",
+    "groups": [
+        "lodging"
     ],
     "tags": {
         "tourism": "hotel"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "concierge",
         "lodge",
         "lodging",
         "overnight accommodations"
     ],
-    "groups": [
-        "lodging"
-    ],
-    "plural": "hotels",
-    "name": "Hotel"
+    "icon": "sleeper"
 }

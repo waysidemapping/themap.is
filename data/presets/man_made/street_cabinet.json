@@ -1,4 +1,12 @@
 {
+    "name": "Street Cabinet",
+    "plural": "street cabinets",
+    "groups": [
+        "street_furniture"
+    ],
+    "tags": {
+        "man_made": "street_cabinet"
+    },
     "geometry": [
         "point",
         "area"
@@ -9,13 +17,5 @@
         "technical box",
         "telecommunications",
         "traffic signal controls"
-    ],
-    "tags": {
-        "man_made": "street_cabinet"
-    },
-    "groups": [
-        "street_furniture"
-    ],
-    "plural": "street cabinets",
-    "name": "Street Cabinet"
+    ]
 }

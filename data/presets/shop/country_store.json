@@ -1,9 +1,9 @@
 {
+    "name": "rural supply store",
+    "plural": "rural supply stores",
     "tags": {
         "shop": "country_store"
     },
-    "plural": "rural supply stores",
-    "name": "rural supply store",
     "terms": [
         "Country Store"
     ]

@@ -1,5 +1,5 @@
 {
-    "icon": "car-key",
+    "name": "Car Rental",
     "tags": {
         "amenity": "car_rental"
     },
@@ -7,5 +7,5 @@
         "hire",
         "vehicle"
     ],
-    "name": "Car Rental"
+    "icon": "car-key"
 }

@@ -1,5 +1,13 @@
 {
-    "icon": "recycling",
+    "name": "Recycling Bin",
+    "tags": {
+        "amenity": "recycling",
+        "recycling_type": "container"
+    },
+    "reference": {
+        "key": "recycling_type",
+        "value": "container"
+    },
     "terms": [
         "Recycling Container",
         "bin",
@@ -11,13 +19,5 @@
         "scrap",
         "trash"
     ],
-    "tags": {
-        "amenity": "recycling",
-        "recycling_type": "container"
-    },
-    "reference": {
-        "key": "recycling_type",
-        "value": "container"
-    },
-    "name": "Recycling Bin"
+    "icon": "recycling"
 }

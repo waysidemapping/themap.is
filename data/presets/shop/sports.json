@@ -1,11 +1,11 @@
 {
+    "name": "sporting goods store",
+    "plural": "sporting goods stores",
     "tags": {
         "shop": "sports"
     },
     "terms": [
         "athletics",
         "hobby"
-    ],
-    "plural": "sporting goods stores",
-    "name": "sporting goods store"
+    ]
 }

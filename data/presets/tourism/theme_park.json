@@ -1,19 +1,19 @@
 {
-    "icon": "carousel",
-    "geometry": [
-        "point",
-        "area"
+    "name": "Amusement Park",
+    "plural": "amusement parks",
+    "groups": [
+        "amusement"
     ],
     "tags": {
         "tourism": "theme_park"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "amusement park",
         "fun park"
     ],
-    "groups": [
-        "amusement"
-    ],
-    "plural": "amusement parks",
-    "name": "Amusement Park"
+    "icon": "carousel"
 }

@@ -1,9 +1,9 @@
 {
+    "name": "nut store",
+    "plural": "nut stores",
     "tags": {
         "shop": "nuts"
     },
-    "plural": "nut stores",
-    "name": "nut store",
     "terms": [
         "almonds",
         "brazil nuts",

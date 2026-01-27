@@ -1,8 +1,8 @@
 {
-    "icon": "purse",
+    "name": "leather store",
+    "plural": "leather stores",
     "tags": {
         "shop": "leather"
     },
-    "plural": "leather stores",
-    "name": "leather store"
+    "icon": "purse"
 }

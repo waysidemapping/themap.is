@@ -1,5 +1,6 @@
 {
-    "icon": "american_football",
+    "name": "Australian Football Field",
+    "plural": "Australian football fields",
     "tags": {
         "leisure": "pitch",
         "sport": "australian_football"
@@ -13,6 +14,5 @@
         "aussie",
         "football"
     ],
-    "plural": "Australian football fields",
-    "name": "Australian Football Field"
+    "icon": "american_football"
 }

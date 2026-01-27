@@ -1,10 +1,6 @@
 {
-    "geometry": [
-        "point",
-        "vertex",
-        "line",
-        "area"
-    ],
+    "name": "Graffiti",
+    "plural": "graffiti",
     "tags": {
         "tourism": "artwork",
         "artwork_type": "graffiti"
@@ -13,12 +9,16 @@
         "key": "artwork_type",
         "value": "graffiti"
     },
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
     "terms": [
         "graffiti artwork",
         "guerilla artwork",
         "guerrilla artwork",
         "street artwork"
-    ],
-    "plural": "graffiti",
-    "name": "Graffiti"
+    ]
 }

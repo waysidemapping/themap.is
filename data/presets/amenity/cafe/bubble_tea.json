@@ -1,9 +1,6 @@
 {
-    "icon": "bubble_tea",
-    "geometry": [
-        "point",
-        "area"
-    ],
+    "name": "Bubble Tea Café",
+    "plural": "bubble tea cafés",
     "tags": {
         "amenity": "cafe",
         "cuisine": "bubble_tea"
@@ -12,6 +9,10 @@
         "key": "cuisine",
         "value": "bubble_tea"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "boba",
         "boba drink",
@@ -21,6 +22,5 @@
         "taiwanese tea drink",
         "tapioca"
     ],
-    "plural": "bubble tea cafés",
-    "name": "Bubble Tea Café"
+    "icon": "bubble_tea"
 }

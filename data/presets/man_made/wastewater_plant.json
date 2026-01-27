@@ -1,5 +1,8 @@
 {
-    "icon": "sewage",
+    "name": "Wastewater Plant",
+    "tags": {
+        "man_made": "wastewater_plant"
+    },
     "geometry": [
         "point",
         "area"
@@ -12,8 +15,5 @@
         "water treatment plant",
         "wwtp"
     ],
-    "tags": {
-        "man_made": "wastewater_plant"
-    },
-    "name": "Wastewater Plant"
+    "icon": "sewage"
 }

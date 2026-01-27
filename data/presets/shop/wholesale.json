@@ -1,12 +1,12 @@
 {
-    "icon": "goods-roof",
+    "name": "wholesale store",
+    "plural": "wholesale stores",
+    "tags": {
+        "shop": "wholesale"
+    },
     "terms": [
         "cash and carry",
         "warehouse club"
     ],
-    "tags": {
-        "shop": "wholesale"
-    },
-    "plural": "wholesale stores",
-    "name": "wholesale store"
+    "icon": "goods-roof"
 }

@@ -1,4 +1,6 @@
 {
+    "name": "copy shop",
+    "plural": "copy shops",
     "tags": {
         "shop": "copyshop"
     },
@@ -6,7 +8,5 @@
         "Copy Shop",
         "print",
         "scan"
-    ],
-    "plural": "copy shops",
-    "name": "copy shop"
+    ]
 }

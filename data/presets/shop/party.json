@@ -1,14 +1,14 @@
 {
-    "icon": "balloon",
+    "name": "party store",
+    "plural": "party stores",
+    "tags": {
+        "shop": "party"
+    },
     "terms": [
         "balloons",
         "costumes",
         "decorations",
         "invitations"
     ],
-    "tags": {
-        "shop": "party"
-    },
-    "plural": "party stores",
-    "name": "party store"
+    "icon": "balloon"
 }

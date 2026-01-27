@@ -1,8 +1,8 @@
 {
-    "icon": "coffee_bean",
+    "name": "coffee store",
+    "plural": "coffee stores",
     "tags": {
         "shop": "coffee"
     },
-    "plural": "coffee stores",
-    "name": "coffee store"
+    "icon": "coffee_bean"
 }

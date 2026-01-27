@@ -1,5 +1,13 @@
 {
-    "icon": "crab",
+    "name": "Seafood Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "seafood"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "seafood"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -25,13 +33,5 @@
         "squid",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "seafood"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "seafood"
-    },
-    "name": "Seafood Restaurant"
+    "icon": "crab"
 }

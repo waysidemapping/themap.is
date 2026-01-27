@@ -1,9 +1,9 @@
 {
+    "name": "Key Cutter",
     "tags": {
         "craft": "key_cutter"
     },
     "terms": [
         "key duplication"
-    ],
-    "name": "Key Cutter"
+    ]
 }

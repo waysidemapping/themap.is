@@ -1,5 +1,8 @@
 {
-    "icon": "gasoline_pump",
+    "name": "Gas Station",
+    "tags": {
+        "amenity": "fuel"
+    },
     "terms": [
         "biodiesel",
         "cng",
@@ -10,8 +13,5 @@
         "petrol",
         "propane"
     ],
-    "tags": {
-        "amenity": "fuel"
-    },
-    "name": "Gas Station"
+    "icon": "gasoline_pump"
 }

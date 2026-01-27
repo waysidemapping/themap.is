@@ -1,5 +1,5 @@
 {
-    "icon": "motorboat-parking_line",
+    "name": "Boat Storage",
     "tags": {
         "amenity": "boat_storage"
     },
@@ -8,5 +8,5 @@
         "dry dock",
         "marina"
     ],
-    "name": "Boat Storage"
+    "icon": "motorboat-parking_line"
 }

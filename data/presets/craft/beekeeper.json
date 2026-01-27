@@ -1,11 +1,11 @@
 {
-    "icon": "barn-silo",
-    "tags": {
-        "craft": "beekeeper"
-    },
+    "name": "beekeeper",
+    "plural": "beekeepers",
     "groups": [
         "bees"
     ],
-    "plural": "beekeepers",
-    "name": "beekeeper"
+    "tags": {
+        "craft": "beekeeper"
+    },
+    "icon": "barn-silo"
 }

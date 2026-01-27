@@ -1,12 +1,12 @@
 {
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Turning Loop (Island)",
     "tags": {
         "highway": "turning_loop"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "cul-de-sac"
-    ],
-    "name": "Turning Loop (Island)"
+    ]
 }

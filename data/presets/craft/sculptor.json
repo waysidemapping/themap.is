@@ -1,11 +1,11 @@
 {
-    "icon": "wall_art",
+    "name": "Sculptor",
+    "tags": {
+        "craft": "sculptor"
+    },
     "terms": [
         "sculpter",
         "sculptor"
     ],
-    "tags": {
-        "craft": "sculptor"
-    },
-    "name": "Sculptor"
+    "icon": "wall_art"
 }

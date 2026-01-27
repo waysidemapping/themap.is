@@ -1,15 +1,15 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Trunk Road",
     "tags": {
         "highway": "trunk"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "expressway",
         "highway",
         "road",
         "street"
-    ],
-    "name": "Trunk Road"
+    ]
 }

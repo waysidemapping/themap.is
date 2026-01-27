@@ -1,7 +1,7 @@
 {
+    "name": "bathroom furnishing store",
+    "plural": "bathroom furnishing stores",
     "tags": {
         "shop": "bathroom_furnishing"
-    },
-    "plural": "bathroom furnishing stores",
-    "name": "bathroom furnishing store"
+    }
 }

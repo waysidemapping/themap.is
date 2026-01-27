@@ -1,4 +1,9 @@
 {
+    "name": "Birthing Center",
+    "plural": "birthing centers",
+    "tags": {
+        "healthcare": "birthing_centre"
+    },
     "terms": [
         "baby",
         "childbirth",
@@ -8,10 +13,5 @@
         "midwive",
         "pregnancy",
         "pregnant"
-    ],
-    "tags": {
-        "healthcare": "birthing_centre"
-    },
-    "plural": "birthing centers",
-    "name": "Birthing Center"
+    ]
 }

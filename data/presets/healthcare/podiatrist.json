@@ -1,12 +1,12 @@
 {
+    "name": "Podiatrist",
+    "plural": "podiatrists",
+    "tags": {
+        "healthcare": "podiatrist"
+    },
     "terms": [
         "feet",
         "foot",
         "nails"
-    ],
-    "tags": {
-        "healthcare": "podiatrist"
-    },
-    "plural": "podiatrists",
-    "name": "Podiatrist"
+    ]
 }

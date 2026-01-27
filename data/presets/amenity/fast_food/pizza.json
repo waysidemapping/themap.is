@@ -1,5 +1,13 @@
 {
-    "icon": "pizza_slice",
+    "name": "Pizza Fast Food",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "pizza"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "pizza"
+    },
     "terms": [
         "deep dish",
         "dine",
@@ -12,13 +20,5 @@
         "table",
         "thin crust"
     ],
-    "tags": {
-        "amenity": "fast_food",
-        "cuisine": "pizza"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "pizza"
-    },
-    "name": "Pizza Fast Food"
+    "icon": "pizza_slice"
 }

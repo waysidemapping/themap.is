@@ -1,11 +1,11 @@
 {
-    "icon": "tram",
-    "geometry": [
-        "line"
-    ],
+    "name": "Tram Track",
     "tags": {
         "railway": "tram"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "Streetcar Track",
         "Trolley Track",
@@ -13,5 +13,5 @@
         "electric street railway",
         "light rail"
     ],
-    "name": "Tram Track"
+    "icon": "tram"
 }

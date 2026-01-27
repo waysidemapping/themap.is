@@ -1,5 +1,8 @@
 {
-    "icon": "cat",
+    "name": "Animal Shelter",
+    "tags": {
+        "amenity": "animal_shelter"
+    },
     "terms": [
         "adoption",
         "aspca",
@@ -16,8 +19,5 @@
         "rescue",
         "spca"
     ],
-    "tags": {
-        "amenity": "animal_shelter"
-    },
-    "name": "Animal Shelter"
+    "icon": "cat"
 }

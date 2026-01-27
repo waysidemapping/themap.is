@@ -1,5 +1,8 @@
 {
-    "icon": "fish-cascade",
+    "name": "Fish Pass",
+    "tags": {
+        "waterway": "fish_pass"
+    },
     "geometry": [
         "line"
     ],
@@ -17,8 +20,5 @@
         "fishsteps",
         "fishway"
     ],
-    "tags": {
-        "waterway": "fish_pass"
-    },
-    "name": "Fish Pass"
+    "icon": "fish-cascade"
 }

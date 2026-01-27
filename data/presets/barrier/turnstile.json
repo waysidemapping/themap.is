@@ -1,5 +1,8 @@
 {
-    "icon": "turnstile",
+    "name": "Turnstile",
+    "tags": {
+        "barrier": "turnstile"
+    },
     "geometry": [
         "vertex"
     ],
@@ -7,8 +10,5 @@
         "baffle gate",
         "turnstyle"
     ],
-    "tags": {
-        "barrier": "turnstile"
-    },
-    "name": "Turnstile"
+    "icon": "turnstile"
 }

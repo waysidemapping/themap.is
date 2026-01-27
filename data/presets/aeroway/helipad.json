@@ -1,16 +1,16 @@
 {
-    "icon": "helicopter",
+    "name": "Helipad",
+    "tags": {
+        "aeroway": "helipad"
+    },
     "geometry": [
         "area",
         "point"
     ],
-    "tags": {
-        "aeroway": "helipad"
-    },
     "terms": [
         "helicopter",
         "helipad",
         "heliport"
     ],
-    "name": "Helipad"
+    "icon": "helicopter"
 }

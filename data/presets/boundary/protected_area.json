@@ -1,6 +1,6 @@
 {
+    "name": "Protected Area",
     "tags": {
         "boundary": "protected_area"
-    },
-    "name": "Protected Area"
+    }
 }

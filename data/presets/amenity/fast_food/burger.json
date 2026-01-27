@@ -1,5 +1,13 @@
 {
-    "icon": "burger",
+    "name": "Burger Fast Food",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "burger"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "burger"
+    },
     "terms": [
         "breakfast",
         "dine",
@@ -11,13 +19,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "fast_food",
-        "cuisine": "burger"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "burger"
-    },
-    "name": "Burger Fast Food"
+    "icon": "burger"
 }

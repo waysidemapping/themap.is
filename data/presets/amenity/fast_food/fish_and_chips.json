@@ -1,4 +1,13 @@
 {
+    "name": "Fish & Chips Fast Food",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "fish_and_chips"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "fish_and_chips"
+    },
     "terms": [
         "breakfast",
         "cafe",
@@ -12,14 +21,5 @@
         "grill",
         "lunch",
         "table"
-    ],
-    "tags": {
-        "amenity": "fast_food",
-        "cuisine": "fish_and_chips"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "fish_and_chips"
-    },
-    "name": "Fish & Chips Fast Food"
+    ]
 }

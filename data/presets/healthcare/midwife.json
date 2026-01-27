@@ -1,4 +1,9 @@
 {
+    "name": "Midwife",
+    "plural": "midwives",
+    "tags": {
+        "healthcare": "midwife"
+    },
     "terms": [
         "baby",
         "childbirth",
@@ -6,10 +11,5 @@
         "labor",
         "labour",
         "pregnancy"
-    ],
-    "tags": {
-        "healthcare": "midwife"
-    },
-    "plural": "midwives",
-    "name": "Midwife"
+    ]
 }

@@ -1,15 +1,15 @@
 {
-    "icon": "signals_two",
+    "name": "Railway Signal",
+    "tags": {
+        "railway": "signal"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "railway": "signal"
-    },
     "terms": [
         "lights",
         "signal"
     ],
-    "name": "Railway Signal"
+    "icon": "signals_two"
 }

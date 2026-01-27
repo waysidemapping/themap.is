@@ -1,7 +1,7 @@
 {
-    "icon": "brick_trowel",
+    "name": "Floorer",
     "tags": {
         "craft": "floorer"
     },
-    "name": "Floorer"
+    "icon": "brick_trowel"
 }

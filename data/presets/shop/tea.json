@@ -1,8 +1,8 @@
 {
-    "icon": "teacup-steam",
+    "name": "tea store",
+    "plural": "tea stores",
     "tags": {
         "shop": "tea"
     },
-    "plural": "tea stores",
-    "name": "tea store"
+    "icon": "teacup-steam"
 }

@@ -1,13 +1,13 @@
 {
-    "icon": "rail_profile",
+    "name": "Railway Feature",
+    "tags": {
+        "railway": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
     ],
-    "tags": {
-        "railway": "*"
-    },
-    "name": "Railway Feature"
+    "icon": "rail_profile"
 }

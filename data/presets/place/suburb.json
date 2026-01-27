@@ -1,5 +1,5 @@
 {
-    "icon": "triangle_up_stroked",
+    "name": "Borough / Suburb",
     "tags": {
         "place": "suburb"
     },
@@ -8,5 +8,5 @@
         "borough",
         "quarter"
     ],
-    "name": "Borough / Suburb"
+    "icon": "triangle_up_stroked"
 }

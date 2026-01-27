@@ -1,5 +1,8 @@
 {
-    "icon": "picnic_table",
+    "name": "Outdoor Seating Area",
+    "tags": {
+        "leisure": "outdoor_seating"
+    },
     "terms": [
         "al fresco",
         "bar",
@@ -10,8 +13,5 @@
         "pub",
         "restaurant"
     ],
-    "tags": {
-        "leisure": "outdoor_seating"
-    },
-    "name": "Outdoor Seating Area"
+    "icon": "picnic_table"
 }

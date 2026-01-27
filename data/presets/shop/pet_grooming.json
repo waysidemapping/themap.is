@@ -1,14 +1,14 @@
 {
-    "icon": "dog-comb",
+    "name": "pet groomer",
+    "plural": "pet groomers",
+    "tags": {
+        "shop": "pet_grooming"
+    },
     "terms": [
         "cat",
         "cat grooming",
         "dog",
         "dog grooming"
     ],
-    "tags": {
-        "shop": "pet_grooming"
-    },
-    "plural": "pet groomers",
-    "name": "pet groomer"
+    "icon": "dog-comb"
 }

@@ -1,5 +1,9 @@
 {
-    "icon": "propane_tank",
+    "name": "bottled gas store",
+    "plural": "bottled gas stores",
+    "tags": {
+        "shop": "gas"
+    },
     "terms": [
         "cng",
         "lpg",
@@ -8,9 +12,5 @@
         "refill",
         "tank"
     ],
-    "tags": {
-        "shop": "gas"
-    },
-    "plural": "bottled gas stores",
-    "name": "bottled gas store"
+    "icon": "propane_tank"
 }

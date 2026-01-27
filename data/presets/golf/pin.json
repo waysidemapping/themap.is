@@ -1,9 +1,9 @@
 {
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Golf Pin",
     "tags": {
         "golf": "pin"
     },
-    "name": "Golf Pin"
+    "geometry": [
+        "vertex"
+    ]
 }

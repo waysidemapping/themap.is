@@ -1,13 +1,13 @@
 {
-    "icon": "tree_row",
-    "geometry": [
-        "line"
-    ],
+    "name": "Tree Row",
     "tags": {
         "natural": "tree_row"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "tree line"
     ],
-    "name": "Tree Row"
+    "icon": "tree_row"
 }

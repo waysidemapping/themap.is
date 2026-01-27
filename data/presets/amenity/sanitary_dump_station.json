@@ -1,5 +1,8 @@
 {
-    "icon": "camper_trailer-waste_dump",
+    "name": "RV Toilet Disposal",
+    "tags": {
+        "amenity": "sanitary_dump_station"
+    },
     "terms": [
         "camper",
         "cdp",
@@ -10,8 +13,5 @@
         "motor home",
         "sanitary"
     ],
-    "tags": {
-        "amenity": "sanitary_dump_station"
-    },
-    "name": "RV Toilet Disposal"
+    "icon": "camper_trailer-waste_dump"
 }

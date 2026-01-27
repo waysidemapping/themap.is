@@ -1,5 +1,13 @@
 {
-    "icon": "bull",
+    "name": "Steakhouse",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "steak_house"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "steak_house"
+    },
     "terms": [
         "bar",
         "beef",
@@ -18,13 +26,5 @@
         "steak house",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "steak_house"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "steak_house"
-    },
-    "name": "Steakhouse"
+    "icon": "bull"
 }

@@ -1,5 +1,13 @@
 {
-    "icon": "spade",
+    "name": "Casino",
+    "plural": "casinos",
+    "groups": [
+        "gambling",
+        "adult_amusement"
+    ],
+    "tags": {
+        "amenity": "casino"
+    },
     "terms": [
         "blackjack",
         "craps",
@@ -7,13 +15,5 @@
         "poker",
         "roulette"
     ],
-    "tags": {
-        "amenity": "casino"
-    },
-    "groups": [
-        "gambling",
-        "adult_amusement"
-    ],
-    "plural": "casinos",
-    "name": "Casino"
+    "icon": "spade"
 }

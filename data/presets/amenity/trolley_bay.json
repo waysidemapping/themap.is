@@ -1,4 +1,5 @@
 {
+    "name": "Cart Corral",
     "tags": {
         "amenity": "trolley_bay"
     },
@@ -7,6 +8,5 @@
         "cart return",
         "shopping cart",
         "trolley bay"
-    ],
-    "name": "Cart Corral"
+    ]
 }

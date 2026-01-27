@@ -1,5 +1,6 @@
 {
-    "icon": "rocking_horse",
+    "name": "toy store",
+    "plural": "toy stores",
     "tags": {
         "shop": "toys"
     },
@@ -8,6 +9,5 @@
         "hobby",
         "teddy"
     ],
-    "plural": "toy stores",
-    "name": "toy store"
+    "icon": "rocking_horse"
 }

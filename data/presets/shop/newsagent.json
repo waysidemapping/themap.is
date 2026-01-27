@@ -1,11 +1,11 @@
 {
-    "icon": "newspaper",
+    "name": "newsstand",
+    "plural": "newsstands",
     "tags": {
         "shop": "newsagent"
     },
-    "plural": "newsstands",
-    "name": "newsstand",
     "terms": [
         "Newspaper / Magazine Shop"
-    ]
+    ],
+    "icon": "newspaper"
 }

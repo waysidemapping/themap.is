@@ -1,12 +1,12 @@
 {
-    "icon": "plane",
+    "name": "Aeroway Feature",
+    "tags": {
+        "aeroway": "*"
+    },
     "geometry": [
         "vertex",
         "line",
         "area"
     ],
-    "tags": {
-        "aeroway": "*"
-    },
-    "name": "Aeroway Feature"
+    "icon": "plane"
 }

@@ -1,5 +1,13 @@
 {
-    "icon": "drink_cup",
+    "name": "Juice Fast Food",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "juice"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "juice"
+    },
     "terms": [
         "beverages",
         "cafe",
@@ -9,13 +17,5 @@
         "shakes",
         "smoothies"
     ],
-    "tags": {
-        "amenity": "fast_food",
-        "cuisine": "juice"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "juice"
-    },
-    "name": "Juice Fast Food"
+    "icon": "drink_cup"
 }

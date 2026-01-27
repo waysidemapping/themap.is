@@ -1,19 +1,19 @@
 {
+    "name": "Strait",
+    "groups": [
+        "water"
+    ],
+    "tags": {
+        "natural": "strait"
+    },
     "geometry": [
         "point",
         "line",
         "area"
     ],
-    "tags": {
-        "natural": "strait"
-    },
-    "groups": [
-        "water"
-    ],
     "terms": [
         "channel",
         "pass",
         "passage"
-    ],
-    "name": "Strait"
+    ]
 }

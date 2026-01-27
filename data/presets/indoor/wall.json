@@ -1,15 +1,15 @@
 {
-    "icon": "wall",
-    "geometry": [
-        "line"
-    ],
+    "name": "Indoor Wall",
     "tags": {
         "indoor": "wall"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "indoor barrier",
         "room divider",
         "room partition"
     ],
-    "name": "Indoor Wall"
+    "icon": "wall"
 }

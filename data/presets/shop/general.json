@@ -1,4 +1,6 @@
 {
+    "name": "general store",
+    "plural": "general stores",
     "tags": {
         "shop": "general"
     },
@@ -8,7 +10,5 @@
         "General Dealer",
         "small-town store",
         "village shop"
-    ],
-    "plural": "general stores",
-    "name": "general store"
+    ]
 }

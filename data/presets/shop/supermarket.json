@@ -1,5 +1,9 @@
 {
-    "icon": "shopping_cart",
+    "name": "supermarket",
+    "plural": "supermarkets",
+    "tags": {
+        "shop": "supermarket"
+    },
     "terms": [
         "food market",
         "grocery",
@@ -8,9 +12,5 @@
         "shop",
         "store"
     ],
-    "tags": {
-        "shop": "supermarket"
-    },
-    "plural": "supermarkets",
-    "name": "supermarket"
+    "icon": "shopping_cart"
 }

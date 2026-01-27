@@ -1,10 +1,10 @@
 {
+    "name": "phone accessory store",
+    "plural": "phone accessory stores",
     "tags": {
         "shop": "mobile_phone_accessories"
     },
     "terms": [
         "phone case"
-    ],
-    "plural": "phone accessory stores",
-    "name": "phone accessory store"
+    ]
 }

@@ -1,4 +1,8 @@
 {
+    "name": "Tidal Channel",
+    "tags": {
+        "waterway": "tidal_channel"
+    },
     "geometry": [
         "line"
     ],
@@ -13,9 +17,5 @@
         "tidal flat",
         "tidal inlet",
         "waterway"
-    ],
-    "tags": {
-        "waterway": "tidal_channel"
-    },
-    "name": "Tidal Channel"
+    ]
 }

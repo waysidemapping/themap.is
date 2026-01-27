@@ -1,13 +1,13 @@
 {
+    "name": "Speech Therapist",
+    "plural": "speech therapists",
+    "tags": {
+        "healthcare": "speech_therapist"
+    },
     "terms": [
         "speech",
         "therapist",
         "therapy",
         "voice"
-    ],
-    "tags": {
-        "healthcare": "speech_therapist"
-    },
-    "plural": "speech therapists",
-    "name": "Speech Therapist"
+    ]
 }

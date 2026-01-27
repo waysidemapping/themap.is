@@ -1,4 +1,6 @@
 {
+    "name": "Shooting Range",
+    "plural": "shooting ranges",
     "tags": {
         "leisure": "pitch",
         "sport": "shooting"
@@ -14,7 +16,5 @@
         "shooting gallery",
         "shooting practice",
         "target practice"
-    ],
-    "plural": "shooting ranges",
-    "name": "Shooting Range"
+    ]
 }

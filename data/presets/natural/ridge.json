@@ -1,13 +1,13 @@
 {
-    "icon": "mountain_range",
-    "geometry": [
-        "line"
-    ],
+    "name": "Ridge",
     "tags": {
         "natural": "ridge"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "crest"
     ],
-    "name": "Ridge"
+    "icon": "mountain_range"
 }

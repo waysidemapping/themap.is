@@ -1,12 +1,12 @@
 {
+    "name": "houseware store",
+    "plural": "houseware stores",
+    "tags": {
+        "shop": "houseware"
+    },
     "terms": [
         "Household Goods Store",
         "home",
         "kitchenware"
-    ],
-    "tags": {
-        "shop": "houseware"
-    },
-    "plural": "houseware stores",
-    "name": "houseware store"
+    ]
 }

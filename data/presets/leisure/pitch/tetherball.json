@@ -1,4 +1,6 @@
 {
+    "name": "Tetherball Court",
+    "plural": "tetherball courts",
     "tags": {
         "leisure": "pitch",
         "sport": "tetherball"
@@ -10,7 +12,5 @@
     "terms": [
         "swingball",
         "tether tennis"
-    ],
-    "plural": "tetherball courts",
-    "name": "Tetherball Court"
+    ]
 }

@@ -1,5 +1,5 @@
 {
-    "icon": "transit",
+    "name": "Transit Station",
     "tags": {
         "public_transport": "station"
     },
@@ -11,6 +11,6 @@
         "transit",
         "transportation"
     ],
-    "name": "Transit Station",
+    "icon": "transit",
     "matchScore": 0.2
 }

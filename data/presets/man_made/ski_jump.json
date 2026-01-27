@@ -1,5 +1,8 @@
 {
-    "icon": "ski_jumper",
+    "name": "Ski Jumping Tower",
+    "tags": {
+        "man_made": "ski_jump"
+    },
     "geometry": [
         "point",
         "area"
@@ -15,8 +18,5 @@
         "ski jump structure",
         "ski jumping hill tower"
     ],
-    "tags": {
-        "man_made": "ski_jump"
-    },
-    "name": "Ski Jumping Tower"
+    "icon": "ski_jumper"
 }

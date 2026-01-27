@@ -1,15 +1,15 @@
 {
-    "icon": "chest_of_drawers",
+    "name": "antiques store",
+    "plural": "antiques stores",
     "tags": {
         "shop": "antiques"
     },
-    "plural": "antiques stores",
-    "name": "antiques store",
     "terms": [
         "Antique Store",
         "Antiques Shop",
         "Antiques Store",
         "old",
         "vintage"
-    ]
+    ],
+    "icon": "chest_of_drawers"
 }

@@ -1,5 +1,8 @@
 {
-    "icon": "guyed_mast",
+    "name": "Mast",
+    "tags": {
+        "man_made": "mast"
+    },
     "geometry": [
         "point",
         "vertex"
@@ -20,8 +23,5 @@
         "transmission tower",
         "tv tower"
     ],
-    "tags": {
-        "man_made": "mast"
-    },
-    "name": "Mast"
+    "icon": "guyed_mast"
 }

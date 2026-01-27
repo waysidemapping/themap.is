@@ -1,9 +1,5 @@
 {
-    "icon": "torii",
-    "terms": [
-        "kami",
-        "torii"
-    ],
+    "name": "Shinto Shrine",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "shinto"
@@ -12,5 +8,9 @@
         "key": "amenity",
         "value": "place_of_worship"
     },
-    "name": "Shinto Shrine"
+    "terms": [
+        "kami",
+        "torii"
+    ],
+    "icon": "torii"
 }

@@ -1,4 +1,9 @@
 {
+    "name": "music store",
+    "plural": "music stores",
+    "tags": {
+        "shop": "music"
+    },
     "terms": [
         "casette",
         "casette store",
@@ -8,10 +13,5 @@
         "hobby",
         "tape cassettes",
         "vinyl records"
-    ],
-    "tags": {
-        "shop": "music"
-    },
-    "plural": "music stores",
-    "name": "music store"
+    ]
 }

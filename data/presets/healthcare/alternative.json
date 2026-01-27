@@ -1,4 +1,9 @@
 {
+    "name": "Alternative Medicine",
+    "plural": "alternative medicine facility",
+    "tags": {
+        "healthcare": "alternative"
+    },
     "terms": [
         "anthroposophical",
         "applied kinesiology",
@@ -9,10 +14,5 @@
         "reflexology",
         "traditional",
         "unani"
-    ],
-    "tags": {
-        "healthcare": "alternative"
-    },
-    "plural": "alternative medicine facility",
-    "name": "Alternative Medicine"
+    ]
 }

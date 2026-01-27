@@ -1,12 +1,16 @@
 {
-    "icon": "sleeper",
-    "geometry": [
-        "point",
-        "area"
+    "name": "Guest House",
+    "plural": "guest houses",
+    "groups": [
+        "lodging"
     ],
     "tags": {
         "tourism": "guest_house"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "b & b",
         "b and b",
@@ -16,9 +20,5 @@
         "lodging",
         "overnight accommodations"
     ],
-    "groups": [
-        "lodging"
-    ],
-    "plural": "guest houses",
-    "name": "Guest House"
+    "icon": "sleeper"
 }

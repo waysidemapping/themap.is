@@ -1,5 +1,9 @@
 {
-    "icon": "apple",
+    "name": "greengrocer",
+    "plural": "greengrocers",
+    "tags": {
+        "shop": "greengrocer"
+    },
     "terms": [
         "Produce Store",
         "Produce Shop",
@@ -7,9 +11,5 @@
         "produce",
         "vegetable"
     ],
-    "tags": {
-        "shop": "greengrocer"
-    },
-    "plural": "greengrocers",
-    "name": "greengrocer"
+    "icon": "apple"
 }

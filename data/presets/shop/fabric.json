@@ -1,12 +1,12 @@
 {
+    "name": "fabric store",
+    "plural": "fabric stores",
+    "tags": {
+        "shop": "fabric"
+    },
     "terms": [
         "sew",
         "textile",
         "textiles"
-    ],
-    "tags": {
-        "shop": "fabric"
-    },
-    "plural": "fabric stores",
-    "name": "fabric store"
+    ]
 }

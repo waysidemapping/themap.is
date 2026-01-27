@@ -1,8 +1,8 @@
 {
-    "icon": "tiling",
+    "name": "tile store",
+    "plural": "tile stores",
     "tags": {
         "shop": "tiles"
     },
-    "plural": "tile stores",
-    "name": "tile store"
+    "icon": "tiling"
 }

@@ -1,10 +1,11 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Track / Land-Access Road",
     "tags": {
         "highway": "track"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "Land-Access Road",
         "Track Road",
@@ -38,6 +39,5 @@
         "unmaintained",
         "vehicular trail",
         "woods road"
-    ],
-    "name": "Track / Land-Access Road"
+    ]
 }

@@ -1,4 +1,8 @@
 {
+    "name": "Test Prep / Tutoring School",
+    "tags": {
+        "education": "prep_school"
+    },
     "terms": [
         "academic",
         "act",
@@ -9,9 +13,5 @@
         "test prep",
         "tutoring",
         "writing"
-    ],
-    "tags": {
-        "education": "prep_school"
-    },
-    "name": "Test Prep / Tutoring School"
+    ]
 }

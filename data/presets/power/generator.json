@@ -1,4 +1,8 @@
 {
+    "name": "Power Generator",
+    "tags": {
+        "power": "generator"
+    },
     "geometry": [
         "point",
         "vertex",
@@ -9,9 +13,5 @@
         "solar",
         "turbine",
         "wind"
-    ],
-    "tags": {
-        "power": "generator"
-    },
-    "name": "Power Generator"
+    ]
 }

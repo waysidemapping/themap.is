@@ -1,17 +1,17 @@
 {
-    "icon": "snowflake",
-    "geometry": [
-        "area"
+    "name": "Glacier",
+    "groups": [
+        "ice"
     ],
     "tags": {
         "natural": "glacier"
     },
-    "groups": [
-        "ice"
+    "geometry": [
+        "area"
     ],
     "terms": [
         "ice",
         "snow"
     ],
-    "name": "Glacier"
+    "icon": "snowflake"
 }

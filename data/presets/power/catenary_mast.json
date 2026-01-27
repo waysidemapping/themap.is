@@ -1,17 +1,17 @@
 {
-    "icon": "utility_pole-bolt",
+    "name": "Catenary Pole",
+    "tags": {
+        "power": "catenary_mast"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "power": "catenary_mast"
-    },
     "terms": [
         "catenary mast",
         "catenary pylon",
         "overhead line",
         "overhead wire"
     ],
-    "name": "Catenary Pole"
+    "icon": "utility_pole-bolt"
 }

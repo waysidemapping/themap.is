@@ -1,7 +1,7 @@
 {
-    "icon": "house",
+    "name": "Isolated Dwelling",
     "tags": {
         "place": "isolated_dwelling"
     },
-    "name": "Isolated Dwelling"
+    "icon": "house"
 }

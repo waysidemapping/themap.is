@@ -1,4 +1,5 @@
 {
+    "name": "Events Venue",
     "tags": {
         "amenity": "events_venue"
     },
@@ -17,6 +18,5 @@
         "quinceañera",
         "reunions",
         "weddings"
-    ],
-    "name": "Events Venue"
+    ]
 }

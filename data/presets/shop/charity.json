@@ -1,12 +1,12 @@
 {
+    "name": "Charity Store",
+    "plural": "charity stores",
+    "tags": {
+        "shop": "charity"
+    },
     "terms": [
         "nonprofit",
         "op shop",
         "thrift"
-    ],
-    "tags": {
-        "shop": "charity"
-    },
-    "plural": "charity stores",
-    "name": "Charity Store"
+    ]
 }

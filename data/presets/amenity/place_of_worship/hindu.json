@@ -1,5 +1,13 @@
 {
-    "icon": "hinduism",
+    "name": "Hindu Temple",
+    "tags": {
+        "amenity": "place_of_worship",
+        "religion": "hindu"
+    },
+    "reference": {
+        "key": "amenity",
+        "value": "place_of_worship"
+    },
     "terms": [
         "alayam",
         "devasthana",
@@ -9,13 +17,5 @@
         "shrine",
         "temple"
     ],
-    "tags": {
-        "amenity": "place_of_worship",
-        "religion": "hindu"
-    },
-    "reference": {
-        "key": "amenity",
-        "value": "place_of_worship"
-    },
-    "name": "Hindu Temple"
+    "icon": "hinduism"
 }

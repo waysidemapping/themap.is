@@ -1,5 +1,8 @@
 {
-    "icon": "adit_profile",
+    "name": "Adit",
+    "tags": {
+        "man_made": "adit"
+    },
     "geometry": [
         "point",
         "vertex",
@@ -11,8 +14,5 @@
         "tunnel",
         "underground"
     ],
-    "tags": {
-        "man_made": "adit"
-    },
-    "name": "Adit"
+    "icon": "adit_profile"
 }

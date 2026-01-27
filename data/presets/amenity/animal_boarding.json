@@ -1,5 +1,8 @@
 {
-    "icon": "cat",
+    "name": "Animal Boarding Facility",
+    "tags": {
+        "amenity": "animal_boarding"
+    },
     "terms": [
         "boarding",
         "cat",
@@ -15,8 +18,5 @@
         "puppy",
         "reptile"
     ],
-    "tags": {
-        "amenity": "animal_boarding"
-    },
-    "name": "Animal Boarding Facility"
+    "icon": "cat"
 }

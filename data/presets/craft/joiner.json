@@ -1,9 +1,9 @@
 {
+    "name": "Joiner",
     "tags": {
         "craft": "joiner"
     },
     "terms": [
         "furniture"
-    ],
-    "name": "Joiner"
+    ]
 }

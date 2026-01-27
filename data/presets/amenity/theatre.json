@@ -1,13 +1,13 @@
 {
-    "icon": "comedy_mask-tragedy_mask",
+    "name": "Theater",
+    "tags": {
+        "amenity": "theatre"
+    },
     "terms": [
         "musical",
         "performance",
         "play",
         "theatre"
     ],
-    "tags": {
-        "amenity": "theatre"
-    },
-    "name": "Theater"
+    "icon": "comedy_mask-tragedy_mask"
 }

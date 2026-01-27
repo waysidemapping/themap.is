@@ -1,12 +1,12 @@
 {
-    "icon": "hedge",
+    "name": "Hedge",
+    "tags": {
+        "barrier": "hedge"
+    },
     "geometry": [
         "line",
         "area"
     ],
-    "tags": {
-        "barrier": "hedge"
-    },
-    "name": "Hedge",
+    "icon": "hedge",
     "matchScore": 0.25
 }

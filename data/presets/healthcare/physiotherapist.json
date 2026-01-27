@@ -1,13 +1,13 @@
 {
-    "icon": "squatter-yayer",
+    "name": "Physiotherapist",
+    "plural": "physiotherapists",
+    "tags": {
+        "healthcare": "physiotherapist"
+    },
     "terms": [
         "physical",
         "therapist",
         "therapy"
     ],
-    "tags": {
-        "healthcare": "physiotherapist"
-    },
-    "plural": "physiotherapists",
-    "name": "Physiotherapist"
+    "icon": "squatter-yayer"
 }

@@ -1,5 +1,8 @@
 {
-    "icon": "benchmark_disk",
+    "name": "Survey Point",
+    "tags": {
+        "man_made": "survey_point"
+    },
     "geometry": [
         "point",
         "vertex"
@@ -13,8 +16,5 @@
         "trig station",
         "trigonometrical station"
     ],
-    "tags": {
-        "man_made": "survey_point"
-    },
-    "name": "Survey Point"
+    "icon": "benchmark_disk"
 }

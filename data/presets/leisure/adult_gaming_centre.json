@@ -1,16 +1,16 @@
 {
-    "icon": "slot_machine",
-    "terms": [
-        "gambling",
-        "slot machine"
-    ],
-    "tags": {
-        "leisure": "adult_gaming_centre"
-    },
+    "name": "Adult Gaming Center",
+    "plural": "adult gaming centers",
     "groups": [
         "gambling",
         "adult_amusement"
     ],
-    "plural": "adult gaming centers",
-    "name": "Adult Gaming Center"
+    "tags": {
+        "leisure": "adult_gaming_centre"
+    },
+    "terms": [
+        "gambling",
+        "slot machine"
+    ],
+    "icon": "slot_machine"
 }

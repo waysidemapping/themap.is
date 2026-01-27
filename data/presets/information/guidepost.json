@@ -1,9 +1,9 @@
 {
-    "terms": [
-        "signpost"
-    ],
+    "name": "Guidepost",
     "tags": {
         "information": "guidepost"
     },
-    "name": "Guidepost"
+    "terms": [
+        "signpost"
+    ]
 }

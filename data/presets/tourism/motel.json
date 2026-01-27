@@ -1,20 +1,20 @@
 {
-    "icon": "car-sleeper",
-    "geometry": [
-        "point",
-        "area"
+    "name": "Motel",
+    "plural": "motels",
+    "groups": [
+        "lodging"
     ],
     "tags": {
         "tourism": "motel"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "lodging",
         "motor hotel",
         "overnight accommodations"
     ],
-    "groups": [
-        "lodging"
-    ],
-    "plural": "motels",
-    "name": "Motel"
+    "icon": "car-sleeper"
 }

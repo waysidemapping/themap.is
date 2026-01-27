@@ -1,14 +1,14 @@
 {
-    "icon": "dagger",
+    "name": "weapon store",
+    "plural": "weapon stores",
+    "tags": {
+        "shop": "weapons"
+    },
     "terms": [
         "ammo",
         "gun",
         "knife",
         "knives"
     ],
-    "tags": {
-        "shop": "weapons"
-    },
-    "plural": "weapon stores",
-    "name": "weapon store"
+    "icon": "dagger"
 }

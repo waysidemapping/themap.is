@@ -1,5 +1,5 @@
 {
-    "icon": "dog",
+    "name": "Dog Park",
     "tags": {
         "leisure": "dog_park"
     },
@@ -11,5 +11,5 @@
         "offleash",
         "puppy park"
     ],
-    "name": "Dog Park"
+    "icon": "dog"
 }

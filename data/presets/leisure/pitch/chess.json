@@ -1,4 +1,6 @@
 {
+    "name": "Giant Chess Board",
+    "plural": "giant chess boards",
     "tags": {
         "leisure": "pitch",
         "sport": "chess"
@@ -15,7 +17,5 @@
         "garden chess",
         "large chess",
         "oversize chess"
-    ],
-    "plural": "giant chess boards",
-    "name": "Giant Chess Board"
+    ]
 }

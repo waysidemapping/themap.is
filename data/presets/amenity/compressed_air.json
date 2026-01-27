@@ -1,9 +1,9 @@
 {
+    "name": "Compressed Air",
     "tags": {
         "amenity": "compressed_air"
     },
     "terms": [
         "air compressor"
-    ],
-    "name": "Compressed Air"
+    ]
 }

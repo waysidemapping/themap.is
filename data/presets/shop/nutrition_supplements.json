@@ -1,14 +1,14 @@
 {
-    "icon": "pill",
+    "name": "nutrition supplement store",
+    "plural": "nutrition supplement stores",
+    "tags": {
+        "shop": "nutrition_supplements"
+    },
     "terms": [
         "health",
         "protein",
         "supplement",
         "vitamin"
     ],
-    "tags": {
-        "shop": "nutrition_supplements"
-    },
-    "plural": "nutrition supplement stores",
-    "name": "nutrition supplement store"
+    "icon": "pill"
 }

@@ -1,7 +1,7 @@
 {
-    "icon": "rigging",
+    "name": "Rigger",
     "tags": {
         "craft": "rigger"
     },
-    "name": "Rigger"
+    "icon": "rigging"
 }

@@ -1,9 +1,6 @@
 {
-    "icon": "bust",
-    "geometry": [
-        "point",
-        "vertex"
-    ],
+    "name": "Bust",
+    "plural": "busts",
     "tags": {
         "tourism": "artwork",
         "artwork_type": "bust"
@@ -12,9 +9,12 @@
         "key": "artwork_type",
         "value": "bust"
     },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
     "terms": [
         "figure"
     ],
-    "plural": "busts",
-    "name": "Bust"
+    "icon": "bust"
 }

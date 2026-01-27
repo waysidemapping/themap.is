@@ -1,4 +1,13 @@
 {
+    "name": "Spanish Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "spanish"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "spanish"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -13,14 +22,5 @@
         "grill",
         "lunch",
         "table"
-    ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "spanish"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "spanish"
-    },
-    "name": "Spanish Restaurant"
+    ]
 }

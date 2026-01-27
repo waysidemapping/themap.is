@@ -1,15 +1,15 @@
 {
-    "icon": "volcano-eruption",
+    "name": "Volcano",
+    "tags": {
+        "natural": "volcano"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "natural": "volcano"
-    },
     "terms": [
         "crater",
         "mountain"
     ],
-    "name": "Volcano"
+    "icon": "volcano-eruption"
 }

@@ -1,8 +1,8 @@
 {
-    "icon": "vending_machine",
+    "name": "Vending Machine",
     "tags": {
         "amenity": "vending_machine"
     },
-    "matchScore": 0.9,
-    "name": "Vending Machine"
+    "icon": "vending_machine",
+    "matchScore": 0.9
 }

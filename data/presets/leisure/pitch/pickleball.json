@@ -1,5 +1,6 @@
 {
-    "icon": "tennis_player",
+    "name": "Pickleball Court",
+    "plural": "pickleball courts",
     "tags": {
         "leisure": "pitch",
         "sport": "pickleball"
@@ -12,6 +13,5 @@
         "paddleball",
         "tennis"
     ],
-    "plural": "pickleball courts",
-    "name": "Pickleball Court"
+    "icon": "tennis_player"
 }

@@ -1,4 +1,11 @@
 {
+    "name": "Lottery Shop",
+    "plural": "lottery shops",
+    "groups": [
+        "gambling",
+        "adult_amusement",
+        "stores"
+    ],
     "tags": {
         "shop": "lottery"
     },
@@ -7,12 +14,5 @@
         "gambling",
         "lotto tickets",
         "scratch-offs"
-    ],
-    "groups": [
-        "gambling",
-        "adult_amusement",
-        "stores"
-    ],
-    "plural": "lottery shops",
-    "name": "Lottery Shop"
+    ]
 }

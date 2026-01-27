@@ -1,16 +1,16 @@
 {
-    "icon": "dam",
+    "name": "Dam",
+    "groups": [
+        "dams"
+    ],
+    "tags": {
+        "waterway": "dam"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
     ],
-    "tags": {
-        "waterway": "dam"
-    },
-    "groups": [
-        "dams"
-    ],
-    "name": "Dam"
+    "icon": "dam"
 }

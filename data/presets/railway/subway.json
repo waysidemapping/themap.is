@@ -1,15 +1,15 @@
 {
-    "icon": "subway",
-    "geometry": [
-        "line"
-    ],
+    "name": "Subway Track",
     "tags": {
         "railway": "subway"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "metro",
         "transit",
         "underground railway"
     ],
-    "name": "Subway Track"
+    "icon": "subway"
 }

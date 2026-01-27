@@ -1,9 +1,9 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Route Feature",
     "tags": {
         "route": "*"
     },
-    "name": "Route Feature"
+    "geometry": [
+        "line"
+    ]
 }

@@ -1,17 +1,17 @@
 {
-    "geometry": [
-        "point"
+    "name": "Insect Hotel",
+    "groups": [
+        "bees"
     ],
     "tags": {
         "man_made": "insect_hotel"
     },
+    "geometry": [
+        "point"
+    ],
     "terms": [
         "bee hotel",
         "bug hotel",
         "insect house"
-    ],
-    "groups": [
-        "bees"
-    ],
-    "name": "Insect Hotel"
+    ]
 }

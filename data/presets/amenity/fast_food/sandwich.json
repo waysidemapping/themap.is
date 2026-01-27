@@ -1,5 +1,13 @@
 {
-    "icon": "sandwich_sub",
+    "name": "Sandwich Fast Food",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "sandwich"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "sandwich"
+    },
     "terms": [
         "breakfast",
         "cafe",
@@ -16,13 +24,5 @@
         "meat",
         "table"
     ],
-    "tags": {
-        "amenity": "fast_food",
-        "cuisine": "sandwich"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "sandwich"
-    },
-    "name": "Sandwich Fast Food"
+    "icon": "sandwich_sub"
 }

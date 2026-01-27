@@ -1,13 +1,13 @@
 {
-    "geometry": [
-        "point",
-        "area"
-    ],
+    "name": "Telescope",
     "tags": {
         "man_made": "telescope"
     },
     "reference": {
         "key": "man_made"
     },
-    "name": "Telescope"
+    "geometry": [
+        "point",
+        "area"
+    ]
 }

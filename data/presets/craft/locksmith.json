@@ -1,10 +1,10 @@
 {
-    "terms": [
-        "key",
-        "lockpick"
-    ],
+    "name": "Locksmith",
     "tags": {
         "craft": "locksmith"
     },
-    "name": "Locksmith"
+    "terms": [
+        "key",
+        "lockpick"
+    ]
 }

@@ -1,5 +1,5 @@
 {
-    "icon": "detergent_bottle",
+    "name": "Lavoir",
     "tags": {
         "amenity": "lavoir"
     },
@@ -8,5 +8,5 @@
         "laundry",
         "washing"
     ],
-    "name": "Lavoir"
+    "icon": "detergent_bottle"
 }

@@ -1,19 +1,19 @@
 {
-    "icon": "wall_art",
+    "name": "Artwork",
+    "plural": "artworks",
+    "tags": {
+        "tourism": "artwork"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
     ],
-    "tags": {
-        "tourism": "artwork"
-    },
     "terms": [
         "mural",
         "sculpture",
         "statue"
     ],
-    "plural": "artworks",
-    "name": "Artwork"
+    "icon": "wall_art"
 }

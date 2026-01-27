@@ -1,4 +1,18 @@
 {
+    "name": "barber shop",
+    "plural": "barber shops",
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "tags": {
+        "shop": "hairdresser",
+        "hairdresser": "barber"
+    },
+    "reference": {
+        "key": "hairdresser",
+        "value": "barber"
+    },
     "terms": [
         "Barber's",
         "Barber Shop",
@@ -12,19 +26,5 @@
         "razor",
         "shave",
         "shaving"
-    ],
-    "tags": {
-        "shop": "hairdresser",
-        "hairdresser": "barber"
-    },
-    "groups": [
-        "beauty",
-        "stores"
-    ],
-    "plural": "barber shops",
-    "name": "barber shop",
-    "reference": {
-        "key": "hairdresser",
-        "value": "barber"
-    }
+    ]
 }

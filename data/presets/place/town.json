@@ -1,7 +1,7 @@
 {
-    "icon": "buildings_town",
+    "name": "Town",
     "tags": {
         "place": "town"
     },
-    "name": "Town"
+    "icon": "buildings_town"
 }

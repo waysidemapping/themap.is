@@ -1,13 +1,13 @@
 {
-    "icon": "golf_green",
-    "geometry": [
-        "area"
-    ],
+    "name": "Putting Green",
     "tags": {
         "golf": "green"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "green"
     ],
-    "name": "Putting Green"
+    "icon": "golf_green"
 }

@@ -1,14 +1,14 @@
 {
-    "icon": "alcohol_bottle-wine_glass",
+    "name": "liquor store",
+    "plural": "liquor stores",
+    "tags": {
+        "shop": "alcohol"
+    },
     "terms": [
         "alcohol",
         "beer",
         "booze",
         "wine"
     ],
-    "tags": {
-        "shop": "alcohol"
-    },
-    "plural": "liquor stores",
-    "name": "liquor store"
+    "icon": "alcohol_bottle-wine_glass"
 }

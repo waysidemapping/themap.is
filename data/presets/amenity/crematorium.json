@@ -1,5 +1,5 @@
 {
-    "icon": "cemetery",
+    "name": "Crematorium",
     "tags": {
         "amenity": "crematorium"
     },
@@ -7,5 +7,5 @@
         "cemetery",
         "funeral"
     ],
-    "name": "Crematorium"
+    "icon": "cemetery"
 }

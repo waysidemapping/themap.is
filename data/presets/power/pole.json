@@ -1,11 +1,11 @@
 {
-    "icon": "utility_pole-bolt",
+    "name": "Power Pole",
+    "tags": {
+        "power": "pole"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "power": "pole"
-    },
-    "name": "Power Pole"
+    "icon": "utility_pole-bolt"
 }

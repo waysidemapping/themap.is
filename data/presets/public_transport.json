@@ -1,15 +1,15 @@
 {
-    "geometry": [
-        "point",
-        "vertex",
-        "line",
-        "area"
-    ],
+    "name": "Public Transport Feature",
     "groups": [
         "transport"
     ],
     "tags": {
         "public_transport": "*"
     },
-    "name": "Public Transport Feature"
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ]
 }

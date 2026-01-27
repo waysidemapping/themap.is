@@ -1,13 +1,13 @@
 {
-    "icon": "triangle_up",
+    "name": "Cave Entrance",
+    "tags": {
+        "natural": "cave_entrance"
+    },
     "geometry": [
         "point",
         "vertex",
         "area"
     ],
-    "tags": {
-        "natural": "cave_entrance"
-    },
     "terms": [
         "cavern",
         "cavity",
@@ -15,5 +15,5 @@
         "hollow",
         "shelter"
     ],
-    "name": "Cave Entrance"
+    "icon": "triangle_up"
 }

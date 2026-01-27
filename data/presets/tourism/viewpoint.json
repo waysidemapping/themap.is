@@ -1,16 +1,16 @@
 {
-    "icon": "viewpoint",
+    "name": "Viewpoint",
+    "plural": "viewpoints",
+    "tags": {
+        "tourism": "viewpoint"
+    },
     "geometry": [
         "point",
         "vertex",
         "area"
     ],
-    "tags": {
-        "tourism": "viewpoint"
-    },
     "terms": [
         "lookout"
     ],
-    "plural": "viewpoints",
-    "name": "Viewpoint"
+    "icon": "viewpoint"
 }

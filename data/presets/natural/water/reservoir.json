@@ -1,7 +1,5 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Reservoir",
     "tags": {
         "natural": "water",
         "water": "reservoir"
@@ -10,5 +8,7 @@
         "key": "water",
         "value": "reservoir"
     },
-    "name": "Reservoir"
+    "geometry": [
+        "area"
+    ]
 }

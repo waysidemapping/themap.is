@@ -1,13 +1,13 @@
 {
+    "name": "Club",
+    "tags": {
+        "club": "*"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "club": "*"
-    },
     "terms": [
         "social"
-    ],
-    "name": "Club"
+    ]
 }

@@ -1,5 +1,5 @@
 {
-    "icon": "heart",
+    "name": "Swinger Club",
     "tags": {
         "amenity": "swingerclub"
     },
@@ -12,5 +12,5 @@
         "strip*",
         "swinger*"
     ],
-    "name": "Swinger Club"
+    "icon": "heart"
 }

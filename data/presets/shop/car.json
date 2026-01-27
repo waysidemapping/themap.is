@@ -1,14 +1,14 @@
 {
-    "icon": "car",
+    "name": "car dealership",
+    "plural": "car dealerships",
+    "tags": {
+        "shop": "car"
+    },
     "terms": [
         "Car Dealer",
         "automobile",
         "automotive",
         "vehicle"
     ],
-    "tags": {
-        "shop": "car"
-    },
-    "plural": "car dealerships",
-    "name": "car dealership"
+    "icon": "car"
 }

@@ -1,5 +1,5 @@
 {
-    "icon": "bench-sign",
+    "name": "Transit Stop / Platform",
     "tags": {
         "public_transport": "platform"
     },
@@ -10,6 +10,6 @@
         "transit",
         "transportation"
     ],
-    "name": "Transit Stop / Platform",
+    "icon": "bench-sign",
     "matchScore": 0.6
 }

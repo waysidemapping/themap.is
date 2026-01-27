@@ -1,5 +1,5 @@
 {
-    "icon": "bleachers",
+    "name": "Bleachers",
     "tags": {
         "leisure": "bleachers"
     },
@@ -12,5 +12,5 @@
         "stand",
         "stands"
     ],
-    "name": "Bleachers"
+    "icon": "bleachers"
 }

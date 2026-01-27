@@ -1,5 +1,9 @@
 {
-    "icon": "water_bottle",
+    "name": "drinking water store",
+    "plural": "drinking water stores",
+    "tags": {
+        "shop": "water"
+    },
     "terms": [
         "bottled water",
         "mineral water",
@@ -7,9 +11,5 @@
         "water refilling",
         "water station"
     ],
-    "tags": {
-        "shop": "water"
-    },
-    "plural": "drinking water stores",
-    "name": "drinking water store"
+    "icon": "water_bottle"
 }

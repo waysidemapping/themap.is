@@ -1,5 +1,8 @@
 {
-    "icon": "house-flag",
+    "name": "Ranger Station",
+    "tags": {
+        "amenity": "ranger_station"
+    },
     "terms": [
         "backcountry office",
         "permit center",
@@ -9,8 +12,5 @@
         "warden center",
         "warden office"
     ],
-    "tags": {
-        "amenity": "ranger_station"
-    },
-    "name": "Ranger Station"
+    "icon": "house-flag"
 }

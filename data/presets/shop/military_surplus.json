@@ -1,5 +1,9 @@
 {
-    "icon": "medal-star",
+    "name": "military surplus store",
+    "plural": "military surplus stores",
+    "tags": {
+        "shop": "military_surplus"
+    },
     "terms": [
         "armor",
         "army surplus",
@@ -9,9 +13,5 @@
         "war surplus shop",
         "weapons"
     ],
-    "tags": {
-        "shop": "military_surplus"
-    },
-    "plural": "military surplus stores",
-    "name": "military surplus store"
+    "icon": "medal-star"
 }

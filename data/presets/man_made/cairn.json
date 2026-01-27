@@ -1,5 +1,8 @@
 {
-    "icon": "cairn",
+    "name": "Cairn",
+    "tags": {
+        "man_made": "cairn"
+    },
     "geometry": [
         "point",
         "area"
@@ -10,8 +13,5 @@
         "stone pile",
         "stone stack"
     ],
-    "tags": {
-        "man_made": "cairn"
-    },
-    "name": "Cairn"
+    "icon": "cairn"
 }

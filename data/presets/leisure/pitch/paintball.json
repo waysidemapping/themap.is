@@ -1,4 +1,6 @@
 {
+    "name": "Paintball Field",
+    "plural": "paintball fields",
     "tags": {
         "leisure": "pitch",
         "sport": "paintball"
@@ -6,7 +8,5 @@
     "reference": {
         "key": "sport",
         "value": "paintball"
-    },
-    "plural": "paintball fields",
-    "name": "Paintball Field"
+    }
 }

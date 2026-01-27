@@ -1,5 +1,13 @@
 {
-    "icon": "temaki",
+    "name": "Sushi Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "sushi"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "sushi"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -15,13 +23,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "sushi"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "sushi"
-    },
-    "name": "Sushi Restaurant"
+    "icon": "temaki"
 }

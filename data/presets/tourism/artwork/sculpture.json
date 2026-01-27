@@ -1,11 +1,6 @@
 {
-    "icon": "sculpture",
-    "geometry": [
-        "point",
-        "vertex",
-        "line",
-        "area"
-    ],
+    "name": "Sculpture",
+    "plural": "sculptures",
     "tags": {
         "tourism": "artwork",
         "artwork_type": "sculpture"
@@ -14,11 +9,16 @@
         "key": "artwork_type",
         "value": "sculpture"
     },
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
     "terms": [
         "carving",
         "figure",
         "statue"
     ],
-    "plural": "sculptures",
-    "name": "Sculpture"
+    "icon": "sculpture"
 }

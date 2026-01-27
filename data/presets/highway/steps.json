@@ -1,14 +1,14 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Steps",
     "tags": {
         "highway": "steps"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "staircase",
         "stairs",
         "stairway"
-    ],
-    "name": "Steps"
+    ]
 }

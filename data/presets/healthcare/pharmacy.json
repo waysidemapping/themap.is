@@ -1,5 +1,6 @@
 {
-    "icon": "mortar_pestle-plus",
+    "name": "Pharmacy Counter",
+    "plural": "pharamacy counters",
     "tags": {
         "healthcare": "pharmacy"
     },
@@ -12,6 +13,5 @@
         "medicine",
         "prescription"
     ],
-    "plural": "pharamacy counters",
-    "name": "Pharmacy Counter"
+    "icon": "mortar_pestle-plus"
 }

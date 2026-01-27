@@ -1,11 +1,11 @@
 {
-    "icon": "rope_fence",
+    "name": "Chain",
+    "tags": {
+        "barrier": "chain"
+    },
     "geometry": [
         "vertex",
         "line"
     ],
-    "tags": {
-        "barrier": "chain"
-    },
-    "name": "Chain"
+    "icon": "rope_fence"
 }

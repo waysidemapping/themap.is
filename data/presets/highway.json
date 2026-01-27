@@ -1,12 +1,12 @@
 {
+    "name": "Highway Feature",
+    "tags": {
+        "highway": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
-    ],
-    "tags": {
-        "highway": "*"
-    },
-    "name": "Highway Feature"
+    ]
 }

@@ -1,11 +1,11 @@
 {
-    "terms": [
-        "illness",
-        "terminal"
-    ],
+    "name": "Hospice Facility",
+    "plural": "hospice facilities",
     "tags": {
         "healthcare": "hospice"
     },
-    "plural": "hospice facilities",
-    "name": "Hospice Facility"
+    "terms": [
+        "illness",
+        "terminal"
+    ]
 }

@@ -1,4 +1,6 @@
 {
+    "name": "repair shop",
+    "plural": "repair shops",
     "tags": {
         "shop": "repair"
     },
@@ -10,7 +12,5 @@
         "refurbish",
         "rehabilitate",
         "tinker"
-    ],
-    "plural": "repair shops",
-    "name": "repair shop"
+    ]
 }

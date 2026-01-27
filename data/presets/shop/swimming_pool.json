@@ -1,4 +1,9 @@
 {
+    "name": "pool supply store",
+    "plural": "pool supply stores",
+    "tags": {
+        "shop": "swimming_pool"
+    },
     "terms": [
         "hot tub equipment store",
         "hot tub maintenance store",
@@ -9,10 +14,5 @@
         "swimming pool installation store",
         "swimming pool maintenance store",
         "swimming pool supply shop"
-    ],
-    "tags": {
-        "shop": "swimming_pool"
-    },
-    "plural": "pool supply stores",
-    "name": "pool supply store"
+    ]
 }

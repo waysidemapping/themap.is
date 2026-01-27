@@ -1,11 +1,11 @@
 {
-    "icon": "toll_gantry",
-    "geometry": [
-        "line"
-    ],
+    "name": "Gantry",
     "tags": {
         "man_made": "gantry"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "highway gantry",
         "mast arm",
@@ -15,5 +15,5 @@
         "sign holder",
         "sign structure"
     ],
-    "name": "Gantry"
+    "icon": "toll_gantry"
 }

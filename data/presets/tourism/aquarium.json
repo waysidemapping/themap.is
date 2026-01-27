@@ -1,5 +1,12 @@
 {
-    "icon": "angelfish",
+    "name": "Aquarium",
+    "plural": "aquariums",
+    "groups": [
+        "amusement"
+    ],
+    "tags": {
+        "tourism": "aquarium"
+    },
     "geometry": [
         "point",
         "area"
@@ -9,12 +16,5 @@
         "sea",
         "water"
     ],
-    "tags": {
-        "tourism": "aquarium"
-    },
-    "groups": [
-        "amusement"
-    ],
-    "plural": "aquariums",
-    "name": "Aquarium"
+    "icon": "angelfish"
 }

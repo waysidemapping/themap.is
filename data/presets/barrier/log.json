@@ -1,14 +1,14 @@
 {
+    "name": "Fallen Tree Obstruction",
+    "tags": {
+        "barrier": "log"
+    },
     "geometry": [
         "vertex",
         "point",
         "line"
     ],
-    "tags": {
-        "barrier": "log"
-    },
     "terms": [
         "downed tree"
-    ],
-    "name": "Fallen Tree Obstruction"
+    ]
 }

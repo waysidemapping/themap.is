@@ -1,5 +1,5 @@
 {
-    "icon": "horizontal_bar-user",
+    "name": "Outdoor Fitness Station",
     "tags": {
         "leisure": "fitness_station"
     },
@@ -14,5 +14,5 @@
         "gym",
         "street fitness"
     ],
-    "name": "Outdoor Fitness Station"
+    "icon": "horizontal_bar-user"
 }

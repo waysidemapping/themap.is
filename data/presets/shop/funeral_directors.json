@@ -1,14 +1,14 @@
 {
-    "icon": "cemetery",
+    "name": "funeral home",
+    "plural": "funeral homes",
+    "tags": {
+        "shop": "funeral_directors"
+    },
     "terms": [
         "Funeral Parlor",
         "memorial home",
         "mortuary",
         "undertaker"
     ],
-    "tags": {
-        "shop": "funeral_directors"
-    },
-    "plural": "funeral homes",
-    "name": "funeral home"
+    "icon": "cemetery"
 }

@@ -1,13 +1,6 @@
 {
-    "terms": [
-        "braces",
-        "dentistry",
-        "dentofacial orthopedics",
-        "headgear",
-        "jaw alignment",
-        "teeth",
-        "tooth"
-    ],
+    "name": "Orthodontist",
+    "plural": "orthodontists",
     "tags": {
         "healthcare": "dentist",
         "healthcare:speciality": "orthodontics"
@@ -16,6 +9,13 @@
         "key": "healthcare:speciality",
         "value": "orthodontics"
     },
-    "plural": "orthodontists",
-    "name": "Orthodontist"
+    "terms": [
+        "braces",
+        "dentistry",
+        "dentofacial orthopedics",
+        "headgear",
+        "jaw alignment",
+        "teeth",
+        "tooth"
+    ]
 }

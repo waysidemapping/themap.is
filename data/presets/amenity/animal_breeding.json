@@ -1,5 +1,8 @@
 {
-    "icon": "cat",
+    "name": "Animal Breeding Facility",
+    "tags": {
+        "amenity": "animal_breeding"
+    },
     "terms": [
         "breeding",
         "bull",
@@ -14,8 +17,5 @@
         "puppy",
         "reptile"
     ],
-    "tags": {
-        "amenity": "animal_breeding"
-    },
-    "name": "Animal Breeding Facility"
+    "icon": "cat"
 }

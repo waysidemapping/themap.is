@@ -1,12 +1,12 @@
 {
-    "icon": "compass",
+    "name": "Compass Rose",
+    "tags": {
+        "man_made": "compass_rose"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "man_made": "compass_rose"
-    },
     "terms": [
         "compass",
         "east",
@@ -16,5 +16,5 @@
         "west",
         "wind rose"
     ],
-    "name": "Compass Rose"
+    "icon": "compass"
 }

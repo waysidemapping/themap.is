@@ -1,5 +1,9 @@
 {
-    "icon": "dvd_case",
+    "name": "video store",
+    "plural": "video stores",
+    "tags": {
+        "shop": "video"
+    },
     "terms": [
         "dvd",
         "hobby",
@@ -7,9 +11,5 @@
         "video casette",
         "video cassette"
     ],
-    "tags": {
-        "shop": "video"
-    },
-    "plural": "video stores",
-    "name": "video store"
+    "icon": "dvd_case"
 }

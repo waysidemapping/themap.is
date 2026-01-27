@@ -1,5 +1,8 @@
 {
-    "icon": "billboard",
+    "name": "Digital Screen",
+    "tags": {
+        "man_made": "video_wall"
+    },
     "geometry": [
         "point",
         "vertex",
@@ -13,8 +16,5 @@
         "tv",
         "video wall"
     ],
-    "tags": {
-        "man_made": "video_wall"
-    },
-    "name": "Digital Screen"
+    "icon": "billboard"
 }

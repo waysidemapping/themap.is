@@ -1,5 +1,12 @@
 {
-    "icon": "building_classical",
+    "name": "Museum",
+    "plural": "museums",
+    "groups": [
+        "amusement"
+    ],
+    "tags": {
+        "tourism": "museum"
+    },
     "geometry": [
         "point",
         "area"
@@ -23,12 +30,5 @@
         "sculpture",
         "technology"
     ],
-    "tags": {
-        "tourism": "museum"
-    },
-    "groups": [
-        "amusement"
-    ],
-    "plural": "museums",
-    "name": "Museum"
+    "icon": "building_classical"
 }

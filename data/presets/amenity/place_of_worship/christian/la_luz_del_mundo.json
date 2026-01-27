@@ -1,13 +1,5 @@
 {
-    "icon": "building_place_of_worship",
-    "terms": [
-        "christian",
-        "church",
-        "house of god",
-        "house of prayer",
-        "house of worship",
-        "the light of the world church"
-    ],
+    "name": "La Luz del Mundo Temple",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "christian",
@@ -17,5 +9,13 @@
         "key": "denomination",
         "value": "la_luz_del_mundo"
     },
-    "name": "La Luz del Mundo Temple"
+    "terms": [
+        "christian",
+        "church",
+        "house of god",
+        "house of prayer",
+        "house of worship",
+        "the light of the world church"
+    ],
+    "icon": "building_place_of_worship"
 }

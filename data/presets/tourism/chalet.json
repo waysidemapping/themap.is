@@ -1,5 +1,12 @@
 {
-    "icon": "cabin",
+    "name": "Vacation House",
+    "plural": "vacation houses",
+    "groups": [
+        "lodging"
+    ],
+    "tags": {
+        "tourism": "chalet"
+    },
     "geometry": [
         "point",
         "area"
@@ -15,12 +22,5 @@
         "vacation cabin",
         "vacation home"
     ],
-    "tags": {
-        "tourism": "chalet"
-    },
-    "groups": [
-        "lodging"
-    ],
-    "plural": "vacation houses",
-    "name": "Vacation House"
+    "icon": "cabin"
 }

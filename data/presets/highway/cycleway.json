@@ -1,14 +1,14 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Cycle Path",
     "tags": {
         "highway": "cycleway"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "bicycle path",
         "bike path",
         "cycling path"
-    ],
-    "name": "Cycle Path"
+    ]
 }

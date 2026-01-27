@@ -1,12 +1,12 @@
 {
+    "name": "Groin",
+    "tags": {
+        "man_made": "groyne"
+    },
     "geometry": [
         "line",
         "area"
     ],
-    "tags": {
-        "man_made": "groyne"
-    },
-    "name": "Groin",
     "terms": [
         "Wing Dam",
         "Wing Dyke",

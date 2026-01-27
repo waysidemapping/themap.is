@@ -1,4 +1,5 @@
 {
+    "name": "Sports Center / Complex",
     "tags": {
         "leisure": "sports_centre"
     },
@@ -7,6 +8,5 @@
         "recreation center",
         "sports centre",
         "sports complex"
-    ],
-    "name": "Sports Center / Complex"
+    ]
 }

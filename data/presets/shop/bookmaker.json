@@ -1,5 +1,10 @@
 {
-    "icon": "banknote-hand",
+    "name": "bookie",
+    "plural": "bookies",
+    "groups": [
+        "gambling",
+        "adult_amusement"
+    ],
     "tags": {
         "shop": "bookmaker"
     },
@@ -12,10 +17,5 @@
         "gamble",
         "gambling"
     ],
-    "groups": [
-        "gambling",
-        "adult_amusement"
-    ],
-    "plural": "bookies",
-    "name": "bookie"
+    "icon": "banknote-hand"
 }

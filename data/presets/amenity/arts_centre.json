@@ -1,5 +1,5 @@
 {
-    "icon": "comedy_mask-tragedy_mask",
+    "name": "Arts Center",
     "tags": {
         "amenity": "arts_centre"
     },
@@ -9,5 +9,5 @@
         "theater space",
         "theatre space"
     ],
-    "name": "Arts Center"
+    "icon": "comedy_mask-tragedy_mask"
 }

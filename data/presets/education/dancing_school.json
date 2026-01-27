@@ -1,4 +1,8 @@
 {
+    "name": "Dance School",
+    "tags": {
+        "education": "dancing_school"
+    },
     "terms": [
         "Dance Studio",
         "ballet",
@@ -8,9 +12,5 @@
         "swing",
         "tango",
         "waltz"
-    ],
-    "tags": {
-        "education": "dancing_school"
-    },
-    "name": "Dance School"
+    ]
 }

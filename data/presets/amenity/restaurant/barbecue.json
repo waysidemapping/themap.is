@@ -1,5 +1,13 @@
 {
-    "icon": "fork-sausage",
+    "name": "Barbecue Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "barbecue"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "barbecue"
+    },
     "terms": [
         "Barbeque Restaurant",
         "bar",
@@ -14,13 +22,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "barbecue"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "barbecue"
-    },
-    "name": "Barbecue Restaurant"
+    "icon": "fork-sausage"
 }

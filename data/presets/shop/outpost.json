@@ -1,12 +1,12 @@
 {
+    "name": "online retailer outpost",
+    "plural": "online retailer outposts",
+    "tags": {
+        "shop": "outpost"
+    },
     "terms": [
         "online",
         "pick up",
         "pickup"
-    ],
-    "tags": {
-        "shop": "outpost"
-    },
-    "plural": "online retailer outposts",
-    "name": "online retailer outpost"
+    ]
 }

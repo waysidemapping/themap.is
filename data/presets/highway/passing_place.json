@@ -1,13 +1,13 @@
 {
-    "icon": "circle_stroked",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Passing Place",
     "tags": {
         "highway": "passing_place"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "turnout, pullout"
     ],
-    "name": "Passing Place"
+    "icon": "circle_stroked"
 }

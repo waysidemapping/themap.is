@@ -1,11 +1,11 @@
 {
-    "terms": [
-        "handbag",
-        "purse"
-    ],
+    "name": "bag store",
+    "plural": "bag stores",
     "tags": {
         "shop": "bag"
     },
-    "plural": "bag stores",
-    "name": "bag store"
+    "terms": [
+        "handbag",
+        "purse"
+    ]
 }

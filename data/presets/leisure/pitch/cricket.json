@@ -1,5 +1,6 @@
 {
-    "icon": "cricket_batter",
+    "name": "Cricket Field",
+    "plural": "cricket fields",
     "tags": {
         "leisure": "pitch",
         "sport": "cricket"
@@ -11,6 +12,5 @@
     "terms": [
         "cricket pitch"
     ],
-    "plural": "cricket fields",
-    "name": "Cricket Field"
+    "icon": "cricket_batter"
 }

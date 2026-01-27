@@ -1,11 +1,11 @@
 {
-    "icon": "carpet",
-    "terms": [
-        "rug"
-    ],
+    "name": "carpet store",
+    "plural": "carpet stores",
     "tags": {
         "shop": "carpet"
     },
-    "plural": "carpet stores",
-    "name": "carpet store"
+    "terms": [
+        "rug"
+    ],
+    "icon": "carpet"
 }

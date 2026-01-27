@@ -1,11 +1,11 @@
 {
-    "icon": "clock",
-    "terms": [
-        "time"
-    ],
+    "name": "Clock",
+    "plural": "clocks",
     "tags": {
         "amenity": "clock"
     },
-    "plural": "clocks",
-    "name": "Clock"
+    "terms": [
+        "time"
+    ],
+    "icon": "clock"
 }

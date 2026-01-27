@@ -1,10 +1,10 @@
 {
-    "icon": "gate",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Kissing Gate",
     "tags": {
         "barrier": "kissing_gate"
     },
-    "name": "Kissing Gate"
+    "geometry": [
+        "vertex"
+    ],
+    "icon": "gate"
 }

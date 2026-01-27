@@ -1,11 +1,11 @@
 {
+    "name": "Studio",
+    "tags": {
+        "amenity": "studio"
+    },
     "terms": [
         "radio",
         "recording",
         "television"
-    ],
-    "tags": {
-        "amenity": "studio"
-    },
-    "name": "Studio"
+    ]
 }

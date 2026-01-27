@@ -1,11 +1,11 @@
 {
-    "icon": "water_pump_powered_large",
+    "name": "Pumping Station",
+    "tags": {
+        "man_made": "pumping_station"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "man_made": "pumping_station"
-    },
-    "name": "Pumping Station"
+    "icon": "water_pump_powered_large"
 }

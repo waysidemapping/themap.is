@@ -1,4 +1,6 @@
 {
+    "name": "craft store",
+    "plural": "craft stores",
     "tags": {
         "shop": "craft"
     },
@@ -15,7 +17,5 @@
         "paper",
         "pencil",
         "wood"
-    ],
-    "plural": "craft stores",
-    "name": "craft store"
+    ]
 }

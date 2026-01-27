@@ -1,4 +1,13 @@
 {
+    "name": "American Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "american"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "american"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -14,14 +23,5 @@
         "grill",
         "lunch",
         "table"
-    ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "american"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "american"
-    },
-    "name": "American Restaurant"
+    ]
 }

@@ -1,14 +1,14 @@
 {
+    "name": "used car dealership",
+    "plural": "used car dealerships",
+    "tags": {
+        "shop": "car",
+        "second_hand": "only"
+    },
     "terms": [
         "Car Dealer",
         "automobile",
         "automotive",
         "vehicle"
-    ],
-    "tags": {
-        "shop": "car",
-        "second_hand": "only"
-    },
-    "plural": "used car dealerships",
-    "name": "used car dealership"
+    ]
 }

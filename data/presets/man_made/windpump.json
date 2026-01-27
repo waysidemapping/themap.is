@@ -1,5 +1,8 @@
 {
-    "icon": "windpump",
+    "name": "Windpump",
+    "tags": {
+        "man_made": "windpump"
+    },
     "geometry": [
         "point"
     ],
@@ -9,8 +12,5 @@
         "wind pump",
         "windmill"
     ],
-    "tags": {
-        "man_made": "windpump"
-    },
-    "name": "Windpump"
+    "icon": "windpump"
 }

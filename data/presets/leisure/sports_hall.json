@@ -1,12 +1,12 @@
 {
+    "name": "Gymnasium",
+    "tags": {
+        "leisure": "sports_hall"
+    },
     "terms": [
         "athletic courts",
         "gym",
         "sports hall",
         "sports venue"
-    ],
-    "tags": {
-        "leisure": "sports_hall"
-    },
-    "name": "Gymnasium"
+    ]
 }

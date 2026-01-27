@@ -1,13 +1,13 @@
 {
-    "icon": "tooth_molar",
+    "name": "Dentist",
+    "plural": "dentists",
+    "tags": {
+        "healthcare": "dentist"
+    },
     "terms": [
         "dental",
         "teeth",
         "tooth"
     ],
-    "tags": {
-        "healthcare": "dentist"
-    },
-    "plural": "dentists",
-    "name": "Dentist"
+    "icon": "tooth_molar"
 }

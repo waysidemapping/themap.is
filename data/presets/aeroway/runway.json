@@ -1,12 +1,12 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Runway",
     "tags": {
         "aeroway": "runway"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "landing strip"
-    ],
-    "name": "Runway"
+    ]
 }

@@ -1,11 +1,11 @@
 {
-    "icon": "banknote-hand",
+    "name": "Currency Exchange",
+    "tags": {
+        "amenity": "bureau_de_change"
+    },
     "terms": [
         "Bureau de Change",
         "money changer"
     ],
-    "tags": {
-        "amenity": "bureau_de_change"
-    },
-    "name": "Currency Exchange"
+    "icon": "banknote-hand"
 }

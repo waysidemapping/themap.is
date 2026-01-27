@@ -1,4 +1,6 @@
 {
+    "name": "ticket seller",
+    "plural": "ticket sellers",
     "tags": {
         "shop": "ticket"
     },
@@ -6,7 +8,5 @@
         "Ticket Vendor",
         "Ticket Booth",
         "box office"
-    ],
-    "plural": "ticket sellers",
-    "name": "ticket seller"
+    ]
 }

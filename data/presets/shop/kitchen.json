@@ -1,5 +1,6 @@
 {
-    "icon": "kitchen_sink",
+    "name": "kitchen design store",
+    "plural": "kitchen design stores",
     "tags": {
         "shop": "kitchen"
     },
@@ -8,6 +9,5 @@
         "countertops",
         "sinks"
     ],
-    "plural": "kitchen design stores",
-    "name": "kitchen design store"
+    "icon": "kitchen_sink"
 }

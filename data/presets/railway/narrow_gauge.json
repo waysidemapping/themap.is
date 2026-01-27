@@ -1,14 +1,14 @@
 {
-    "icon": "railway_track_narrow",
-    "geometry": [
-        "line"
-    ],
+    "name": "Narrow Gauge Track",
     "tags": {
         "railway": "narrow_gauge"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "narrow gauge railroad",
         "narrow gauge railway"
     ],
-    "name": "Narrow Gauge Track"
+    "icon": "railway_track_narrow"
 }

@@ -1,11 +1,11 @@
 {
-    "icon": "building_office-flag",
+    "name": "Flagpole",
+    "tags": {
+        "man_made": "flagpole"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "man_made": "flagpole"
-    },
-    "name": "Flagpole"
+    "icon": "building_office-flag"
 }

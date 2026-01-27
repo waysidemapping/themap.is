@@ -1,7 +1,7 @@
 {
-    "icon": "car-roller_brushes",
+    "name": "Car Wash",
     "tags": {
         "amenity": "car_wash"
     },
-    "name": "Car Wash"
+    "icon": "car-roller_brushes"
 }

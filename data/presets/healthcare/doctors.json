@@ -1,13 +1,13 @@
 {
-    "icon": "stethoscope",
+    "name": "Doctor",
+    "plural": "doctors",
+    "tags": {
+        "healthcare": "doctor"
+    },
     "terms": [
         "medic",
         "medical doctor",
         "physician"
     ],
-    "tags": {
-        "healthcare": "doctor"
-    },
-    "plural": "doctors",
-    "name": "Doctor"
+    "icon": "stethoscope"
 }

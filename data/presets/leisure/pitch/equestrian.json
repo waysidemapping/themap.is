@@ -1,5 +1,6 @@
 {
-    "icon": "horse_rider",
+    "name": "riding arena",
+    "plural": "riding arenas",
     "tags": {
         "leisure": "pitch",
         "sport": "equestrian"
@@ -32,6 +33,5 @@
         "rodeo",
         "round pen"
     ],
-    "plural": "riding arenas",
-    "name": "riding arena"
+    "icon": "horse_rider"
 }

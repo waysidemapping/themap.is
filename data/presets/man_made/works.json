@@ -1,5 +1,8 @@
 {
-    "icon": "building_industrial",
+    "name": "Factory",
+    "tags": {
+        "man_made": "works"
+    },
     "geometry": [
         "point",
         "area"
@@ -15,8 +18,5 @@
         "processing",
         "refinery"
     ],
-    "tags": {
-        "man_made": "works"
-    },
-    "name": "Factory"
+    "icon": "building_industrial"
 }

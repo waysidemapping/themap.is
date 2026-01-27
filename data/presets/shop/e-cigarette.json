@@ -1,4 +1,6 @@
 {
+    "name": "vape shop",
+    "plural": "vape shops",
     "tags": {
         "shop": "e-cigarette"
     },
@@ -8,7 +10,5 @@
         "vape",
         "vaping",
         "vapor"
-    ],
-    "plural": "vape shops",
-    "name": "vape shop"
+    ]
 }

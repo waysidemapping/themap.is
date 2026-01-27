@@ -1,8 +1,5 @@
 {
-    "icon": "judaism",
-    "terms": [
-        "jewish"
-    ],
+    "name": "Jewish Synagogue",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "jewish"
@@ -11,5 +8,8 @@
         "key": "amenity",
         "value": "place_of_worship"
     },
-    "name": "Jewish Synagogue"
+    "terms": [
+        "jewish"
+    ],
+    "icon": "judaism"
 }

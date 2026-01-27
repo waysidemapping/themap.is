@@ -1,17 +1,17 @@
 {
-    "icon": "scissors-comb",
+    "name": "hair salon",
+    "plural": "hair salons",
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "tags": {
+        "shop": "hairdresser"
+    },
     "terms": [
         "Hair Salon",
         "Hair Stylist",
         "haircut"
     ],
-    "tags": {
-        "shop": "hairdresser"
-    },
-    "groups": [
-        "beauty",
-        "stores"
-    ],
-    "plural": "hair salons",
-    "name": "hair salon"
+    "icon": "scissors-comb"
 }

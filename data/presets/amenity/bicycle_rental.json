@@ -1,5 +1,12 @@
 {
-    "icon": "bicycle-key",
+    "name": "Bicycle Rental",
+    "plural": "bicycle rental",
+    "groups": [
+        "transport"
+    ],
+    "tags": {
+        "amenity": "bicycle_rental"
+    },
     "terms": [
         "bicycle",
         "bicycle share",
@@ -11,12 +18,5 @@
         "cycleshare",
         "cycling"
     ],
-    "tags": {
-        "amenity": "bicycle_rental"
-    },
-    "groups": [
-        "transport"
-    ],
-    "plural": "bicycle rental",
-    "name": "Bicycle Rental"
+    "icon": "bicycle-key"
 }

@@ -1,7 +1,7 @@
 {
-    "icon": "catering",
+    "name": "Caterer",
     "tags": {
         "craft": "caterer"
     },
-    "name": "Caterer"
+    "icon": "catering"
 }

@@ -1,10 +1,10 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Boundary",
     "tags": {
         "boundary": "*"
     },
-    "name": "Boundary",
+    "geometry": [
+        "area"
+    ],
     "matchScore": 0.45
 }

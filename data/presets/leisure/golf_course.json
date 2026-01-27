@@ -1,14 +1,14 @@
 {
-    "icon": "golfer",
-    "terms": [
-        "links"
+    "name": "Golf Course",
+    "plural": "golf courses",
+    "groups": [
+        "sports"
     ],
     "tags": {
         "leisure": "golf_course"
     },
-    "groups": [
-        "sports"
+    "terms": [
+        "links"
     ],
-    "plural": "golf courses",
-    "name": "Golf Course"
+    "icon": "golfer"
 }

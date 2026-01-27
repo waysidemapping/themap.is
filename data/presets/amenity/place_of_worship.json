@@ -1,5 +1,9 @@
 {
-    "icon": "building_place_of_worship",
+    "name": "Place of Worship",
+    "plural": "places of worship",
+    "tags": {
+        "amenity": "place_of_worship"
+    },
     "terms": [
         "abbey",
         "basilica",
@@ -25,9 +29,5 @@
         "tabernacle",
         "temple"
     ],
-    "tags": {
-        "amenity": "place_of_worship"
-    },
-    "plural": "places of worship",
-    "name": "Place of Worship"
+    "icon": "building_place_of_worship"
 }

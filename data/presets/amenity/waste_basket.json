@@ -1,5 +1,5 @@
 {
-    "icon": "trash_can",
+    "name": "Trash Can",
     "tags": {
         "amenity": "waste_basket"
     },
@@ -11,5 +11,5 @@
         "rubbish",
         "trash"
     ],
-    "name": "Trash Can"
+    "icon": "trash_can"
 }

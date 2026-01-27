@@ -1,10 +1,10 @@
 {
-    "terms": [
-        "jacuzzi",
-        "spa"
-    ],
+    "name": "Hot Tub",
     "tags": {
         "leisure": "hot_tub"
     },
-    "name": "Hot Tub"
+    "terms": [
+        "jacuzzi",
+        "spa"
+    ]
 }

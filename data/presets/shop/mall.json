@@ -1,13 +1,13 @@
 {
-    "icon": "shopping_bags-user",
+    "name": "shopping mall",
+    "plural": "shopping malls",
+    "tags": {
+        "shop": "mall"
+    },
     "terms": [
         "Shopping Mall",
         "Shopping Center",
         "shopping"
     ],
-    "tags": {
-        "shop": "mall"
-    },
-    "plural": "shopping malls",
-    "name": "shopping mall"
+    "icon": "shopping_bags-user"
 }

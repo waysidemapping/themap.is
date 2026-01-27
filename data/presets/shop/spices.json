@@ -1,5 +1,9 @@
 {
-    "icon": "spice_bottle",
+    "name": "spice shop",
+    "plural": "spice shops",
+    "tags": {
+        "shop": "spices"
+    },
     "terms": [
         "chili",
         "cinnamon",
@@ -14,9 +18,5 @@
         "turmeric",
         "wasabi"
     ],
-    "tags": {
-        "shop": "spices"
-    },
-    "plural": "spice shops",
-    "name": "spice shop"
+    "icon": "spice_bottle"
 }

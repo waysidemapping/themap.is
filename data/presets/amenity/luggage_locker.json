@@ -1,5 +1,5 @@
 {
-    "icon": "suitcase-key",
+    "name": "Luggage Locker",
     "tags": {
         "amenity": "luggage_locker"
     },
@@ -12,5 +12,5 @@
         "storage",
         "travel"
     ],
-    "name": "Luggage Locker"
+    "icon": "suitcase-key"
 }

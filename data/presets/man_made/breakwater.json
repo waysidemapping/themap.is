@@ -1,10 +1,10 @@
 {
-    "geometry": [
-        "line",
-        "area"
-    ],
+    "name": "Breakwater",
     "tags": {
         "man_made": "breakwater"
     },
-    "name": "Breakwater"
+    "geometry": [
+        "line",
+        "area"
+    ]
 }

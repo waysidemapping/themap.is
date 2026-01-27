@@ -1,5 +1,5 @@
 {
-    "icon": "tents",
+    "name": "Refugee Camp",
     "tags": {
         "amenity": "refugee_site"
     },
@@ -10,5 +10,5 @@
         "ngo",
         "refugee site"
     ],
-    "name": "Refugee Camp"
+    "icon": "tents"
 }

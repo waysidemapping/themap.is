@@ -1,5 +1,13 @@
 {
-    "icon": "noodle_bowl-chopsticks",
+    "name": "Asian Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "asian"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "asian"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -15,13 +23,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "asian"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "asian"
-    },
-    "name": "Asian Restaurant"
+    "icon": "noodle_bowl-chopsticks"
 }

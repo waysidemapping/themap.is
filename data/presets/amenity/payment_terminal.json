@@ -1,4 +1,8 @@
 {
+    "name": "Payment Terminal",
+    "tags": {
+        "amenity": "payment_terminal"
+    },
     "terms": [
         "atm",
         "bill pay",
@@ -10,9 +14,5 @@
         "money transfer",
         "phone pay",
         "tax pay"
-    ],
-    "tags": {
-        "amenity": "payment_terminal"
-    },
-    "name": "Payment Terminal"
+    ]
 }

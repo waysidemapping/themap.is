@@ -1,5 +1,5 @@
 {
-    "icon": "ferry",
+    "name": "Ferry Route",
     "tags": {
         "route": "ferry"
     },
@@ -11,5 +11,5 @@
         "water shuttle",
         "water taxi"
     ],
-    "name": "Ferry Route"
+    "icon": "ferry"
 }

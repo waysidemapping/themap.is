@@ -1,5 +1,6 @@
 {
-    "icon": "american_football",
+    "name": "Rugby League Field",
+    "plural": "rugby league fields",
     "tags": {
         "leisure": "pitch",
         "sport": "rugby_league"
@@ -8,6 +9,5 @@
         "key": "sport",
         "value": "rugby_league"
     },
-    "plural": "rugby league fields",
-    "name": "Rugby League Field"
+    "icon": "american_football"
 }

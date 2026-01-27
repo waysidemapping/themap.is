@@ -1,11 +1,11 @@
 {
-    "icon": "shoe-hammer",
+    "name": "shoe repair shop",
+    "plural": "shoe repair shops",
     "tags": {
         "shop": "shoe_repair"
     },
     "terms": [
         "cobbler"
     ],
-    "plural": "shoe repair shops",
-    "name": "shoe repair shop"
+    "icon": "shoe-hammer"
 }

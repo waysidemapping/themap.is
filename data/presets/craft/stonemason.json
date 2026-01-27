@@ -1,10 +1,10 @@
 {
-    "icon": "brick_trowel",
-    "terms": [
-        "masonry"
-    ],
+    "name": "Stonemason",
     "tags": {
         "craft": "stonemason"
     },
-    "name": "Stonemason"
+    "terms": [
+        "masonry"
+    ],
+    "icon": "brick_trowel"
 }

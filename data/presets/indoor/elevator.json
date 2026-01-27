@@ -1,16 +1,16 @@
 {
-    "icon": "elevator",
-    "geometry": [
-        "area"
-    ],
+    "name": "Indoor Elevator Shaft",
     "tags": {
         "indoor": "room",
         "elevator": "yes"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "elevator",
         "lift"
     ],
-    "matchScore": 0.8,
-    "name": "Indoor Elevator Shaft"
+    "icon": "elevator",
+    "matchScore": 0.8
 }

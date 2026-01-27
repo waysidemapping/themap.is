@@ -1,11 +1,11 @@
 {
-    "icon": "needle-spool",
+    "name": "Tailor",
+    "tags": {
+        "craft": "tailor"
+    },
     "terms": [
         "clothes",
         "suit"
     ],
-    "tags": {
-        "craft": "tailor"
-    },
-    "name": "Tailor"
+    "icon": "needle-spool"
 }

@@ -1,14 +1,14 @@
 {
-    "icon": "book_open",
-    "terms": [
-        "book repair"
-    ],
-    "tags": {
-        "craft": "bookbinder"
-    },
+    "name": "Bookbinder",
     "groups": [
         "crafts",
         "books"
     ],
-    "name": "Bookbinder"
+    "tags": {
+        "craft": "bookbinder"
+    },
+    "terms": [
+        "book repair"
+    ],
+    "icon": "book_open"
 }

@@ -1,11 +1,11 @@
 {
-    "icon": "candy",
+    "name": "chocolate shop",
+    "plural": "chocolate shops",
     "tags": {
         "shop": "chocolate"
     },
     "terms": [
         "cocoa"
     ],
-    "plural": "chocolate shops",
-    "name": "chocolate shop"
+    "icon": "candy"
 }

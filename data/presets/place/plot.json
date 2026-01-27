@@ -1,5 +1,5 @@
 {
-    "icon": "triangle_up_stroked",
+    "name": "Plot",
     "tags": {
         "place": "plot"
     },
@@ -9,5 +9,5 @@
         "parcel",
         "tract"
     ],
-    "name": "Plot"
+    "icon": "triangle_up_stroked"
 }

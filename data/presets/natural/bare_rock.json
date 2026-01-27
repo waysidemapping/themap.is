@@ -1,13 +1,13 @@
 {
-    "icon": "boulder3",
-    "geometry": [
-        "area"
-    ],
+    "name": "Bare Rock",
     "tags": {
         "natural": "bare_rock"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "rock"
     ],
-    "name": "Bare Rock"
+    "icon": "boulder3"
 }

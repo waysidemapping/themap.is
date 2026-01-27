@@ -1,4 +1,13 @@
 {
+    "name": "Gambling Hall",
+    "plural": "gambling halls",
+    "groups": [
+        "gambling",
+        "adult_amusement"
+    ],
+    "tags": {
+        "amenity": "gambling"
+    },
     "terms": [
         "betting",
         "bingo",
@@ -14,14 +23,5 @@
         "roulette",
         "slot machines",
         "slots"
-    ],
-    "tags": {
-        "amenity": "gambling"
-    },
-    "groups": [
-        "gambling",
-        "adult_amusement"
-    ],
-    "plural": "gambling halls",
-    "name": "Gambling Hall"
+    ]
 }

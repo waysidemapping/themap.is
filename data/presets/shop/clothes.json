@@ -1,5 +1,6 @@
 {
-    "icon": "vneck_tshirt",
+    "name": "clothing store",
+    "plural": "clothing stores",
     "tags": {
         "shop": "clothes"
     },
@@ -21,6 +22,5 @@
         "suits",
         "underwear"
     ],
-    "plural": "clothing stores",
-    "name": "clothing store"
+    "icon": "vneck_tshirt"
 }

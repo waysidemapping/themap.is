@@ -1,7 +1,7 @@
 {
-    "icon": "arrow_right-rect_right",
+    "name": "Parking Garage Entrance / Exit",
     "tags": {
         "amenity": "parking_entrance"
     },
-    "name": "Parking Garage Entrance / Exit"
+    "icon": "arrow_right-rect_right"
 }

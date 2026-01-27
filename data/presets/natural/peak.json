@@ -1,12 +1,12 @@
 {
-    "icon": "mountain",
+    "name": "Peak",
+    "tags": {
+        "natural": "peak"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "natural": "peak"
-    },
     "terms": [
         "acme",
         "aiguille",
@@ -22,5 +22,5 @@
         "tip",
         "top"
     ],
-    "name": "Peak"
+    "icon": "mountain"
 }

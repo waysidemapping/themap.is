@@ -1,12 +1,12 @@
 {
-    "icon": "info",
+    "name": "Information Feature",
+    "tags": {
+        "information": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "area"
     ],
-    "tags": {
-        "information": "*"
-    },
-    "name": "Information Feature"
+    "icon": "info"
 }

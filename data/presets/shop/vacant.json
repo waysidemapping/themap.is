@@ -1,10 +1,10 @@
 {
-    "terms": [
-        "empty"
-    ],
+    "name": "vacant storefront",
+    "plural": "vacant storefronts",
     "tags": {
         "shop": "vacant"
     },
-    "plural": "vacant storefronts",
-    "name": "vacant storefront"
+    "terms": [
+        "empty"
+    ]
 }

@@ -1,5 +1,9 @@
 {
-    "icon": "speaker",
+    "name": "hifi store",
+    "plural": "hifi stores",
+    "tags": {
+        "shop": "hifi"
+    },
     "terms": [
         "audio",
         "hi-fi",
@@ -7,9 +11,5 @@
         "stereo",
         "video"
     ],
-    "tags": {
-        "shop": "hifi"
-    },
-    "plural": "hifi stores",
-    "name": "hifi store"
+    "icon": "speaker"
 }

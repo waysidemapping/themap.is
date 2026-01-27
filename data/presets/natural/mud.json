@@ -1,12 +1,12 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Mud",
     "tags": {
         "natural": "mud"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "wetland"
-    ],
-    "name": "Mud"
+    ]
 }

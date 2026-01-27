@@ -1,13 +1,13 @@
 {
+    "name": "Loading Dock",
+    "tags": {
+        "amenity": "loading_dock"
+    },
     "terms": [
         "door",
         "loading bay",
         "shipping",
         "unloading",
         "warehouse"
-    ],
-    "tags": {
-        "amenity": "loading_dock"
-    },
-    "name": "Loading Dock"
+    ]
 }

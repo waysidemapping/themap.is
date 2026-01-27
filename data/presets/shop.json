@@ -1,20 +1,19 @@
 {
-    "icon": "shopping_bag",
-    "geometry": [
-        "point",
-        "area"
+    "name": "Shop",
+    "groups": [
+        "stores"
     ],
     "tags": {
         "shop": "*"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "retailer",
         "store"
     ],
-    "groups": [
-        "stores"
-    ],
-    "autoTheme": false,
-    "name": "Shop",
+    "icon": "shopping_bag",
     "matchScore": 0.7
 }

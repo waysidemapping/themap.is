@@ -1,10 +1,10 @@
 {
+    "name": "candle store",
+    "plural": "candle stores",
     "tags": {
         "shop": "candles"
     },
     "terms": [
         "wax"
-    ],
-    "plural": "candle stores",
-    "name": "candle store"
+    ]
 }

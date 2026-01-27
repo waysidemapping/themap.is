@@ -1,8 +1,8 @@
 {
-    "icon": "washing_machine",
+    "name": "laundry",
+    "plural": "laundries",
     "tags": {
         "shop": "laundry"
     },
-    "plural": "laundries",
-    "name": "laundry"
+    "icon": "washing_machine"
 }

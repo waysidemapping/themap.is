@@ -1,4 +1,8 @@
 {
+    "name": "Strip Club",
+    "groups": [
+        "adult_amusement"
+    ],
     "tags": {
         "amenity": "stripclub"
     },
@@ -8,9 +12,5 @@
         "gentlemen*",
         "lap dance",
         "strip*"
-    ],
-    "groups": [
-        "adult_amusement"
-    ],
-    "name": "Strip Club"
+    ]
 }

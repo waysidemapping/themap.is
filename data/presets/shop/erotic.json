@@ -1,11 +1,11 @@
 {
-    "terms": [
-        "porn",
-        "sex"
-    ],
+    "name": "sex shop",
+    "plural": "sex shops",
     "tags": {
         "shop": "erotic"
     },
-    "plural": "sex shops",
-    "name": "sex shop"
+    "terms": [
+        "porn",
+        "sex"
+    ]
 }

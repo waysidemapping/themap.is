@@ -1,15 +1,15 @@
 {
-    "icon": "horse_rider",
-    "geometry": [
-        "point",
-        "area"
+    "name": "Trail Riding Station",
+    "plural": "trail riding stations",
+    "groups": [
+        "lodging"
     ],
     "tags": {
         "tourism": "trail_riding_station"
     },
-    "groups": [
-        "lodging"
+    "geometry": [
+        "point",
+        "area"
     ],
-    "plural": "trail riding stations",
-    "name": "Trail Riding Station"
+    "icon": "horse_rider"
 }

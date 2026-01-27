@@ -1,15 +1,15 @@
 {
-    "icon": "railway_track_mini",
-    "geometry": [
-        "line"
-    ],
+    "name": "Miniature Train Track",
     "tags": {
         "railway": "miniature"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "minimum gauge railway",
         "narrow gauge railway",
         "rideable miniature railway"
     ],
-    "name": "Miniature Train Track"
+    "icon": "railway_track_mini"
 }

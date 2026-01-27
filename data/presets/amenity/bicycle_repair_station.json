@@ -1,5 +1,8 @@
 {
-    "icon": "bicycle-wrench",
+    "name": "Bicycle Repair Tool Stand",
+    "tags": {
+        "amenity": "bicycle_repair_station"
+    },
     "terms": [
         "bike chain",
         "bike multitool",
@@ -10,8 +13,5 @@
         "cycle repair",
         "cycling"
     ],
-    "tags": {
-        "amenity": "bicycle_repair_station"
-    },
-    "name": "Bicycle Repair Tool Stand"
+    "icon": "bicycle-wrench"
 }

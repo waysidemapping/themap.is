@@ -1,11 +1,11 @@
 {
-    "terms": [
-        "therapist",
-        "therapy"
-    ],
+    "name": "Occupational Therapist",
+    "plural": "occupational therapists",
     "tags": {
         "healthcare": "occupational_therapist"
     },
-    "plural": "occupational therapists",
-    "name": "Occupational Therapist"
+    "terms": [
+        "therapist",
+        "therapy"
+    ]
 }

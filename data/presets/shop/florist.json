@@ -1,12 +1,12 @@
 {
-    "icon": "boquet",
+    "name": "florist shop",
+    "plural": "florist shops",
+    "tags": {
+        "shop": "florist"
+    },
     "terms": [
         "bouquet",
         "flower"
     ],
-    "tags": {
-        "shop": "florist"
-    },
-    "plural": "florist shops",
-    "name": "florist shop"
+    "icon": "boquet"
 }

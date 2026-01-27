@@ -1,5 +1,13 @@
 {
-    "icon": "recycling",
+    "name": "Recycling Center",
+    "tags": {
+        "amenity": "recycling",
+        "recycling_type": "centre"
+    },
+    "reference": {
+        "key": "recycling_type",
+        "value": "centre"
+    },
     "terms": [
         "bottle",
         "can",
@@ -10,13 +18,5 @@
         "scrap",
         "trash"
     ],
-    "tags": {
-        "amenity": "recycling",
-        "recycling_type": "centre"
-    },
-    "reference": {
-        "key": "recycling_type",
-        "value": "centre"
-    },
-    "name": "Recycling Center"
+    "icon": "recycling"
 }

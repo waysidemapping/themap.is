@@ -1,5 +1,6 @@
 {
-    "icon": "wrench-hammer",
+    "name": "DIY store",
+    "plural": "DIY stores",
     "tags": {
         "shop": "doityourself"
     },
@@ -12,6 +13,5 @@
         "home improvement",
         "tools"
     ],
-    "plural": "DIY stores",
-    "name": "DIY store"
+    "icon": "wrench-hammer"
 }

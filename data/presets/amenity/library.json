@@ -1,15 +1,15 @@
 {
-    "icon": "book_open",
-    "terms": [
-        "book"
-    ],
-    "tags": {
-        "amenity": "library"
-    },
+    "name": "Library",
+    "plural": "libraries",
     "groups": [
         "books",
         "free_stuff"
     ],
-    "plural": "libraries",
-    "name": "Library"
+    "tags": {
+        "amenity": "library"
+    },
+    "terms": [
+        "book"
+    ],
+    "icon": "book_open"
 }

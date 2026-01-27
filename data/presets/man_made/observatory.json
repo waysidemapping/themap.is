@@ -1,5 +1,8 @@
 {
-    "icon": "telescope",
+    "name": "Observatory",
+    "tags": {
+        "man_made": "observatory"
+    },
     "geometry": [
         "point",
         "area"
@@ -8,8 +11,5 @@
         "astronomical",
         "meteorological"
     ],
-    "tags": {
-        "man_made": "observatory"
-    },
-    "name": "Observatory"
+    "icon": "telescope"
 }

@@ -1,5 +1,8 @@
 {
-    "icon": "police_officer",
+    "name": "Police",
+    "tags": {
+        "amenity": "police"
+    },
     "terms": [
         "badge",
         "constable",
@@ -12,8 +15,5 @@
         "officer",
         "patrol"
     ],
-    "tags": {
-        "amenity": "police"
-    },
-    "name": "Police"
+    "icon": "police_officer"
 }

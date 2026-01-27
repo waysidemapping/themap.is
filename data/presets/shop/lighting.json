@@ -1,5 +1,9 @@
 {
-    "icon": "desk_lamp",
+    "name": "lighting store",
+    "plural": "lighting stores",
+    "tags": {
+        "shop": "lighting"
+    },
     "terms": [
         "fluorescent lighting",
         "lamps",
@@ -7,9 +11,5 @@
         "light fixtures",
         "lightbulbs"
     ],
-    "tags": {
-        "shop": "lighting"
-    },
-    "plural": "lighting stores",
-    "name": "lighting store"
+    "icon": "desk_lamp"
 }

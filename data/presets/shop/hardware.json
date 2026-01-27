@@ -1,5 +1,6 @@
 {
-    "icon": "wrench-hammer",
+    "name": "hardware store",
+    "plural": "hardware stores",
     "tags": {
         "shop": "hardware"
     },
@@ -12,6 +13,5 @@
         "home improvement",
         "tools"
     ],
-    "plural": "hardware stores",
-    "name": "hardware store"
+    "icon": "wrench-hammer"
 }

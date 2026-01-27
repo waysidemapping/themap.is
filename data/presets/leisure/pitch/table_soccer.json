@@ -1,4 +1,6 @@
 {
+    "name": "Foosball Table",
+    "plural": "foosball tables",
     "tags": {
         "leisure": "pitch",
         "sport": "table_soccer"
@@ -12,7 +14,5 @@
         "table football",
         "table soccer",
         "tecball"
-    ],
-    "plural": "foosball tables",
-    "name": "Foosball Table"
+    ]
 }

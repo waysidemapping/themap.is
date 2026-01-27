@@ -1,4 +1,13 @@
 {
+    "name": "Italian Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "italian"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "italian"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -15,14 +24,5 @@
         "pasta",
         "pizza",
         "table"
-    ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "italian"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "italian"
-    },
-    "name": "Italian Restaurant"
+    ]
 }

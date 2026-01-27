@@ -1,7 +1,5 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Drive-Through",
     "tags": {
         "highway": "service",
         "service": "drive-through"
@@ -10,5 +8,7 @@
         "key": "service",
         "value": "drive-through"
     },
-    "name": "Drive-Through"
+    "geometry": [
+        "line"
+    ]
 }

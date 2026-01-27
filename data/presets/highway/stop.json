@@ -1,15 +1,15 @@
 {
-    "icon": "octagon",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Stop Sign",
     "tags": {
         "highway": "stop"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "halt",
         "sign",
         "stop"
     ],
-    "name": "Stop Sign"
+    "icon": "octagon"
 }

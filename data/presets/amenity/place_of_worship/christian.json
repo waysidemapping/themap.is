@@ -1,5 +1,13 @@
 {
-    "icon": "christianity",
+    "name": "Christian Church",
+    "tags": {
+        "amenity": "place_of_worship",
+        "religion": "christian"
+    },
+    "reference": {
+        "key": "amenity",
+        "value": "place_of_worship"
+    },
     "terms": [
         "abbey",
         "anglican",
@@ -25,13 +33,5 @@
         "tabernacle",
         "temple"
     ],
-    "tags": {
-        "amenity": "place_of_worship",
-        "religion": "christian"
-    },
-    "reference": {
-        "key": "amenity",
-        "value": "place_of_worship"
-    },
-    "name": "Christian Church"
+    "icon": "christianity"
 }

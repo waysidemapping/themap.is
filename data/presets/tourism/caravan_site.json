@@ -1,5 +1,12 @@
 {
-    "icon": "camper_trailer",
+    "name": "RV Park",
+    "plural": "RV parks",
+    "groups": [
+        "lodging"
+    ],
+    "tags": {
+        "tourism": "caravan_site"
+    },
     "geometry": [
         "point",
         "vertex",
@@ -9,12 +16,5 @@
         "camper",
         "motor home"
     ],
-    "tags": {
-        "tourism": "caravan_site"
-    },
-    "groups": [
-        "lodging"
-    ],
-    "plural": "RV parks",
-    "name": "RV Park"
+    "icon": "camper_trailer"
 }

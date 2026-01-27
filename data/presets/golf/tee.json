@@ -1,12 +1,12 @@
 {
+    "name": "Tee Box",
+    "tags": {
+        "golf": "tee"
+    },
     "geometry": [
         "vertex",
         "area"
     ],
-    "tags": {
-        "golf": "tee"
-    },
-    "name": "Tee Box",
     "terms": [
         "Tee",
         "Teeing Ground"

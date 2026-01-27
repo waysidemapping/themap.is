@@ -1,5 +1,5 @@
 {
-    "icon": "hand_reaching-heart",
+    "name": "Social Facility",
     "tags": {
         "amenity": "social_facility"
     },
@@ -10,5 +10,5 @@
         "nonprofit",
         "social services"
     ],
-    "name": "Social Facility"
+    "icon": "hand_reaching-heart"
 }

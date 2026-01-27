@@ -1,4 +1,6 @@
 {
+    "name": "anime store",
+    "plural": "anime stores",
     "tags": {
         "shop": "anime"
     },
@@ -9,7 +11,5 @@
         "hobby",
         "japan",
         "manga"
-    ],
-    "plural": "anime stores",
-    "name": "anime store"
+    ]
 }

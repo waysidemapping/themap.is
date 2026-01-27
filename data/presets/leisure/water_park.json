@@ -1,15 +1,15 @@
 {
-    "terms": [
-        "dive",
-        "pool",
-        "swim"
+    "name": "Water Park",
+    "plural": "water parks",
+    "groups": [
+        "amusement"
     ],
     "tags": {
         "leisure": "water_park"
     },
-    "groups": [
-        "amusement"
-    ],
-    "plural": "water parks",
-    "name": "Water Park"
+    "terms": [
+        "dive",
+        "pool",
+        "swim"
+    ]
 }

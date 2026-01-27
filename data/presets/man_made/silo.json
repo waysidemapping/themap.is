@@ -1,5 +1,8 @@
 {
-    "icon": "silo",
+    "name": "Silo",
+    "tags": {
+        "man_made": "silo"
+    },
     "geometry": [
         "point",
         "area"
@@ -9,8 +12,5 @@
         "grain",
         "wheat"
     ],
-    "tags": {
-        "man_made": "silo"
-    },
-    "name": "Silo"
+    "icon": "silo"
 }

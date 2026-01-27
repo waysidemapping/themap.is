@@ -1,5 +1,8 @@
 {
-    "icon": "banknote-hand",
+    "name": "Payment Center",
+    "tags": {
+        "amenity": "payment_centre"
+    },
     "terms": [
         "bill pay",
         "cash",
@@ -9,8 +12,5 @@
         "money",
         "tax pay"
     ],
-    "tags": {
-        "amenity": "payment_centre"
-    },
-    "name": "Payment Center"
+    "icon": "banknote-hand"
 }

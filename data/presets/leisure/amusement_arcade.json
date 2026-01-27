@@ -1,17 +1,17 @@
 {
-    "icon": "game_controller",
+    "name": "Amusement Arcade",
+    "plural": "arcades",
+    "groups": [
+        "amusement"
+    ],
+    "tags": {
+        "leisure": "amusement_arcade"
+    },
     "terms": [
         "driving simulators",
         "pay-to-play games",
         "pinball machines",
         "video games"
     ],
-    "tags": {
-        "leisure": "amusement_arcade"
-    },
-    "groups": [
-        "amusement"
-    ],
-    "plural": "arcades",
-    "name": "Amusement Arcade"
+    "icon": "game_controller"
 }

@@ -1,8 +1,5 @@
 {
-    "geometry": [
-        "point",
-        "area"
-    ],
+    "name": "Brewpub",
     "tags": {
         "amenity": "pub",
         "microbrewery": "yes"
@@ -10,6 +7,10 @@
     "reference": {
         "key": "microbrewery"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "alcohol",
         "beer",
@@ -20,6 +21,5 @@
         "drink",
         "microbrewery",
         "small batch brewery"
-    ],
-    "name": "Brewpub"
+    ]
 }

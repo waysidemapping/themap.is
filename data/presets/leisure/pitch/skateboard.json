@@ -1,5 +1,6 @@
 {
-    "icon": "skateboard",
+    "name": "Skate Park",
+    "plural": "skate parks",
     "tags": {
         "leisure": "pitch",
         "sport": "skateboard"
@@ -15,6 +16,5 @@
         "skatepark",
         "vert"
     ],
-    "plural": "skate parks",
-    "name": "Skate Park"
+    "icon": "skateboard"
 }

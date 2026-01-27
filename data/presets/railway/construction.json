@@ -1,11 +1,11 @@
 {
-    "icon": "railway_track_partial",
-    "geometry": [
-        "line"
-    ],
+    "name": "Railway Under Construction",
     "tags": {
         "railway": "construction"
     },
-    "matchScore": 0.95,
-    "name": "Railway Under Construction"
+    "geometry": [
+        "line"
+    ],
+    "icon": "railway_track_partial",
+    "matchScore": 0.95
 }

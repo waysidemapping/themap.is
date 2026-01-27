@@ -1,5 +1,9 @@
 {
-    "icon": "bicycle",
+    "name": "bike shop",
+    "plural": "bike shops",
+    "tags": {
+        "shop": "bicycle"
+    },
     "terms": [
         "Bike Shop",
         "bicycle store",
@@ -10,9 +14,5 @@
         "tricycle",
         "unicycle"
     ],
-    "tags": {
-        "shop": "bicycle"
-    },
-    "plural": "bike shops",
-    "name": "bike shop"
+    "icon": "bicycle"
 }

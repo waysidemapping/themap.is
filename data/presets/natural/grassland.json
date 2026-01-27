@@ -1,15 +1,15 @@
 {
-    "icon": "grass",
-    "geometry": [
-        "area"
-    ],
+    "name": "Grassland",
     "tags": {
         "natural": "grassland"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "field",
         "prairie",
         "savanna"
     ],
-    "name": "Grassland"
+    "icon": "grass"
 }

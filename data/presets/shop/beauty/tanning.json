@@ -1,8 +1,9 @@
 {
-    "icon": "lier-sun",
-    "terms": [
-        "solarium",
-        "sunbed"
+    "name": "tanning salon",
+    "plural": "tanning salons",
+    "groups": [
+        "beauty",
+        "stores"
     ],
     "tags": {
         "shop": "beauty",
@@ -12,10 +13,9 @@
         "key": "leisure",
         "value": "tanning_salon"
     },
-    "groups": [
-        "beauty",
-        "stores"
+    "terms": [
+        "solarium",
+        "sunbed"
     ],
-    "plural": "tanning salons",
-    "name": "tanning salon"
+    "icon": "lier-sun"
 }

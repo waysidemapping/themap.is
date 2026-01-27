@@ -1,12 +1,5 @@
 {
-    "icon": "quakerism",
-    "terms": [
-        "christian",
-        "church",
-        "house of god",
-        "house of prayer",
-        "house of worship"
-    ],
+    "name": "Quaker Friends Meeting House",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "christian",
@@ -16,5 +9,12 @@
         "key": "denomination",
         "value": "quaker"
     },
-    "name": "Quaker Friends Meeting House"
+    "terms": [
+        "christian",
+        "church",
+        "house of god",
+        "house of prayer",
+        "house of worship"
+    ],
+    "icon": "quakerism"
 }

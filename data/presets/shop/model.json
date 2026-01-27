@@ -1,4 +1,6 @@
 {
+    "name": "model shop",
+    "plural": "model shops",
     "tags": {
         "shop": "model"
     },
@@ -11,7 +13,5 @@
         "model store",
         "rail transport modelling",
         "scale models"
-    ],
-    "plural": "model shops",
-    "name": "model shop"
+    ]
 }

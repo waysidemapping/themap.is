@@ -1,5 +1,5 @@
 {
-    "icon": "parking_space",
+    "name": "Parking Space",
     "tags": {
         "amenity": "parking_space"
     },
@@ -7,6 +7,6 @@
         "parking spot",
         "parking stall"
     ],
-    "matchScore": 0.95,
-    "name": "Parking Space"
+    "icon": "parking_space",
+    "matchScore": 0.95
 }

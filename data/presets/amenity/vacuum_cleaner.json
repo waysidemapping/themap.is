@@ -1,5 +1,5 @@
 {
-    "icon": "vacuum_station",
+    "name": "Vacuum Cleaning Station",
     "tags": {
         "amenity": "vacuum_cleaner"
     },
@@ -9,5 +9,5 @@
         "carvac",
         "suction"
     ],
-    "name": "Vacuum Cleaning Station"
+    "icon": "vacuum_station"
 }

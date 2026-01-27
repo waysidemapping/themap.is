@@ -1,11 +1,11 @@
 {
+    "name": "Emergency Feature",
+    "tags": {
+        "emergency": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "area"
-    ],
-    "tags": {
-        "emergency": "*"
-    },
-    "name": "Emergency Feature"
+    ]
 }

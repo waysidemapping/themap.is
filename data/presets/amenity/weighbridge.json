@@ -1,10 +1,10 @@
 {
-    "terms": [
-        "weigh station",
-        "weighbridge"
-    ],
+    "name": "Truck Scale",
     "tags": {
         "amenity": "weighbridge"
     },
-    "name": "Truck Scale"
+    "terms": [
+        "weigh station",
+        "weighbridge"
+    ]
 }

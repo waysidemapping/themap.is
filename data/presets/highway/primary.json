@@ -1,13 +1,13 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Primary Road",
     "tags": {
         "highway": "primary"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "road",
         "street"
-    ],
-    "name": "Primary Road"
+    ]
 }

@@ -1,5 +1,5 @@
 {
-    "icon": "car-users",
+    "name": "Car Pooling Station",
     "tags": {
         "amenity": "car_pooling"
     },
@@ -9,5 +9,5 @@
         "lift sharing",
         "ride sharing"
     ],
-    "name": "Car Pooling Station"
+    "icon": "car-users"
 }

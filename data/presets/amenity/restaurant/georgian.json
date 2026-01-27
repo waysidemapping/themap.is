@@ -1,4 +1,13 @@
 {
+    "name": "Georgian Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "georgian"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "georgian"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -9,14 +18,5 @@
         "eat",
         "lunch",
         "table"
-    ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "georgian"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "georgian"
-    },
-    "name": "Georgian Restaurant"
+    ]
 }

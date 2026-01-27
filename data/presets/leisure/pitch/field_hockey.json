@@ -1,5 +1,6 @@
 {
-    "icon": "field_hockey_stick-ball",
+    "name": "Field Hockey Field",
+    "plural": "field hockey fields",
     "tags": {
         "leisure": "pitch",
         "sport": "field_hockey"
@@ -11,6 +12,5 @@
     "terms": [
         "landhockey"
     ],
-    "plural": "field hockey fields",
-    "name": "Field Hockey Field"
+    "icon": "field_hockey_stick-ball"
 }

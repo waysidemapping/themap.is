@@ -1,5 +1,10 @@
 {
-    "icon": "croissant",
+    "name": "pastry shop",
+    "plural": "pastry shops",
+    "groups": [
+        "food",
+        "stores"
+    ],
     "tags": {
         "shop": "pastry"
     },
@@ -9,10 +14,5 @@
         "cookies",
         "patisserie"
     ],
-    "groups": [
-        "food",
-        "stores"
-    ],
-    "plural": "pastry shops",
-    "name": "pastry shop"
+    "icon": "croissant"
 }

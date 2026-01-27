@@ -1,5 +1,6 @@
 {
-    "icon": "garage-key",
+    "name": "storage rental",
+    "plural": "storage rentals",
     "tags": {
         "shop": "storage_rental"
     },
@@ -12,6 +13,5 @@
         "storage rental",
         "storage units"
     ],
-    "plural": "storage rentals",
-    "name": "storage rental"
+    "icon": "garage-key"
 }

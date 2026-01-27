@@ -1,10 +1,10 @@
 {
-    "icon": "dress",
-    "terms": [
-        "seamstress"
-    ],
+    "name": "Dressmaker",
     "tags": {
         "craft": "dressmaker"
     },
-    "name": "Dressmaker"
+    "terms": [
+        "seamstress"
+    ],
+    "icon": "dress"
 }

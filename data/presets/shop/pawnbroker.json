@@ -1,12 +1,12 @@
 {
-    "icon": "banknote-hand",
+    "name": "pawnshop",
+    "plural": "pawnshops",
     "tags": {
         "shop": "pawnbroker"
     },
-    "plural": "pawnshops",
-    "name": "pawnshop",
     "terms": [
         "Pawnbroker",
         "Pawn Shop"
-    ]
+    ],
+    "icon": "banknote-hand"
 }

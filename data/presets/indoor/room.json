@@ -1,10 +1,11 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Room",
     "tags": {
         "indoor": "room"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "antechamber",
         "anteroom",
@@ -17,6 +18,5 @@
         "lobby",
         "vestibule"
     ],
-    "matchScore": 0.8,
-    "name": "Room"
+    "matchScore": 0.8
 }

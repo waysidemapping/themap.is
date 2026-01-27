@@ -1,5 +1,5 @@
 {
-    "icon": "building_industrial",
+    "name": "Industrial Area",
     "tags": {
         "landuse": "industrial"
     },
@@ -8,6 +8,6 @@
         "factory",
         "manufacturing"
     ],
-    "matchScore": 0.9,
-    "name": "Industrial Area"
+    "icon": "building_industrial",
+    "matchScore": 0.9
 }

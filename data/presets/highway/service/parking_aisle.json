@@ -1,7 +1,5 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Parking Aisle",
     "tags": {
         "highway": "service",
         "service": "parking_aisle"
@@ -10,5 +8,7 @@
         "key": "service",
         "value": "parking_aisle"
     },
-    "name": "Parking Aisle"
+    "geometry": [
+        "line"
+    ]
 }

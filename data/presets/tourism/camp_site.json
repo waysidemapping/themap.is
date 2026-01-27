@@ -1,13 +1,17 @@
 {
-    "icon": "campsite",
+    "name": "Campground",
+    "plural": "campgrounds",
+    "groups": [
+        "lodging"
+    ],
+    "tags": {
+        "tourism": "camp_site"
+    },
     "geometry": [
         "point",
         "vertex",
         "area"
     ],
-    "tags": {
-        "tourism": "camp_site"
-    },
     "terms": [
         "camp ground",
         "camp pitch",
@@ -21,9 +25,5 @@
         "rv",
         "tenting"
     ],
-    "groups": [
-        "lodging"
-    ],
-    "plural": "campgrounds",
-    "name": "Campground"
+    "icon": "campsite"
 }

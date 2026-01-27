@@ -1,15 +1,15 @@
 {
-    "icon": "trench",
-    "geometry": [
-        "line"
-    ],
+    "name": "Trench",
     "tags": {
         "barrier": "ditch"
     },
-    "name": "Trench",
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "Ditch",
         "ha-ha"
     ],
+    "icon": "trench",
     "matchScore": 0.25
 }

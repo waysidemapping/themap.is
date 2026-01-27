@@ -1,11 +1,11 @@
 {
-    "icon": "wall",
+    "name": "City Wall",
+    "tags": {
+        "barrier": "city_wall"
+    },
     "geometry": [
         "line",
         "area"
     ],
-    "tags": {
-        "barrier": "city_wall"
-    },
-    "name": "City Wall"
+    "icon": "wall"
 }

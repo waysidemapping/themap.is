@@ -1,13 +1,13 @@
 {
+    "name": "Gasometer",
+    "tags": {
+        "man_made": "gasometer"
+    },
     "geometry": [
         "point",
         "area"
     ],
     "terms": [
         "gas holder"
-    ],
-    "tags": {
-        "man_made": "gasometer"
-    },
-    "name": "Gasometer"
+    ]
 }

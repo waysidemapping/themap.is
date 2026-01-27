@@ -1,11 +1,11 @@
 {
-    "icon": "bottles",
+    "name": "beverage store",
+    "plural": "beverage stores",
     "tags": {
         "shop": "beverages"
     },
     "terms": [
         "drinks"
     ],
-    "plural": "beverage stores",
-    "name": "beverage store"
+    "icon": "bottles"
 }

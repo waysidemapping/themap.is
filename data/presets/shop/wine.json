@@ -1,8 +1,8 @@
 {
-    "icon": "alcohol_bottle-wine_glass",
+    "name": "wine store",
+    "plural": "wine stores",
     "tags": {
         "shop": "wine"
     },
-    "plural": "wine stores",
-    "name": "wine store"
+    "icon": "alcohol_bottle-wine_glass"
 }

@@ -1,14 +1,14 @@
 {
-    "icon": "rocking_horse",
-    "terms": [
-        "game",
-        "toy"
+    "name": "Toy Library",
+    "groups": [
+        "free_stuff"
     ],
     "tags": {
         "amenity": "toy_library"
     },
-    "groups": [
-        "free_stuff"
+    "terms": [
+        "game",
+        "toy"
     ],
-    "name": "Toy Library"
+    "icon": "rocking_horse"
 }

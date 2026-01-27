@@ -1,5 +1,5 @@
 {
-    "icon": "suitcase",
+    "name": "Commercial Area",
     "tags": {
         "landuse": "commercial"
     },
@@ -7,6 +7,6 @@
         "depot",
         "offices"
     ],
-    "matchScore": 0.9,
-    "name": "Commercial Area"
+    "icon": "suitcase",
+    "matchScore": 0.9
 }

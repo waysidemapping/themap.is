@@ -1,11 +1,11 @@
 {
-    "icon": "game_controller",
+    "name": "video game store",
+    "plural": "video game stores",
     "tags": {
         "shop": "video_games"
     },
     "terms": [
         "hobby"
     ],
-    "plural": "video game stores",
-    "name": "video game store"
+    "icon": "game_controller"
 }

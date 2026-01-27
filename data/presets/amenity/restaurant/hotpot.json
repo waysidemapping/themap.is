@@ -1,5 +1,13 @@
 {
-    "icon": "noodle_bowl-chopsticks",
+    "name": "Hot Pot Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "hotpot"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "hotpot"
+    },
     "terms": [
         "beijing",
         "budae jjigae",
@@ -24,13 +32,5 @@
         "teoswa",
         "yao hon"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "hotpot"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "hotpot"
-    },
-    "name": "Hot Pot Restaurant"
+    "icon": "noodle_bowl-chopsticks"
 }

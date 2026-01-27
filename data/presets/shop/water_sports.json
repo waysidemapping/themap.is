@@ -1,7 +1,7 @@
 {
+    "name": "watersports store",
+    "plural": "watersports stores",
     "tags": {
         "shop": "water_sports"
-    },
-    "plural": "watersports stores",
-    "name": "watersports store"
+    }
 }

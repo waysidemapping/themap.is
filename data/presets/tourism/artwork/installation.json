@@ -1,11 +1,6 @@
 {
-    "icon": "sculpture",
-    "geometry": [
-        "point",
-        "vertex",
-        "line",
-        "area"
-    ],
+    "name": "Art Installation",
+    "plural": "art installations",
     "tags": {
         "tourism": "artwork",
         "artwork_type": "installation"
@@ -14,11 +9,16 @@
         "key": "artwork_type",
         "value": "installation"
     },
+    "geometry": [
+        "point",
+        "vertex",
+        "line",
+        "area"
+    ],
     "terms": [
         "interactive art",
         "intervention art",
         "modern art"
     ],
-    "plural": "art installations",
-    "name": "Art Installation"
+    "icon": "sculpture"
 }

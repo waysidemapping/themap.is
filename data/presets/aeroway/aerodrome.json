@@ -1,13 +1,14 @@
 {
-    "geometry": [
-        "area",
-        "point"
+    "name": "Airport",
+    "groups": [
+        "transport"
     ],
     "tags": {
         "aeroway": "aerodrome"
     },
-    "groups": [
-        "transport"
+    "geometry": [
+        "area",
+        "point"
     ],
     "terms": [
         "Aerodrome",
@@ -16,6 +17,5 @@
         "jet",
         "plane"
     ],
-    "matchScore": 0.9,
-    "name": "Airport"
+    "matchScore": 0.9
 }

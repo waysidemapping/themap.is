@@ -1,12 +1,12 @@
 {
-    "icon": "stethoscope",
+    "name": "Health Clinic",
+    "plural": "health clinics",
+    "tags": {
+        "healthcare": "clinic"
+    },
     "terms": [
         "medical",
         "urgentcare"
     ],
-    "tags": {
-        "healthcare": "clinic"
-    },
-    "plural": "health clinics",
-    "name": "Health Clinic"
+    "icon": "stethoscope"
 }

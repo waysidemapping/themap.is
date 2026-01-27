@@ -1,12 +1,12 @@
 {
-    "icon": "wrench-hammer",
+    "name": "Craft",
+    "tags": {
+        "craft": "*"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "craft": "*"
-    },
     "terms": [
         "artisan",
         "craftsman",
@@ -16,5 +16,5 @@
         "tradesperson",
         "workshop"
     ],
-    "name": "Craft"
+    "icon": "wrench-hammer"
 }

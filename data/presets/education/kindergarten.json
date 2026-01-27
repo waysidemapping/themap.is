@@ -1,11 +1,11 @@
 {
+    "name": "Preschool / Kindergarten Grounds",
+    "tags": {
+        "education": "kindergarten"
+    },
     "terms": [
         "kindergarden",
         "kindergarten",
         "pre-school"
-    ],
-    "tags": {
-        "education": "kindergarten"
-    },
-    "name": "Preschool / Kindergarten Grounds"
+    ]
 }

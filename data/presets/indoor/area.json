@@ -1,13 +1,13 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Indoor Area",
     "tags": {
         "indoor": "area"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "indoor space"
     ],
-    "matchScore": 0.8,
-    "name": "Indoor Area"
+    "matchScore": 0.8
 }

@@ -1,11 +1,11 @@
 {
-    "icon": "watering_can",
+    "name": "Gardener",
+    "tags": {
+        "craft": "gardener"
+    },
     "terms": [
         "grounds keeper",
         "landscaper"
     ],
-    "tags": {
-        "craft": "gardener"
-    },
-    "name": "Gardener"
+    "icon": "watering_can"
 }

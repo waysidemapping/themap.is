@@ -1,5 +1,8 @@
 {
-    "icon": "hunting_blind",
+    "name": "Hunting Stand",
+    "tags": {
+        "amenity": "hunting_stand"
+    },
     "terms": [
         "game",
         "gun",
@@ -14,8 +17,5 @@
         "watch",
         "wild"
     ],
-    "tags": {
-        "amenity": "hunting_stand"
-    },
-    "name": "Hunting Stand"
+    "icon": "hunting_blind"
 }

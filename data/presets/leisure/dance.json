@@ -1,4 +1,8 @@
 {
+    "name": "Dance Hall",
+    "tags": {
+        "leisure": "dance"
+    },
     "terms": [
         "ballet",
         "ballet studio",
@@ -8,9 +12,5 @@
         "swing",
         "tango",
         "waltz"
-    ],
-    "tags": {
-        "leisure": "dance"
-    },
-    "name": "Dance Hall"
+    ]
 }

@@ -1,5 +1,5 @@
 {
-    "icon": "lounger",
+    "name": "Lounger",
     "tags": {
         "amenity": "lounger"
     },
@@ -8,5 +8,5 @@
         "chair",
         "seat"
     ],
-    "name": "Lounger"
+    "icon": "lounger"
 }

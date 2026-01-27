@@ -1,5 +1,12 @@
 {
-    "icon": "campsite",
+    "name": "Camp Pitch",
+    "plural": "camp pitches",
+    "groups": [
+        "lodging-minor"
+    ],
+    "tags": {
+        "tourism": "camp_pitch"
+    },
     "geometry": [
         "point",
         "vertex",
@@ -9,12 +16,5 @@
         "rv",
         "tent"
     ],
-    "tags": {
-        "tourism": "camp_pitch"
-    },
-    "groups": [
-        "lodging-minor"
-    ],
-    "plural": "camp pitches",
-    "name": "Camp Pitch"
+    "icon": "campsite"
 }

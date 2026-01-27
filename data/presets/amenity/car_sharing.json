@@ -1,7 +1,7 @@
 {
-    "icon": "car-sign",
+    "name": "Car Sharing Station",
     "tags": {
         "amenity": "car_sharing"
     },
-    "name": "Car Sharing Station"
+    "icon": "car-sign"
 }

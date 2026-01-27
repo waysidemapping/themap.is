@@ -1,5 +1,6 @@
 {
-    "icon": "hand-eye",
+    "name": "psychic",
+    "plural": "psychics",
     "tags": {
         "shop": "psychic"
     },
@@ -11,6 +12,5 @@
         "seer",
         "spirit"
     ],
-    "plural": "psychics",
-    "name": "psychic"
+    "icon": "hand-eye"
 }

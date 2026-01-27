@@ -1,16 +1,16 @@
 {
-    "icon": "swimmer-water",
+    "name": "Swimming Pool",
+    "plural": "swimming pools",
+    "groups": [
+        "bathing_water"
+    ],
+    "tags": {
+        "leisure": "swimming_pool"
+    },
     "terms": [
         "aquatics",
         "dive",
         "water"
     ],
-    "tags": {
-        "leisure": "swimming_pool"
-    },
-    "groups": [
-        "bathing_water"
-    ],
-    "plural": "swimming pools",
-    "name": "Swimming Pool"
+    "icon": "swimmer-water"
 }

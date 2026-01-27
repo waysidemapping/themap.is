@@ -1,11 +1,14 @@
 {
-    "icon": "picnic_table",
+    "name": "Picnic Table",
+    "plural": "picnic tables",
+    "groups": [
+        "street_furniture"
+    ],
     "tags": {
         "leisure": "picnic_table"
     },
     "terms": [
         "bench"
     ],
-    "plural": "picnic tables",
-    "name": "Picnic Table"
+    "icon": "picnic_table"
 }

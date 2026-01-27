@@ -1,5 +1,6 @@
 {
-    "icon": "radio",
+    "name": "electronic component store",
+    "plural": "electronic component stores",
     "tags": {
         "shop": "radiotechnics"
     },
@@ -7,6 +8,5 @@
         "antenna",
         "transistor"
     ],
-    "plural": "electronic component stores",
-    "name": "electronic component store"
+    "icon": "radio"
 }

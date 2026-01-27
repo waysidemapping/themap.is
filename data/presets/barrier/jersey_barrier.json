@@ -1,11 +1,12 @@
 {
+    "name": "Jersey Barrier",
+    "tags": {
+        "barrier": "jersey_barrier"
+    },
     "geometry": [
         "vertex",
         "line"
     ],
-    "tags": {
-        "barrier": "jersey_barrier"
-    },
     "terms": [
         "concrete barrier",
         "concrete median",
@@ -16,6 +17,5 @@
         "new jersey wall",
         "ontario tall wall",
         "plastic barrier"
-    ],
-    "name": "Jersey Barrier"
+    ]
 }

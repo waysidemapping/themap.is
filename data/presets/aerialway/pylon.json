@@ -1,16 +1,16 @@
 {
-    "icon": "aerialway_pole",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Aerialway Pylon",
     "tags": {
         "aerialway": "pylon"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "chair lift pole",
         "lift tower",
         "skiing",
         "snowboarding"
     ],
-    "name": "Aerialway Pylon"
+    "icon": "aerialway_pole"
 }

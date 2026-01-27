@@ -1,15 +1,15 @@
 {
-    "icon": "crescent-steam",
+    "name": "Hot Spring",
+    "tags": {
+        "natural": "hot_spring"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "natural": "hot_spring"
-    },
     "terms": [
         "geothermal spring",
         "thermal pool"
     ],
-    "name": "Hot Spring"
+    "icon": "crescent-steam"
 }

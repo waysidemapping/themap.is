@@ -1,4 +1,6 @@
 {
+    "name": "Boules Court",
+    "plural": "boules court",
     "tags": {
         "leisure": "pitch",
         "sport": "boules"
@@ -11,7 +13,5 @@
         "bocce",
         "lyonnaise",
         "pétanque"
-    ],
-    "plural": "boules court",
-    "name": "Boules Court"
+    ]
 }

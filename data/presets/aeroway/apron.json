@@ -1,11 +1,11 @@
 {
-    "icon": "planes",
-    "geometry": [
-        "area"
-    ],
+    "name": "Airport Apron",
     "tags": {
         "aeroway": "apron"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "aircraft parking",
         "flight line",
@@ -14,5 +14,5 @@
         "tarmac",
         "taxiway"
     ],
-    "name": "Airport Apron"
+    "icon": "planes"
 }

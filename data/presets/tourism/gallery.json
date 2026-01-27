@@ -1,5 +1,12 @@
 {
-    "icon": "wall_art",
+    "name": "Art Gallery",
+    "plural": "art galleries",
+    "groups": [
+        "amusement"
+    ],
+    "tags": {
+        "tourism": "gallery"
+    },
     "geometry": [
         "point",
         "area"
@@ -11,12 +18,5 @@
         "photograph",
         "sculpture"
     ],
-    "tags": {
-        "tourism": "gallery"
-    },
-    "groups": [
-        "amusement"
-    ],
-    "plural": "art galleries",
-    "name": "Art Gallery"
+    "icon": "wall_art"
 }

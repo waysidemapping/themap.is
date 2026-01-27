@@ -1,12 +1,12 @@
 {
+    "name": "Crane",
+    "tags": {
+        "man_made": "crane"
+    },
     "geometry": [
         "point",
         "line",
         "vertex",
         "area"
-    ],
-    "tags": {
-        "man_made": "crane"
-    },
-    "name": "Crane"
+    ]
 }

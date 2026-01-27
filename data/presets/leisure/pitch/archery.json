@@ -1,5 +1,6 @@
 {
-    "icon": "archer",
+    "name": "Archery Range",
+    "plural": "archery ranges",
     "tags": {
         "leisure": "pitch",
         "sport": "archery"
@@ -12,6 +13,5 @@
         "bow and arrow",
         "crossbow"
     ],
-    "plural": "archery ranges",
-    "name": "Archery Range"
+    "icon": "archer"
 }

@@ -1,11 +1,11 @@
 {
-    "terms": [
-        "bike",
-        "motorbike"
-    ],
+    "name": "motorcycle dealership",
+    "plural": "motorcycle dealerships",
     "tags": {
         "shop": "motorcycle"
     },
-    "plural": "motorcycle dealerships",
-    "name": "motorcycle dealership"
+    "terms": [
+        "bike",
+        "motorbike"
+    ]
 }

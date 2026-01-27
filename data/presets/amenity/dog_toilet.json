@@ -1,5 +1,5 @@
 {
-    "icon": "dog",
+    "name": "Dog Toilet",
     "tags": {
         "amenity": "dog_toilet"
     },
@@ -11,5 +11,5 @@
         "dog urinate",
         "dog urine"
     ],
-    "name": "Dog Toilet"
+    "icon": "dog"
 }

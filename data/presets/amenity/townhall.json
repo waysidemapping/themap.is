@@ -1,5 +1,8 @@
 {
-    "icon": "building_classical-flag",
+    "name": "Town Hall",
+    "tags": {
+        "amenity": "townhall"
+    },
     "terms": [
         "city",
         "courthouse",
@@ -7,8 +10,5 @@
         "municipal",
         "village"
     ],
-    "tags": {
-        "amenity": "townhall"
-    },
-    "name": "Town Hall"
+    "icon": "building_classical-flag"
 }

@@ -1,7 +1,7 @@
 {
-    "icon": "camera",
+    "name": "Photographer",
     "tags": {
         "craft": "photographer"
     },
-    "name": "Photographer"
+    "icon": "camera"
 }

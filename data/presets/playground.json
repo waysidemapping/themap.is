@@ -1,13 +1,13 @@
 {
-    "icon": "swinger",
+    "name": "Playground Feature",
+    "tags": {
+        "playground": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
     ],
-    "tags": {
-        "playground": "*"
-    },
-    "name": "Playground Feature"
+    "icon": "swinger"
 }

@@ -1,8 +1,8 @@
 {
-    "icon": "vacuum_cleaner",
+    "name": "vacuum cleaner store",
+    "plural": "vacuum cleaner stores",
     "tags": {
         "shop": "vacuum_cleaner"
     },
-    "plural": "vacuum cleaner stores",
-    "name": "vacuum cleaner store"
+    "icon": "vacuum_cleaner"
 }

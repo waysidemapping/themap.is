@@ -1,11 +1,11 @@
 {
-    "icon": "pedestrian-walls",
-    "geometry": [
-        "line"
-    ],
+    "name": "Indoor Corridor",
     "tags": {
         "highway": "corridor"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "gallery",
         "hall",
@@ -14,5 +14,5 @@
         "passage",
         "passageway"
     ],
-    "name": "Indoor Corridor"
+    "icon": "pedestrian-walls"
 }

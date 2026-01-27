@@ -1,4 +1,6 @@
 {
+    "name": "discount store",
+    "plural": "discount stores",
     "tags": {
         "shop": "variety_store"
     },
@@ -7,7 +9,5 @@
         "Variety Store",
         "five and dime",
         "five and ten"
-    ],
-    "plural": "discount stores",
-    "name": "discount store"
+    ]
 }

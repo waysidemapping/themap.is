@@ -1,7 +1,7 @@
 {
+    "name": "baby goods store",
+    "plural": "baby goods stores",
     "tags": {
         "shop": "baby_goods"
-    },
-    "plural": "baby goods stores",
-    "name": "baby goods store"
+    }
 }

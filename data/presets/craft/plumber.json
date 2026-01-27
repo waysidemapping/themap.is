@@ -1,10 +1,10 @@
 {
-    "icon": "pipes-droplet",
-    "terms": [
-        "pipe"
-    ],
+    "name": "Plumber",
     "tags": {
         "craft": "plumber"
     },
-    "name": "Plumber"
+    "terms": [
+        "pipe"
+    ],
+    "icon": "pipes-droplet"
 }

@@ -1,8 +1,5 @@
 {
-    "icon": "tunnel",
-    "geometry": [
-        "area"
-    ],
+    "name": "Tunnel Area",
     "tags": {
         "man_made": "tunnel"
     },
@@ -10,6 +7,9 @@
         "key": "man_made",
         "value": "tunnel"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "bore",
         "dig",
@@ -17,5 +17,5 @@
         "underground passage",
         "underpass"
     ],
-    "name": "Tunnel Area"
+    "icon": "tunnel"
 }

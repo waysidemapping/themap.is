@@ -1,9 +1,6 @@
 {
-    "icon": "teacup-steam",
-    "geometry": [
-        "point",
-        "area"
-    ],
+    "name": "Teahouse",
+    "plural": "teahouses",
     "tags": {
         "amenity": "cafe",
         "cuisine": "tea"
@@ -12,6 +9,10 @@
         "key": "amenity",
         "value": "cafe"
     },
+    "geometry": [
+        "point",
+        "area"
+    ],
     "terms": [
         "black tea",
         "green tea",
@@ -26,6 +27,5 @@
         "white tea",
         "yellow tea"
     ],
-    "plural": "teahouses",
-    "name": "Teahouse"
+    "icon": "teacup-steam"
 }

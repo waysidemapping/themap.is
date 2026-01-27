@@ -1,7 +1,7 @@
 {
-    "icon": "info_board",
+    "name": "Information Board",
     "tags": {
         "information": "board"
     },
-    "name": "Information Board"
+    "icon": "info_board"
 }

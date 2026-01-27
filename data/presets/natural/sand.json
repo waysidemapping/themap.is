@@ -1,12 +1,12 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Sand",
     "tags": {
         "natural": "sand"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "desert"
-    ],
-    "name": "Sand"
+    ]
 }

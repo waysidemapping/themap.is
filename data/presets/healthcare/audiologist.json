@@ -1,13 +1,13 @@
 {
-    "icon": "ear",
+    "name": "Audiologist",
+    "plural": "audiologists",
+    "tags": {
+        "healthcare": "audiologist"
+    },
     "terms": [
         "ear",
         "hearing",
         "sound"
     ],
-    "tags": {
-        "healthcare": "audiologist"
-    },
-    "plural": "audiologists",
-    "name": "Audiologist"
+    "icon": "ear"
 }

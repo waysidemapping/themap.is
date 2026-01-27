@@ -1,5 +1,8 @@
 {
-    "icon": "shore",
+    "name": "Waterway Access Point",
+    "tags": {
+        "waterway": "access_point"
+    },
     "geometry": [
         "vertex"
     ],
@@ -14,8 +17,5 @@
         "rowboat",
         "take-out"
     ],
-    "tags": {
-        "waterway": "access_point"
-    },
-    "name": "Waterway Access Point"
+    "icon": "shore"
 }

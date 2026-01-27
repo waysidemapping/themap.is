@@ -1,9 +1,9 @@
 {
-    "icon": "propane_tank",
+    "name": "fuel store",
+    "plural": "fuel stores",
     "tags": {
         "shop": "fuel"
     },
-    "plural": "fuel stores",
-    "name": "fuel store",
+    "icon": "propane_tank",
     "matchScore": 0.5
 }

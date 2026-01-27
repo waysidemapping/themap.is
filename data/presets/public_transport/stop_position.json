@@ -1,5 +1,5 @@
 {
-    "icon": "transit",
+    "name": "Transit Stopping Location",
     "tags": {
         "public_transport": "stop_position"
     },
@@ -9,6 +9,6 @@
         "transit",
         "transportation"
     ],
-    "name": "Transit Stopping Location",
+    "icon": "transit",
     "matchScore": 0.2
 }

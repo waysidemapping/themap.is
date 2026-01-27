@@ -1,5 +1,5 @@
 {
-    "icon": "campfire",
+    "name": "Fire Pit",
     "tags": {
         "leisure": "firepit"
     },
@@ -14,5 +14,5 @@
         "fireplace",
         "firering"
     ],
-    "name": "Fire Pit"
+    "icon": "campfire"
 }

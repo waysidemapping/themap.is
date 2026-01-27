@@ -1,16 +1,16 @@
 {
-    "icon": "cup_and_saucer",
+    "name": "Café",
+    "plural": "cafés",
+    "groups": [
+        "food"
+    ],
+    "tags": {
+        "amenity": "cafe"
+    },
     "terms": [
         "bistro",
         "coffee",
         "tea"
     ],
-    "tags": {
-        "amenity": "cafe"
-    },
-    "groups": [
-        "food"
-    ],
-    "plural": "cafés",
-    "name": "Café"
+    "icon": "cup_and_saucer"
 }

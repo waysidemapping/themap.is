@@ -1,11 +1,10 @@
 {
-    "icon": "stile_squeezer",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Stile",
     "tags": {
         "barrier": "stile"
     },
-
-    "name": "Stile"
+    "geometry": [
+        "vertex"
+    ],
+    "icon": "stile_squeezer"
 }

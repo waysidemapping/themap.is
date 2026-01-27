@@ -1,5 +1,6 @@
 {
-    "icon": "soccer_player",
+    "name": "Soccer Field",
+    "plural": "soccer fields",
     "tags": {
         "leisure": "pitch",
         "sport": "soccer"
@@ -11,6 +12,5 @@
     "terms": [
         "football"
     ],
-    "plural": "soccer fields",
-    "name": "Soccer Field"
+    "icon": "soccer_player"
 }

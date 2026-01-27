@@ -1,5 +1,6 @@
 {
-    "icon": "shopping_basket",
+    "name": "convenience store",
+    "plural": "convenience stores",
     "tags": {
         "shop": "convenience"
     },
@@ -12,6 +13,5 @@
         "mini-market",
         "mini-mart"
     ],
-    "plural": "convenience stores",
-    "name": "convenience store"
+    "icon": "shopping_basket"
 }

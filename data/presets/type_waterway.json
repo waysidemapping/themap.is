@@ -1,9 +1,9 @@
 {
-    "geometry": [
-        "relation"
-    ],
+    "name": "Waterway",
     "tags": {
         "type": "waterway"
     },
-    "name": "Waterway"
+    "geometry": [
+        "relation"
+    ]
 }

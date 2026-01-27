@@ -1,5 +1,5 @@
 {
-    "icon": "fountain",
+    "name": "Fountain",
     "tags": {
         "amenity": "fountain"
     },
@@ -7,5 +7,5 @@
         "basin",
         "water"
     ],
-    "name": "Fountain"
+    "icon": "fountain"
 }

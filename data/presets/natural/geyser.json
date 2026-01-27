@@ -1,13 +1,13 @@
 {
-    "icon": "droplet",
-    "geometry": [
-        "point"
+    "name": "Geyser",
+    "groups": [
+        "water"
     ],
     "tags": {
         "natural": "geyser"
     },
-    "groups": [
-        "water"
+    "geometry": [
+        "point"
     ],
     "terms": [
         "erupting spring",
@@ -19,5 +19,5 @@
         "hydrothermal explosion",
         "steam"
     ],
-    "name": "Geyser"
+    "icon": "droplet"
 }

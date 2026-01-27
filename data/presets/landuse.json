@@ -1,10 +1,10 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Landuse Feature",
     "tags": {
         "landuse": "*"
     },
-    "matchScore": 0.9,
-    "name": "Landuse Feature"
+    "geometry": [
+        "area"
+    ],
+    "matchScore": 0.9
 }

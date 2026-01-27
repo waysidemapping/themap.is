@@ -1,5 +1,8 @@
 {
-    "icon": "windmill",
+    "name": "Windmill",
+    "tags": {
+        "man_made": "windmill"
+    },
     "geometry": [
         "point",
         "area"
@@ -9,8 +12,5 @@
         "wheel",
         "wind"
     ],
-    "tags": {
-        "man_made": "windmill"
-    },
-    "name": "Windmill"
+    "icon": "windmill"
 }

@@ -1,18 +1,18 @@
 {
-    "icon": "cocktail",
+    "name": "Bar",
+    "plural": "bars",
+    "groups": [
+        "adult_amusement",
+        "food"
+    ],
+    "tags": {
+        "amenity": "bar"
+    },
     "terms": [
         "beer",
         "bier",
         "booze",
         "dive"
     ],
-    "tags": {
-        "amenity": "bar"
-    },
-    "groups": [
-        "adult_amusement",
-        "food"
-    ],
-    "plural": "bars",
-    "name": "Bar"
+    "icon": "cocktail"
 }

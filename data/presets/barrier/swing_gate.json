@@ -1,10 +1,10 @@
 {
-    "icon": "gate",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Swing Gate",
     "tags": {
         "barrier": "swing_gate"
     },
-    "name": "Swing Gate"
+    "geometry": [
+        "vertex"
+    ],
+    "icon": "gate"
 }

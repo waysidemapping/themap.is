@@ -1,9 +1,9 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Ditch",
     "tags": {
         "waterway": "ditch"
     },
-    "name": "Ditch"
+    "geometry": [
+        "line"
+    ]
 }

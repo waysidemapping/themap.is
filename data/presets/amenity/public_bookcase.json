@@ -1,5 +1,14 @@
 {
-    "icon": "book_open",
+    "name": "Public Bookcase",
+    "plural": "bookcases",
+    "groups": [
+        "books",
+        "street_furniture",
+        "free_stuff"
+    ],
+    "tags": {
+        "amenity": "public_bookcase"
+    },
     "terms": [
         "book exchange shelf",
         "book sharing",
@@ -10,14 +19,5 @@
         "share a book",
         "sharing books"
     ],
-    "tags": {
-        "amenity": "public_bookcase"
-    },
-    "groups": [
-        "books",
-        "street_furniture",
-        "free_stuff"
-    ],
-    "plural": "bookcases",
-    "name": "Public Bookcase"
+    "icon": "book_open"
 }

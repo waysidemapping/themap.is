@@ -1,13 +1,13 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Tertiary Road",
     "tags": {
         "highway": "tertiary"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "road",
         "street"
-    ],
-    "name": "Tertiary Road"
+    ]
 }

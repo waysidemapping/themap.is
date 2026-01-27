@@ -1,12 +1,12 @@
 {
+    "name": "Waterway Feature",
+    "tags": {
+        "waterway": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
-    ],
-    "tags": {
-        "waterway": "*"
-    },
-    "name": "Waterway Feature"
+    ]
 }

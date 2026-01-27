@@ -1,13 +1,13 @@
 {
-    "icon": "wall_art",
+    "name": "art store",
+    "plural": "art stores",
+    "tags": {
+        "shop": "art"
+    },
     "terms": [
         "art",
         "exhibition",
         "gallery"
     ],
-    "tags": {
-        "shop": "art"
-    },
-    "plural": "art stores",
-    "name": "art store"
+    "icon": "wall_art"
 }

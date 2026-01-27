@@ -1,13 +1,13 @@
 {
-    "icon": "scuba_diver",
+    "name": "scuba diving shop",
+    "plural": "scuba diving shops",
+    "tags": {
+        "shop": "scuba_diving"
+    },
     "terms": [
         "diving",
         "scuba",
         "snorkel"
     ],
-    "tags": {
-        "shop": "scuba_diving"
-    },
-    "plural": "scuba diving shops",
-    "name": "scuba diving shop"
+    "icon": "scuba_diver"
 }

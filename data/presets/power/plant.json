@@ -1,11 +1,11 @@
 {
-    "icon": "building_industrial",
-    "geometry": [
-        "area"
-    ],
+    "name": "Power Station Grounds",
     "tags": {
         "power": "plant"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "coal",
         "gas",
@@ -15,5 +15,5 @@
         "power",
         "station"
     ],
-    "name": "Power Station Grounds"
+    "icon": "building_industrial"
 }

@@ -1,4 +1,6 @@
 {
+    "name": "herbalist",
+    "plural": "herbalists",
     "tags": {
         "shop": "herbalist"
     },
@@ -10,7 +12,5 @@
         "phytomedicine",
         "plant medicine",
         "traditional medicine"
-    ],
-    "plural": "herbalists",
-    "name": "herbalist"
+    ]
 }

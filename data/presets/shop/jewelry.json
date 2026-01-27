@@ -1,5 +1,9 @@
 {
-    "icon": "jewel_ring",
+    "name": "jewelry store",
+    "plural": "jewelry stores",
+    "tags": {
+        "shop": "jewelry"
+    },
     "terms": [
         "Jewelry Shop",
         "bracelet",
@@ -15,9 +19,5 @@
         "ring",
         "silver"
     ],
-    "tags": {
-        "shop": "jewelry"
-    },
-    "plural": "jewelry stores",
-    "name": "jewelry store"
+    "icon": "jewel_ring"
 }

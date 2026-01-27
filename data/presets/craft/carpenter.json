@@ -1,9 +1,9 @@
 {
-    "terms": [
-        "woodworker"
-    ],
+    "name": "Carpenter",
     "tags": {
         "craft": "carpenter"
     },
-    "name": "Carpenter"
+    "terms": [
+        "woodworker"
+    ]
 }

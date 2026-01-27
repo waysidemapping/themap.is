@@ -1,4 +1,13 @@
 {
+    "name": "Chicken Fast Food",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "chicken"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "chicken"
+    },
     "terms": [
         "breakfast",
         "canteen",
@@ -10,14 +19,5 @@
         "grill",
         "lunch",
         "table"
-    ],
-    "tags": {
-        "amenity": "fast_food",
-        "cuisine": "chicken"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "chicken"
-    },
-    "name": "Chicken Fast Food"
+    ]
 }

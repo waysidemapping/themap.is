@@ -1,5 +1,6 @@
 {
-    "icon": "bed",
+    "name": "bedding store",
+    "plural": "bedding stores",
     "tags": {
         "shop": "bed"
     },
@@ -9,6 +10,5 @@
         "mattress",
         "pillow"
     ],
-    "plural": "bedding stores",
-    "name": "bedding store"
+    "icon": "bed"
 }

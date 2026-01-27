@@ -1,12 +1,12 @@
 {
+    "name": "Rehabilitation Facility",
+    "plural": "rehab facilities",
+    "tags": {
+        "healthcare": "rehabilitation"
+    },
     "terms": [
         "rehab",
         "therapist",
         "therapy"
-    ],
-    "tags": {
-        "healthcare": "rehabilitation"
-    },
-    "plural": "rehab facilities",
-    "name": "Rehabilitation Facility"
+    ]
 }

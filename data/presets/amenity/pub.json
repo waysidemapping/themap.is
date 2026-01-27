@@ -1,5 +1,10 @@
 {
-    "icon": "pint_glass",
+    "name": "Pub",
+    "plural": "pubs",
+    "groups": [
+        "food",
+        "adult_amusement"
+    ],
     "tags": {
         "amenity": "pub"
     },
@@ -11,10 +16,5 @@
         "dive",
         "drink"
     ],
-    "groups": [
-        "food",
-        "adult_amusement"
-    ],
-    "plural": "pubs",
-    "name": "Pub"
+    "icon": "pint_glass"
 }

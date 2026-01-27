@@ -1,5 +1,13 @@
 {
-    "icon": "buddhism",
+    "name": "Buddhist Temple",
+    "tags": {
+        "amenity": "place_of_worship",
+        "religion": "buddhist"
+    },
+    "reference": {
+        "key": "amenity",
+        "value": "place_of_worship"
+    },
     "terms": [
         "dojo",
         "monastery",
@@ -9,13 +17,5 @@
         "vihara",
         "zendo"
     ],
-    "tags": {
-        "amenity": "place_of_worship",
-        "religion": "buddhist"
-    },
-    "reference": {
-        "key": "amenity",
-        "value": "place_of_worship"
-    },
-    "name": "Buddhist Temple"
+    "icon": "buddhism"
 }

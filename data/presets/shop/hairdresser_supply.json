@@ -1,5 +1,9 @@
 {
-    "icon": "hair_dryer",
+    "name": "hairdresser supply store",
+    "plural": "hairdresser supply stores",
+    "tags": {
+        "shop": "hairdresser_supply"
+    },
     "terms": [
         "barber",
         "conditioner",
@@ -7,9 +11,5 @@
         "shampoo",
         "shaver"
     ],
-    "tags": {
-        "shop": "hairdresser_supply"
-    },
-    "plural": "hairdresser supply stores",
-    "name": "hairdresser supply store"
+    "icon": "hair_dryer"
 }

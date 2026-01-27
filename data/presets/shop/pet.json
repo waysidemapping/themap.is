@@ -1,4 +1,9 @@
 {
+    "name": "pet store",
+    "plural": "pet stores",
+    "tags": {
+        "shop": "pet"
+    },
     "terms": [
         "Pet Shop",
         "animal",
@@ -8,10 +13,5 @@
         "kitten",
         "puppy",
         "reptile"
-    ],
-    "tags": {
-        "shop": "pet"
-    },
-    "plural": "pet stores",
-    "name": "pet store"
+    ]
 }

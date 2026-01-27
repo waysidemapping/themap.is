@@ -1,13 +1,13 @@
 {
-    "icon": "vase",
+    "name": "Pottery Maker",
+    "tags": {
+        "craft": "pottery"
+    },
     "terms": [
         "ceramic",
         "kiln",
         "pot",
         "vase"
     ],
-    "tags": {
-        "craft": "pottery"
-    },
-    "name": "Pottery Maker"
+    "icon": "vase"
 }

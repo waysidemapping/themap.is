@@ -1,17 +1,17 @@
 {
-    "icon": "envelope",
+    "name": "Post Office",
+    "plural": "post offices",
+    "groups": [
+        "mail"
+    ],
+    "tags": {
+        "amenity": "post_office"
+    },
     "terms": [
         "letter",
         "mail",
         "package",
         "parcel"
     ],
-    "tags": {
-        "amenity": "post_office"
-    },
-    "groups": [
-        "mail"
-    ],
-    "plural": "post offices",
-    "name": "Post Office"
+    "icon": "envelope"
 }

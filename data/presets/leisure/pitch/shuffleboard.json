@@ -1,5 +1,6 @@
 {
-    "icon": "shuffleboard",
+    "name": "Shuffleboard Court",
+    "plural": "shuffleboard courts",
     "tags": {
         "leisure": "pitch",
         "sport": "shuffleboard"
@@ -12,6 +13,5 @@
         "deck shuffleboard",
         "floor shuffleboard"
     ],
-    "plural": "shuffleboard courts",
-    "name": "Shuffleboard Court"
+    "icon": "shuffleboard"
 }

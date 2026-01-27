@@ -1,5 +1,13 @@
 {
-    "icon": "donut",
+    "name": "Donut Fast Food",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "donut"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "donut"
+    },
     "terms": [
         "breakfast",
         "brunch",
@@ -15,13 +23,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "fast_food",
-        "cuisine": "donut"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "donut"
-    },
-    "name": "Donut Fast Food"
+    "icon": "donut"
 }

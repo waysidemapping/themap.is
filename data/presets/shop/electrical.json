@@ -1,5 +1,9 @@
 {
-    "icon": "bolt",
+    "name": "electrical equipment store",
+    "plural": "electrical equipment stores",
+    "tags": {
+        "shop": "electrical"
+    },
     "terms": [
         "cable",
         "electric",
@@ -9,9 +13,5 @@
         "power",
         "wire"
     ],
-    "tags": {
-        "shop": "electrical"
-    },
-    "plural": "electrical equipment stores",
-    "name": "electrical equipment store"
+    "icon": "bolt"
 }

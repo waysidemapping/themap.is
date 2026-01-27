@@ -1,5 +1,5 @@
 {
-    "icon": "binoculars",
+    "name": "Bird Hide",
     "tags": {
         "leisure": "bird_hide"
     },
@@ -7,5 +7,5 @@
         "machan",
         "ornithology"
     ],
-    "name": "Bird Hide"
+    "icon": "binoculars"
 }

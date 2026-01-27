@@ -1,12 +1,12 @@
 {
-    "icon": "globe",
+    "name": "Planetarium",
+    "tags": {
+        "amenity": "planetarium"
+    },
     "terms": [
         "astronomy",
         "museum",
         "observatory"
     ],
-    "tags": {
-        "amenity": "planetarium"
-    },
-    "name": "Planetarium"
+    "icon": "globe"
 }

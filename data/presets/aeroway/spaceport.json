@@ -1,11 +1,12 @@
 {
+    "name": "Spaceport",
+    "tags": {
+        "aeroway": "spaceport"
+    },
     "geometry": [
         "area",
         "point"
     ],
-    "tags": {
-        "aeroway": "spaceport"
-    },
     "terms": [
         "cosmodrome",
         "rocket launch center",
@@ -13,6 +14,5 @@
         "rocket launch site",
         "rocket range",
         "space port"
-    ],
-    "name": "Spaceport"
+    ]
 }

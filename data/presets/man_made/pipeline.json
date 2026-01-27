@@ -1,4 +1,8 @@
 {
+    "name": "Pipeline",
+    "tags": {
+        "man_made": "pipeline"
+    },
     "geometry": [
         "line"
     ],
@@ -8,9 +12,5 @@
         "sewage",
         "sewer",
         "water"
-    ],
-    "tags": {
-        "man_made": "pipeline"
-    },
-    "name": "Pipeline"
+    ]
 }

@@ -1,14 +1,14 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Service Road",
     "tags": {
         "highway": "service"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "road",
         "street"
     ],
-    "matchScore": 0.9,
-    "name": "Service Road"
+    "matchScore": 0.9
 }

@@ -1,7 +1,5 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Sidewalk",
     "tags": {
         "highway": "footway",
         "footway": "sidewalk"
@@ -10,9 +8,11 @@
         "key": "footway",
         "value": "sidewalk"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "pavement",
         "sidepath"
-    ],
-    "name": "Sidewalk"
+    ]
 }

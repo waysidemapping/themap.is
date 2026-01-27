@@ -1,5 +1,5 @@
 {
-    "icon": "plug-bolt",
+    "name": "Device Charging Station",
     "tags": {
         "amenity": "device_charging_station"
     },
@@ -8,5 +8,5 @@
         "plug",
         "usb"
     ],
-    "name": "Device Charging Station"
+    "icon": "plug-bolt"
 }

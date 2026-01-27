@@ -1,4 +1,9 @@
 {
+    "name": "thrift store",
+    "plural": "thrift stores",
+    "tags": {
+        "shop": "second_hand"
+    },
     "terms": [
         "Thrift Shop",
         "Consignment Store",
@@ -7,10 +12,5 @@
         "resale",
         "second-hand",
         "used"
-    ],
-    "tags": {
-        "shop": "second_hand"
-    },
-    "plural": "thrift stores",
-    "name": "thrift store"
+    ]
 }

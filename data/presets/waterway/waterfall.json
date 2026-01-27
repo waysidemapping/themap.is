@@ -1,13 +1,13 @@
 {
-    "icon": "waterfall",
+    "name": "Waterfall",
+    "tags": {
+        "waterway": "waterfall"
+    },
     "geometry": [
         "vertex"
     ],
     "terms": [
         "fall"
     ],
-    "tags": {
-        "waterway": "waterfall"
-    },
-    "name": "Waterfall"
+    "icon": "waterfall"
 }

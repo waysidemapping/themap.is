@@ -1,5 +1,8 @@
 {
-    "icon": "banknote-hand",
+    "name": "Money Transfer Station",
+    "tags": {
+        "amenity": "money_transfer"
+    },
     "terms": [
         "bill",
         "cable",
@@ -12,8 +15,5 @@
         "person to person",
         "wire transfer"
     ],
-    "tags": {
-        "amenity": "money_transfer"
-    },
-    "name": "Money Transfer Station"
+    "icon": "banknote-hand"
 }

@@ -1,4 +1,9 @@
 {
+    "name": "Psychotherapist",
+    "plural": "psychotherapists",
+    "tags": {
+        "healthcare": "psychotherapist"
+    },
     "terms": [
         "Clinical Psychologist",
         "anxiety",
@@ -11,10 +16,5 @@
         "suicide",
         "therapist",
         "therapy"
-    ],
-    "tags": {
-        "healthcare": "psychotherapist"
-    },
-    "plural": "psychotherapists",
-    "name": "Psychotherapist"
+    ]
 }

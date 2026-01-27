@@ -1,5 +1,9 @@
 {
-    "icon": "banknote",
+    "name": "Bank",
+    "plural": "banks",
+    "tags": {
+        "amenity": "bank"
+    },
     "terms": [
         "Credit Union",
         "check",
@@ -15,9 +19,5 @@
         "trust",
         "vault"
     ],
-    "tags": {
-        "amenity": "bank"
-    },
-    "plural": "banks",
-    "name": "Bank"
+    "icon": "banknote"
 }

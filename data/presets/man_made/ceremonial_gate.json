@@ -1,4 +1,8 @@
 {
+    "name": "Ceremonial Gate",
+    "tags": {
+        "man_made": "ceremonial_gate"
+    },
     "geometry": [
         "point",
         "vertex",
@@ -10,9 +14,5 @@
         "gate",
         "paifang",
         "torii"
-    ],
-    "tags": {
-        "man_made": "ceremonial_gate"
-    },
-    "name": "Ceremonial Gate"
+    ]
 }

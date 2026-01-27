@@ -1,12 +1,12 @@
 {
-    "icon": "shelter",
+    "name": "Shelter",
+    "tags": {
+        "amenity": "shelter"
+    },
     "terms": [
         "gazebo",
         "lean-to",
         "picnic"
     ],
-    "tags": {
-        "amenity": "shelter"
-    },
-    "name": "Shelter"
+    "icon": "shelter"
 }

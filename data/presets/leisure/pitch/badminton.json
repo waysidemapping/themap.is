@@ -1,5 +1,6 @@
 {
-    "icon": "tennis_player",
+    "name": "Badminton Court",
+    "plural": "badminton court",
     "tags": {
         "leisure": "pitch",
         "sport": "badminton"
@@ -11,6 +12,5 @@
     "terms": [
         "badminton net"
     ],
-    "plural": "badminton court",
-    "name": "Badminton Court"
+    "icon": "tennis_player"
 }

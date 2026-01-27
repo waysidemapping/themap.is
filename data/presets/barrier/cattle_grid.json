@@ -1,11 +1,11 @@
 {
-    "icon": "cattle_grid",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Cattle Grid",
     "tags": {
         "barrier": "cattle_grid"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "cattle guard",
         "cattle stop",
@@ -16,5 +16,5 @@
         "texas gate",
         "vehicle pass"
     ],
-    "name": "Cattle Grid"
+    "icon": "cattle_grid"
 }

@@ -1,4 +1,13 @@
 {
+    "name": "Turkish Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "turkish"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "turkish"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -13,14 +22,5 @@
         "grill",
         "lunch",
         "table"
-    ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "turkish"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "turkish"
-    },
-    "name": "Turkish Restaurant"
+    ]
 }

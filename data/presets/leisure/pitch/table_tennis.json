@@ -1,4 +1,6 @@
 {
+    "name": "Ping Pong Table",
+    "plural": "ping pong tables",
     "tags": {
         "leisure": "pitch",
         "sport": "table_tennis"
@@ -10,7 +12,5 @@
     "terms": [
         "ping pong",
         "table tennis"
-    ],
-    "plural": "ping pong tables",
-    "name": "Ping Pong Table"
+    ]
 }

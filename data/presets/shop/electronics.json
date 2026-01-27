@@ -1,5 +1,9 @@
 {
-    "icon": "laptop",
+    "name": "electronics store",
+    "plural": "electronics stores",
+    "tags": {
+        "shop": "electronics"
+    },
     "terms": [
         "appliance",
         "audio",
@@ -13,9 +17,5 @@
         "tv",
         "video"
     ],
-    "tags": {
-        "shop": "electronics"
-    },
-    "plural": "electronics stores",
-    "name": "electronics store"
+    "icon": "laptop"
 }

@@ -1,12 +1,12 @@
 {
+    "name": "School Grounds",
+    "tags": {
+        "education": "school"
+    },
     "terms": [
         "academy",
         "elementary school",
         "high school",
         "middle school"
-    ],
-    "tags": {
-        "education": "school"
-    },
-    "name": "School Grounds"
+    ]
 }

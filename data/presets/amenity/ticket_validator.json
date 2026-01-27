@@ -1,5 +1,5 @@
 {
-    "icon": "vending-ticket",
+    "name": "Ticket Validator",
     "tags": {
         "amenity": "ticket_validator"
     },
@@ -11,5 +11,5 @@
         "ticket",
         "validator"
     ],
-    "name": "Ticket Validator"
+    "icon": "vending-ticket"
 }

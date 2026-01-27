@@ -1,11 +1,11 @@
 {
     "name": "Motorway Link",
-    "geometry": [
-        "line"
-    ],
     "tags": {
         "highway": "motorway_link"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "exit",
         "off ramp",

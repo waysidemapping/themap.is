@@ -1,10 +1,10 @@
 {
-    "geometry": [
-        "point",
-        "vertex"
-    ],
+    "name": "Block",
     "tags": {
         "barrier": "block"
     },
-    "name": "Block"
+    "geometry": [
+        "point",
+        "vertex"
+    ]
 }

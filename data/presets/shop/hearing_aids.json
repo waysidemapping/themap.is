@@ -1,8 +1,8 @@
 {
-    "icon": "ear-hearing_aid",
+    "name": "hearing aid store",
+    "plural": "hearing aid stores",
     "tags": {
         "shop": "hearing_aids"
     },
-    "plural": "hearing aid stores",
-    "name": "hearing aid store"
+    "icon": "ear-hearing_aid"
 }

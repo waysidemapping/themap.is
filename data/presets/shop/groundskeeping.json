@@ -1,4 +1,9 @@
 {
+    "name": "lawn and garden equipment store",
+    "plural": "lawn and garden equipment stores",
+    "tags": {
+        "shop": "groundskeeping"
+    },
     "terms": [
         "chainsaw",
         "cultivator",
@@ -7,10 +12,5 @@
         "groundskeeping",
         "mower, string trimmer",
         "snow blower"
-    ],
-    "tags": {
-        "shop": "groundskeeping"
-    },
-    "plural": "lawn and garden equipment stores",
-    "name": "lawn and garden equipment store"
+    ]
 }

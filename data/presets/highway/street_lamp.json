@@ -1,12 +1,16 @@
 {
-    "icon": "street_lamp_arm",
-    "geometry": [
-        "point",
-        "vertex"
+    "name": "Street Lamp",
+    "plural": "street lamps",
+    "groups": [
+        "street_furniture"
     ],
     "tags": {
         "highway": "street_lamp"
     },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
     "terms": [
         "gaslight",
         "lamp",
@@ -14,9 +18,5 @@
         "street light",
         "streetlight"
     ],
-    "groups": [
-        "street_furniture"
-    ],
-    "plural": "street lamps",
-    "name": "Street Lamp"
+    "icon": "street_lamp_arm"
 }

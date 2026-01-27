@@ -1,10 +1,10 @@
 {
-    "icon": "cable",
-    "geometry": [
-        "line"
-    ],
+    "name": "Power Cable",
     "tags": {
         "power": "cable"
     },
-    "name": "Power Cable"
+    "geometry": [
+        "line"
+    ],
+    "icon": "cable"
 }

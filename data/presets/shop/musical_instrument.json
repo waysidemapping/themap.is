@@ -1,4 +1,9 @@
 {
+    "name": "musical instrument store",
+    "plural": "musical instrument stores",
+    "tags": {
+        "shop": "musical_instrument"
+    },
     "terms": [
         "accordion",
         "brass instruments",
@@ -13,10 +18,5 @@
         "saxophone",
         "trumpet",
         "violin"
-    ],
-    "tags": {
-        "shop": "musical_instrument"
-    },
-    "plural": "musical instrument stores",
-    "name": "musical instrument store"
+    ]
 }

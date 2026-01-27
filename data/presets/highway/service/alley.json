@@ -1,7 +1,5 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Alley",
     "tags": {
         "highway": "service",
         "service": "alley"
@@ -10,5 +8,7 @@
         "key": "service",
         "value": "alley"
     },
-    "name": "Alley"
+    "geometry": [
+        "line"
+    ]
 }

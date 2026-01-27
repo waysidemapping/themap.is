@@ -1,14 +1,14 @@
 {
-    "icon": "bbq-steam",
+    "name": "barbecue store",
+    "plural": "barbecue stores",
+    "tags": {
+        "shop": "bbq"
+    },
     "terms": [
         "barbecue",
         "barbeque",
         "bbq",
         "grill"
     ],
-    "tags": {
-        "shop": "bbq"
-    },
-    "plural": "barbecue stores",
-    "name": "barbecue store"
+    "icon": "bbq-steam"
 }

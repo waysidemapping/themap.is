@@ -1,14 +1,14 @@
 {
-    "icon": "grass-water",
-    "geometry": [
-        "point",
-        "area"
+    "name": "Wetland",
+    "groups": [
+        "water"
     ],
     "tags": {
         "natural": "wetland"
     },
-    "groups": [
-        "water"
+    "geometry": [
+        "point",
+        "area"
     ],
     "terms": [
         "bog",
@@ -25,5 +25,5 @@
         "tidalflat",
         "wet meadow"
     ],
-    "name": "Wetland"
+    "icon": "grass-water"
 }

@@ -1,13 +1,13 @@
 {
-    "icon": "curtains",
+    "name": "curtain store",
+    "plural": "curtain stores",
+    "tags": {
+        "shop": "curtain"
+    },
     "terms": [
         "drape",
         "drapery",
         "window"
     ],
-    "tags": {
-        "shop": "curtain"
-    },
-    "plural": "curtain stores",
-    "name": "curtain store"
+    "icon": "curtains"
 }

@@ -1,5 +1,8 @@
 {
-    "icon": "antenna",
+    "name": "Internet Cafe",
+    "tags": {
+        "amenity": "internet_cafe"
+    },
     "terms": [
         "cafe",
         "coffee",
@@ -9,8 +12,5 @@
         "taxiphone",
         "teleboutique"
     ],
-    "tags": {
-        "amenity": "internet_cafe"
-    },
-    "name": "Internet Cafe"
+    "icon": "antenna"
 }

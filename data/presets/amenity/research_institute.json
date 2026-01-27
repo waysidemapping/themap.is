@@ -1,4 +1,8 @@
 {
+    "name": "Research Institute Grounds",
+    "tags": {
+        "amenity": "research_institute"
+    },
     "terms": [
         "applied research",
         "experimentation",
@@ -9,9 +13,5 @@
         "research institution",
         "research laboratory",
         "research labs"
-    ],
-    "tags": {
-        "amenity": "research_institute"
-    },
-    "name": "Research Institute Grounds"
+    ]
 }

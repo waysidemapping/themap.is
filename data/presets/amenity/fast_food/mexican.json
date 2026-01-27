@@ -1,4 +1,13 @@
 {
+    "name": "Mexican Fast Food",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "mexican"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "mexican"
+    },
     "terms": [
         "breakfast",
         "burritos",
@@ -18,14 +27,5 @@
         "tacos",
         "tamales",
         "tortillas"
-    ],
-    "tags": {
-        "amenity": "fast_food",
-        "cuisine": "mexican"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "mexican"
-    },
-    "name": "Mexican Fast Food"
+    ]
 }

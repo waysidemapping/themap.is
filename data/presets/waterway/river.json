@@ -1,4 +1,8 @@
 {
+    "name": "River",
+    "tags": {
+        "waterway": "river"
+    },
     "geometry": [
         "line"
     ],
@@ -16,9 +20,5 @@
         "stream",
         "tributary",
         "watercourse"
-    ],
-    "tags": {
-        "waterway": "river"
-    },
-    "name": "River"
+    ]
 }

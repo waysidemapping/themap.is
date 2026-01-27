@@ -1,13 +1,13 @@
 {
-    "icon": "cable",
+    "name": "Telecom Feature",
+    "tags": {
+        "telecom": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
     ],
-    "tags": {
-        "telecom": "*"
-    },
-    "name": "Telecom Feature"
+    "icon": "cable"
 }

@@ -1,7 +1,5 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Pond",
     "tags": {
         "natural": "water",
         "water": "pond"
@@ -10,12 +8,14 @@
         "key": "water",
         "value": "pond"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "lakelet",
         "mere",
         "millpond",
         "pool",
         "tarn"
-    ],
-    "name": "Pond"
+    ]
 }

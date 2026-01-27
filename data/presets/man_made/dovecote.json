@@ -1,4 +1,8 @@
 {
+    "name": "Dovecote",
+    "tags": {
+        "man_made": "dovecote"
+    },
     "geometry": [
         "area",
         "point"
@@ -10,9 +14,5 @@
         "doves",
         "pigeonholes",
         "pigeons"
-    ],
-    "tags": {
-        "man_made": "dovecote"
-    },
-    "name": "Dovecote"
+    ]
 }

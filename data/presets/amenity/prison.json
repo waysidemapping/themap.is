@@ -1,13 +1,13 @@
 {
-    "icon": "door_jail",
+    "name": "Prison",
+    "plural": "prisons",
+    "tags": {
+        "amenity": "prison"
+    },
     "terms": [
         "cell",
         "correction",
         "jail"
     ],
-    "tags": {
-        "amenity": "prison"
-    },
-    "plural": "prisons",
-    "name": "Prison"
+    "icon": "door_jail"
 }

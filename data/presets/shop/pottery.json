@@ -1,13 +1,13 @@
 {
-    "icon": "vase",
+    "name": "pottery store",
+    "plural": "pottery stores",
+    "tags": {
+        "shop": "pottery"
+    },
     "terms": [
         "ceramic",
         "pot",
         "vase"
     ],
-    "tags": {
-        "shop": "pottery"
-    },
-    "plural": "pottery stores",
-    "name": "pottery store"
+    "icon": "vase"
 }

@@ -1,5 +1,13 @@
 {
-    "icon": "box",
+    "name": "Free Box",
+    "plural": "free boxes",
+    "groups": [
+        "free_stuff",
+        "street_furniture"
+    ],
+    "tags": {
+        "amenity": "give_box"
+    },
     "terms": [
         "Give Box",
         "donations",
@@ -10,13 +18,5 @@
         "library",
         "share shelf"
     ],
-    "tags": {
-        "amenity": "give_box"
-    },
-    "groups": [
-        "free_stuff",
-        "street_furniture"
-    ],
-    "plural": "free boxes",
-    "name": "Free Box"
+    "icon": "box"
 }

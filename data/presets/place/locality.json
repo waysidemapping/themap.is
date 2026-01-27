@@ -1,7 +1,7 @@
 {
-    "icon": "triangle_up_stroked",
+    "name": "Locality",
     "tags": {
         "place": "locality"
     },
-    "name": "Locality"
+    "icon": "triangle_up_stroked"
 }

@@ -1,7 +1,7 @@
 {
-    "icon": "barn-silo",
+    "name": "Farm",
     "tags": {
         "place": "farm"
     },
-    "name": "Farm"
+    "icon": "barn-silo"
 }

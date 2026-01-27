@@ -1,8 +1,8 @@
 {
-    "icon": "building_round-flag",
+    "name": "Stadium",
+    "plural": "stadiums",
     "tags": {
         "leisure": "stadium"
     },
-    "plural": "stadiums",
-    "name": "Stadium"
+    "icon": "building_round-flag"
 }

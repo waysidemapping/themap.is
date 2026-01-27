@@ -1,9 +1,5 @@
 {
-    "icon": "sikhism",
-    "terms": [
-        "gurudwara",
-        "temple"
-    ],
+    "name": "Sikh Temple",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "sikh"
@@ -12,5 +8,9 @@
         "key": "amenity",
         "value": "place_of_worship"
     },
-    "name": "Sikh Temple"
+    "terms": [
+        "gurudwara",
+        "temple"
+    ],
+    "icon": "sikhism"
 }

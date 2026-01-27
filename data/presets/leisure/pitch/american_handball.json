@@ -1,5 +1,6 @@
 {
-    "icon": "wall",
+    "name": "American Handball Court",
+    "plural": "American handball courts",
     "tags": {
         "leisure": "pitch",
         "sport": "american_handball"
@@ -12,6 +13,5 @@
         "handball",
         "wallball"
     ],
-    "plural": "American handball courts",
-    "name": "American Handball Court"
+    "icon": "wall"
 }

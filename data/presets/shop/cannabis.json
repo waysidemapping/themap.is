@@ -1,4 +1,9 @@
 {
+    "name": "cannabis shop",
+    "plural": "cannabis shops",
+    "tags": {
+        "shop": "cannabis"
+    },
     "terms": [
         "420",
         "cannabis dispensary",
@@ -6,10 +11,5 @@
         "pot",
         "reefer",
         "weed"
-    ],
-    "tags": {
-        "shop": "cannabis"
-    },
-    "plural": "cannabis shops",
-    "name": "cannabis shop"
+    ]
 }

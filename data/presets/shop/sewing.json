@@ -1,11 +1,11 @@
 {
-    "icon": "needle-spool",
-    "terms": [
-        "haberdashery"
-    ],
+    "name": "sewing store",
+    "plural": "sewing stores",
     "tags": {
         "shop": "sewing"
     },
-    "plural": "sewing stores",
-    "name": "sewing store"
+    "terms": [
+        "haberdashery"
+    ],
+    "icon": "needle-spool"
 }

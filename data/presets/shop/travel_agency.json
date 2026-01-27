@@ -1,4 +1,6 @@
 {
+    "name": "travel agency",
+    "plural": "travel agencies",
     "tags": {
         "shop": "travel_agency"
     },
@@ -8,7 +10,5 @@
         "hotels",
         "tickets",
         "travel packages"
-    ],
-    "plural": "travel agencies",
-    "name": "travel agency"
+    ]
 }

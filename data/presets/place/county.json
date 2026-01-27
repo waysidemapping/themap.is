@@ -1,7 +1,7 @@
 {
-    "icon": "triangle_up_stroked",
+    "name": "County",
     "tags": {
         "place": "county"
     },
-    "name": "County"
+    "icon": "triangle_up_stroked"
 }

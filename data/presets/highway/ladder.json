@@ -1,14 +1,14 @@
 {
-    "icon": "crossing_markings_ladder",
+    "name": "Ladder",
+    "tags": {
+        "highway": "ladder"
+    },
     "geometry": [
         "vertex",
         "line"
     ],
-    "tags": {
-        "highway": "ladder"
-    },
     "terms": [
         "ladder"
     ],
-    "name": "Ladder"
+    "icon": "crossing_markings_ladder"
 }

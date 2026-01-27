@@ -1,5 +1,10 @@
 {
-    "icon": "envelope-slot",
+    "name": "Mail Drop Box",
+    "plural": "mail drop boxes",
+    "groups": [
+        "mail",
+        "street_furniture"
+    ],
     "tags": {
         "amenity": "post_box"
     },
@@ -19,10 +24,5 @@
         "postal box",
         "postbox"
     ],
-    "groups": [
-        "mail",
-        "street_furniture"
-    ],
-    "plural": "mail drop boxes",
-    "name": "Mail Drop Box"
+    "icon": "envelope-slot"
 }

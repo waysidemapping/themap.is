@@ -1,5 +1,5 @@
 {
-    "icon": "sleeper",
+    "name": "Resort",
     "tags": {
         "leisure": "resort"
     },
@@ -10,5 +10,5 @@
         "vacation resort",
         "winter sports resort"
     ],
-    "name": "Resort"
+    "icon": "sleeper"
 }

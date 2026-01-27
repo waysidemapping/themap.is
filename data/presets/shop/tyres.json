@@ -1,8 +1,8 @@
 {
-    "icon": "tire",
+    "name": "tire store",
+    "plural": "tire stores",
     "tags": {
         "shop": "tyres"
     },
-    "plural": "tire stores",
-    "name": "tire store"
+    "icon": "tire"
 }

@@ -1,12 +1,12 @@
 {
-    "icon": "window",
+    "name": "Glaziery",
+    "tags": {
+        "craft": "glaziery"
+    },
     "terms": [
         "glass",
         "stained-glass",
         "window"
     ],
-    "tags": {
-        "craft": "glaziery"
-    },
-    "name": "Glaziery"
+    "icon": "window"
 }

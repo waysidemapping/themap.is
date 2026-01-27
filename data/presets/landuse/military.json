@@ -1,5 +1,5 @@
 {
-    "icon": "medal-star",
+    "name": "Military Area",
     "tags": {
         "landuse": "military"
     },
@@ -13,6 +13,6 @@
         "navy",
         "security"
     ],
-    "matchScore": 0.9,
-    "name": "Military Area"
+    "icon": "medal-star",
+    "matchScore": 0.9
 }

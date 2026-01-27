@@ -1,5 +1,8 @@
 {
-    "icon": "chimney",
+    "name": "Gas Flare",
+    "tags": {
+        "man_made": "flare"
+    },
     "geometry": [
         "point",
         "vertex"
@@ -11,8 +14,5 @@
         "gas",
         "oil"
     ],
-    "tags": {
-        "man_made": "flare"
-    },
-    "name": "Gas Flare"
+    "icon": "chimney"
 }

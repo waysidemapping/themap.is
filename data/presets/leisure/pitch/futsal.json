@@ -1,5 +1,6 @@
 {
-    "icon": "soccer_player",
+    "name": "Futsal Court",
+    "plural": "futsal courts",
     "tags": {
         "leisure": "pitch",
         "sport": "futsal"
@@ -12,6 +13,5 @@
         "five-a-side soccer",
         "minifootball"
     ],
-    "plural": "futsal courts",
-    "name": "Futsal Court"
+    "icon": "soccer_player"
 }

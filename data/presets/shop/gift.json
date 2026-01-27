@@ -1,13 +1,13 @@
 {
-    "icon": "present",
+    "name": "gift shop",
+    "plural": "gift shops",
+    "tags": {
+        "shop": "gift"
+    },
     "terms": [
         "Souvenir Shop",
         "present",
         "tourist trap"
     ],
-    "tags": {
-        "shop": "gift"
-    },
-    "plural": "gift shops",
-    "name": "gift shop"
+    "icon": "present"
 }

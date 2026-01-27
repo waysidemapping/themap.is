@@ -1,11 +1,11 @@
 {
-    "icon": "square_academic_cap",
+    "name": "College Grounds",
+    "tags": {
+        "education": "college"
+    },
     "terms": [
         "undergraduate school",
         "university"
     ],
-    "tags": {
-        "education": "college"
-    },
-    "name": "College Grounds"
+    "icon": "square_academic_cap"
 }

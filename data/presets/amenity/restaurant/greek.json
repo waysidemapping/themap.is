@@ -1,4 +1,13 @@
 {
+    "name": "Greek Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "greek"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "greek"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -16,14 +25,5 @@
         "olives",
         "pitas",
         "table"
-    ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "greek"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "greek"
-    },
-    "name": "Greek Restaurant"
+    ]
 }

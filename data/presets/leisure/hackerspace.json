@@ -1,13 +1,13 @@
 {
-    "icon": "laptop",
+    "name": "Hackerspace",
+    "plural": "hackerspaces",
+    "tags": {
+        "leisure": "hackerspace"
+    },
     "terms": [
         "hacklab",
         "hackspace",
         "makerspace"
     ],
-    "tags": {
-        "leisure": "hackerspace"
-    },
-    "plural": "hackerspaces",
-    "name": "Hackerspace"
+    "icon": "laptop"
 }

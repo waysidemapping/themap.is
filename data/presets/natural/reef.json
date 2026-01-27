@@ -1,12 +1,12 @@
 {
-    "icon": "coral-angelfish",
+    "name": "Reef",
+    "tags": {
+        "natural": "reef"
+    },
     "geometry": [
         "area",
         "point"
     ],
-    "tags": {
-        "natural": "reef"
-    },
     "terms": [
         "barrier",
         "coral",
@@ -14,5 +14,5 @@
         "sand",
         "shoal"
     ],
-    "name": "Reef"
+    "icon": "coral-angelfish"
 }

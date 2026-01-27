@@ -1,5 +1,9 @@
 {
-    "icon": "phone",
+    "name": "telecom store",
+    "plural": "telecom stores",
+    "tags": {
+        "shop": "telecommunication"
+    },
     "terms": [
         "communication",
         "internet service provider",
@@ -8,9 +12,5 @@
         "telephone",
         "voice"
     ],
-    "tags": {
-        "shop": "telecommunication"
-    },
-    "plural": "telecom stores",
-    "name": "telecom store"
+    "icon": "phone"
 }

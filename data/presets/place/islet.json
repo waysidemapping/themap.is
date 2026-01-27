@@ -1,5 +1,8 @@
 {
-    "icon": "hill-tree-water",
+    "name": "Islet",
+    "tags": {
+        "place": "islet"
+    },
     "terms": [
         "archipelago",
         "atoll",
@@ -10,8 +13,5 @@
         "key",
         "reef"
     ],
-    "tags": {
-        "place": "islet"
-    },
-    "name": "Islet"
+    "icon": "hill-tree-water"
 }

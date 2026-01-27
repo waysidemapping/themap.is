@@ -1,10 +1,10 @@
 {
-    "icon": "triangle_up_stroked",
+    "name": "Neighborhood",
     "tags": {
         "place": "neighbourhood"
     },
     "terms": [
         "neighbourhood"
     ],
-    "name": "Neighborhood"
+    "icon": "triangle_up_stroked"
 }

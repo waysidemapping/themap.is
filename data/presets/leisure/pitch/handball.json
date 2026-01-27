@@ -1,4 +1,6 @@
 {
+    "name": "Team Handball Court",
+    "plural": "team handball courts",
     "tags": {
         "leisure": "pitch",
         "sport": "handball"
@@ -9,7 +11,5 @@
     },
     "terms": [
         "handball"
-    ],
-    "plural": "team handball courts",
-    "name": "Team Handball Court"
+    ]
 }

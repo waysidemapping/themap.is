@@ -1,11 +1,11 @@
 {
-    "icon": "spike_strip",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Spike Strip",
     "tags": {
         "barrier": "spikes"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "one-way traffic treadles",
         "stingers",
@@ -14,6 +14,6 @@
         "tire shredders",
         "traffic spikes"
     ],
-    "name": "Spike Strip",
+    "icon": "spike_strip",
     "matchScore": 0.5
 }

@@ -1,12 +1,12 @@
 {
-    "icon": "bench",
+    "name": "Bench",
+    "plural": "benches",
+    "tags": {
+        "amenity": "bench"
+    },
     "terms": [
         "chair",
         "seat"
     ],
-    "tags": {
-        "amenity": "bench"
-    },
-    "plural": "benches",
-    "name": "Bench"
+    "icon": "bench"
 }

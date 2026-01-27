@@ -1,13 +1,13 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Minor / Unclassified Road",
     "tags": {
         "highway": "unclassified"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "road",
         "street"
-    ],
-    "name": "Minor / Unclassified Road"
+    ]
 }

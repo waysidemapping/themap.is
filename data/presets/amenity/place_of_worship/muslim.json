@@ -1,10 +1,5 @@
 {
-    "icon": "islam",
-    "terms": [
-        "islam",
-        "islamic center",
-        "muslim"
-    ],
+    "name": "Muslim Mosque",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "muslim"
@@ -13,5 +8,10 @@
         "key": "amenity",
         "value": "place_of_worship"
     },
-    "name": "Muslim Mosque"
+    "terms": [
+        "islam",
+        "islamic center",
+        "muslim"
+    ],
+    "icon": "islam"
 }

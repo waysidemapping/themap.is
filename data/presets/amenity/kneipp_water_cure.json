@@ -1,5 +1,5 @@
 {
-    "icon": "plus",
+    "name": "Kneipp Facility",
     "tags": {
         "amenity": "kneipp_water_cure"
     },
@@ -11,5 +11,5 @@
         "kneipp hydrotherapy",
         "kneippism"
     ],
-    "name": "Kneipp Facility"
+    "icon": "plus"
 }

@@ -1,4 +1,9 @@
 {
+    "name": "Hospital",
+    "plural": "hospitals",
+    "tags": {
+        "healthcare": "hospital"
+    },
     "terms": [
         "clinic",
         "doctor",
@@ -11,10 +16,5 @@
         "sick",
         "surgery",
         "ward"
-    ],
-    "tags": {
-        "healthcare": "hospital"
-    },
-    "plural": "hospitals",
-    "name": "Hospital"
+    ]
 }

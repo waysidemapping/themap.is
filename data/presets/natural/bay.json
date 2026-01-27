@@ -1,14 +1,15 @@
 {
-    "geometry": [
-        "point",
-        "line",
-        "area"
+    "name": "Bay",
+    "groups": [
+        "water"
     ],
     "tags": {
         "natural": "bay"
     },
-    "groups": [
-        "water"
+    "geometry": [
+        "point",
+        "line",
+        "area"
     ],
     "terms": [
         "bight",
@@ -19,6 +20,5 @@
         "inlet",
         "sea",
         "sound"
-    ],
-    "name": "Bay"
+    ]
 }

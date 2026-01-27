@@ -1,12 +1,12 @@
 {
+    "name": "dairy shop",
+    "plural": "dairy shops",
+    "tags": {
+        "shop": "dairy"
+    },
     "terms": [
         "cheese",
         "egg",
         "milk"
-    ],
-    "tags": {
-        "shop": "dairy"
-    },
-    "plural": "dairy shops",
-    "name": "dairy shop"
+    ]
 }

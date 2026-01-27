@@ -1,7 +1,5 @@
 {
-    "geometry": [
-        "area"
-    ],
+    "name": "Stream Area",
     "tags": {
         "natural": "water",
         "water": "stream"
@@ -10,6 +8,9 @@
         "key": "water",
         "value": "stream"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "beck",
         "branch",
@@ -36,6 +37,5 @@
         "torrent",
         "tributary",
         "watercourse"
-    ],
-    "name": "Stream Area"
+    ]
 }

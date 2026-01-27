@@ -1,10 +1,10 @@
 {
-    "icon": "golf_green",
-    "geometry": [
-        "line"
-    ],
+    "name": "Golf Hole",
     "tags": {
         "golf": "hole"
     },
-    "name": "Golf Hole"
+    "geometry": [
+        "line"
+    ],
+    "icon": "golf_green"
 }

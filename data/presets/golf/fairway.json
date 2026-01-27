@@ -1,10 +1,10 @@
 {
-    "icon": "golfer",
-    "geometry": [
-        "area"
-    ],
+    "name": "Fairway",
     "tags": {
         "golf": "fairway"
     },
-    "name": "Fairway"
+    "geometry": [
+        "area"
+    ],
+    "icon": "golfer"
 }

@@ -1,5 +1,6 @@
 {
-    "icon": "basketball_in_net",
+    "name": "Basketball Court",
+    "plural": "basketball courts",
     "tags": {
         "leisure": "pitch",
         "sport": "basketball"
@@ -11,6 +12,5 @@
     "terms": [
         "basketball hoops"
     ],
-    "plural": "basketball courts",
-    "name": "Basketball Court"
+    "icon": "basketball_in_net"
 }

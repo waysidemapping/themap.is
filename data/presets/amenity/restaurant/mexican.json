@@ -1,4 +1,13 @@
 {
+    "name": "Mexican Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "mexican"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "mexican"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -19,14 +28,5 @@
         "tacos",
         "tamales",
         "tortillas"
-    ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "mexican"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "mexican"
-    },
-    "name": "Mexican Restaurant"
+    ]
 }

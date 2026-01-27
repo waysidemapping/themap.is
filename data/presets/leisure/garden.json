@@ -1,5 +1,5 @@
 {
-    "icon": "plant-gardenbed",
+    "name": "Garden",
     "tags": {
         "leisure": "garden"
     },
@@ -10,5 +10,5 @@
         "plants",
         "vegetables"
     ],
-    "name": "Garden"
+    "icon": "plant-gardenbed"
 }

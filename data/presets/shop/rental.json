@@ -1,7 +1,7 @@
 {
+    "name": "rental store",
+    "plural": "rental stores",
     "tags": {
         "shop": "rental"
-    },
-    "plural": "rental stores",
-    "name": "rental store"
+    }
 }

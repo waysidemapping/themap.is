@@ -1,13 +1,13 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Residential Road",
     "tags": {
         "highway": "residential"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "road",
         "street"
-    ],
-    "name": "Residential Road"
+    ]
 }

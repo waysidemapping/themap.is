@@ -1,4 +1,6 @@
 {
+    "name": "Four Square Court",
+    "plural": "four square courts",
     "tags": {
         "leisure": "pitch",
         "sport": "four_square"
@@ -9,7 +11,5 @@
     },
     "terms": [
         "4 square"
-    ],
-    "plural": "four square courts",
-    "name": "Four Square Court"
+    ]
 }

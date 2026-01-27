@@ -1,5 +1,8 @@
 {
-    "icon": "antenna",
+    "name": "Antenna",
+    "tags": {
+        "man_made": "antenna"
+    },
     "geometry": [
         "point"
     ],
@@ -14,8 +17,5 @@
         "transmission",
         "tv"
     ],
-    "tags": {
-        "man_made": "antenna"
-    },
-    "name": "Antenna"
+    "icon": "antenna"
 }

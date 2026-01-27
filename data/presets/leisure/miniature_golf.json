@@ -1,17 +1,17 @@
 {
-    "icon": "golfer-windmill",
+    "name": "Miniature Golf Course",
+    "plural": "mini golf courses",
+    "groups": [
+        "amusement"
+    ],
+    "tags": {
+        "leisure": "miniature_golf"
+    },
     "terms": [
         "crazy golf",
         "mini golf",
         "miniature golf",
         "putt-putt"
     ],
-    "tags": {
-        "leisure": "miniature_golf"
-    },
-    "groups": [
-        "amusement"
-    ],
-    "plural": "mini golf courses",
-    "name": "Miniature Golf Course"
+    "icon": "golfer-windmill"
 }

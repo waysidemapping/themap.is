@@ -1,15 +1,15 @@
 {
-    "icon": "signals_three",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Traffic Signals",
     "tags": {
         "highway": "traffic_signals"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "light",
         "stoplight",
         "traffic light"
     ],
-    "name": "Traffic Signals"
+    "icon": "signals_three"
 }

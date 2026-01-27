@@ -1,9 +1,9 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Living Street",
     "tags": {
         "highway": "living_street"
     },
-    "name": "Living Street"
+    "geometry": [
+        "line"
+    ]
 }

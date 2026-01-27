@@ -1,4 +1,8 @@
 {
+    "name": "Road Area",
+    "tags": {
+        "area:highway": "*"
+    },
     "geometry": [
         "area"
     ],
@@ -10,9 +14,5 @@
         "pavement",
         "road shape",
         "street area"
-    ],
-    "tags": {
-        "area:highway": "*"
-    },
-    "name": "Road Area"
+    ]
 }

@@ -1,5 +1,6 @@
 {
-    "icon": "portrait-frame",
+    "name": "framing shop",
+    "plural": "framing shops",
     "tags": {
         "shop": "frame"
     },
@@ -9,6 +10,5 @@
         "painting",
         "photograph"
     ],
-    "plural": "framing shops",
-    "name": "framing shop"
+    "icon": "portrait-frame"
 }

@@ -1,13 +1,13 @@
 {
-    "icon": "droplet",
-    "geometry": [
-        "area"
-    ],
+    "name": "Water",
     "groups": [
         "water"
     ],
     "tags": {
         "natural": "water"
     },
-    "name": "Water"
+    "geometry": [
+        "area"
+    ],
+    "icon": "droplet"
 }

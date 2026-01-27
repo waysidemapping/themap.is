@@ -1,5 +1,5 @@
 {
-    "icon": "disc_golf_basket",
+    "name": "Disc Golf Course",
     "tags": {
         "leisure": "disc_golf_course"
     },
@@ -10,5 +10,5 @@
         "frolf",
         "ultimate"
     ],
-    "name": "Disc Golf Course"
+    "icon": "disc_golf_basket"
 }

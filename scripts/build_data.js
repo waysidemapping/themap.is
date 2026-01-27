@@ -1,70 +1,85 @@
 import fs from "fs";
 import path from "path";
 
-const presets = {};
+const presetsById = {};
+const allGroups = {};
 
 const allowedKeys = {
   "name":{required: true},
-  "autoTheme": {},
   "plural":{},
-  "tags":{required: true},
-  "geometry":{required: true},
-  "icon":{},
   "groups":{},
+  "autoTheme": {},
+  "tags":{required: true},
+  "reference":{},
+  "geometry":{},
   "terms":{},
-  "matchScore":{},
-  "reference":{}
+  "icon":{},
+  "matchScore":{}
 };
 
-const allGroups = {};
+function readPreset(id, json) {
+  if (json.groups) {
+    json.groups.forEach(group => allGroups[group] = true);
+  }
+  presetsById[id] = json;
+}
 
-function processPreset(id, json) {
+function checkPreset(id, json) {
   for (let key in json){
     if (!allowedKeys[key]) {
-      console.log(`Unexpected key ${key} for ${id}`);
+      console.log(`🛑 Unexpected key ${key} for ${id}`);
+      return false;
     }
   }
 
   for (let key in allowedKeys){
-    if (allowedKeys.required && !json[key]) {
-      console.log(`Missing required key ${key} for ${id}`);
+    if (allowedKeys[key].required && !json[key]) {
+      console.log(`🛑 Missing required key ${key} for ${id}`);
+      return false;
     }
   }
 
   if (json.icon) {
     if (!fs.existsSync(`icons/${json.icon}.svg`)) {
-      console.log(`Missing icon file "${json.icon}.svg" for ${id}`)
+      console.log(`🛑 Missing icon file "${json.icon}.svg" for ${id}`)
+      return false;
     }
   }
-
-  if (json.groups) {
-    json.groups.forEach(group => allGroups[group] = true);
-  }
-
-  // not needed at the moment
-  delete json.terms;
 
   if (id.includes("/")) {
     let parentId = id.substring(0, id.lastIndexOf("/"));
 
-    let parent = presets[parentId];
+    let parent = presetsById[parentId];
     if (!parent) {
-      console.error(`Missing parent preset for ${id}`);
+      console.error(`🛑 Missing parent preset for ${id}`);
     } else {
       for (let key in parent.tags) {
         if (!json.tags[key] || (parent.tags[key] !== '*' && parent.tags[key] !== json.tags[key])) {
-          console.error(`Unexpected tags for ${id} with parent ${parentId}`);
+          console.error(`🛑 Unexpected tags for ${id} with parent ${parentId}`);
+          return false;
         }
       }
     }
 
     let parentIdParts = parentId.split('/');
-    json.parents = parentIdParts.map((_, i) => parentIdParts.slice(0, i + 1).join('/')).toReversed();
+    let parentIds = parentIdParts.map((_, i) => parentIdParts.slice(0, i + 1).join('/')).toReversed();
 
-    let parentIcon = json.parents.map(id => presets[id].icon).find(icon => icon);
+    let parentIcon = parentIds.map(id => presetsById[id].icon).find(icon => icon);
     if (json.icon && parentIcon && parentIcon === json.icon) {
-      console.log(`Redundant icon ${json.icon} for ${id}`);
+      console.log(`🛑 Redundant icon ${json.icon} for ${id}`);
+      return false;
     }
+  }
+
+  return true;
+}
+
+function addDerivedDataToPreset(id, json) {
+  if (id.includes("/")) {
+    let parentId = id.substring(0, id.lastIndexOf("/"));
+    let parent = presetsById[parentId];
+    let parentIdParts = parentId.split('/');
+    json.parents = parentIdParts.map((_, i) => parentIdParts.slice(0, i + 1).join('/')).toReversed();
     
     if (!json.geometry) {
       json.geometry = parent.geometry;
@@ -73,8 +88,6 @@ function processPreset(id, json) {
       json.groups = parent.groups;
     }
   }
-
-  presets[id] = json;
 }
 
 function walkDir(dir, func) {
@@ -102,10 +115,23 @@ walkDir(presetsDir, function(filePath) {
   if (filePath.endsWith(".json")) {
     const id = filePath.substring(presetsDir.length, filePath.length - 5);
     const json = JSON.parse(fs.readFileSync(filePath));
-    processPreset(id, json);
+    readPreset(id, json);
   }
 });
 
-fs.writeFileSync('./dist/presets.json', JSON.stringify(presets))
+for (let presetId in presetsById) {
+  if (!checkPreset(presetId, presetsById[presetId])) process.exit(1);
+
+  let sortedObj = {};
+  for (let key in allowedKeys) {
+    if (presetsById[presetId][key]) sortedObj[key] = presetsById[presetId][key];
+  }
+  presetsById[presetId] = sortedObj;
+  fs.writeFileSync(presetsDir + presetId + '.json', JSON.stringify(presetsById[presetId], null, 4));
+
+  addDerivedDataToPreset(presetId, presetsById[presetId]);
+}
+
+fs.writeFileSync('./dist/presets.json', JSON.stringify(presetsById))
 
 console.log("Preset groups: " + Object.keys(allGroups).sort().join(', '))

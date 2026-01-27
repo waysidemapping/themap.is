@@ -1,15 +1,15 @@
 {
+    "name": "Amenity",
+    "groups": [
+        "amenity"
+    ],
+    "tags": {
+        "amenity": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
-    ],
-    "tags": {
-        "amenity": "*"
-    },
-    "groups": [
-        "amenity"
-    ],
-    "name": "Amenity"
+    ]
 }

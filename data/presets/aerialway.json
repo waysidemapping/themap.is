@@ -1,10 +1,10 @@
 {
-    "geometry": [
-        "vertex",
-        "line"
-    ],
+    "name": "Aerialway Feature",
     "tags": {
         "aerialway": "*"
     },
-    "name": "Aerialway Feature"
+    "geometry": [
+        "vertex",
+        "line"
+    ]
 }

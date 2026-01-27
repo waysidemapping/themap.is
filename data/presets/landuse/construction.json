@@ -1,5 +1,5 @@
 {
-    "icon": "bulldozer",
+    "name": "Construction Area",
     "tags": {
         "landuse": "construction"
     },
@@ -13,5 +13,5 @@
         "development",
         "infrastructure"
     ],
-    "name": "Construction Area"
+    "icon": "bulldozer"
 }

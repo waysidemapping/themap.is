@@ -1,4 +1,9 @@
 {
+    "name": "health food store",
+    "plural": "health food stores",
+    "tags": {
+        "shop": "health_food"
+    },
     "terms": [
         "Health Food Shop",
         "groceries",
@@ -10,10 +15,5 @@
         "vegetarian",
         "vitamins",
         "wholefood"
-    ],
-    "tags": {
-        "shop": "health_food"
-    },
-    "plural": "health food stores",
-    "name": "health food store"
+    ]
 }

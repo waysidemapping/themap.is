@@ -1,11 +1,11 @@
 {
-    "icon": "rocket_firework",
+    "name": "fireworks store",
+    "plural": "fireworks stores",
     "tags": {
         "shop": "pyrotechnics"
     },
     "terms": [
         "fireworks"
     ],
-    "plural": "fireworks stores",
-    "name": "fireworks store"
+    "icon": "rocket_firework"
 }

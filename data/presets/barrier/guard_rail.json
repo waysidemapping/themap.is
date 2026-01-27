@@ -1,12 +1,11 @@
 {
-    "icon": "fence",
-    "geometry": [
-        "line"
-    ],
+    "name": "Guard Rail",
     "tags": {
         "barrier": "guard_rail"
     },
-    "name": "Guard Rail",
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "armco barrier",
         "crash barrier",
@@ -15,5 +14,6 @@
         "roadside barrier",
         "traffic barrier"
     ],
+    "icon": "fence",
     "matchScore": 0.75
 }

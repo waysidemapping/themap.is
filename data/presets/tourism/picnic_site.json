@@ -1,5 +1,9 @@
 {
-    "icon": "picnic_table",
+    "name": "Picnic Site",
+    "plural": "picnic sites",
+    "tags": {
+        "tourism": "picnic_site"
+    },
     "geometry": [
         "point",
         "vertex",
@@ -8,9 +12,5 @@
     "terms": [
         "camp"
     ],
-    "tags": {
-        "tourism": "picnic_site"
-    },
-    "plural": "picnic sites",
-    "name": "Picnic Site"
+    "icon": "picnic_table"
 }

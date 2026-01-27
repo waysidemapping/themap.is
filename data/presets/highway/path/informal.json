@@ -1,4 +1,12 @@
 {
+    "name": "Informal Path",
+    "tags": {
+        "highway": "path",
+        "informal": "yes"
+    },
+    "reference": {
+        "key": "informal"
+    },
     "geometry": [
         "line"
     ],
@@ -17,13 +25,5 @@
         "shortcut",
         "social trail",
         "use trail"
-    ],
-    "tags": {
-        "highway": "path",
-        "informal": "yes"
-    },
-    "reference": {
-        "key": "informal"
-    },
-    "name": "Informal Path"
+    ]
 }

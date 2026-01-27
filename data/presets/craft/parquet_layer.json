@@ -1,7 +1,7 @@
 {
-    "icon": "brick_trowel",
+    "name": "Parquet Layer",
     "tags": {
         "craft": "parquet_layer"
     },
-    "name": "Parquet Layer"
+    "icon": "brick_trowel"
 }

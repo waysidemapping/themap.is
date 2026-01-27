@@ -1,7 +1,7 @@
 {
-    "icon": "app_terminal",
+    "name": "Information Terminal",
     "tags": {
         "information": "terminal"
     },
-    "name": "Information Terminal"
+    "icon": "app_terminal"
 }

@@ -1,5 +1,5 @@
 {
-    "icon": "water_glass-faucet",
+    "name": "RV Drinking Water",
     "tags": {
         "amenity": "water_point"
     },
@@ -10,5 +10,5 @@
         "water spigot",
         "water tap"
     ],
-    "name": "RV Drinking Water"
+    "icon": "water_glass-faucet"
 }

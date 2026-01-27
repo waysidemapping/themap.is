@@ -1,13 +1,13 @@
 {
-    "icon": "boat-ramp",
+    "name": "Slipway",
+    "plural": "slipways",
+    "tags": {
+        "leisure": "slipway"
+    },
     "terms": [
         "boat landing",
         "boat launch",
         "boat ramp"
     ],
-    "tags": {
-        "leisure": "slipway"
-    },
-    "plural": "slipways",
-    "name": "Slipway"
+    "icon": "boat-ramp"
 }

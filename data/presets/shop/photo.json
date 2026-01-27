@@ -1,14 +1,14 @@
 {
-    "icon": "camera",
+    "name": "photography store",
+    "plural": "photography stores",
+    "tags": {
+        "shop": "photo"
+    },
     "terms": [
         "camera",
         "film",
         "lens",
         "photo"
     ],
-    "tags": {
-        "shop": "photo"
-    },
-    "plural": "photography stores",
-    "name": "photography store"
+    "icon": "camera"
 }

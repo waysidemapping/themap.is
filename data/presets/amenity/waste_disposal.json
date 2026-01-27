@@ -1,4 +1,5 @@
 {
+    "name": "Garbage Dumpster",
     "tags": {
         "amenity": "waste_disposal"
     },
@@ -8,6 +9,5 @@
         "rubbish",
         "trash",
         "waste disposal"
-    ],
-    "name": "Garbage Dumpster"
+    ]
 }

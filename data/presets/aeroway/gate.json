@@ -1,10 +1,10 @@
 {
-    "geometry": [
-        "point",
-        "vertex"
-    ],
+    "name": "Airport Gate",
     "tags": {
         "aeroway": "gate"
     },
-    "name": "Airport Gate"
+    "geometry": [
+        "point",
+        "vertex"
+    ]
 }

@@ -1,4 +1,5 @@
 {
+    "name": "Telephone",
     "tags": {
         "amenity": "telephone"
     },
@@ -9,6 +10,5 @@
         "phone booth",
         "public phone",
         "public telephone"
-    ],
-    "name": "Telephone"
+    ]
 }

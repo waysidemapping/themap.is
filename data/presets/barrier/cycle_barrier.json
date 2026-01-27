@@ -1,11 +1,11 @@
 {
-    "icon": "bicycle_barrier",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Cycle Barrier",
     "tags": {
         "barrier": "cycle_barrier"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "bicycle barrier",
         "bicycling barrier",
@@ -15,5 +15,5 @@
         "chicane",
         "cycling barrier"
     ],
-    "name": "Cycle Barrier"
+    "icon": "bicycle_barrier"
 }

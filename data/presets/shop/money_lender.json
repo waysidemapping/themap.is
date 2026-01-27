@@ -1,11 +1,11 @@
 {
-    "icon": "banknote-hand",
+    "name": "money lender",
+    "plural": "money lenders",
     "tags": {
         "shop": "money_lender"
     },
     "terms": [
         "payday loan"
     ],
-    "plural": "money lenders",
-    "name": "money lender"
+    "icon": "banknote-hand"
 }

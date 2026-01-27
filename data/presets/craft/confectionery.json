@@ -1,11 +1,11 @@
 {
-    "icon": "candy",
+    "name": "Candy Maker",
+    "tags": {
+        "craft": "confectionery"
+    },
     "terms": [
         "candy",
         "sweet"
     ],
-    "tags": {
-        "craft": "confectionery"
-    },
-    "name": "Candy Maker"
+    "icon": "candy"
 }

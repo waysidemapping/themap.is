@@ -1,13 +1,13 @@
 {
-    "icon": "eyeglasses",
+    "name": "optician shop",
+    "plural": "optician shops",
+    "tags": {
+        "shop": "optician"
+    },
     "terms": [
         "eye",
         "glasses",
         "spectacles"
     ],
-    "tags": {
-        "shop": "optician"
-    },
-    "plural": "optician shops",
-    "name": "optician shop"
+    "icon": "eyeglasses"
 }

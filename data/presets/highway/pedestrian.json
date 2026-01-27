@@ -1,11 +1,11 @@
 {
-    "icon": "pedestrian",
-    "geometry": [
-        "line"
-    ],
+    "name": "Pedestrian Street",
     "tags": {
         "highway": "pedestrian"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "center",
         "centre",
@@ -14,5 +14,5 @@
         "square",
         "walkway"
     ],
-    "name": "Pedestrian Street"
+    "icon": "pedestrian"
 }

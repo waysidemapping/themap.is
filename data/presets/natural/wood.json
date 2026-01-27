@@ -1,11 +1,11 @@
 {
-    "icon": "tree_conifer",
-    "geometry": [
-        "area"
-    ],
+    "name": "Natural Wood",
     "tags": {
         "natural": "wood"
     },
+    "geometry": [
+        "area"
+    ],
     "terms": [
         "boreal",
         "forest",
@@ -16,5 +16,5 @@
         "woodlands",
         "woods"
     ],
-    "name": "Natural Wood"
+    "icon": "tree_conifer"
 }

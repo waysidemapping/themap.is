@@ -1,14 +1,14 @@
 {
+    "name": "Sports Field or Court",
+    "plural": "sports fields and courts",
+    "groups": [
+        "sports"
+    ],
     "tags": {
         "leisure": "pitch"
     },
     "terms": [
         "field",
         "sport field"
-    ],
-    "groups": [
-        "sports"
-    ],
-    "plural": "sports fields and courts",
-    "name": "Sports Field or Court"
+    ]
 }

@@ -1,5 +1,8 @@
 {
-    "icon": "milk_churn",
+    "name": "Milk Churn Stand",
+    "tags": {
+        "man_made": "milk_churn_stand"
+    },
     "geometry": [
         "point",
         "area"
@@ -9,8 +12,5 @@
         "milk can stand",
         "milk stand"
     ],
-    "tags": {
-        "man_made": "milk_churn_stand"
-    },
-    "name": "Milk Churn Stand"
+    "icon": "milk_churn"
 }

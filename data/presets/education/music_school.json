@@ -1,9 +1,9 @@
 {
-    "terms": [
-        "school of music"
-    ],
+    "name": "Music School",
     "tags": {
         "education": "music_school"
     },
-    "name": "Music School"
+    "terms": [
+        "school of music"
+    ]
 }

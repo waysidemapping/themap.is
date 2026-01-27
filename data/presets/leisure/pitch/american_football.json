@@ -1,5 +1,6 @@
 {
-    "icon": "american_football",
+    "name": "American Football Field",
+    "plural": "American football fields",
     "tags": {
         "leisure": "pitch",
         "sport": "american_football"
@@ -12,6 +13,5 @@
         "football",
         "gridiron"
     ],
-    "plural": "American football fields",
-    "name": "American Football Field"
+    "icon": "american_football"
 }

@@ -1,5 +1,8 @@
 {
-    "icon": "pier_fixed-water",
+    "name": "Pier",
+    "tags": {
+        "man_made": "pier"
+    },
     "geometry": [
         "line",
         "area"
@@ -12,8 +15,5 @@
         "promenade",
         "wharf"
     ],
-    "tags": {
-        "man_made": "pier"
-    },
-    "name": "Pier"
+    "icon": "pier_fixed-water"
 }

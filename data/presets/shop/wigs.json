@@ -1,11 +1,11 @@
 {
-    "terms": [
-        "hair extensions",
-        "hair extentions"
-    ],
+    "name": "wig store",
+    "plural": "wig stores",
     "tags": {
         "shop": "wigs"
     },
-    "plural": "wig stores",
-    "name": "wig store"
+    "terms": [
+        "hair extensions",
+        "hair extentions"
+    ]
 }

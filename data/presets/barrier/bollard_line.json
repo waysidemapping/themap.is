@@ -1,10 +1,10 @@
 {
-    "icon": "bollard_row",
-    "geometry": [
-        "line"
-    ],
+    "name": "Bollard Row",
     "tags": {
         "barrier": "bollard"
     },
-    "name": "Bollard Row"
+    "geometry": [
+        "line"
+    ],
+    "icon": "bollard_row"
 }

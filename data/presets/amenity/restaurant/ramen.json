@@ -1,13 +1,5 @@
 {
-    "icon": "noodle_bowl-chopsticks",
-    "terms": [
-        "Ramen Shop",
-        "japanese",
-        "noodles",
-        "ramen-ten",
-        "ramen-ya",
-        "soup"
-    ],
+    "name": "Ramen Restaurant",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "ramen"
@@ -16,5 +8,13 @@
         "key": "cuisine",
         "value": "ramen"
     },
-    "name": "Ramen Restaurant"
+    "terms": [
+        "Ramen Shop",
+        "japanese",
+        "noodles",
+        "ramen-ten",
+        "ramen-ya",
+        "soup"
+    ],
+    "icon": "noodle_bowl-chopsticks"
 }

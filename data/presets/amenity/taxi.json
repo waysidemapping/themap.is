@@ -1,11 +1,11 @@
 {
-    "icon": "taxi",
-    "terms": [
-        "cab"
-    ],
+    "name": "Taxi Stand",
+    "plural": "taxi stands",
     "tags": {
         "amenity": "taxi"
     },
-    "plural": "taxi stands",
-    "name": "Taxi Stand"
+    "terms": [
+        "cab"
+    ],
+    "icon": "taxi"
 }

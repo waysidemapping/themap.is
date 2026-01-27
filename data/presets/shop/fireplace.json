@@ -1,13 +1,13 @@
 {
-    "icon": "campfire-arch",
+    "name": "fireplace store",
+    "plural": "fireplace stores",
+    "tags": {
+        "shop": "fireplace"
+    },
     "terms": [
         "fireplace",
         "masonry heater",
         "stove"
     ],
-    "tags": {
-        "shop": "fireplace"
-    },
-    "plural": "fireplace stores",
-    "name": "fireplace store"
+    "icon": "campfire-arch"
 }

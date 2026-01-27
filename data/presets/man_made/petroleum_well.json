@@ -1,5 +1,8 @@
 {
-    "icon": "pumpjack",
+    "name": "Oil Well",
+    "tags": {
+        "man_made": "petroleum_well"
+    },
     "geometry": [
         "point",
         "vertex"
@@ -14,8 +17,5 @@
         "petroleum well",
         "pumpjack"
     ],
-    "tags": {
-        "man_made": "petroleum_well"
-    },
-    "name": "Oil Well"
+    "icon": "pumpjack"
 }

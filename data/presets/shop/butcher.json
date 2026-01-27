@@ -1,5 +1,9 @@
 {
-    "icon": "cleaver",
+    "name": "butcher shop",
+    "plural": "butcher shops",
+    "tags": {
+        "shop": "butcher"
+    },
     "terms": [
         "Butcher Shop",
         "Pork Store",
@@ -10,9 +14,5 @@
         "meat",
         "pork"
     ],
-    "tags": {
-        "shop": "butcher"
-    },
-    "plural": "butcher shops",
-    "name": "butcher shop"
+    "icon": "cleaver"
 }

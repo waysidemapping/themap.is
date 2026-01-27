@@ -1,5 +1,8 @@
 {
-    "icon": "film_movie_camera",
+    "name": "Cinema",
+    "tags": {
+        "amenity": "cinema"
+    },
     "terms": [
         "drive-in",
         "film",
@@ -10,8 +13,5 @@
         "show",
         "theater"
     ],
-    "tags": {
-        "amenity": "cinema"
-    },
-    "name": "Cinema"
+    "icon": "film_movie_camera"
 }

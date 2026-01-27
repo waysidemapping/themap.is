@@ -1,5 +1,6 @@
 {
-    "icon": "dice",
+    "name": "tabletop game store",
+    "plural": "tabletop game stores",
     "tags": {
         "shop": "games"
     },
@@ -16,6 +17,5 @@
         "strategy game",
         "wargame"
     ],
-    "plural": "tabletop game stores",
-    "name": "tabletop game store"
+    "icon": "dice"
 }

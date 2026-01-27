@@ -1,11 +1,11 @@
 {
+    "name": "Nursery / Childcare",
+    "tags": {
+        "amenity": "childcare"
+    },
     "terms": [
         "daycare",
         "orphanage",
         "playgroup"
-    ],
-    "tags": {
-        "amenity": "childcare"
-    },
-    "name": "Nursery / Childcare"
+    ]
 }

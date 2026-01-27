@@ -1,5 +1,6 @@
 {
-    "icon": "bow-archery_arrow",
+    "name": "hunting shop",
+    "plural": "hunting shops",
     "tags": {
         "shop": "hunting"
     },
@@ -12,6 +13,5 @@
         "rifles",
         "traps"
     ],
-    "plural": "hunting shops",
-    "name": "hunting shop"
+    "icon": "bow-archery_arrow"
 }

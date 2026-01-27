@@ -1,5 +1,6 @@
 {
-    "icon": "cloth",
+    "name": "household linen store",
+    "plural": "household linen stores",
     "tags": {
         "shop": "household_linen"
     },
@@ -15,6 +16,5 @@
         "sheets",
         "towels"
     ],
-    "plural": "household linen stores",
-    "name": "household linen store"
+    "icon": "cloth"
 }

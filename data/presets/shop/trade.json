@@ -1,8 +1,8 @@
 {
-    "icon": "wrench-hammer",
+    "name": "trade store",
+    "plural": "trade stores",
     "tags": {
         "shop": "trade"
     },
-    "plural": "trade stores",
-    "name": "trade store"
+    "icon": "wrench-hammer"
 }

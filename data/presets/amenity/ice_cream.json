@@ -1,5 +1,12 @@
 {
-    "icon": "ice_cream_cone",
+    "name": "Ice Cream Shop",
+    "plural": "ice cream shops",
+    "groups": [
+        "food"
+    ],
+    "tags": {
+        "amenity": "ice_cream"
+    },
     "terms": [
         "frozen",
         "gelato",
@@ -7,12 +14,5 @@
         "sorbet",
         "yogurt"
     ],
-    "tags": {
-        "amenity": "ice_cream"
-    },
-    "groups": [
-        "food"
-    ],
-    "plural": "ice cream shops",
-    "name": "Ice Cream Shop"
+    "icon": "ice_cream_cone"
 }

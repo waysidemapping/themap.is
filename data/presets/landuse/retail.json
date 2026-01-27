@@ -1,8 +1,8 @@
 {
-    "icon": "commercial",
+    "name": "Retail Area",
     "tags": {
         "landuse": "retail"
     },
-    "matchScore": 0.9,
-    "name": "Retail Area"
+    "icon": "commercial",
+    "matchScore": 0.9
 }

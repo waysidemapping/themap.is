@@ -1,4 +1,5 @@
 {
+    "name": "Charging Station",
     "tags": {
         "amenity": "charging_station"
     },
@@ -8,6 +9,5 @@
         "electric vehicle",
         "ev",
         "supercharger"
-    ],
-    "name": "Charging Station"
+    ]
 }

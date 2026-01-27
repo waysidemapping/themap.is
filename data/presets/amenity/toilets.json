@@ -1,5 +1,8 @@
 {
-    "icon": "female-male",
+    "name": "Restroom",
+    "tags": {
+        "amenity": "toilets"
+    },
     "terms": [
         "Toilets",
         "Bathroom",
@@ -14,8 +17,5 @@
         "water closet",
         "wc"
     ],
-    "tags": {
-        "amenity": "toilets"
-    },
-    "name": "Restroom"
+    "icon": "female-male"
 }

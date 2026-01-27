@@ -1,13 +1,13 @@
 {
-    "icon": "storage_fermenter",
+    "name": "brewing supply store",
+    "plural": "brewing supply stores",
+    "tags": {
+        "shop": "brewing_supplies"
+    },
     "terms": [
         "brew shop",
         "hobby",
         "homebrew supply store"
     ],
-    "tags": {
-        "shop": "brewing_supplies"
-    },
-    "plural": "brewing supply stores",
-    "name": "brewing supply store"
+    "icon": "storage_fermenter"
 }

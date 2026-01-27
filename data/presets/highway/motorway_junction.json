@@ -1,13 +1,13 @@
 {
-    "icon": "y_junction",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Motorway Exit",
     "tags": {
         "highway": "motorway_junction"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "exit"
     ],
-    "name": "Motorway Exit"
+    "icon": "y_junction"
 }

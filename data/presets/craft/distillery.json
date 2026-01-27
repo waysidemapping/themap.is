@@ -1,5 +1,8 @@
 {
-    "icon": "storage_fermenter",
+    "name": "Distillery",
+    "tags": {
+        "craft": "distillery"
+    },
     "terms": [
         "alcohol",
         "beverage",
@@ -20,8 +23,5 @@
         "whiskey",
         "whisky"
     ],
-    "tags": {
-        "craft": "distillery"
-    },
-    "name": "Distillery"
+    "icon": "storage_fermenter"
 }

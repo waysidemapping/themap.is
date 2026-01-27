@@ -1,5 +1,9 @@
 {
-    "icon": "pill",
+    "name": "drugstore",
+    "plural": "drugstores",
+    "groups": [
+        "stores"
+    ],
     "tags": {
         "shop": "chemist"
     },
@@ -17,9 +21,5 @@
         "prescription",
         "tooth"
     ],
-    "groups": [
-        "stores"
-    ],
-    "plural": "drugstores",
-    "name": "drugstore"
+    "icon": "pill"
 }

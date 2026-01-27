@@ -1,7 +1,7 @@
 {
-    "icon": "car-users",
+    "name": "Driving School",
     "tags": {
         "education": "driving_school"
     },
-    "name": "Driving School"
+    "icon": "car-users"
 }

@@ -1,11 +1,11 @@
 {
+    "name": "Ambulance Station",
+    "tags": {
+        "emergency": "ambulance_station"
+    },
     "terms": [
         "ems",
         "emt",
         "rescue"
-    ],
-    "tags": {
-        "emergency": "ambulance_station"
-    },
-    "name": "Ambulance Station"
+    ]
 }

@@ -1,13 +1,13 @@
 {
-    "icon": "runner",
+    "name": "Leisure Feature",
+    "tags": {
+        "leisure": "*"
+    },
     "geometry": [
         "point",
         "vertex",
         "line",
         "area"
     ],
-    "tags": {
-        "leisure": "*"
-    },
-    "name": "Leisure Feature"
+    "icon": "runner"
 }

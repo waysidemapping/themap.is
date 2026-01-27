@@ -1,15 +1,15 @@
 {
-    "icon": "tattoo_machine",
+    "name": "tattoo parlor",
+    "plural": "tattoo parlors",
+    "groups": [
+        "beauty",
+        "stores"
+    ],
     "tags": {
         "shop": "tattoo"
     },
     "terms": [
         "ink"
     ],
-    "groups": [
-        "beauty",
-        "stores"
-    ],
-    "plural": "tattoo parlors",
-    "name": "tattoo parlor"
+    "icon": "tattoo_machine"
 }

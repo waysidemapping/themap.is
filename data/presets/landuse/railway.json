@@ -1,5 +1,5 @@
 {
-    "icon": "train",
+    "name": "Railway Corridor",
     "tags": {
         "landuse": "railway"
     },
@@ -11,5 +11,5 @@
         "train",
         "train depot"
     ],
-    "name": "Railway Corridor"
+    "icon": "train"
 }

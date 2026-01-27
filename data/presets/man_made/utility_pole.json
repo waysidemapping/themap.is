@@ -1,11 +1,11 @@
 {
-    "icon": "utility_pole",
+    "name": "Utility Pole",
+    "tags": {
+        "man_made": "utility_pole"
+    },
     "geometry": [
         "point",
         "vertex"
     ],
-    "tags": {
-        "man_made": "utility_pole"
-    },
-    "name": "Utility Pole"
+    "icon": "utility_pole"
 }

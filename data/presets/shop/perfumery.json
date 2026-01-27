@@ -1,5 +1,6 @@
 {
-    "icon": "perfume",
+    "name": "perfume store",
+    "plural": "perfume stores",
     "tags": {
         "shop": "perfumery"
     },
@@ -8,6 +9,5 @@
         "fragrance",
         "purfume"
     ],
-    "plural": "perfume stores",
-    "name": "perfume store"
+    "icon": "perfume"
 }

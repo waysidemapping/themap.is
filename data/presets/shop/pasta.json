@@ -1,17 +1,17 @@
 {
+    "name": "paste store",
+    "plural": "paste stores",
     "tags": {
         "shop": "pasta"
+    },
+    "reference": {
+        "key": "shop",
+        "value": "pasta"
     },
     "terms": [
         "Pasta Shop",
         "fresh pasta",
         "ravioli",
         "spaghetti"
-    ],
-    "reference": {
-        "key": "shop",
-        "value": "pasta"
-    },
-    "plural": "paste stores",
-    "name": "paste store"
+    ]
 }

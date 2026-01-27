@@ -1,14 +1,14 @@
 {
-    "icon": "paper-pencil",
-    "geometry": [
-        "point",
-        "area"
+    "name": "Education Facility",
+    "groups": [
+        "education"
     ],
     "tags": {
         "education": "*"
     },
-    "groups": [
-        "education"
+    "geometry": [
+        "point",
+        "area"
     ],
     "terms": [
         "classes",
@@ -16,6 +16,6 @@
         "teaching",
         "training"
     ],
-    "name": "Education Facility",
+    "icon": "paper-pencil",
     "matchScore": 0.7
 }

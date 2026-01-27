@@ -1,5 +1,8 @@
 {
-    "icon": "hill-trees-house-water",
+    "name": "Island",
+    "tags": {
+        "place": "island"
+    },
     "terms": [
         "archipelago",
         "atoll",
@@ -10,8 +13,5 @@
         "key",
         "reef"
     ],
-    "tags": {
-        "place": "island"
-    },
-    "name": "Island"
+    "icon": "hill-trees-house-water"
 }

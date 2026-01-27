@@ -1,5 +1,12 @@
 {
-    "icon": "cabin",
+    "name": "Wilderness Hut",
+    "plural": "wilderness huts",
+    "groups": [
+        "lodging"
+    ],
+    "tags": {
+        "tourism": "wilderness_hut"
+    },
     "geometry": [
         "point",
         "area"
@@ -21,12 +28,5 @@
         "sleeping shelter",
         "wilderness hut"
     ],
-    "tags": {
-        "tourism": "wilderness_hut"
-    },
-    "groups": [
-        "lodging"
-    ],
-    "plural": "wilderness huts",
-    "name": "Wilderness Hut"
+    "icon": "cabin"
 }

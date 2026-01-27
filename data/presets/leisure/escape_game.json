@@ -1,12 +1,12 @@
 {
+    "name": "Escape Room",
+    "tags": {
+        "leisure": "escape_game"
+    },
     "terms": [
         "escape game",
         "escape the room",
         "puzzle room",
         "quest room"
-    ],
-    "tags": {
-        "leisure": "escape_game"
-    },
-    "name": "Escape Room"
+    ]
 }

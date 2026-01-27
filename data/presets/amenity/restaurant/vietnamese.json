@@ -1,5 +1,13 @@
 {
-    "icon": "noodle_bowl-chopsticks",
+    "name": "Vietnamese Restaurant",
+    "tags": {
+        "amenity": "restaurant",
+        "cuisine": "vietnamese"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "vietnamese"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -15,13 +23,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant",
-        "cuisine": "vietnamese"
-    },
-    "reference": {
-        "key": "cuisine",
-        "value": "vietnamese"
-    },
-    "name": "Vietnamese Restaurant"
+    "icon": "noodle_bowl-chopsticks"
 }

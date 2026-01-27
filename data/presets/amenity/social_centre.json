@@ -1,4 +1,8 @@
 {
+    "name": "Social Center",
+    "tags": {
+        "amenity": "social_centre"
+    },
     "terms": [
         "event",
         "fraternal",
@@ -10,9 +14,5 @@
         "sorority",
         "union",
         "vetern"
-    ],
-    "tags": {
-        "amenity": "social_centre"
-    },
-    "name": "Social Center"
+    ]
 }

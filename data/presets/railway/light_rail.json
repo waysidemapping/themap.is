@@ -1,15 +1,15 @@
 {
-    "icon": "light_rail",
-    "geometry": [
-        "line"
-    ],
+    "name": "Light Rail Track",
     "tags": {
         "railway": "light_rail"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "light rail",
         "streetcar",
         "trolley"
     ],
-    "name": "Light Rail Track"
+    "icon": "light_rail"
 }

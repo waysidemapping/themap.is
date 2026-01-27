@@ -1,5 +1,12 @@
 {
-    "icon": "fork-knife",
+    "name": "Restaurant",
+    "plural": "restaurants",
+    "groups": [
+        "food"
+    ],
+    "tags": {
+        "amenity": "restaurant"
+    },
     "terms": [
         "bar",
         "breakfast",
@@ -16,12 +23,5 @@
         "lunch",
         "table"
     ],
-    "tags": {
-        "amenity": "restaurant"
-    },
-    "groups": [
-        "food"
-    ],
-    "plural": "restaurants",
-    "name": "Restaurant"
+    "icon": "fork-knife"
 }

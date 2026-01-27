@@ -1,10 +1,10 @@
 {
-    "icon": "bowling_pin-bowling_ball",
-    "terms": [
-        "bowling center"
-    ],
+    "name": "Bowling Alley",
     "tags": {
         "leisure": "bowling_alley"
     },
-    "name": "Bowling Alley"
+    "terms": [
+        "bowling center"
+    ],
+    "icon": "bowling_pin-bowling_ball"
 }

@@ -1,4 +1,5 @@
 {
+    "name": "Gym / Fitness Center",
     "tags": {
         "leisure": "fitness_centre"
     },
@@ -8,6 +9,5 @@
         "leisure",
         "pilates",
         "studio"
-    ],
-    "name": "Gym / Fitness Center"
+    ]
 }

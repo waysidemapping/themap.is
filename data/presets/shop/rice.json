@@ -1,11 +1,11 @@
 {
+    "name": "rice store",
+    "plural": "rice stores",
     "tags": {
         "shop": "rice"
     },
     "reference": {
         "key": "shop",
         "value": "rice"
-    },
-    "plural": "rice stores",
-    "name": "rice store"
+    }
 }

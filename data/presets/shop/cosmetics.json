@@ -1,5 +1,10 @@
 {
-    "icon": "lips-lipstick",
+    "name": "cosmetics store",
+    "plural": "cosmetics stores",
+    "groups": [
+        "beauty",
+        "stores"
+    ],
     "tags": {
         "shop": "cosmetics"
     },
@@ -7,10 +12,5 @@
         "make-up",
         "makeup"
     ],
-    "groups": [
-        "beauty",
-        "stores"
-    ],
-    "plural": "cosmetics stores",
-    "name": "cosmetics store"
+    "icon": "lips-lipstick"
 }

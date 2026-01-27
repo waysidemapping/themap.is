@@ -1,5 +1,9 @@
 {
-    "icon": "car-wrench",
+    "name": "car repair shop",
+    "plural": "car repair shops",
+    "tags": {
+        "shop": "car_repair"
+    },
     "terms": [
         "Automobile Repair Shop",
         "Car Mechanic",
@@ -14,9 +18,5 @@
         "panelbeater",
         "service"
     ],
-    "tags": {
-        "shop": "car_repair"
-    },
-    "plural": "car repair shops",
-    "name": "car repair shop"
+    "icon": "car-wrench"
 }

@@ -1,12 +1,12 @@
 {
-    "icon": "water_pump_manual",
+    "name": "Water Well",
+    "tags": {
+        "man_made": "water_well"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "man_made": "water_well"
-    },
     "terms": [
         "aquifer",
         "drinking water",
@@ -14,5 +14,5 @@
         "water pump",
         "water source"
     ],
-    "name": "Water Well"
+    "icon": "water_pump_manual"
 }

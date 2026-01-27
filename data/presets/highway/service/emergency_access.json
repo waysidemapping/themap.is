@@ -1,7 +1,5 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Emergency Access",
     "tags": {
         "highway": "service",
         "service": "emergency_access"
@@ -10,5 +8,7 @@
         "key": "service",
         "value": "emergency_access"
     },
-    "name": "Emergency Access"
+    "geometry": [
+        "line"
+    ]
 }

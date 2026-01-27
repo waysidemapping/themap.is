@@ -1,11 +1,11 @@
 {
-    "icon": "crossing_tram_solid",
-    "geometry": [
-        "vertex"
-    ],
+    "name": "Tram-Road Crossing",
     "tags": {
         "railway": "tram_level_crossing"
     },
+    "geometry": [
+        "vertex"
+    ],
     "terms": [
         "crossing",
         "grade crossing",
@@ -17,5 +17,5 @@
         "tramway crossing",
         "trolley crossing"
     ],
-    "name": "Tram-Road Crossing"
+    "icon": "crossing_tram_solid"
 }

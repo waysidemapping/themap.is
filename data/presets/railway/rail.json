@@ -1,11 +1,11 @@
 {
-    "icon": "railway_track",
-    "geometry": [
-        "line"
-    ],
+    "name": "Train Track",
     "tags": {
         "railway": "rail"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "Railway Track",
         "Railroad Track",
@@ -15,5 +15,5 @@
         "track",
         "train track"
     ],
-    "name": "Train Track"
+    "icon": "railway_track"
 }

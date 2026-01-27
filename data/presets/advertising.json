@@ -1,17 +1,17 @@
 {
-    "icon": "billboard",
+    "name": "Advertising Device",
+    "tags": {
+        "advertising": "*"
+    },
     "geometry": [
         "point",
         "area"
     ],
-    "tags": {
-        "advertising": "*"
-    },
     "terms": [
         "advertising screen",
         "flag",
         "neon sign",
         "sign"
     ],
-    "name": "Advertising Device"
+    "icon": "billboard"
 }

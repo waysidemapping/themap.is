@@ -1,9 +1,9 @@
 {
-    "geometry": [
-        "line"
-    ],
+    "name": "Embankment",
     "tags": {
         "man_made": "embankment"
     },
-    "name": "Embankment"
+    "geometry": [
+        "line"
+    ]
 }

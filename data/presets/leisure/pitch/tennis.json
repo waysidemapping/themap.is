@@ -1,5 +1,6 @@
 {
-    "icon": "tennis_player",
+    "name": "Tennis Court",
+    "plural": "tennis courts",
     "tags": {
         "leisure": "pitch",
         "sport": "tennis"
@@ -11,6 +12,5 @@
     "terms": [
         "tennis net"
     ],
-    "plural": "tennis courts",
-    "name": "Tennis Court"
+    "icon": "tennis_player"
 }

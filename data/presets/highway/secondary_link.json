@@ -1,11 +1,11 @@
 {
     "name": "Secondary Link",
-    "geometry": [
-        "line"
-    ],
     "tags": {
         "highway": "secondary_link"
     },
+    "geometry": [
+        "line"
+    ],
     "terms": [
         "off ramp",
         "on ramp",

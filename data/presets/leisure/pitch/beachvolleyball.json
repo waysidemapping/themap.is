@@ -1,5 +1,6 @@
 {
-    "icon": "volleyball",
+    "name": "Beach Volleyball Court",
+    "plural": "beach volleyball court",
     "tags": {
         "leisure": "pitch",
         "sport": "beachvolleyball"
@@ -11,6 +12,5 @@
     "terms": [
         "volleyball"
     ],
-    "plural": "beach volleyball court",
-    "name": "Beach Volleyball Court"
+    "icon": "volleyball"
 }

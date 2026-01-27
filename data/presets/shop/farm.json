@@ -1,4 +1,9 @@
 {
+    "name": "farm stand",
+    "plural": "farm stands",
+    "tags": {
+        "shop": "farm"
+    },
     "terms": [
         "Farm Shop",
         "Farm Stand",
@@ -9,10 +14,5 @@
         "orchard",
         "organics",
         "vegetables"
-    ],
-    "tags": {
-        "shop": "farm"
-    },
-    "plural": "farm stands",
-    "name": "farm stand"
+    ]
 }

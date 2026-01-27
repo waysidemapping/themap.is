@@ -1,5 +1,8 @@
 {
-    "icon": "motorcycle-key",
+    "name": "Motorcycle Rental",
+    "tags": {
+        "amenity": "motorcycle_rental"
+    },
     "terms": [
         "chopper",
         "cruiser",
@@ -12,8 +15,5 @@
         "sidecar",
         "sportbike"
     ],
-    "tags": {
-        "amenity": "motorcycle_rental"
-    },
-    "name": "Motorcycle Rental"
+    "icon": "motorcycle-key"
 }

@@ -1,7 +1,7 @@
 {
-    "icon": "vacuum_cleaner",
+    "name": "Cleaning Service",
     "tags": {
         "craft": "cleaning"
     },
-    "name": "Cleaning Service"
+    "icon": "vacuum_cleaner"
 }
