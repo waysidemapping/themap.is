@@ -10,5 +10,8 @@
         "bug hotel",
         "insect house"
     ],
+    "groups": [
+        "bees"
+    ],
     "name": "Insect Hotel"
 }

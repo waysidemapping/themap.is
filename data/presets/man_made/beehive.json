@@ -14,5 +14,9 @@
     "tags": {
         "man_made": "beehive"
     },
-    "name": "Beehive"
+    "groups": [
+        "bees"
+    ],
+    "plural": "beehives",
+    "name": "beehive"
 }

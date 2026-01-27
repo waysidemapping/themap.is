@@ -28,6 +28,7 @@ const themesById = {
 };
 
 let groupThemes = [
+  "bees",
   "books",
   "dams",
   "free_stuff",
