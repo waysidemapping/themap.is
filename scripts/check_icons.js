@@ -121,7 +121,7 @@ function checkIcons() {
         }
 
         // Remove unwanted svg attributes
-        child.removeAtt(['width', 'height', 'id']);
+        child.removeAtt(['width', 'height', 'x', 'y', 'id']);
 
         if (node.getAttribute('viewBox') !== '0 0 15 15') {
             warnings.push(chalk.yellow('Warning - Unexpected viewBox on ' + node.nodeName + ': ' + node.getAttribute('viewBox')));
