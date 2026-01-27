@@ -2,7 +2,8 @@
     "tags": {
         "shop": "country_store"
     },
-    "name": "Rural Supplies Store",
+    "plural": "rural supply stores",
+    "name": "rural supply store",
     "terms": [
         "Country Store"
     ]

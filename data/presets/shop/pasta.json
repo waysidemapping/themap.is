@@ -12,5 +12,6 @@
         "key": "shop",
         "value": "pasta"
     },
-    "name": "Pasta Store"
+    "plural": "paste stores",
+    "name": "paste store"
 }

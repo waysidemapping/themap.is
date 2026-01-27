@@ -8,5 +8,6 @@
     "tags": {
         "shop": "gift"
     },
-    "name": "Gift Shop"
+    "plural": "gift shops",
+    "name": "gift shop"
 }

@@ -3,7 +3,8 @@
     "tags": {
         "shop": "pawnbroker"
     },
-    "name": "Pawnshop",
+    "plural": "pawnshops",
+    "name": "pawnshop",
     "terms": [
         "Pawnbroker",
         "Pawn Shop"

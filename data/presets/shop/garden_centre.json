@@ -12,5 +12,6 @@
     "tags": {
         "shop": "garden_centre"
     },
-    "name": "Garden Center"
+    "plural": "garden centers",
+    "name": "garden center"
 }

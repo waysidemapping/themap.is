@@ -11,5 +11,6 @@
         "plant medicine",
         "traditional medicine"
     ],
-    "name": "Herbalist"
+    "plural": "herbalists",
+    "name": "herbalist"
 }

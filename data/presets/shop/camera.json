@@ -8,5 +8,6 @@
     "tags": {
         "shop": "camera"
     },
-    "name": "Camera Equipment Store"
+    "plural": "camera stores",
+    "name": "camera store"
 }

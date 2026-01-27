@@ -13,5 +13,6 @@
     "tags": {
         "shop": "swimming_pool"
     },
-    "name": "Pool Supply Store"
+    "plural": "pool supply stores",
+    "name": "pool supply store"
 }

@@ -9,5 +9,6 @@
     "tags": {
         "shop": "alcohol"
     },
-    "name": "Liquor Store"
+    "plural": "liquor stores",
+    "name": "liquor store"
 }

@@ -13,5 +13,10 @@
         "key": "shop",
         "value": "beauty"
     },
-    "name": "Nail Salon"
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "plural": "nail salons",
+    "name": "nail salon"
 }

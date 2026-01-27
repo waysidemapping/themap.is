@@ -14,5 +14,6 @@
     "tags": {
         "shop": "esoteric"
     },
-    "name": "Esoteric Store"
+    "plural": "esoteric stores",
+    "name": "esoteric store"
 }

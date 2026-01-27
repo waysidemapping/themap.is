@@ -3,5 +3,6 @@
     "tags": {
         "shop": "tea"
     },
-    "name": "Tea Store"
+    "plural": "tea stores",
+    "name": "tea store"
 }

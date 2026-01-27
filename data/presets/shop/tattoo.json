@@ -6,5 +6,10 @@
     "terms": [
         "ink"
     ],
-    "name": "Tattoo Parlor"
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "plural": "tattoo parlors",
+    "name": "tattoo parlor"
 }

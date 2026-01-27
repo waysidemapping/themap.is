@@ -8,5 +8,6 @@
     "tags": {
         "shop": "fireplace"
     },
-    "name": "Fireplace Store"
+    "plural": "fireplace stores",
+    "name": "fireplace store"
 }

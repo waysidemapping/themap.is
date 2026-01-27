@@ -3,5 +3,6 @@
     "tags": {
         "shop": "hearing_aids"
     },
-    "name": "Hearing Aids Store"
+    "plural": "hearing aid stores",
+    "name": "hearing aid store"
 }

@@ -10,7 +10,8 @@
     ],
     "groups": [
         "gambling",
-        "adult_amusement"
+        "adult_amusement",
+        "stores"
     ],
     "plural": "lottery shops",
     "name": "Lottery Shop"

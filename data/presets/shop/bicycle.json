@@ -13,5 +13,6 @@
     "tags": {
         "shop": "bicycle"
     },
-    "name": "Bicycle Shop"
+    "plural": "bike shops",
+    "name": "bike shop"
 }

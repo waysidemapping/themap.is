@@ -16,5 +16,6 @@
         "pencil",
         "wood"
     ],
-    "name": "Arts & Crafts Store"
+    "plural": "craft stores",
+    "name": "craft store"
 }

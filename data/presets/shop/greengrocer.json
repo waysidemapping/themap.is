@@ -10,5 +10,6 @@
     "tags": {
         "shop": "greengrocer"
     },
-    "name": "Greengrocer"
+    "plural": "greengrocers",
+    "name": "greengrocer"
 }

@@ -11,5 +11,6 @@
         "seer",
         "spirit"
     ],
-    "name": "Psychic"
+    "plural": "psychics",
+    "name": "psychic"
 }

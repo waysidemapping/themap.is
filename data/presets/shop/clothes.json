@@ -21,5 +21,6 @@
         "suits",
         "underwear"
     ],
-    "name": "Clothing Store"
+    "plural": "clothing stores",
+    "name": "clothing store"
 }

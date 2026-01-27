@@ -11,5 +11,6 @@
     "tags": {
         "shop": "second_hand"
     },
-    "name": "Thrift Store"
+    "plural": "thrift stores",
+    "name": "thrift store"
 }

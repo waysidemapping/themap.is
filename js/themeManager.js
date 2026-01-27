@@ -132,7 +132,10 @@ async function loadData() {
   for (let presetId in presetsById) {
     let preset = presetsById[presetId];
     preset.id = presetId;
-    if (preset.plural) {
+    if (preset.autoTheme === false) {
+      console.log(preset);
+    }
+    if (preset.plural && preset.autoTheme !== false) {
       // id normalization needs to match those in 404.html
       let themeId = preset.plural
         .replaceAll(' ', '_')
@@ -166,7 +169,6 @@ async function loadData() {
       if (theme.features[i].presetGroups) {
         let presets = Object.values(presetsById).filter(preset => preset.groups?.some(group => theme.features[i].presetGroups.includes(group)))
         theme.features[i].presets = presets.map(preset => preset.id);
-        console.log(theme.features[i].presets);
       }
       if (theme.features[i].presets) {
         for (let j in theme.features[i].presets) {

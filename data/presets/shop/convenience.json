@@ -12,5 +12,6 @@
         "mini-market",
         "mini-mart"
     ],
-    "name": "Convenience Store"
+    "plural": "convenience stores",
+    "name": "convenience store"
 }

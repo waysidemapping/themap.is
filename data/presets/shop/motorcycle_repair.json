@@ -13,5 +13,6 @@
     "tags": {
         "shop": "motorcycle_repair"
     },
-    "name": "Motorcycle Repair Shop"
+    "plural": "motorcycle repair shops",
+    "name": "motorcycle repair shop"
 }

@@ -12,5 +12,6 @@
         "rifles",
         "traps"
     ],
-    "name": "Hunting Shop"
+    "plural": "hunting shops",
+    "name": "hunting shop"
 }

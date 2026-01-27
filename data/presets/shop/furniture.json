@@ -8,5 +8,6 @@
     "tags": {
         "shop": "furniture"
     },
-    "name": "Furniture Store"
+    "plural": "furniture stores",
+    "name": "furniture store"
 }

@@ -17,5 +17,6 @@
     "tags": {
         "shop": "musical_instrument"
     },
-    "name": "Musical Instrument Store"
+    "plural": "musical instrument stores",
+    "name": "musical instrument store"
 }

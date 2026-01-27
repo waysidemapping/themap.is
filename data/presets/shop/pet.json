@@ -12,5 +12,6 @@
     "tags": {
         "shop": "pet"
     },
-    "name": "Pet Store"
+    "plural": "pet stores",
+    "name": "pet store"
 }

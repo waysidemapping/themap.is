@@ -11,5 +11,6 @@
     "tags": {
         "shop": "telecommunication"
     },
-    "name": "Telecom Retail Store"
+    "plural": "telecom stores",
+    "name": "telecom store"
 }

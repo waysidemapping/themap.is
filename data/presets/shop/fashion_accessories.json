@@ -17,5 +17,6 @@
         "wallet",
         "watch"
     ],
-    "name": "Fashion Accessories Store"
+    "plural": "fashion accessories stores",
+    "name": "fashion accessories store"
 }

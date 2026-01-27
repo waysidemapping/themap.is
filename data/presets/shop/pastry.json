@@ -9,5 +9,10 @@
         "cookies",
         "patisserie"
     ],
-    "name": "Pastry Shop"
+    "groups": [
+        "food",
+        "stores"
+    ],
+    "plural": "pastry shops",
+    "name": "pastry shop"
 }

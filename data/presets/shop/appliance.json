@@ -19,5 +19,6 @@
     "tags": {
         "shop": "appliance"
     },
-    "name": "Appliance Store"
+    "plural": "appliance stores",
+    "name": "appliance store"
 }

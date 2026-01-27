@@ -10,5 +10,6 @@
     "tags": {
         "shop": "video"
     },
-    "name": "Video Store"
+    "plural": "video stores",
+    "name": "video store"
 }

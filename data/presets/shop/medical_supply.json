@@ -2,5 +2,6 @@
     "tags": {
         "shop": "medical_supply"
     },
-    "name": "Medical Supply Store"
+    "plural": "medical supply stores",
+    "name": "medical supply store"
 }

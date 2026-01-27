@@ -17,7 +17,12 @@
         "shop": "hairdresser",
         "hairdresser": "barber"
     },
-    "name": "Barber",
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "plural": "barber shops",
+    "name": "barber shop",
     "reference": {
         "key": "hairdresser",
         "value": "barber"

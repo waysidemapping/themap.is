@@ -3,5 +3,6 @@
     "tags": {
         "shop": "window_blind"
     },
-    "name": "Window Blind Store"
+    "plural": "window blind stores",
+    "name": "window blind store"
 }

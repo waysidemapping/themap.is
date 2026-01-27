@@ -8,5 +8,10 @@
     "tags": {
         "shop": "hairdresser"
     },
-    "name": "Hairdresser"
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "plural": "hair salons",
+    "name": "hair salon"
 }

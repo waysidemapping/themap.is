@@ -2,5 +2,6 @@
     "tags": {
         "shop": "cheese"
     },
-    "name": "Cheese Store"
+    "plural": "cheese shop",
+    "name": "cheese shops"
 }

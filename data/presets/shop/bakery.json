@@ -1,5 +1,5 @@
 {
-    "icon": "croissant",
+    "icon": "bread",
     "tags": {
         "shop": "bakery"
     },
@@ -8,5 +8,10 @@
         "cakes",
         "rolls"
     ],
-    "name": "Bakery"
+    "groups": [
+        "food",
+        "stores"
+    ],
+    "plural": "bakeries",
+    "name": "bakery"
 }

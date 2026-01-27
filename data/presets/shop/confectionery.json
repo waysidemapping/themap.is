@@ -11,5 +11,6 @@
     "tags": {
         "shop": "confectionery"
     },
-    "name": "Candy Store"
+    "plural": "candy stores",
+    "name": "candy store"
 }

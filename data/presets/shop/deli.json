@@ -1,4 +1,5 @@
 {
+    "icon": "jar",
     "terms": [
         "Specialty Food Store",
         "Gourmet Food Store",
@@ -9,5 +10,6 @@
     "tags": {
         "shop": "deli"
     },
-    "name": "Delicatessen"
+    "plural": "delicatessens",
+    "name": "delicatessen"
 }

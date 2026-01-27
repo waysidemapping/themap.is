@@ -17,5 +17,6 @@
     "tags": {
         "shop": "spices"
     },
-    "name": "Spice Shop"
+    "plural": "spice shops",
+    "name": "spice shop"
 }

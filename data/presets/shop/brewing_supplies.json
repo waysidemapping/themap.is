@@ -8,5 +8,6 @@
     "tags": {
         "shop": "brewing_supplies"
     },
-    "name": "Brewing Supply Store"
+    "plural": "brewing supply stores",
+    "name": "brewing supply store"
 }

@@ -7,5 +7,6 @@
     "tags": {
         "shop": "florist"
     },
-    "name": "Florist"
+    "plural": "florist shops",
+    "name": "florist shop"
 }

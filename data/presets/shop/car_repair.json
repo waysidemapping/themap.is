@@ -17,5 +17,6 @@
     "tags": {
         "shop": "car_repair"
     },
-    "name": "Car Repair Shop"
+    "plural": "car repair shops",
+    "name": "car repair shop"
 }

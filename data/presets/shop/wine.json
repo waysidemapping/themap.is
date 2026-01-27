@@ -3,5 +3,6 @@
     "tags": {
         "shop": "wine"
     },
-    "name": "Wine Shop"
+    "plural": "wine stores",
+    "name": "wine store"
 }

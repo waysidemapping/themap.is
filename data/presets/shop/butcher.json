@@ -13,5 +13,6 @@
     "tags": {
         "shop": "butcher"
     },
-    "name": "Butcher"
+    "plural": "butcher shops",
+    "name": "butcher shop"
 }

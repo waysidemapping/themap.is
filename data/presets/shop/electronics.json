@@ -16,5 +16,6 @@
     "tags": {
         "shop": "electronics"
     },
-    "name": "Electronics Store"
+    "plural": "electronics stores",
+    "name": "electronics store"
 }

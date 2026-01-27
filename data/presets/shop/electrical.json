@@ -12,5 +12,6 @@
     "tags": {
         "shop": "electrical"
     },
-    "name": "Electrical Equipment Store"
+    "plural": "electrical equipment stores",
+    "name": "electrical equipment store"
 }

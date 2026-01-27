@@ -9,5 +9,6 @@
     "tags": {
         "shop": "pet_grooming"
     },
-    "name": "Pet Groomer"
+    "plural": "pet groomers",
+    "name": "pet groomer"
 }

@@ -2,5 +2,10 @@
     "tags": {
         "shop": "honey"
     },
-    "name": "Honey Store"
+    "groups": [
+        "bees",
+        "stores"
+    ],
+    "plural": "honey stores",
+    "name": "honey store"
 }

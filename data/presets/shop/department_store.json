@@ -2,5 +2,6 @@
     "tags": {
         "shop": "department_store"
     },
-    "name": "Department Store"
+    "plural": "department stores",
+    "name": "department store"
 }

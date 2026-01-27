@@ -10,5 +10,6 @@
     "tags": {
         "shop": "hifi"
     },
-    "name": "Hifi Store"
+    "plural": "hifi stores",
+    "name": "hifi store"
 }

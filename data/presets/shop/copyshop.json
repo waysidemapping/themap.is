@@ -7,5 +7,6 @@
         "print",
         "scan"
     ],
-    "name": "Copy Store"
+    "plural": "copy shops",
+    "name": "copy shop"
 }

@@ -13,5 +13,6 @@
     "tags": {
         "shop": "farm"
     },
-    "name": "Farm Stand"
+    "plural": "farm stands",
+    "name": "farm stand"
 }

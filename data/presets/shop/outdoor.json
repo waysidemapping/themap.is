@@ -12,5 +12,6 @@
     "tags": {
         "shop": "outdoor"
     },
-    "name": "Outdoors Store"
+    "plural": "outdoors stores",
+    "name": "outdoors store"
 }

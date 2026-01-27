@@ -2,5 +2,6 @@
     "tags": {
         "shop": "paint"
     },
-    "name": "Paint Store"
+    "plural": "paint stores",
+    "name": "paint store"
 }

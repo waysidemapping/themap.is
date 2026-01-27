@@ -12,8 +12,6 @@
         "storage rental",
         "storage units"
     ],
-    "groups": [
-        "storage"
-    ],
-    "name": "Storage Rental"
+    "plural": "storage rentals",
+    "name": "storage rental"
 }

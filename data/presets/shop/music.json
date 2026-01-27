@@ -12,5 +12,6 @@
     "tags": {
         "shop": "music"
     },
-    "name": "Music Store"
+    "plural": "music stores",
+    "name": "music store"
 }

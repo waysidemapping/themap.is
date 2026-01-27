@@ -7,5 +7,6 @@
         "cigarettes",
         "cigars"
     ],
-    "name": "Tobacco Shop"
+    "plural": "tobacco stores",
+    "name": "tobacco store"
 }

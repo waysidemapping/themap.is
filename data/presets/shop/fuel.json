@@ -3,6 +3,7 @@
     "tags": {
         "shop": "fuel"
     },
-    "name": "Fuel Shop",
+    "plural": "fuel stores",
+    "name": "fuel store",
     "matchScore": 0.5
 }

@@ -11,5 +11,6 @@
     "tags": {
         "shop": "gas"
     },
-    "name": "Bottled Gas Shop"
+    "plural": "bottled gas stores",
+    "name": "bottled gas store"
 }

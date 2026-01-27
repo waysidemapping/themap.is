@@ -9,5 +9,6 @@
     "tags": {
         "shop": "funeral_directors"
     },
-    "name": "Funeral Home"
+    "plural": "funeral homes",
+    "name": "funeral home"
 }

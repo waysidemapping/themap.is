@@ -3,5 +3,6 @@
     "tags": {
         "shop": "tiles"
     },
-    "name": "Tile Shop"
+    "plural": "tile stores",
+    "name": "tile store"
 }

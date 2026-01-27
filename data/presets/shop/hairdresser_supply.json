@@ -10,5 +10,6 @@
     "tags": {
         "shop": "hairdresser_supply"
     },
-    "name": "Hairdresser Supply Store"
+    "plural": "hairdresser supply stores",
+    "name": "hairdresser supply store"
 }

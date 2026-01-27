@@ -3,7 +3,8 @@
     "tags": {
         "shop": "antiques"
     },
-    "name": "Antique Shop",
+    "plural": "antiques stores",
+    "name": "antiques store",
     "terms": [
         "Antique Store",
         "Antiques Shop",

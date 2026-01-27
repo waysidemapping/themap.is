@@ -16,5 +16,6 @@
     "tags": {
         "shop": "collector"
     },
-    "name": "Collectibles Shop"
+    "plural": "collectibles shops",
+    "name": "collectibles shop"
 }

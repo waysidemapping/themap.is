@@ -8,5 +8,6 @@
     "tags": {
         "shop": "art"
     },
-    "name": "Art Store"
+    "plural": "art stores",
+    "name": "art store"
 }

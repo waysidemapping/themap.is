@@ -12,5 +12,10 @@
         "key": "leisure",
         "value": "tanning_salon"
     },
-    "name": "Tanning Salon"
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "plural": "tanning salons",
+    "name": "tanning salon"
 }

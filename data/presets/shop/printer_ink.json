@@ -8,5 +8,6 @@
     "tags": {
         "shop": "printer_ink"
     },
-    "name": "Printer Ink Store"
+    "plural": "printer ink stores",
+    "name": "printer ink store"
 }

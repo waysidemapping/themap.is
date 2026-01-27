@@ -8,5 +8,6 @@
     "tags": {
         "shop": "optician"
     },
-    "name": "Optician"
+    "plural": "optician shops",
+    "name": "optician shop"
 }

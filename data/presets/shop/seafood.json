@@ -3,7 +3,8 @@
     "tags": {
         "shop": "seafood"
     },
-    "name": "Seafood Shop",
+    "plural": "seafood shops",
+    "name": "seafood shop",
     "terms": [
         "Fishmonger"
     ]

@@ -6,5 +6,6 @@
     "terms": [
         "drinks"
     ],
-    "name": "Beverage Store"
+    "plural": "beverage stores",
+    "name": "beverage store"
 }

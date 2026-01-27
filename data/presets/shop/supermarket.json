@@ -11,5 +11,6 @@
     "tags": {
         "shop": "supermarket"
     },
-    "name": "Supermarket"
+    "plural": "supermarkets",
+    "name": "supermarket"
 }

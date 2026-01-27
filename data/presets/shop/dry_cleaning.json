@@ -3,5 +3,6 @@
     "tags": {
         "shop": "dry_cleaning"
     },
-    "name": "Dry Cleaner"
+    "plural": "dry cleaners",
+    "name": "dry cleaner"
 }

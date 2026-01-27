@@ -3,5 +3,6 @@
     "tags": {
         "shop": "leather"
     },
-    "name": "Leather Store"
+    "plural": "leather stores",
+    "name": "leather store"
 }

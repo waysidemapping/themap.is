@@ -18,5 +18,6 @@
     "tags": {
         "shop": "jewelry"
     },
-    "name": "Jewelry Store"
+    "plural": "jewelry stores",
+    "name": "jewelry store"
 }

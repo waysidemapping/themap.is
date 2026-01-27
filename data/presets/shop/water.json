@@ -10,5 +10,6 @@
     "tags": {
         "shop": "water"
     },
-    "name": "Drinking Water Shop"
+    "plural": "drinking water stores",
+    "name": "drinking water store"
 }

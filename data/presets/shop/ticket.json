@@ -7,5 +7,6 @@
         "Ticket Booth",
         "box office"
     ],
-    "name": "Ticket Seller"
+    "plural": "ticket sellers",
+    "name": "ticket seller"
 }

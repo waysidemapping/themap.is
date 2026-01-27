@@ -10,5 +10,6 @@
     "tags": {
         "shop": "lighting"
     },
-    "name": "Lighting Store"
+    "plural": "lighting stores",
+    "name": "lighting store"
 }

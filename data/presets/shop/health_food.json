@@ -14,5 +14,6 @@
     "tags": {
         "shop": "health_food"
     },
-    "name": "Health Food Store"
+    "plural": "health food stores",
+    "name": "health food store"
 }

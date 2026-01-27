@@ -7,5 +7,6 @@
     "tags": {
         "shop": "wholesale"
     },
-    "name": "Wholesale Store"
+    "plural": "wholesale stores",
+    "name": "wholesale store"
 }

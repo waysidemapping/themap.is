@@ -11,5 +11,6 @@
         "rehabilitate",
         "tinker"
     ],
-    "name": "Repair Shop"
+    "plural": "repair shops",
+    "name": "repair shop"
 }

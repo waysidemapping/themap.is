@@ -8,5 +8,10 @@
     "tags": {
         "shop": "beauty"
     },
-    "name": "Beauty Shop"
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "plural": "beauty salons",
+    "name": "beauty salon"
 }

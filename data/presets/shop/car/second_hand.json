@@ -1,5 +1,4 @@
 {
-    "icon": "car",
     "terms": [
         "Car Dealer",
         "automobile",
@@ -7,8 +6,9 @@
         "vehicle"
     ],
     "tags": {
-        "shop": "car"
+        "shop": "car",
+        "second_hand": "only"
     },
-    "plural": "car dealerships",
-    "name": "car dealership"
+    "plural": "used car dealerships",
+    "name": "used car dealership"
 }

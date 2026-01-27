@@ -12,5 +12,6 @@
     "tags": {
         "shop": "military_surplus"
     },
-    "name": "Military Surplus Store"
+    "plural": "military surplus stores",
+    "name": "military surplus store"
 }

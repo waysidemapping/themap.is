@@ -1,4 +1,5 @@
 {
+    "icon": "camera",
     "terms": [
         "camera",
         "film",
@@ -8,5 +9,6 @@
     "tags": {
         "shop": "photo"
     },
-    "name": "Photography Store"
+    "plural": "photography stores",
+    "name": "photography store"
 }

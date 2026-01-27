@@ -9,5 +9,6 @@
         "small-town store",
         "village shop"
     ],
-    "name": "General Store"
+    "plural": "general stores",
+    "name": "general store"
 }

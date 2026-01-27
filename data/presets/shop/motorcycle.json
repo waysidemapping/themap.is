@@ -6,5 +6,6 @@
     "tags": {
         "shop": "motorcycle"
     },
-    "name": "Motorcycle Dealership"
+    "plural": "motorcycle dealerships",
+    "name": "motorcycle dealership"
 }

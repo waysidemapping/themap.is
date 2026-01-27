@@ -7,5 +7,10 @@
         "make-up",
         "makeup"
     ],
-    "name": "Cosmetics Store"
+    "groups": [
+        "beauty",
+        "stores"
+    ],
+    "plural": "cosmetics stores",
+    "name": "cosmetics store"
 }

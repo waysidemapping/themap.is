@@ -2,7 +2,8 @@
     "tags": {
         "shop": "gold_buyer"
     },
-    "name": "Gold buyer",
+    "plural": "gold buyers",
+    "name": "gold buyer",
     "terms": [
         "Gold trader"
     ]

@@ -1,4 +1,5 @@
 {
+    "icon": "car_battery",
     "terms": [
         "automobile",
         "automotive"
@@ -6,5 +7,6 @@
     "tags": {
         "shop": "car_parts"
     },
-    "name": "Car Parts Store"
+    "plural": "auto parts stores",
+    "name": "auto parts store"
 }

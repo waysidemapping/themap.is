@@ -12,5 +12,6 @@
         "home improvement",
         "tools"
     ],
-    "name": "Hardware Store"
+    "plural": "hardware stores",
+    "name": "hardware store"
 }

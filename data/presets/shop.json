@@ -14,6 +14,7 @@
     "groups": [
         "stores"
     ],
+    "autoTheme": false,
     "name": "Shop",
     "matchScore": 0.7
 }

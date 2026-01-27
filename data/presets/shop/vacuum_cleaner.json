@@ -3,5 +3,6 @@
     "tags": {
         "shop": "vacuum_cleaner"
     },
-    "name": "Vacuum Cleaner Store"
+    "plural": "vacuum cleaner stores",
+    "name": "vacuum cleaner store"
 }

@@ -7,5 +7,6 @@
     "tags": {
         "shop": "fabric"
     },
-    "name": "Fabric Store"
+    "plural": "fabric stores",
+    "name": "fabric store"
 }

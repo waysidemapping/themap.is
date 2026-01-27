@@ -2,5 +2,6 @@
     "tags": {
         "shop": "mobile_phone"
     },
-    "name": "Mobile Phone Store"
+    "plural": "mobile phone stores",
+    "name": "mobile phone store"
 }

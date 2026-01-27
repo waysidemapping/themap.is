@@ -2,5 +2,6 @@
     "tags": {
         "shop": "doors"
     },
-    "name": "Door Shop"
+    "plural": "door stores",
+    "name": "door store"
 }

@@ -3,5 +3,6 @@
     "tags": {
         "shop": "tyres"
     },
-    "name": "Tire Store"
+    "plural": "tire stores",
+    "name": "tire store"
 }

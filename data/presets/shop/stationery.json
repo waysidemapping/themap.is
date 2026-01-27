@@ -8,5 +8,6 @@
     "tags": {
         "shop": "stationery"
     },
-    "name": "Stationery Store"
+    "plural": "stationery stores",
+    "name": "stationery store"
 }

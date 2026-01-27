@@ -13,5 +13,6 @@
         "snacks",
         "sweets"
     ],
-    "name": "Kiosk"
+    "plural": "kiosks",
+    "name": "kiosk"
 }

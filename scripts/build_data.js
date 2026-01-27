@@ -5,6 +5,7 @@ const presets = {};
 
 const allowedKeys = {
   "name":{required: true},
+  "autoTheme": {},
   "plural":{},
   "tags":{required: true},
   "geometry":{required: true},

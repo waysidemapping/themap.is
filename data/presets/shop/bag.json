@@ -6,5 +6,6 @@
     "tags": {
         "shop": "bag"
     },
-    "name": "Bag / Luggage Store"
+    "plural": "bag stores",
+    "name": "bag store"
 }

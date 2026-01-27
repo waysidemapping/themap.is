@@ -2,5 +2,6 @@
     "tags": {
         "shop": "catalogue"
     },
-    "name": "Catalog Shop"
+    "plural": "catalog showrooms",
+    "name": "catalog showroom"
 }

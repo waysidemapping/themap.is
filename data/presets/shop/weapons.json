@@ -9,5 +9,6 @@
     "tags": {
         "shop": "weapons"
     },
-    "name": "Weapon Shop"
+    "plural": "weapon stores",
+    "name": "weapon store"
 }

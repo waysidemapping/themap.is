@@ -10,5 +10,6 @@
     "tags": {
         "shop": "agrarian"
     },
-    "name": "Farm Supply Shop"
+    "plural": "farm supply stores",
+    "name": "farm supply store"
 }

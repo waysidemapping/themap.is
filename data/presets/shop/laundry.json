@@ -3,5 +3,6 @@
     "tags": {
         "shop": "laundry"
     },
-    "name": "Laundry"
+    "plural": "laundries",
+    "name": "laundry"
 }

@@ -1,5 +1,5 @@
 {
-    "icon": "fish-barbed_hook-under_ice",
+    "icon": "fish-barbed_hook",
     "tags": {
         "shop": "fishing"
     },
@@ -14,5 +14,6 @@
         "rod",
         "tackle"
     ],
-    "name": "Fishing Shop"
+    "plural": "fishing shops",
+    "name": "fishing shop"
 }

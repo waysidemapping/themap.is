@@ -15,5 +15,6 @@
         "slippers",
         "sneakers"
     ],
-    "name": "Shoe Store"
+    "plural": "shoe stores",
+    "name": "shoe store"
 }

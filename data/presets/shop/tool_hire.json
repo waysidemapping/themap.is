@@ -3,5 +3,6 @@
     "tags": {
         "shop": "tool_hire"
     },
-    "name": "Tool Rental"
+    "plural": "tool rental shops",
+    "name": "tool rental shop"
 }

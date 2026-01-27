@@ -6,5 +6,6 @@
         "key": "shop",
         "value": "rice"
     },
-    "name": "Rice Store"
+    "plural": "rice stores",
+    "name": "rice store"
 }
