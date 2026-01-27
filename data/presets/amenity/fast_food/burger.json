@@ -1,5 +1,6 @@
 {
-    "name": "Burger Fast Food",
+    "name": "burger shop",
+    "plural": "burger shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "burger"

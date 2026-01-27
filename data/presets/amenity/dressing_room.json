@@ -1,5 +1,6 @@
 {
-    "name": "Changing Room",
+    "name": "changing room",
+    "plural": "changing rooms",
     "tags": {
         "amenity": "dressing_room"
     },

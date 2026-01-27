@@ -1,5 +1,6 @@
 {
-    "name": "Truck Scale",
+    "name": "truck scale",
+    "plural": "truck scales",
     "tags": {
         "amenity": "weighbridge"
     },

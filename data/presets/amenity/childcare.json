@@ -1,5 +1,6 @@
 {
-    "name": "Nursery / Childcare",
+    "name": "childcare center",
+    "plural": "childcare centers",
     "tags": {
         "amenity": "childcare"
     },

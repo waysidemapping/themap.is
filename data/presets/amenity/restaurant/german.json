@@ -1,5 +1,6 @@
 {
-    "name": "German Restaurant",
+    "name": "German restaurant",
+    "plural": "German restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "german"

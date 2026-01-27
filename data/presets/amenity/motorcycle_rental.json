@@ -1,5 +1,11 @@
 {
-    "name": "Motorcycle Rental",
+    "name": "motorcycle rental",
+    "plural": "motorcycle rental",
+    "groups": [
+        "motorcycles",
+        "vehicle rental",
+        "rental"
+    ],
     "tags": {
         "amenity": "motorcycle_rental"
     },

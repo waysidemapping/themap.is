@@ -1,5 +1,6 @@
 {
     "name": "La Luz del Mundo Temple",
+    "plural": "La Luz del Mundo Temples",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "christian",

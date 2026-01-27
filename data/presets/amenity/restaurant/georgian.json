@@ -1,5 +1,6 @@
 {
-    "name": "Georgian Restaurant",
+    "name": "Georgian restaurant",
+    "plural": "Georgian restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "georgian"

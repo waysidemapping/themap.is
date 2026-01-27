@@ -1,5 +1,6 @@
 {
-    "name": "Marketplace",
+    "name": "marketplace",
+    "plural": "marketplaces",
     "tags": {
         "amenity": "marketplace"
     },

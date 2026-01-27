@@ -1,5 +1,6 @@
 {
-    "name": "Mexican Restaurant",
+    "name": "Mexican restaurant",
+    "plural": "Mexican restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "mexican"

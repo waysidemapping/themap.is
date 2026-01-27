@@ -1,5 +1,6 @@
 {
-    "name": "Chicken Wings Fast Food",
+    "name": "chicken wing shop",
+    "plural": "chicken wing shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "wings"

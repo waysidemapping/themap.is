@@ -1,5 +1,6 @@
 {
-    "name": "Telephone",
+    "name": "telephone",
+    "plural": "telephones",
     "tags": {
         "amenity": "telephone"
     },
@@ -10,5 +11,6 @@
         "phone booth",
         "public phone",
         "public telephone"
-    ]
+    ],
+    "icon": "phone"
 }

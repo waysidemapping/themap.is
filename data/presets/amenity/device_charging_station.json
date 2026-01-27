@@ -1,5 +1,6 @@
 {
-    "name": "Device Charging Station",
+    "name": "device charging station",
+    "plural": "device charging stations",
     "tags": {
         "amenity": "device_charging_station"
     },

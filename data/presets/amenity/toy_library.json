@@ -1,7 +1,8 @@
 {
-    "name": "Toy Library",
+    "name": "toy library",
+    "plural": "toy libraries",
     "groups": [
-        "free_stuff"
+        "free stuff"
     ],
     "tags": {
         "amenity": "toy_library"

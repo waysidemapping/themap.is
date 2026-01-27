@@ -1,5 +1,6 @@
 {
-    "name": "Fish & Chips Fast Food",
+    "name": "fish and chips shop",
+    "plural": "fish and chips shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "fish_and_chips"

@@ -1,5 +1,6 @@
 {
-    "name": "Bicycle Parking",
+    "name": "bike parking",
+    "plural": "bike parking",
     "tags": {
         "amenity": "bicycle_parking"
     },

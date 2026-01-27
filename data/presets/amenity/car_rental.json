@@ -1,5 +1,10 @@
 {
-    "name": "Car Rental",
+    "name": "car rental",
+    "plural": "car rental",
+    "groups": [
+        "vehicle rental",
+        "rental"
+    ],
     "tags": {
         "amenity": "car_rental"
     },

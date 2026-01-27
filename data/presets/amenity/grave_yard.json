@@ -1,5 +1,6 @@
 {
-    "name": "Graveyard",
+    "name": "graveyard",
+    "plural": "graveyards",
     "tags": {
         "amenity": "grave_yard"
     },

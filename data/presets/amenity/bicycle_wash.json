@@ -1,5 +1,6 @@
 {
-    "name": "Bicycle Wash",
+    "name": "bike wash",
+    "plural": "bike washes",
     "tags": {
         "amenity": "bicycle_wash"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "RV Drinking Water",
+    "name": "RV drinking water",
+    "plural": "RV drinking water",
     "tags": {
         "amenity": "water_point"
     },

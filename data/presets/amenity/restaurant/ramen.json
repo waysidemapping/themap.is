@@ -1,5 +1,6 @@
 {
-    "name": "Ramen Restaurant",
+    "name": "ramen restaurant",
+    "plural": "ramen restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "ramen"

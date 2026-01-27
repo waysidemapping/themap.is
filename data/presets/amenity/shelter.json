@@ -1,5 +1,7 @@
 {
-    "name": "Shelter",
+    "name": "shelter",
+    "plural": "shelters",
+    "autoTheme": false,
     "tags": {
         "amenity": "shelter"
     },

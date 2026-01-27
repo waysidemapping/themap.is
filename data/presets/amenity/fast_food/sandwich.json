@@ -1,5 +1,6 @@
 {
-    "name": "Sandwich Fast Food",
+    "name": "sandwich shop",
+    "plural": "sandwich shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "sandwich"

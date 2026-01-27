@@ -1,5 +1,6 @@
 {
-    "name": "Events Venue",
+    "name": "event venue",
+    "plural": "event venues",
     "tags": {
         "amenity": "events_venue"
     },

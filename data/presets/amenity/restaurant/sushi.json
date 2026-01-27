@@ -1,5 +1,6 @@
 {
-    "name": "Sushi Restaurant",
+    "name": "sushi restaurant",
+    "plural": "sushi restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "sushi"

@@ -1,5 +1,6 @@
 {
-    "name": "Animal Watering Place",
+    "name": "animal watering place",
+    "plural": "animal watering places",
     "tags": {
         "amenity": "watering_place"
     },

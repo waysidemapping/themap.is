@@ -1,5 +1,6 @@
 {
-    "name": "Ukrainian Restaurant",
+    "name": "Ukrainian restaurant",
+    "plural": "Ukrainian restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "ukrainian"

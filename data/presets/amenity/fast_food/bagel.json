@@ -1,5 +1,6 @@
 {
-    "name": "Bagel Fast Food",
+    "name": "bagel shop",
+    "plural": "bagel shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "bagel"

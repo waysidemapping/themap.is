@@ -1,5 +1,6 @@
 {
-    "name": "Pizza Restaurant",
+    "name": "Pizza restaurant",
+    "plural": "pizza restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "pizza"

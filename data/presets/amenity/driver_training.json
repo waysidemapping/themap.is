@@ -1,5 +1,6 @@
 {
-    "name": "Driver Training Grounds",
+    "name": "driver training grounds",
+    "plural": "driver training grounds",
     "tags": {
         "amenity": "driver_training"
     },

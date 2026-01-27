@@ -1,5 +1,6 @@
 {
-    "name": "Animal Shelter",
+    "name": "animal shelter",
+    "plural": "animal shelters",
     "tags": {
         "amenity": "animal_shelter"
     },

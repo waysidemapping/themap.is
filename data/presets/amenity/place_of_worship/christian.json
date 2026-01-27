@@ -1,5 +1,6 @@
 {
-    "name": "Christian Church",
+    "name": "Christian place of worship",
+    "plural": "Christian places of worship",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "christian"

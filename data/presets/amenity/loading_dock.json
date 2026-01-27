@@ -1,5 +1,6 @@
 {
-    "name": "Loading Dock",
+    "name": "loading dock",
+    "plural": "loading docks",
     "tags": {
         "amenity": "loading_dock"
     },

@@ -1,9 +1,10 @@
 {
-    "name": "Compressed Air",
+    "name": "air compressor",
+    "plural": "air compressors",
     "tags": {
         "amenity": "compressed_air"
     },
     "terms": [
-        "air compressor"
+        "compressed air"
     ]
 }

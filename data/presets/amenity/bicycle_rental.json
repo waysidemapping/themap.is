@@ -1,7 +1,9 @@
 {
-    "name": "Bicycle Rental",
-    "plural": "bicycle rental",
+    "name": "bike rental",
+    "plural": "bike rental",
     "groups": [
+        "vehicle rental",
+        "rental",
         "transport"
     ],
     "tags": {

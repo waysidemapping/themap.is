@@ -1,5 +1,6 @@
 {
-    "name": "Hot Dog Fast Food",
+    "name": "hot dog shop",
+    "plural": "hot dog shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "hot_dog"

@@ -1,5 +1,6 @@
 {
-    "name": "Parking Space",
+    "name": "parking space",
+    "plural": "parking spaces",
     "tags": {
         "amenity": "parking_space"
     },

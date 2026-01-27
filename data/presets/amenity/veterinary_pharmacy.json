@@ -1,5 +1,6 @@
 {
-    "name": "Veterinary Pharmacy",
+    "name": "veterinary pharmacy",
+    "plural": "veterinary pharmacies",
     "tags": {
         "amenity": "veterinary_pharmacy"
     },

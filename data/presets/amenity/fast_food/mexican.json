@@ -1,5 +1,6 @@
 {
-    "name": "Mexican Fast Food",
+    "name": "Mexican fast food",
+    "plural": "Mexican fast food",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "mexican"

@@ -1,5 +1,6 @@
 {
-    "name": "Recycling Bin",
+    "name": "recycling bin",
+    "plural": "recycling bins",
     "tags": {
         "amenity": "recycling",
         "recycling_type": "container"

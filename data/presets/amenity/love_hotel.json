@@ -1,5 +1,6 @@
 {
-    "name": "Love Hotel",
+    "name": "love hotel",
+    "plural": "love hotels",
     "tags": {
         "amenity": "love_hotel"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Muslim Mosque",
+    "name": "Muslim place of worship",
+    "plural": "Muslim places of worship",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "muslim"

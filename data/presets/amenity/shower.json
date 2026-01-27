@@ -1,5 +1,6 @@
 {
-    "name": "Shower",
+    "name": "shower",
+    "plural": "showers",
     "tags": {
         "amenity": "shower"
     },

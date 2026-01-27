@@ -1,5 +1,6 @@
 {
-    "name": "Thai Restaurant",
+    "name": "Thai restaurant",
+    "plural": "Thai restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "thai"
@@ -22,5 +23,6 @@
         "grill",
         "lunch",
         "table"
-    ]
+    ],
+    "icon": "noodle_bowl-chopsticks"
 }

@@ -1,5 +1,6 @@
 {
-    "name": "Dog Toilet",
+    "name": "dog toilet",
+    "plural": "dog toilets",
     "tags": {
         "amenity": "dog_toilet"
     },

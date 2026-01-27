@@ -1,9 +1,11 @@
 {
-    "name": "Smoking Area",
+    "name": "designated smoking area",
+    "plural": "designated smoking areas",
     "tags": {
         "amenity": "smoking_area"
     },
     "terms": [
         "smokers' area"
-    ]
+    ],
+    "icon": "cigarette"
 }

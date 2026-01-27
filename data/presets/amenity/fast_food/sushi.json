@@ -1,0 +1,13 @@
+{
+    "name": "sushi shop",
+    "plural": "sushi shops",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "sushi"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "sushi"
+    },
+    "icon": "temaki"
+}

@@ -1,5 +1,6 @@
 {
-    "name": "Hindu Temple",
+    "name": "Hindu place of worship",
+    "plural": "Hindu places of worship",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "hindu"

@@ -1,5 +1,6 @@
 {
-    "name": "Theater",
+    "name": "theater",
+    "plural": "theaters",
     "tags": {
         "amenity": "theatre"
     },

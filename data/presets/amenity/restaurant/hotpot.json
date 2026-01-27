@@ -1,5 +1,6 @@
 {
-    "name": "Hot Pot Restaurant",
+    "name": "hotpot restaurant",
+    "plural": "hotpot restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "hotpot"
@@ -32,5 +33,5 @@
         "teoswa",
         "yao hon"
     ],
-    "icon": "noodle_bowl-chopsticks"
+    "icon": "bowl-steam"
 }

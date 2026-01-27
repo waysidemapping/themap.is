@@ -1,5 +1,6 @@
 {
-    "name": "Payment Center",
+    "name": "payment center",
+    "plural": "payment centers",
     "tags": {
         "amenity": "payment_centre"
     },

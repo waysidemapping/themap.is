@@ -1,6 +1,8 @@
 {
-    "name": "Courthouse",
+    "name": "courthouse",
+    "plural": "courthouses",
     "tags": {
         "amenity": "courthouse"
-    }
+    },
+    "icon": "balance_scales"
 }

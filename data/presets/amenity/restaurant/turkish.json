@@ -1,5 +1,6 @@
 {
-    "name": "Turkish Restaurant",
+    "name": "Turkish restaurant",
+    "plural": "Turkish restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "turkish"

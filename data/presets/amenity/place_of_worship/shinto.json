@@ -1,5 +1,6 @@
 {
-    "name": "Shinto Shrine",
+    "name": "Shinto place of worship",
+    "plural": "Shinto places of worship",
     "tags": {
         "amenity": "place_of_worship",
         "religion": "shinto"

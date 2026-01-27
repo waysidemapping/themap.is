@@ -1,5 +1,6 @@
 {
-    "name": "Car Sharing Station",
+    "name": "carshare station",
+    "plural": "carshare stations",
     "tags": {
         "amenity": "car_sharing"
     },

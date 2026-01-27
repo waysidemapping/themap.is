@@ -1,5 +1,6 @@
 {
-    "name": "Bicycle Repair Tool Stand",
+    "name": "bike repair tool stand",
+    "plural": "bike repair tool stands",
     "tags": {
         "amenity": "bicycle_repair_station"
     },

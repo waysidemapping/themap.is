@@ -1,10 +1,10 @@
 {
-    "name": "Public Bookcase",
+    "name": "bookcase",
     "plural": "bookcases",
     "groups": [
         "books",
-        "street_furniture",
-        "free_stuff"
+        "street furniture",
+        "free stuff"
     ],
     "tags": {
         "amenity": "public_bookcase"

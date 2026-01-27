@@ -1,9 +1,14 @@
 {
-    "name": "Motorcycle Parking",
+    "name": "motorcycle parking",
+    "plural": "motorcycle parking",
+    "groups": [
+        "motorcycles"
+    ],
     "tags": {
         "amenity": "motorcycle_parking"
     },
     "terms": [
         "motorbike parking"
-    ]
+    ],
+    "icon": "motorcycle-parking_line"
 }

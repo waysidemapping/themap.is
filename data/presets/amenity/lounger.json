@@ -1,5 +1,6 @@
 {
-    "name": "Lounger",
+    "name": "lounger",
+    "plural": "loungers",
     "tags": {
         "amenity": "lounger"
     },

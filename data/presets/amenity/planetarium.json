@@ -1,5 +1,9 @@
 {
-    "name": "Planetarium",
+    "name": "planetarium",
+    "plural": "planetariums",
+    "groups": [
+        "amusement"
+    ],
     "tags": {
         "amenity": "planetarium"
     },

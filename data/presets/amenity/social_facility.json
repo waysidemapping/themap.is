@@ -1,5 +1,6 @@
 {
-    "name": "Social Facility",
+    "name": "social facility",
+    "plural": "social facilities",
     "tags": {
         "amenity": "social_facility"
     },

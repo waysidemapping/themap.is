@@ -1,5 +1,6 @@
 {
-    "name": "Animal Breeding Facility",
+    "name": "animal breeding facility",
+    "plural": "animal breeding facilities",
     "tags": {
         "amenity": "animal_breeding"
     },

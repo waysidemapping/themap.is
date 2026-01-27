@@ -1,5 +1,6 @@
 {
-    "name": "Exposition Center",
+    "name": "exposition center",
+    "plural": "exposition centers",
     "tags": {
         "amenity": "exhibition_centre"
     },

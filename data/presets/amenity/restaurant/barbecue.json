@@ -1,5 +1,6 @@
 {
-    "name": "Barbecue Restaurant",
+    "name": "barbecue restaurant",
+    "plural": "barbecue restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "barbecue"

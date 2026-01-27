@@ -1,5 +1,6 @@
 {
-    "name": "Waste Transfer Station",
+    "name": "waste transfer station",
+    "plural": "waste transfer stations",
     "tags": {
         "amenity": "waste_transfer_station"
     },

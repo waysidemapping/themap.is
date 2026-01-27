@@ -1,5 +1,6 @@
 {
-    "name": "Public Bath",
+    "name": "public bath",
+    "plural": "public baths",
     "tags": {
         "amenity": "public_bath"
     },

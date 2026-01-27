@@ -1,5 +1,6 @@
 {
-    "name": "Seafood Restaurant",
+    "name": "seafood restaurant",
+    "plural": "seafood restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "seafood"

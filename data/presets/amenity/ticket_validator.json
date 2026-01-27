@@ -1,5 +1,6 @@
 {
-    "name": "Ticket Validator",
+    "name": "ticket validator",
+    "plural": "ticket validators",
     "tags": {
         "amenity": "ticket_validator"
     },

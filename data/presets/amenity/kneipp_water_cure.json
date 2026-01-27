@@ -1,5 +1,6 @@
 {
-    "name": "Kneipp Facility",
+    "name": "Kneipp facility",
+    "plural": "Kneipp facilities",
     "tags": {
         "amenity": "kneipp_water_cure"
     },

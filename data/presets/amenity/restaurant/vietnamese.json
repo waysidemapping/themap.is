@@ -1,5 +1,6 @@
 {
-    "name": "Vietnamese Restaurant",
+    "name": "Vietnamese restaurant",
+    "plural": "Vietnamese restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "vietnamese"

@@ -1,10 +1,11 @@
 {
-    "name": "Vehicle Inspection",
+    "name": "vehicle inspection center",
+    "plural": "vehicle inspection centers",
     "tags": {
         "amenity": "vehicle_inspection"
     },
     "terms": [
         "car inspection"
     ],
-    "icon": "car"
+    "icon": "car-checkmark"
 }

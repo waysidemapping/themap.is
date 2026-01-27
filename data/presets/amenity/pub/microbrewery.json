@@ -1,5 +1,6 @@
 {
-    "name": "Brewpub",
+    "name": "brewpub",
+    "plural": "brewpubs",
     "tags": {
         "amenity": "pub",
         "microbrewery": "yes"

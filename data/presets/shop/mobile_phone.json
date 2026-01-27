@@ -3,5 +3,6 @@
     "plural": "mobile phone stores",
     "tags": {
         "shop": "mobile_phone"
-    }
+    },
+    "icon": "mobile_phone"
 }

@@ -1,5 +1,6 @@
 {
-    "name": "Pizza Fast Food",
+    "name": "pizza shop",
+    "plural": "pizza shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "pizza"

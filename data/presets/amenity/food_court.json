@@ -1,5 +1,6 @@
 {
-    "name": "Food Court",
+    "name": "food court",
+    "plural": "food courts",
     "groups": [
         "food"
     ],
@@ -10,5 +11,6 @@
         "fast food",
         "food",
         "restaurant"
-    ]
+    ],
+    "icon": "fork-knife"
 }

@@ -1,5 +1,6 @@
 {
-    "name": "Funeral Service Hall",
+    "name": "funeral service hall",
+    "plural": "funeral service halls",
     "tags": {
         "amenity": "funeral_hall"
     },

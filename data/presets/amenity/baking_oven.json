@@ -1,5 +1,6 @@
 {
-    "name": "Baking Oven",
+    "name": "baking oven",
+    "plural": "baking ovens",
     "tags": {
         "amenity": "baking_oven"
     },

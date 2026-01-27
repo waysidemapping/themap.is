@@ -1,5 +1,7 @@
 {
-    "name": "Parking Garage Entrance / Exit",
+    "name": "parking garage entrance",
+    "plural": "parking garage entrances",
+    "autoTheme": false,
     "tags": {
         "amenity": "parking_entrance"
     },

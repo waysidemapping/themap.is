@@ -1,5 +1,6 @@
 {
-    "name": "Lavoir",
+    "name": "lavoir",
+    "plural": "lavoirs",
     "tags": {
         "amenity": "lavoir"
     },
@@ -7,6 +8,5 @@
         "clothing",
         "laundry",
         "washing"
-    ],
-    "icon": "detergent_bottle"
+    ]
 }

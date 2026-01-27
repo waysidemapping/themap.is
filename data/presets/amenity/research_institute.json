@@ -1,5 +1,6 @@
 {
-    "name": "Research Institute Grounds",
+    "name": "research institute",
+    "plural": "research institutes",
     "tags": {
         "amenity": "research_institute"
     },

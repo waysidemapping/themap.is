@@ -1,5 +1,6 @@
 {
-    "name": "Animal Boarding Facility",
+    "name": "animal boarding facility",
+    "plural": "animal boarding facilities",
     "tags": {
         "amenity": "animal_boarding"
     },

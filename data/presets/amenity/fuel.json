@@ -1,5 +1,6 @@
 {
-    "name": "Gas Station",
+    "name": "gas station",
+    "plural": "gas stations",
     "tags": {
         "amenity": "fuel"
     },

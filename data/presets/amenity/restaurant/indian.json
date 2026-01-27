@@ -1,5 +1,6 @@
 {
-    "name": "Indian Restaurant",
+    "name": "Indian restaurant",
+    "plural": "Indian restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "indian"

@@ -1,5 +1,6 @@
 {
-    "name": "Monastery Grounds",
+    "name": "monastery",
+    "plural": "monasteries",
     "tags": {
         "amenity": "monastery"
     },

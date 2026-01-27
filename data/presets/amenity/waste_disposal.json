@@ -1,5 +1,6 @@
 {
-    "name": "Garbage Dumpster",
+    "name": "garbage dumpster",
+    "plural": "garbage dumpsters",
     "tags": {
         "amenity": "waste_disposal"
     },

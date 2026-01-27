@@ -1,5 +1,6 @@
 {
-    "name": "RV Toilet Disposal",
+    "name": "RV dump station",
+    "plural": "RV dump stations",
     "tags": {
         "amenity": "sanitary_dump_station"
     },

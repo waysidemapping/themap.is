@@ -1,5 +1,6 @@
 {
-    "name": "Strip Club",
+    "name": "strip club",
+    "plural": "strip clubs",
     "groups": [
         "adult_amusement"
     ],
@@ -7,10 +8,10 @@
         "amenity": "stripclub"
     },
     "terms": [
-        "adult*",
+        "adult",
         "cabaret",
-        "gentlemen*",
+        "gentlemen",
         "lap dance",
-        "strip*"
+        "strip"
     ]
 }

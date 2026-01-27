@@ -1,6 +1,10 @@
 {
     "name": "car repair shop",
     "plural": "car repair shops",
+    "groups": [
+        "stores",
+        "vehicle repair shops"
+    ],
     "tags": {
         "shop": "car_repair"
     },

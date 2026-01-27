@@ -1,5 +1,6 @@
 {
-    "name": "Vacuum Cleaning Station",
+    "name": "vacuum cleaning station",
+    "plural": "vacuum cleaning stations",
     "tags": {
         "amenity": "vacuum_cleaner"
     },

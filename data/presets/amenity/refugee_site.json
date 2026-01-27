@@ -1,5 +1,6 @@
 {
-    "name": "Refugee Camp",
+    "name": "refugee camp",
+    "plural": "refugee camps",
     "tags": {
         "amenity": "refugee_site"
     },

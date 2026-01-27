@@ -1,5 +1,6 @@
 {
-    "name": "Vending Machine",
+    "name": "vending machine",
+    "plural": "vending machines",
     "tags": {
         "amenity": "vending_machine"
     },

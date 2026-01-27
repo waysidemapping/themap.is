@@ -1,9 +1,9 @@
 {
-    "name": "Mail Drop Box",
+    "name": "mail drop box",
     "plural": "mail drop boxes",
     "groups": [
         "mail",
-        "street_furniture"
+        "street furniture"
     ],
     "tags": {
         "amenity": "post_box"

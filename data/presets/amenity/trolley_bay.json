@@ -1,5 +1,6 @@
 {
-    "name": "Cart Corral",
+    "name": "shopping cart corral",
+    "plural": "shopping cart corrals",
     "tags": {
         "amenity": "trolley_bay"
     },

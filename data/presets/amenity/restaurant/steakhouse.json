@@ -1,5 +1,6 @@
 {
-    "name": "Steakhouse",
+    "name": "steakhouse",
+    "plural": "steakhouses",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "steak_house"

@@ -1,5 +1,6 @@
 {
-    "name": "Asian Restaurant",
+    "name": "Asian restaurant",
+    "plural": "Asian restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "asian"

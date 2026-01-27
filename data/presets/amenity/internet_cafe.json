@@ -1,5 +1,6 @@
 {
-    "name": "Internet Cafe",
+    "name": "internet café",
+    "plural": "internet cafés",
     "tags": {
         "amenity": "internet_cafe"
     },

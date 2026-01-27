@@ -1,6 +1,11 @@
 {
     "name": "motorcycle repair shop",
     "plural": "motorcycle repair shops",
+    "groups": [
+        "stores",
+        "vehicle repair shops",
+        "motorcycles"
+    ],
     "tags": {
         "shop": "motorcycle_repair"
     },

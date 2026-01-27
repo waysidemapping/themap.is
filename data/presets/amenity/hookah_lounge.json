@@ -1,5 +1,6 @@
 {
-    "name": "Hookah Lounge",
+    "name": "hookah lounge",
+    "plural": "hookah lounges",
     "tags": {
         "amenity": "hookah_lounge"
     },

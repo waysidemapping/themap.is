@@ -1,5 +1,6 @@
 {
-    "name": "Fire Station",
+    "name": "fire station",
+    "plural": "fire stations",
     "tags": {
         "amenity": "fire_station"
     },

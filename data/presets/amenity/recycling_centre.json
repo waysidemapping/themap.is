@@ -1,5 +1,6 @@
 {
-    "name": "Recycling Center",
+    "name": "recycling center",
+    "plural": "recycling centers",
     "tags": {
         "amenity": "recycling",
         "recycling_type": "centre"

@@ -1,5 +1,6 @@
 {
-    "name": "Karaoke Box",
+    "name": "karaoke box",
+    "plural": "karaoke boxes",
     "tags": {
         "amenity": "karaoke_box"
     },

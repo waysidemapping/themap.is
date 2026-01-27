@@ -1,5 +1,6 @@
 {
-    "name": "Grit Bin",
+    "name": "grit bin",
+    "plural": "grit bins",
     "tags": {
         "amenity": "grit_bin"
     },

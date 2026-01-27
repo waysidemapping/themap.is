@@ -1,5 +1,6 @@
 {
-    "name": "Crematorium",
+    "name": "crematorium",
+    "plural": "crematoriums",
     "tags": {
         "amenity": "crematorium"
     },

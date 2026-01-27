@@ -1,5 +1,6 @@
 {
-    "name": "Dojo / Martial Arts Academy",
+    "name": "dojo",
+    "plural": "dojos",
     "tags": {
         "amenity": "dojo"
     },

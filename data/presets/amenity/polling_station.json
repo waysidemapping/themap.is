@@ -1,5 +1,6 @@
 {
-    "name": "Permanent Polling Place",
+    "name": "polling place",
+    "plural": "polling places",
     "tags": {
         "amenity": "polling_station"
     },

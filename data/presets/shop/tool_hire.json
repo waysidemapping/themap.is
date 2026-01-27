@@ -1,6 +1,10 @@
 {
-    "name": "tool rental shop",
-    "plural": "tool rental shops",
+    "name": "tool rental",
+    "plural": "tool rental",
+    "groups": [
+        "stores",
+        "rental"
+    ],
     "tags": {
         "shop": "tool_hire"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Convention Center",
+    "name": "convention center",
+    "plural": "convention centers",
     "tags": {
         "amenity": "conference_centre"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Restroom",
+    "name": "restroom",
+    "plural": "restrooms",
     "tags": {
         "amenity": "toilets"
     },

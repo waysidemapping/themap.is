@@ -1,5 +1,6 @@
 {
-    "name": "Mounted Binoculars",
+    "name": "mounted binoculars",
+    "plural": "mounted binoculars",
     "tags": {
         "amenity": "binoculars"
     },

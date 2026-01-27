@@ -1,5 +1,6 @@
 {
-    "name": "Car Wash",
+    "name": "car wash",
+    "plural": "car washes",
     "tags": {
         "amenity": "car_wash"
     },

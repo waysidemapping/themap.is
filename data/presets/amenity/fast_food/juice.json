@@ -1,5 +1,6 @@
 {
-    "name": "Juice Fast Food",
+    "name": "juice shop",
+    "plural": "juice shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "juice"

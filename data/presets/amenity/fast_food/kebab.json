@@ -1,5 +1,6 @@
 {
-    "name": "Kebab Fast Food",
+    "name": "kebab shop",
+    "plural": "kebab shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "kebab"

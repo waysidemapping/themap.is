@@ -1,6 +1,9 @@
 {
-    "name": "Slipway",
+    "name": "slipway",
     "plural": "slipways",
+    "groups": [
+        "waterway access"
+    ],
     "tags": {
         "leisure": "slipway"
     },

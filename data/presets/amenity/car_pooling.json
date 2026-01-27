@@ -1,5 +1,6 @@
 {
-    "name": "Car Pooling Station",
+    "name": "car pool station",
+    "plural": "car pool stations",
     "tags": {
         "amenity": "car_pooling"
     },

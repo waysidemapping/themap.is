@@ -1,5 +1,6 @@
 {
-    "name": "Currency Exchange",
+    "name": "currency exchange",
+    "plural": "currency exchange",
     "tags": {
         "amenity": "bureau_de_change"
     },

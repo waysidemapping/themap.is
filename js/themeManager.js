@@ -32,13 +32,17 @@ let groupThemes = [
   "books",
   "dams",
   "islands",
-  "free_stuff",
+  "free stuff",
   "gambling",
   "healthcare",
   "lodging",
   "mail",
+  "motorcycles",
   "stores",
-  "street_furniture"
+  "street furniture",
+  "vehicle rental",
+  "vehicle repair shops",
+  "waterway access"
 ];
 
 const featureDefaultsByGroup = {
@@ -130,7 +134,7 @@ const featureDefaultsByGroup = {
 
 async function loadData() {
   const presetsById = await fetch('/dist/presets.json').then(response => response.json());
-  groupThemes.forEach(group => themesById[group] = {features: [{presetGroups: [group]}]});
+  groupThemes.forEach(group => themesById[group.replaceAll(' ', '_')] = {features: [{presetGroups: [group]}]});
   for (let presetId in presetsById) {
     let preset = presetsById[presetId];
     preset.id = presetId;

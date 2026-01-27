@@ -1,5 +1,6 @@
 {
-    "name": "Drinking Water",
+    "name": "water fountain",
+    "plural": "water fountains",
     "tags": {
         "amenity": "drinking_water"
     },

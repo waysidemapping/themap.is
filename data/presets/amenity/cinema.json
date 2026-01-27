@@ -1,5 +1,6 @@
 {
-    "name": "Cinema",
+    "name": "movie theater",
+    "plural": "movie theaters",
     "tags": {
         "amenity": "cinema"
     },

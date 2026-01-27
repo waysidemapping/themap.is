@@ -1,5 +1,6 @@
 {
-    "name": "Boat Storage",
+    "name": "boat storage",
+    "plural": "boat storage",
     "tags": {
         "amenity": "boat_storage"
     },

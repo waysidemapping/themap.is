@@ -1,5 +1,6 @@
 {
-    "name": "Trash Can",
+    "name": "trash can",
+    "plural": "trash cans",
     "tags": {
         "amenity": "waste_basket"
     },

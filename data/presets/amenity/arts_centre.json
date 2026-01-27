@@ -1,5 +1,6 @@
 {
-    "name": "Arts Center",
+    "name": "arts center",
+    "plural": "arts centers",
     "tags": {
         "amenity": "arts_centre"
     },

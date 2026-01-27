@@ -1,5 +1,6 @@
 {
-    "name": "Police",
+    "name": "police station",
+    "plural": "police stations",
     "tags": {
         "amenity": "police"
     },

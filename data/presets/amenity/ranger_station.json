@@ -1,5 +1,6 @@
 {
-    "name": "Ranger Station",
+    "name": "ranger station",
+    "plural": "ranger stations",
     "tags": {
         "amenity": "ranger_station"
     },

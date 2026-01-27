@@ -1,5 +1,6 @@
 {
-    "name": "Donut Fast Food",
+    "name": "donut shop",
+    "plural": "donut shops",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "donut"

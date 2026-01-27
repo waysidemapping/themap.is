@@ -1,5 +1,6 @@
 {
-    "name": "Money Transfer Station",
+    "name": "money transfer station",
+    "plural": "money transfer stations",
     "tags": {
         "amenity": "money_transfer"
     },

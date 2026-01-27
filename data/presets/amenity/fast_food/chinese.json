@@ -1,5 +1,6 @@
 {
-    "name": "Chinese Fast Food",
+    "name": "Chinese fast food",
+    "plural": "Chinese fast food",
     "tags": {
         "amenity": "fast_food",
         "cuisine": "chinese"

@@ -1,5 +1,6 @@
 {
-    "name": "Community Center",
+    "name": "community center",
+    "plural": "community centers",
     "tags": {
         "amenity": "community_centre"
     },

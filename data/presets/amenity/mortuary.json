@@ -1,5 +1,6 @@
 {
-    "name": "Morgue",
+    "name": "morgue",
+    "plural": "morgues",
     "tags": {
         "amenity": "mortuary"
     },
