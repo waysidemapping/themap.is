@@ -132,11 +132,8 @@ async function loadData() {
   for (let presetId in presetsById) {
     let preset = presetsById[presetId];
     preset.id = presetId;
-    if (preset.autoTheme === false) {
-      console.log(preset);
-    }
     if (preset.plural && preset.autoTheme !== false) {
-      // id normalization needs to match those in 404.html
+      // id normalization needs to match those in urlController.js
       let themeId = preset.plural
         .replaceAll(' ', '_')
         .toLowerCase()
