@@ -1,5 +1,7 @@
 {
-    "name": "Path",
+    "name": "path",
+    "plural": "paths",
+    "autoTheme": false,
     "tags": {
         "highway": "path"
     },

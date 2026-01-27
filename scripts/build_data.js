@@ -7,8 +7,8 @@ const allGroups = {};
 const allowedKeys = {
   "name":{required: true},
   "plural":{},
-  "groups":{},
   "autoTheme": {},
+  "groups":{},
   "tags":{required: true},
   "reference":{},
   "geometry":{},
@@ -16,6 +16,8 @@ const allowedKeys = {
   "icon":{},
   "matchScore":{}
 };
+
+const specialCharsRegex = /[^\p{Script=Latin}\p{N} '-]/u;
 
 function readPreset(id, json) {
   if (json.groups) {
@@ -44,6 +46,11 @@ function checkPreset(id, json) {
       console.log(`🛑 Missing icon file "${json.icon}.svg" for ${id}`)
       return false;
     }
+  }
+
+  if (specialCharsRegex.test(json.name)) {
+    console.log(`🛑 Unexpected characters in name "${json.name}" of ${id}`)
+    return false;
   }
 
   if (id.includes("/")) {

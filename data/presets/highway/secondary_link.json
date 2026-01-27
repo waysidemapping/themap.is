@@ -1,5 +1,7 @@
 {
-    "name": "Secondary Link",
+    "name": "secondary link road",
+    "plural": "secondary link roads",
+    "autoTheme": false,
     "tags": {
         "highway": "secondary_link"
     },

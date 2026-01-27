@@ -1,5 +1,6 @@
 {
-    "name": "Turning Loop (Island)",
+    "name": "turning loop",
+    "plural": "turning loops",
     "tags": {
         "highway": "turning_loop"
     },

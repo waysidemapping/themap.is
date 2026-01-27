@@ -1,5 +1,6 @@
 {
-    "name": "Airport",
+    "name": "airport",
+    "plural": "airports",
     "groups": [
         "transport"
     ],

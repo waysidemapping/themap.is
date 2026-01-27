@@ -1,5 +1,6 @@
 {
-    "name": "Military Area",
+    "name": "military area",
+    "plural": "military areas",
     "tags": {
         "landuse": "military"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Information Board",
+    "name": "information board",
+    "plural": "information boards",
     "tags": {
         "information": "board"
     },

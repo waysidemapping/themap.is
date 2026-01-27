@@ -1,5 +1,6 @@
 {
-    "name": "Map",
+    "name": "map",
+    "plural": "maps",
     "tags": {
         "information": "map"
     }

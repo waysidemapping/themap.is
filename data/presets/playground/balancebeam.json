@@ -1,0 +1,13 @@
+{
+    "name": "play balance beam",
+    "plural": "play balance beams",
+    "autoTheme": false,
+    "tags": {
+        "playground": "balancebeam"
+    },
+    "geometry": [
+        "point",
+        "line"
+    ],
+    "icon": "balance_beam-user"
+}

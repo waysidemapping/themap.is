@@ -1,5 +1,6 @@
 {
-    "name": "Route Marker",
+    "name": "route marker",
+    "plural": "route markers",
     "tags": {
         "information": "route_marker"
     },

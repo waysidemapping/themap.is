@@ -1,5 +1,6 @@
 {
-    "name": "Railway Derailer",
+    "name": "train derailer",
+    "plural": "train derailers",
     "tags": {
         "railway": "derail"
     },

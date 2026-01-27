@@ -1,5 +1,6 @@
 {
-    "name": "Bleachers",
+    "name": "bleachers",
+    "plural": "bleachers",
     "tags": {
         "leisure": "bleachers"
     },

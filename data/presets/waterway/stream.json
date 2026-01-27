@@ -1,6 +1,7 @@
 {
     "name": "stream",
     "plural": "streams",
+    "autoTheme": false,
     "tags": {
         "waterway": "stream"
     },

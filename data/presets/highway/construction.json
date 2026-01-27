@@ -1,5 +1,7 @@
 {
-    "name": "Road Under Construction",
+    "name": "road under construction",
+    "plural": "roads under construction",
+    "autoTheme": false,
     "tags": {
         "highway": "construction"
     },

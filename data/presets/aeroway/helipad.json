@@ -1,5 +1,6 @@
 {
-    "name": "Helipad",
+    "name": "helipad",
+    "plural": "helipads",
     "tags": {
         "aeroway": "helipad"
     },

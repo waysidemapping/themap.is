@@ -1,0 +1,14 @@
+{
+    "name": "playground slide",
+    "plural": "playground slides",
+    "autoTheme": false,
+    "tags": {
+        "playground": "slide"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ],
+    "icon": "slide"
+}

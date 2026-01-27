@@ -1,5 +1,6 @@
 {
-    "name": "Trampoline Park",
+    "name": "trampoline park",
+    "plural": "trampoline parks",
     "tags": {
         "leisure": "trampoline_park"
     },

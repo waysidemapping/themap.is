@@ -1,5 +1,6 @@
 {
-    "name": "Gymnasium",
+    "name": "gymnasium",
+    "plural": "gymnasiums",
     "tags": {
         "leisure": "sports_hall"
     },

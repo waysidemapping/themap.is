@@ -1,5 +1,6 @@
 {
-    "name": "Ambulance Station",
+    "name": "ambulance station",
+    "plural": "ambulance stations",
     "tags": {
         "emergency": "ambulance_station"
     },

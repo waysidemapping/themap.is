@@ -1,5 +1,7 @@
 {
-    "name": "Minor / Unclassified Road",
+    "name": "unclassified road",
+    "plural": "unclassified roads",
+    "autoTheme": false,
     "tags": {
         "highway": "unclassified"
     },

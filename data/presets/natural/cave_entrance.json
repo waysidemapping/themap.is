@@ -1,5 +1,6 @@
 {
-    "name": "Cave Entrance",
+    "name": "cave entrance",
+    "plural": "cave entrances",
     "tags": {
         "natural": "cave_entrance"
     },

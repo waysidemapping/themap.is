@@ -1,0 +1,17 @@
+{
+    "name": "play zip line",
+    "plural": "play zip lines",
+    "autoTheme": false,
+    "tags": {
+        "playground": "zipwire"
+    },
+    "geometry": [
+        "line",
+        "area"
+    ],
+    "terms": [
+        "zip wire",
+        "zipline",
+        "zipwire"
+    ]
+}

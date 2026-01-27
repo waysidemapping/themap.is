@@ -1,10 +1,10 @@
 {
     "name": "dam",
     "plural": "dams",
+    "autoTheme": false,
     "groups": [
         "dams"
     ],
-    "autoTheme": false,
     "tags": {
         "waterway": "dam"
     },

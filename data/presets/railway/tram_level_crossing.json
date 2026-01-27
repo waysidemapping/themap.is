@@ -1,5 +1,7 @@
 {
-    "name": "Tram-Road Crossing",
+    "name": "rram-road crossing",
+    "plural": "tram-road crossings",
+    "autoTheme": false,
     "tags": {
         "railway": "tram_level_crossing"
     },

@@ -1,10 +1,10 @@
 {
     "name": "island",
     "plural": "islands",
+    "autoTheme": false,
     "groups": [
         "islands"
     ],
-    "autoTheme": false,
     "tags": {
         "place": "island"
     },

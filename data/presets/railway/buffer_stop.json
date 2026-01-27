@@ -1,5 +1,6 @@
 {
-    "name": "Buffer Stop",
+    "name": "buffer stop",
+    "plural": "buffer stops",
     "tags": {
         "railway": "buffer_stop"
     },

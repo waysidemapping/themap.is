@@ -1,5 +1,6 @@
 {
-    "name": "Turning Circle",
+    "name": "turning circle",
+    "plural": "turning circles",
     "tags": {
         "highway": "turning_circle"
     },

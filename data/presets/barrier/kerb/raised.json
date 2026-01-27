@@ -1,0 +1,21 @@
+{
+    "name": "raised curb",
+    "plural": "raised curbs",
+    "tags": {
+        "barrier": "kerb",
+        "kerb": "raised"
+    },
+    "reference": {
+        "key": "kerb",
+        "value": "raised"
+    },
+    "geometry": [
+        "vertex",
+        "line"
+    ],
+    "terms": [
+        "step"
+    ],
+    "icon": "kerb_raised",
+    "matchScore": 0.55
+}

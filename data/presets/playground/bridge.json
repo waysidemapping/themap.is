@@ -1,0 +1,14 @@
+{
+    "name": "play bridge",
+    "plural": "play bridges",
+    "autoTheme": false,
+    "tags": {
+        "playground": "bridge"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ],
+    "icon": "bridge"
+}

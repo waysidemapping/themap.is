@@ -1,5 +1,7 @@
 {
-    "name": "Disused Railway",
+    "name": "disused train track",
+    "plural": "disused train tracks",
+    "autoTheme": false,
     "tags": {
         "railway": "disused"
     },

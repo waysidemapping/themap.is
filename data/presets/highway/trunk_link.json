@@ -1,5 +1,7 @@
 {
-    "name": "Trunk Link",
+    "name": "trunk link road",
+    "plural": "trunk link roads",
+    "autoTheme": false,
     "tags": {
         "highway": "trunk_link"
     },

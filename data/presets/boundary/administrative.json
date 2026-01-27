@@ -1,5 +1,7 @@
 {
-    "name": "Administrative Boundary",
+    "name": "administrative boundary",
+    "plural": "administrative boundaries",
+    "autoTheme": false,
     "tags": {
         "boundary": "administrative"
     }

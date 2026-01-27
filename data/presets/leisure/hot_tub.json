@@ -1,5 +1,6 @@
 {
-    "name": "Hot Tub",
+    "name": "hot tub",
+    "plural": "hot tubs",
     "tags": {
         "leisure": "hot_tub"
     },

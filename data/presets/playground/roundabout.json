@@ -1,0 +1,18 @@
+{
+    "name": "playground merry-go-round",
+    "plural": "playground merry-go-rounds",
+    "autoTheme": false,
+    "tags": {
+        "playground": "roundabout"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "roundabout",
+        "carousel",
+        "merry-go-round"
+    ],
+    "icon": "building_round-flag"
+}

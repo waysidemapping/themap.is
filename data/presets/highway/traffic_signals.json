@@ -1,5 +1,6 @@
 {
-    "name": "Traffic Signals",
+    "name": "traffic signals",
+    "plural": "traffic signals",
     "tags": {
         "highway": "traffic_signals"
     },

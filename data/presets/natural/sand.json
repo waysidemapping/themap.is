@@ -1,5 +1,6 @@
 {
-    "name": "Sand",
+    "name": "sand",
+    "plural": "sand",
     "tags": {
         "natural": "sand"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Yield Sign",
+    "name": "yield sign",
+    "plural": "yield signs",
     "tags": {
         "highway": "give_way"
     },

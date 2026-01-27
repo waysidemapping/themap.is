@@ -1,5 +1,6 @@
 {
-    "name": "Defibrillator",
+    "name": "defibrillator",
+    "plural": "defibrillators",
     "tags": {
         "emergency": "defibrillator"
     },

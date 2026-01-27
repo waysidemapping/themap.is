@@ -1,5 +1,7 @@
 {
-    "name": "Motorway Link",
+    "name": "motorway link road",
+    "plural": "motorway link roads",
+    "autoTheme": false,
     "tags": {
         "highway": "motorway_link"
     },

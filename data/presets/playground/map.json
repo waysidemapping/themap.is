@@ -1,0 +1,13 @@
+{
+    "name": "playground map",
+    "plural": "playground maps",
+    "autoTheme": false,
+    "tags": {
+        "playground": "map"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "icon": "compass"
+}

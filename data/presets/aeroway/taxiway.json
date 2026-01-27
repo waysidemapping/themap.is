@@ -1,5 +1,7 @@
 {
-    "name": "Taxiway",
+    "name": "taxiway",
+    "plural": "taxiways",
+    "autoTheme": false,
     "tags": {
         "aeroway": "taxiway"
     },

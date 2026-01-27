@@ -10,5 +10,6 @@
         "hotels",
         "tickets",
         "travel packages"
-    ]
+    ],
+    "icon": "suitcase"
 }

@@ -1,5 +1,7 @@
 {
-    "name": "Cycle Path",
+    "name": "cycle path",
+    "plural": "cycle paths",
+    "autoTheme": false,
     "tags": {
         "highway": "cycleway"
     },

@@ -1,0 +1,23 @@
+{
+    "name": "flush curb",
+    "plural": "flush curbs",
+    "tags": {
+        "barrier": "kerb",
+        "kerb": "flush"
+    },
+    "reference": {
+        "key": "kerb",
+        "value": "flush"
+    },
+    "geometry": [
+        "vertex",
+        "line"
+    ],
+    "terms": [
+        "even curb",
+        "level curb",
+        "tactile curb"
+    ],
+    "icon": "kerb_flush",
+    "matchScore": 0.55
+}

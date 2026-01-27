@@ -1,5 +1,6 @@
 {
-    "name": "Bare Rock",
+    "name": "exposed bedrock",
+    "plural": "exposed bedrock",
     "tags": {
         "natural": "bare_rock"
     },

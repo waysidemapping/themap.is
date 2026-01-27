@@ -1,5 +1,6 @@
 {
-    "name": "Volcano",
+    "name": "volcano",
+    "plural": "volcanoes",
     "tags": {
         "natural": "volcano"
     },

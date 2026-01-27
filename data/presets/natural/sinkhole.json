@@ -1,5 +1,6 @@
 {
-    "name": "Sinkhole",
+    "name": "sinkhole",
+    "plural": "sinkholes",
     "tags": {
         "natural": "sinkhole"
     },

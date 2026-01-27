@@ -1,5 +1,6 @@
 {
-    "name": "Fire Hydrant",
+    "name": "fire hydrant",
+    "plural": "fire hydrants",
     "tags": {
         "emergency": "fire_hydrant"
     },

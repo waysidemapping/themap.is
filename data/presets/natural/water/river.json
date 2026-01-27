@@ -1,5 +1,7 @@
 {
-    "name": "River Area",
+    "name": "river area",
+    "plural": "river areas",
+    "autoTheme": false,
     "tags": {
         "natural": "water",
         "water": "river"

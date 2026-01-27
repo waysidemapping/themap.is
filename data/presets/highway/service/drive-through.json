@@ -1,5 +1,7 @@
 {
-    "name": "Drive-Through",
+    "name": "drive-through",
+    "plural": "drive-throughs",
+    "autoTheme": false,
     "tags": {
         "highway": "service",
         "service": "drive-through"

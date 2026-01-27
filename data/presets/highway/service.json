@@ -1,5 +1,7 @@
 {
-    "name": "Service Road",
+    "name": "service road",
+    "plural": "service roads",
+    "autoTheme": false,
     "tags": {
         "highway": "service"
     },

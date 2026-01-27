@@ -1,0 +1,16 @@
+{
+    "name": "play climbing frame",
+    "plural": "play climbing frames",
+    "autoTheme": false,
+    "tags": {
+        "playground": "climbingframe"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "jungle gym",
+        "monkey bars"
+    ]
+}

@@ -1,5 +1,7 @@
 {
-    "name": "Bridle Path",
+    "name": "bridle path",
+    "plural": "bridle paths",
+    "autoTheme": false,
     "tags": {
         "highway": "bridleway"
     },

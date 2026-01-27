@@ -1,5 +1,6 @@
 {
-    "name": "Reef",
+    "name": "reef",
+    "plural": "reefs",
     "tags": {
         "natural": "reef"
     },

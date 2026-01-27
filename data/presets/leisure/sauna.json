@@ -1,6 +1,8 @@
 {
-    "name": "Sauna",
+    "name": "sauna",
+    "plural": "saunas",
     "tags": {
         "leisure": "sauna"
-    }
+    },
+    "icon": "sauna"
 }

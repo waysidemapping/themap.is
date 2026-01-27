@@ -1,5 +1,6 @@
 {
-    "name": "Industrial Area",
+    "name": "industrial area",
+    "plural": "industrial areas",
     "tags": {
         "landuse": "industrial"
     },

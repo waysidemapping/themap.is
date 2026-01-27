@@ -1,5 +1,7 @@
 {
-    "name": "Canal Area",
+    "name": "canal area",
+    "plural": "canal areas",
+    "autoTheme": false,
     "tags": {
         "natural": "water",
         "water": "canal"

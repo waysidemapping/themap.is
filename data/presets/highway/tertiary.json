@@ -1,5 +1,7 @@
 {
-    "name": "Tertiary Road",
+    "name": "tertiary road",
+    "plural": "tertiary roads",
+    "autoTheme": false,
     "tags": {
         "highway": "tertiary"
     },

@@ -1,5 +1,7 @@
 {
-    "name": "Railway-Road Crossing",
+    "name": "railway-road crossing",
+    "plural": "railway-road crossings",
+    "autoTheme": false,
     "tags": {
         "railway": "level_crossing"
     },

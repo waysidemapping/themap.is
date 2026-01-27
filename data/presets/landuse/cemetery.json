@@ -1,5 +1,6 @@
 {
-    "name": "Cemetery",
+    "name": "cemetery",
+    "plural": "cemeteries",
     "tags": {
         "landuse": "cemetery"
     },

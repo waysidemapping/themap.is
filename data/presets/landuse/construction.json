@@ -1,5 +1,6 @@
 {
-    "name": "Construction Area",
+    "name": "construction site",
+    "plural": "construction sites",
     "tags": {
         "landuse": "construction"
     },

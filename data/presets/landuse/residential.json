@@ -1,5 +1,6 @@
 {
-    "name": "Residential Area",
+    "name": "residential area",
+    "plural": "residential areas",
     "tags": {
         "landuse": "residential"
     },

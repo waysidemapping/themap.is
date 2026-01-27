@@ -1,5 +1,7 @@
 {
-    "name": "Valley",
+    "name": "valley",
+    "plural": "valleys",
+    "autoTheme": false,
     "tags": {
         "natural": "valley"
     },

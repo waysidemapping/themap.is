@@ -1,5 +1,6 @@
 {
-    "name": "Outdoor Seating Area",
+    "name": "outdoor seating area",
+    "plural": "outdoor seating areas",
     "tags": {
         "leisure": "outdoor_seating"
     },

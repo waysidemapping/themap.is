@@ -1,0 +1,13 @@
+{
+    "name": "beaver dam",
+    "plural": "beaver dams",
+    "tags": {
+        "natural": "beaver_dam"
+    },
+    "geometry": [
+        "vertex",
+        "point",
+        "line",
+        "area"
+    ]
+}

@@ -1,5 +1,6 @@
 {
-    "name": "Beach",
+    "name": "beach",
+    "plural": "beaches",
     "tags": {
         "natural": "beach"
     },

@@ -1,10 +1,10 @@
 {
     "name": "waterway access point",
     "plural": "waterway access points",
+    "autoTheme": false,
     "groups": [
         "waterway access"
     ],
-    "autoTheme": false,
     "tags": {
         "waterway": "access_point"
     },

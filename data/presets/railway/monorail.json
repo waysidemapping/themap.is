@@ -1,5 +1,7 @@
 {
-    "name": "Monorail Track",
+    "name": "monorail track",
+    "plural": "monorail tracks",
+    "autoTheme": false,
     "tags": {
         "railway": "monorail"
     },

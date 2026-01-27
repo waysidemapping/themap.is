@@ -1,5 +1,7 @@
 {
-    "name": "Ridge",
+    "name": "ridge",
+    "plural": "ridges",
+    "autoTheme": false,
     "tags": {
         "natural": "ridge"
     },

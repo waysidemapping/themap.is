@@ -1,5 +1,7 @@
 {
-    "name": "Miniature Train Track",
+    "name": "miniature train track",
+    "plural": "miniature train tracks",
+    "autoTheme": false,
     "tags": {
         "railway": "miniature"
     },

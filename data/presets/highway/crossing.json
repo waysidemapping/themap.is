@@ -1,5 +1,6 @@
 {
-    "name": "Crossing",
+    "name": "path-road crossing",
+    "plural": "path-road crossings",
     "tags": {
         "highway": "crossing"
     },

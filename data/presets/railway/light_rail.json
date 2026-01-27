@@ -1,5 +1,7 @@
 {
-    "name": "Light Rail Track",
+    "name": "light rail track",
+    "plural": "light rail tracks",
+    "autoTheme": false,
     "tags": {
         "railway": "light_rail"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Fishing Spot",
+    "name": "fishing spot",
+    "plural": "fishing spots",
     "tags": {
         "leisure": "fishing"
     },

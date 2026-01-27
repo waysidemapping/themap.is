@@ -1,5 +1,7 @@
 {
-    "name": "Living Street",
+    "name": "living street",
+    "plural": "living streets",
+    "autoTheme": false,
     "tags": {
         "highway": "living_street"
     },

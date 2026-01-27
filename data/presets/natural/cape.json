@@ -1,5 +1,6 @@
 {
-    "name": "Cape",
+    "name": "cape",
+    "plural": "capes",
     "tags": {
         "natural": "cape"
     },

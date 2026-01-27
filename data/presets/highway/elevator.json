@@ -1,5 +1,6 @@
 {
-    "name": "Elevator",
+    "name": "elevator",
+    "plural": "elevators",
     "tags": {
         "highway": "elevator"
     },

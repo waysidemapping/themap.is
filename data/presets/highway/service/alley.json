@@ -1,5 +1,7 @@
 {
-    "name": "Alley",
+    "name": "alley",
+    "plural": "alleys",
+    "autoTheme": false,
     "tags": {
         "highway": "service",
         "service": "alley"

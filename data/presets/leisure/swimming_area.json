@@ -1,5 +1,6 @@
 {
-    "name": "Natural Swimming Area",
+    "name": "natural swimming area",
+    "plural": "natural swimming areas",
     "tags": {
         "leisure": "swimming_area"
     },

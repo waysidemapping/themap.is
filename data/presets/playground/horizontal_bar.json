@@ -1,0 +1,19 @@
+{
+    "name": "play horizontal bar",
+    "plural": "play horizontal bars",
+    "autoTheme": false,
+    "tags": {
+        "playground": "horizontal_bar"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ],
+    "terms": [
+        "chin-up bar",
+        "high bar",
+        "pull-up bar"
+    ],
+    "icon": "horizontal_bar-user"
+}

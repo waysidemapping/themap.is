@@ -1,5 +1,6 @@
 {
-    "name": "Peninsula",
+    "name": "peninsula",
+    "plural": "peninsulas",
     "tags": {
         "natural": "peninsula"
     },

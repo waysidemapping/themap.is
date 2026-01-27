@@ -1,5 +1,7 @@
 {
-    "name": "Sidewalk",
+    "name": "sidewalk",
+    "plural": "sidewalks",
+    "autoTheme": false,
     "tags": {
         "highway": "footway",
         "footway": "sidewalk"

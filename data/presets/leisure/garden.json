@@ -1,5 +1,6 @@
 {
-    "name": "Garden",
+    "name": "garden",
+    "plural": "gardens",
     "tags": {
         "leisure": "garden"
     },

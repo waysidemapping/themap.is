@@ -1,5 +1,7 @@
 {
-    "name": "Narrow Gauge Track",
+    "name": "narrow gauge track",
+    "plural": "narrow gauge tracks",
+    "autoTheme": false,
     "tags": {
         "railway": "narrow_gauge"
     },

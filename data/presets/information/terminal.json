@@ -1,5 +1,6 @@
 {
-    "name": "Information Terminal",
+    "name": "information terminal",
+    "plural": "information terminals",
     "tags": {
         "information": "terminal"
     },

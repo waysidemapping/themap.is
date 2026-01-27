@@ -1,5 +1,6 @@
 {
-    "name": "Scrub",
+    "name": "scrub",
+    "plural": "scrub",
     "tags": {
         "natural": "scrub"
     },

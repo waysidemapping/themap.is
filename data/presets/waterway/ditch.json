@@ -1,6 +1,7 @@
 {
     "name": "ditch",
     "plural": "ditches",
+    "autoTheme": false,
     "tags": {
         "waterway": "ditch"
     },

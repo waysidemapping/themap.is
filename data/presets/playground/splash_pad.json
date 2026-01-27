@@ -1,0 +1,18 @@
+{
+    "name": "play splash pad",
+    "plural": "play splash pads",
+    "autoTheme": false,
+    "tags": {
+        "playground": "splash_pad"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "pad",
+        "spray",
+        "water"
+    ],
+    "icon": "fountain"
+}

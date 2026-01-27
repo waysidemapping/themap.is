@@ -1,5 +1,7 @@
 {
-    "name": "Parking Aisle",
+    "name": "parking aisle",
+    "plural": "parking aisles",
+    "autoTheme": false,
     "tags": {
         "highway": "service",
         "service": "parking_aisle"

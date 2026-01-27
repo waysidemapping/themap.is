@@ -1,5 +1,6 @@
 {
-    "name": "Mini-Roundabout",
+    "name": "mini-roundabout",
+    "plural": "mini-roundabouts",
     "tags": {
         "highway": "mini_roundabout"
     },

@@ -1,0 +1,13 @@
+{
+    "name": "curb",
+    "plural": "curbs",
+    "tags": {
+        "barrier": "kerb"
+    },
+    "geometry": [
+        "vertex",
+        "line"
+    ],
+    "icon": "kerb_unspecified",
+    "matchScore": 0.5
+}

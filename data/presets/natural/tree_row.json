@@ -1,5 +1,6 @@
 {
-    "name": "Tree Row",
+    "name": "tree row",
+    "plural": "tree rows",
     "tags": {
         "natural": "tree_row"
     },

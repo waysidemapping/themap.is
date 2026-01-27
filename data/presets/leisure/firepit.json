@@ -1,5 +1,6 @@
 {
-    "name": "Fire Pit",
+    "name": "fire pit",
+    "plural": "fire pits",
     "tags": {
         "leisure": "firepit"
     },

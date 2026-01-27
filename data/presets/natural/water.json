@@ -1,5 +1,7 @@
 {
-    "name": "Water",
+    "name": "water",
+    "plural": "water",
+    "autoTheme": false,
     "groups": [
         "water"
     ],

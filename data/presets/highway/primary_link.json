@@ -1,5 +1,7 @@
 {
-    "name": "Primary Link",
+    "name": "primary link road",
+    "plural": "primary link roads",
+    "autoTheme": false,
     "tags": {
         "highway": "primary_link"
     },

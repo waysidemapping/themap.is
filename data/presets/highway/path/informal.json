@@ -1,5 +1,7 @@
 {
-    "name": "Informal Path",
+    "name": "informal path",
+    "plural": "informal paths",
+    "autoTheme": false,
     "tags": {
         "highway": "path",
         "informal": "yes"

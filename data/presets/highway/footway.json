@@ -1,5 +1,7 @@
 {
-    "name": "Foot Path",
+    "name": "foot path",
+    "plural": "foot paths",
+    "autoTheme": false,
     "tags": {
         "highway": "footway"
     },

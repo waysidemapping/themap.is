@@ -1,0 +1,21 @@
+{
+    "name": "rolled curb",
+    "plural": "rolled curbs",
+    "tags": {
+        "barrier": "kerb",
+        "kerb": "rolled"
+    },
+    "reference": {
+        "key": "kerb",
+        "value": "rolled"
+    },
+    "geometry": [
+        "vertex",
+        "line"
+    ],
+    "terms": [
+        "gutter"
+    ],
+    "icon": "kerb_rolled",
+    "matchScore": 0.55
+}

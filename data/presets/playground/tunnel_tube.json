@@ -1,0 +1,14 @@
+{
+    "name": "play tunnel",
+    "plural": "play tunnels",
+    "autoTheme": false,
+    "tags": {
+        "playground": "tunnel_tube"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ],
+    "icon": "tunnel"
+}

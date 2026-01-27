@@ -1,5 +1,7 @@
 {
-    "name": "Train Track",
+    "name": "train track",
+    "plural": "train tracks",
+    "autoTheme": false,
     "tags": {
         "railway": "rail"
     },

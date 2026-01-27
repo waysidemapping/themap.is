@@ -1,5 +1,6 @@
 {
-    "name": "Escape Room",
+    "name": "escape room",
+    "plural": "escape rooms",
     "tags": {
         "leisure": "escape_game"
     },

@@ -1,6 +1,6 @@
 {
     "name": "Greek restaurant",
-    "plural": "Green restaurants",
+    "plural": "Greek restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "greek"

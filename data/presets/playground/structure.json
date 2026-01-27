@@ -1,0 +1,17 @@
+{
+    "name": "play structure",
+    "plural": "play structures",
+    "autoTheme": false,
+    "tags": {
+        "playground": "structure"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ],
+    "terms": [
+        "jungle gym"
+    ],
+    "icon": "play_structure"
+}

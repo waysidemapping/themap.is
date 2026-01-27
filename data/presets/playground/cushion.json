@@ -1,0 +1,12 @@
+{
+    "name": "play cushion",
+    "plural": "play cushions",
+    "autoTheme": false,
+    "tags": {
+        "playground": "cushion"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ]
+}

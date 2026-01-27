@@ -1,5 +1,7 @@
 {
-    "name": "Indoor Corridor",
+    "name": "corridor",
+    "plural": "corridors",
+    "autoTheme": false,
     "tags": {
         "highway": "corridor"
     },

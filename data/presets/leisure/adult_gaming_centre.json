@@ -1,11 +1,11 @@
 {
     "name": "adult gaming center",
     "plural": "adult gaming centers",
+    "autoTheme": false,
     "groups": [
         "gambling",
         "adult_amusement"
     ],
-    "autoTheme": false,
     "tags": {
         "leisure": "adult_gaming_centre"
     },

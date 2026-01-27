@@ -1,5 +1,6 @@
 {
-    "name": "Stop Sign",
+    "name": "stop sign",
+    "plural": "stop signs",
     "tags": {
         "highway": "stop"
     },

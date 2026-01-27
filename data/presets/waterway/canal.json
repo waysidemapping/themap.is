@@ -1,6 +1,7 @@
 {
     "name": "canal",
     "plural": "canals",
+    "autoTheme": false,
     "tags": {
         "waterway": "canal"
     },

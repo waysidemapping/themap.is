@@ -1,5 +1,7 @@
 {
-    "name": "Runway",
+    "name": "runway",
+    "plural": "runways",
+    "autoTheme": false,
     "tags": {
         "aeroway": "runway"
     },

@@ -1,0 +1,17 @@
+{
+    "name": "heliport",
+    "plural": "heliports",
+    "tags": {
+        "aeroway": "heliport"
+    },
+    "geometry": [
+        "area",
+        "point"
+    ],
+    "terms": [
+        "helicopter",
+        "helipad",
+        "heliport"
+    ],
+    "icon": "helicopter"
+}

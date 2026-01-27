@@ -1,5 +1,6 @@
 {
-    "name": "Protected Area",
+    "name": "protected area",
+    "plural": "protected areas",
     "tags": {
         "boundary": "protected_area"
     }

@@ -1,5 +1,6 @@
 {
-    "name": "Nature Reserve",
+    "name": "nature reserve",
+    "plural": "nature reserves",
     "groups": [
         "parks"
     ],

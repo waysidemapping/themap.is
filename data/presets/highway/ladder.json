@@ -1,5 +1,6 @@
 {
-    "name": "Ladder",
+    "name": "ladder",
+    "plural": "ladders",
     "tags": {
         "highway": "ladder"
     },

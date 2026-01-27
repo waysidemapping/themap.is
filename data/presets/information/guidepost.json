@@ -1,5 +1,6 @@
 {
-    "name": "Guidepost",
+    "name": "guidepost",
+    "plural": "guideposts",
     "tags": {
         "information": "guidepost"
     },

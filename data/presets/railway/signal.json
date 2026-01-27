@@ -1,5 +1,6 @@
 {
-    "name": "Railway Signal",
+    "name": "railway signal",
+    "plural": "railway signals",
     "tags": {
         "railway": "signal"
     },

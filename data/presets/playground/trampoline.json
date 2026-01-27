@@ -1,0 +1,12 @@
+{
+    "name": "play trampoline",
+    "plural": "play trampolines",
+    "autoTheme": false,
+    "tags": {
+        "playground": "trampoline"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ]
+}

@@ -1,5 +1,6 @@
 {
-    "name": "Passing Place",
+    "name": "passing place",
+    "plural": "passing places",
     "tags": {
         "highway": "passing_place"
     },

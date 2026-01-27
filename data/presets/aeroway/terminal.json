@@ -1,5 +1,6 @@
 {
-    "name": "Airport Terminal",
+    "name": "airport terminal",
+    "plural": "airport terminals",
     "tags": {
         "aeroway": "terminal"
     },

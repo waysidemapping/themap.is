@@ -1,6 +1,7 @@
 {
     "name": "tidal channel",
     "plural": "tidal channels",
+    "autoTheme": false,
     "tags": {
         "waterway": "tidal_channel"
     },

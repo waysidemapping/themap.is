@@ -1,0 +1,19 @@
+{
+    "name": "play spring rider",
+    "plural": "play spring riders",
+    "autoTheme": false,
+    "tags": {
+        "playground": "springy"
+    },
+    "geometry": [
+        "point"
+    ],
+    "terms": [
+        "Spring Rocker",
+        "rocking horse",
+        "spring horse",
+        "spring toy",
+        "springy"
+    ],
+    "icon": "spring_rider"
+}

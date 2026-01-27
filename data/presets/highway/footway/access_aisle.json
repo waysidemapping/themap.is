@@ -1,5 +1,7 @@
 {
-    "name": "Access Aisle",
+    "name": "access aisle",
+    "plural": "access aisles",
+    "autoTheme": false,
     "tags": {
         "highway": "footway",
         "footway": "access_aisle"

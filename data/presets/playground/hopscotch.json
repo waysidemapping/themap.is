@@ -1,0 +1,13 @@
+{
+    "name": "play hopscotch court",
+    "plural": "play hopscotch courts",
+    "autoTheme": false,
+    "tags": {
+        "playground": "hopscotch"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ]
+}

@@ -1,5 +1,6 @@
 {
-    "name": "Bowling Alley",
+    "name": "bowling alley",
+    "plural": "bowling alleys",
     "tags": {
         "leisure": "bowling_alley"
     },

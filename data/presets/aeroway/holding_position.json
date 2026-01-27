@@ -1,5 +1,6 @@
 {
-    "name": "Aircraft Holding Position",
+    "name": "aircraft holding position",
+    "plural": "aircraft holding positions",
     "tags": {
         "aeroway": "holding_position"
     },

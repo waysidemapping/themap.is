@@ -1,5 +1,6 @@
 {
-    "name": "Natural Wood",
+    "name": "woods",
+    "plural": "woods",
     "tags": {
         "natural": "wood"
     },

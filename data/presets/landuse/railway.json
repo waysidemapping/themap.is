@@ -1,5 +1,6 @@
 {
-    "name": "Railway Corridor",
+    "name": "railway corridor",
+    "plural": "railway corridors",
     "tags": {
         "landuse": "railway"
     },

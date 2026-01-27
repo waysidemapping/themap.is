@@ -1,5 +1,6 @@
 {
-    "name": "Unattached Stone / Boulder",
+    "name": "stone",
+    "plural": "stones",
     "tags": {
         "natural": "stone"
     },

@@ -1,5 +1,7 @@
 {
-    "name": "Driveway",
+    "name": "driveway",
+    "plural": "driveways",
+    "autoTheme": false,
     "tags": {
         "highway": "service",
         "service": "driveway"

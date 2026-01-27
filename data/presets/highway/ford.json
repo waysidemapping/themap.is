@@ -1,0 +1,14 @@
+{
+    "name": "ford",
+    "plural": "fords",
+    "tags": {
+        "highway": "ford"
+    },
+    "geometry": [
+        "vertex"
+    ],
+    "terms": [
+        "ladder"
+    ],
+    "icon": "arrows_left_right-water"
+}

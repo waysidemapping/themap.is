@@ -1,5 +1,6 @@
 {
-    "name": "Shrub",
+    "name": "shrub",
+    "plural": "shrubs",
     "tags": {
         "natural": "shrub"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Dog Park",
+    "name": "dog park",
+    "plural": "dog parks",
     "tags": {
         "leisure": "dog_park"
     },

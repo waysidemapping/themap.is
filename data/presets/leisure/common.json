@@ -1,5 +1,6 @@
 {
-    "name": "Common",
+    "name": "common",
+    "plural": "commons",
     "tags": {
         "leisure": "common"
     },

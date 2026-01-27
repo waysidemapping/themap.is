@@ -1,5 +1,6 @@
 {
-    "name": "Sample Collection Facility",
+    "name": "medical sample collection facility",
+    "plural": "medical sample collection facilities",
     "tags": {
         "healthcare": "sample_collection"
     },

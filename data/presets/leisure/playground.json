@@ -1,5 +1,6 @@
 {
-    "name": "Playground",
+    "name": "playground",
+    "plural": "playgrounds",
     "tags": {
         "leisure": "playground"
     },

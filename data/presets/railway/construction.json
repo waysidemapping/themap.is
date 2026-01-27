@@ -1,5 +1,7 @@
 {
-    "name": "Railway Under Construction",
+    "name": "train track under construction",
+    "plural": "train tracks under construction",
+    "autoTheme": false,
     "tags": {
         "railway": "construction"
     },

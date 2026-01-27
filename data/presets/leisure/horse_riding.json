@@ -1,5 +1,6 @@
 {
-    "name": "Horseback Riding Center",
+    "name": "horseback riding center",
+    "plural": "horseback riding centers",
     "tags": {
         "leisure": "horse_riding"
     },

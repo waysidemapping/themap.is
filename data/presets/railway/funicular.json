@@ -1,5 +1,7 @@
 {
-    "name": "Funicular Track",
+    "name": "funicular track",
+    "plural": "funicular tracks",
+    "autoTheme": false,
     "tags": {
         "railway": "funicular"
     },

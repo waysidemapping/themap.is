@@ -1,0 +1,13 @@
+{
+    "name": "play basket swing",
+    "plural": "play basket swings",
+    "autoTheme": false,
+    "tags": {
+        "playground": "basketswing"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ]
+}

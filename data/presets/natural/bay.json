@@ -1,5 +1,6 @@
 {
-    "name": "Bay",
+    "name": "bay",
+    "plural": "bays",
     "groups": [
         "water"
     ],

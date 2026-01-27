@@ -1,5 +1,7 @@
 {
-    "name": "Pedestrian Crossing",
+    "name": "pedestrian crossing",
+    "plural": "pedestrian crossings",
+    "autoTheme": false,
     "tags": {
         "highway": "footway",
         "footway": "crossing"

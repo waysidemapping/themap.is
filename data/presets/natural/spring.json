@@ -1,5 +1,6 @@
 {
-    "name": "Spring",
+    "name": "spring",
+    "plural": "springs",
     "tags": {
         "natural": "spring"
     },

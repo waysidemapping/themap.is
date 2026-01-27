@@ -1,5 +1,7 @@
 {
-    "name": "Motorway",
+    "name": "motorway",
+    "plural": "motorways",
+    "autoTheme": false,
     "tags": {
         "highway": "motorway"
     },

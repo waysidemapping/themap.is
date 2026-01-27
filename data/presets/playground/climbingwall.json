@@ -1,0 +1,13 @@
+{
+    "name": "play climbing wall",
+    "plural": "play climbing walls",
+    "autoTheme": false,
+    "tags": {
+        "playground": "climbingwall"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ]
+}

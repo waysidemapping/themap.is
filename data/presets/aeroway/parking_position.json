@@ -1,5 +1,6 @@
 {
-    "name": "Aircraft Parking Position",
+    "name": "aircraft parking position",
+    "plural": "aircraft parking positions",
     "tags": {
         "aeroway": "parking_position"
     },

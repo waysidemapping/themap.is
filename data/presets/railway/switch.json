@@ -1,5 +1,7 @@
 {
-    "name": "Railway Switch",
+    "name": "railway switch",
+    "plural": "railway switches",
+    "autoTheme": false,
     "tags": {
         "railway": "switch"
     },

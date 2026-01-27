@@ -1,5 +1,6 @@
 {
-    "name": "Reservoir",
+    "name": "reservoir",
+    "plural": "reservoirs",
     "tags": {
         "natural": "water",
         "water": "reservoir"

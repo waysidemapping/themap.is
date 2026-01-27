@@ -1,5 +1,7 @@
 {
-    "name": "Pedestrian Street",
+    "name": "pedestrian street",
+    "plural": "pedestrian streets",
+    "autoTheme": false,
     "tags": {
         "highway": "pedestrian"
     },

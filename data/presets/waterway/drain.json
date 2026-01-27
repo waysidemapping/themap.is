@@ -1,6 +1,7 @@
 {
     "name": "drain",
     "plural": "drains",
+    "autoTheme": false,
     "tags": {
         "waterway": "drain"
     },

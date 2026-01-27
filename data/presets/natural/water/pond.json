@@ -1,5 +1,7 @@
 {
-    "name": "Pond",
+    "name": "pond",
+    "plural": "ponds",
+    "autoTheme": false,
     "tags": {
         "natural": "water",
         "water": "pond"

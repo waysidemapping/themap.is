@@ -1,5 +1,7 @@
 {
-    "name": "Emergency Access",
+    "name": "emergency access road",
+    "plural": "emergency access roads",
+    "autoTheme": false,
     "tags": {
         "highway": "service",
         "service": "emergency_access"

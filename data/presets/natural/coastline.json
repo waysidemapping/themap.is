@@ -1,5 +1,7 @@
 {
-    "name": "Coastline",
+    "name": "coastline",
+    "plural": "coastlines",
+    "autoTheme": false,
     "tags": {
         "natural": "coastline"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Gym / Fitness Center",
+    "name": "fitness center",
+    "plural": "fitness centers",
     "tags": {
         "leisure": "fitness_centre"
     },

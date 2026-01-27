@@ -1,0 +1,14 @@
+{
+    "name": "playground seesaw",
+    "plural": "playground seesaws",
+    "autoTheme": false,
+    "tags": {
+        "playground": "seesaw"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ],
+    "icon": "seesaw-users"
+}

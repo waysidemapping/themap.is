@@ -1,0 +1,25 @@
+{
+    "name": "lowered curb",
+    "plural": "lowered curbs",
+    "tags": {
+        "barrier": "kerb",
+        "kerb": "lowered"
+    },
+    "reference": {
+        "key": "kerb",
+        "value": "lowered"
+    },
+    "geometry": [
+        "vertex",
+        "line"
+    ],
+    "terms": [
+        "curb cut",
+        "curb ramp",
+        "dropped kerb",
+        "kerb ramp",
+        "pram ramp"
+    ],
+    "icon": "kerb_lowered",
+    "matchScore": 0.55
+}

@@ -1,6 +1,7 @@
 {
     "name": "river",
     "plural": "rivers",
+    "autoTheme": false,
     "tags": {
         "waterway": "river"
     },

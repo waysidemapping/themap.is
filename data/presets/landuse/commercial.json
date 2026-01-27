@@ -1,5 +1,6 @@
 {
-    "name": "Commercial Area",
+    "name": "commercial area",
+    "plural": "commercial areas",
     "tags": {
         "landuse": "commercial"
     },
@@ -7,6 +8,6 @@
         "depot",
         "offices"
     ],
-    "icon": "suitcase",
+    "icon": "briefcase",
     "matchScore": 0.9
 }

@@ -1,5 +1,6 @@
 {
-    "name": "Racetrack",
+    "name": "racetrack",
+    "plural": "racetracks",
     "tags": {
         "leisure": "track"
     },

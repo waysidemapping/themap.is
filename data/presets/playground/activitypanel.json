@@ -1,0 +1,13 @@
+{
+    "name": "play activity panel",
+    "plural": "play activity panels",
+    "autoTheme": false,
+    "tags": {
+        "playground": "activitypanel"
+    },
+    "geometry": [
+        "point",
+        "line",
+        "area"
+    ]
+}

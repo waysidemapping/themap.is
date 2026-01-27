@@ -1,5 +1,7 @@
 {
-    "name": "Residential Road",
+    "name": "residential road",
+    "plural": "residential roads",
+    "autoTheme": false,
     "tags": {
         "highway": "residential"
     },

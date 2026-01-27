@@ -1,5 +1,7 @@
 {
-    "name": "Steps",
+    "name": "steps",
+    "plural": "steps",
+    "autoTheme": false,
     "tags": {
         "highway": "steps"
     },

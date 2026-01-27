@@ -1,5 +1,6 @@
 {
-    "name": "Tree",
+    "name": "tree",
+    "plural": "trees",
     "tags": {
         "natural": "tree"
     },

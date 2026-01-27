@@ -1,0 +1,19 @@
+{
+    "name": "play house",
+    "plural": "play houses",
+    "autoTheme": false,
+    "tags": {
+        "playground": "playhouse"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "Wendy House",
+        "children's house",
+        "playground house",
+        "playhouse"
+    ],
+    "icon": "play_structure"
+}

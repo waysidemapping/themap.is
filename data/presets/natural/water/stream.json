@@ -1,5 +1,7 @@
 {
-    "name": "Stream Area",
+    "name": "stream area",
+    "plural": "stream areas",
+    "autoTheme": false,
     "tags": {
         "natural": "water",
         "water": "stream"

@@ -1,5 +1,7 @@
 {
-    "name": "Tertiary Link",
+    "name": "tertiary link road",
+    "plural": "tertiary link roads",
+    "autoTheme": false,
     "tags": {
         "highway": "tertiary_link"
     },

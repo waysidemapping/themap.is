@@ -1,5 +1,7 @@
 {
-    "name": "Track / Land-Access Road",
+    "name": "track road",
+    "plural": "track roads",
+    "autoTheme": false,
     "tags": {
         "highway": "track"
     },

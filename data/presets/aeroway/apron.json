@@ -1,5 +1,6 @@
 {
-    "name": "Airport Apron",
+    "name": "airport apron",
+    "plural": "airport aprons",
     "tags": {
         "aeroway": "apron"
     },

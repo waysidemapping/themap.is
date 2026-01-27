@@ -1,5 +1,6 @@
 {
-    "name": "Saddle",
+    "name": "saddle",
+    "plural": "saddles",
     "tags": {
         "natural": "saddle"
     },

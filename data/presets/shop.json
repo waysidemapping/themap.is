@@ -1,9 +1,9 @@
 {
     "name": "store",
+    "autoTheme": false,
     "groups": [
         "stores"
     ],
-    "autoTheme": false,
     "tags": {
         "shop": "*"
     },

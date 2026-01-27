@@ -1,5 +1,7 @@
 {
-    "name": "Motorsport Racetrack",
+    "name": "motorsport raceway",
+    "plural": "motorsport raceways",
+    "autoTheme": false,
     "tags": {
         "highway": "raceway"
     },

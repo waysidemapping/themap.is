@@ -1,5 +1,6 @@
 {
-    "name": "Sports Center / Complex",
+    "name": "sports center",
+    "plural": "sports centers",
     "tags": {
         "leisure": "sports_centre"
     },

@@ -1,5 +1,7 @@
 {
-    "name": "Lake",
+    "name": "lake",
+    "plural": "lakes",
+    "autoTheme": false,
     "tags": {
         "natural": "water",
         "water": "lake"

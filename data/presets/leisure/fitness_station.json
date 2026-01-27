@@ -1,5 +1,6 @@
 {
-    "name": "Outdoor Fitness Station",
+    "name": "fitness station",
+    "plural": "fitness stations",
     "tags": {
         "leisure": "fitness_station"
     },

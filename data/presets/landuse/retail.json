@@ -1,5 +1,6 @@
 {
-    "name": "Retail Area",
+    "name": "retail area",
+    "plural": "retail areas",
     "tags": {
         "landuse": "retail"
     },

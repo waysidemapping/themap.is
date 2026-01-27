@@ -1,5 +1,6 @@
 {
-    "name": "Grassland",
+    "name": "grassland",
+    "plural": "grassland",
     "tags": {
         "natural": "grassland"
     },

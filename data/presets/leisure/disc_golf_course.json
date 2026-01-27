@@ -1,5 +1,6 @@
 {
-    "name": "Disc Golf Course",
+    "name": "disc golf course",
+    "plural": "disc golf courses",
     "tags": {
         "leisure": "disc_golf_course"
     },

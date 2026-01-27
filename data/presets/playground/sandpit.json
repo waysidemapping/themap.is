@@ -1,0 +1,18 @@
+{
+    "name": "play sandbox",
+    "plural": "play sandboxes",
+    "autoTheme": false,
+    "tags": {
+        "playground": "sandpit"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "Play Sandpit",
+        "sandbox",
+        "sandpit"
+    ],
+    "icon": "sandbox"
+}

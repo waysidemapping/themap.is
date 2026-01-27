@@ -1,5 +1,6 @@
 {
-    "name": "Tree Stump",
+    "name": "tree stump",
+    "plural": "tree stumps",
     "tags": {
         "natural": "tree_stump"
     },

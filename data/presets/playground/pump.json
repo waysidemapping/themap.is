@@ -1,0 +1,12 @@
+{
+    "name": "play water pump",
+    "plural": "play water pumps",
+    "autoTheme": false,
+    "tags": {
+        "playground": "pump"
+    },
+    "geometry": [
+        "point"
+    ],
+    "icon": "water_pump_manual"
+}
