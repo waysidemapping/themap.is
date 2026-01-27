@@ -1,5 +1,5 @@
 {
-    "icon": "spotting_scope",
+    "icon": "viewpoint",
     "geometry": [
         "point",
         "vertex",
@@ -11,5 +11,6 @@
     "terms": [
         "lookout"
     ],
+    "plural": "viewpoints",
     "name": "Viewpoint"
 }

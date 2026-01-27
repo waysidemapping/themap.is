@@ -10,6 +10,7 @@
         "amenity": "bar"
     },
     "groups": [
+        "adult_amusement",
         "food"
     ],
     "plural": "bars",

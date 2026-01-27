@@ -14,5 +14,9 @@
         "overnight accommodations",
         "vacation rental"
     ],
-    "name": "Guest Apartment / Condo"
+    "groups": [
+        "lodging"
+    ],
+    "plural": "guest apartments",
+    "name": "Guest Apartment"
 }

@@ -9,5 +9,8 @@
     "tags": {
         "waterway": "dam"
     },
+    "groups": [
+        "dams"
+    ],
     "name": "Dam"
 }

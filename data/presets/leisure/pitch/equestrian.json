@@ -32,5 +32,6 @@
         "rodeo",
         "round pen"
     ],
-    "name": "Horseback Riding / Rodeo Arena"
+    "plural": "riding arenas",
+    "name": "riding arena"
 }

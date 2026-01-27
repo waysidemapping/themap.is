@@ -7,5 +7,6 @@
     "tags": {
         "healthcare": "clinic"
     },
-    "name": "Clinic"
+    "plural": "health clinics",
+    "name": "Health Clinic"
 }

@@ -13,5 +13,9 @@
     "tags": {
         "man_made": "street_cabinet"
     },
+    "groups": [
+        "street_furniture"
+    ],
+    "plural": "street cabinets",
     "name": "Street Cabinet"
 }

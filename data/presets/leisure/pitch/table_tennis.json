@@ -11,5 +11,6 @@
         "ping pong",
         "table tennis"
     ],
+    "plural": "ping pong tables",
     "name": "Ping Pong Table"
 }

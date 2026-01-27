@@ -26,6 +26,9 @@
     "tags": {
         "tourism": "museum"
     },
+    "groups": [
+        "amusement"
+    ],
     "plural": "museums",
     "name": "Museum"
 }

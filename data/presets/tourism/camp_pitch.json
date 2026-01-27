@@ -12,5 +12,9 @@
     "tags": {
         "tourism": "camp_pitch"
     },
+    "groups": [
+        "lodging-minor"
+    ],
+    "plural": "camp pitches",
     "name": "Camp Pitch"
 }

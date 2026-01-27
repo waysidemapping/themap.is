@@ -12,6 +12,9 @@
     "tags": {
         "tourism": "aquarium"
     },
+    "groups": [
+        "amusement"
+    ],
     "plural": "aquariums",
     "name": "Aquarium"
 }

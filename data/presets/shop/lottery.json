@@ -8,5 +8,10 @@
         "lotto tickets",
         "scratch-offs"
     ],
+    "groups": [
+        "gambling",
+        "adult_amusement"
+    ],
+    "plural": "lottery shops",
     "name": "Lottery Shop"
 }

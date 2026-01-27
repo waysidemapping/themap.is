@@ -8,5 +8,6 @@
     "tags": {
         "healthcare": "dentist"
     },
+    "plural": "dentists",
     "name": "Dentist"
 }

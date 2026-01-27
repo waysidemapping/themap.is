@@ -17,6 +17,9 @@
         "surgery",
         "wellness"
     ],
+    "groups": [
+        "healthcare"
+    ],
     "name": "Healthcare Facility",
     "matchScore": 0.4
 }

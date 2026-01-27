@@ -9,5 +9,9 @@
     "tags": {
         "leisure": "amusement_arcade"
     },
+    "groups": [
+        "amusement"
+    ],
+    "plural": "arcades",
     "name": "Amusement Arcade"
 }

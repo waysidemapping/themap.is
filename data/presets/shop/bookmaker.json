@@ -5,10 +5,17 @@
     },
     "terms": [
         "Bookie",
+        "bookmaker",
         "Turf Accountant",
+        "bookmaker",
         "betting",
         "gamble",
         "gambling"
     ],
-    "name": "Bookmaker"
+    "groups": [
+        "gambling",
+        "adult_amusement"
+    ],
+    "plural": "bookies",
+    "name": "Bookie"
 }

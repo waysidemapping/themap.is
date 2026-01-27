@@ -16,5 +16,6 @@
         "key": "healthcare:speciality",
         "value": "orthodontics"
     },
+    "plural": "orthodontists",
     "name": "Orthodontist"
 }

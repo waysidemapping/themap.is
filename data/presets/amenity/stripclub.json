@@ -9,5 +9,8 @@
         "lap dance",
         "strip*"
     ],
-    "name": "Strip club"
+    "groups": [
+        "adult_amusement"
+    ],
+    "name": "Strip Club"
 }

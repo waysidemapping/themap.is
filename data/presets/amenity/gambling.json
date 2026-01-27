@@ -18,5 +18,10 @@
     "tags": {
         "amenity": "gambling"
     },
+    "groups": [
+        "gambling",
+        "adult_amusement"
+    ],
+    "plural": "gambling halls",
     "name": "Gambling Hall"
 }

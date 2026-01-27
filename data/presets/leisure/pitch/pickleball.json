@@ -12,5 +12,6 @@
         "paddleball",
         "tennis"
     ],
+    "plural": "pickleball courts",
     "name": "Pickleball Court"
 }

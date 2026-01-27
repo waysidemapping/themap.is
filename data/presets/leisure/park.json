@@ -25,6 +25,9 @@
     "tags": {
         "leisure": "park"
     },
+    "groups": [
+        "parks"
+    ],
     "plural": "parks",
     "name": "Park"
 }

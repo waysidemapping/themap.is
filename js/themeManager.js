@@ -1,29 +1,6 @@
 import { colors } from './colors.js';
 
 const themesById = {
-  "bars_and_restaurants": {
-    features: [
-      {
-        presets: [
-          "amenity/bar",
-          "amenity/restaurant"
-        ]
-      }
-    ]
-  },
-  "books": {
-    features: [
-      {
-        presets: ["amenity/library"]
-      },
-      {
-        presets: ["amenity/public_bookcase"]
-      },
-      {
-        presets: ["shop/books"]
-      }
-    ]
-  },
   "eats": {
     features: [
       {
@@ -34,29 +11,6 @@ const themesById = {
           "amenity/ice_cream",
           "amenity/pub",
           "amenity/restaurant"
-        ]
-      }
-    ]
-  },
-  "gambling": {
-    features: [
-      {
-        presets: [
-          "amenity/casino",
-          "leisure/adult_gaming_centre",
-          "shop/bookmaker",
-          "shop/lottery"
-        ]
-      },
-    ]
-  },
-  "nightlife": {
-    features: [
-      {
-        presets: [
-          "amenity/nightclub",
-          "amenity/bar",
-          "amenity/pub"
         ]
       }
     ]
@@ -73,10 +27,28 @@ const themesById = {
   }
 };
 
+let groupThemes = [
+  "books",
+  "dams",
+  "free_stuff",
+  "gambling",
+  "healthcare",
+  "lodging",
+  "mail",
+  "stores",
+  "street_furniture"
+];
+
 const featureDefaultsByGroup = {
   amenity: {
     iconOpts: { 
       bg_fill: colors.education_icon,
+      fill: colors.text_halo
+    }
+  },
+  amusement: {
+    iconOpts: { 
+      bg_fill: colors.amusement_icon,
       fill: colors.text_halo
     }
   },
@@ -98,27 +70,51 @@ const featureDefaultsByGroup = {
       fill: colors.text_halo
     }
   },
+  healthcare: {
+    iconOpts: { 
+      bg_fill: colors.healthcare_icon,
+      fill: colors.text_halo
+    }
+  },
   ice: {
     iconOpts: { 
       bg_fill: colors.ice_text,
       fill: colors.text_halo
     }
   },
-  nightlife: {
+  lodging: {
+    iconOpts: { 
+      bg_fill: colors.education_icon,
+      fill: colors.text_halo
+    }
+  },
+  adult_amusement: {
     iconOpts: { 
       bg_fill: "#33145e",
       fill: colors.text_halo
     }
   },
-  shop: {
+  parks: {
+    iconOpts: { 
+      bg_fill: colors.park_icon,
+      fill: colors.text_halo
+    }
+  },
+  stores: {
     iconOpts: { 
       bg_fill: colors.shop_icon,
       fill: colors.text_halo
     }
   },
+  sports: {
+    iconOpts: { 
+      bg_fill: colors.outdoor_sports_facility_icon,
+      fill: colors.text_halo
+    }
+  },
   transport: {
     iconOpts: { 
-      bg_fill: colors.station_text,
+      bg_fill: colors.station_icon,
       fill: colors.text_halo
     }
   },
@@ -132,8 +128,10 @@ const featureDefaultsByGroup = {
 
 async function loadData() {
   const presetsById = await fetch('/dist/presets.json').then(response => response.json());
+  groupThemes.forEach(group => themesById[group] = {features: [{presetGroups: [group]}]});
   for (let presetId in presetsById) {
     let preset = presetsById[presetId];
+    preset.id = presetId;
     if (preset.plural) {
       // id normalization needs to match those in 404.html
       let themeId = preset.plural
@@ -165,6 +163,11 @@ async function loadData() {
 
     let expandedFeatures = [];
     for (let i in theme.features) {
+      if (theme.features[i].presetGroups) {
+        let presets = Object.values(presetsById).filter(preset => preset.groups?.some(group => theme.features[i].presetGroups.includes(group)))
+        theme.features[i].presets = presets.map(preset => preset.id);
+        console.log(theme.features[i].presets);
+      }
       if (theme.features[i].presets) {
         for (let j in theme.features[i].presets) {
           let presetId = theme.features[i].presets[j];

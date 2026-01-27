@@ -1,0 +1,20 @@
+{
+    "icon": "bust",
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "tags": {
+        "tourism": "artwork",
+        "artwork_type": "bust"
+    },
+    "reference": {
+        "key": "artwork_type",
+        "value": "bust"
+    },
+    "terms": [
+        "figure"
+    ],
+    "plural": "busts",
+    "name": "Bust"
+}

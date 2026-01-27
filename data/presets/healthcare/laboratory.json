@@ -8,5 +8,6 @@
     "tags": {
         "healthcare": "laboratory"
     },
+    "plural": "medical laboratories",
     "name": "Medical Laboratory"
 }

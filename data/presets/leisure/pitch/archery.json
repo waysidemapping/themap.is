@@ -12,5 +12,6 @@
         "bow and arrow",
         "crossbow"
     ],
+    "plural": "archery ranges",
     "name": "Archery Range"
 }

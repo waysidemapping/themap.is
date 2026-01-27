@@ -12,5 +12,9 @@
     "tags": {
         "tourism": "caravan_site"
     },
+    "groups": [
+        "lodging"
+    ],
+    "plural": "RV parks",
     "name": "RV Park"
 }

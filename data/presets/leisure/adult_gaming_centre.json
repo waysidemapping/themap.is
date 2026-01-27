@@ -7,5 +7,10 @@
     "tags": {
         "leisure": "adult_gaming_centre"
     },
+    "groups": [
+        "gambling",
+        "adult_amusement"
+    ],
+    "plural": "adult gaming centers",
     "name": "Adult Gaming Center"
 }

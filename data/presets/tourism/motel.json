@@ -1,5 +1,5 @@
 {
-    "icon": "sleeper",
+    "icon": "car-sleeper",
     "geometry": [
         "point",
         "area"
@@ -12,5 +12,9 @@
         "motor hotel",
         "overnight accommodations"
     ],
+    "groups": [
+        "lodging"
+    ],
+    "plural": "motels",
     "name": "Motel"
 }

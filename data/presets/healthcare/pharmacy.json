@@ -12,5 +12,6 @@
         "medicine",
         "prescription"
     ],
+    "plural": "pharamacy counters",
     "name": "Pharmacy Counter"
 }

@@ -12,7 +12,8 @@
         "drink"
     ],
     "groups": [
-        "food"
+        "food",
+        "adult_amusement"
     ],
     "plural": "pubs",
     "name": "Pub"

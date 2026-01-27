@@ -1,4 +1,5 @@
 {
+    "icon": "beer_mug",
     "tags": {
         "amenity": "biergarten"
     },
@@ -8,6 +9,7 @@
         "booze"
     ],
     "groups": [
+        "adult_amusement",
         "food"
     ],
     "plural": "beer gardens",

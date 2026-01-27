@@ -12,5 +12,6 @@
     "tags": {
         "healthcare": "blood_donation"
     },
+    "plural": "blood donation centers",
     "name": "Blood Donor Center"
 }

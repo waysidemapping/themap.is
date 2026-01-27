@@ -21,6 +21,9 @@
         "rv",
         "tenting"
     ],
+    "groups": [
+        "lodging"
+    ],
     "plural": "campgrounds",
     "name": "Campground"
 }

@@ -14,5 +14,9 @@
         "lodging",
         "overnight accommodations"
     ],
+    "groups": [
+        "lodging"
+    ],
+    "plural": "hostels",
     "name": "Hostel"
 }

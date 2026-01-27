@@ -12,5 +12,6 @@
         "lyonnaise",
         "pétanque"
     ],
-    "name": "Boules / Bocce Court"
+    "plural": "boules court",
+    "name": "Boules Court"
 }

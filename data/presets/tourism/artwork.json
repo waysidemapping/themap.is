@@ -14,5 +14,6 @@
         "sculpture",
         "statue"
     ],
+    "plural": "artworks",
     "name": "Artwork"
 }

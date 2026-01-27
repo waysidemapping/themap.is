@@ -14,5 +14,9 @@
     "tags": {
         "tourism": "gallery"
     },
+    "groups": [
+        "amusement"
+    ],
+    "plural": "art galleries",
     "name": "Art Gallery"
 }

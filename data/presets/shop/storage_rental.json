@@ -12,5 +12,8 @@
         "storage rental",
         "storage units"
     ],
+    "groups": [
+        "storage"
+    ],
     "name": "Storage Rental"
 }

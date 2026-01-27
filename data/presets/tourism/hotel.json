@@ -1,4 +1,5 @@
 {
+    "icon": "sleeper",
     "geometry": [
         "point",
         "area"
@@ -12,5 +13,9 @@
         "lodging",
         "overnight accommodations"
     ],
+    "groups": [
+        "lodging"
+    ],
+    "plural": "hotels",
     "name": "Hotel"
 }

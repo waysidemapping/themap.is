@@ -6,6 +6,9 @@
     "tags": {
         "leisure": "golf_course"
     },
+    "groups": [
+        "sports"
+    ],
     "plural": "golf courses",
     "name": "Golf Course"
 }

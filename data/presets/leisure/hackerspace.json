@@ -1,4 +1,5 @@
 {
+    "icon": "laptop",
     "terms": [
         "hacklab",
         "hackspace",
@@ -7,5 +8,6 @@
     "tags": {
         "leisure": "hackerspace"
     },
+    "plural": "hackerspaces",
     "name": "Hackerspace"
 }

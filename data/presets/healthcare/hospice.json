@@ -6,5 +6,6 @@
     "tags": {
         "healthcare": "hospice"
     },
-    "name": "Hospice"
+    "plural": "hospice facilities",
+    "name": "Hospice Facility"
 }

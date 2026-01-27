@@ -14,5 +14,9 @@
         "street light",
         "streetlight"
     ],
+    "groups": [
+        "street_furniture"
+    ],
+    "plural": "street lamps",
     "name": "Street Lamp"
 }

@@ -15,5 +15,6 @@
     "tags": {
         "healthcare": "hospital"
     },
-    "name": "Hospital Grounds"
+    "plural": "hospitals",
+    "name": "Hospital"
 }

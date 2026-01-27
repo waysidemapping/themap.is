@@ -54,7 +54,7 @@ async function updateList() {
       };
     })
     .sort((a, b) => b.score - a.score)
-    .map(item => item.theme) : Object.values(themes).sort((a, b) => b.name < a.name);
+    .map(item => item.theme) : Object.values(themes).sort((a, b) => b.searchName < a.searchName);
 
   resultsList?.replaceChildren(
     ...items.map(theme => {

@@ -7,5 +7,6 @@
         "key": "sport",
         "value": "paintball"
     },
+    "plural": "paintball fields",
     "name": "Paintball Field"
 }

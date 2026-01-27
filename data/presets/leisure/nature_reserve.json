@@ -7,5 +7,8 @@
         "protected",
         "wildlife"
     ],
+    "groups": [
+        "parks"
+    ],
     "name": "Nature Reserve"
 }

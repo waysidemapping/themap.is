@@ -6,5 +6,9 @@
         "field",
         "sport field"
     ],
-    "name": "Sport Pitch"
+    "groups": [
+        "sports"
+    ],
+    "plural": "sports fields and courts",
+    "name": "Sports Field or Court"
 }

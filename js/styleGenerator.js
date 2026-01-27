@@ -112,7 +112,7 @@ const filters = {
       ["in", ["get", "leisure"], ["literal", ["golf_course",  "horse_riding"]]]
     ]
   ],
-  is_outdoor_attraction: [
+  is_amusement: [
     "all",
     ["!", ["has", "building"]],
     ["!", ["all", ["has", "indoor"], ["!", ["==", ["get", "indoor"], "no"]]]],
@@ -253,10 +253,10 @@ const landuses = [
     text_color: colors.outdoor_sports_facility_text
   },
   {
-    filter: filters.is_outdoor_attraction,
-    fill_color: colors.outdoor_attraction_fill,
-    outline_color: colors.outdoor_attraction_outline,
-    text_color: colors.outdoor_attraction_text
+    filter: filters.is_amusement,
+    fill_color: colors.amusement_fill,
+    outline_color: colors.amusement_outline,
+    text_color: colors.amusement_text
   },
   {
     filter: filters.is_healthcare,

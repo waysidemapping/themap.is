@@ -6,6 +6,10 @@
     "tags": {
         "amenity": "library"
     },
+    "groups": [
+        "books",
+        "free_stuff"
+    ],
     "plural": "libraries",
     "name": "Library"
 }

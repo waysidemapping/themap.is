@@ -1,4 +1,5 @@
 {
+    "icon": "camera_flash",
     "terms": [
         "booth",
         "camera",
@@ -9,5 +10,6 @@
     "tags": {
         "amenity": "photo_booth"
     },
+    "plural": "photo booths",
     "name": "Photo Booth"
 }

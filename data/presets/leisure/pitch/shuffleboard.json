@@ -12,5 +12,6 @@
         "deck shuffleboard",
         "floor shuffleboard"
     ],
+    "plural": "shuffleboard courts",
     "name": "Shuffleboard Court"
 }

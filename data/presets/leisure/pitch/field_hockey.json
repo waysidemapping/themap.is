@@ -11,5 +11,6 @@
     "terms": [
         "landhockey"
     ],
-    "name": "Field Hockey Pitch"
+    "plural": "field hockey fields",
+    "name": "Field Hockey Field"
 }

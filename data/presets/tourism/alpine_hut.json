@@ -22,5 +22,9 @@
     "tags": {
         "tourism": "alpine_hut"
     },
+    "groups": [
+        "lodging"
+    ],
+    "plural": "mountain lodges",
     "name": "Mountain Lodge"
 }

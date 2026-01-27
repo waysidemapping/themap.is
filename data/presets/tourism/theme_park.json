@@ -11,6 +11,9 @@
         "amusement park",
         "fun park"
     ],
+    "groups": [
+        "amusement"
+    ],
     "plural": "amusement parks",
     "name": "Amusement Park"
 }

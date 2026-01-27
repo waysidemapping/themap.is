@@ -22,5 +22,10 @@
         "mailslot",
         "through-door delivery box"
     ],
+    "groups": [
+        "mail",
+        "street_furniture"
+    ],
+    "plural": "letter boxes",
     "name": "Letter Box"
 }

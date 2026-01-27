@@ -9,5 +9,9 @@
     "tags": {
         "amenity": "post_office"
     },
+    "groups": [
+        "mail"
+    ],
+    "plural": "post offices",
     "name": "Post Office"
 }

@@ -10,5 +10,9 @@
         "library drop-off",
         "library return"
     ],
+    "groups": [
+        "books",
+        "street_furniture"
+    ],
     "name": "Book Return Drop Box"
 }

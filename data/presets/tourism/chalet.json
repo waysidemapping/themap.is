@@ -18,5 +18,9 @@
     "tags": {
         "tourism": "chalet"
     },
-    "name": "Holiday Cottage"
+    "groups": [
+        "lodging"
+    ],
+    "plural": "vacation houses",
+    "name": "Vacation House"
 }
