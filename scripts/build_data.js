@@ -124,7 +124,7 @@ for (let presetId in presetsById) {
 
   let sortedObj = {};
   for (let key in allowedKeys) {
-    if (presetsById[presetId][key]) sortedObj[key] = presetsById[presetId][key];
+    if (typeof presetsById[presetId][key] !== 'undefined') sortedObj[key] = presetsById[presetId][key];
   }
   presetsById[presetId] = sortedObj;
   fs.writeFileSync(presetsDir + presetId + '.json', JSON.stringify(presetsById[presetId], null, 4));
