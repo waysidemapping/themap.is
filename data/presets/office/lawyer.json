@@ -1,0 +1,23 @@
+{
+    "name": "Law Office",
+    "tags": {
+        "office": "lawyer"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "advocate",
+        "attorney",
+        "barrister",
+        "counsellor",
+        "counselor",
+        "defender",
+        "lawyer",
+        "legal",
+        "prosecutor",
+        "solicitor"
+    ],
+    "icon": "balance_scales"
+}

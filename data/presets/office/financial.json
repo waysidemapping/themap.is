@@ -1,0 +1,13 @@
+{
+    "name": "Financial Office",
+    "tags": {
+        "office": "financial"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "bank"
+    ]
+}

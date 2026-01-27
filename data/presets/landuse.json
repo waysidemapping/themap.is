@@ -1,5 +1,7 @@
 {
-    "name": "Landuse Feature",
+    "name": "landuse feature",
+    "plural": "landuse features",
+    "autoTheme": false,
     "tags": {
         "landuse": "*"
     },

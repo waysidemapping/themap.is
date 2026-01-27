@@ -31,6 +31,7 @@ let groupThemes = [
   "bees",
   "books",
   "dams",
+  "islands",
   "free_stuff",
   "gambling",
   "healthcare",

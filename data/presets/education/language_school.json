@@ -1,5 +1,6 @@
 {
-    "name": "Language School",
+    "name": "language schools",
+    "plural": "language schools",
     "tags": {
         "education": "language_school"
     },

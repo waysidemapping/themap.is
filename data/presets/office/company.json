@@ -1,0 +1,14 @@
+{
+    "name": "Corporate Office",
+    "tags": {
+        "office": "company"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "corporation",
+        "office park"
+    ]
+}

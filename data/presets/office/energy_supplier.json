@@ -1,0 +1,17 @@
+{
+    "name": "Energy Supplier Office",
+    "tags": {
+        "office": "energy_supplier"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "electricity",
+        "energy company",
+        "energy utility",
+        "gas utility"
+    ],
+    "icon": "briefcase-bolt"
+}

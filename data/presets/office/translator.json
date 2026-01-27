@@ -1,0 +1,16 @@
+{
+    "name": "Translation Office",
+    "tags": {
+        "office": "translator"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "translation",
+        "translation agency",
+        "translation office",
+        "translator"
+    ]
+}

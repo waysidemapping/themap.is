@@ -1,0 +1,21 @@
+{
+    "name": "Diplomatic Office",
+    "tags": {
+        "office": "diplomatic"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "consulate",
+        "diplomatic mission",
+        "embassy",
+        "foreign mission",
+        "high commission",
+        "legation",
+        "liaison",
+        "permanent mission"
+    ],
+    "icon": "building_office-flag"
+}

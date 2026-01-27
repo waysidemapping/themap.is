@@ -1,0 +1,14 @@
+{
+    "name": "Labor Union Office",
+    "tags": {
+        "office": "union"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "trade union",
+        "union office"
+    ]
+}

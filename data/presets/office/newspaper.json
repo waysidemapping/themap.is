@@ -1,0 +1,14 @@
+{
+    "name": "Newspaper Office",
+    "tags": {
+        "office": "newspaper"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "newsroom"
+    ],
+    "icon": "newspaper"
+}

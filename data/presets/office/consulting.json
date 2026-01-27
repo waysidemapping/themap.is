@@ -1,0 +1,13 @@
+{
+    "name": "Consultancy Office",
+    "tags": {
+        "office": "consulting"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "consulting firm office"
+    ]
+}

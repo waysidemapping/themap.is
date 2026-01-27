@@ -1,5 +1,6 @@
 {
-    "name": "Luggage Locker",
+    "name": "luggage locker",
+    "plural": "luggage lockers",
     "tags": {
         "amenity": "luggage_locker"
     },

@@ -1,8 +1,10 @@
 {
-    "name": "Public Transport Feature",
+    "name": "public transport feature",
+    "plural": "public transport features",
     "groups": [
         "transport"
     ],
+    "autoTheme": false,
     "tags": {
         "public_transport": "*"
     },

@@ -1,0 +1,13 @@
+{
+    "name": "Property Management / Leasing Office",
+    "tags": {
+        "office": "property_management"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "property rental"
+    ]
+}

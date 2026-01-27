@@ -1,5 +1,7 @@
 {
-    "name": "Aerialway Feature",
+    "name": "aerialway feature",
+    "plural": "aerialway features",
+    "autoTheme": false,
     "tags": {
         "aerialway": "*"
     },

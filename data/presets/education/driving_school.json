@@ -1,5 +1,6 @@
 {
-    "name": "Driving School",
+    "name": "driving school",
+    "plural": "driving schools",
     "tags": {
         "education": "driving_school"
     },

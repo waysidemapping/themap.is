@@ -1,5 +1,6 @@
 {
-    "name": "Hamlet",
+    "name": "hamlet",
+    "plural": "hamlets",
     "tags": {
         "place": "hamlet"
     },

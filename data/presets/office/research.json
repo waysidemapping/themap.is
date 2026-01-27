@@ -1,0 +1,17 @@
+{
+    "name": "Research Office",
+    "tags": {
+        "office": "research"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "r and d",
+        "r&d",
+        "research and development",
+        "research lab",
+        "rnd"
+    ]
+}

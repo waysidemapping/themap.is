@@ -1,5 +1,6 @@
 {
-    "name": "City Block",
+    "name": "city block",
+    "plural": "city blocks",
     "tags": {
         "place": "city_block"
     },

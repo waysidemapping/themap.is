@@ -1,0 +1,16 @@
+{
+    "name": "Insurance Office",
+    "tags": {
+        "office": "insurance"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "actuary",
+        "insurer",
+        "risk management"
+    ],
+    "icon": "briefcase-shield"
+}

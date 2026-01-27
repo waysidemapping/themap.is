@@ -1,0 +1,17 @@
+{
+    "name": "Nonprofit Organization Office",
+    "tags": {
+        "office": "association"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "association",
+        "non-profit",
+        "nonprofit",
+        "organization",
+        "society"
+    ]
+}

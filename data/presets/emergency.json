@@ -1,5 +1,7 @@
 {
-    "name": "Emergency Feature",
+    "name": "emergency feature",
+    "plural": "emergency features",
+    "autoTheme": false,
     "tags": {
         "emergency": "*"
     },

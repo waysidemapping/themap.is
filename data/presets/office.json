@@ -1,5 +1,6 @@
 {
-    "name": "Office",
+    "name": "office",
+    "plural": "offices",
     "tags": {
         "office": "*"
     },
@@ -11,6 +12,6 @@
     "terms": [
         "administration"
     ],
-    "icon": "suitcase",
+    "icon": "briefcase",
     "matchScore": 0.7
 }

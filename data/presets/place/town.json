@@ -1,5 +1,6 @@
 {
-    "name": "Town",
+    "name": "town",
+    "plural": "towns",
     "tags": {
         "place": "town"
     },

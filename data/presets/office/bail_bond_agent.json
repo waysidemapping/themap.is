@@ -1,0 +1,17 @@
+{
+    "name": "Bail Bond Agent",
+    "tags": {
+        "office": "bail_bond_agent"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "bail bond dealer",
+        "bail bond man",
+        "bail bondsman",
+        "bail bondsperson"
+    ],
+    "icon": "banknote-hand"
+}

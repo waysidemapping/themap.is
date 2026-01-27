@@ -1,5 +1,6 @@
 {
-    "name": "Dance School",
+    "name": "dance school",
+    "plural": "dance schools",
     "tags": {
         "education": "dancing_school"
     },

@@ -1,5 +1,7 @@
 {
-    "name": "Indoor Feature",
+    "name": "indoor feature",
+    "plural": "indoor features",
+    "autoTheme": false,
     "tags": {
         "indoor": "*"
     },

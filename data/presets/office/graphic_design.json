@@ -1,0 +1,17 @@
+{
+    "name": "Graphic Design Office",
+    "tags": {
+        "office": "graphic_design"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "art",
+        "design",
+        "illustrate",
+        "technology",
+        "visual"
+    ]
+}

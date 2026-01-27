@@ -1,5 +1,6 @@
 {
-    "name": "Advertising Device",
+    "name": "advertising device",
+    "plural": "advertising devices",
     "tags": {
         "advertising": "*"
     },
@@ -12,6 +13,5 @@
         "flag",
         "neon sign",
         "sign"
-    ],
-    "icon": "billboard"
+    ]
 }

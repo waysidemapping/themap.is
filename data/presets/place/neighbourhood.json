@@ -1,5 +1,6 @@
 {
-    "name": "Neighborhood",
+    "name": "neighborhood",
+    "plural": "neighborhoods",
     "tags": {
         "place": "neighbourhood"
     },

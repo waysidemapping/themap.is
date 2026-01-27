@@ -1,0 +1,15 @@
+{
+    "name": "Government Office",
+    "tags": {
+        "office": "government"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "official",
+        "public office"
+    ],
+    "icon": "building_classical-flag"
+}

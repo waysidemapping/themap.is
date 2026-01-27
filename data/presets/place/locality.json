@@ -1,5 +1,6 @@
 {
-    "name": "Locality",
+    "name": "locality",
+    "plural": "localities",
     "tags": {
         "place": "locality"
     },

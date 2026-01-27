@@ -1,0 +1,14 @@
+{
+    "name": "Real Estate Office",
+    "tags": {
+        "office": "estate_agent"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "real estate"
+    ],
+    "icon": "sign_hanging-house"
+}

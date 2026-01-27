@@ -1,8 +1,10 @@
 {
-    "name": "Healthcare Facility",
+    "name": "healthcare facility",
+    "plural": "healthcare facilities",
     "groups": [
         "healthcare"
     ],
+    "autoTheme": false,
     "tags": {
         "healthcare": "*"
     },

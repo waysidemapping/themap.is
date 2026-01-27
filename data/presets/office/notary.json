@@ -1,0 +1,17 @@
+{
+    "name": "Notary Office",
+    "tags": {
+        "office": "notary"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "clerk",
+        "deeds",
+        "estate",
+        "signature",
+        "wills"
+    ]
+}

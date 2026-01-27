@@ -1,0 +1,13 @@
+{
+    "name": "Surveyor Office",
+    "tags": {
+        "office": "surveyor"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "surveying"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "name": "bulletin board",
+    "plural": "bulletin boards",
+    "tags": {
+        "advertising": "board"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "Bulletin Board",
+        "Pin Board",
+        "ad",
+        "advertising",
+        "announcements",
+        "blackboard",
+        "bulletinboard",
+        "cork board",
+        "corkboard",
+        "fliers",
+        "flyers",
+        "noticeboard",
+        "pinboard",
+        "sign",
+        "spam",
+        "whiteboard"
+    ],
+    "icon": "bulletin_board"
+}

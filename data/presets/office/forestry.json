@@ -1,0 +1,14 @@
+{
+    "name": "Forestry Office",
+    "tags": {
+        "office": "forestry"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "forest",
+        "ranger"
+    ]
+}

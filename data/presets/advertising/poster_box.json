@@ -1,0 +1,17 @@
+{
+    "name": "poster box",
+    "plural": "poster boxes",
+    "tags": {
+        "advertising": "poster_box"
+    },
+    "geometry": [
+        "point",
+        "line"
+    ],
+    "terms": [
+        "ad",
+        "advertising",
+        "spam"
+    ],
+    "icon": "poster_box"
+}

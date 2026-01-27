@@ -1,5 +1,9 @@
 {
-    "name": "Parcel Locker",
+    "name": "parcel locker",
+    "plural": "parcel lockers",
+    "groups": [
+        "street_furniture"
+    ],
     "tags": {
         "amenity": "parcel_locker"
     },

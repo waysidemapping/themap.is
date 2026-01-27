@@ -1,0 +1,16 @@
+{
+    "name": "Political Party Office",
+    "tags": {
+        "office": "political_party"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "activist",
+        "candidate",
+        "election"
+    ],
+    "icon": "building_classical-flag"
+}

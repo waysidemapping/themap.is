@@ -1,8 +1,7 @@
 {
-    "name": "Amenity",
-    "groups": [
-        "amenity"
-    ],
+    "name": "amenity",
+    "plural": "amenities",
+    "autoTheme": false,
     "tags": {
         "amenity": "*"
     },

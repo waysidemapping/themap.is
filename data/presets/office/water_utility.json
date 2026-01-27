@@ -1,0 +1,14 @@
+{
+    "name": "Water Utility Office",
+    "tags": {
+        "office": "water_utility"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "utility",
+        "water board"
+    ]
+}

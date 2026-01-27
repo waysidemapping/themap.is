@@ -1,5 +1,7 @@
 {
-    "name": "Waterway Feature",
+    "name": "waterway feature",
+    "plural": "waterway features",
+    "autoTheme": false,
     "tags": {
         "waterway": "*"
     },

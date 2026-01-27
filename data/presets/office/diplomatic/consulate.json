@@ -1,0 +1,20 @@
+{
+    "name": "Consulate",
+    "tags": {
+        "office": "diplomatic",
+        "diplomatic": "consulate"
+    },
+    "reference": {
+        "key": "diplomatic",
+        "value": "consulate"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "consular post",
+        "passports",
+        "visas"
+    ]
+}

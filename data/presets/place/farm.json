@@ -1,5 +1,6 @@
 {
-    "name": "Farm",
+    "name": "farm",
+    "plural": "farms",
     "tags": {
         "place": "farm"
     },

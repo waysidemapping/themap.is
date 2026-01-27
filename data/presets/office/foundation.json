@@ -1,0 +1,13 @@
+{
+    "name": "Foundation Office",
+    "tags": {
+        "office": "foundation"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "nonprofit"
+    ]
+}

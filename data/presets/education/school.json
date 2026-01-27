@@ -1,5 +1,6 @@
 {
-    "name": "School Grounds",
+    "name": "primary or secondary school",
+    "plural": "primary and secondary schools",
     "tags": {
         "education": "school"
     },
@@ -8,5 +9,6 @@
         "elementary school",
         "high school",
         "middle school"
-    ]
+    ],
+    "icon": "pencil-apple"
 }

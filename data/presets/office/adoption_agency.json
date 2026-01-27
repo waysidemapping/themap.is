@@ -1,0 +1,13 @@
+{
+    "name": "Adoption Agency",
+    "tags": {
+        "office": "adoption_agency"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "children"
+    ]
+}

@@ -1,5 +1,7 @@
 {
-    "name": "Railway Feature",
+    "name": "railway feature",
+    "plural": "railway features",
+    "autoTheme": false,
     "tags": {
         "railway": "*"
     },

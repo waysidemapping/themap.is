@@ -1,0 +1,14 @@
+{
+    "name": "Therapist Office",
+    "tags": {
+        "office": "therapist"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "therapy"
+    ],
+    "matchScore": 0.9
+}

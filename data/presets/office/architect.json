@@ -1,0 +1,14 @@
+{
+    "name": "Architect Office",
+    "tags": {
+        "office": "architect"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "architecture",
+        "landscape design"
+    ]
+}

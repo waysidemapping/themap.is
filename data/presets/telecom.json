@@ -1,5 +1,7 @@
 {
-    "name": "Telecom Feature",
+    "name": "telecom feature",
+    "plural": "telecom features",
+    "autoTheme": false,
     "tags": {
         "telecom": "*"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "University Grounds",
+    "name": "university",
+    "plural": "universities",
     "tags": {
         "education": "university"
     },

@@ -1,0 +1,14 @@
+{
+    "name": "Moving Company Office",
+    "tags": {
+        "office": "moving_company"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "movers",
+        "relocation"
+    ]
+}

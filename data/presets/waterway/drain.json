@@ -1,5 +1,6 @@
 {
-    "name": "Drain",
+    "name": "drain",
+    "plural": "drains",
     "tags": {
         "waterway": "drain"
     },

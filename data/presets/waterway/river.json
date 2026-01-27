@@ -1,5 +1,6 @@
 {
-    "name": "River",
+    "name": "river",
+    "plural": "rivers",
     "tags": {
         "waterway": "river"
     },

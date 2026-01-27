@@ -1,5 +1,6 @@
 {
-    "name": "Fish Pass",
+    "name": "fish pass",
+    "plural": "fish passes",
     "tags": {
         "waterway": "fish_pass"
     },

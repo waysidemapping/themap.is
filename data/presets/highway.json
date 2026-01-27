@@ -1,5 +1,7 @@
 {
-    "name": "Highway Feature",
+    "name": "highway feature",
+    "plural": "highway features",
+    "autoTheme": false,
     "tags": {
         "highway": "*"
     },

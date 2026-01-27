@@ -1,0 +1,17 @@
+{
+    "name": "NGO Office",
+    "tags": {
+        "office": "ngo"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "ngo",
+        "non government",
+        "non-government",
+        "organisation",
+        "organization"
+    ]
+}

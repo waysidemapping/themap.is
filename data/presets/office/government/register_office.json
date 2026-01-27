@@ -1,0 +1,22 @@
+{
+    "name": "Register Office",
+    "tags": {
+        "office": "government",
+        "government": "register_office"
+    },
+    "reference": {
+        "key": "government",
+        "value": "register_office"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "birth",
+        "certificate",
+        "clerk",
+        "death",
+        "marriage"
+    ]
+}

@@ -1,5 +1,7 @@
 {
-    "name": "Man-Made Feature",
+    "name": "built feature",
+    "plural": "built features",
+    "autoTheme": false,
     "tags": {
         "man_made": "*"
     },

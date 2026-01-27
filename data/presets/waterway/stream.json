@@ -1,5 +1,6 @@
 {
-    "name": "Stream",
+    "name": "stream",
+    "plural": "streams",
     "tags": {
         "waterway": "stream"
     },

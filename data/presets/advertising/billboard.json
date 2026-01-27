@@ -1,0 +1,17 @@
+{
+    "name": "billboard",
+    "plural": "billboards",
+    "tags": {
+        "advertising": "billboard"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "ad",
+        "advertising",
+        "spam"
+    ],
+    "icon": "billboard"
+}

@@ -1,5 +1,6 @@
 {
-    "name": "Tidal Channel",
+    "name": "tidal channel",
+    "plural": "tidal channels",
     "tags": {
         "waterway": "tidal_channel"
     },

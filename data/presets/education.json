@@ -1,5 +1,6 @@
 {
-    "name": "Education Facility",
+    "name": "education facility",
+    "plural": "education facilities",
     "groups": [
         "education"
     ],

@@ -1,5 +1,7 @@
 {
-    "name": "Tourism Feature",
+    "name": "tourism feature",
+    "plural": "tourirms features",
+    "autoTheme": false,
     "tags": {
         "tourism": "*"
     },

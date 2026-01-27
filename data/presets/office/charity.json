@@ -1,0 +1,13 @@
+{
+    "name": "Charity Office",
+    "tags": {
+        "office": "charity"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "charitable organization"
+    ]
+}

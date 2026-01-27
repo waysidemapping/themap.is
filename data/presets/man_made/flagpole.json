@@ -1,5 +1,9 @@
 {
-    "name": "Flagpole",
+    "name": "flagpole",
+    "plural": "flagpoles",
+    "groups": [
+        "street_furniture"
+    ],
     "tags": {
         "man_made": "flagpole"
     },
@@ -7,5 +11,5 @@
         "point",
         "vertex"
     ],
-    "icon": "building_office-flag"
+    "icon": "flag"
 }

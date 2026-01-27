@@ -1,0 +1,15 @@
+{
+    "name": "Tour Guide Office",
+    "tags": {
+        "office": "guide"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "dive guide",
+        "mountain guide",
+        "tour guide"
+    ]
+}

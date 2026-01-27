@@ -1,0 +1,17 @@
+{
+    "name": "Information Technology Office",
+    "tags": {
+        "office": "it"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "computer",
+        "information",
+        "it office",
+        "software",
+        "technology"
+    ]
+}

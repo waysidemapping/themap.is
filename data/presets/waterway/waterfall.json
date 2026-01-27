@@ -1,5 +1,6 @@
 {
-    "name": "Waterfall",
+    "name": "waterfall",
+    "plural": "waterfalls",
     "tags": {
         "waterway": "waterfall"
     },

@@ -1,5 +1,7 @@
 {
-    "name": "Boundary",
+    "name": "boundary",
+    "plural": "boundaries",
+    "autoTheme": false,
     "tags": {
         "boundary": "*"
     },

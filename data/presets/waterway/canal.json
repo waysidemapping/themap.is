@@ -1,5 +1,6 @@
 {
-    "name": "Canal",
+    "name": "canal",
+    "plural": "canals",
     "tags": {
         "waterway": "canal"
     },

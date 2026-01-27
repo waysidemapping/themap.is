@@ -1,0 +1,14 @@
+{
+    "name": "Religious Office",
+    "tags": {
+        "office": "religion"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "rector",
+        "vicar"
+    ]
+}

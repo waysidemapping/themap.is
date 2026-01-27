@@ -1,0 +1,19 @@
+{
+    "name": "Telecom Office",
+    "tags": {
+        "office": "telecommunication"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "communication",
+        "internet service provider",
+        "isp",
+        "network",
+        "telephone",
+        "voice"
+    ],
+    "icon": "phone"
+}

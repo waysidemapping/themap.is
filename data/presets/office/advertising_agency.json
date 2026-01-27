@@ -1,0 +1,17 @@
+{
+    "name": "Advertising Agency",
+    "tags": {
+        "office": "advertising_agency"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "ad",
+        "ad agency",
+        "advert agency",
+        "advertising",
+        "marketing"
+    ]
+}

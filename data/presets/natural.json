@@ -1,5 +1,7 @@
 {
-    "name": "Natural Feature",
+    "name": "natural feature",
+    "plural": "natural features",
+    "autoTheme": false,
     "tags": {
         "natural": "*"
     },

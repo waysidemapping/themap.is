@@ -1,5 +1,6 @@
 {
-    "name": "Archipelago",
+    "name": "archipelago",
+    "plural": "archipelagos",
     "tags": {
         "place": "archipelago"
     },

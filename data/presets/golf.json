@@ -1,5 +1,7 @@
 {
-    "name": "Golf Feature",
+    "name": "golf feature",
+    "plural": "golf features",
+    "autoTheme": false,
     "tags": {
         "golf": "*"
     },

@@ -1,5 +1,7 @@
 {
-    "name": "Leisure Feature",
+    "name": "leisure feature",
+    "plural": "leisure features",
+    "autoTheme": false,
     "tags": {
         "leisure": "*"
     },

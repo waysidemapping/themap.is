@@ -1,5 +1,6 @@
 {
-    "name": "Club",
+    "name": "club",
+    "plural": "clubs",
     "tags": {
         "club": "*"
     },

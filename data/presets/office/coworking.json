@@ -1,0 +1,14 @@
+{
+    "name": "Coworking Space",
+    "tags": {
+        "office": "coworking"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "coworking",
+        "office"
+    ]
+}

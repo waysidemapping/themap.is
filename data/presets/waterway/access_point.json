@@ -1,5 +1,6 @@
 {
-    "name": "Waterway Access Point",
+    "name": "waterway access point",
+    "plural": "waterway access points",
     "tags": {
         "waterway": "access_point"
     },

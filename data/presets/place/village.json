@@ -1,5 +1,6 @@
 {
-    "name": "Village",
+    "name": "village",
+    "plural": "villages",
     "tags": {
         "place": "village"
     },

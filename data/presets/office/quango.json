@@ -1,0 +1,19 @@
+{
+    "name": "Quasi-NGO Office",
+    "tags": {
+        "office": "quango"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "ngo",
+        "non government",
+        "non-government",
+        "organisation",
+        "organization",
+        "quasi autonomous",
+        "quasi-autonomous"
+    ]
+}

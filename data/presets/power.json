@@ -1,5 +1,7 @@
 {
-    "name": "Power Feature",
+    "name": "power feature",
+    "plural": "power features",
+    "autoTheme": false,
     "tags": {
         "power": "*"
     },

@@ -1,5 +1,7 @@
 {
-    "name": "Craft",
+    "name": "craft",
+    "plural": "crafts",
+    "autoTheme": false,
     "tags": {
         "craft": "*"
     },

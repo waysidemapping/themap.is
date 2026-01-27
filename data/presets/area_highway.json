@@ -1,5 +1,6 @@
 {
-    "name": "Road Area",
+    "name": "road area",
+    "plural": "road areas",
     "tags": {
         "area:highway": "*"
     },

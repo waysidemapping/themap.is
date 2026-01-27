@@ -1,5 +1,6 @@
 {
-    "name": "Music School",
+    "name": "music school",
+    "plural": "music schools",
     "tags": {
         "education": "music_school"
     },

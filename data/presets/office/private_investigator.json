@@ -1,0 +1,15 @@
+{
+    "name": "Private Investigator Office",
+    "tags": {
+        "office": "private_investigator"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "pi",
+        "private detective",
+        "private eye"
+    ]
+}

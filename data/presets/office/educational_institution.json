@@ -1,0 +1,14 @@
+{
+    "name": "Educational Institution Office",
+    "tags": {
+        "office": "educational_institution"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "school"
+    ],
+    "icon": "paper-pencil"
+}

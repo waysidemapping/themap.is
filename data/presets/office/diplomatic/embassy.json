@@ -1,0 +1,22 @@
+{
+    "name": "Embassy",
+    "tags": {
+        "office": "diplomatic",
+        "diplomatic": "embassy"
+    },
+    "reference": {
+        "key": "diplomatic",
+        "value": "embassy"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "consulate",
+        "diplomatic mission",
+        "foreign mission",
+        "high commission",
+        "permanent mission"
+    ]
+}

@@ -1,5 +1,6 @@
 {
-    "name": "Borough / Suburb",
+    "name": "urban distict",
+    "plural": "urban districts",
     "tags": {
         "place": "suburb"
     },

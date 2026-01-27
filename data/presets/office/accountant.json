@@ -1,0 +1,16 @@
+{
+    "name": "Accountant Office",
+    "tags": {
+        "office": "accountant"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "accountancy",
+        "accounting firm",
+        "bookkeeper"
+    ],
+    "icon": "calculator"
+}

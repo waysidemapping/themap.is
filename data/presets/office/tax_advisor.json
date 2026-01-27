@@ -1,0 +1,14 @@
+{
+    "name": "Tax Advisor Office",
+    "tags": {
+        "office": "tax_advisor"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "tax",
+        "tax consultant"
+    ]
+}

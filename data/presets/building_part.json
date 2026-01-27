@@ -1,5 +1,6 @@
 {
-    "name": "Building Part",
+    "name": "building part",
+    "plural": "building parts",
     "tags": {
         "building:part": "*"
     },

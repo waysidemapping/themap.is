@@ -1,5 +1,6 @@
 {
-    "name": "Sub-Borough / Quarter",
+    "name": "urban quarter",
+    "plural": "urban quarters",
     "tags": {
         "place": "quarter"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "County",
+    "name": "county",
+    "plural": "counties",
     "tags": {
         "place": "county"
     },

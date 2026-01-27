@@ -1,5 +1,7 @@
 {
-    "name": "Route Feature",
+    "name": "route feature",
+    "plural": "route features",
+    "autoTheme": false,
     "tags": {
         "route": "*"
     },

@@ -1,0 +1,13 @@
+{
+    "name": "Employment Agency",
+    "tags": {
+        "office": "employment_agency"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "job"
+    ]
+}
