@@ -1,5 +1,6 @@
 {
-    "name": "Real Estate Office",
+    "name": "real estate office",
+    "plural": "real estate offices",
     "tags": {
         "office": "estate_agent"
     },

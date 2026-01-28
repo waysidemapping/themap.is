@@ -1,5 +1,6 @@
 {
-    "name": "Border Control",
+    "name": "border control point",
+    "plural": "border control points",
     "tags": {
         "barrier": "border_control"
     },

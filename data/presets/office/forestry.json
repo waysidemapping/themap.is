@@ -1,5 +1,6 @@
 {
-    "name": "Forestry Office",
+    "name": "forestry office",
+    "plural": "forestry offices",
     "tags": {
         "office": "forestry"
     },

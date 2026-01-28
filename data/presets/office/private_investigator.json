@@ -1,5 +1,6 @@
 {
-    "name": "Private Investigator Office",
+    "name": "private investigation office",
+    "plural": "private investigation offices",
     "tags": {
         "office": "private_investigator"
     },

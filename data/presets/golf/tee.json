@@ -1,5 +1,7 @@
 {
-    "name": "Tee Box",
+    "name": "golf tee box",
+    "plural": "golf tee boxes",
+    "autoTheme": false,
     "tags": {
         "golf": "tee"
     },

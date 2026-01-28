@@ -1,5 +1,7 @@
 {
-    "name": "Groin",
+    "name": "groin",
+    "plural": "groins",
+    "autoTheme": false,
     "tags": {
         "man_made": "groyne"
     },

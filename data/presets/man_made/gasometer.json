@@ -1,5 +1,6 @@
 {
-    "name": "Gasometer",
+    "name": "gas holder",
+    "plural": "gas holders",
     "tags": {
         "man_made": "gasometer"
     },
@@ -8,6 +9,6 @@
         "area"
     ],
     "terms": [
-        "gas holder"
+        "gasometer"
     ]
 }

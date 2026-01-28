@@ -1,5 +1,7 @@
 {
-    "name": "Power Switch",
+    "name": "power switch",
+    "plural": "power switches",
+    "autoTheme": false,
     "tags": {
         "power": "switch"
     },

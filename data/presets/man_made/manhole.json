@@ -1,5 +1,6 @@
 {
-    "name": "Manhole",
+    "name": "manhole",
+    "plural": "manholes",
     "tags": {
         "man_made": "manhole"
     },

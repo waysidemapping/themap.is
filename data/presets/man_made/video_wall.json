@@ -1,5 +1,6 @@
 {
-    "name": "Digital Screen",
+    "name": "video wall",
+    "plural": "video walls",
     "tags": {
         "man_made": "video_wall"
     },

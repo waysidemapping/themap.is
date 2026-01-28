@@ -1,5 +1,6 @@
 {
-    "name": "Cairn",
+    "name": "cairn",
+    "plural": "cairns",
     "tags": {
         "man_made": "cairn"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Joiner",
+    "name": "joiner",
+    "plural": "joiners",
     "tags": {
         "craft": "joiner"
     },

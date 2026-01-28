@@ -1,5 +1,6 @@
 {
-    "name": "Sawmill",
+    "name": "sawmill",
+    "plural": "sawmills",
     "tags": {
         "craft": "sawmill"
     },

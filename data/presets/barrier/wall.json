@@ -1,5 +1,6 @@
 {
-    "name": "Wall",
+    "name": "wall",
+    "plural": "walls",
     "tags": {
         "barrier": "wall"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Substation",
+    "name": "power substation",
+    "plural": "power substations",
     "tags": {
         "power": "substation"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Jersey Barrier",
+    "name": "Jersey barrier",
+    "plural": "Jersey barriers",
     "tags": {
         "barrier": "jersey_barrier"
     },

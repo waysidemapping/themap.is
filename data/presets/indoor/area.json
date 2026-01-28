@@ -1,5 +1,7 @@
 {
-    "name": "Indoor Area",
+    "name": "indoor area",
+    "plural": "indoor areas",
+    "autoTheme": false,
     "tags": {
         "indoor": "area"
     },

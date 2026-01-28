@@ -1,5 +1,6 @@
 {
-    "name": "Chimney Sweeper",
+    "name": "chimney sweeper",
+    "plural": "chimney sweepers",
     "tags": {
         "craft": "chimney_sweeper"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Planter",
+    "name": "planter",
+    "plural": "planters",
     "tags": {
         "man_made": "planter"
     },

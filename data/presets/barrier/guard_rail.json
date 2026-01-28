@@ -1,5 +1,6 @@
 {
-    "name": "Guard Rail",
+    "name": "guard rail",
+    "plural": "guard rails",
     "tags": {
         "barrier": "guard_rail"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Chain",
+    "name": "chain barrier",
+    "plural": "chain barriers",
     "tags": {
         "barrier": "chain"
     },

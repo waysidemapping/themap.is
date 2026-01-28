@@ -1,5 +1,6 @@
 {
-    "name": "Educational Institution Office",
+    "name": "educational institution office",
+    "plural": "educational institution offices",
     "tags": {
         "office": "educational_institution"
     },

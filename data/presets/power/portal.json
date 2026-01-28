@@ -1,5 +1,7 @@
 {
-    "name": "Anchor Portal",
+    "name": "anchor portal",
+    "plural": "anchor portals",
+    "autoTheme": false,
     "tags": {
         "power": "portal"
     },

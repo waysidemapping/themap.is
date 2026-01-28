@@ -1,5 +1,7 @@
 {
-    "name": "Gantry",
+    "name": "gantry",
+    "plural": "gantries",
+    "autoTheme": false,
     "tags": {
         "man_made": "gantry"
     },

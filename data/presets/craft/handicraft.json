@@ -1,5 +1,6 @@
 {
-    "name": "Handicraft Workspace",
+    "name": "handicraft artisan",
+    "plural": "handicraft artisans",
     "tags": {
         "craft": "handicraft"
     },

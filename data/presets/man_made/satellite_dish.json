@@ -1,5 +1,6 @@
 {
-    "name": "Satellite Dish",
+    "name": "satellite dish",
+    "plural": "satellite dishes",
     "tags": {
         "man_made": "satellite_dish"
     },

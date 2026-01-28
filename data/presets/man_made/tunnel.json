@@ -1,5 +1,6 @@
 {
-    "name": "Tunnel Area",
+    "name": "tunnel",
+    "plural": "tunnels",
     "tags": {
         "man_made": "tunnel"
     },

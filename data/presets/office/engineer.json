@@ -1,5 +1,6 @@
 {
-    "name": "Engineering Office",
+    "name": "engineering office",
+    "plural": "engineering offices",
     "tags": {
         "office": "engineer"
     },

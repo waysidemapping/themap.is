@@ -1,5 +1,6 @@
 {
-    "name": "NGO Office",
+    "name": "NGO office",
+    "plural": "NGO offices",
     "tags": {
         "office": "ngo"
     },

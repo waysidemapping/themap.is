@@ -1,0 +1,28 @@
+{
+    "name": "horizontal bar",
+    "plural": "horizontal bars",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "horizontal_bar"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "horizontal_bar"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "bar",
+        "chin up",
+        "chinup",
+        "exercise",
+        "fitness",
+        "gym",
+        "pull up",
+        "pullup",
+        "trim trail"
+    ],
+    "icon": "horizontal_bar-user"
+}

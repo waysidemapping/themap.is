@@ -1,5 +1,6 @@
 {
-    "name": "Public Prosecutor's Office",
+    "name": "public prosecutor",
+    "plural": "public prosecutors",
     "tags": {
         "office": "government",
         "government": "prosecutor"

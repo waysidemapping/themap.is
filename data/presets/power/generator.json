@@ -1,5 +1,6 @@
 {
-    "name": "Power Generator",
+    "name": "power generator",
+    "plural": "power generators",
     "tags": {
         "power": "generator"
     },

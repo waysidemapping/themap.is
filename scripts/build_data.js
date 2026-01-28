@@ -6,7 +6,7 @@ const allGroups = {};
 
 const allowedKeys = {
   "name":{required: true},
-  "plural":{},
+  "plural":{required: true},
   "autoTheme": {},
   "groups":{},
   "tags":{required: true},

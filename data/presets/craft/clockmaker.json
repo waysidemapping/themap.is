@@ -1,5 +1,6 @@
 {
-    "name": "Clockmaker",
+    "name": "clockmaker",
+    "plural": "clockmakers",
     "tags": {
         "craft": "clockmaker"
     },

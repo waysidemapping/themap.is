@@ -1,5 +1,6 @@
 {
-    "name": "Wastewater Plant",
+    "name": "wastewater plant",
+    "plural": "wastewater plants",
     "tags": {
         "man_made": "wastewater_plant"
     },

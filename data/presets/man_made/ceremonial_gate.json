@@ -1,5 +1,6 @@
 {
-    "name": "Ceremonial Gate",
+    "name": "ceremonial gate",
+    "plural": "ceremonial gates",
     "tags": {
         "man_made": "ceremonial_gate"
     },

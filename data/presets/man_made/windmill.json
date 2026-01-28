@@ -1,5 +1,6 @@
 {
-    "name": "Windmill",
+    "name": "windmill",
+    "plural": "windmills",
     "tags": {
         "man_made": "windmill"
     },

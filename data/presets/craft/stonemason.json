@@ -1,5 +1,6 @@
 {
-    "name": "Stonemason",
+    "name": "stonemason",
+    "plural": "stonemasons",
     "tags": {
         "craft": "stonemason"
     },

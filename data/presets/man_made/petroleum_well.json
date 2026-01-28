@@ -1,5 +1,6 @@
 {
-    "name": "Oil Well",
+    "name": "petroleum well",
+    "plural": "petroleum wells",
     "tags": {
         "man_made": "petroleum_well"
     },

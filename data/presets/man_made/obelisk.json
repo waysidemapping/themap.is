@@ -1,5 +1,6 @@
 {
-    "name": "Obelisk",
+    "name": "obelisk",
+    "plural": "obelisks",
     "tags": {
         "man_made": "obelisk"
     },

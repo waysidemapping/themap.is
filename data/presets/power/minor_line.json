@@ -1,5 +1,7 @@
 {
-    "name": "Minor Power Line",
+    "name": "minor power line",
+    "plural": "minor power lines",
+    "autoTheme": false,
     "tags": {
         "power": "minor_line"
     },

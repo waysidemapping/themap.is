@@ -1,5 +1,6 @@
 {
-    "name": "Tower",
+    "name": "tower",
+    "plural": "towers",
     "tags": {
         "man_made": "tower"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Swing Gate",
+    "name": "swing gate",
+    "plural": "swing gates",
     "tags": {
         "barrier": "swing_gate"
     },

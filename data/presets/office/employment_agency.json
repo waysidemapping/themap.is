@@ -1,5 +1,6 @@
 {
-    "name": "Employment Agency",
+    "name": "employment agency",
+    "plural": "employment agencies",
     "tags": {
         "office": "employment_agency"
     },

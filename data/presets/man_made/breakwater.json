@@ -1,5 +1,6 @@
 {
-    "name": "Breakwater",
+    "name": "breakwater",
+    "plural": "breakwaters",
     "tags": {
         "man_made": "breakwater"
     },

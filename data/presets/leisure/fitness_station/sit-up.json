@@ -1,0 +1,26 @@
+{
+    "name": "sit-up bench",
+    "plural": "sit-up benches",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "sit-up"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "sit-up"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "crunch",
+        "exercise",
+        "fitness",
+        "gym",
+        "sit up",
+        "situp",
+        "trim trail"
+    ],
+    "icon": "bench"
+}

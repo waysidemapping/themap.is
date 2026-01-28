@@ -1,5 +1,7 @@
 {
-    "name": "Pipeline",
+    "name": "pipeline",
+    "plural": "pipelines",
+    "autoTheme": false,
     "tags": {
         "man_made": "pipeline"
     },

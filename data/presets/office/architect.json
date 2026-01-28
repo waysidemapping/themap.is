@@ -1,5 +1,6 @@
 {
-    "name": "Architect Office",
+    "name": "architecture office",
+    "plural": "architecture offices",
     "tags": {
         "office": "architect"
     },

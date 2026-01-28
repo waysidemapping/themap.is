@@ -1,5 +1,6 @@
 {
-    "name": "Insurance Office",
+    "name": "insurance office",
+    "plural": "insurance offices",
     "tags": {
         "office": "insurance"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Agricultural Engines Mechanic",
+    "name": "agricultural engine mechanic",
+    "plural": "agricultural engine mechanics",
     "tags": {
         "craft": "agricultural_engines"
     },

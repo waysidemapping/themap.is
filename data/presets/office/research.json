@@ -1,5 +1,6 @@
 {
-    "name": "Research Office",
+    "name": "research office",
+    "plural": "research offices",
     "tags": {
         "office": "research"
     },

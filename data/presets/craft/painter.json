@@ -1,5 +1,6 @@
 {
-    "name": "Painter",
+    "name": "painting service",
+    "plural": "painting services",
     "tags": {
         "craft": "painter"
     }

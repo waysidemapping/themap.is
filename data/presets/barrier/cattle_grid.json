@@ -1,5 +1,6 @@
 {
-    "name": "Cattle Grid",
+    "name": "cattle grid",
+    "plural": "cattle grids",
     "tags": {
         "barrier": "cattle_grid"
     },

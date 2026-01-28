@@ -1,5 +1,7 @@
 {
-    "name": "Power Cable",
+    "name": "power cable",
+    "plural": "power cables",
+    "autoTheme": false,
     "tags": {
         "power": "cable"
     },

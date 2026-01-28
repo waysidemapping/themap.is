@@ -1,7 +1,9 @@
 {
     "name": "playground map",
     "plural": "playground maps",
-    "autoTheme": false,
+    "groups": [
+        "maps"
+    ],
     "tags": {
         "playground": "map"
     },
@@ -9,5 +11,5 @@
         "point",
         "area"
     ],
-    "icon": "compass"
+    "icon": "map"
 }

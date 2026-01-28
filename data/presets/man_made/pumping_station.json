@@ -1,5 +1,6 @@
 {
-    "name": "Pumping Station",
+    "name": "pumping station",
+    "plural": "pumping stations",
     "tags": {
         "man_made": "pumping_station"
     },

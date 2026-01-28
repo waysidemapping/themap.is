@@ -1,5 +1,6 @@
 {
-    "name": "Kissing Gate",
+    "name": "kissing gate",
+    "plural": "kissing gates",
     "tags": {
         "barrier": "kissing_gate"
     },

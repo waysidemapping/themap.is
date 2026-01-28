@@ -1,5 +1,7 @@
 {
-    "name": "Sand Trap",
+    "name": "golf sand trap",
+    "plural": "golf sand traps",
+    "autoTheme": false,
     "tags": {
         "golf": "bunker"
     },

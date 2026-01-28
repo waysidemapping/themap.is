@@ -1,5 +1,6 @@
 {
-    "name": "Rope Fence",
+    "name": "rope barrier",
+    "plural": "rope barriers",
     "tags": {
         "barrier": "rope"
     },

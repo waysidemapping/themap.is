@@ -1,5 +1,6 @@
 {
-    "name": "Hedge",
+    "name": "hedge",
+    "plural": "hedges",
     "tags": {
         "barrier": "hedge"
     },

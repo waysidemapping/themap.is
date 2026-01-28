@@ -1,0 +1,27 @@
+{
+    "name": "trolleybus station",
+    "plural": "trolleybus stations",
+    "tags": {
+        "public_transport": "station",
+        "trolleybus": "yes"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "bus",
+        "electric",
+        "public transit",
+        "public transportation",
+        "station",
+        "streetcar",
+        "terminal",
+        "trackless",
+        "tram",
+        "transit",
+        "transportation",
+        "trolley"
+    ],
+    "icon": "trolleybus"
+}

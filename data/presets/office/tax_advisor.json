@@ -1,5 +1,6 @@
 {
-    "name": "Tax Advisor Office",
+    "name": "tax advisory office",
+    "plural": "tax advisory offices",
     "tags": {
         "office": "tax_advisor"
     },

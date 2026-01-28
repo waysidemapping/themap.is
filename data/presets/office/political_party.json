@@ -1,5 +1,6 @@
 {
-    "name": "Political Party Office",
+    "name": "political party office",
+    "plural": "political party offices",
     "tags": {
         "office": "political_party"
     },

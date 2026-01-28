@@ -1,5 +1,7 @@
 {
-    "name": "Transit Platform",
+    "name": "transit platform",
+    "plural": "transit platforms",
+    "autoTheme": false,
     "tags": {
         "public_transport": "platform"
     },

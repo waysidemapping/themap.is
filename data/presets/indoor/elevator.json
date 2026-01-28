@@ -1,5 +1,7 @@
 {
-    "name": "Indoor Elevator Shaft",
+    "name": "indoor elevator shaft",
+    "plural": "indoor elevator shafts",
+    "autoTheme": false,
     "tags": {
         "indoor": "room",
         "elevator": "yes"

@@ -1,5 +1,6 @@
 {
-    "name": "Locksmith",
+    "name": "locksmith",
+    "plural": "locksmiths",
     "tags": {
         "craft": "locksmith"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Retaining Wall",
+    "name": "retaining wall",
+    "plural": "retaining walls",
     "tags": {
         "barrier": "retaining_wall"
     },

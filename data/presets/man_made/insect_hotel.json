@@ -1,5 +1,6 @@
 {
-    "name": "Insect Hotel",
+    "name": "insect hotel",
+    "plural": "insect hotels",
     "groups": [
         "bees"
     ],

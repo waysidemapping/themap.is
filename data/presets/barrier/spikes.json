@@ -1,5 +1,6 @@
 {
-    "name": "Spike Strip",
+    "name": "spike strip",
+    "plural": "spike strips",
     "tags": {
         "barrier": "spikes"
     },

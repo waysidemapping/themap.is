@@ -1,5 +1,6 @@
 {
-    "name": "Water Well",
+    "name": "water well",
+    "plural": "water wells",
     "tags": {
         "man_made": "water_well"
     },

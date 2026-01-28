@@ -1,5 +1,6 @@
 {
-    "name": "Foundation Office",
+    "name": "foundation office",
+    "plural": "foundation offices",
     "tags": {
         "office": "foundation"
     },

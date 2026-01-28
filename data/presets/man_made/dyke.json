@@ -1,5 +1,7 @@
 {
-    "name": "Levee",
+    "name": "levee",
+    "plural": "levees",
+    "autoTheme": false,
     "tags": {
         "man_made": "dyke"
     },

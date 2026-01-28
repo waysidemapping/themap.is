@@ -1,5 +1,6 @@
 {
-    "name": "Windpump",
+    "name": "windpump",
+    "plural": "windpumps",
     "tags": {
         "man_made": "windpump"
     },

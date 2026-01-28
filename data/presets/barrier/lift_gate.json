@@ -1,5 +1,6 @@
 {
-    "name": "Boom Barrier",
+    "name": "arm gate",
+    "plural": "arm gates",
     "tags": {
         "barrier": "lift_gate"
     },

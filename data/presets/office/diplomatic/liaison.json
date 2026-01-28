@@ -1,5 +1,6 @@
 {
-    "name": "Liaison Office",
+    "name": "diplomatic liaison office",
+    "plural": "diplomatic liaison offices",
     "tags": {
         "office": "diplomatic",
         "diplomatic": "liaison"

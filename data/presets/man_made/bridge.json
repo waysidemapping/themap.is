@@ -1,5 +1,6 @@
 {
-    "name": "Bridge Area",
+    "name": "bridge",
+    "plural": "bridges",
     "tags": {
         "man_made": "bridge"
     },

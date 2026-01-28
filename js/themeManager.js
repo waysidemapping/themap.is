@@ -37,6 +37,7 @@ let groupThemes = [
   "healthcare",
   "lodging",
   "mail",
+  "maps",
   "motorcycles",
   "stores",
   "street furniture",

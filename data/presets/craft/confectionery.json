@@ -1,5 +1,6 @@
 {
-    "name": "Candy Maker",
+    "name": "confectionery",
+    "plural": "confectioneries",
     "tags": {
         "craft": "confectionery"
     },

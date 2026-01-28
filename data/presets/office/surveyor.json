@@ -1,5 +1,6 @@
 {
-    "name": "Surveyor Office",
+    "name": "surveying office",
+    "plural": "surveying offices",
     "tags": {
         "office": "surveyor"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Insulator",
+    "name": "insulation service",
+    "plural": "insulation services",
     "tags": {
         "craft": "insulation"
     }

@@ -1,5 +1,6 @@
 {
-    "name": "Stile",
+    "name": "stile",
+    "plural": "stiles",
     "tags": {
         "barrier": "stile"
     },

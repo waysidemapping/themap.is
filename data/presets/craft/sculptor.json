@@ -1,5 +1,6 @@
 {
-    "name": "Sculptor",
+    "name": "sculptor",
+    "plural": "sculptors",
     "tags": {
         "craft": "sculptor"
     },

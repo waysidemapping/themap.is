@@ -1,5 +1,6 @@
 {
-    "name": "Gas Pump",
+    "name": "gasoline pump",
+    "plural": "gasoline pumps",
     "tags": {
         "man_made": "fuel_pump"
     },

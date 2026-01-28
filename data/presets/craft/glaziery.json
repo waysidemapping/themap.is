@@ -1,5 +1,6 @@
 {
-    "name": "Glaziery",
+    "name": "glaziery",
+    "plural": "glazieries",
     "tags": {
         "craft": "glaziery"
     },

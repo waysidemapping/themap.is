@@ -1,5 +1,6 @@
 {
-    "name": "Cross",
+    "name": "cross",
+    "plural": "crosses",
     "tags": {
         "man_made": "cross"
     },

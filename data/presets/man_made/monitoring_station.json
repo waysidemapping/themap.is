@@ -1,5 +1,6 @@
 {
-    "name": "Monitoring Station",
+    "name": "monitoring station",
+    "plural": "monitoring stations",
     "tags": {
         "man_made": "monitoring_station"
     },

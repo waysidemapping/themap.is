@@ -1,5 +1,6 @@
 {
-    "name": "Bunker Silo",
+    "name": "bunker silo",
+    "plural": "bunker silos",
     "tags": {
         "man_made": "bunker_silo"
     },

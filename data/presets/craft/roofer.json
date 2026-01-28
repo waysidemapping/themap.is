@@ -1,5 +1,6 @@
 {
-    "name": "Roofer",
+    "name": "roofer",
+    "plural": "roofers",
     "tags": {
         "craft": "roofer"
     }

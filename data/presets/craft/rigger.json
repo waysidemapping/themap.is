@@ -1,5 +1,6 @@
 {
-    "name": "Rigger",
+    "name": "rigger",
+    "plural": "riggers",
     "tags": {
         "craft": "rigger"
     },

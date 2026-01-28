@@ -1,5 +1,7 @@
 {
-    "name": "Power Pole",
+    "name": "power utility pole",
+    "plural": "power utility poles",
+    "autoTheme": false,
     "tags": {
         "power": "pole"
     },

@@ -1,0 +1,24 @@
+{
+    "name": "balance beam",
+    "plural": "balance beams",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "balance_beam"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "balance_beam"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "balance",
+        "exercise",
+        "fitness",
+        "gym",
+        "trim trail"
+    ],
+    "icon": "balance_beam-user"
+}

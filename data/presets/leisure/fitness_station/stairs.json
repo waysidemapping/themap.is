@@ -1,0 +1,23 @@
+{
+    "name": "training stairs",
+    "plural": "training stairs",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "stairs"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "stairs"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "exercise",
+        "fitness",
+        "gym",
+        "steps",
+        "trim trail"
+    ]
+}

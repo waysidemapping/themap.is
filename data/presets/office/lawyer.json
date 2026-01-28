@@ -1,5 +1,6 @@
 {
-    "name": "Law Office",
+    "name": "law office",
+    "plural": "law offices",
     "tags": {
         "office": "lawyer"
     },

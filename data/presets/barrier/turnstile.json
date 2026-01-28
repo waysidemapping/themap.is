@@ -1,5 +1,6 @@
 {
-    "name": "Turnstile",
+    "name": "turnstile",
+    "plural": "turnstiles",
     "tags": {
         "barrier": "turnstile"
     },

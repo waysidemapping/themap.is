@@ -1,5 +1,6 @@
 {
-    "name": "Telescope",
+    "name": "telescope",
+    "plural": "telescopes",
     "tags": {
         "man_made": "telescope"
     },
@@ -9,5 +10,6 @@
     "geometry": [
         "point",
         "area"
-    ]
+    ],
+    "icon": "telescope"
 }

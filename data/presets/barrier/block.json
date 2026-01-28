@@ -1,5 +1,6 @@
 {
-    "name": "Block",
+    "name": "block barrier",
+    "plural": "block barriers",
     "tags": {
         "barrier": "block"
     },

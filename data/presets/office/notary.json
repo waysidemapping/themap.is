@@ -1,5 +1,6 @@
 {
-    "name": "Notary Office",
+    "name": "notary office",
+    "plural": "notary offices",
     "tags": {
         "office": "notary"
     },

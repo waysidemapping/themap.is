@@ -1,5 +1,6 @@
 {
-    "name": "Metalworker",
+    "name": "metalworker",
+    "plural": "metalworkers",
     "tags": {
         "craft": "metal_construction"
     }

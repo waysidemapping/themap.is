@@ -1,5 +1,6 @@
 {
-    "name": "Graphic Design Office",
+    "name": "graphic design office",
+    "plural": "graphic design offices",
     "tags": {
         "office": "graphic_design"
     },

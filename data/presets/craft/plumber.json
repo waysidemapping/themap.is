@@ -1,5 +1,6 @@
 {
-    "name": "Plumber",
+    "name": "plumber",
+    "plural": "plumbers",
     "tags": {
         "craft": "plumber"
     },

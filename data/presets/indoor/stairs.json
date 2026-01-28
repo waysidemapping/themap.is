@@ -1,5 +1,7 @@
 {
-    "name": "Indoor Stairwell",
+    "name": "indoor stairwell",
+    "plural": "indoor stairwells",
+    "autoTheme": false,
     "tags": {
         "indoor": "room",
         "stairs": "yes"

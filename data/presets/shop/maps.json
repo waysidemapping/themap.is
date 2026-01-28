@@ -1,0 +1,16 @@
+{
+    "name": "map store",
+    "plural": "map stores",
+    "groups": [
+        "maps",
+        "stores"
+    ],
+    "tags": {
+        "shop": "maps"
+    },
+    "terms": [
+        "map",
+        "atlas"
+    ],
+    "icon": "map"
+}

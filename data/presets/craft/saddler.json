@@ -1,5 +1,6 @@
 {
-    "name": "Saddler",
+    "name": "saddler",
+    "plural": "saddlers",
     "tags": {
         "craft": "saddler"
     }

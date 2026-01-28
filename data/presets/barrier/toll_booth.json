@@ -1,5 +1,6 @@
 {
-    "name": "Toll Booth",
+    "name": "toll booth",
+    "plural": "toll booths",
     "tags": {
         "barrier": "toll_booth"
     },

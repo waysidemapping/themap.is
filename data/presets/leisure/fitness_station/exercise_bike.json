@@ -1,0 +1,20 @@
+{
+    "name": "stationary bike",
+    "plural": "stationary bikes",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "exercise_bike"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "exercise_bike"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "exercise bike"
+    ],
+    "icon": "bicycle"
+}

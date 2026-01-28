@@ -1,0 +1,23 @@
+{
+    "name": "bus station",
+    "plural": "bus stations",
+    "tags": {
+        "public_transport": "station",
+        "bus": "yes"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "bus",
+        "bus terminal",
+        "public transit",
+        "public transportation",
+        "station",
+        "terminal",
+        "transit",
+        "transportation"
+    ],
+    "icon": "bus"
+}

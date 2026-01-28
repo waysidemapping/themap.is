@@ -1,5 +1,6 @@
 {
-    "name": "Gate",
+    "name": "gate",
+    "plural": "gates",
     "tags": {
         "barrier": "gate"
     },

@@ -1,0 +1,19 @@
+{
+    "name": "elliptical machine",
+    "plural": "elliptical machines",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "elliptical_trainer"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "elliptical_trainer"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "elliptical trainer"
+    ]
+}

@@ -1,5 +1,6 @@
 {
-    "name": "Register Office",
+    "name": "government register office",
+    "plural": "government register offices",
     "tags": {
         "office": "government",
         "government": "register_office"

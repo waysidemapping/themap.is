@@ -1,5 +1,6 @@
 {
-    "name": "Transformer",
+    "name": "power transformer",
+    "plural": "power transformers",
     "tags": {
         "power": "transformer"
     },

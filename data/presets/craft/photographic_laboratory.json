@@ -1,5 +1,6 @@
 {
-    "name": "Photographic Laboratory",
+    "name": "photo lab",
+    "plural": "photo labs",
     "tags": {
         "craft": "photographic_laboratory"
     },

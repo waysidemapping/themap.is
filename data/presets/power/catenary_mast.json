@@ -1,5 +1,7 @@
 {
-    "name": "Catenary Pole",
+    "name": "catenary poles",
+    "plural": "caternary poles",
+    "autoTheme": false,
     "tags": {
         "power": "catenary_mast"
     },

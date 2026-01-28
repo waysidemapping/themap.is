@@ -1,5 +1,6 @@
 {
-    "name": "Trench",
+    "name": "trench",
+    "plural": "trenches",
     "tags": {
         "barrier": "ditch"
     },

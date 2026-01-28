@@ -1,0 +1,25 @@
+{
+    "name": "push-up bar",
+    "plural": "push-up bars",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "push-up"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "push-up"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "bar",
+        "exercise",
+        "fitness",
+        "gym",
+        "push up",
+        "pushup",
+        "trim trail"
+    ]
+}

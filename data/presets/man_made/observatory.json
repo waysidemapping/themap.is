@@ -1,5 +1,6 @@
 {
-    "name": "Observatory",
+    "name": "observatory",
+    "plural": "observatories",
     "tags": {
         "man_made": "observatory"
     },

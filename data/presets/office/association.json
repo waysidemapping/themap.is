@@ -1,5 +1,6 @@
 {
-    "name": "Nonprofit Organization Office",
+    "name": "nonprofit organization office",
+    "plural": "nonprofit organization offices",
     "tags": {
         "office": "association"
     },

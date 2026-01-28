@@ -1,5 +1,7 @@
 {
-    "name": "Embankment",
+    "name": "embankment",
+    "plural": "embankments",
+    "autoTheme": false,
     "tags": {
         "man_made": "embankment"
     },

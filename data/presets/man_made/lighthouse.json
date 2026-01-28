@@ -1,5 +1,6 @@
 {
-    "name": "Lighthouse",
+    "name": "lighthouse",
+    "plural": "lighthouses",
     "tags": {
         "man_made": "lighthouse"
     },

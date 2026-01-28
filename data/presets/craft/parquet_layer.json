@@ -1,5 +1,6 @@
 {
-    "name": "Parquet Layer",
+    "name": "parquet layer",
+    "plural": "parquet layers",
     "tags": {
         "craft": "parquet_layer"
     },

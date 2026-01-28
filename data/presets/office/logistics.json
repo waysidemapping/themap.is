@@ -1,0 +1,15 @@
+{
+    "name": "logistics office",
+    "plural": "logistics offices",
+    "tags": {
+        "office": "logistics"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "supply chain",
+        "shipping"
+    ]
+}

@@ -1,5 +1,6 @@
 {
-    "name": "Fallen Tree Obstruction",
+    "name": "fallen log",
+    "plural": "fallen logs",
     "tags": {
         "barrier": "log"
     },

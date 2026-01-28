@@ -1,5 +1,6 @@
 {
-    "name": "Information Technology Office",
+    "name": "IT office",
+    "plural": "IT offices",
     "tags": {
         "office": "it"
     },
@@ -9,9 +10,8 @@
     ],
     "terms": [
         "computer",
-        "information",
+        "information technology",
         "it office",
-        "software",
-        "technology"
+        "software"
     ]
 }

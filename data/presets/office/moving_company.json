@@ -1,5 +1,6 @@
 {
-    "name": "Moving Company Office",
+    "name": "moving company office",
+    "plural": "moving company offices",
     "tags": {
         "office": "moving_company"
     },

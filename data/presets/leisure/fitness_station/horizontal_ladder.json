@@ -1,0 +1,29 @@
+{
+    "name": "horizontal ladder",
+    "plural": "horizontal ladders",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "horizontal_ladder"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "horizontal_ladder"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "bar",
+        "chin up",
+        "chinup",
+        "exercise",
+        "fitness",
+        "gym",
+        "ladder",
+        "monkey bars",
+        "pull up",
+        "pullup",
+        "trim trail"
+    ]
+}

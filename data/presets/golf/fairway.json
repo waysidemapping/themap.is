@@ -1,5 +1,7 @@
 {
-    "name": "Fairway",
+    "name": "golf fairway",
+    "plural": "golf fairways",
+    "autoTheme": false,
     "tags": {
         "golf": "fairway"
     },

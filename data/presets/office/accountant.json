@@ -1,5 +1,6 @@
 {
-    "name": "Accountant Office",
+    "name": "accounting office",
+    "plural": "accounting offices",
     "tags": {
         "office": "accountant"
     },

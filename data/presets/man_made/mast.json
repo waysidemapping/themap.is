@@ -1,5 +1,6 @@
 {
-    "name": "Mast",
+    "name": "mast",
+    "plural": "masts",
     "tags": {
         "man_made": "mast"
     },

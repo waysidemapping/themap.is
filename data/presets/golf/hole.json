@@ -1,5 +1,7 @@
 {
-    "name": "Golf Hole",
+    "name": "golf hole",
+    "plural": "golf holes",
+    "autoTheme": false,
     "tags": {
         "golf": "hole"
     },

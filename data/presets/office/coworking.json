@@ -1,5 +1,6 @@
 {
-    "name": "Coworking Space",
+    "name": "coworking space",
+    "plural": "coworking spaces",
     "tags": {
         "office": "coworking"
     },

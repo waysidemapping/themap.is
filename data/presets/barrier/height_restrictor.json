@@ -1,5 +1,6 @@
 {
-    "name": "Height Restrictor",
+    "name": "height restrictor",
+    "plural": "height restrictors",
     "tags": {
         "barrier": "height_restrictor"
     },

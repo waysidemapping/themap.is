@@ -1,5 +1,6 @@
 {
-    "name": "Transit Station",
+    "name": "transit station",
+    "plural": "transit stations",
     "tags": {
         "public_transport": "station"
     },

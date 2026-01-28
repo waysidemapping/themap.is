@@ -1,5 +1,6 @@
 {
-    "name": "Corporate Office",
+    "name": "corporate office",
+    "plural": "corporate offices",
     "tags": {
         "office": "company"
     },

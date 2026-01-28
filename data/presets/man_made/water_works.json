@@ -1,5 +1,6 @@
 {
-    "name": "Water Works",
+    "name": "waterworks",
+    "plural": "waterworks",
     "tags": {
         "man_made": "water_works"
     },

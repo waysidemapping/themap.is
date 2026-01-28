@@ -1,5 +1,6 @@
 {
-    "name": "Tax and Revenue Office",
+    "name": "government tax office",
+    "plural": "government tax offices",
     "tags": {
         "office": "government",
         "government": "tax"

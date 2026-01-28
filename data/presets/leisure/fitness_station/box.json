@@ -1,0 +1,24 @@
+{
+    "name": "plyometric box",
+    "plural": "plyometric boxes",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "box"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "box"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "box",
+        "exercise",
+        "fitness",
+        "gym",
+        "jump",
+        "trim trail"
+    ]
+}

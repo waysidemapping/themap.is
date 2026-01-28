@@ -1,5 +1,6 @@
 {
-    "name": "Beacon",
+    "name": "beacon",
+    "plural": "beacons",
     "tags": {
         "man_made": "beacon"
     },

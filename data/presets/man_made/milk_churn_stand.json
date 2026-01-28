@@ -1,5 +1,6 @@
 {
-    "name": "Milk Churn Stand",
+    "name": "milk churn stand",
+    "plural": "milk churn stands",
     "tags": {
         "man_made": "milk_churn_stand"
     },

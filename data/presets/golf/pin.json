@@ -1,5 +1,7 @@
 {
-    "name": "Golf Pin",
+    "name": "golf pin",
+    "plural": "golf pins",
+    "autoTheme": false,
     "tags": {
         "golf": "pin"
     },

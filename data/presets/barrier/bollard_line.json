@@ -1,5 +1,7 @@
 {
-    "name": "Bollard Row",
+    "name": "bollard row",
+    "plural": "bollard rows",
+    "autoTheme": false,
     "tags": {
         "barrier": "bollard"
     },

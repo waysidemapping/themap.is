@@ -1,5 +1,6 @@
 {
-    "name": "Survey Point",
+    "name": "survey point",
+    "plural": "survey points",
     "tags": {
         "man_made": "survey_point"
     },

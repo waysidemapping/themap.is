@@ -1,5 +1,6 @@
 {
-    "name": "Consultancy Office",
+    "name": "consultancy office",
+    "plural": "consulancy offices",
     "tags": {
         "office": "consulting"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Photographer",
+    "name": "photographer",
+    "plural": "photographers",
     "tags": {
         "craft": "photographer"
     },

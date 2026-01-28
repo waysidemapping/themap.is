@@ -1,5 +1,6 @@
 {
-    "name": "Water Tap",
+    "name": "water tap",
+    "plural": "water taps",
     "tags": {
         "man_made": "water_tap"
     },

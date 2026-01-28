@@ -1,7 +1,6 @@
 {
     "name": "information feature",
     "plural": "information features",
-    "autoTheme": false,
     "tags": {
         "information": "*"
     },

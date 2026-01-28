@@ -1,0 +1,28 @@
+{
+    "name": "light rail station",
+    "plural": "light rail stations",
+    "tags": {
+        "public_transport": "station",
+        "light_rail": "yes"
+    },
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "terms": [
+        "electric",
+        "light rail",
+        "public transit",
+        "public transportation",
+        "rail",
+        "station",
+        "terminal",
+        "track",
+        "tram",
+        "transit",
+        "transportation",
+        "trolley"
+    ],
+    "icon": "light_rail"
+}

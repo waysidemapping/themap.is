@@ -1,5 +1,6 @@
 {
-    "name": "Boat Builder",
+    "name": "boat builder",
+    "plural": "boat builders",
     "tags": {
         "craft": "boatbuilder"
     },

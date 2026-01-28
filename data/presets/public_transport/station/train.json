@@ -1,0 +1,26 @@
+{
+    "name": "train station",
+    "plural": "train stations",
+    "tags": {
+        "public_transport": "station",
+        "train": "yes"
+    },
+    "geometry": [
+        "vertex",
+        "point",
+        "area"
+    ],
+    "terms": [
+        "public transit",
+        "public transportation",
+        "rail",
+        "railway station",
+        "station",
+        "terminal",
+        "track",
+        "train",
+        "transit",
+        "transportation"
+    ],
+    "icon": "train"
+}

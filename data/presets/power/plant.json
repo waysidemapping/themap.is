@@ -1,5 +1,6 @@
 {
-    "name": "Power Station Grounds",
+    "name": "power station",
+    "plural": "power stations",
     "tags": {
         "power": "plant"
     },

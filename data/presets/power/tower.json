@@ -1,5 +1,6 @@
 {
-    "name": "High-Voltage Tower",
+    "name": "high-voltage tower",
+    "plural": "high-voltage towers",
     "tags": {
         "power": "tower"
     },

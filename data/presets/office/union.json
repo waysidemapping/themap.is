@@ -1,5 +1,6 @@
 {
-    "name": "Labor Union Office",
+    "name": "labor union office",
+    "plural": "labor union offices",
     "tags": {
         "office": "union"
     },

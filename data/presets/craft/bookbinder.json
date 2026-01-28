@@ -1,5 +1,6 @@
 {
-    "name": "Bookbinder",
+    "name": "bookbinder",
+    "plural": "bookbinders",
     "groups": [
         "crafts",
         "books"

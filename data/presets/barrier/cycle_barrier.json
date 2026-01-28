@@ -1,5 +1,6 @@
 {
-    "name": "Cycle Barrier",
+    "name": "cycle barrier",
+    "plural": "cycle barriers",
     "tags": {
         "barrier": "cycle_barrier"
     },

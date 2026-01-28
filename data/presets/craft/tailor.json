@@ -1,5 +1,6 @@
 {
-    "name": "Tailor",
+    "name": "tailor",
+    "plural": "tailors",
     "tags": {
         "craft": "tailor"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Surveillance",
+    "name": "surveillance device",
+    "plural": "surveillance devices",
     "tags": {
         "man_made": "surveillance"
     },

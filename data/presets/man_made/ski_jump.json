@@ -1,5 +1,6 @@
 {
-    "name": "Ski Jumping Tower",
+    "name": "ski jumping tower",
+    "plural": "ski jumping towers",
     "tags": {
         "man_made": "ski_jump"
     },

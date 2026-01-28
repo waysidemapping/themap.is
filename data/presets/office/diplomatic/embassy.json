@@ -1,5 +1,6 @@
 {
-    "name": "Embassy",
+    "name": "embassy",
+    "plural": "embassies",
     "tags": {
         "office": "diplomatic",
         "diplomatic": "embassy"

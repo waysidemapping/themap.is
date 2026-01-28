@@ -1,5 +1,6 @@
 {
-    "name": "Adoption Agency",
+    "name": "adoption agency",
+    "plural": "adoption agencies",
     "tags": {
         "office": "adoption_agency"
     },

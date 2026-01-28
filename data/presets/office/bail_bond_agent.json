@@ -1,5 +1,6 @@
 {
-    "name": "Bail Bond Agent",
+    "name": "bail bond agency",
+    "plural": "bail bond agencies",
     "tags": {
         "office": "bail_bond_agent"
     },

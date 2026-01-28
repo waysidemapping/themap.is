@@ -1,5 +1,6 @@
 {
-    "name": "Basket Maker",
+    "name": "basket maker",
+    "plural": "basket makers",
     "tags": {
         "craft": "basket_maker"
     },

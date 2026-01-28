@@ -1,0 +1,16 @@
+{
+    "name": "floating boom",
+    "plural": "floating booms",
+    "tags": {
+        "barrier": "floating_boom"
+    },
+    "geometry": [
+        "vertex",
+        "line"
+    ],
+    "terms": [
+        "floating barrier",
+        "buoy line",
+        "buoy chain"
+    ]
+}

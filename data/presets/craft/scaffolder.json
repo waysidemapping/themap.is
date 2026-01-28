@@ -1,5 +1,6 @@
 {
-    "name": "Scaffolder",
+    "name": "scaffolder",
+    "plural": "scaffolders",
     "tags": {
         "craft": "scaffolder"
     },

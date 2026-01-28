@@ -1,5 +1,7 @@
 {
-    "name": "Indoor Wall",
+    "name": "indoor wall",
+    "plural": "indoor walls",
+    "autoTheme": false,
     "tags": {
         "indoor": "wall"
     },

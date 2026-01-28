@@ -1,7 +1,6 @@
 {
     "name": "highway exit",
     "plural": "highway exits",
-    "autoTheme": false,
     "tags": {
         "highway": "motorway_junction"
     },

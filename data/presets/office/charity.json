@@ -1,5 +1,6 @@
 {
-    "name": "Charity Office",
+    "name": "charity office",
+    "plural": "charity offices",
     "tags": {
         "office": "charity"
     },

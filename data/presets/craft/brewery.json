@@ -1,5 +1,6 @@
 {
-    "name": "Craft Brewery",
+    "name": "craft brewery",
+    "plural": "craft breweries",
     "tags": {
         "craft": "brewery"
     },

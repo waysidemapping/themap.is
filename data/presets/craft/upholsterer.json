@@ -1,5 +1,6 @@
 {
-    "name": "Upholsterer",
+    "name": "upholsterer",
+    "plural": "upholsterers",
     "tags": {
         "craft": "upholsterer"
     }

@@ -1,0 +1,24 @@
+{
+    "name": "monorail station",
+    "plural": "monorail stations",
+    "tags": {
+        "public_transport": "station",
+        "monorail": "yes"
+    },
+    "geometry": [
+        "point",
+        "vertex",
+        "area"
+    ],
+    "terms": [
+        "monorail",
+        "public transit",
+        "public transportation",
+        "rail",
+        "station",
+        "terminal",
+        "transit",
+        "transportation"
+    ],
+    "icon": "monorail"
+}

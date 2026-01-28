@@ -1,5 +1,6 @@
 {
-    "name": "Mineshaft",
+    "name": "mineshaft",
+    "plural": "mineshafts",
     "tags": {
         "man_made": "mineshaft"
     },

@@ -1,5 +1,7 @@
 {
-    "name": "Indoor Door",
+    "name": "indoor door",
+    "plural": "indoor doors",
+    "autoTheme": false,
     "tags": {
         "indoor": "door"
     },

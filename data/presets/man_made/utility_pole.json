@@ -1,5 +1,6 @@
 {
-    "name": "Utility Pole",
+    "name": "utility pole",
+    "plural": "utility poles",
     "tags": {
         "man_made": "utility_pole"
     },

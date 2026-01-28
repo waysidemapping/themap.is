@@ -1,5 +1,6 @@
 {
-    "name": "Antenna",
+    "name": "antenna",
+    "plural": "antennas",
     "tags": {
         "man_made": "antenna"
     },

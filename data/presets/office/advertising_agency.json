@@ -1,5 +1,6 @@
 {
-    "name": "Advertising Agency",
+    "name": "advertising agency",
+    "plural": "advertising agencies",
     "tags": {
         "office": "advertising_agency"
     },

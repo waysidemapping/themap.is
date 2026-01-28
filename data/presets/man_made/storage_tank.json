@@ -1,5 +1,6 @@
 {
-    "name": "Storage Tank",
+    "name": "storage tank",
+    "plural": "storage tanks",
     "tags": {
         "man_made": "storage_tank"
     },

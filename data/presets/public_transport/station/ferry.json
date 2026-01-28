@@ -1,0 +1,26 @@
+{
+    "name": "ferry terminal",
+    "plural": "ferry terminals",
+    "tags": {
+        "public_transport": "station",
+        "ferry": "yes"
+    },
+    "geometry": [
+        "vertex",
+        "point",
+        "area"
+    ],
+    "terms": [
+        "boat",
+        "dock",
+        "ferry",
+        "pier",
+        "public transit",
+        "public transportation",
+        "station",
+        "terminal",
+        "transit",
+        "transportation"
+    ],
+    "icon": "ferry"
+}

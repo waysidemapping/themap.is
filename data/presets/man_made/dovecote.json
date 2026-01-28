@@ -1,5 +1,6 @@
 {
-    "name": "Dovecote",
+    "name": "dovecote",
+    "plural": "dovecotes",
     "tags": {
         "man_made": "dovecote"
     },

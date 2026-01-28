@@ -1,5 +1,6 @@
 {
-    "name": "Water Utility Office",
+    "name": "water utility office",
+    "plural": "water utility offices",
     "tags": {
         "office": "water_utility"
     },

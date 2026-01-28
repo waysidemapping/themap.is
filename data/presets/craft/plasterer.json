@@ -1,5 +1,6 @@
 {
-    "name": "Plasterer",
+    "name": "plasterer",
+    "plural": "plasterers",
     "tags": {
         "craft": "plasterer"
     },

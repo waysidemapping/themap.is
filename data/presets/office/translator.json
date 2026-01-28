@@ -1,5 +1,6 @@
 {
-    "name": "Translation Office",
+    "name": "translation office",
+    "plural": "translation offices",
     "tags": {
         "office": "translator"
     },

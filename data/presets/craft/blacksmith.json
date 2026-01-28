@@ -1,5 +1,6 @@
 {
-    "name": "Blacksmith",
+    "name": "blacksmith",
+    "plural": "blacksmiths",
     "tags": {
         "craft": "blacksmith"
     },

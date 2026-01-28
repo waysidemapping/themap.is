@@ -1,5 +1,6 @@
 {
-    "name": "Key Cutter",
+    "name": "key cutter",
+    "plural": "key cutters",
     "tags": {
         "craft": "key_cutter"
     },

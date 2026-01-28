@@ -1,6 +1,8 @@
 {
-    "name": "Sailmaker",
+    "name": "sailmaker",
+    "plural": "sailmakers",
     "tags": {
         "craft": "sailmaker"
-    }
+    },
+    "icon": "sail"
 }

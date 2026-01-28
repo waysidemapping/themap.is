@@ -1,5 +1,6 @@
 {
-    "name": "Pier",
+    "name": "pier",
+    "plural": "piers",
     "tags": {
         "man_made": "pier"
     },

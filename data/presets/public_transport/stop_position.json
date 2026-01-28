@@ -1,5 +1,7 @@
 {
-    "name": "Transit Stopping Location",
+    "name": "transit vehicle stopping location",
+    "plural": "transit vehicle stopping locations",
+    "autoTheme": false,
     "tags": {
         "public_transport": "stop_position"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Pottery Maker",
+    "name": "potter",
+    "plural": "potters",
     "tags": {
         "craft": "pottery"
     },

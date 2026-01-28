@@ -1,5 +1,7 @@
 {
-    "name": "Rough",
+    "name": "golf rough",
+    "plural": "golf roughs",
+    "autoTheme": false,
     "tags": {
         "golf": "rough"
     },

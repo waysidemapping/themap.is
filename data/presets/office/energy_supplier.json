@@ -1,5 +1,6 @@
 {
-    "name": "Energy Supplier Office",
+    "name": "energy supplier office",
+    "plural": "energy supplier offices",
     "tags": {
         "office": "energy_supplier"
     },

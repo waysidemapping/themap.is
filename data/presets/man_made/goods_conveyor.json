@@ -1,5 +1,7 @@
 {
-    "name": "Goods Conveyor",
+    "name": "goods conveyor",
+    "plural": "goods conveyors",
+    "autoTheme": false,
     "tags": {
         "man_made": "goods_conveyor"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Shoemaker",
+    "name": "shoemaker",
+    "plural": "shoemakers",
     "tags": {
         "craft": "shoemaker"
     },

@@ -1,5 +1,7 @@
 {
-    "name": "Power Line",
+    "name": "power line",
+    "plural": "power lines",
+    "autoTheme": false,
     "tags": {
         "power": "line"
     },

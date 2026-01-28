@@ -1,5 +1,6 @@
 {
-    "name": "Crane",
+    "name": "crane",
+    "plural": "cranes",
     "tags": {
         "man_made": "crane"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Security Office",
+    "name": "security office",
+    "plural": "security offices",
     "tags": {
         "office": "security"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Water Tower",
+    "name": "water tower",
+    "plural": "water towers",
     "tags": {
         "man_made": "water_tower"
     },

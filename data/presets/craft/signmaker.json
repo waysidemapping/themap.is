@@ -1,5 +1,6 @@
 {
-    "name": "Signmaker",
+    "name": "signmaker",
+    "plural": "signmakers",
     "tags": {
         "craft": "signmaker"
     }

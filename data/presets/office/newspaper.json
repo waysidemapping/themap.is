@@ -1,5 +1,6 @@
 {
-    "name": "Newspaper Office",
+    "name": "newspaper office",
+    "plural": "newspaper offices",
     "tags": {
         "office": "newspaper"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Electronics Repair Shop",
+    "name": "electronics repair service",
+    "plural": "electronics repair services",
     "tags": {
         "craft": "electronics_repair"
     }

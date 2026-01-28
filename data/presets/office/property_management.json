@@ -1,5 +1,6 @@
 {
-    "name": "Property Management Office",
+    "name": "property management office",
+    "plural": "property management offices",
     "tags": {
         "office": "property_management"
     },
@@ -8,6 +9,7 @@
         "area"
     ],
     "terms": [
+        "leasing office",
         "property rental"
     ]
 }

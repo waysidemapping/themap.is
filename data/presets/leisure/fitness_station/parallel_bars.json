@@ -1,0 +1,24 @@
+{
+    "name": "parallel bars",
+    "plural": "parallel bars",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "parallel_bars"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "parallel_bars"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "bar",
+        "dip",
+        "exercise",
+        "fitness",
+        "gym",
+        "trim trail"
+    ]
+}

@@ -1,5 +1,6 @@
 {
-    "name": "Carpet Hanger",
+    "name": "carpet hanger",
+    "plural": "carpet hangers",
     "tags": {
         "man_made": "carpet_hanger"
     },
@@ -11,6 +12,5 @@
         "beater",
         "rack",
         "stand"
-    ],
-    "icon": "picnic_table"
+    ]
 }

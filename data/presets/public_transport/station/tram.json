@@ -1,0 +1,28 @@
+{
+    "name": "tram station",
+    "plural": "tram stations",
+    "tags": {
+        "public_transport": "station",
+        "tram": "yes"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "electric",
+        "light rail",
+        "public transit",
+        "public transportation",
+        "rail",
+        "station",
+        "streetcar",
+        "terminal",
+        "track",
+        "tram",
+        "transit",
+        "transportation",
+        "trolley"
+    ],
+    "icon": "tram"
+}

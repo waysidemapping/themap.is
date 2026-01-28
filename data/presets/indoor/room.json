@@ -1,5 +1,7 @@
 {
-    "name": "Room",
+    "name": "room",
+    "plural": "rooms",
+    "autoTheme": false,
     "tags": {
         "indoor": "room"
     },

@@ -1,5 +1,6 @@
 {
-    "name": "Religious Office",
+    "name": "religious office",
+    "plural": "religious offices",
     "tags": {
         "office": "religion"
     },

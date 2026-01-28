@@ -1,5 +1,6 @@
 {
-    "name": "Tour Guide Office",
+    "name": "tour guide office",
+    "plural": "tour guide offices",
     "tags": {
         "office": "guide"
     },

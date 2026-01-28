@@ -1,5 +1,6 @@
 {
-    "name": "EV Charging Point",
+    "name": "EV charging point",
+    "plural": "EV charging points",
     "tags": {
         "man_made": "charge_point"
     },

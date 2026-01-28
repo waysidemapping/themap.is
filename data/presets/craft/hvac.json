@@ -1,5 +1,6 @@
 {
-    "name": "HVAC Workplace",
+    "name": "HVAC service",
+    "plural": "HVAC services",
     "tags": {
         "craft": "hvac"
     },

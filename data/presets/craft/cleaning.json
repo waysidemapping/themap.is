@@ -1,5 +1,6 @@
 {
-    "name": "Cleaning Service",
+    "name": "cleaning service",
+    "plural": "cleaning services",
     "tags": {
         "craft": "cleaning"
     },

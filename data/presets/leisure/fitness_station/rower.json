@@ -1,0 +1,16 @@
+{
+    "name": "rowing machine",
+    "plural": "rowing machines",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "rower"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "rower"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ]
+}

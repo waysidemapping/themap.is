@@ -1,0 +1,16 @@
+{
+    "name": "gymnastic rings",
+    "plural": "gymnastic rings",
+    "tags": {
+        "leisure": "fitness_station",
+        "fitness_station": "rings"
+    },
+    "reference": {
+        "key": "fitness_station",
+        "value": "rings"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ]
+}
