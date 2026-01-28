@@ -143,13 +143,12 @@ button#explore-maps {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 6px 12px 0 12px;
 }
 .search-wrap {
   display: flex;
   position: relative;
   align-items: center;
-  padding: 6px 6px 12px 6px;
+  padding: 12px;
 }
 .search-wrap img {
   position: absolute;
@@ -164,7 +163,7 @@ button#explore-maps {
   display: none;
 }
 .theme-item button {
-  padding: 6px 0;
+  padding: 6px 12px;
   text-align: unset;
   font-size: 16px;
 }
