@@ -1,8 +1,8 @@
-const svgsByUrl = {};
+const promisesByUrl = {};
 
-export async function getSvg(url, opts) {
-  if (!svgsByUrl[url]) {
-    svgsByUrl[url] = await fetch(url)
+function getSvgForUrl(url) {
+  if (!promisesByUrl[url]) {
+    promisesByUrl[url] = fetch(url)
       .then(resp => resp.text())
       .then(svgString => {
         const svgInfo = getSvgDimensions(svgString);
@@ -10,10 +10,17 @@ export async function getSvg(url, opts) {
         return svgInfo;
       });
   }
-  if (opts) {
-    return tintSvg(svgsByUrl[url].string, opts);
-  }
-  return Object.assign({}, svgsByUrl[url]);
+  return promisesByUrl[url];
+}
+
+export function getSvg(url, opts) {
+  return getSvgForUrl(url)
+    .then(svgInfo => {
+      if (opts) {
+        return tintSvg(svgInfo.string, opts);
+      }
+      return Object.assign({}, svgInfo);
+    });
 }
 
 function getSvgDimensions(svgString) {
