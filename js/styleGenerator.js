@@ -1,6 +1,7 @@
 import chroma from './../node_modules/chroma-js/index.js';
 import { colors } from "./colors.js";
 
+import { registerSvg } from './svgManager.js';
 import { getSpritesheets } from './spritesheetGenerator.js';
 
 const noaccessValsLiteral = ["literal", ["no", "private", "discouraged", "limited"]]; // `limited` for `wheelchair`
@@ -745,28 +746,9 @@ export async function generateStyle(baseStyleJson, theme) {
   }) : [];
 
   let icons = {};
-  function iconExp(file, opts) {
-    let id = file;
-    if (opts.fill === 'none') delete opts.fill; // sense check
-    if (opts.fill) {
-      opts.fill = opts.fill.toLowerCase().trim();
-      id += ' f-' + opts.fill;
-    }
-    if (opts.stroke) {
-      opts.stroke = opts.stroke.toLowerCase().trim();
-      id += ' s-' + opts.stroke;
-    }
-    if (opts.halo) {
-      opts.halo = opts.halo.toLowerCase().trim();
-      id += ' h-' + opts.halo;
-    }
-    if (opts.bg_fill) {
-      opts.bg_fill = opts.bg_fill.toLowerCase().trim();
-      id += ' bg-' + opts.bg_fill;
-    }
-    opts.id = id
-    opts.file = file;
-    icons[id] = opts;
+  function iconExp(opts) {
+    let id = registerSvg(opts);
+    icons[id] = true;
     return ["image", id];
   }
 
@@ -1147,28 +1129,28 @@ export async function generateStyle(baseStyleJson, theme) {
       "icon-image": featuresToRender.filter(feature => feature.icon).length ? [
         "case",
         ...featuresToRender.filter(feature => feature.icon).map(feature => {
-          let noaccessIconOpts = Object.assign({}, feature.iconOpts);
-          if (noaccessIconOpts.fill) {
-            noaccessIconOpts.fill = chroma.mix(noaccessIconOpts.fill, "#eee", 0.5, "rgb").hex();
+          let noaccessIcon = Object.assign({}, feature.icon);
+          if (noaccessIcon.fill) {
+            noaccessIcon.fill = chroma.mix(noaccessIcon.fill, "#eee", 0.5, "rgb").hex();
           }
-          if (noaccessIconOpts.bg_fill) {
-            noaccessIconOpts.bg_fill = chroma.mix(noaccessIconOpts.bg_fill, "#eee", 0.5, "rgb").hex();
+          if (noaccessIcon.bg_fill) {
+            noaccessIcon.bg_fill = chroma.mix(noaccessIcon.bg_fill, "#eee", 0.5, "rgb").hex();
           }
           return [feature.exp, [
             "case",
             ["in", ["get", "access"], noaccessValsLiteral],
-              iconExp(feature.icon, noaccessIconOpts),
-            iconExp(feature.icon, feature.iconOpts)
+              iconExp(noaccessIcon),
+            iconExp(feature.icon)
           ]];
         }).flat(),
         ["image", ""]
       ] : ["image", ""],
       "text-variable-anchor-offset": featuresToRender.filter(feature => feature.icon).length ? [
         "case",
-        ...featuresToRender.filter(feature => feature.icon && feature.iconOpts?.fill).map(feature => {
+        ...featuresToRender.filter(feature => feature.icon && feature.icon?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [1.1, 0], "right", [-1.1, 0]]]]
         }).flat(),
-        ...featuresToRender.filter(feature => feature.icon && !feature.iconOpts?.fill).map(feature => {
+        ...featuresToRender.filter(feature => feature.icon && !feature.icon?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]]]
         }).flat(),
         ["literal", ["center", [0, 0]]]
@@ -1264,7 +1246,7 @@ export async function generateStyle(baseStyleJson, theme) {
     }
   });
 
-  let sprites = await getSpritesheets(icons);
+  let sprites = await getSpritesheets(Object.keys(icons));
 
   return {
     style: style,

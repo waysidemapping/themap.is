@@ -48,85 +48,85 @@ let groupThemes = [
 
 const featureDefaultsByGroup = {
   amenity: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.education_icon,
       fill: colors.text_halo
     }
   },
   amusement: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.amusement_icon,
       fill: colors.text_halo
     }
   },
   bathing_water: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.swimming_pool_icon,
       fill: colors.text_halo
     }
   },
   education: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.education_icon,
       fill: colors.text_halo
     }
   },
   food: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.food_icon,
       fill: colors.text_halo
     }
   },
   healthcare: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.healthcare_icon,
       fill: colors.text_halo
     }
   },
   ice: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.ice_text,
       fill: colors.text_halo
     }
   },
   lodging: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.education_icon,
       fill: colors.text_halo
     }
   },
   adult_amusement: {
-    iconOpts: { 
+    icon: { 
       bg_fill: "#33145e",
       fill: colors.text_halo
     }
   },
   parks: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.park_icon,
       fill: colors.text_halo
     }
   },
   stores: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.shop_icon,
       fill: colors.text_halo
     }
   },
   sports: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.outdoor_sports_facility_icon,
       fill: colors.text_halo
     }
   },
   transport: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.station_icon,
       fill: colors.text_halo
     }
   },
   water: {
-    iconOpts: { 
+    icon: { 
       bg_fill: colors.water_text,
       fill: colors.text_halo
     }
@@ -159,6 +159,12 @@ async function loadData() {
       }
     }
   }
+  for (let presetId in presetsById) {
+    if (!presetsById[presetId].icon) {
+      const parentIdForIcon = presetsById[presetId].parents?.find(parentId => presetsById[parentId].icon);
+      if (parentIdForIcon) presetsById[presetId].icon = presetsById[parentIdForIcon].icon;
+    }
+  }
 
   for (let id in themesById) {
     let theme = themesById[id];
@@ -186,6 +192,9 @@ async function loadData() {
                 let feature = {};
                 Object.assign(feature, theme.features[i]);
                 Object.assign(feature, preset);
+                if (typeof feature.icon === 'string') {
+                  feature.icon = { file: feature.icon };
+                }
                 expandedFeatures.push(feature);
               });
          // }
@@ -196,27 +205,30 @@ async function loadData() {
 
     for (let i in theme.features) {
       let feature = theme.features[i];
-      if (!feature.icon) feature.icon = 'dot';
-      if (!feature.iconOpts) feature.iconOpts = {
-        bg_fill: colors.text,
-        fill: colors.text_halo
-      };
+      if (!feature.icon) feature.icon = {};
+      if (!feature.icon.bg_fill) feature.icon.bg_fill = colors.text;
+      if (!feature.icon.fill) feature.icon.fill = colors.text_halo;
       if (feature.groups) {
         let groupDefaults = feature.groups.map(group => featureDefaultsByGroup[group]).filter(Boolean).at(0);
         if (groupDefaults) {
-          if (groupDefaults.iconOpts) {
-            Object.assign(feature.iconOpts, groupDefaults.iconOpts);
+          if (groupDefaults.icon) {
+            Object.assign(feature.icon, groupDefaults.icon);
           }
         }
       }
+
       // if (feature.class !== 'minor') {
-      //   feature.iconOpts.bg_fill = feature.iconOpts.fill;
-      //   feature.iconOpts.fill = colors.text_halo;
-      //   delete feature.iconOpts.halo;
+      //   feature.icon.bg_fill = feature.icon.fill;
+      //   feature.icon.fill = colors.text_halo;
+      //   delete feature.icon.halo;
       // }
     }
+    let sortedFeatures = theme.features.toSorted((a, b) => (a.parents?.length || 0) - (b.parents?.length || 0))
+    if (!theme.iconFile) {
+      theme.iconFile = sortedFeatures.find(feature => feature.icon?.file)?.icon?.file;
+    }
     if (!theme.primaryColor) {
-      theme.primaryColor = theme.features.map(feature => [feature.iconOpts?.bg_fill, feature.iconOpts?.fill]).flat().filter(Boolean).at(0);
+      theme.primaryColor = sortedFeatures.map(feature => feature.icon?.bg_fill || feature.icon?.fill).filter(Boolean).at(0);
     }
   }
   return themesById;

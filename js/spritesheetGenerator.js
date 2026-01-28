@@ -3,10 +3,9 @@ import potpack from 'https://cdn.skypack.dev/potpack';
 
 async function rasterizeIcons(icons, scale) {
   const promises = [];
-  for (let id in icons) {
-    const info = icons[id];
-    const url = '/icons/' + info.file + '.svg';
-    const promise = getSvg(url, info)
+  for (let i in icons) {
+    let svgId = icons[i];
+    const promise = getSvg(svgId)
       .then(async svgInfo => {
         let svgString = svgInfo.string;
         let canvasWidth = svgInfo.w * scale;
@@ -28,7 +27,7 @@ async function rasterizeIcons(icons, scale) {
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img_1, 0, 0, canvasWidth, canvasHeight);
         return {
-          name: id,
+          name: svgId,
           canvas: canvas,
           w: canvasWidth,
           h: canvasHeight
@@ -79,7 +78,7 @@ async function getSpritesheet(icons, scale) {
 }
 
 export async function getSpritesheets(icons) {
-  if (icons && Object.keys(icons).length) {
+  if (icons?.length) {
     return {
       "1": await getSpritesheet(icons, 1),
       "2": await getSpritesheet(icons, 2)

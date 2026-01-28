@@ -3,6 +3,7 @@ import { getSvg } from "../svgManager.js";
 import { themesPromise } from "../themeManager.js";
 import { editDistance } from "../utils.js";
 import { state } from "../stateController.js";
+import { themeIconElement } from './uiThemeIcon.js';
 
 let searchInput;
 let resultsList;
@@ -17,11 +18,11 @@ export const themeExplorer = createElement('div')
         createElement('img')
           .setAttribute('class', 'icon')
           .setAttribute('style', "width:15px;height:15px;")
-          .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg('/icons/magnifying_glass.svg', {fill: '#666'})).string)}`),
+          .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg({file: 'magnifying_glass', fill: '#666'})).string)}`),
         searchInput = createElement('input')
           .setAttribute('class', 'search')
           .setAttribute('type', 'search')
-          .setAttribute('placeholder', 'Search maps…')
+          .setAttribute('placeholder', 'the map is…')
           .setAttribute('autofocus', '')
           .addEventListener('keydown', e => {
             if (e.keyCode === 13 && // ↩ Return
@@ -57,22 +58,23 @@ async function updateList() {
     .map(item => item.theme) : Object.values(themes).sort((a, b) => b.searchName < a.searchName);
 
   resultsList?.replaceChildren(
-    ...items.map(theme => {
+    ...(await Promise.all(items.map(async theme => {
       return createElement('li')
         .setAttribute("class", "theme-item")
+        .setAttribute('style', `--primary-color:${theme.primaryColor}`)
         .append(
           createElement('button')
             .setAttribute("class", "theme-button")
             .setAttribute('value', theme.id)
             .addEventListener('click', _ => state.set({'theme': theme, 'themeExplorerOpen': false}))
             .append(
+              await themeIconElement(theme, 1.3),
               createElement('span')
-                .setAttribute('style', `--primary-color:${theme.primaryColor}`)
                 .setAttribute('class', 'maptitle')
                 .append(theme.name)
             )
         )
-    })
+    })))
   );
 }
 

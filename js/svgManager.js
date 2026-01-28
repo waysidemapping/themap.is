@@ -1,26 +1,70 @@
-const promisesByUrl = {};
+const fetchPromisesByUrl = {};
+const buildPromisesById = {};
 
-function getSvgForUrl(url) {
-  if (!promisesByUrl[url]) {
-    promisesByUrl[url] = fetch(url)
+const optsById = {};
+
+const emptyIconInfo = {
+  x: 0, y: 0, w: 15, h: 15,
+  string: `<?xml version="1.0" encoding="UTF-8"?><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15"></svg>`
+};
+
+export function registerSvg(opts) {
+  let id = opts.file || '';
+  if (opts.fill === 'none') delete opts.fill; // sense check
+  if (opts.fill) {
+    opts.fill = opts.fill.toLowerCase().trim();
+    id += ' f-' + opts.fill;
+  }
+  if (opts.stroke) {
+    opts.stroke = opts.stroke.toLowerCase().trim();
+    id += ' s-' + opts.stroke;
+  }
+  if (opts.halo) {
+    opts.halo = opts.halo.toLowerCase().trim();
+    id += ' h-' + opts.halo;
+  }
+  if (opts.bg_fill) {
+    opts.bg_fill = opts.bg_fill.toLowerCase().trim();
+    id += ' bg-' + opts.bg_fill;
+  }
+  if (opts.alignX) {
+    opts.alignX = opts.alignX.toLowerCase().trim();
+    id += ' ax-' + opts.alignX;
+  }
+  if (opts.alignY) {
+    opts.alignY = opts.alignY.toLowerCase().trim();
+    id += ' ay-' + opts.alignY;
+  }
+  if (!optsById[id]) optsById[id] = opts;
+  return id;
+}
+
+function getSvgFile(file) {
+  if (!fetchPromisesByUrl[file]) {
+    fetchPromisesByUrl[file] = file ? fetch('/icons/' + file + '.svg')
       .then(resp => resp.text())
       .then(svgString => {
         const svgInfo = getSvgDimensions(svgString);
         svgInfo.string = svgString;
         return svgInfo;
-      });
+      }) : Promise.resolve(emptyIconInfo);
   }
-  return promisesByUrl[url];
+  return fetchPromisesByUrl[file];
 }
 
-export function getSvg(url, opts) {
-  return getSvgForUrl(url)
-    .then(svgInfo => {
-      if (opts) {
-        return tintSvg(svgInfo.string, opts);
-      }
-      return Object.assign({}, svgInfo);
-    });
+export function getSvg(idOrOpts) {
+  const opts = typeof idOrOpts === 'string' ? optsById[idOrOpts] : idOrOpts;
+  const id = typeof idOrOpts === 'string' ? idOrOpts : registerSvg(opts);
+  if (!buildPromisesById[id]) {
+    buildPromisesById[id] = getSvgFile(opts.file)
+      .then(svgInfo => {
+        if (opts) {
+          return editSvg(svgInfo.string, opts);
+        }
+        return Object.assign({}, svgInfo);
+      });
+  }
+  return buildPromisesById[id];
 }
 
 function getSvgDimensions(svgString) {
@@ -49,9 +93,26 @@ function getSvgDimensions(svgString) {
   return size;
 }
 
-function tintSvg(svgString, opts) {
+function editSvg(svgString, opts) {
   let string = svgString;
   let {x, y, w, h} = getSvgDimensions(svgString);
+
+  let viewBoxOffsetY = 0;
+  let viewBoxOffsetX = 0;
+
+  if (opts.alignX || opts.alignY) {
+    let pathBounds = getSvgPathBounds(svgString);
+    if (opts.alignX === 'right') {
+      viewBoxOffsetX = pathBounds.maxX - w;
+    } else if (opts.alignX === 'left') {
+      viewBoxOffsetX = pathBounds.minX;
+    }
+    if (opts.alignY === 'bottom') {
+      viewBoxOffsetY = pathBounds.maxY - h;
+    } else if (opts.alignY === 'top') {
+      viewBoxOffsetY = pathBounds.minY;
+    }
+  }
 
   let padding = 0;
   if (opts.bg_fill) {
@@ -65,7 +126,7 @@ function tintSvg(svgString, opts) {
   h = h + padding * 2;
   x = x - padding;
   y = y - padding;
-  string = string.replace(/ viewBox=".+?"/g, ` viewBox="${x} ${y} ${w} ${h}" `);
+  string = string.replace(/ viewBox=".+?"/g, ` viewBox="${x + viewBoxOffsetX} ${y + viewBoxOffsetY} ${w} ${h}" `);
 
   let fill = opts.fill || "none";
   string = string.replace(/<path /g, `<path fill="${fill}" `);
@@ -102,4 +163,30 @@ function tintSvg(svgString, opts) {
 
 function rectToPath(x, y, width, height) {
   return `M${x} ${y} H${x + width} V${y + height} H${x} Z`;
+}
+
+function getSvgPathBounds(svgString) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(svgString, "image/svg+xml");
+  const svg = doc.documentElement;
+
+  // we need to add the element to the DOM so getBBox works, but make sure it's hidden
+  svg.style.position = "absolute";
+  svg.style.visibility = "hidden";
+  document.body.appendChild(svg);
+
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+
+  svg.querySelectorAll("path").forEach(path => {
+    const { x, y, width, height } = path.getBBox();
+    minX = Math.min(minX, x);
+    minY = Math.min(minY, y);
+    maxX = Math.max(maxX, x + width);
+    maxY = Math.max(maxY, y + height);
+  });
+  document.body.removeChild(svg);
+  return {minX, minY, maxX, maxY};
 }

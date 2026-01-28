@@ -17,13 +17,13 @@ export const header = createElement('div')
         createElement('img')
           .setAttribute('class', 'icon')
           .setAttribute('style', "width:14px;height:14px;")
-          .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg('/icons/map-swap.svg', {fill: '#666'})).string)}`),
+          .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg({file: 'map-swap', fill: '#666'})).string)}`),
         createElement('span')
           .append('Explore maps'),
         createElement('img')
           .setAttribute('class', 'icon')
           .setAttribute('style', "width:8px;height:8px;font-size:0.5em;")
-          .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg('/icons/triangle_isosceles_down_rounded.svg', {fill: '#666'})).string)}`),
+          .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg({file: 'triangle_isosceles_down_rounded', fill: '#666'})).string)}`),
       ),
     themeExplorer,
     createElement('h1')
