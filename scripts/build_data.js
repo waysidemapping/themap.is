@@ -1,6 +1,23 @@
 import fs from "fs";
 import path from "path";
 
+async function fetchKeyList(filename) {
+  return (await fetch(`https://cdn.jsdelivr.net/gh/waysidemapping/beefsteak-map-tiles/server/schema_data/${filename}.txt`)
+    .then(result => result.text())).trim().split('\n').filter(Boolean);
+}
+
+const knownKeys = (await fetchKeyList('point_key'))
+  .concat((await fetchKeyList('line_key')))
+  .concat((await fetchKeyList('area_key')))
+  .concat((await fetchKeyList('relation_key')));
+
+const knownKeyPrefixes = (await fetchKeyList('point_key_prefix'))
+  .concat((await fetchKeyList('line_key_prefix')))
+  .concat((await fetchKeyList('area_key_prefix')))
+  .concat((await fetchKeyList('relation_key_prefix')));
+
+const prefixRegex = new RegExp(`^(${knownKeyPrefixes.join('|')}).+`);
+
 const presetsById = {};
 const allGroups = {};
 
@@ -51,6 +68,12 @@ function checkPreset(id, json) {
   if (specialCharsRegex.test(json.name)) {
     console.log(`🛑 Unexpected characters in name "${json.name}" of ${id}`)
     return false;
+  }
+
+  for (let key in json.tags) {
+    if (!knownKeys.includes(key) && !key.match(prefixRegex)) {
+      console.log(`⚠️ Preset ${id} references key "${key}" which is not preset in map tiles`)
+    }
   }
 
   if (id.includes("/")) {
@@ -140,5 +163,6 @@ for (let presetId in presetsById) {
 }
 
 fs.writeFileSync('./dist/presets.json', JSON.stringify(presetsById))
+console.log(`Wrote ${Object.values(presetsById).length} presets`);
 
-console.log("Preset groups: " + Object.keys(allGroups).sort().join(', '))
+console.log("Preset groups: " + Object.keys(allGroups).sort().join(', '));
