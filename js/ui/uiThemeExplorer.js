@@ -11,6 +11,7 @@ let resultsList;
 export const themeExplorer = createElement('div')
   .setAttribute('id', 'theme-explorer')
   .setAttribute('class', 'overlay hidden')
+  .addEventListener('mousedown', e => e.stopPropagation())
   .append(
     createElement('div')
       .setAttribute('class', 'search-wrap')
@@ -93,4 +94,6 @@ state.addEventListener('change-themeExplorerOpen', _ => {
     themeExplorer?.classList.add('hidden');
     document.documentElement.classList.remove('themeExplorerOpen');
   }
-})
+});
+
+window.addEventListener('mousedown', _ => state.set('themeExplorerOpen', false));

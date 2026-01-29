@@ -19,6 +19,7 @@ export const header = createElement('div')
       .append(
         createElement('button')
           .setAttribute('id', 'explore-maps')
+          .addEventListener('mousedown', e => e.stopPropagation())
           .addEventListener('click', _ => state.toggle('themeExplorerOpen'))
           .append(
             createElement('div')
