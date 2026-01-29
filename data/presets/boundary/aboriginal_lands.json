@@ -1,0 +1,11 @@
+{
+    "name": "indigenous lands",
+    "plural": "indigenous lands",
+    "groups": [
+        "aboriginal lands",
+        "parks"
+    ],
+    "tags": {
+        "boundary": "aboriginal_lands"
+    }
+}

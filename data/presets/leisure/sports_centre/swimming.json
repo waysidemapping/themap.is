@@ -1,6 +1,10 @@
 {
     "name": "swimming pool facility",
     "plural": "swimming pool facilities",
+    "groups": [
+        "swimming",
+        "sports"
+    ],
     "tags": {
         "leisure": "sports_centre",
         "sport": "swimming"

@@ -1,6 +1,10 @@
 {
     "name": "natural swimming area",
     "plural": "natural swimming areas",
+    "groups": [
+        "swimming",
+        "outdoor recreation"
+    ],
     "tags": {
         "leisure": "swimming_area"
     },
@@ -8,5 +12,6 @@
         "aquatics",
         "dive",
         "water"
-    ]
+    ],
+    "icon": "swimmer-water"
 }

@@ -3,6 +3,7 @@
     "plural": "waterway access points",
     "autoTheme": false,
     "groups": [
+        "outdoor recreation",
         "waterway access"
     ],
     "tags": {
