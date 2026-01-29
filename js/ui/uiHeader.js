@@ -2,6 +2,7 @@ import { createElement } from "../utils.js";
 import { getSvg } from "../svgManager.js";
 import { themeExplorer } from "./uiThemeExplorer.js";
 import { state } from "../stateController.js";
+import { themeIconElement } from './uiThemeIcon.js';
 
 state.addEventListener('change-theme', reload);
 
@@ -26,18 +27,24 @@ export const header = createElement('div')
           .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg({file: 'triangle_isosceles_down_rounded', fill: '#666'})).string)}`),
       ),
     themeExplorer,
-    createElement('h1')
-      .append(
-        createElement('span')
-          .setAttribute('class', 'pre-maptitle')
-          .append('the map is '),
-        themeTitle = createElement('span')
-          .setAttribute('class', 'maptitle')
-      )
+    themeTitle = createElement('h1')
+      .setAttribute('id', 'main-map-title')
   );
 
 reload();
 
-function reload() {
-  themeTitle?.replaceChildren(state.theme?.name)
+async function reload() {
+  themeTitle?.replaceChildren(
+    await themeIconElement(state.theme),
+    createElement('div')
+      .setAttribute('class', 'text-part')
+      .append(
+        createElement('span')
+          .setAttribute('class', 'pre-maptitle')
+          .append('the map is '),
+        createElement('span')
+          .setAttribute('class', 'maptitle')
+          .append(state.theme?.name)
+        )
+      )
 }

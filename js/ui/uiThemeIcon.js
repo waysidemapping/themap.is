@@ -2,10 +2,10 @@ import { createElement } from "../utils.js";
 import { getSvg } from "../svgManager.js";
 
 const parser = new DOMParser();
-export async function themeIconElement(theme, scale = 1) {
+export async function themeIconElement(theme, scale = 1.3) {
   const themeIconSvg = (await getSvg({file: theme.iconFile || "map_pin-dot", fill: theme.primaryColor, halo: "#fff", alignY: "bottom"}));
   return createElement('div')
-    .setAttribute('style', `position: relative;margin-top: -${4*scale}px;`)
+    .setAttribute('style', `position: relative;margin-top: -${4*scale}px;font-size: ${1.2*scale}em;`)
     .append(
       parser.parseFromString(`
         <svg style="color:var(--primary-color);width:${23*scale}px;height:${23*scale}px;display:block;" width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -13,7 +13,6 @@ export async function themeIconElement(theme, scale = 1) {
         </svg>
       `, "image/svg+xml").documentElement,
       createElement('img')
-        .setAttribute('class', 'icon')
         .setAttribute('style', `width:${themeIconSvg.w*scale}px;height:${themeIconSvg.h*scale}px;position: absolute;top:${3*scale}px;left:${3*scale}px;`)
         .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent(themeIconSvg.string)}`),
     );

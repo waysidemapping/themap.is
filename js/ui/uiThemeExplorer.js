@@ -68,7 +68,7 @@ async function updateList() {
             .setAttribute('value', theme.id)
             .addEventListener('click', _ => state.set({'theme': theme, 'themeExplorerOpen': false}))
             .append(
-              await themeIconElement(theme, 1.3),
+              await themeIconElement(theme),
               createElement('span')
                 .setAttribute('class', 'maptitle')
                 .append(theme.name)
