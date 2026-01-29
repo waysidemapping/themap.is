@@ -1,6 +1,9 @@
 {
     "name": "graveyard",
     "plural": "graveyards",
+    "groups": [
+        "religious"
+    ],
     "tags": {
         "amenity": "grave_yard"
     },

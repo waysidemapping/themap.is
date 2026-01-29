@@ -3,7 +3,7 @@
     "plural": "pubs",
     "groups": [
         "food",
-        "adult_amusement"
+        "booze"
     ],
     "tags": {
         "amenity": "pub"

@@ -1,6 +1,9 @@
 {
     "name": "garden",
     "plural": "gardens",
+    "groups": [
+        "parks"
+    ],
     "tags": {
         "leisure": "garden"
     },
@@ -11,5 +14,5 @@
         "plants",
         "vegetables"
     ],
-    "icon": "plant-gardenbed"
+    "icon": "tulip"
 }

@@ -14,5 +14,6 @@
         "oil",
         "petrol",
         "water"
-    ]
+    ],
+    "icon": "storage_drum"
 }

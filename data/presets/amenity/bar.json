@@ -2,8 +2,8 @@
     "name": "bar",
     "plural": "bars",
     "groups": [
-        "adult_amusement",
-        "food"
+        "food",
+        "booze"
     ],
     "tags": {
         "amenity": "bar"

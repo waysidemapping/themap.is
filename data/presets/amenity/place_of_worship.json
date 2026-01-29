@@ -1,6 +1,9 @@
 {
     "name": "place of worship",
     "plural": "places of worship",
+    "groups": [
+        "religious"
+    ],
     "tags": {
         "amenity": "place_of_worship"
     },

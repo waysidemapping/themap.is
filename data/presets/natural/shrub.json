@@ -1,6 +1,9 @@
 {
     "name": "shrub",
     "plural": "shrubs",
+    "groups": [
+        "plants"
+    ],
     "tags": {
         "natural": "shrub"
     },

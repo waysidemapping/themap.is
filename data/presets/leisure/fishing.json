@@ -1,10 +1,14 @@
 {
     "name": "fishing spot",
     "plural": "fishing spots",
+    "groups": [
+        "outdoor recreation"
+    ],
     "tags": {
         "leisure": "fishing"
     },
     "terms": [
         "angler"
-    ]
+    ],
+    "icon": "fish-barbed_hook"
 }

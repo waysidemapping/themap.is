@@ -1,6 +1,9 @@
 {
     "name": "playground",
     "plural": "playgrounds",
+    "groups": [
+        "sports"
+    ],
     "tags": {
         "leisure": "playground"
     },

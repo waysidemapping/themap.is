@@ -2,6 +2,7 @@
     "name": "golf course",
     "plural": "golf courses",
     "groups": [
+        "golf",
         "sports"
     ],
     "tags": {

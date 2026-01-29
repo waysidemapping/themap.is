@@ -1,6 +1,9 @@
 {
     "name": "bowling alley",
     "plural": "bowling alleys",
+    "groups": [
+        "sports"
+    ],
     "tags": {
         "leisure": "bowling_alley"
     },

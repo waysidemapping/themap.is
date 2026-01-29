@@ -2,6 +2,9 @@
     "name": "aerialway feature",
     "plural": "aerialway features",
     "autoTheme": false,
+    "groups": [
+        "transport"
+    ],
     "tags": {
         "aerialway": "*"
     },

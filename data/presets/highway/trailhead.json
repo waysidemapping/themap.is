@@ -1,6 +1,9 @@
 {
     "name": "trailhead",
-    "plural": "traileads",
+    "plural": "trailheads",
+    "groups": [
+        "outdoor recreation"
+    ],
     "tags": {
         "highway": "trailhead"
     },
@@ -16,5 +19,6 @@
         "trail endpoint",
         "trail start",
         "trekking"
-    ]
+    ],
+    "icon": "hiker"
 }

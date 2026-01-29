@@ -2,7 +2,7 @@
     "name": "beer garden",
     "plural": "beer gardens",
     "groups": [
-        "adult_amusement",
+        "booze",
         "food"
     ],
     "tags": {

@@ -1,0 +1,16 @@
+{
+    "name": "water lock",
+    "plural": "water locks",
+    "tags": {
+        "natural": "water",
+        "water": "lock"
+    },
+    "reference": {
+        "key": "water",
+        "value": "lock"
+    },
+    "geometry": [
+        "area"
+    ],
+    "icon": "water_lock"
+}

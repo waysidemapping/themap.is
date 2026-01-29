@@ -2,6 +2,9 @@
     "name": "waterway feature",
     "plural": "waterway features",
     "autoTheme": false,
+    "groups": [
+        "water"
+    ],
     "tags": {
         "waterway": "*"
     },

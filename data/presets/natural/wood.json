@@ -1,6 +1,9 @@
 {
     "name": "woods",
     "plural": "woods",
+    "groups": [
+        "plants"
+    ],
     "tags": {
         "natural": "wood"
     },

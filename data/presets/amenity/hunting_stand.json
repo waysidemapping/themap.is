@@ -1,6 +1,9 @@
 {
     "name": "hunting stand",
     "plural": "hunting stands",
+    "groups": [
+        "outdoor recreation"
+    ],
     "tags": {
         "amenity": "hunting_stand"
     },

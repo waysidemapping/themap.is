@@ -1,6 +1,9 @@
 {
     "name": "spring",
     "plural": "springs",
+    "groups": [
+        "water"
+    ],
     "tags": {
         "natural": "spring"
     },

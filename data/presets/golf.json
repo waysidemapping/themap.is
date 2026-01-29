@@ -2,6 +2,9 @@
     "name": "golf feature",
     "plural": "golf features",
     "autoTheme": false,
+    "groups": [
+        "golf"
+    ],
     "tags": {
         "golf": "*"
     },

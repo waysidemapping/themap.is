@@ -2,8 +2,7 @@
     "name": "casino",
     "plural": "casinos",
     "groups": [
-        "gambling",
-        "adult_amusement"
+        "gambling"
     ],
     "tags": {
         "amenity": "casino"

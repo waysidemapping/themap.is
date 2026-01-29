@@ -1,6 +1,7 @@
 {
     "name": "tree row",
     "plural": "tree rows",
+    "autoTheme": false,
     "tags": {
         "natural": "tree_row"
     },

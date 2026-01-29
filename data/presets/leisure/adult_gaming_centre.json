@@ -3,8 +3,7 @@
     "plural": "adult gaming centers",
     "autoTheme": false,
     "groups": [
-        "gambling",
-        "adult_amusement"
+        "gambling"
     ],
     "tags": {
         "leisure": "adult_gaming_centre"

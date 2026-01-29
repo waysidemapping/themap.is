@@ -2,6 +2,9 @@
     "name": "craft",
     "plural": "crafts",
     "autoTheme": false,
+    "groups": [
+        "craft"
+    ],
     "tags": {
         "craft": "*"
     },

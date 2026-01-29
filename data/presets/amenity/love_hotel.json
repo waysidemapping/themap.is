@@ -1,6 +1,9 @@
 {
     "name": "love hotel",
     "plural": "love hotels",
+    "groups": [
+        "adult_amusement"
+    ],
     "tags": {
         "amenity": "love_hotel"
     },

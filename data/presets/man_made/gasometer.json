@@ -1,6 +1,6 @@
 {
-    "name": "gas holder",
-    "plural": "gas holders",
+    "name": "gasometer",
+    "plural": "gasometers",
     "tags": {
         "man_made": "gasometer"
     },
@@ -10,5 +10,6 @@
     ],
     "terms": [
         "gasometer"
-    ]
+    ],
+    "icon": "storage_drum"
 }

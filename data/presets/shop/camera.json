@@ -9,5 +9,6 @@
         "film",
         "lens",
         "photo"
-    ]
+    ],
+    "icon": "camera"
 }

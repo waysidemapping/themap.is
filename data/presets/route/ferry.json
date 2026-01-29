@@ -1,6 +1,7 @@
 {
     "name": "ferry route",
     "plural": "ferry routes",
+    "autoTheme": false,
     "tags": {
         "route": "ferry"
     },

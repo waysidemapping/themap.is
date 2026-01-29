@@ -1,7 +1,11 @@
 {
     "name": "protected area",
     "plural": "protected areas",
+    "groups": [
+        "parks"
+    ],
     "tags": {
         "boundary": "protected_area"
-    }
+    },
+    "icon": "ranger_hat"
 }

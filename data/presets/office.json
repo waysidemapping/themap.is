@@ -1,6 +1,9 @@
 {
     "name": "office",
     "plural": "offices",
+    "groups": [
+        "offices"
+    ],
     "tags": {
         "office": "*"
     },

@@ -1,6 +1,9 @@
 {
     "name": "barrier",
     "plural": "barriers",
+    "groups": [
+        "barriers"
+    ],
     "tags": {
         "barrier": "*"
     },

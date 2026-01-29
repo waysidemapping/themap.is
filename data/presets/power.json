@@ -2,6 +2,10 @@
     "name": "power feature",
     "plural": "power features",
     "autoTheme": false,
+    "groups": [
+        "power",
+        "utilities"
+    ],
     "tags": {
         "power": "*"
     },

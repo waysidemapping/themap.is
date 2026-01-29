@@ -2,6 +2,9 @@
     "name": "aeroway feature",
     "plural": "aeroway features",
     "autoTheme": false,
+    "groups": [
+        "transport"
+    ],
     "tags": {
         "aeroway": "*"
     },

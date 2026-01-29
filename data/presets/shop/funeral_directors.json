@@ -1,6 +1,9 @@
 {
     "name": "funeral home",
     "plural": "funeral homes",
+    "groups": [
+        "religious"
+    ],
     "tags": {
         "shop": "funeral_directors"
     },

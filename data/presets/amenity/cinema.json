@@ -1,6 +1,9 @@
 {
     "name": "movie theater",
     "plural": "movie theaters",
+    "groups": [
+        "amusement"
+    ],
     "tags": {
         "amenity": "cinema"
     },

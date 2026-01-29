@@ -11,5 +11,6 @@
         "crosswalk",
         "foot path crossing",
         "pedestrian crossing"
-    ]
+    ],
+    "icon": "pedestrian"
 }

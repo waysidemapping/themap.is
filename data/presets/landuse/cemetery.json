@@ -1,6 +1,9 @@
 {
     "name": "cemetery",
     "plural": "cemeteries",
+    "groups": [
+        "religious"
+    ],
     "tags": {
         "landuse": "cemetery"
     },

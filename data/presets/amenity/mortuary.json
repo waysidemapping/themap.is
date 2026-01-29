@@ -1,6 +1,9 @@
 {
     "name": "morgue",
     "plural": "morgues",
+    "groups": [
+        "religious"
+    ],
     "tags": {
         "amenity": "mortuary"
     },

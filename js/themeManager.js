@@ -59,9 +59,21 @@ const featureDefaultsByGroup = {
       fill: colors.text_halo
     }
   },
+  barriers: {
+    icon: { 
+      bg_fill: colors.barrier_icon,
+      fill: colors.text_halo
+    }
+  },
   bathing_water: {
     icon: { 
       bg_fill: colors.swimming_pool_icon,
+      fill: colors.text_halo
+    }
+  },
+  craft: {
+    icon: { 
+      bg_fill: colors.craft_icon,
       fill: colors.text_halo
     }
   },
@@ -91,7 +103,19 @@ const featureDefaultsByGroup = {
   },
   lodging: {
     icon: { 
-      bg_fill: colors.education_icon,
+      bg_fill: colors.lodging_icon,
+      fill: colors.text_halo
+    }
+  },
+  offices: {
+    icon: { 
+      bg_fill: colors.office_icon,
+      fill: colors.text_halo
+    }
+  },
+  "outdoor recreation": {
+    icon: { 
+      bg_fill: colors.outdoor_recreation_icon,
       fill: colors.text_halo
     }
   },
@@ -104,6 +128,24 @@ const featureDefaultsByGroup = {
   parks: {
     icon: { 
       bg_fill: colors.park_icon,
+      fill: colors.text_halo
+    }
+  },
+  plants: {
+    icon: { 
+      bg_fill: colors.plants_icon,
+      fill: colors.text_halo
+    }
+  },
+  power: {
+    icon: { 
+      bg_fill: colors.power_icon,
+      fill: colors.text_halo
+    }
+  },
+  religious: {
+    icon: { 
+      bg_fill: colors.religious_icon,
       fill: colors.text_halo
     }
   },

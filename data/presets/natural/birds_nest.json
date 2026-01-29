@@ -1,0 +1,12 @@
+{
+    "name": "bird nest",
+    "plural": "bird nests",
+    "tags": {
+        "natural": "birds_nest"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "icon": "bird"
+}

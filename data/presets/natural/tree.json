@@ -1,6 +1,9 @@
 {
     "name": "tree",
     "plural": "trees",
+    "groups": [
+        "plants"
+    ],
     "tags": {
         "natural": "tree"
     },
@@ -11,5 +14,6 @@
     "terms": [
         "bole",
         "trunk"
-    ]
+    ],
+    "icon": "tree_broadleaved"
 }

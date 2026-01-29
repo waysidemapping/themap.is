@@ -2,6 +2,7 @@
     "name": "campground",
     "plural": "campgrounds",
     "groups": [
+        "outdoor recreation",
         "lodging"
     ],
     "tags": {

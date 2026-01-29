@@ -1,6 +1,9 @@
 {
     "name": "fitness station",
     "plural": "fitness stations",
+    "groups": [
+        "sports"
+    ],
     "tags": {
         "leisure": "fitness_station"
     },

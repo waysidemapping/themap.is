@@ -1,6 +1,9 @@
 {
     "name": "crematorium",
     "plural": "crematoriums",
+    "groups": [
+        "religious"
+    ],
     "tags": {
         "amenity": "crematorium"
     },

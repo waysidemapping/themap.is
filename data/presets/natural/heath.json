@@ -1,6 +1,9 @@
 {
     "name": "heath",
     "plural": "heath",
+    "groups": [
+        "plants"
+    ],
     "tags": {
         "natural": "heath"
     },

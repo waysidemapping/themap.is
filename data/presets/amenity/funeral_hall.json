@@ -1,6 +1,9 @@
 {
     "name": "funeral service hall",
     "plural": "funeral service halls",
+    "groups": [
+        "religious"
+    ],
     "tags": {
         "amenity": "funeral_hall"
     },

@@ -2,6 +2,9 @@
     "name": "railway feature",
     "plural": "railway features",
     "autoTheme": false,
+    "groups": [
+        "transport"
+    ],
     "tags": {
         "railway": "*"
     },

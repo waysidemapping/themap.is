@@ -1,6 +1,9 @@
 {
     "name": "viewpoint",
     "plural": "viewpoints",
+    "groups": [
+        "outdoor recreation"
+    ],
     "tags": {
         "tourism": "viewpoint"
     },

@@ -9,5 +9,6 @@
         "point",
         "line",
         "area"
-    ]
+    ],
+    "icon": "beaver-water"
 }
