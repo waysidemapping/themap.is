@@ -307,6 +307,15 @@ footer {
 #topbar .spacer {
   flex-basis: 100%;
 }
+#topbar .button-group {
+  filter: drop-shadow(var(--box-shadow));
+}
+#topbar .button-group > button {
+  box-shadow: none;
+}
+#topbar .button-group > button:not(:last-child){
+  margin-right: -1px;
+}
 #topbar button {
   padding: 6px 12px;
   border-radius: 6px;
