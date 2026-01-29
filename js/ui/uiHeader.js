@@ -71,23 +71,23 @@ async function reload() {
     createElement('div')
       .append(
         openIcon = createElement('div')
-          .setAttribute('class', 'icon theme-inspector-closed')
+          .setAttribute('class', 'icon')
           .setAttribute('style', "width:15px;height:15px;")
           .append(
             parser.parseFromString((await getSvg({file: 'ellipsis', fill: 'currentColor'})).string, "image/svg+xml").documentElement
           ),
         closeIcon = createElement('div')
-          .setAttribute('class', 'icon theme-inspector-opened hidden')
+          .setAttribute('class', 'icon')
           .setAttribute('style', "width:15px;height:15px;")
           .append(
             parser.parseFromString((await getSvg({file: 'x_cross', fill: 'currentColor'})).string, "image/svg+xml").documentElement
           )
       )
   );
+  updateForInspectorOpen();
 }
 
-state.addEventListener('change-theme', reload);
-state.addEventListener('change-themeInspectorOpen', _ => {
+function updateForInspectorOpen() {
   if (state.themeInspectorOpen) {
     openIcon.classList.add('hidden');
     closeIcon.classList.remove('hidden');
@@ -95,4 +95,7 @@ state.addEventListener('change-themeInspectorOpen', _ => {
     openIcon.classList.remove('hidden');
     closeIcon.classList.add('hidden');
   }
-});
+}
+
+state.addEventListener('change-theme', reload);
+state.addEventListener('change-themeInspectorOpen', updateForInspectorOpen);

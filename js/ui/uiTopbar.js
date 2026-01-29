@@ -46,10 +46,10 @@ export const topbar = createElement('div')
         } else if (navigator.clipboard?.write) {
           navigator.clipboard.writeText(urlString)
             .then(_ => {
-              shareButton.replaceChildren('Copied!');
+              shareButton.replaceChildren('Link Copied!');
               window.setTimeout(_ => {
                  shareButton.replaceChildren('Share');
-              }, 2500)
+              }, 3000)
             });
         }
       })
