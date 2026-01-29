@@ -238,7 +238,7 @@ button#main-theme-title .theme-title {
 
 #theme-explorer {
   margin-top: -1px;
-  width: calc(100% + 30px);
+  width: 150%;
   max-width: calc(100vw - 12px);
   height: 60vh;
   max-height: min(calc(100vh - 30px), 360px);
