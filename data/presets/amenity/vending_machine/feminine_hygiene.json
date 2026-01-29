@@ -1,0 +1,25 @@
+{
+    "name": "menstrual product dispenser",
+    "plural": "menstrual product dispensers",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "feminine_hygiene"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "feminine_hygiene"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "condom",
+        "menstrual hygiene products",
+        "pad",
+        "personal care",
+        "tampon",
+        "woman",
+        "women"
+    ]
+}

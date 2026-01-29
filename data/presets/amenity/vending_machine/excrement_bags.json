@@ -1,0 +1,25 @@
+{
+    "name": "pet waste bag dispenser",
+    "plural": "pet waste bag dispensers",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "excrement_bags"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "excrement_bags"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "animal",
+        "dog",
+        "excrement bags",
+        "pet",
+        "poop",
+        "waste"
+    ],
+    "icon": "dispenser_mounted-dog"
+}

@@ -1,6 +1,9 @@
 {
     "name": "vending machine",
     "plural": "vending machines",
+    "groups": [
+        "street furniture"
+    ],
     "tags": {
         "amenity": "vending_machine"
     },

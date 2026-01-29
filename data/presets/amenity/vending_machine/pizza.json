@@ -1,0 +1,19 @@
+{
+    "name": "pizza vending machine",
+    "plural": "pizza vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "pizza"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "pizza"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "pizza"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "name": "ice dispenser",
+    "plural": "ice dispensers",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "ice_cubes"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "ice_cubes"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "cubes",
+        "ice"
+    ],
+    "icon": "dispenser-ice"
+}

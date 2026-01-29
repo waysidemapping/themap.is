@@ -1,0 +1,21 @@
+{
+    "name": "snack vending machine",
+    "plural": "snack vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "food",
+        "food": "snacks"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "candy",
+        "chip",
+        "cookie",
+        "cracker",
+        "gum",
+        "pretzel"
+    ]
+}

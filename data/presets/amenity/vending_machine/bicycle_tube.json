@@ -1,0 +1,21 @@
+{
+    "name": "bike tube vending machine",
+    "plural": "bike tube vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "bicycle_tube"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "bicycle_tube"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "bicycle tubes",
+        "bike tube",
+        "inner tube"
+    ]
+}

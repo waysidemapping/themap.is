@@ -1,0 +1,24 @@
+{
+    "name": "electronics vending machine",
+    "plural": "electronics vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "electronics"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "electronics"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "cable",
+        "charger",
+        "earbud",
+        "headphone",
+        "phone",
+        "tablet"
+    ]
+}

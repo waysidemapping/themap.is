@@ -1,0 +1,19 @@
+{
+    "name": "bottle return machine",
+    "plural": "bottle return machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "bottle_return"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "bottle_return"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "bottle return"
+    ]
+}

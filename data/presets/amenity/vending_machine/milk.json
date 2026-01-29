@@ -1,0 +1,16 @@
+{
+    "name": "milk vending machine",
+    "plural": "milk vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "milk"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "milk"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ]
+}

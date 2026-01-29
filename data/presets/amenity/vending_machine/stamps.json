@@ -1,0 +1,22 @@
+{
+    "name": "postage vending machine",
+    "plural": "postage vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "stamps"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "stamps"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "mail",
+        "postage",
+        "stamp"
+    ],
+    "icon": "vending-postage_stamp"
+}

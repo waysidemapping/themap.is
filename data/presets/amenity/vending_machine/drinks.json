@@ -1,0 +1,24 @@
+{
+    "name": "drink vending machine",
+    "plural": "drink vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "drinks"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "drinks"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "beverage",
+        "drink",
+        "juice",
+        "pop",
+        "soda"
+    ],
+    "icon": "vending-can"
+}

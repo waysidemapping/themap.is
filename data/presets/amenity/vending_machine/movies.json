@@ -1,0 +1,16 @@
+{
+    "name": "movie vending machine",
+    "plural": "movie vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "movies"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "movies"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "parking ticket vending machine",
+    "plural": "parking ticket vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "parking_tickets"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "Parking Meter",
+        "parking",
+        "ticket"
+    ],
+    "icon": "vending-ticket",
+    "matchScore": 0.94
+}

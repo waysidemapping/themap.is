@@ -1,0 +1,19 @@
+{
+    "name": "food vending machine",
+    "plural": "food vending machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "food"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "food"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "food"
+    ]
+}

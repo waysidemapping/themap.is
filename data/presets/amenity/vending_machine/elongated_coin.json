@@ -1,0 +1,25 @@
+{
+    "name": "coin press machine",
+    "plural": "coin press machines",
+    "tags": {
+        "amenity": "vending_machine",
+        "vending": "elongated_coin"
+    },
+    "reference": {
+        "key": "vending",
+        "value": "elongated_coin"
+    },
+    "geometry": [
+        "point",
+        "vertex"
+    ],
+    "terms": [
+        "coin",
+        "crush",
+        "elongated",
+        "flatten",
+        "penny",
+        "souvenir"
+    ],
+    "icon": "dispenser-flat_coin"
+}
