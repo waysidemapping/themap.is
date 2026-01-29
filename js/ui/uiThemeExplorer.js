@@ -30,7 +30,10 @@ export const themeExplorer = createElement('div')
                 resultsList.querySelector('li:first-child button')?.dispatchEvent(new Event("click"));
             }
         })
-          .addEventListener('input', updateList)
+          .addEventListener('input', function() {
+            if (resultsList.scrollTop !== 0) resultsList.scrollTop = 0;
+            updateList();
+          })
       ),
     resultsList = createElement('ul')
       .setAttribute('class', 'search-results')
