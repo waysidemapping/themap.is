@@ -5,9 +5,11 @@ import { themeInspector } from "./uiThemeInspector.js";
 import { state } from "../stateController.js";
 import { themeIconElement } from './uiThemeIcon.js';
 
-state.addEventListener('change-theme', reload);
 
-let themeTitle;
+let exploreMapsButton,
+  themeTitle,
+  openIcon,
+  closeIcon;
 
 const parser = new DOMParser();
 
@@ -17,10 +19,13 @@ export const header = createElement('div')
     createElement('div')
       .setAttribute('id', 'header-header')
       .append(
-        createElement('button')
+        exploreMapsButton = createElement('button')
           .setAttribute('id', 'explore-maps')
           .addEventListener('mousedown', e => e.stopPropagation())
-          .addEventListener('click', _ => state.toggle('themeExplorerOpen'))
+          .addEventListener('click', _ => {
+            state.toggle('themeExplorerOpen');
+            exploreMapsButton.blur();
+          })
           .append(
             createElement('div')
               .setAttribute('class', 'icon')
@@ -41,7 +46,10 @@ export const header = createElement('div')
       ),
     themeTitle = createElement('button')
       .setAttribute('id', 'main-theme-title')
-      .addEventListener('click', _ => state.toggle('themeInspectorOpen')),
+      .addEventListener('click', _ => {
+        state.toggle('themeInspectorOpen');
+        themeTitle.blur();
+      }),
     themeInspector
   );
 
@@ -61,16 +69,30 @@ async function reload() {
           .append(state.theme?.name || '…')
       ),
     createElement('div')
-      .setAttribute('class', 'icon')
-      .setAttribute('style', "width:16px;height:16px;")
       .append(
-        parser.parseFromString((await getSvg({file: 'map-info', fill: 'currentColor'})).string, "image/svg+xml").documentElement
-      ),
-    createElement('div')
-      .setAttribute('class', 'icon')
-      .setAttribute('style', "width:8px;height:8px;")
-      .append(
-        parser.parseFromString((await getSvg({file: 'triangle_isosceles_down_rounded', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+        openIcon = createElement('div')
+          .setAttribute('class', 'icon theme-inspector-closed')
+          .setAttribute('style', "width:15px;height:15px;")
+          .append(
+            parser.parseFromString((await getSvg({file: 'ellipsis', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+          ),
+        closeIcon = createElement('div')
+          .setAttribute('class', 'icon theme-inspector-opened hidden')
+          .setAttribute('style', "width:15px;height:15px;")
+          .append(
+            parser.parseFromString((await getSvg({file: 'x_cross', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+          )
       )
   );
 }
+
+state.addEventListener('change-theme', reload);
+state.addEventListener('change-themeInspectorOpen', _ => {
+  if (state.themeInspectorOpen) {
+    openIcon.classList.add('hidden');
+    closeIcon.classList.remove('hidden');
+  } else {
+    openIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+  }
+});
