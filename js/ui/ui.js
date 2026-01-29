@@ -1,9 +1,10 @@
-import { getElementById } from "./utils.js";
-import { state } from "./stateController.js";
-import { header } from "./ui/uiHeader.js";
+import { getElementById } from "../utils.js";
+import { state } from "../stateController.js";
+import { header } from "./uiHeader.js";
+import { topbar } from "./uiTopbar.js";
 
 state.addEventListener('change-theme', updateUi);
-getElementById('ui').replaceChildren(header);
+getElementById('ui').replaceChildren(header, topbar);
 updateUi();
 
 function updateUi () {

@@ -1,6 +1,7 @@
 export const colors = {
   aboriginal_lands_fill: "#FFF8F2",
   aboriginal_lands_outline: "#DAD1C9",
+  aboriginal_lands_icon: "#a6764d",
   aboriginal_lands_text: "#6B533F",
   admin_boundary_stroke: "#ccbdbd",
   admin_boundary_casing: "#fff",

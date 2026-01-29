@@ -9,8 +9,8 @@ let searchInput;
 let resultsList;
 
 export const themeExplorer = createElement('div')
-  .setAttribute('id', 'map-explorer')
-  .setAttribute('class', 'hidden')
+  .setAttribute('id', 'theme-explorer')
+  .setAttribute('class', 'overlay hidden')
   .append(
     createElement('div')
       .setAttribute('class', 'search-wrap')
@@ -73,7 +73,7 @@ async function updateList() {
             .append(
               await themeIconElement(theme),
               createElement('span')
-                .setAttribute('class', 'maptitle')
+                .setAttribute('class', 'theme-title')
                 .append(theme.name)
             )
         )
@@ -86,9 +86,11 @@ updateList();
 state.addEventListener('change-themeExplorerOpen', _ => {
   if (state.themeExplorerOpen) {
     themeExplorer?.classList.remove('hidden');
+    document.documentElement.classList.add('themeExplorerOpen');
     searchInput?.focus();
     searchInput?.select();
   } else {
     themeExplorer?.classList.add('hidden');
+    document.documentElement.classList.remove('themeExplorerOpen');
   }
 })

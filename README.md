@@ -1,4 +1,4 @@
-# The Map Is…
+# themap.is
 
 ## Acknowledgements
 

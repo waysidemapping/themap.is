@@ -747,6 +747,7 @@ export async function generateStyle(baseStyleJson, theme) {
 
   let icons = {};
   function iconExp(opts) {
+    if (!opts.file) opts = Object.assign({file: 'dot'}, opts);
     let id = registerSvg(opts);
     icons[id] = true;
     return ["image", id];

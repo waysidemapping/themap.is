@@ -1,52 +1,51 @@
 import { colors } from './colors.js';
 
-const themesById = {
-  "eats": {
-    features: [
-      {
-        presets: [
-          "amenity/fast_food",
-          "amenity/food_court",
-          "amenity/cafe",
-          "amenity/ice_cream",
-          "amenity/pub",
-          "amenity/restaurant"
-        ]
-      }
-    ]
-  },
-  "swimming": {
-    features: [
-      {
-        presets: ["leisure/swimming_pool"]
-      },
-      {
-        presets: ["leisure/sports_centre/swimming"]
-      }
-    ]
-  }
+const themesById = {};
+
+// const themesById = {
+//   "eats": {
+//     features: [
+//       {
+//         presets: [
+//           "amenity/fast_food",
+//           "amenity/food_court",
+//           "amenity/cafe",
+//           "amenity/ice_cream",
+//           "amenity/pub",
+//           "amenity/restaurant"
+//         ]
+//       }
+//     ]
+//   }
+// };
+
+const presetGroupThemes = {
+  "bees": {groupType: "theme"},
+  "books": {groupType: "theme;commodity"},
+  "dams": {groupType: "feature_type"},
+  "islands": {groupType: "feature_type"},
+  "free stuff": {groupType: "commodity"},
+  "gambling": {groupType: "activity"},
+  "healthcare": {groupType: "theme"},
+  "lodging": {groupType: "commodity"},
+  "mail": {groupType: "theme"},
+  "maps": {groupType: "feature_type;commodity"},
+  "motorcycling": {groupType: "activity"},
+  "stores": {groupType: "feature_type"},
+  "street furniture": {groupType: "feature_type"},
+  "swimming": {groupType: "activity"},
+  "vehicle rental": {groupType: "feature_type"},
+  "vehicle repair shops": {groupType: "feature_type"},
+  "waterway access": {groupType: "feature_type"},
 };
 
-let groupThemes = [
-  "bees",
-  "books",
-  "dams",
-  "islands",
-  "free stuff",
-  "gambling",
-  "healthcare",
-  "lodging",
-  "mail",
-  "maps",
-  "motorcycles",
-  "stores",
-  "street furniture",
-  "vehicle rental",
-  "vehicle repair shops",
-  "waterway access"
-];
-
 const featureDefaultsByGroup = {
+  "aboriginal lands": {
+    icon: { 
+      bg_fill: colors.aboriginal_lands_icon,
+      fill: colors.text_halo
+    }
+  },
   amenity: {
     icon: { 
       bg_fill: colors.education_icon,
@@ -177,7 +176,16 @@ const featureDefaultsByGroup = {
 
 async function loadData() {
   const presetsById = await fetch('/dist/presets.json').then(response => response.json());
-  groupThemes.forEach(group => themesById[group.replaceAll(' ', '_')] = {features: [{presetGroups: [group]}]});
+  for (let groupId in presetGroupThemes) {
+    themesById[groupId.replaceAll(' ', '_')] = {
+      groupType: presetGroupThemes[groupId].groupType,
+      features: [
+        {
+          presetGroups: [groupId]
+        }
+      ]
+    };
+  }
   for (let presetId in presetsById) {
     let preset = presetsById[presetId];
     preset.id = presetId;
@@ -192,6 +200,7 @@ async function loadData() {
       if (!themesById[themeId]) {
         themesById[themeId] = {
           name: preset.plural,
+          groupType: "feature_type",
           features: [
             {
               presets: [presetId]

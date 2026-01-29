@@ -1,3 +1,7 @@
+
+// Cache promises since both fetching and building hundreds of icons multiples times
+// can affect performances. These are separate steps since multiple built SVGs can
+// reference the same base file.
 const fetchPromisesByUrl = {};
 const buildPromisesById = {};
 
@@ -39,7 +43,7 @@ export function registerSvg(opts) {
   return id;
 }
 
-function getSvgFile(file) {
+function fetchSvgFile(file) {
   if (!fetchPromisesByUrl[file]) {
     fetchPromisesByUrl[file] = file ? fetch('/icons/' + file + '.svg')
       .then(resp => resp.text())
@@ -56,13 +60,8 @@ export function getSvg(idOrOpts) {
   const opts = typeof idOrOpts === 'string' ? optsById[idOrOpts] : idOrOpts;
   const id = typeof idOrOpts === 'string' ? idOrOpts : registerSvg(opts);
   if (!buildPromisesById[id]) {
-    buildPromisesById[id] = getSvgFile(opts.file)
-      .then(svgInfo => {
-        if (opts) {
-          return editSvg(svgInfo.string, opts);
-        }
-        return Object.assign({}, svgInfo);
-      });
+    buildPromisesById[id] = fetchSvgFile(opts.file)
+      .then(svgInfo => buildSvg(svgInfo.string, opts));
   }
   return buildPromisesById[id];
 }
@@ -93,7 +92,7 @@ function getSvgDimensions(svgString) {
   return size;
 }
 
-function editSvg(svgString, opts) {
+function buildSvg(svgString, opts) {
   let string = svgString;
   let {x, y, w, h} = getSvgDimensions(svgString);
 

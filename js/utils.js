@@ -21,7 +21,7 @@ export function getElementsByName(...args) {
 // Wraps certain functions of the element so they return the
 // element itself in order to enable chaining.
 function wrapElementFunctions(el) {
-  let fnNames = ['addEventListener', 'append', 'appendChild', 'replaceChildren', 'setAttribute'];
+  let fnNames = ['addEventListener', 'append', 'appendChild', 'replaceChildren', 'setAttribute', 'insertAdjacentHTML'];
   for (let i in fnNames) {
     let fnName = fnNames[i];
     let fn = el[fnName];

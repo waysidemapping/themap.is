@@ -7,7 +7,7 @@ let activeStyleInfo;
 
 const baseStyleJson = {
     "version": 8,
-    "name": "The Map Is Basemap Style",
+    "name": "themap.is basemap style",
     "glyphs": "https://tiles.openstreetmap.us/fonts/{fontstack}/{range}.pbf",
     "sources": {
        "beefsteak": {
@@ -66,20 +66,38 @@ function initializeMap() {
       visualizePitch: true
     }))
     .addControl(new maplibregl.GeolocateControl({
-        positionOptions: {
-            enableHighAccuracy: true
-        },
-        trackUserLocation: true
+      fitBoundsOptions: {
+        animate: false
+      },
+      positionOptions: {
+          enableHighAccuracy: true
+      },
+      trackUserLocation: true
     }))
     .addControl(new maplibregl.ScaleControl({
         maxWidth: 150,
         unit: 'imperial'
     }), "bottom-left");
+  
+  map.on('moveend', updateStateMapcenter);
+  updateStateMapcenter();
 
   state.addEventListener('change-theme', function() {
     reloadMapStyle();
   });
   reloadMapStyle();
+}
+
+function updateStateMapcenter() {
+  const z = map.getZoom();
+  const { lng, lat } = map.getCenter();
+  state.set({
+    mapcenter: {
+      z: z,
+      lat: lat,
+      lng: lng
+    }
+  });
 }
 
 async function reloadMapStyle() {
