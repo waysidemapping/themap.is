@@ -1,0 +1,16 @@
+{
+    "name": "watershed reserve",
+    "plural": "watershed reserves",
+    "groups": [
+        "parks"
+    ],
+    "tags": {
+        "boundary": "protected_area",
+        "protected_area": "watershed_reserve"
+    },
+    "reference": {
+        "key": "protected_area",
+        "value": "watershed_reserve"
+    },
+    "icon": "droplet"
+}

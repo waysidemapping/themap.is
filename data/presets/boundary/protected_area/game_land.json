@@ -1,0 +1,16 @@
+{
+    "name": "game reserve",
+    "plural": "game reserves",
+    "groups": [
+        "parks"
+    ],
+    "tags": {
+        "boundary": "protected_area",
+        "protected_area": "game_land"
+    },
+    "reference": {
+        "key": "protected_area",
+        "value": "game_land"
+    },
+    "icon": "stag"
+}

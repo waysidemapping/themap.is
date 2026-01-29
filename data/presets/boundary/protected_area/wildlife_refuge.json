@@ -1,0 +1,16 @@
+{
+    "name": "wildlife refuge",
+    "plural": "wildlife refuges",
+    "groups": [
+        "parks"
+    ],
+    "tags": {
+        "boundary": "protected_area",
+        "protected_area": "wildlife_refuge"
+    },
+    "reference": {
+        "key": "protected_area",
+        "value": "wildlife_refuge"
+    },
+    "icon": "bird"
+}
