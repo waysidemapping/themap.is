@@ -1,0 +1,21 @@
+{
+    "name": "hiking route",
+    "plural": "hiking routes",
+    "tags": {
+        "type": "route",
+        "route": "hiking"
+    },
+    "reference": {
+        "key": "route",
+        "value": "hiking"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "terms": [
+        "food route",
+        "pedestrian route",
+        "walking route"
+    ],
+    "icon": "hiker"
+}

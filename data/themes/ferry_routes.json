@@ -1,0 +1,12 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "route/ferry",
+        "type_route/ferry"
+      ]
+    }
+  ],
+  "iconFile": "ferry"
+}

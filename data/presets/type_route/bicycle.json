@@ -1,0 +1,16 @@
+{
+    "name": "bike route",
+    "plural": "bike routes",
+    "tags": {
+        "type": "route",
+        "route": "bicycle"
+    },
+    "reference": {
+        "key": "route",
+        "value": "bicycle"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "icon": "bicycle"
+}

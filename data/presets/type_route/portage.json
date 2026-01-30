@@ -1,0 +1,25 @@
+{
+    "name": "portage route",
+    "plural": "portage routes",
+    "tags": {
+        "type": "route",
+        "route": "portage"
+    },
+    "reference": {
+        "key": "route",
+        "value": "portage"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "terms": [
+        "boat",
+        "paddle",
+        "paddling",
+        "canoe carry",
+        "kayaking",
+        "canoeing",
+        "rafting",
+        "whitewater rapids"
+    ]
+}

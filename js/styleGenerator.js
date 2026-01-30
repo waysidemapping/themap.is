@@ -562,25 +562,29 @@ const lineOverlayLayer = {
     "line-width": [
       "interpolate", ["exponential", 2], ["zoom"],
       12, [
-         "case",
+        "case",
         filters.is_floating_boom, 2,
+        filters.is_foot_route, 1,
         1
       ],
       18, [
-         "case",
+        "case",
         filters.is_floating_boom, 9,
+        filters.is_foot_route, 1,
         1
       ],
     ],
     "line-color": [
       "case",
       filters.is_floating_boom, colors.floating_boom_stroke,
-      colors.route_foot_overlay
+      filters.is_foot_route, colors.route_foot_overlay,
+      "red"
     ],
     "line-dasharray": [
       "case",
       filters.is_floating_boom, ["literal", [0.6, 3]],
-      ["literal", [2.625, 2.375]]
+      filters.is_foot_route, ["literal", [2.625, 2.375]],
+      ["literal", [1]],
     ]
   }
 };
@@ -703,9 +707,9 @@ let diegeticPointLayer = {
 function tagsExp(tags) {
   let exp = [];
   for (let key in tags) {
-    let val = tags[key];
-    if (val === '*') {
-      exp.push(['has', key]);
+    let value = tags[key];
+    if (value === '*') {
+      exp.push(["has", key]);
     } else {
       exp.push(
         [
@@ -714,16 +718,34 @@ function tagsExp(tags) {
           [
             "any",
             // check if exact match (one item in list)
-            ["==", ["get", key], val],
+            ["==", ["get", key], value],
             // check if item is listed between others
-            ["in", `;${val};`, ["get", key]],
+            ["in", `;${value};`, ["get", key]],
             // check if item is first in list
-            ["==", ["slice", ["get", key], 0, ["length", `${val};`]], `${val};`],
+            ["==", ["slice", ["get", key], 0, ["length", `${value};`]], `${value};`],
             // check if item is last in list
-            ["==", ["slice", ["get", key], ["-", ["length", ["get", key]], ["length", `;${val}`]]], `;${val}`]
+            ["==", ["slice", ["get", key], ["-", ["length", ["get", key]], ["length", `;${value}`]]], `;${value}`]
           ]
         ]
       );
+    }
+  }
+  if (exp.length === 1) {
+    return exp[0];
+  } else {
+    exp.unshift("all");
+    return exp;
+  }
+}
+
+function rTagsExp(tags) {
+  let exp = [];
+  for (let key in tags) {
+    let value = tags[key];
+    if (value === '*') {
+      exp.push(["has", `r.${key}`]);
+    } else {
+      exp.push(["in", `┃${value}┃`, ["get", `r.${key}`]]);
     }
   }
   if (exp.length === 1) {
@@ -739,11 +761,25 @@ export async function generateStyle(baseStyleJson, theme) {
   // parse anew every time to avoid object references
   const style = JSON.parse(JSON.stringify(baseStyleJson));
 
-  const featuresToRender = theme ? theme.features.map(item => {
+  const themePointFeatures = theme ? theme.features.filter(feature => {
+    if (!feature.geometry) return true;
+    return feature.geometry.includes('vertex') || feature.geometry.includes('point') || feature.geometry.includes('area') || feature.geometry.includes('relation');
+  }).map(item => {
     let feature = Object.assign({}, item);
-    feature.exp = tagsExp(feature.tags);
+    feature.exp = item.geometry?.includes('relation') ? rTagsExp(feature.tags) : tagsExp(feature.tags);
     return feature;
   }) : [];
+  const anyThemePointFeatureExp = themePointFeatures.length ? ["any", ...themePointFeatures.map(feature => feature.exp)] : false;
+
+  const themeLineFeatures = theme ? theme.features.filter(feature => {
+    if (!feature.geometry) return true;
+    return feature.geometry.includes('relation') || feature.geometry.includes('line')
+  }).map(item => {
+    let feature = Object.assign({}, item);
+    feature.exp = item.geometry?.includes('relation') ? rTagsExp(feature.tags) : tagsExp(feature.tags);
+    return feature;
+  }) : [];
+  const anyThemeLineFeatureExp = themeLineFeatures.length ? ["any", ...themeLineFeatures.map(feature => feature.exp)] : false;
 
   let icons = {};
   function iconExp(opts) {
@@ -984,7 +1020,6 @@ export async function generateStyle(baseStyleJson, theme) {
       ]
     }
   });
-
   addLayer({
     "id": "boundary",
     "source": "beefsteak",
@@ -1019,6 +1054,24 @@ export async function generateStyle(baseStyleJson, theme) {
     }
   });
 
+  if (themeLineFeatures.length) {
+    addLayer({
+      "id": "theme-line",
+      "source": "beefsteak",
+      "source-layer": "line",
+      "type": "line",
+      "filter": anyThemeLineFeatureExp,
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": colors.theme_line_color,
+        "line-width": 1
+      }
+    });
+  }
+
   addLayer({
     "id": "line-label",
     "source": "beefsteak",
@@ -1036,14 +1089,20 @@ export async function generateStyle(baseStyleJson, theme) {
       filters.is_watercourse
     ],
     "layout": {
-        "symbol-placement": "line",
-        "text-size": 10.5,
-        "text-font": [
-            "case",
-            filters.is_watercourse, ["literal", ["Noto Serif Italic"]],
-            ["literal", ["Noto Sans Regular"]]
-        ],
-        "text-field": labelTextField
+      "symbol-placement": "line",
+      "symbol-sort-key": [
+        "case",
+        // Prioritize the focused features (value related to symbol-sort-key for the point-label layer)
+        anyThemeLineFeatureExp, -1.6e15,
+        0
+      ],
+      "text-size": 10.5,
+      "text-font": [
+          "case",
+          filters.is_watercourse, ["literal", ["Noto Serif Italic"]],
+          ["literal", ["Noto Sans Regular"]]
+      ],
+      "text-field": labelTextField
     },
     "paint": {
         "text-color": [
@@ -1111,25 +1170,22 @@ export async function generateStyle(baseStyleJson, theme) {
       ],
       filters.is_landform_area_poi,
       filters.is_water_area_poi,
-      ...featuresToRender.map(feature => feature.exp)
+      anyThemePointFeatureExp
     ],
     "layout": {
       "symbol-placement": "point",
       "text-optional": true,
       "symbol-sort-key": [
         "case",
-        [
-          "any",
-          ...featuresToRender.map(feature => feature.exp)
-        ],
+        anyThemePointFeatureExp,
           // Prioritize the focused features by making sure the sort value is always
           // lower than that of the largest possible Web Mercator feature
           ["-", -1.6e15, ["coalesce", ["get", "c.area"], 0]],
         ["-", ["coalesce", ["get", "c.area"], 0]]
       ],
-      "icon-image": featuresToRender.filter(feature => feature.icon).length ? [
+      "icon-image": themePointFeatures.filter(feature => feature.icon).length ? [
         "case",
-        ...featuresToRender.filter(feature => feature.icon).map(feature => {
+        ...themePointFeatures.filter(feature => feature.icon).map(feature => {
           let noaccessIcon = Object.assign({}, feature.icon);
           if (noaccessIcon.fill) {
             noaccessIcon.fill = chroma.mix(noaccessIcon.fill, "#eee", 0.5, "rgb").hex();
@@ -1146,12 +1202,12 @@ export async function generateStyle(baseStyleJson, theme) {
         }).flat(),
         ["image", ""]
       ] : ["image", ""],
-      "text-variable-anchor-offset": featuresToRender.filter(feature => feature.icon).length ? [
+      "text-variable-anchor-offset": themePointFeatures.filter(feature => feature.icon).length ? [
         "case",
-        ...featuresToRender.filter(feature => feature.icon && feature.icon?.fill).map(feature => {
+        ...themePointFeatures.filter(feature => feature.icon && feature.icon?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [1.1, 0], "right", [-1.1, 0]]]]
         }).flat(),
-        ...featuresToRender.filter(feature => feature.icon && !feature.icon?.fill).map(feature => {
+        ...themePointFeatures.filter(feature => feature.icon && !feature.icon?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]]]
         }).flat(),
         ["literal", ["center", [0, 0]]]
@@ -1185,7 +1241,7 @@ export async function generateStyle(baseStyleJson, theme) {
       ],
       "text-font":[
         "case",
-        ["any", ...featuresToRender.map(feature => feature.exp)], ["literal", ["Noto Sans Bold"]],
+        anyThemePointFeatureExp, ["literal", ["Noto Sans Bold"]],
         [
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
@@ -1226,7 +1282,7 @@ export async function generateStyle(baseStyleJson, theme) {
     "paint": {
       "text-color":[
         "case",
-        ["any", ...featuresToRender.map(feature => feature.exp)], colors.primary_text,
+        anyThemePointFeatureExp, colors.primary_text,
         [
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
@@ -1240,7 +1296,7 @@ export async function generateStyle(baseStyleJson, theme) {
       "text-halo-color": colors.text_halo,
       "text-halo-width": [
         "case",
-        ["any", ...featuresToRender.map(feature => feature.exp)], 2.5,
+        anyThemePointFeatureExp, 2.5,
         1
       ],
       "text-halo-width": 1

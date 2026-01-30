@@ -1,0 +1,28 @@
+{
+    "name": "mountain bike route",
+    "plural": "mountain bike routes",
+    "tags": {
+        "type": "route",
+        "route": "mtb"
+    },
+    "reference": {
+        "key": "route",
+        "value": "mtb"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "terms": [
+        "all mountain",
+        "cross-country cycling",
+        "downhill cycling",
+        "enduro",
+        "freeride",
+        "mountain bicycling",
+        "mountain bike route",
+        "mountain cycling",
+        "mtb",
+        "trail riding"
+    ],
+    "icon": "bicycle"
+}

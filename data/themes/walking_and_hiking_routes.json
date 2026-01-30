@@ -1,0 +1,11 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "type_route/foot",
+        "type_route/hiking"
+      ]
+    }
+  ]
+}

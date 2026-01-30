@@ -1,0 +1,20 @@
+{
+    "name": "aerialway route",
+    "plural": "aerialway routes",
+    "autoTheme": false,
+    "groups": [
+        "transit routes"
+    ],
+    "tags": {
+        "type": "route",
+        "route": "aerialway"
+    },
+    "reference": {
+        "key": "route",
+        "value": "aerialway"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "icon": "aerial_lift_gondola"
+}

@@ -1,0 +1,22 @@
+{
+    "name": "horseback riding route",
+    "plural": "horseback riding routes",
+    "tags": {
+        "type": "route",
+        "route": "horse"
+    },
+    "reference": {
+        "key": "route",
+        "value": "horse"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "terms": [
+        "horse riding route",
+        "horse trail",
+        "riding route",
+        "trail riding"
+    ],
+    "icon": "horse_rider"
+}

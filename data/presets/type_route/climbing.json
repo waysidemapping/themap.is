@@ -1,0 +1,24 @@
+{
+    "name": "climbing route",
+    "plural": "climbing routes",
+    "tags": {
+        "type": "route",
+        "route": "climbing"
+    },
+    "reference": {
+        "key": "climbing",
+        "value": "route"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "terms": [
+        "Mountaineering Route",
+        "Climb",
+        "climbing",
+        "mountain climbing",
+        "rock climbing",
+        "rock climbing route"
+    ],
+    "icon": "climber-rope"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "train route",
+    "plural": "train routes",
+    "groups": [
+        "rail transit routes",
+        "transit routes"
+    ],
+    "tags": {
+        "type": "route",
+        "route": "train"
+    },
+    "reference": {
+        "key": "route",
+        "value": "train"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "icon": "train"
+}

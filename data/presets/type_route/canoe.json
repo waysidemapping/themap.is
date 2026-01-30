@@ -1,0 +1,25 @@
+{
+    "name": "canoe route",
+    "plural": "canoe routes",
+    "tags": {
+        "type": "route",
+        "route": "canoe"
+    },
+    "reference": {
+        "key": "route",
+        "value": "canoe"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "terms": [
+        "boat",
+        "paddle",
+        "paddling",
+        "kayaking",
+        "canoeing",
+        "rafting",
+        "whitewater rapids"
+    ],
+    "icon": "canoer-water"
+}

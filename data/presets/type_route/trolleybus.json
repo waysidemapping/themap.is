@@ -1,0 +1,19 @@
+{
+    "name": "trolleybus route",
+    "plural": "trolleybus routes",
+    "groups": [
+        "transit routes"
+    ],
+    "tags": {
+        "type": "route",
+        "route": "trolleybus"
+    },
+    "reference": {
+        "key": "route",
+        "value": "trolleybus"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "icon": "trolleybus"
+}

@@ -56,6 +56,7 @@ export const colors = {
   outdoor_sports_facility_icon: "#218d60",
   outdoor_sports_facility_text: "#405e4c",
   route_foot_overlay: "#75ae7f",
+  theme_line_color: "#001a60",
   park_fill: "#ECFAE9",
   park_outline: "#abd4a4",
   park_icon: "#225e16",

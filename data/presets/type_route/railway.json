@@ -1,0 +1,17 @@
+{
+    "name": "railway route",
+    "plural": "railway routes",
+    "autoTheme": false,
+    "tags": {
+        "type": "route",
+        "route": "railway"
+    },
+    "reference": {
+        "key": "route",
+        "value": "railway"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "icon": "railway_track"
+}

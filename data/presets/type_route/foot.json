@@ -1,0 +1,21 @@
+{
+    "name": "walking route",
+    "plural": "walking routes",
+    "tags": {
+        "type": "route",
+        "route": "foot"
+    },
+    "reference": {
+        "key": "route",
+        "value": "foot"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "terms": [
+        "food route",
+        "pedestrian route",
+        "hiking route"
+    ],
+    "icon": "pedestrian"
+}

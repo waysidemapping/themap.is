@@ -1,0 +1,20 @@
+{
+    "name": "tram route",
+    "plural": "tram routes",
+    "groups": [
+        "rail transit routes",
+        "transit routes"
+    ],
+    "tags": {
+        "type": "route",
+        "route": "tram"
+    },
+    "reference": {
+        "key": "route",
+        "value": "tram"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "icon": "tram"
+}

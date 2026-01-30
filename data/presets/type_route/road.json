@@ -1,0 +1,16 @@
+{
+    "name": "road route",
+    "plural": "road routes",
+    "tags": {
+        "type": "route",
+        "route": "road"
+    },
+    "reference": {
+        "key": "route",
+        "value": "road"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "icon": "car"
+}

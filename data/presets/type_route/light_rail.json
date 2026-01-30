@@ -1,0 +1,20 @@
+{
+    "name": "light rail route",
+    "plural": "light rail routes",
+    "groups": [
+        "rail transit routes",
+        "transit routes"
+    ],
+    "tags": {
+        "type": "route",
+        "route": "light_rail"
+    },
+    "reference": {
+        "key": "route",
+        "value": "light_rail"
+    },
+    "geometry": [
+        "relation"
+    ],
+    "icon": "light_rail"
+}
