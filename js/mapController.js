@@ -12,7 +12,7 @@ const baseStyleJson = {
     "sources": {
        "beefsteak": {
             "type": "vector",
-            "url": "http://159.69.74.234/beefsteak"
+            "url": "https://tiles.waysidemapping.org/beefsteak"
         }
     },
     "layers": []
