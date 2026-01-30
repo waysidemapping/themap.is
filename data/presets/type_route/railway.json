@@ -1,7 +1,6 @@
 {
-    "name": "railway route",
-    "plural": "railway routes",
-    "autoTheme": false,
+    "name": "rail line",
+    "plural": "rail lines",
     "tags": {
         "type": "route",
         "route": "railway"

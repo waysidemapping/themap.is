@@ -1,7 +1,6 @@
 {
     "name": "aerialway route",
     "plural": "aerialway routes",
-    "autoTheme": false,
     "groups": [
         "transit routes"
     ],

@@ -1,7 +1,6 @@
 {
     "name": "pipeline route",
     "plural": "pipeline routes",
-    "autoTheme": false,
     "tags": {
         "type": "route",
         "route": "pipeline"

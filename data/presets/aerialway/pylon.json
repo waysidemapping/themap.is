@@ -1,7 +1,6 @@
 {
     "name": "aerialway pylon",
     "plural": "aerialway pylons",
-    "autoTheme": false,
     "tags": {
         "aerialway": "pylon"
     },

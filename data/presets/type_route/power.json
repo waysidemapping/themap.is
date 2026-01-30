@@ -1,7 +1,6 @@
 {
     "name": "power route",
     "plural": "power routes",
-    "autoTheme": false,
     "tags": {
         "type": "route",
         "route": "power"
