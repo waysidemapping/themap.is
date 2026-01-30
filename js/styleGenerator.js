@@ -80,8 +80,7 @@ const filters = {
     [
       "any",
       ["in", "┃hiking┃", ["get", "r.route"]],
-      ["in", "┃foot┃", ["get", "r.route"]],
-      ["in", "┃portage┃", ["get", "r.route"]]
+      ["in", "┃foot┃", ["get", "r.route"]]
     ]
   ],
   is_parking_lot: [
