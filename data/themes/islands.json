@@ -1,0 +1,12 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "place/island",
+        "place/islet"
+      ]
+    }
+  ],
+  "iconFile": "hill-trees-house-water"
+}

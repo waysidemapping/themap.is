@@ -2,9 +2,6 @@
     "name": "islet",
     "plural": "islets",
     "autoTheme": false,
-    "groups": [
-        "islands"
-    ],
     "tags": {
         "place": "islet"
     },

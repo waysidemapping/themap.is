@@ -2,9 +2,6 @@
     "name": "large island",
     "plural": "large islands",
     "autoTheme": false,
-    "groups": [
-        "islands"
-    ],
     "tags": {
         "place": "island"
     },

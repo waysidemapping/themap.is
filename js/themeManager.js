@@ -4,7 +4,6 @@ const presetGroupThemes = {
   "bees": {groupType: "theme"},
   "books": {groupType: "commodity"},
   "dams": {groupType: "feature_type"},
-  "islands": {groupType: "feature_type"},
   "free stuff": {groupType: "commodity"},
   "gambling": {groupType: "activity"},
   "healthcare": {groupType: "theme"},
@@ -264,9 +263,6 @@ async function loadData() {
                 let feature = {};
                 Object.assign(feature, theme.features[i]);
                 Object.assign(feature, preset);
-                if (typeof feature.icon === 'string') {
-                  feature.icon = { file: feature.icon };
-                }
                 expandedFeatures.push(feature);
               });
          // }
@@ -281,6 +277,7 @@ async function loadData() {
 
     for (let i in theme.features) {
       let feature = theme.features[i];
+      if (typeof feature.icon === 'string') feature.icon = { file: feature.icon };
       if (!feature.icon) feature.icon = {};
       if (!feature.icon.bg_fill) feature.icon.bg_fill = colors.text;
       if (!feature.icon.fill) feature.icon.fill = colors.text_halo;
@@ -301,7 +298,7 @@ async function loadData() {
     }
     let sortedFeatures = theme.features.toSorted((a, b) => (a.parents?.length || 0) - (b.parents?.length || 0))
     if (!theme.iconFile) {
-      theme.iconFile = sortedFeatures.find(feature => feature.icon?.file)?.icon?.file;
+      theme.iconFile = sortedFeatures.filter(feature => feature.autoTheme !== false).find(feature => feature.icon?.file)?.icon?.file;
     }
     if (!theme.primaryColor) {
       theme.primaryColor = sortedFeatures.map(feature => feature.icon?.bg_fill || feature.icon?.fill).filter(Boolean).at(0);
