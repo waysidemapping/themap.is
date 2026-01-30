@@ -1,0 +1,11 @@
+{
+  "name": "National Park Service",
+  "features": [
+    {
+      "tags": {
+        "operator": "National Park Service"
+      }
+    }
+  ],
+  "iconFile": "ranger_hat"
+}

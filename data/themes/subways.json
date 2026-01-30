@@ -1,0 +1,16 @@
+{
+  "groupType": "theme",
+  "features": [
+    {
+      "presets": [
+        "public_transport/station/subway",
+        "type_route/subway"
+      ]
+    },
+    {
+      "tags": {
+        "subway": "yes"
+      } 
+    }
+  ]
+}

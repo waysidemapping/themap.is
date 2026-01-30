@@ -1,0 +1,17 @@
+{
+  "groupType": "theme",
+  "features": [
+    {
+      "presets": [
+        "public_transport/station/ferry",
+        "route/ferry",
+        "type_route/ferry"
+      ]
+    },
+    {
+      "tags": {
+        "ferry": "yes"
+      } 
+    }
+  ]
+}

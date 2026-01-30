@@ -1,0 +1,16 @@
+{
+  "groupType": "theme",
+  "features": [
+    {
+      "presets": [
+        "public_transport/station/bus",
+        "type_route/bus"
+      ]
+    },
+    {
+      "tags": {
+        "bus": "yes"
+      } 
+    }
+  ]
+}

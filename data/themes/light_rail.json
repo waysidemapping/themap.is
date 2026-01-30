@@ -1,0 +1,16 @@
+{
+  "groupType": "theme",
+  "features": [
+    {
+      "presets": [
+        "public_transport/station/light_rail",
+        "type_route/light_rail"
+      ]
+    },
+    {
+      "tags": {
+        "light_rail": "yes"
+      } 
+    }
+  ]
+}

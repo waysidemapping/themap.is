@@ -1,0 +1,11 @@
+{
+  "name": "United States Forest Service",
+  "features": [
+    {
+      "tags": {
+        "operator": "United States Forest Service"
+      }
+    }
+  ],
+  "iconFile": "ranger_hat"
+}

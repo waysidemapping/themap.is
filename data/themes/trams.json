@@ -1,0 +1,16 @@
+{
+  "groupType": "theme",
+  "features": [
+    {
+      "presets": [
+        "public_transport/station/tram",
+        "type_route/tram"
+      ]
+    },
+    {
+      "tags": {
+        "tram": "yes"
+      } 
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Bureau of Land Management",
+  "features": [
+    {
+      "tags": {
+        "operator": "Bureau of Land Management"
+      }
+    }
+  ],
+  "iconFile": "ranger_hat"
+}

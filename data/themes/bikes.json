@@ -1,0 +1,17 @@
+{
+  "groupType": "theme",
+  "features": [
+    {
+      "presets": [
+        "amenity/bicycle_parking",
+        "amenity/bicycle_rental",
+        "amenity/bicycle_repair_station",
+        "amenity/bicycle_wash",
+        "amenity/vending_machine/bicycle_tube",
+        "shop/bicycle",
+        "type_route/bicycle",
+        "type_route/mtb"
+      ]
+    }
+  ]
+}

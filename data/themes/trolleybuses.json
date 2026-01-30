@@ -1,0 +1,16 @@
+{
+  "groupType": "theme",
+  "features": [
+    {
+      "presets": [
+        "public_transport/station/trolleybus",
+        "type_route/trolleybus"
+      ]
+    },
+    {
+      "tags": {
+        "trolleybus": "yes"
+      } 
+    }
+  ]
+}
