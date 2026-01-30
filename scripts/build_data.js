@@ -34,6 +34,15 @@ const allowedKeys = {
   "matchScore":{}
 };
 
+
+const allowedGeometry = [
+  "point",
+  "vertex",
+  "line",
+  "area",
+  "relation"
+];
+
 const specialCharsRegex = /[^\p{Script=Latin}\p{N} '-]/u;
 
 function checkPreset(id, json) {
@@ -66,6 +75,15 @@ function checkPreset(id, json) {
   for (let key in json.tags) {
     if (!knownKeys.includes(key) && !key.match(prefixRegex)) {
       console.log(`⚠️ Preset ${id} references key "${key}" which is not preset in map tiles`)
+    }
+  }
+
+  if (json.geometry) {
+    for (let i in json.geometry) {
+      if (!allowedGeometry.includes(json.geometry[i])) {
+        console.log(`🛑 Unknown geometry type "${json.geometry[i]}" for ${id}`)
+        return false;
+      }
     }
   }
 
