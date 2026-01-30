@@ -4,10 +4,6 @@ import { state } from "../stateController.js";
 function mapDescriptorText() {
   if (state.theme.groupType === 'feature_type') {
     return `This is a map of <b class="theme-name">${state.theme.name}</b>.`;
-  } else if (state.theme.groupType === 'feature_type;commodity') {
-    return `This is a map of <b class="theme-name">${state.theme.name}</b> and places where you can find <b class="theme-name">${state.theme.name}</b>.`;
-  } else if (state.theme.groupType === 'theme;commodity') {
-    return `This is a map of places related to <b class="theme-name">${state.theme.name}</b>, including places where you can find <b class="theme-name">${state.theme.name}</b>.`;
   } else if (state.theme.groupType === 'commodity_descriptor') {
     return `This is a map of places where you can find <b class="theme-name">${state.theme.name}</b> items.`;
   } else if (state.theme.groupType === 'commodity') {

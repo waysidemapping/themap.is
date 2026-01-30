@@ -2,7 +2,7 @@ import { colors } from './colors.js';
 
 const presetGroupThemes = {
   "bees": {groupType: "theme"},
-  "books": {groupType: "theme;commodity"},
+  "books": {groupType: "commodity"},
   "dams": {groupType: "feature_type"},
   "islands": {groupType: "feature_type"},
   "free stuff": {groupType: "commodity"},
@@ -10,7 +10,7 @@ const presetGroupThemes = {
   "healthcare": {groupType: "theme"},
   "lodging": {groupType: "commodity"},
   "mail": {groupType: "theme"},
-  "maps": {groupType: "feature_type;commodity"},
+  "maps": {groupType: "commodity"},
   "motorcycling": {groupType: "activity"},
   "stores": {groupType: "feature_type"},
   "street furniture": {groupType: "feature_type"},
