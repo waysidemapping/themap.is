@@ -1,0 +1,12 @@
+{
+  "groupType": "feature_type",
+  "name": "National Parks of the United States",
+  "features": [
+    {
+      "tags": {
+        "boundary": "protected_area",
+        "network": "National Parks of the United States"
+      }
+    }
+  ]
+}
