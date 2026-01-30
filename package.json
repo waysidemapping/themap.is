@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "chroma-js": "^3.2.0",
-        "maplibre-gl": "~5.16.0",
+        "maplibre-gl": "~5.17.0",
         "potpack": "~2.1.0"
     },
     "devDependencies": {
