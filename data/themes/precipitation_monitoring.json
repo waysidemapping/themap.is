@@ -1,0 +1,14 @@
+{
+  "features": [
+    {
+      "tags": {
+        "monitoring:precipitation": "yes"
+      }
+    },
+    {
+      "tags": {
+        "monitoring:rainfall": "yes"
+      }
+    }
+  ]
+}

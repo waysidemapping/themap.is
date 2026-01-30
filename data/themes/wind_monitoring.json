@@ -1,0 +1,19 @@
+{
+  "features": [
+    {
+      "tags": {
+        "aeroway": "windsock"
+      }
+    },
+    {
+      "tags": {
+        "monitoring:wind_speed": "yes"
+      }
+    },
+    {
+      "tags": {
+        "monitoring:wind_direction": "yes"
+      }
+    }
+  ]
+}
