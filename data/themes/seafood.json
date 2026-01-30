@@ -5,6 +5,11 @@
       "tags": {
         "cuisine": "seafood"
       }
+    },
+    {
+      "tags": {
+        "shop": "seafood"
+      }
     }
   ]
 }
