@@ -1,7 +1,8 @@
 import { createElement } from "../utils.js";
 import { state } from "../stateController.js";
+import { getSvg } from "../svgManager.js";
 
-let shareButton;
+let shareButtonLabel;
 
 export const topbar = createElement('div')
   .setAttribute('id', 'topbar')
@@ -16,16 +17,34 @@ export const topbar = createElement('div')
             const lng = state.mapcenter?.lng
             if (z && lat && lng) window.open(`https://www.openstreetmap.org/edit#map=${Math.round(z)+1}/${lat}/${lng}`, '_blank');
           })
-          .append('Edit'),
+          .append(
+            createElement('div')
+              .setAttribute('class', 'icon')
+              .setAttribute('style', "width:12px;height:12px;")
+              .append(
+                new DOMParser().parseFromString((await getSvg({file: 'pencil-square', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+              ),
+            createElement('span')
+              .append('Edit')
+          ),
         createElement('button')
           .addEventListener('click', _ => {
             window.open('https://osm411.org' + window.location.hash, '_blank');
           })
-          .append('Open In…')
+          .append(
+            createElement('div')
+              .setAttribute('class', 'icon')
+              .setAttribute('style', "width:12px;height:12px;")
+              .append(
+                new DOMParser().parseFromString((await getSvg({file: 'arrow_top_right-square', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+              ),
+            createElement('span')
+              .append('Open In…')
+          )
       ),
     createElement('div')
       .setAttribute('class', 'spacer'),
-    shareButton = createElement('button')
+    createElement('button')
       .addEventListener('click', _ => {
         const z = state.mapcenter?.z;
         const lat = state.mapcenter?.lat;
@@ -46,12 +65,21 @@ export const topbar = createElement('div')
         } else if (navigator.clipboard?.write) {
           navigator.clipboard.writeText(urlString)
             .then(_ => {
-              shareButton.replaceChildren('Link Copied!');
+              shareButtonLabel.replaceChildren('Link Copied!');
               window.setTimeout(_ => {
-                 shareButton.replaceChildren('Share');
+                 shareButtonLabel.replaceChildren('Share');
               }, 3000)
             });
         }
       })
-      .append('Share')
+      .append(
+        createElement('div')
+          .setAttribute('class', 'icon')
+          .setAttribute('style', "width:12px;height:12px;")
+          .append(
+            new DOMParser().parseFromString((await getSvg({file: 'arrow_up-rect', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+          ),
+        shareButtonLabel = createElement('span')
+              .append('Share')
+        )
   );
