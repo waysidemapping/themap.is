@@ -1,0 +1,11 @@
+{
+  "name": "Portuguese cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "portuguese"
+      }
+    }
+  ]
+}

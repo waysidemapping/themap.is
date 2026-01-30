@@ -1,0 +1,15 @@
+{
+  "groupType": "commodity_descriptor",
+  "features": [
+    {
+      "tags": {
+        "diet:vegan": "yes"
+      }
+    },
+    {
+      "tags": {
+        "diet:vegan": "only"
+      }
+    }
+  ]
+}

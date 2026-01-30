@@ -1,24 +1,5 @@
 import { colors } from './colors.js';
 
-const themesById = {};
-
-// const themesById = {
-//   "eats": {
-//     features: [
-//       {
-//         presets: [
-//           "amenity/fast_food",
-//           "amenity/food_court",
-//           "amenity/cafe",
-//           "amenity/ice_cream",
-//           "amenity/pub",
-//           "amenity/restaurant"
-//         ]
-//       }
-//     ]
-//   }
-// };
-
 const presetGroupThemes = {
   "bees": {groupType: "theme"},
   "books": {groupType: "theme;commodity"},
@@ -175,30 +156,58 @@ const featureDefaultsByGroup = {
 };
 
 async function loadData() {
-  const presetsById = await fetch('/dist/presets.json').then(response => response.json());
+
+  const themesById = {};
+
+  function addTheme(id, theme) {
+    if (themesById[id]) {
+      console.error(`Duplicate theme id ${id}`);
+    } else {
+      theme.id = id;
+      if (!theme.name) theme.name = theme.id.replaceAll('_', ' ');
+      theme.searchName = theme.name.toLowerCase()
+        // strip diacritics
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      themesById[id] = theme;
+    }
+  }
+
   for (let groupId in presetGroupThemes) {
-    themesById[groupId.replaceAll(' ', '_')] = {
+    addTheme(groupId.replaceAll(' ', '_'), {
       groupType: presetGroupThemes[groupId].groupType,
       features: [
         {
           presetGroups: [groupId]
         }
       ]
-    };
+    });
   }
+
+  const themesByIdFromFile = await fetch('/dist/themes.json').then(response => response.json());
+  for (let id in themesByIdFromFile) {
+    if (!themesByIdFromFile[id].groupType) themesByIdFromFile[id].groupType = 'theme';
+    addTheme(id, themesByIdFromFile[id]);
+  }
+
+  const presetIdsByTag = {};
+  const presetsById = await fetch('/dist/presets.json').then(response => response.json());
   for (let presetId in presetsById) {
     let preset = presetsById[presetId];
     preset.id = presetId;
+    for (const key in preset.tags) {
+      const tagString = key + '=' + preset.tags[key];
+      if (!presetIdsByTag[tagString]) presetIdsByTag[tagString] = [];
+      presetIdsByTag[tagString].push(presetId);
+    }
     if (preset.plural && preset.autoTheme !== false) {
       // id normalization needs to match those in urlController.js
-      let themeId = preset.plural
+      const themeId = preset.plural
         .replaceAll(' ', '_')
         .toLowerCase()
         // strip diacritics
         .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-      if (!themesById[themeId]) {
-        themesById[themeId] = {
+      addTheme(themeId, {
           name: preset.plural,
           groupType: "feature_type",
           features: [
@@ -206,10 +215,10 @@ async function loadData() {
               presets: [presetId]
             }
           ]
-        };
-      }
+        });
     }
   }
+
   for (let presetId in presetsById) {
     if (!presetsById[presetId].icon) {
       const parentIdForIcon = presetsById[presetId].parents?.find(parentId => presetsById[parentId].icon);
@@ -219,11 +228,6 @@ async function loadData() {
 
   for (let id in themesById) {
     let theme = themesById[id];
-    theme.id = id;
-    if (!theme.name) theme.name = theme.id.replaceAll('_', ' ');
-    theme.searchName = theme.name.toLowerCase()
-      // strip diacritics
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
     let expandedFeatures = [];
     for (let i in theme.features) {
@@ -231,6 +235,23 @@ async function loadData() {
         let presets = Object.values(presetsById).filter(preset => preset.groups?.some(group => theme.features[i].presetGroups.includes(group)))
         theme.features[i].presets = presets.map(preset => preset.id);
       }
+
+      if (!theme.features[i].presets && theme.features[i].tags) {
+        let presetsMatchingAllTags = null;
+        for (const key in theme.features[i].tags) {
+          const tagString = key + '=' +  theme.features[i].tags[key];
+          const presetsMatchingThisTag = presetIdsByTag[tagString] || [];
+          if (!presetsMatchingAllTags) {
+            presetsMatchingAllTags = presetsMatchingThisTag;
+          } else {
+            presetsMatchingAllTags = presetsMatchingAllTags.filter(presetId => presetsMatchingThisTag.includes(presetId));
+          }
+        }
+        if (presetsMatchingAllTags.length) {
+          theme.features[i].presets = presetsMatchingAllTags;
+        }
+      }
+
       if (theme.features[i].presets) {
         for (let j in theme.features[i].presets) {
           let presetId = theme.features[i].presets[j];
@@ -250,6 +271,10 @@ async function loadData() {
               });
          // }
         }
+      }
+      if (theme.features[i].tags) {
+        // always include the tags at the end even if we matched them to a preset, assuming the tags are more generalized
+        expandedFeatures.push(theme.features[i]);
       }
     }
     theme.features = expandedFeatures;
@@ -282,6 +307,7 @@ async function loadData() {
       theme.primaryColor = sortedFeatures.map(feature => feature.icon?.bg_fill || feature.icon?.fill).filter(Boolean).at(0);
     }
   }
+  console.log(Object.keys(themesById).length + ' themes');
   return themesById;
 }
 

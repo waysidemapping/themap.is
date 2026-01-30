@@ -1,0 +1,11 @@
+{
+  "name": "German cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "german"
+      }
+    }
+  ]
+}

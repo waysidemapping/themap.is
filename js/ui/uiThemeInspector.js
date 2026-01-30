@@ -3,15 +3,17 @@ import { state } from "../stateController.js";
 
 function mapDescriptorText() {
   if (state.theme.groupType === 'feature_type') {
-    return `This is a map of <b class="theme-name">${state.theme.name}</b>`;
-  } else if (state.theme.groupType === 'theme;commodity') {
-    return `This is a map of places to find <b class="theme-name">${state.theme.name}</b> and other places related to <b class="theme-name">${state.theme.name}</b>`;
+    return `This is a map of <b class="theme-name">${state.theme.name}</b>.`;
   } else if (state.theme.groupType === 'feature_type;commodity') {
-    return `This is a map of <b class="theme-name">${state.theme.name}</b> and places to find <b class="theme-name">${state.theme.name}</b>`;
+    return `This is a map of <b class="theme-name">${state.theme.name}</b> and places where you can find <b class="theme-name">${state.theme.name}</b>.`;
+  } else if (state.theme.groupType === 'theme;commodity') {
+    return `This is a map of places related to <b class="theme-name">${state.theme.name}</b>, including places where you can find <b class="theme-name">${state.theme.name}</b>.`;
+  } else if (state.theme.groupType === 'commodity_descriptor') {
+    return `This is a map of places where you can find <b class="theme-name">${state.theme.name}</b> items.`;
   } else if (state.theme.groupType === 'commodity') {
-    return `This is a map of places to find <b class="theme-name">${state.theme.name}</b>`;
+    return `This is a map of places where you can find <b class="theme-name">${state.theme.name}</b>.`;
   }
-  return `This is a map of places related to <b class="theme-name">${state.theme.name}</b>`;
+  return `This is a map of places related to <b class="theme-name">${state.theme.name}</b>.`;
 }
 
 export const themeInspector = createElement('div')
@@ -30,7 +32,7 @@ function updateContent() {
         createElement('h3')
           .append('About'),
         createElement('p')
-          .insertAdjacentHTML("beforeend", mapDescriptorText() + ' made with public data from <a target="_blank" href="https://www.openstreetmap.org/about">OpenStreetMap</a>, the free map anyone can edit.'),
+          .insertAdjacentHTML("beforeend", mapDescriptorText() + ' It\'s made with public data from <a target="_blank" href="https://www.openstreetmap.org/about">OpenStreetMap</a>, the free map anyone can edit.'),
         createElement('p')
           .insertAdjacentHTML("beforeend", `If something is amiss, you can fix it yourself. Any edits made to OpenStreetMap will appear here within a few minutes. The same changes will also show up in other apps powered by OpenStreetMap.`),
         // createElement('h3')

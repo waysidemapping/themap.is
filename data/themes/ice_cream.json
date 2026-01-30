@@ -1,0 +1,25 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "amenity": "ice_cream"
+      }
+    },
+    {
+      "tags": {
+        "cuisine": "ice_cream"
+      }
+    },
+    {
+      "tags": {
+        "shop": "ice_cream"
+      }
+    },
+    {
+      "tags": {
+        "vending": "ice_cream"
+      }
+    }
+  ]
+}

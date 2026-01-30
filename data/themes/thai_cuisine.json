@@ -1,0 +1,11 @@
+{
+  "name": "Thai cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "thai"
+      }
+    }
+  ]
+}

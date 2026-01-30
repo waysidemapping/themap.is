@@ -1,0 +1,11 @@
+{
+  "name": "Tex-Mex cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "tex-mex"
+      }
+    }
+  ]
+}

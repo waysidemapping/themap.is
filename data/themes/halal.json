@@ -1,0 +1,15 @@
+{
+  "groupType": "commodity_descriptor",
+  "features": [
+    {
+      "tags": {
+        "diet:halal": "yes"
+      }
+    },
+    {
+      "tags": {
+        "diet:halal": "only"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "French cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "french"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Greek cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "greek"
+      }
+    }
+  ]
+}

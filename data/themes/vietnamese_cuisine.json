@@ -1,0 +1,11 @@
+{
+  "name": "Vietnamese cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "vietnamese"
+      }
+    }
+  ]
+}

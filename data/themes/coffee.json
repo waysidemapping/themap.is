@@ -1,0 +1,25 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "coffee_shop"
+      }
+    },
+    {
+      "tags": {
+        "vending": "coffee"
+      }
+    },
+    {
+      "tags": {
+        "crop": "coffee"
+      }
+    },
+    {
+      "tags": {
+        "shop": "coffee"
+      }
+    }
+  ]
+}

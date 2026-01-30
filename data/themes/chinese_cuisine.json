@@ -1,0 +1,11 @@
+{
+  "name": "Chinese cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "chinese"
+      }
+    }
+  ]
+}

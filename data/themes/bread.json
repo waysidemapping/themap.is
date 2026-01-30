@@ -1,0 +1,20 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "shop": "bakery"
+      }
+    },
+    {
+      "tags": {
+        "vending": "bread"
+      }
+    },
+    {
+      "tags": {
+        "cuisine": "bread"
+      }
+    }
+  ]
+}

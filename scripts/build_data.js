@@ -36,13 +36,6 @@ const allowedKeys = {
 
 const specialCharsRegex = /[^\p{Script=Latin}\p{N} '-]/u;
 
-function readPreset(id, json) {
-  if (json.groups) {
-    json.groups.forEach(group => allGroups[group] = true);
-  }
-  presetsById[id] = json;
-}
-
 function checkPreset(id, json) {
   for (let key in json){
     if (!allowedKeys[key]) {
@@ -145,7 +138,20 @@ walkDir(presetsDir, function(filePath) {
   if (filePath.endsWith(".json")) {
     const id = filePath.substring(presetsDir.length, filePath.length - 5);
     const json = JSON.parse(fs.readFileSync(filePath));
-    readPreset(id, json);
+    if (json.groups) {
+      json.groups.forEach(group => allGroups[group] = true);
+    }
+    presetsById[id] = json;
+  }
+});
+
+const themesById = {};
+const themesDir = "data/themes/";
+walkDir(themesDir, function(filePath) {
+  if (filePath.endsWith(".json")) {
+    const id = filePath.substring(themesDir.length, filePath.length - 5);
+    const json = JSON.parse(fs.readFileSync(filePath));
+    themesById[id] = json;
   }
 });
 
@@ -162,7 +168,10 @@ for (let presetId in presetsById) {
   addDerivedDataToPreset(presetId, presetsById[presetId]);
 }
 
-fs.writeFileSync('./dist/presets.json', JSON.stringify(presetsById))
+fs.writeFileSync('./dist/presets.json', JSON.stringify(presetsById));
 console.log(`Wrote ${Object.values(presetsById).length} presets`);
 
 console.log("Preset groups: " + Object.keys(allGroups).sort().join(', '));
+
+fs.writeFileSync('./dist/themes.json', JSON.stringify(themesById));
+console.log(`Wrote ${Object.values(themesById).length} themes`);

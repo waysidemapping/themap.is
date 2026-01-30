@@ -1,0 +1,11 @@
+{
+  "name": "Indian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "indian"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "American cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "american"
+      }
+    }
+  ]
+}

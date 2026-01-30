@@ -1,0 +1,15 @@
+{
+  "groupType": "commodity_descriptor",
+  "features": [
+    {
+      "tags": {
+        "diet:gluten_free": "yes"
+      }
+    },
+    {
+      "tags": {
+        "diet:gluten_free": "only"
+      }
+    }
+  ]
+}

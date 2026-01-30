@@ -1,0 +1,11 @@
+{
+  "name": "Russian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "russian"
+      }
+    }
+  ]
+}

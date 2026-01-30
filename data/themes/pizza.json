@@ -1,0 +1,15 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "pizza"
+      }
+    },
+    {
+      "tags": {
+        "vending": "pizza"
+      }
+    }
+  ]
+}

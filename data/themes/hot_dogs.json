@@ -1,0 +1,10 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "hot_dog"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Polish cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "polish"
+      }
+    }
+  ]
+}

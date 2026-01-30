@@ -1,0 +1,11 @@
+{
+  "name": "Malaysian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "malaysian"
+      }
+    }
+  ]
+}

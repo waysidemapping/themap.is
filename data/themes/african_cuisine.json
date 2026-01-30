@@ -1,0 +1,11 @@
+{
+  "name": "African cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "african"
+      }
+    }
+  ]
+}

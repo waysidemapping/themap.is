@@ -1,0 +1,15 @@
+{
+  "groupType": "commodity_descriptor",
+  "features": [
+    {
+      "tags": {
+        "diet:lactose_free": "yes"
+      }
+    },
+    {
+      "tags": {
+        "diet:lactose_free": "only"
+      }
+    }
+  ]
+}

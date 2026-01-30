@@ -1,0 +1,30 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "tea"
+      }
+    },
+    {
+      "tags": {
+        "vending": "tea"
+      }
+    },
+    {
+      "tags": {
+        "crop": "tea"
+      }
+    },
+    {
+      "tags": {
+        "shop": "tea"
+      }
+    },
+    {
+      "tags": {
+        "produce": "tea"
+      }
+    }
+  ]
+}

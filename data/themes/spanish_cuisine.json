@@ -1,0 +1,11 @@
+{
+  "name": "Spanish cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "spanish"
+      }
+    }
+  ]
+}

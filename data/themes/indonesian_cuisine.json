@@ -1,0 +1,11 @@
+{
+  "name": "Indonesian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "indonesian"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Peruvian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "peruvian"
+      }
+    }
+  ]
+}

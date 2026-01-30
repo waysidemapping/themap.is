@@ -1,0 +1,11 @@
+{
+  "name": "Filipino cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "filipino"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "groupType": "commodity",
+  "name": "crêpes",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "crepe"
+      }
+    }
+  ]
+}

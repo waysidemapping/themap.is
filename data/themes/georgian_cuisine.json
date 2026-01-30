@@ -1,0 +1,11 @@
+{
+  "name": "Georgian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "georgian"
+      }
+    }
+  ]
+}

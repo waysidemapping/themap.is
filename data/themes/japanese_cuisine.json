@@ -1,0 +1,11 @@
+{
+  "name": "Japanese cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "japanese"
+      }
+    }
+  ]
+}
