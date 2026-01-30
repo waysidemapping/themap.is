@@ -23,8 +23,8 @@ initializeMap();
 function initializeMap() {
 
   // default
-  let initialCenter = [-111.545, 39.546];
-  let initialZoom = 6;
+  let initialCenter = [-75, 42];
+  let initialZoom = 5;
 
   // show last-open area if any (this is overriden by the URL hash map parameter)
   let cachedTransformString = localStorage?.getItem('map_transform');
