@@ -7,59 +7,55 @@ import { themeIconElement } from './uiThemeIcon.js';
 
 
 let exploreMapsButton,
-  themeTitle,
+  inspectThemeButton,
   openIcon,
   closeIcon;
 
 const parser = new DOMParser();
 
 export const header = createElement('div')
-  .setAttribute('id', 'header')
+  .setAttribute('id', 'sidebar')
   .append(
     createElement('div')
-      .setAttribute('id', 'header-header')
+      .setAttribute('id', 'header')
       .append(
         exploreMapsButton = createElement('button')
-          .setAttribute('id', 'explore-maps')
+          .setAttribute('id', 'main-theme-title')
           .addEventListener('mousedown', e => e.stopPropagation())
           .addEventListener('click', _ => {
             state.toggle('themeExplorerOpen');
             exploreMapsButton.blur();
+          }),
+        inspectThemeButton = createElement('button')
+          .addEventListener('click', _ => {
+            state.toggle('themeInspectorOpen');
+            inspectThemeButton.blur();
           })
           .append(
-            createElement('div')
+            openIcon = createElement('div')
               .setAttribute('class', 'icon')
-              .setAttribute('style', "width:14px;height:14px;")
+              .setAttribute('style', "width:15px;height:15px;")
               .append(
-                parser.parseFromString((await getSvg({file: 'map-swap', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+                parser.parseFromString((await getSvg({file: 'ellipsis', fill: 'currentColor'})).string, "image/svg+xml").documentElement
               ),
-            createElement('span')
-              .append('Explore maps'),
-            createElement('div')
+            closeIcon = createElement('div')
               .setAttribute('class', 'icon')
-              .setAttribute('style', "width:8px;height:8px;font-size:0.5em;")
+              .setAttribute('style', "width:15px;height:15px;")
               .append(
-                parser.parseFromString((await getSvg({file: 'triangle_isosceles_down_rounded', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+                parser.parseFromString((await getSvg({file: 'x_cross', fill: 'currentColor'})).string, "image/svg+xml").documentElement
               )
           ),
         themeExplorer
       ),
-    themeTitle = createElement('button')
-      .setAttribute('id', 'main-theme-title')
-      .addEventListener('click', _ => {
-        state.toggle('themeInspectorOpen');
-        themeTitle.blur();
-      }),
     themeInspector
   );
 
 reload();
 
 async function reload() {
-  themeTitle?.replaceChildren(
-    await themeIconElement(state.theme),
+  exploreMapsButton?.replaceChildren(
+    await themeIconElement(state.theme, 1.45),
     createElement('div')
-      .setAttribute('class', 'text-part')
       .append(
         createElement('span')
           .setAttribute('class', 'pre-theme-title')
@@ -69,19 +65,10 @@ async function reload() {
           .append(state.theme?.name || '…')
       ),
     createElement('div')
+      .setAttribute('class', 'icon')
+      .setAttribute('style', "width:8px;height:8px;font-size:0.5em;")
       .append(
-        openIcon = createElement('div')
-          .setAttribute('class', 'icon')
-          .setAttribute('style', "width:15px;height:15px;")
-          .append(
-            parser.parseFromString((await getSvg({file: 'ellipsis', fill: 'currentColor'})).string, "image/svg+xml").documentElement
-          ),
-        closeIcon = createElement('div')
-          .setAttribute('class', 'icon')
-          .setAttribute('style', "width:15px;height:15px;")
-          .append(
-            parser.parseFromString((await getSvg({file: 'x_cross', fill: 'currentColor'})).string, "image/svg+xml").documentElement
-          )
+        parser.parseFromString((await getSvg({file: 'triangle_isosceles_down_rounded', fill: 'currentColor'})).string, "image/svg+xml").documentElement
       )
   );
   updateForInspectorOpen();
