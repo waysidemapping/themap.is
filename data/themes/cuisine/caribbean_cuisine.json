@@ -1,0 +1,17 @@
+{
+  "name": "Caribbean cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "caribbean"
+      }
+    },
+    {
+      "themes": [
+        "cuban_cuisine",
+        "jamaican_cuisine"
+      ]
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 {
-  "name": "African cuisine",
+  "name": "Hawaiian cuisine",
   "groupType": "commodity",
   "features": [
     {
       "tags": {
-        "cuisine": "african"
+        "cuisine": "hawaiian"
       }
     }
   ]

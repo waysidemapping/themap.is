@@ -1,0 +1,17 @@
+{
+  "name": "African cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "african"
+      }
+    },
+    {
+      "themes": [
+        "ethiopian_cuisine",
+        "moroccan_cuisine"
+      ]
+    }
+  ]
+}

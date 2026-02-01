@@ -1,0 +1,11 @@
+{
+  "name": "Argentinian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "argentinian"
+      }
+    }
+  ]
+}

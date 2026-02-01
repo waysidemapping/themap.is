@@ -1,0 +1,11 @@
+{
+  "name": "Jamaican cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "jamaican"
+      }
+    }
+  ]
+}

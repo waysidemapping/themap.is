@@ -1,10 +1,10 @@
 {
-  "name": "Asian cuisine",
+  "name": "Bolivian cuisine",
   "groupType": "commodity",
   "features": [
     {
       "tags": {
-        "cuisine": "asian"
+        "cuisine": "bolivian"
       }
     }
   ]

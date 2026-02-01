@@ -1,0 +1,11 @@
+{
+  "name": "Irish cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "irish"
+      }
+    }
+  ]
+}

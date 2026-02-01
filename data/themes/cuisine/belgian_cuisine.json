@@ -1,0 +1,11 @@
+{
+  "name": "Belgian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "belgian"
+      }
+    }
+  ]
+}

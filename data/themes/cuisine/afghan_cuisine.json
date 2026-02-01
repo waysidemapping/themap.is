@@ -1,0 +1,11 @@
+{
+  "name": "Afghan cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "afghan"
+      }
+    }
+  ]
+}

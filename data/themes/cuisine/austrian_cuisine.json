@@ -1,10 +1,10 @@
 {
-  "name": "Caribbean cuisine",
+  "name": "Austrian cuisine",
   "groupType": "commodity",
   "features": [
     {
       "tags": {
-        "cuisine": "caribbean"
+        "cuisine": "austrian"
       }
     }
   ]

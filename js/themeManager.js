@@ -227,6 +227,25 @@ async function loadData() {
     }
   }
 
+  // Collapse down features referencing foreign themes, e.g. {"themes": ["brazilian_cuisine"]}
+  while (Object.values(themesById).some(theme => theme.features.some(feature => feature.themes))) {
+    for (let id in themesById) {
+      let theme = themesById[id];
+      let expandedFeatures = [];
+      for (let i in theme.features) {
+        if (theme.features[i].themes) {
+          for (let j in theme.features[i].themes) {
+            let foreignThemeId = theme.features[i].themes[j];
+            expandedFeatures = expandedFeatures.concat(themesById[foreignThemeId].features);
+          }
+        } else {
+          expandedFeatures.push(theme.features[i]);
+        }
+      }
+      theme.features = expandedFeatures;
+    }
+  }
+
   for (let id in themesById) {
     let theme = themesById[id];
 

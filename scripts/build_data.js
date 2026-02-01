@@ -167,7 +167,7 @@ const themesById = {};
 const themesDir = "data/themes/";
 walkDir(themesDir, function(filePath) {
   if (filePath.endsWith(".json")) {
-    const id = filePath.substring(themesDir.length, filePath.length - 5);
+    const id = filePath.substring(filePath.lastIndexOf('/') + 1, filePath.length - 5);
     const json = JSON.parse(fs.readFileSync(filePath));
     themesById[id] = json;
   }

@@ -1,0 +1,11 @@
+{
+  "name": "Taiwanese cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "taiwanese"
+      }
+    }
+  ]
+}

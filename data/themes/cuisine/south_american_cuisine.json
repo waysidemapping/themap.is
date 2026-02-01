@@ -1,0 +1,20 @@
+{
+  "name": "South American cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "south_american"
+      }
+    },
+    {
+      "themes": [
+        "argentinian_cuisine",
+        "bolivian_cuisine",
+        "brazilian_cuisine",
+        "colombian_cuisine",
+        "peruvian_cuisine"
+      ]
+    }
+  ]
+}

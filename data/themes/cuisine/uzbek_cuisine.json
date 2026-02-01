@@ -1,0 +1,11 @@
+{
+  "name": "Uzbek cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "uzbek"
+      }
+    }
+  ]
+}

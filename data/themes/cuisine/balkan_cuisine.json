@@ -1,0 +1,11 @@
+{
+  "name": "Balkan cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "balkan"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Middle Eastern cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "middle_eastern"
+      }
+    },
+    {
+      "themes": [
+        "afghan_cuisine",
+        "lebanese_cuisine"
+      ]
+    }
+  ]
+}

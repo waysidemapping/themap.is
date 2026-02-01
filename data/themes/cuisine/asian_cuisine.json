@@ -1,0 +1,27 @@
+{
+  "name": "Asian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "asian"
+      }
+    },
+    {
+      "themes": [
+        "chinese_cuisine",
+        "filipino_cuisine",
+        "indian_cuisine",
+        "indonesian_cuisine",
+        "japanese_cuisine",
+        "korean_cuisine",
+        "malaysian_cuisine",
+        "nepalese_cuisine",
+        "taiwanese_cuisine",
+        "thai_cuisine",
+        "uzbek_cuisine",
+        "vietnamese_cuisine"
+      ]
+    }
+  ]
+}
