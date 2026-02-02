@@ -1,0 +1,11 @@
+{
+    "name": "guardhouse",
+    "plural": "guardhouses",
+    "tags": {
+        "building": "guardhouse"
+    },
+    "geometry": [
+        "area"
+    ],
+    "matchScore": 0.5
+}

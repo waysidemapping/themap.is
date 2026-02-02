@@ -1,0 +1,11 @@
+{
+    "name": "public building",
+    "plural": "public buildings",
+    "tags": {
+        "building": "public"
+    },
+    "geometry": [
+        "area"
+    ],
+    "matchScore": 0.5
+}

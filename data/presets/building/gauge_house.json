@@ -1,0 +1,11 @@
+{
+    "name": "gage house",
+    "plural": "gage houses",
+    "tags": {
+        "building": "gauge_house"
+    },
+    "geometry": [
+        "area"
+    ],
+    "matchScore": 0.5
+}

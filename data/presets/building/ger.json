@@ -1,0 +1,14 @@
+{
+    "name": "yurt",
+    "plural": "yurts",
+    "tags": {
+        "building": "ger"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "ger"
+    ],
+    "icon": "hut"
+}

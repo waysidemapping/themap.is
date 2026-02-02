@@ -1,0 +1,17 @@
+{
+    "name": "shed",
+    "plural": "sheds",
+    "tags": {
+        "building": "shed"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "hobbies",
+        "storage",
+        "workshop"
+    ],
+    "icon": "garage",
+    "matchScore": 0.5
+}

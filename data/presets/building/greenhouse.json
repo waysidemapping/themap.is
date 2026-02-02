@@ -1,0 +1,11 @@
+{
+    "name": "greenhouse",
+    "plural": "greenhouses",
+    "tags": {
+        "building": "greenhouse"
+    },
+    "geometry": [
+        "area"
+    ],
+    "matchScore": 0.5
+}

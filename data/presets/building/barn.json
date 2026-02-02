@@ -1,0 +1,12 @@
+{
+    "name": "barn",
+    "plural": "barns",
+    "tags": {
+        "building": "barn"
+    },
+    "geometry": [
+        "area"
+    ],
+    "icon": "barn",
+    "matchScore": 0.5
+}

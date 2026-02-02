@@ -1,0 +1,22 @@
+{
+    "name": "semi-detached house",
+    "plural": "semi-detached houses",
+    "tags": {
+        "building": "house",
+        "house": "semi-detached"
+    },
+    "reference": {
+        "key": "house",
+        "value": "semi-detached"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "dwelling",
+        "family",
+        "home",
+        "residence"
+    ],
+    "matchScore": 0.5
+}

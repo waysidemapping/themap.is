@@ -1,0 +1,12 @@
+{
+    "name": "industrial building",
+    "plural": "industrial buildings",
+    "tags": {
+        "building": "industrial"
+    },
+    "geometry": [
+        "area"
+    ],
+    "icon": "building_industrial",
+    "matchScore": 0.5
+}

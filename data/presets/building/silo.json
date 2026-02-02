@@ -2,10 +2,9 @@
     "name": "silo",
     "plural": "silos",
     "tags": {
-        "man_made": "silo"
+        "building": "silo"
     },
     "geometry": [
-        "point",
         "area"
     ],
     "terms": [
@@ -13,5 +12,6 @@
         "grain",
         "wheat"
     ],
-    "icon": "silo"
+    "icon": "silo",
+    "matchScore": 0.5
 }

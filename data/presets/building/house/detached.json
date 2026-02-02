@@ -1,0 +1,22 @@
+{
+    "name": "detached house",
+    "plural": "detached houses",
+    "tags": {
+        "building": "house",
+        "house": "detached"
+    },
+    "reference": {
+        "key": "house",
+        "value": "detached"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "dwelling",
+        "family",
+        "home",
+        "residence"
+    ],
+    "matchScore": 0.5
+}

@@ -1,0 +1,11 @@
+{
+    "name": "civic building",
+    "plural": "civic buildings",
+    "tags": {
+        "building": "civic"
+    },
+    "geometry": [
+        "area"
+    ],
+    "matchScore": 0.5
+}

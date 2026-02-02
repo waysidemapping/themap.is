@@ -1,0 +1,12 @@
+{
+    "name": "warehouse",
+    "plural": "warehouses",
+    "tags": {
+        "building": "warehouse"
+    },
+    "geometry": [
+        "area"
+    ],
+    "icon": "goods-roof",
+    "matchScore": 0.5
+}

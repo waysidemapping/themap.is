@@ -1,0 +1,12 @@
+{
+    "name": "hut",
+    "plural": "huts",
+    "tags": {
+        "building": "hut"
+    },
+    "geometry": [
+        "area"
+    ],
+    "icon": "hut",
+    "matchScore": 0.5
+}

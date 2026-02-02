@@ -1,0 +1,23 @@
+{
+    "name": "row house",
+    "plural": "row houses",
+    "tags": {
+        "building": "house",
+        "house": "terraced"
+    },
+    "reference": {
+        "key": "house",
+        "value": "terraced"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "dwelling",
+        "family",
+        "home",
+        "residence"
+    ],
+    "icon": "row_houses",
+    "matchScore": 0.5
+}

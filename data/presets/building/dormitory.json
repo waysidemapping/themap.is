@@ -1,0 +1,11 @@
+{
+    "name": "dormitory",
+    "plural": "dormitories",
+    "tags": {
+        "building": "dormitory"
+    },
+    "geometry": [
+        "area"
+    ],
+    "matchScore": 0.5
+}

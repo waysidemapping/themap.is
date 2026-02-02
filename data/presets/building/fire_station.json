@@ -1,0 +1,11 @@
+{
+    "name": "firehouse",
+    "plural": "firehouses",
+    "tags": {
+        "building": "fire_station"
+    },
+    "geometry": [
+        "area"
+    ],
+    "matchScore": 0.5
+}

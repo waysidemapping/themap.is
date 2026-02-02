@@ -1,0 +1,27 @@
+{
+    "name": "pigsty",
+    "plural": "pigsties",
+    "tags": {
+        "building": "sty"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "hog parlor",
+        "hog pen",
+        "pig ark",
+        "pig barn",
+        "pig parlor",
+        "pig pen",
+        "pig shed",
+        "pig shelter",
+        "pig-cote",
+        "piggery",
+        "pigpen",
+        "pigshed",
+        "sty"
+    ],
+    "icon": "barn",
+    "matchScore": 0.5
+}

@@ -1,0 +1,21 @@
+{
+    "name": "mobile home",
+    "plural": "mobile homes",
+    "tags": {
+        "building": "static_caravan"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "house trailer",
+        "manufactured home",
+        "prefabricated home",
+        "residential caravan",
+        "static caravan",
+        "static mobile home",
+        "trailer home"
+    ],
+    "icon": "manufactured_home",
+    "matchScore": 0.5
+}

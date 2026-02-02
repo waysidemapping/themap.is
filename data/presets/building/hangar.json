@@ -1,0 +1,12 @@
+{
+    "name": "hangar",
+    "plural": "hangars",
+    "tags": {
+        "building": "hangar"
+    },
+    "geometry": [
+        "area"
+    ],
+    "icon": "hangar",
+    "matchScore": 0.5
+}

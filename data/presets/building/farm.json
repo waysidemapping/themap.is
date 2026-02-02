@@ -1,0 +1,12 @@
+{
+    "name": "farmhouse",
+    "plural": "farmhouses",
+    "tags": {
+        "building": "farm"
+    },
+    "geometry": [
+        "area"
+    ],
+    "icon": "barn-silo",
+    "matchScore": 0.5
+}

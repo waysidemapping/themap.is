@@ -1,0 +1,22 @@
+{
+    "name": "cowshed",
+    "plural": "cowsheds",
+    "tags": {
+        "building": "cowshed"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "byre",
+        "cow barn",
+        "cow house",
+        "cow shed",
+        "cowbarn",
+        "cowhouse",
+        "dairy barn",
+        "milking barn"
+    ],
+    "icon": "barn",
+    "matchScore": 0.5
+}

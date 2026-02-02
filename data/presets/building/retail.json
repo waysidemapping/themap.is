@@ -1,0 +1,16 @@
+{
+    "name": "retail building",
+    "plural": "retail buildings",
+    "tags": {
+        "building": "retail"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "shop building",
+        "store building"
+    ],
+    "icon": "building_commercial",
+    "matchScore": 0.5
+}

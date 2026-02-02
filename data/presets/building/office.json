@@ -1,0 +1,15 @@
+{
+    "name": "office building",
+    "plural": "office buildings",
+    "tags": {
+        "building": "office"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "business center",
+        "office block"
+    ],
+    "matchScore": 0.5
+}

@@ -1,0 +1,21 @@
+{
+    "name": "farm outbuilding",
+    "plural": "farm outbuildings",
+    "tags": {
+        "building": "farm_auxiliary"
+    },
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "agriculture",
+        "auxilary",
+        "auxiliary",
+        "chicken coop",
+        "farm auxiliary",
+        "pigsty",
+        "sty"
+    ],
+    "icon": "barn-silo",
+    "matchScore": 0.5
+}

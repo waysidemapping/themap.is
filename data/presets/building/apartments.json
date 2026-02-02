@@ -1,0 +1,12 @@
+{
+    "name": "apartment building",
+    "plural": "apartment buildings",
+    "tags": {
+        "building": "apartments"
+    },
+    "geometry": [
+        "area"
+    ],
+    "icon": "building_residential-tree",
+    "matchScore": 0.5
+}

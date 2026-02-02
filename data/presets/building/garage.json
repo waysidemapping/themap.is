@@ -1,0 +1,12 @@
+{
+    "name": "garage",
+    "plural": "garages",
+    "tags": {
+        "building": "garage"
+    },
+    "geometry": [
+        "area"
+    ],
+    "icon": "garage",
+    "matchScore": 0.5
+}

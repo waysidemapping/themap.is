@@ -1,0 +1,11 @@
+{
+    "name": "commercial building",
+    "plural": "commercial buildings",
+    "tags": {
+        "building": "commercial"
+    },
+    "geometry": [
+        "area"
+    ],
+    "matchScore": 0.5
+}
