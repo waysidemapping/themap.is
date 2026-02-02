@@ -6,6 +6,11 @@
       "tags": {
         "cuisine": "chinese"
       }
+    },
+    {
+      "themes": [
+        "cantonese_cuisine"
+      ]
     }
   ]
 }

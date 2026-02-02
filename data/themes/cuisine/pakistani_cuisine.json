@@ -1,0 +1,11 @@
+{
+  "name": "Pakistani cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "pakistani"
+      }
+    }
+  ]
+}

@@ -7,9 +7,9 @@
       }
     },
     {
-      "tags": {
-        "cuisine": "wings"
-      }
+      "themes": [
+        "chicken_wings"
+      ]
     }
   ]
 }

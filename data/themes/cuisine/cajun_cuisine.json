@@ -1,0 +1,11 @@
+{
+  "name": "Cajun cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "cajun"
+      }
+    }
+  ]
+}

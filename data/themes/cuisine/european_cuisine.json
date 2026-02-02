@@ -14,15 +14,18 @@
         "belgian_cuisine",
         "british_cuisine",
         "croatian_cuisine",
+        "czech_cuisine",
         "danish_cuisine",
         "french_cuisine",
         "german_cuisine",
         "greek_cuisine",
+        "hungarian_cuisine",
         "irish_cuisine",
         "italian_cuisine",
         "polish_cuisine",
         "portuguese_cuisine",
         "spanish_cuisine",
+        "swedish_cuisine",
         "ukrainian_cuisine"
       ]
     }

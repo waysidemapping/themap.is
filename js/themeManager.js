@@ -236,6 +236,9 @@ async function loadData() {
         if (theme.features[i].themes) {
           for (let j in theme.features[i].themes) {
             let foreignThemeId = theme.features[i].themes[j];
+            if (!themesById[foreignThemeId]) {
+              console.error(`Missing expected theme: ${foreignThemeId}`);
+            }
             expandedFeatures = expandedFeatures.concat(themesById[foreignThemeId].features);
           }
         } else {

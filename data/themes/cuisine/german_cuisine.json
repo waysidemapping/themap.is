@@ -6,6 +6,11 @@
       "tags": {
         "cuisine": "german"
       }
+    },
+    {
+      "themes": [
+        "bavarian_cuisine"
+      ]
     }
   ]
 }

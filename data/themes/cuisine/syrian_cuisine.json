@@ -1,0 +1,11 @@
+{
+  "name": "Syrian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "syrian"
+      }
+    }
+  ]
+}

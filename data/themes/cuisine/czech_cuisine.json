@@ -1,0 +1,11 @@
+{
+  "name": "Czech cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "czech"
+      }
+    }
+  ]
+}

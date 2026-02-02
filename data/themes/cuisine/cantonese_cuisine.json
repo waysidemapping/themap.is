@@ -1,0 +1,11 @@
+{
+  "name": "Cantonese cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "cantonese"
+      }
+    }
+  ]
+}

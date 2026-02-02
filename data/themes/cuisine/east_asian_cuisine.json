@@ -1,0 +1,14 @@
+{
+  "name": "East Asian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "themes": [
+        "chinese_cuisine",
+        "japanese_cuisine",
+        "korean_cuisine",
+        "taiwanese_cuisine"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Southeast Asian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "themes": [
+        "filipino_cuisine",
+        "indonesian_cuisine",
+        "lao_cuisine",
+        "malaysian_cuisine",
+        "thai_cuisine",
+        "vietnamese_cuisine"
+      ]
+    }
+  ]
+}

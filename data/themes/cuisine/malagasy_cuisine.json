@@ -1,0 +1,11 @@
+{
+  "name": "Malagasy cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "malagasy"
+      }
+    }
+  ]
+}

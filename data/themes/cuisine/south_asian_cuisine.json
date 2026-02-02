@@ -1,0 +1,13 @@
+{
+  "name": "South Asian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "themes": [
+        "indian_cuisine",
+        "nepalese_cuisine",
+        "pakistani_cuisine"
+      ]
+    }
+  ]
+}
