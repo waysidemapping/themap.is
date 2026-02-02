@@ -1,6 +1,6 @@
 {
-    "name": "hotpot restaurant",
-    "plural": "hotpot restaurants",
+    "name": "hot pot restaurant",
+    "plural": "hot pot restaurants",
     "tags": {
         "amenity": "restaurant",
         "cuisine": "hotpot"
