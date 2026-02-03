@@ -1,10 +1,6 @@
 {
     "name": "bookie",
     "plural": "bookies",
-    "groups": [
-        "gambling",
-        "adult_amusement"
-    ],
     "tags": {
         "shop": "bookmaker"
     },

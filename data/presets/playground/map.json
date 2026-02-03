@@ -1,9 +1,6 @@
 {
     "name": "playground map",
     "plural": "playground maps",
-    "groups": [
-        "maps"
-    ],
     "tags": {
         "playground": "map"
     },

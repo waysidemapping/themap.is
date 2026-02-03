@@ -1,0 +1,20 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "amenity/give_box",
+        "amenity/letter_box",
+        "amenity/library_dropoff",
+        "amenity/parcel_locker",
+        "amenity/post_box",
+        "amenity/public_bookcase",
+        "amenity/vending_machine",
+        "highway/street_lamp",
+        "leisure/picnic_table",
+        "man_made/flagpole",
+        "man_made/street_cabinet"
+      ]
+    }
+  ]
+}

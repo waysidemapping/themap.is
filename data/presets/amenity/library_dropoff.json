@@ -1,10 +1,6 @@
 {
     "name": "library return drop box",
     "plural": "library return drop boxes",
-    "groups": [
-        "books",
-        "street furniture"
-    ],
     "tags": {
         "amenity": "library_dropoff"
     },

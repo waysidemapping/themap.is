@@ -1,9 +1,6 @@
 {
     "name": "insect hotel",
     "plural": "insect hotels",
-    "groups": [
-        "bees"
-    ],
     "tags": {
         "man_made": "insect_hotel"
     },

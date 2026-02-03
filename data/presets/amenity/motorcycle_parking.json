@@ -1,9 +1,6 @@
 {
     "name": "motorcycle parking",
     "plural": "motorcycle parking",
-    "groups": [
-        "motorcycling"
-    ],
     "tags": {
         "amenity": "motorcycle_parking"
     },

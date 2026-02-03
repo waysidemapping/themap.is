@@ -1,0 +1,19 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "type_route/aerialway",
+        "type_route/ferry",
+        "type_route/bus",
+        "type_route/trolleybus"
+      ]
+    },
+    {
+      "themes": [
+        "rail_transit_routes"
+      ]
+    }
+  ],
+  "iconFile": "transit"
+}

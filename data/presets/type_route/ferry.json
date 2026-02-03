@@ -2,9 +2,6 @@
     "name": "ferry route",
     "plural": "ferry routes",
     "autoTheme": false,
-    "groups": [
-        "transit routes"
-    ],
     "tags": {
         "type": "route",
         "route": "ferry"

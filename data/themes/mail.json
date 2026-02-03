@@ -1,0 +1,19 @@
+{
+  "groupType": "theme",
+  "features": [
+    {
+      "presets": [
+        "amenity/letter_box",
+        "amenity/parcel_locker",
+        "amenity/post_box",
+        "amenity/post_office",
+        "amenity/post_depot"
+      ]
+    },
+    {
+      "tags": {
+        "vending": "stamps"
+      }
+    }
+  ]
+}

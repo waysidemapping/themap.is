@@ -1,9 +1,6 @@
 {
     "name": "casino",
     "plural": "casinos",
-    "groups": [
-        "gambling"
-    ],
     "tags": {
         "amenity": "casino"
     },

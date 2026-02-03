@@ -1,9 +1,6 @@
 {
     "name": "post sorting office",
     "plural": "post sorting offices",
-    "groups": [
-        "mail"
-    ],
     "tags": {
         "amenity": "post_depot"
     },

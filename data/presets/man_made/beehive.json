@@ -1,9 +1,6 @@
 {
     "name": "beehive",
     "plural": "beehives",
-    "groups": [
-        "bees"
-    ],
     "tags": {
         "man_made": "beehive"
     },

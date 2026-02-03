@@ -1,11 +1,6 @@
 {
     "name": "lottery store",
     "plural": "lottery stores",
-    "groups": [
-        "gambling",
-        "adult_amusement",
-        "stores"
-    ],
     "tags": {
         "shop": "lottery"
     },

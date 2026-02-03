@@ -1,9 +1,6 @@
 {
     "name": "map board",
     "plural": "map boards",
-    "groups": [
-        "maps"
-    ],
     "tags": {
         "information": "map"
     },

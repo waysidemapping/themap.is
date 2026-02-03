@@ -1,10 +1,6 @@
 {
     "name": "free box",
     "plural": "free boxes",
-    "groups": [
-        "free stuff",
-        "street furniture"
-    ],
     "tags": {
         "amenity": "give_box"
     },

@@ -1,0 +1,14 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "type_route/train",
+        "type_route/subway",
+        "type_route/tram",
+        "type_route/monorail",
+        "type_route/light_rail"
+      ]
+    }
+  ]
+}

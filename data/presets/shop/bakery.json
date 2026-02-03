@@ -2,8 +2,7 @@
     "name": "bakery",
     "plural": "bakeries",
     "groups": [
-        "food",
-        "stores"
+        "food"
     ],
     "tags": {
         "shop": "bakery"

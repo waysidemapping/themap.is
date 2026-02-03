@@ -2,7 +2,6 @@
     "name": "swimming pool",
     "plural": "swimming pools",
     "groups": [
-        "swimming",
         "bathing_water"
     ],
     "tags": {

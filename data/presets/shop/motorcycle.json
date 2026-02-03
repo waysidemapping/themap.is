@@ -1,10 +1,6 @@
 {
     "name": "motorcycle dealership",
     "plural": "motorcycle dealerships",
-    "groups": [
-        "stores",
-        "motorcycling"
-    ],
     "tags": {
         "shop": "motorcycle"
     },

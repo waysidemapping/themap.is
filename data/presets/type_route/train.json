@@ -1,10 +1,6 @@
 {
     "name": "train route",
     "plural": "train routes",
-    "groups": [
-        "rail transit routes",
-        "transit routes"
-    ],
     "tags": {
         "type": "route",
         "route": "train"

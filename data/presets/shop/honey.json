@@ -1,10 +1,6 @@
 {
     "name": "honey store",
     "plural": "honey stores",
-    "groups": [
-        "bees",
-        "stores"
-    ],
     "tags": {
         "shop": "honey"
     }

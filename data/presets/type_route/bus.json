@@ -1,9 +1,6 @@
 {
     "name": "bus route",
     "plural": "bus routes",
-    "groups": [
-        "transit routes"
-    ],
     "tags": {
         "type": "route",
         "route": "bus"

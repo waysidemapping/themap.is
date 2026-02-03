@@ -2,7 +2,6 @@
     "name": "natural swimming area",
     "plural": "natural swimming areas",
     "groups": [
-        "swimming",
         "outdoor recreation"
     ],
     "tags": {

@@ -1,9 +1,6 @@
 {
     "name": "flagpole",
     "plural": "flagpoles",
-    "groups": [
-        "street furniture"
-    ],
     "tags": {
         "man_made": "flagpole"
     },

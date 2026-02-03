@@ -1,0 +1,14 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "presets": [
+        "shop/books",
+        "amenity/library",
+        "amenity/library_dropoff",
+        "amenity/public_bookcase",
+        "craft/bookbinder"
+      ]
+    }
+  ]
+}

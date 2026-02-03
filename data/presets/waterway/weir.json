@@ -1,9 +1,6 @@
 {
     "name": "low head dam",
     "plural": "low head dams",
-    "groups": [
-        "dams"
-    ],
     "tags": {
         "waterway": "weir"
     },

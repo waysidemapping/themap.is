@@ -1,10 +1,6 @@
 {
     "name": "store",
     "plural": "stores",
-    "autoTheme": false,
-    "groups": [
-        "stores"
-    ],
     "tags": {
         "shop": "*"
     },

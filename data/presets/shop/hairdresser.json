@@ -2,8 +2,7 @@
     "name": "hair salon",
     "plural": "hair salons",
     "groups": [
-        "beauty",
-        "stores"
+        "beauty"
     ],
     "tags": {
         "shop": "hairdresser"

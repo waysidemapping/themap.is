@@ -1,10 +1,6 @@
 {
     "name": "bookstore",
     "plural": "bookstores",
-    "groups": [
-        "books",
-        "stores"
-    ],
     "tags": {
         "shop": "books"
     },

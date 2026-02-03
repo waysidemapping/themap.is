@@ -1,0 +1,11 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "shop/car_repair",
+        "shop/motorcycle_repair"
+      ]
+    }
+  ]
+}

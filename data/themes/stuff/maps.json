@@ -1,0 +1,12 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "presets": [
+        "information/map",
+        "playground/map",
+        "shop/maps"
+      ]
+    }
+  ]
+}

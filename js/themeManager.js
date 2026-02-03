@@ -1,26 +1,5 @@
 import { colors } from './colors.js';
 
-const presetGroupThemes = {
-  "bees": {groupType: "theme"},
-  "books": {groupType: "commodity"},
-  "dams": {groupType: "feature_type"},
-  "free stuff": {groupType: "commodity"},
-  "gambling": {groupType: "activity"},
-  "healthcare": {groupType: "theme"},
-  "lodging": {groupType: "commodity"},
-  "mail": {groupType: "theme"},
-  "maps": {groupType: "commodity"},
-  "motorcycling": {groupType: "activity"},
-  "rail transit routes": {groupType: "feature_type"},
-  "stores": {groupType: "feature_type"},
-  "street furniture": {groupType: "feature_type"},
-  "swimming": {groupType: "activity"},
-  "transit routes": {groupType: "feature_type"},
-  "vehicle rental": {groupType: "feature_type"},
-  "vehicle repair shops": {groupType: "feature_type"},
-  "waterway access": {groupType: "feature_type"},
-};
-
 const featureDefaultsByGroup = {
   "aboriginal lands": {
     icon: { 
@@ -173,17 +152,6 @@ async function loadData() {
     }
   }
 
-  for (let groupId in presetGroupThemes) {
-    addTheme(groupId.replaceAll(' ', '_'), {
-      groupType: presetGroupThemes[groupId].groupType,
-      features: [
-        {
-          presetGroups: [groupId]
-        }
-      ]
-    });
-  }
-
   const themesByIdFromFile = await fetch('/dist/themes.json').then(response => response.json());
   for (let id in themesByIdFromFile) {
     if (!themesByIdFromFile[id].groupType) themesByIdFromFile[id].groupType = 'theme';
@@ -200,7 +168,7 @@ async function loadData() {
       if (!presetIdsByTag[tagString]) presetIdsByTag[tagString] = [];
       presetIdsByTag[tagString].push(presetId);
     }
-    if (preset.plural && preset.autoTheme !== false) {
+    if (preset.autoTheme !== false) {
       // id normalization needs to match those in urlController.js
       const themeId = preset.plural
         .replaceAll(' ', '_')
@@ -254,10 +222,6 @@ async function loadData() {
 
     let expandedFeatures = [];
     for (let i in theme.features) {
-      if (theme.features[i].presetGroups) {
-        let presets = Object.values(presetsById).filter(preset => preset.groups?.some(group => theme.features[i].presetGroups.includes(group)))
-        theme.features[i].presets = presets.map(preset => preset.id);
-      }
 
       if (!theme.features[i].presets && theme.features[i].tags) {
         let presetsMatchingAllTags = null;
@@ -322,7 +286,7 @@ async function loadData() {
     }
     let sortedFeatures = theme.features.toSorted((a, b) => (a.parents?.length || 0) - (b.parents?.length || 0))
     if (!theme.iconFile) {
-      theme.iconFile = sortedFeatures.filter(feature => feature.autoTheme !== false).find(feature => feature.icon?.file)?.icon?.file;
+      theme.iconFile = sortedFeatures.find(feature => feature.icon?.file)?.icon?.file;
     }
     if (!theme.primaryColor) {
       theme.primaryColor = sortedFeatures.map(feature => feature.icon?.bg_fill || feature.icon?.fill).filter(Boolean).at(0);

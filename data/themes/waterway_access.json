@@ -1,0 +1,11 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "leisure/slipway",
+        "waterway/access_point"
+      ]
+    }
+  ]
+}

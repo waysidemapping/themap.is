@@ -1,10 +1,6 @@
 {
     "name": "light rail route",
     "plural": "light rail routes",
-    "groups": [
-        "rail transit routes",
-        "transit routes"
-    ],
     "tags": {
         "type": "route",
         "route": "light_rail"

@@ -1,9 +1,6 @@
 {
     "name": "street lamp",
     "plural": "street lamps",
-    "groups": [
-        "street furniture"
-    ],
     "tags": {
         "highway": "street_lamp"
     },

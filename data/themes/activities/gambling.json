@@ -1,0 +1,14 @@
+{
+  "groupType": "activity",
+  "features": [
+    {
+      "presets": [
+        "amenity/casino",
+        "amenity/gambling",
+        "leisure/adult_gaming_centre",
+        "shop/bookmaker",
+        "shop/lottery"
+      ]
+    }
+  ]
+}

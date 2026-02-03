@@ -1,0 +1,13 @@
+{
+  "groupType": "activity",
+  "features": [
+    {
+      "presets": [
+        "leisure/swimming_pool",
+        "leisure/swimming_area",
+        "leisure/sports_centre/swimming",
+        "shop/swimming_pool"
+      ]
+    }
+  ]
+}

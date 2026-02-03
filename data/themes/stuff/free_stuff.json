@@ -1,0 +1,13 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "presets": [
+        "amenity/give_box",
+        "amenity/public_bookcase",
+        "amenity/library",
+        "amenity/toy_library"
+      ]
+    }
+  ]
+}

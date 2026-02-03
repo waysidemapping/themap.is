@@ -1,9 +1,6 @@
 {
     "name": "drugstore",
     "plural": "drugstores",
-    "groups": [
-        "stores"
-    ],
     "tags": {
         "shop": "chemist"
     },

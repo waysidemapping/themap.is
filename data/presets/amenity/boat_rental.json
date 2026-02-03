@@ -1,10 +1,6 @@
 {
     "name": "boat rental",
     "plural": "boat rental",
-    "groups": [
-        "vehicle rental",
-        "rental"
-    ],
     "tags": {
         "amenity": "boat_rental"
     },

@@ -1,0 +1,17 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "themes": [
+        "vehicle_rental"
+      ]
+    },
+    {
+      "presets": [
+        "shop/rental",
+        "shop/storage_rental",
+        "shop/tool_hire"
+      ]
+    }
+  ]
+}

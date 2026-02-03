@@ -2,8 +2,7 @@
     "name": "beauty salon",
     "plural": "beauty salons",
     "groups": [
-        "beauty",
-        "stores"
+        "beauty"
     ],
     "tags": {
         "shop": "beauty"

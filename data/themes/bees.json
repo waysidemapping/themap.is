@@ -1,0 +1,13 @@
+{
+  "groupType": "theme",
+  "features": [
+    {
+      "presets": [
+        "craft/beekeeper",
+        "man_made/beehive",
+        "man_made/insect_hotel",
+        "shop/honey"
+      ]
+    }
+  ]
+}

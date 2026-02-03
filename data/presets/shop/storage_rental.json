@@ -1,10 +1,6 @@
 {
     "name": "storage rental",
     "plural": "storage rental",
-    "groups": [
-        "stores",
-        "rental"
-    ],
     "tags": {
         "shop": "storage_rental"
     },

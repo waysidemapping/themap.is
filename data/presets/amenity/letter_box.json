@@ -1,10 +1,6 @@
 {
     "name": "letter box",
     "plural": "letter boxes",
-    "groups": [
-        "mail",
-        "street furniture"
-    ],
     "tags": {
         "amenity": "letter_box"
     },

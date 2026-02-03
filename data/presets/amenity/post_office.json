@@ -1,9 +1,6 @@
 {
     "name": "post office",
     "plural": "post offices",
-    "groups": [
-        "mail"
-    ],
     "tags": {
         "amenity": "post_office"
     },

@@ -2,8 +2,7 @@
     "name": "tattoo parlor",
     "plural": "tattoo parlors",
     "groups": [
-        "beauty",
-        "stores"
+        "beauty"
     ],
     "tags": {
         "shop": "tattoo"

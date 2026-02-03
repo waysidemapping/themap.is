@@ -1,0 +1,13 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "amenity/car_rental",
+        "amenity/bicycle_rental",
+        "amenity/boat_rental",
+        "amenity/motorcycle_rental"
+      ]
+    }
+  ]
+}

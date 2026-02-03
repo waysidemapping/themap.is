@@ -2,8 +2,7 @@
     "name": "pastry shop",
     "plural": "pastry shops",
     "groups": [
-        "food",
-        "stores"
+        "food"
     ],
     "tags": {
         "shop": "pastry"

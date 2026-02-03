@@ -1,9 +1,6 @@
 {
     "name": "picnic table",
     "plural": "picnic tables",
-    "groups": [
-        "street furniture"
-    ],
     "tags": {
         "leisure": "picnic_table"
     },

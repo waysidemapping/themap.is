@@ -2,9 +2,6 @@
     "name": "dam",
     "plural": "dams",
     "autoTheme": false,
-    "groups": [
-        "dams"
-    ],
     "tags": {
         "waterway": "dam"
     },

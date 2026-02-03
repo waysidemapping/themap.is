@@ -1,0 +1,12 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "waterway/dam",
+        "waterway/weir",
+        "natural/beaver_dam"
+      ]
+    }
+  ]
+}

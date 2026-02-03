@@ -1,9 +1,6 @@
 {
     "name": "beekeeper",
     "plural": "beekeepers",
-    "groups": [
-        "bees"
-    ],
     "tags": {
         "craft": "beekeeper"
     }

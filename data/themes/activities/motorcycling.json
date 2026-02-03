@@ -1,0 +1,13 @@
+{
+  "groupType": "activity",
+  "features": [
+    {
+      "presets": [
+        "shop/motorcycle",
+        "amenity/motorcycle_parking",
+        "amenity/motorcycle_rental",
+        "shop/motorcycle_repair"
+      ]
+    }
+  ]
+}

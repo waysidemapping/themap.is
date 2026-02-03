@@ -1,9 +1,6 @@
 {
     "name": "trolleybus route",
     "plural": "trolleybus routes",
-    "groups": [
-        "transit routes"
-    ],
     "tags": {
         "type": "route",
         "route": "trolleybus"

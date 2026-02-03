@@ -1,9 +1,6 @@
 {
     "name": "aerialway route",
     "plural": "aerialway routes",
-    "groups": [
-        "transit routes"
-    ],
     "tags": {
         "type": "route",
         "route": "aerialway"

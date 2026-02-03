@@ -1,0 +1,21 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "presets": [
+        "tourism/hotel",
+        "tourism/alpine_hut",
+        "tourism/apartment",
+        "tourism/camp_pitch",
+        "tourism/camp_site",
+        "tourism/caravan_site",
+        "tourism/chalet",
+        "tourism/guest_house",
+        "tourism/hostel",
+        "tourism/motel",
+        "tourism/trail_riding_station",
+        "tourism/wilderness_hut"
+      ]
+    }
+  ]
+}

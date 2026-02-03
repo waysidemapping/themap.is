@@ -2,8 +2,7 @@
     "name": "barber shop",
     "plural": "barber shops",
     "groups": [
-        "beauty",
-        "stores"
+        "beauty"
     ],
     "tags": {
         "shop": "hairdresser",
