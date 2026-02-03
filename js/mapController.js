@@ -5,6 +5,11 @@ import { beefsteakProtocolFunction } from "https://cdn.jsdelivr.net/gh/waysidema
 let map;
 let activeStyleInfo;
 
+let cachedFeatureKeyValueMaps = {
+  point: null,
+  line: null
+};
+
 const baseStyleJson = {
     "version": 8,
     "name": "themap.is basemap style",
@@ -79,8 +84,17 @@ function initializeMap() {
         unit: 'imperial'
     }), "bottom-left");
   
-  map.on('moveend', updateStateMapcenter);
-  updateStateMapcenter();
+  map.on('moveend', mapTransformChanged);
+  map.on('resize', mapTransformChanged);
+  map.on('sourcedata', e => {
+    if (e.sourceId === 'beefsteak' && e.isSourceLoaded) {
+      cachedFeatureKeyValueMaps = {
+        point: null,
+        line: null
+      };
+    }
+  });
+  mapTransformChanged();
 
   state.addEventListener('change-theme', function() {
     reloadMapStyle();
@@ -88,11 +102,16 @@ function initializeMap() {
   reloadMapStyle();
 }
 
-function updateStateMapcenter() {
+function mapTransformChanged() {
+  cachedFeatureKeyValueMaps = {
+    point: null,
+    line: null
+  };
+
   const z = map.getZoom();
   const { lng, lat } = map.getCenter();
   state.set({
-    mapcenter: {
+    mapTransform: {
       z: z,
       lat: lat,
       lng: lng
@@ -122,4 +141,98 @@ async function reloadMapStyle() {
     diff: true,
     validate: true
   });
+}
+
+function pointFeaturesByKeyValue() {
+  if (cachedFeatureKeyValueMaps.point) return cachedFeatureKeyValueMaps.point;
+  if (!map) return {};
+
+  const { width, height } = map.getCanvas()
+    // use this to account for pixel ratio
+    .getBoundingClientRect();
+
+  function isVisible(feature) {
+    const point = map.project(feature.geometry.coordinates);
+    return point.x >= 0 &&
+      point.y >= 0 &&
+      point.x <= width &&
+      point.y <= height
+  }
+
+  // Query all features (not just rendered) in the visible tiles for the current zoom level
+  let features = map.querySourceFeatures('beefsteak', {
+    sourceLayer: "point"
+  // Just because a feature is in the visible tile doesn't mean it's actually in the visible part of the tile, so we need an additional check
+  }).filter(isVisible);
+ 
+  cachedFeatureKeyValueMaps.point = keyValueMapForFeatures(features);
+  return cachedFeatureKeyValueMaps.point;
+}
+
+function lineFeaturesByKeyValue() {
+  if (cachedFeatureKeyValueMaps.line) return cachedFeatureKeyValueMaps.line;
+  if (!map) return {};
+
+  // Query all features (not just rendered) in the visible tiles for the current zoom level
+  let features = map.querySourceFeatures('beefsteak', {
+    sourceLayer: "line"
+  });
+ 
+  cachedFeatureKeyValueMaps.line = keyValueMapForFeatures(features);
+  return cachedFeatureKeyValueMaps.line;
+}
+
+function keyValueMapForFeatures(features) {
+  const featuresByKeyValue = {};
+  for (let i in features) {
+    let feature = features[i];
+    let featureId = feature.id;
+    for (let key in feature.properties) {
+      let rawValue = feature.properties[key];
+      if (typeof rawValue === 'string') {
+        let values = rawValue.split('┃').filter(Boolean).map(value => value.split(';')).flat();
+        for (let j in values) {
+          let kv = key + '=' +  values[j];
+          if (!featuresByKeyValue[kv]) {
+            featuresByKeyValue[kv] = new Set([featureId]);
+          } else {
+            featuresByKeyValue[kv].add(featureId);
+          }
+        }
+      }
+      let kv = key + '=*';
+      if (!featuresByKeyValue[kv]) {
+        featuresByKeyValue[kv] = new Set([featureId]);
+      } else {
+        featuresByKeyValue[kv].add(featureId);
+      }
+    }
+  }
+  return featuresByKeyValue;
+}
+
+export function hasSourceFeaturesForTheme(theme) {
+  function anyFeatureMatchesTheme(featuresByKeyValue) {
+    for (let i in theme.features) {
+      let matchingFeatures;
+      let keyPrefix = (theme.features[i].geometry && theme.features[i].geometry.includes('relation')) ? 'r.' : '';
+      let tags = theme.features[i].tags;
+      for (let key in tags) {
+        let kv = keyPrefix + key + '=' + tags[key];
+        let features = featuresByKeyValue[kv] || new Set();
+        if (!matchingFeatures) {
+          matchingFeatures = features;
+        } else {
+          matchingFeatures = matchingFeatures.intersection(features);
+        }
+        if (matchingFeatures.size === 0) break;
+      }
+      if (matchingFeatures && matchingFeatures.size > 0) return true;
+    }
+    return false;
+  }
+
+  if (anyFeatureMatchesTheme(lineFeaturesByKeyValue())) return true;
+  if (anyFeatureMatchesTheme(pointFeaturesByKeyValue())) return true;
+  return false;
 }

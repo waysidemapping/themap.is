@@ -4,9 +4,13 @@ import { themesPromise } from "../themeManager.js";
 import { editDistance } from "../utils.js";
 import { state } from "../stateController.js";
 import { themeIconElement } from './uiThemeIcon.js';
+import { hasSourceFeaturesForTheme } from '../mapController.js';
 
 let searchInput;
 let resultsList;
+let activeOnlyButton;
+
+let showInViewThemesOnly = true;
 
 export const themeExplorer = createElement('div')
   .setAttribute('id', 'theme-explorer')
@@ -14,55 +18,95 @@ export const themeExplorer = createElement('div')
   .addEventListener('mousedown', e => e.stopPropagation())
   .append(
     createElement('div')
-      .setAttribute('class', 'search-wrap')
+      .setAttribute('class', 'theme-explorer-header')
       .append(
-        createElement('img')
-          .setAttribute('class', 'icon')
-          .setAttribute('style', "width:15px;height:15px;")
-          .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg({file: 'magnifying_glass', fill: '#666'})).string)}`),
-        searchInput = createElement('input')
-          .setAttribute('class', 'search')
-          .setAttribute('type', 'search')
-          .setAttribute('placeholder', 'the map is…')
-          .setAttribute('autofocus', '')
-          .addEventListener('keydown', e => {
-            if (e.keyCode === 13 && // ↩ Return
-                e.target.value.length) {
-                resultsList.querySelector('li:first-child button')?.dispatchEvent(new Event("click"));
-            }
-        })
-          .addEventListener('input', function() {
-            if (resultsList.scrollTop !== 0) resultsList.scrollTop = 0;
-            updateList();
-          })
+      createElement('div')
+        .setAttribute('class', 'search-wrap')
+        .append(
+          createElement('img')
+            .setAttribute('class', 'icon')
+            .setAttribute('style', "width:15px;height:15px;")
+            .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg({file: 'magnifying_glass', fill: '#666'})).string)}`),
+          searchInput = createElement('input')
+            .setAttribute('class', 'search')
+            .setAttribute('type', 'search')
+            .setAttribute('placeholder', 'the map is…')
+            .setAttribute('autofocus', '')
+            .addEventListener('keydown', e => {
+              if (e.keyCode === 13 && // ↩ Return
+                  e.target.value.length) {
+                  resultsList.querySelector('li:first-child button')?.dispatchEvent(new Event("click"));
+              }
+            })
+            .addEventListener('input', function() {
+              if (resultsList.scrollTop !== 0) resultsList.scrollTop = 0;
+              updateList();
+            })
+        ),
+        createElement('div')
+          .setAttribute('class', 'search-options')
+          .append(
+            createElement('label')
+              .append('Filter:'),
+            activeOnlyButton = createElement('button')
+              .setAttribute('id', 'nearby-only')
+              .setAttribute('class', 'token active')
+              .append(
+                createElement('span')
+                  .append('nearby only'),
+                createElement('span')
+                  .setAttribute('class', "icon active-only")
+                  .setAttribute('style', "height: 8px;width:8px;")
+                  .append(
+                    new DOMParser().parseFromString((await getSvg({file: 'x_cross', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+                  )
+              )
+              .addEventListener('click', _ => {
+                showInViewThemesOnly = !showInViewThemesOnly;
+                if (showInViewThemesOnly) activeOnlyButton.classList.add('active');
+                else activeOnlyButton.classList.remove('active');
+                updateList();
+              })
+          )
       ),
     resultsList = createElement('ul')
       .setAttribute('class', 'search-results')
   );
 
 async function updateList() {
-  let themes = await themesPromise;
+  let themesById = await themesPromise;
+
   let value = (searchInput?.value || '')
     .trim()
     .toLowerCase()
     // strip diacritics
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-  let items = value ? Object.values(themes).map(theme => {
-      return {theme, dist: editDistance(theme.searchName, value)}
-    })
-    .filter(item => item.dist + Math.min(value.length - item.theme.searchName.length, 0) < 1)
-    .map(item => {
-      return {
-        theme: item.theme,
-        score: -item.dist + (item.theme.searchName.includes(value) ? (item.theme.searchName.startsWith(value) ? 10000 : 1000) : 0)
-      };
-    })
-    .sort((a, b) => b.score - a.score)
-    .map(item => item.theme) : Object.values(themes).sort((a, b) => b.searchName < a.searchName);
+  let themes = Object.values(themesById);
+
+  if (showInViewThemesOnly) {
+    themes = themes.filter(theme => hasSourceFeaturesForTheme(theme));
+  }
+
+  if (value) {
+    themes = themes.map(theme => {
+        return {theme, dist: editDistance(theme.searchName, value)}
+      })
+      .filter(item => item.dist + Math.min(value.length - item.theme.searchName.length, 0) < 1)
+      .map(item => {
+        return {
+          theme: item.theme,
+          score: -item.dist + (item.theme.searchName.includes(value) ? (item.theme.searchName.startsWith(value) ? 10000 : 1000) : 0)
+        };
+      })
+      .toSorted((a, b) => b.score - a.score)
+      .map(item => item.theme);
+  } else {
+    themes.sort((a, b) => b.searchName < a.searchName);
+  }
 
   resultsList?.replaceChildren(
-    ...(await Promise.all(items.map(async theme => {
+    ...(await Promise.all(themes.map(async theme => {
       return createElement('li')
         .setAttribute("class", "theme-item")
         .setAttribute('style', `--primary-color:${theme.primaryColor}`)
@@ -88,6 +132,7 @@ state.addEventListener('change-themeExplorerOpen', _ => {
   if (state.themeExplorerOpen) {
     themeExplorer?.classList.remove('hidden');
     document.documentElement.classList.add('themeExplorerOpen');
+    updateList();
     searchInput?.focus();
     searchInput?.select();
   } else {

@@ -82,6 +82,14 @@ hr {
   border-bottom: 1px solid var(--grid-color);
 }
 
+label {
+  vertical-align: middle;
+  color: var(--button-text-color)
+}
+input[type=checkbox] {
+  vertical-align: middle;
+  margin-right: 5px;
+}
 input[type=search] {
   border: 1px solid var(--grid-color);
   width: 100%;
@@ -111,13 +119,26 @@ button:hover, button:focus {
 }
 button > * {
   display: inline-block;
-  vertical-align: middle;
 }
 button > *:not(:last-child) {
   margin-right: 0.2em;
 }
 button > *:not(:first-child) {
   margin-left: 0.2em;
+}
+button.token {
+  border-radius: 200px;
+  border: 1px solid var(--grid-color);
+  padding: 3px 9px;
+  background-color: transparent;
+}
+button.token.active {
+  border: 1px solid var(--active-grid-color);
+  font-weight: 600;
+  background: var(--bg-color);
+}
+button:not(.active) .active-only {
+  display: none;
 }
 
 .hidden {
@@ -245,17 +266,30 @@ button > *:not(:first-child) {
   left: -1px;
   top: 100%;
 }
+.theme-explorer-header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 12px;
+  background-color: var(--minor-bg-color);
+}
 .search-wrap {
   display: flex;
   position: relative;
   align-items: center;
-  padding: 12px;
-  background-color: var(--minor-bg-color);
 }
 .search-wrap img {
   position: absolute;
   margin-left: 0.75em;
   pointer-events: none;
+}
+.search-options {
+  display: flex;
+  align-items: center;
+  margin: 12px 6px 0 6px;
+}
+.search-options > *:not(:last-child) {
+  margin-right: 4px;
 }
 .search-results {
   overflow-y: auto;

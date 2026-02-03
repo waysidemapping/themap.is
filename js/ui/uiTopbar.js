@@ -12,9 +12,9 @@ export const topbar = createElement('div')
       .append(
         createElement('button')
           .addEventListener('click', _ => {
-            const z = state.mapcenter?.z
-            const lat = state.mapcenter?.lat
-            const lng = state.mapcenter?.lng
+            const z = state.mapTransform?.z
+            const lat = state.mapTransform?.lat
+            const lng = state.mapTransform?.lng
             if (z && lat && lng) window.open(`https://www.openstreetmap.org/edit#map=${Math.round(z)+1}/${lat}/${lng}`, '_blank');
           })
           .append(
@@ -46,9 +46,9 @@ export const topbar = createElement('div')
       .setAttribute('class', 'spacer'),
     createElement('button')
       .addEventListener('click', _ => {
-        const z = state.mapcenter?.z;
-        const lat = state.mapcenter?.lat;
-        const lng = state.mapcenter?.lng;
+        const z = state.mapTransform?.z;
+        const lat = state.mapTransform?.lat;
+        const lng = state.mapTransform?.lng;
 
         const themeId = state.theme?.id || '';
         // create a clean version of the URL for sharing
