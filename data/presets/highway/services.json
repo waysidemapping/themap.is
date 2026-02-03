@@ -1,0 +1,21 @@
+{
+    "name": "travel plaza",
+    "plural": "travel plazas",
+    "autoTheme": false,
+    "tags": {
+        "highway": "services"
+    },
+    "geometry": [
+        "vertex",
+        "point",
+        "area"
+    ],
+    "terms": [
+        "rest area",
+        "rest stop",
+        "service area",
+        "service station",
+        "service stop",
+        "truck stop"
+    ]
+}

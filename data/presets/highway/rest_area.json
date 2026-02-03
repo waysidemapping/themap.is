@@ -1,0 +1,21 @@
+{
+    "name": "rest stop",
+    "plural": "rest stops",
+    "autoTheme": false,
+    "tags": {
+        "highway": "rest_area"
+    },
+    "geometry": [
+        "vertex",
+        "point",
+        "area"
+    ],
+    "terms": [
+        "rest area",
+        "service area",
+        "service station",
+        "service stop",
+        "travel plaza",
+        "truck stop"
+    ]
+}
