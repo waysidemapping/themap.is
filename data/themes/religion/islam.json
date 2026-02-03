@@ -1,0 +1,11 @@
+{
+  "name": "Islam",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "muslim"
+      }
+    }
+  ]
+}

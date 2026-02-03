@@ -1,0 +1,11 @@
+{
+  "name": "Buddhism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "buddhist"
+      }
+    }
+  ]
+}

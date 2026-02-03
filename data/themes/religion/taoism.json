@@ -1,0 +1,11 @@
+{
+  "name": "Taoism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "taoist"
+      }
+    }
+  ]
+}

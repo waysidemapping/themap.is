@@ -1,0 +1,11 @@
+{
+  "name": "Jainism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "jain"
+      }
+    }
+  ]
+}

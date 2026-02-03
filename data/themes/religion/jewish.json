@@ -1,0 +1,11 @@
+{
+  "name": "Judaism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "jewish"
+      }
+    }
+  ]
+}

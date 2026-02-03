@@ -1,0 +1,11 @@
+{
+  "name": "Sikhism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "sikh"
+      }
+    }
+  ]
+}

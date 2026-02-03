@@ -1,0 +1,11 @@
+{
+  "name": "Christianity",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "christian"
+      }
+    }
+  ]
+}
