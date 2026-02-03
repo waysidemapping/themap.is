@@ -1,0 +1,12 @@
+{
+  "groupType": "activity",
+  "features": [
+    {
+      "presets": [
+        "tourism/camp_pitch",
+        "tourism/camp_site",
+        "tourism/caravan_site"
+      ]
+    }
+  ]
+}

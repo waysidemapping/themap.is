@@ -3,6 +3,7 @@
   "features": [
     {
       "presets": [
+        "highway/street_lamp",
         "amenity/give_box",
         "amenity/letter_box",
         "amenity/library_dropoff",
@@ -10,7 +11,6 @@
         "amenity/post_box",
         "amenity/public_bookcase",
         "amenity/vending_machine",
-        "highway/street_lamp",
         "leisure/picnic_table",
         "man_made/flagpole",
         "man_made/street_cabinet"
