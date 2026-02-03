@@ -19,9 +19,14 @@ class StateController extends EventTarget {
         console.log("Trying to set restricted value of StateController :" + key);
       }
       if (this[key] !== value) {
-        this[key] = value
-        this.dispatchEvent(new Event('change-' + key));
-        didChangeAny = true;
+        if (typeof this[key] !== 'object' ||
+            typeof value !== 'object' ||
+            // we want two objects with the same values in the same order to evaluate the same
+            JSON.stringify(this[key]) !== JSON.stringify(value)) {
+          this[key] = value
+          this.dispatchEvent(new Event('change-' + key));
+          didChangeAny = true;
+        }
       }
     }
     if (didChangeAny) {

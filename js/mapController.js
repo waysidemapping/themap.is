@@ -108,13 +108,13 @@ function mapTransformChanged() {
     line: null
   };
 
-  const z = map.getZoom();
-  const { lng, lat } = map.getCenter();
   state.set({
     mapTransform: {
-      z: z,
-      lat: lat,
-      lng: lng
+      zoom: map.getZoom(),
+      center:  map.getCenter().toArray(),
+      bearing: map.getBearing(),
+      pitch: map.getPitch(),
+      bounds: map.getBounds().toArray()
     }
   });
 }

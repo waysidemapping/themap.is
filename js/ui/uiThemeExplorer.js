@@ -141,4 +141,8 @@ state.addEventListener('change-themeExplorerOpen', _ => {
   }
 });
 
+state.addEventListener('change-mapTransform', _ => {
+  if (state.themeExplorerOpen && showInViewThemesOnly) updateList();
+});
+
 window.addEventListener('mousedown', _ => state.set('themeExplorerOpen', false));
