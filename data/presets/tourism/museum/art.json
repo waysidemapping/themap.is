@@ -1,0 +1,27 @@
+{
+    "name": "art museum",
+    "plural": "art museums",
+    "tags": {
+        "tourism": "museum",
+        "museum": "art"
+    },
+    "reference": {
+        "key": "museum",
+        "value": "art"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "art",
+        "cultural",
+        "exhibition",
+        "gallery",
+        "hall",
+        "institution",
+        "painting",
+        "photograph",
+        "sculpture"
+    ]
+}
