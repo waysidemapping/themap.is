@@ -1,9 +1,6 @@
 {
     "name": "tanning salon",
     "plural": "tanning salons",
-    "groups": [
-        "beauty"
-    ],
     "tags": {
         "shop": "beauty",
         "beauty": "tanning"

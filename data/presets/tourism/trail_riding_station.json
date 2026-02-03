@@ -2,7 +2,7 @@
     "name": "trail riding station",
     "plural": "trail riding stations",
     "groups": [
-        "lodging"
+        "indoor_lodging"
     ],
     "tags": {
         "tourism": "trail_riding_station"

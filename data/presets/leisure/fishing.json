@@ -2,7 +2,7 @@
     "name": "fishing spot",
     "plural": "fishing spots",
     "groups": [
-        "outdoor recreation"
+        "outdoor_recreation"
     ],
     "tags": {
         "leisure": "fishing"

@@ -1,9 +1,6 @@
 {
     "name": "cosmetics store",
     "plural": "cosmetics stores",
-    "groups": [
-        "beauty"
-    ],
     "tags": {
         "shop": "cosmetics"
     },

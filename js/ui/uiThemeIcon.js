@@ -3,7 +3,7 @@ import { getSvg } from "../svgManager.js";
 
 const parser = new DOMParser();
 export async function themeIconElement(theme, scale = 1.3) {
-  const themeIconSvg = (await getSvg({file: theme?.iconFile || "map_pin-dot", fill: theme?.primaryColor, halo: "#fff", alignY: "bottom"}));
+  const themeIconSvg = (await getSvg({file: theme?.icon || "map_pin-dot", fill: theme?.primaryColor, halo: "#fff", alignY: "bottom"}));
   return createElement('div')
     .setAttribute('style', `position: relative;margin-top: -${4*scale}px;font-size: ${1.2*scale}em;`)
     .append(

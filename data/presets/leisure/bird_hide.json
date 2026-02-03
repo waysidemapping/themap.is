@@ -2,7 +2,7 @@
     "name": "bird hide",
     "plural": "bird hides",
     "groups": [
-        "outdoor recreation"
+        "outdoor_recreation"
     ],
     "tags": {
         "leisure": "bird_hide"

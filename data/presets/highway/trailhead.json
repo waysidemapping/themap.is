@@ -2,7 +2,7 @@
     "name": "trailhead",
     "plural": "trailheads",
     "groups": [
-        "outdoor recreation"
+        "outdoor_recreation"
     ],
     "tags": {
         "highway": "trailhead"

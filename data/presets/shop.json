@@ -1,6 +1,9 @@
 {
     "name": "store",
     "plural": "stores",
+    "groups": [
+        "stores"
+    ],
     "tags": {
         "shop": "*"
     },

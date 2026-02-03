@@ -1,0 +1,12 @@
+{
+  "groupType": "activity",
+  "features": [
+    {
+      "presets": [
+        "natural/birds_nest",
+        "leisure/bird_hide",
+        "boundary/protected_area/wildlife_refuge"
+      ]
+    }
+  ]
+}

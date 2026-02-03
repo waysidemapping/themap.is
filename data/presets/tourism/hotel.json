@@ -2,7 +2,7 @@
     "name": "hotel",
     "plural": "hotels",
     "groups": [
-        "lodging"
+        "indoor_lodging"
     ],
     "tags": {
         "tourism": "hotel"

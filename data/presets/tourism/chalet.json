@@ -2,7 +2,7 @@
     "name": "vacation house",
     "plural": "vacation houses",
     "groups": [
-        "lodging"
+        "indoor_lodging"
     ],
     "tags": {
         "tourism": "chalet"

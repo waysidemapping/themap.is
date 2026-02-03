@@ -2,7 +2,7 @@
     "name": "guest house",
     "plural": "guest houses",
     "groups": [
-        "lodging"
+        "indoor_lodging"
     ],
     "tags": {
         "tourism": "guest_house"

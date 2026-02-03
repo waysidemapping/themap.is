@@ -2,8 +2,7 @@
     "name": "camp pitch",
     "plural": "camp pitches",
     "groups": [
-        "outdoor recreation",
-        "lodging-minor"
+        "outdoor_recreation"
     ],
     "tags": {
         "tourism": "camp_pitch"

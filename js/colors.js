@@ -39,7 +39,7 @@ export const colors = {
   ice_fill: "#FAFDFF",
   ice_outline: "#C2DEED",
   ice_text: "#6193AE",
-  lodging_icon: "#6a3e59",
+  indoor_lodging_icon: "#6a3e59",
   maritime_park_fill: "#CEECED",
   maritime_park_outline: "#A4CED0",
   maritime_park_text: "#3B6769",

@@ -2,7 +2,7 @@
     "name": "ranger station",
     "plural": "ranger stations",
     "groups": [
-        "outdoor recreation"
+        "outdoor_recreation"
     ],
     "tags": {
         "amenity": "ranger_station"

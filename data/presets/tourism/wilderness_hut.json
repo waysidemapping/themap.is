@@ -2,7 +2,7 @@
     "name": "wilderness hut",
     "plural": "wilderness huts",
     "groups": [
-        "lodging"
+        "indoor_lodging"
     ],
     "tags": {
         "tourism": "wilderness_hut"

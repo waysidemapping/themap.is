@@ -2,7 +2,7 @@
     "name": "slipway",
     "plural": "slipways",
     "groups": [
-        "outdoor recreation"
+        "outdoor_recreation"
     ],
     "tags": {
         "leisure": "slipway"

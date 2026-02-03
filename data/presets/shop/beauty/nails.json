@@ -1,9 +1,6 @@
 {
     "name": "nail salon",
     "plural": "nail salons",
-    "groups": [
-        "beauty"
-    ],
     "tags": {
         "shop": "beauty",
         "beauty": "nails"

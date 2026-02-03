@@ -1,0 +1,11 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "presets": [
+        "shop/wine",
+        "craft/winery"
+      ]
+    }
+  ]
+}

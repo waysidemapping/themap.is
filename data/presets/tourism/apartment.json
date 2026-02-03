@@ -2,7 +2,7 @@
     "name": "guest apartment",
     "plural": "guest apartments",
     "groups": [
-        "lodging"
+        "indoor_lodging"
     ],
     "tags": {
         "tourism": "apartment"

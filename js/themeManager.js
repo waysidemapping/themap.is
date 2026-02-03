@@ -1,7 +1,7 @@
 import { colors } from './colors.js';
 
 const featureDefaultsByGroup = {
-  "aboriginal lands": {
+  aboriginal_lands: {
     icon: { 
       bg_fill: colors.aboriginal_lands_icon,
       fill: colors.text_halo
@@ -61,9 +61,9 @@ const featureDefaultsByGroup = {
       fill: colors.text_halo
     }
   },
-  lodging: {
+  indoor_lodging: {
     icon: { 
-      bg_fill: colors.lodging_icon,
+      bg_fill: colors.indoor_lodging_icon,
       fill: colors.text_halo
     }
   },
@@ -73,7 +73,7 @@ const featureDefaultsByGroup = {
       fill: colors.text_halo
     }
   },
-  "outdoor recreation": {
+  outdoor_recreation: {
     icon: { 
       bg_fill: colors.outdoor_recreation_icon,
       fill: colors.text_halo
@@ -285,8 +285,8 @@ async function loadData() {
       // }
     }
     let sortedFeatures = theme.features.toSorted((a, b) => (a.parents?.length || 0) - (b.parents?.length || 0))
-    if (!theme.iconFile) {
-      theme.iconFile = sortedFeatures.find(feature => feature.icon?.file)?.icon?.file;
+    if (!theme.icon) {
+      theme.icon = sortedFeatures.find(feature => feature.icon?.file)?.icon?.file;
     }
     if (!theme.primaryColor) {
       theme.primaryColor = sortedFeatures.map(feature => feature.icon?.bg_fill || feature.icon?.fill).filter(Boolean).at(0);

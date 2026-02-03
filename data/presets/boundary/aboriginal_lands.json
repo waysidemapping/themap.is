@@ -2,7 +2,7 @@
     "name": "indigenous lands",
     "plural": "indigenous lands",
     "groups": [
-        "aboriginal lands",
+        "aboriginal_lands",
         "parks"
     ],
     "tags": {
