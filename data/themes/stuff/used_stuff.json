@@ -1,0 +1,15 @@
+{
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "second_hand": "only"
+      }
+    },
+    {
+      "tags": {
+        "second_hand": "yes"
+      }
+    }
+  ]
+}
