@@ -1,0 +1,12 @@
+
+{
+  "groupType": "theme",
+  "name": "American football",
+  "features": [
+    {
+      "tags": {
+        "sport": "american_football"
+      }
+    }
+  ]
+}

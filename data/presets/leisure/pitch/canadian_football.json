@@ -1,0 +1,16 @@
+{
+    "name": "Canadian football field",
+    "plural": "Canadian football fields",
+    "tags": {
+        "leisure": "pitch",
+        "sport": "canadian_football"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "canadian_football"
+    },
+    "terms": [
+        "football"
+    ],
+    "icon": "american_football"
+}

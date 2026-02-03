@@ -8,6 +8,11 @@
         "leisure/sports_centre/swimming",
         "shop/swimming_pool"
       ]
+    },
+    {
+      "tags": {
+        "sport": "swimming"
+      }
     }
   ]
 }

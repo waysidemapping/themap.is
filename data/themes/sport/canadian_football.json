@@ -1,0 +1,12 @@
+
+{
+  "groupType": "theme",
+  "name": "Canadian football",
+  "features": [
+    {
+      "tags": {
+        "sport": "canadian_football"
+      }
+    }
+  ]
+}
