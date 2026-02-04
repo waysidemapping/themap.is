@@ -145,7 +145,7 @@ async function reloadMapStyle() {
 
 function pointFeaturesByKeyValue() {
   if (cachedFeatureKeyValueMaps.point) return cachedFeatureKeyValueMaps.point;
-  if (!map) return {};
+  if (!map?.isStyleLoaded()) return {};
 
   const { width, height } = map.getCanvas()
     // use this to account for pixel ratio
@@ -171,7 +171,7 @@ function pointFeaturesByKeyValue() {
 
 function lineFeaturesByKeyValue() {
   if (cachedFeatureKeyValueMaps.line) return cachedFeatureKeyValueMaps.line;
-  if (!map) return {};
+  if (!map?.isStyleLoaded()) return {};
 
   // Query all features (not just rendered) in the visible tiles for the current zoom level
   let features = map.querySourceFeatures('beefsteak', {
