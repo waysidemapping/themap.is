@@ -1,0 +1,25 @@
+{
+  "groupType": "activity",
+  "features": [
+    {
+      "presets": [
+        "amenity/hunting_stand",
+        "shop/hunting"
+      ]
+    },
+    {
+      "accessKeys": ["hunting"],
+      "geometry": ["vertex", "point", "area"]
+    },
+    {
+      "tags": {
+        "sport": "hunting"
+      }
+    },
+    {
+      "tags": {
+        "club": "hunting"
+      }
+    }
+  ]
+}

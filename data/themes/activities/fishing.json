@@ -1,0 +1,25 @@
+{
+  "groupType": "activity",
+  "features": [
+    {
+      "presets": [
+        "leisure/fishing",
+        "shop/fishing"
+      ]
+    },
+    {
+      "accessKeys": ["fishing"],
+      "geometry": ["vertex", "point", "area"]
+    },
+    {
+      "tags": {
+        "sport": "fishing"
+      }
+    },
+    {
+      "tags": {
+        "club": "fishing"
+      }
+    }
+  ]
+}

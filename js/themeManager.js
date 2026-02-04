@@ -256,7 +256,7 @@ async function loadData() {
          // }
         }
       }
-      if (theme.features[i].tags) {
+      if (theme.features[i].tags || theme.features[i].accessKeys) {
         // always include the tags at the end even if we matched them to a preset, assuming the tags are more generalized
         expandedFeatures.push(theme.features[i]);
       }

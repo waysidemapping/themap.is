@@ -4,6 +4,7 @@ import { colors } from "./colors.js";
 import { registerSvg } from './svgManager.js';
 import { getSpritesheets } from './spritesheetGenerator.js';
 
+const yesAccessValsLiteral = ["literal", ["yes", "designated", "customers", "permissive", "permit", "destination"]];
 const noaccessValsLiteral = ["literal", ["no", "private", "discouraged", "limited"]]; // `limited` for `wheelchair`
 
 const filters = {
@@ -755,6 +756,36 @@ function rTagsExp(tags) {
   }
 }
 
+function expressionForFeature(feature) {
+  let exp;
+  if (feature.tags) {
+    exp = feature.geometry?.includes('relation') ? rTagsExp(feature.tags) : tagsExp(feature.tags);
+  }
+  if (feature.accessKeys) {
+    let accessExp = feature.accessKeys.map(key => [
+      "all",
+      ["has", key],
+      ["in", ["get", key], yesAccessValsLiteral]
+    ]);
+    if (feature.accessKeys.length > 1) {
+      accessExp = ["all", ...accessExp];
+    } else {
+      accessExp = accessExp[0];
+    }
+    if (exp) {
+      if (exp.at(0) === "any") {
+        exp.push(accessExp);
+      } else {
+        exp = ["any", accessExp];
+      }
+    } else {
+      exp = accessExp;
+    }
+    console.log(exp);
+  }
+  return exp;
+}
+
 export async function generateStyle(baseStyleJson, theme) {
 
   // parse anew every time to avoid object references
@@ -765,7 +796,7 @@ export async function generateStyle(baseStyleJson, theme) {
     return feature.geometry.includes('vertex') || feature.geometry.includes('point') || feature.geometry.includes('area') || feature.geometry.includes('relation');
   }).map(item => {
     let feature = Object.assign({}, item);
-    feature.exp = item.geometry?.includes('relation') ? rTagsExp(feature.tags) : tagsExp(feature.tags);
+    feature.exp = expressionForFeature(feature);
     return feature;
   }) : [];
   const anyThemePointFeatureExp = themePointFeatures.length ? ["any", ...themePointFeatures.map(feature => feature.exp)] : false;
@@ -775,7 +806,7 @@ export async function generateStyle(baseStyleJson, theme) {
     return feature.geometry.includes('relation') || feature.geometry.includes('line')
   }).map(item => {
     let feature = Object.assign({}, item);
-    feature.exp = item.geometry?.includes('relation') ? rTagsExp(feature.tags) : tagsExp(feature.tags);
+    feature.exp = expressionForFeature(feature);
     return feature;
   }) : [];
   const anyThemeLineFeatureExp = themeLineFeatures.length ? ["any", ...themeLineFeatures.map(feature => feature.exp)] : false;
