@@ -1,0 +1,10 @@
+{
+    "name": "continent",
+    "plural": "continents",
+    "tags": {
+        "place": "continent"
+    },
+    "terms": [
+        "landmass"
+    ]
+}

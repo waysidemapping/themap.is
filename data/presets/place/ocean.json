@@ -1,0 +1,12 @@
+{
+    "name": "ocean",
+    "plural": "oceans",
+    "tags": {
+        "place": "ocean"
+    },
+    "terms": [
+        "sea",
+        "marine",
+        "maritime"
+    ]
+}
