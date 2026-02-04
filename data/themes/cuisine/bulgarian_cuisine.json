@@ -1,0 +1,11 @@
+{
+  "name": "Bulgarian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "bulgarian"
+      }
+    }
+  ]
+}

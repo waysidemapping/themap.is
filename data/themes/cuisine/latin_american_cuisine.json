@@ -11,7 +11,13 @@
       "themes": [
         "cuban_cuisine",
         "mexican_cuisine",
-        "south_american_cuisine"
+        "salvadoran_cuisine",
+        "argentinian_cuisine",
+        "bolivian_cuisine",
+        "brazilian_cuisine",
+        "colombian_cuisine",
+        "peruvian_cuisine",
+        "venezuelan_cuisine"
       ]
     }
   ]

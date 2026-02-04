@@ -1,0 +1,11 @@
+{
+  "name": "Romanian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "romanian"
+      }
+    }
+  ]
+}

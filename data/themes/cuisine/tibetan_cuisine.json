@@ -1,0 +1,11 @@
+{
+  "name": "Tibetan cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "tibetan"
+      }
+    }
+  ]
+}

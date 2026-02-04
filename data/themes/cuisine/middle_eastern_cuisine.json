@@ -10,9 +10,11 @@
     {
       "themes": [
         "afghan_cuisine",
+        "armenian_cuisine",
         "persian_cuisine",
         "lebanese_cuisine",
-        "syrian_cuisine"
+        "syrian_cuisine",
+        "turkish_cuisine"
       ]
     }
   ]

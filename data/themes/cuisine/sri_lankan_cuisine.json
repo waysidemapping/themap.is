@@ -1,0 +1,11 @@
+{
+  "name": "Sri Lankan cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "sri_lankan"
+      }
+    }
+  ]
+}

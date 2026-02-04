@@ -1,0 +1,14 @@
+{
+  "name": "Salvadoran cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "salvadoran"
+      }
+    }
+  ],
+  "terms": [
+    "El Salvador"
+  ]
+}

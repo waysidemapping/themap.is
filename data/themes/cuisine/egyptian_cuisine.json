@@ -1,0 +1,11 @@
+{
+  "name": "Egyptian cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "egyptian"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "English cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "english"
+      }
+    }
+  ]
+}

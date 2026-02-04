@@ -11,8 +11,10 @@
       "themes": [
         "austrian_cuisine",
         "balkan_cuisine",
+        "basque_cuisine",
         "belgian_cuisine",
         "british_cuisine",
+        "bulgarian_cuisine",
         "croatian_cuisine",
         "czech_cuisine",
         "danish_cuisine",
@@ -24,6 +26,7 @@
         "italian_cuisine",
         "polish_cuisine",
         "portuguese_cuisine",
+        "romanian_cuisine",
         "spanish_cuisine",
         "swedish_cuisine",
         "ukrainian_cuisine"

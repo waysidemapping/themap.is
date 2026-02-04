@@ -1,0 +1,11 @@
+{
+  "name": "Surinamese cuisine",
+  "groupType": "commodity",
+  "features": [
+    {
+      "tags": {
+        "cuisine": "surinamese"
+      }
+    }
+  ]
+}

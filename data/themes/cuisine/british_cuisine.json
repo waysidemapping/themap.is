@@ -6,6 +6,11 @@
       "tags": {
         "cuisine": "british"
       }
+    },
+    {
+      "themes": [
+        "english_cuisine"
+      ]
     }
   ]
 }
