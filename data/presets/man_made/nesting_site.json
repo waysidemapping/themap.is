@@ -1,0 +1,20 @@
+{
+    "name": "nesting site",
+    "plural": "nesting sites",
+    "tags": {
+        "man_made": "nesting_site"
+    },
+    "geometry": [
+        "point",
+        "line"
+    ],
+    "terms": [
+        "bat box",
+        "bird hotel",
+        "bird house",
+        "birdhouse",
+        "bird nesting platform",
+        "bird nesting pole",
+        "chimney"
+    ]
+}

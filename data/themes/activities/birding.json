@@ -5,6 +5,7 @@
       "presets": [
         "natural/birds_nest",
         "leisure/bird_hide",
+        "man_made/nesting_site",
         "boundary/protected_area/wildlife_refuge"
       ]
     }
