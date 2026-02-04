@@ -1,0 +1,12 @@
+{
+  "name": "Jehovah's Witnesses",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "christian",
+        "denomination": "jehovahs_witness"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Theravāda Buddhism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "buddhist",
+        "denomination": "theravada"
+      }
+    }
+  ]
+}

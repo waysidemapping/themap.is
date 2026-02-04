@@ -1,0 +1,12 @@
+{
+  "name": "Lutheranism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "christian",
+        "denomination": "lutheran"
+      }
+    }
+  ]
+}

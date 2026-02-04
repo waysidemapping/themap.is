@@ -1,0 +1,12 @@
+{
+  "name": "Anglicanism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "christian",
+        "denomination": "anglican"
+      }
+    }
+  ]
+}

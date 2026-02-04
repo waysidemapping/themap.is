@@ -1,0 +1,12 @@
+{
+  "name": "Presbyterianism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "christian",
+        "denomination": "presbyterian"
+      }
+    }
+  ]
+}

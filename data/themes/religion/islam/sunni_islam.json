@@ -1,0 +1,12 @@
+{
+  "name": "Sunni Islam",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "muslim",
+        "denomination": "sunni"
+      }
+    }
+  ]
+}

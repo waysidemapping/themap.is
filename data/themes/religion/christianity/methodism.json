@@ -1,0 +1,12 @@
+{
+  "name": "Methodism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "christian",
+        "denomination": "methodist"
+      }
+    }
+  ]
+}

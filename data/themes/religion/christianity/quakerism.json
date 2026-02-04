@@ -1,0 +1,12 @@
+{
+  "name": "Quakerism",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "christian",
+        "denomination": "quaker"
+      }
+    }
+  ]
+}
