@@ -1,0 +1,12 @@
+{
+    "name": "maritime protected area",
+    "plural": "maritime protected areas",
+    "groups": [
+        "parks"
+    ],
+    "tags": {
+        "boundary": "protected_area",
+        "maritime": "yes"
+    },
+    "icon": "fish"
+}
