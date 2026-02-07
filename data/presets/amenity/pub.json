@@ -2,8 +2,7 @@
     "name": "pub",
     "plural": "pubs",
     "groups": [
-        "food",
-        "booze"
+        "food"
     ],
     "tags": {
         "amenity": "pub"

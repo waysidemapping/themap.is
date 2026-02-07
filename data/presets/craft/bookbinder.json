@@ -1,9 +1,6 @@
 {
     "name": "bookbinder",
     "plural": "bookbinders",
-    "groups": [
-        "crafts"
-    ],
     "tags": {
         "craft": "bookbinder"
     },

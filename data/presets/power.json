@@ -3,8 +3,7 @@
     "plural": "power features",
     "autoTheme": false,
     "groups": [
-        "power",
-        "utilities"
+        "power"
     ],
     "tags": {
         "power": "*"

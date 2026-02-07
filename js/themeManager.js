@@ -7,9 +7,9 @@ const featureDefaultsByGroup = {
       fill: colors.text_halo
     }
   },
-  amenity: {
+  adult_amusement: {
     icon: { 
-      bg_fill: colors.education_icon,
+      bg_fill: "#33145e",
       fill: colors.text_halo
     }
   },
@@ -79,12 +79,6 @@ const featureDefaultsByGroup = {
       fill: colors.text_halo
     }
   },
-  adult_amusement: {
-    icon: { 
-      bg_fill: "#33145e",
-      fill: colors.text_halo
-    }
-  },
   parks: {
     icon: { 
       bg_fill: colors.park_icon,
@@ -109,15 +103,15 @@ const featureDefaultsByGroup = {
       fill: colors.text_halo
     }
   },
-  stores: {
-    icon: { 
-      bg_fill: colors.shop_icon,
-      fill: colors.text_halo
-    }
-  },
   sports: {
     icon: { 
       bg_fill: colors.outdoor_sports_facility_icon,
+      fill: colors.text_halo
+    }
+  },
+  stores: {
+    icon: { 
+      bg_fill: colors.shop_icon,
       fill: colors.text_halo
     }
   },

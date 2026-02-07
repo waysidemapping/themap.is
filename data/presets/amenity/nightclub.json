@@ -1,9 +1,6 @@
 {
     "name": "nightclub",
     "plural": "nightclubs",
-    "groups": [
-        "booze"
-    ],
     "tags": {
         "amenity": "nightclub"
     },
