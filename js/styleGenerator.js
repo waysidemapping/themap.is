@@ -161,7 +161,8 @@ const filters = {
   ],
   is_power: ["in", ["get", "power"], ["literal", ["plant", "substation"]]],
   is_powerline: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
-  is_power_support:  ["in", ["get", "power"], ["literal", ["catenary_mast", "pole", "portal", "tower"]]],
+  is_minor_power_support:  ["in", ["get", "power"], ["literal", ["pole"]]],
+  is_major_power_support:  ["in", ["get", "power"], ["literal", ["catenary_mast", "portal", "tower"]]],
   is_railway: ["in", ["get", "railway"], ["literal", ["rail", "subway", "narrow_gauge", "light_rail", "miniature", "tram", "monorail"]]],
   is_religious: [
     "all",
@@ -658,7 +659,8 @@ let diegeticPointLayer = {
   "type": "circle",
   "filter": [
     "any",
-    filters.is_power_support,
+    filters.is_minor_power_support,
+    filters.is_major_power_support,
     filters.is_aerialway_support,
     [
       "all",
@@ -672,11 +674,13 @@ let diegeticPointLayer = {
       15, [
         "case",
         filters.is_tree, 1.5,
+        filters.is_minor_power_support, 1.3,
         1.75
       ],
       22, [
         "case",
         filters.is_tree, 192,
+        filters.is_minor_power_support, 12,
         16
       ]
     ],
@@ -696,7 +700,8 @@ let diegeticPointLayer = {
     "circle-color": [
       "case",
       filters.is_tree, colors.tree,
-      filters.is_power_support, colors.powerline_stroke,
+      filters.is_major_power_support, colors.powerline_stroke,
+      filters.is_minor_power_support, colors.powerline_stroke,
       filters.is_aerialway_support, colors.aerialway_stroke,
       "red"
     ]
