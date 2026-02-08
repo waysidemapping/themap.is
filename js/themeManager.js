@@ -191,17 +191,26 @@ async function loadData() {
 
   // Collapse down features referencing foreign themes, e.g. {"themes": ["brazilian_cuisine"]}
   while (Object.values(themesById).some(theme => theme.features.some(feature => feature.themes))) {
-    for (let id in themesById) {
-      let theme = themesById[id];
-      let expandedFeatures = [];
-      for (let i in theme.features) {
-        if (theme.features[i].themes) {
-          for (let j in theme.features[i].themes) {
-            let foreignThemeId = theme.features[i].themes[j];
+    for (const id in themesById) {
+      const theme = themesById[id];
+      const expandedFeatures = [];
+      for (const i in theme.features) {
+        const feature = theme.features[i];
+        if (feature.themes) {
+          for (const j in feature.themes) {
+            const foreignThemeId = feature.themes[j];
             if (!themesById[foreignThemeId]) {
               console.error(`Missing expected theme: ${foreignThemeId}`);
             }
-            expandedFeatures = expandedFeatures.concat(themesById[foreignThemeId].features);
+            const foreignTheme = themesById[foreignThemeId];
+            for (const k in foreignTheme.features) {
+              const expandedFeature = {};
+              const foreignThemeFeature = foreignTheme.features[k];
+              Object.assign(expandedFeature, foreignThemeFeature);
+              Object.assign(expandedFeature, feature);
+              expandedFeature.themes = foreignThemeFeature.themes;
+              expandedFeatures.push(expandedFeature);
+            }
           }
         } else {
           expandedFeatures.push(theme.features[i]);
@@ -243,14 +252,15 @@ async function loadData() {
               .sort((a, b) => (b.parents?.length || 0) - (a.parents?.length || 0))
               .forEach(preset => {
                 let feature = {};
-                Object.assign(feature, theme.features[i]);
                 Object.assign(feature, preset);
+                Object.assign(feature, theme.features[i]);
+                delete feature.presets;
                 expandedFeatures.push(feature);
               });
          // }
         }
       }
-      if (theme.features[i].tags || theme.features[i].accessKeys) {
+      if (theme.features[i].tags || theme.features[i].filterAccessKeys) {
         // always include the tags at the end even if we matched them to a preset, assuming the tags are more generalized
         expandedFeatures.push(theme.features[i]);
       }

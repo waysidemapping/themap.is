@@ -5,7 +5,7 @@ import { registerSvg } from './svgManager.js';
 import { getSpritesheets } from './spritesheetGenerator.js';
 
 const yesAccessValsLiteral = ["literal", ["yes", "designated", "customers", "permissive", "permit", "destination"]];
-const noaccessValsLiteral = ["literal", ["no", "private", "discouraged", "limited"]]; // `limited` for `wheelchair`
+const noAccessValsLiteral = ["literal", ["no", "private", "discouraged", "limited"]]; // `limited` for `wheelchair`
 
 const filters = {
   has_bridge: [
@@ -830,13 +830,13 @@ function expressionForFeature(feature) {
   if (feature.tags) {
     exp = feature.geometry?.includes('relation') ? rTagsExp(feature.tags) : tagsExp(feature.tags);
   }
-  if (feature.accessKeys) {
-    let accessExp = feature.accessKeys.map(key => [
+  if (feature.filterAccessKeys) {
+    let accessExp = feature.filterAccessKeys.map(key => [
       "all",
       ["has", key],
       ["in", ["get", key], yesAccessValsLiteral]
     ]);
-    if (feature.accessKeys.length > 1) {
+    if (feature.filterAccessKeys.length > 1) {
       accessExp = ["all", ...accessExp];
     } else {
       accessExp = accessExp[0];
@@ -850,7 +850,6 @@ function expressionForFeature(feature) {
     } else {
       exp = accessExp;
     }
-    console.log(exp);
   }
   return exp;
 }
@@ -1317,17 +1316,37 @@ export async function generateStyle(baseStyleJson, theme) {
       "icon-image": themePointFeatures.filter(feature => feature.icon).length ? [
         "case",
         ...themePointFeatures.filter(feature => feature.icon).map(feature => {
-          let noaccessIcon = Object.assign({}, feature.icon);
-          if (noaccessIcon.fill) {
-            noaccessIcon.fill = chroma.mix(noaccessIcon.fill, "#eee", 0.5, "rgb").hex();
+          let styleAccessKeys = (feature.styleAccessKeys || []).concat(['access']);
+          let noAccessExp = [];
+          for (let i in styleAccessKeys) {
+            let accessKey = styleAccessKeys[i];
+            let exp = ["in", ["get", accessKey], noAccessValsLiteral];
+            let moreProminentKeys = styleAccessKeys.slice(0, parseInt(i));
+            if (moreProminentKeys.length > 0) {
+              exp = [
+                "all",
+                ...moreProminentKeys.map(key => ["!", ["has", key]]),
+                exp
+              ];
+            }
+            noAccessExp.push(exp);
           }
-          if (noaccessIcon.bg_fill) {
-            noaccessIcon.bg_fill = chroma.mix(noaccessIcon.bg_fill, "#eee", 0.5, "rgb").hex();
+          if (noAccessExp.length > 1) {
+            noAccessExp.unshift("any");
+          } else {
+            noAccessExp = noAccessExp[0];
+          }
+          let noAccessIcon = Object.assign({}, feature.icon);
+          if (noAccessIcon.fill) {
+            noAccessIcon.fill = chroma.mix(noAccessIcon.fill, "#eee", 0.5, "rgb").hex();
+          }
+          if (noAccessIcon.bg_fill) {
+            noAccessIcon.bg_fill = chroma.mix(noAccessIcon.bg_fill, "#eee", 0.5, "rgb").hex();
           }
           return [feature.exp, [
             "case",
-            ["in", ["get", "access"], noaccessValsLiteral],
-              iconExp(noaccessIcon),
+            noAccessExp,
+              iconExp(noAccessIcon),
             iconExp(feature.icon)
           ]];
         }).flat(),

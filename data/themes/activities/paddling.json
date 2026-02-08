@@ -1,0 +1,34 @@
+{
+  "groupType": "activity",
+  "features": [
+    {
+      "themes": [
+        "dams"
+      ]
+    },
+    {
+      "themes": [
+        "waterway_access"
+      ],
+      "styleAccessKeys": ["canoe"],
+      "geometry": ["vertex"]
+    },
+    {
+      "tags": {
+        "waterway": "*",
+        "canoe": "*"
+      },
+      "filterAccessKeys": ["canoe"],
+      "geometry": ["line"]
+    },
+    {
+      "tags": {
+        "highway": "*",
+        "portage": "*"
+      },
+      "filterAccessKeys": ["portage"],
+      "geometry": ["line"]
+    }
+  ],
+  "icon": "canoer-water"
+}
