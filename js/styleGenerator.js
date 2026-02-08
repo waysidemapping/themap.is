@@ -13,6 +13,7 @@ const filters = {
     ["has", "bridge"],
     ["!", ["==", ["get", "bridge"], "no"]]
   ],
+  has_elevation: ["has", "ele"],
   has_intermittence: ["==", ["get", "intermittent"], "yes"],
   has_paving: [
     "any",
@@ -23,6 +24,7 @@ const filters = {
     ],
     ["in", ["get", "surface"], ["literal", ["asphalt", "paved", "paving_stones", "concrete", "concrete:lanes", "concrete:plates", "wood", "metal", "metal_grid", "sett", "bricks", "cobblestone"]]]
   ],
+  has_prominence: ["has", "prominence"],
   has_subsurface_location: ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]],
   has_tunnel: [
     "all",
@@ -711,6 +713,66 @@ let diegeticPointLayer = {
   "minzoom": 12
 };
 
+function getLabelExpression(items) {
+  let filters = ["case"];
+  for(let i in items) {
+    let item = items[i];
+
+    if (item.caseSelector) filters.push(item.caseSelector);
+
+    let filter = [
+      "format",
+      [
+        "case",
+        item.selector, item.sublabels ? [
+          "concat",
+          item.label,
+          [
+            "case",
+            ["any", ...item.sublabels.map(item => item.selector)], '\n',
+            ""
+          ]
+        ] : item.label,
+        ""
+      ],
+      {},
+    ];
+
+    if (item.sublabels) {
+      filter = filter.concat(getSublabelExpressions(item.sublabels));
+    }
+    filters.push(filter);
+  }
+  return filters;
+}
+
+function getSublabelExpressions(items) {
+  let filters = [];
+  for(let i in items) {
+    let item = items[i];
+
+    let sublabelsFilter = [];
+    if (item.sublabels) {
+      sublabelsFilter = [["any", ...item.sublabels.map(item => item.selector)], '\n'];
+    }
+    filters.push([
+        "case",
+        item.selector, [
+          "concat", item.label,
+          [
+            "case",
+            ["any", ...items.slice(parseInt(i) + 1).filter(item => !item.conjoined).map(item => item.selector)], " · ",
+            ...sublabelsFilter,
+            ""
+          ]
+        ],
+        ""
+      ]);
+    filters.push({});
+  }
+  return filters;
+}
+
 function tagsExp(tags) {
   let exp = [];
   for (let key in tags) {
@@ -838,7 +900,10 @@ export async function generateStyle(baseStyleJson, theme) {
   });
   osmLangSuffixes.push('');
 
-  const localizedName = ["coalesce", ...osmLangSuffixes.map(suffix => ["get", "name" + suffix]), ["get", "ref"]];
+  const osmNameKeys = osmLangSuffixes.map(suffix => "name" + suffix).concat(["ref"]);
+
+  const localizedName = ["coalesce", ...osmNameKeys.map(key => ["get", key])];
+  const hasLocalizedName = ["any", ...osmNameKeys.map(key => ["has", key])];
   // const nativeName = ["coalesce", ["get", "name"], ["get", "ref"]];
   // const labelTextField = [
   //   "case",
@@ -849,7 +914,6 @@ export async function generateStyle(baseStyleJson, theme) {
   //   ], ["format", localizedName, {},"\n", {}, nativeName, {"font-scale": 0.85}],
   //   localizedName
   // ];
-  const labelTextField = localizedName;
 
   function addLayer(layer) {
     style.layers.push(layer);
@@ -1139,18 +1203,18 @@ export async function generateStyle(baseStyleJson, theme) {
           filters.is_watercourse, ["literal", ["Noto Serif Italic"]],
           ["literal", ["Noto Sans Regular"]]
       ],
-      "text-field": labelTextField
+      "text-field": localizedName
     },
     "paint": {
-        "text-color": [
-            "case",
-            filters.is_aerialway, colors.aerialway_text,
-            filters.is_powerline, colors.power_text,
-            filters.is_watercourse, colors.water_text,
-            colors.text
-        ],
-        "text-halo-color": colors.text_halo,
-        "text-halo-width": 1
+      "text-color": [
+        "case",
+        filters.is_aerialway, colors.aerialway_text,
+        filters.is_powerline, colors.power_text,
+        filters.is_watercourse, colors.water_text,
+        colors.text
+      ],
+      "text-halo-color": colors.text_halo,
+      "text-halo-width": 1
     }
   });
 
@@ -1214,8 +1278,8 @@ export async function generateStyle(baseStyleJson, theme) {
           "any",
           [
             "all",
-            ["has", "ele"],
-            ["has", "prominence"],
+            filters.has_elevation,
+            filters.has_prominence,
             [
               "any",
               // If prominence is equal to ele then the peak is the highest on the landmass (island or
@@ -1364,7 +1428,31 @@ export async function generateStyle(baseStyleJson, theme) {
         0
       ],
       "text-justify": "auto",
-      "text-field": labelTextField
+      "text-field": getLabelExpression([
+        {
+          caseSelector: [
+            "any",
+            filters.is_peak,
+            filters.is_survey_point
+          ],
+          selector: hasLocalizedName,
+          label: localizedName,
+          sublabels: [
+            {
+              selector: filters.has_elevation,
+              label:  ["concat", [
+                "number-format",
+                ["/", ["to-number", ['get', 'ele'], "0"], 0.3048],
+                { "max-fraction-digits": 0.1 }
+              ], " ft"],
+            }
+          ]
+        },
+        {
+          selector: hasLocalizedName,
+          label: localizedName
+        }
+      ])
     },
     "paint": {
       "text-color":[
