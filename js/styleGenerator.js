@@ -159,6 +159,7 @@ const filters = {
     ["!", ["in", ["get", "protected_area"], ["literal", ["national_park", "historic_district"]]]],
     ["!", ["==", ["get", "maritime"], "yes"]]
   ],
+  is_peak: ["==", ["get", "natural"], "peak"],
   is_power: ["in", ["get", "power"], ["literal", ["plant", "substation"]]],
   is_powerline: ["in", ["get", "power"], ["literal", ["line", "minor_line", "cable"]]],
   is_minor_power_support:  ["in", ["get", "power"], ["literal", ["pole"]]],
@@ -184,6 +185,7 @@ const filters = {
       ["==", ["get", "railway"], "station"]
     ]
   ],
+  is_survey_point: ["==", ["get", "man_made"], "survey_point"],
   is_swimming_pool: ["==", ["get", "leisure"], "swimming_pool"],
   is_tree: ["==", ["get", "natural"], "tree"],
   is_water_area_poi: [
@@ -1205,6 +1207,36 @@ export async function generateStyle(baseStyleJson, theme) {
       ],
       filters.is_landform_area_poi,
       filters.is_water_area_poi,
+      [
+        "all",
+        filters.is_peak,
+        [
+          "any",
+          [
+            "all",
+            ["has", "ele"],
+            ["has", "prominence"],
+            [
+              "any",
+              // If prominence is equal to ele then the peak is the highest on the landmass (island or
+              // continent) and is therefore interesting to show no matter how short it may be.
+              ["==", ["to-number", ["get", "prominence"], "0"], ["to-number", ["get", "ele"], "-1"]],
+              [">=", ["to-number", ["get", "prominence"], "0"], 100]
+            ]
+          ],
+          ["in", ["get", "highest_point"], ["literal", ["1", "2", "3", "4"]]],
+          [">=", ["zoom"], 12],
+        ]
+      ],
+      [
+        "all",
+        filters.is_survey_point,
+        [
+          "any",
+          ["in", ["get", "highest_point"], ["literal", ["1", "2", "3", "4"]]],
+          [">=", ["zoom"], 12]
+        ]
+      ],
       anyThemePointFeatureExp
     ],
     "layout": {
@@ -1235,8 +1267,26 @@ export async function generateStyle(baseStyleJson, theme) {
             iconExp(feature.icon)
           ]];
         }).flat(),
+        filters.is_peak, iconExp({
+          file: "triangle_up",
+          fill: colors.peak
+        }),
+        filters.is_survey_point, iconExp({
+          file: "plus_thin_short",
+          fill: colors.text
+        }),
         ["image", ""]
       ] : ["image", ""],
+      "icon-size": [
+        "interpolate", ["linear"], ["zoom"],
+        12, [
+          "case",
+          anyThemePointFeatureExp, 1,
+          ["any", filters.is_survey_point, filters.is_peak], 0.5,
+          1
+        ],
+        22, 1
+      ],
       "text-variable-anchor-offset": themePointFeatures.filter(feature => feature.icon).length ? [
         "case",
         ...themePointFeatures.filter(feature => feature.icon && feature.icon?.fill).map(feature => {
@@ -1245,6 +1295,7 @@ export async function generateStyle(baseStyleJson, theme) {
         ...themePointFeatures.filter(feature => feature.icon && !feature.icon?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]]]
         }).flat(),
+        ["any", filters.is_survey_point, filters.is_peak], ["literal", ["left", [0.5, 0], "right", [-0.5, 0]]],
         ["literal", ["center", [0, 0]]]
       ] : ["literal", ["center", [0, 0]]],
       "text-size":[
@@ -1285,6 +1336,7 @@ export async function generateStyle(baseStyleJson, theme) {
         ["any",["in", ["get", "place"], ["literal", ["city"]]],["in", ["get", "boundary"], ["literal", ["administrative"]]]], ["literal", ["Noto Sans Bold"]],
         [
           "any",
+          filters.is_peak,
           filters.is_continent,
           filters.is_landform_area_poi,
         ], ["literal", ["Noto Serif Medium Italic"]],
@@ -1318,6 +1370,7 @@ export async function generateStyle(baseStyleJson, theme) {
       "text-color":[
         "case",
         anyThemePointFeatureExp, colors.primary_text,
+        filters.is_peak, colors.peak_text,
         [
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],

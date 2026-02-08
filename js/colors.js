@@ -62,6 +62,8 @@ export const colors = {
   park_icon: "#225e16",
   park_text: "#46693F",
   parking_fill: "#efefef",
+  peak: "#a4836c",
+  peak_text: "#765e4d",
   pier_fill: "#fff",
   powerline_stroke: "#c1adc9",
   power_fill: "#FBF4FE",
