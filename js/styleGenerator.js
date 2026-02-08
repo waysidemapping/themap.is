@@ -1217,6 +1217,48 @@ export async function generateStyle(baseStyleJson, theme) {
     }
   });
 
+  const eleSublabels = [
+    {
+      selector: filters.has_elevation,
+      label:  ["concat", [
+        "number-format",
+        ["/", ["to-number", ['get', 'ele'], "0"], 0.3048],
+        { "max-fraction-digits": 0.1 }
+      ], " ft"],
+    }
+  ];
+
+  const highZoomPointLabels = [
+    {
+      caseSelector: [
+        "any",
+        filters.is_peak,
+        filters.is_survey_point
+      ],
+      selector: hasLocalizedName,
+      label: localizedName,
+      sublabels: eleSublabels
+    },
+    {
+      selector: hasLocalizedName,
+      label: localizedName
+    }
+  ];
+
+  const lowZoomPointLabels = [
+    {
+      caseSelector: [
+        "all",
+        filters.is_peak,
+        // if the map is peaks then we want to show the actual peak name
+        ["!", anyThemePointFeatureExp]
+      ],
+      selector: ["any", ...osmLangSuffixes.map(suffix => 'massif:name' + suffix).concat(osmNameKeys).map(key => ["has", key])],
+      label: ["coalesce", ...osmLangSuffixes.map(suffix => 'massif:name' + suffix).concat(osmNameKeys).map(key => ["get", key])],
+      sublabels: eleSublabels
+    }
+  ].concat(highZoomPointLabels);
+
   addLayer({
     "id": "point-label",
     "source": "beefsteak",
@@ -1447,31 +1489,10 @@ export async function generateStyle(baseStyleJson, theme) {
         0
       ],
       "text-justify": "auto",
-      "text-field": getLabelExpression([
-        {
-          caseSelector: [
-            "any",
-            filters.is_peak,
-            filters.is_survey_point
-          ],
-          selector: hasLocalizedName,
-          label: localizedName,
-          sublabels: [
-            {
-              selector: filters.has_elevation,
-              label:  ["concat", [
-                "number-format",
-                ["/", ["to-number", ['get', 'ele'], "0"], 0.3048],
-                { "max-fraction-digits": 0.1 }
-              ], " ft"],
-            }
-          ]
-        },
-        {
-          selector: hasLocalizedName,
-          label: localizedName
-        }
-      ])
+      "text-field": [
+        "step", ["zoom"], getLabelExpression(lowZoomPointLabels),
+        12, getLabelExpression(highZoomPointLabels)
+      ]
     },
     "paint": {
       "text-color":[
