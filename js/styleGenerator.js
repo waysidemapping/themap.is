@@ -1498,7 +1498,6 @@ export async function generateStyle(baseStyleJson, theme) {
       "text-color":[
         "case",
         anyThemePointFeatureExp, colors.primary_text,
-        filters.is_peak, colors.peak_text,
         [
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
