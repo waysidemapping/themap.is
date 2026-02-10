@@ -1,5 +1,6 @@
 import { generateStyle } from './styleGenerator.js'; 
 import { state } from "./stateController.js";
+import { ExtrusionControl } from './ui/ExtrusionControl.js';
 import { beefsteakProtocolFunction } from "https://cdn.jsdelivr.net/gh/waysidemapping/beefsteak-map-tiles/demo/src/beefsteak-protocol.js";
 
 let map;
@@ -11,16 +12,23 @@ let cachedFeatureKeyValueMaps = {
 };
 
 const baseStyleJson = {
-    "version": 8,
-    "name": "themap.is basemap style",
-    "glyphs": "https://tiles.openstreetmap.us/fonts/{fontstack}/{range}.pbf",
-    "sources": {
-       "beefsteak": {
-            "type": "vector",
-            "url": "https://tiles.waysidemapping.org/beefsteak"
-        }
+  "version": 8,
+  "name": "themap.is basemap style",
+  "glyphs": "https://tiles.openstreetmap.us/fonts/{fontstack}/{range}.pbf",
+  "sources": {
+    "beefsteak": {
+      "type": "vector",
+      "url": "https://tiles.waysidemapping.org/beefsteak"
     },
-    "layers": []
+    "mapterhorn": {
+      "type": "raster-dem",
+      "tiles": ["https://tiles.mapterhorn.com/{z}/{x}/{y}.webp"],
+      "attribution": `<a href="https://mapterhorn.com/" target="_blank">Mapterhorn</a>`,
+      "encoding": "terrarium",
+      "tileSize": 512,
+    }
+  },
+  "layers": []
 };
 
 initializeMap();
@@ -46,6 +54,10 @@ function initializeMap() {
     zoom: initialZoom,
     fadeDuration: 0,
   });
+  if (map.getPitch() > 0) {
+    // if there is a default pitch set in the URL, enable 3D
+    state.set('render3d', true);
+  }
 
   const beefsteakEndpoint = baseStyleJson.sources.beefsteak.url;
   const beefsteakEndpointPrefix = /(.*\/\/.*\/)/.exec(beefsteakEndpoint)[1];
@@ -70,6 +82,7 @@ function initializeMap() {
     .addControl(new maplibregl.NavigationControl({
       visualizePitch: true
     }))
+    .addControl(new ExtrusionControl())
     .addControl(new maplibregl.GeolocateControl({
       fitBoundsOptions: {
         animate: false
@@ -96,10 +109,22 @@ function initializeMap() {
   });
   mapTransformChanged();
 
-  state.addEventListener('change-theme', function() {
+  state.addEventListener('change-theme', reloadMapStyle);
+  state.addEventListener('change-render3d', _ => {
+    setMaxPitch();
     reloadMapStyle();
   });
+  setMaxPitch();
   reloadMapStyle();
+}
+function setMaxPitch() {
+  const desiredMaxPitch = state.render3d ? 60 : 0;
+  if (map.getMaxPitch() !== desiredMaxPitch) {
+    map.setMaxPitch(desiredMaxPitch);
+    if (desiredMaxPitch > 0 && map.getPitch() === 0) {
+      map.setPitch(30);
+    }
+  }
 }
 
 function mapTransformChanged() {
@@ -123,7 +148,13 @@ async function reloadMapStyle() {
 
   if (!map) return;
 
-  let styleInfo = await generateStyle(baseStyleJson, state.theme);
+  const userLangs = navigator.languages ? navigator.languages : navigator.language ? [navigator.language] : [];
+
+  let styleInfo = await generateStyle(baseStyleJson, {
+    theme: state.theme,
+    langs: userLangs,
+    render3d: state.render3d
+  });
 
   // We can put any absolute URL here since we override it in the transformRequest,
   // but it has to be unique to the style since MapLibre will cache it

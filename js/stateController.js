@@ -6,6 +6,8 @@ class StateController extends EventTarget {
 
   restrictedKeys = Object.keys(this).concat(['set', 'get', 'toggle', 'restrictedKeys']);
 
+  render3d = false;
+
   set(obj, value) {
     if (typeof obj === 'string') {
       let key = obj;

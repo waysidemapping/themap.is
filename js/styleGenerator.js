@@ -58,6 +58,7 @@ const filters = {
     ["has", "building"],
     ["!", ["==", ["get", "building"], "no"]]
   ],
+  is_building_part: ["has", "building:part"],
   is_coastline: [
     "all",
     ["==", ["get", "natural"], "coastline"],
@@ -308,46 +309,6 @@ const landuses = [
   }
 ];
 
-const structures = [
-  {
-    filter: filters.is_water_structure,
-    fill_color: colors.water_fill,
-    outline_color: colors.water_outline
-  },
-  {
-    filter: filters.is_pier,
-    fill_color: colors.pier_fill,
-    text_color: colors.text,
-  },
-  {
-    filter: filters.is_bridge,
-    fill_color: colors.highway_casing,
-    text_color: colors.text,
-    fill_opacity: 0.4
-  },
-  {
-    filter: filters.is_parking_lot,
-    fill_color: colors.parking_fill,
-    text_color: colors.text
-  },
-  {
-    filter: filters.is_barrier,
-    fill_color: colors.barrier_fill,
-    text_color: colors.text
-  },
-  {
-    filter: filters.is_swimming_pool,
-    fill_color: colors.swimming_pool_fill,
-    outline_color: colors.swimming_pool_outline,
-    text_color: colors.swimming_pool_text
-  },
-  {
-    filter: filters.is_building,
-    fill_color: colors.building_fill,
-    fill_opacity: 0.5
-  },
-];
-
 const lineLayerLineWidth = [
   "interpolate", ["linear"], ["zoom"],
   12, [
@@ -594,68 +555,6 @@ const lineOverlayLayer = {
   }
 };
 
-const structureLayer = {
-  "id": "structure-fill",
-  "source": "beefsteak",
-  "source-layer": "area",
-  "type": "fill",
-  "filter": [
-    "any",
-    ...structures.filter(info => info.fill_color).map(info => info.filter)
-  ],
-  "layout": {
-    "fill-sort-key": [
-      "case",
-      ...structures.filter(info => info.fill_color).map((info, i) => [info.filter, i]).flat(),
-      0
-    ]
-  },
-  "paint": {
-    "fill-opacity": [
-      "case",
-      ...structures.filter(info => info.fill_color && info.fill_opacity).toReversed().map(info => [info.filter, info.fill_opacity]).flat(),
-      [">", ["to-number", ["get", "layer"], "0"], 0], 0.6,
-      1
-    ],
-    "fill-color": [
-      "case",
-      ...structures.filter(info => info.fill_color).toReversed().map(info => [info.filter, info.fill_color]).flat(),
-      "red"
-    ]
-  }
-};
-
-const structureOutlineLayer = {
-  "id": "structure-outline",
-  "source": "beefsteak",
-  "source-layer": "area",
-  "type": "line",
-  "filter": [
-    "any",
-    ...structures.filter(info => info.outline_color).map(info => info.filter)
-  ],
-  "layout": {
-    "line-sort-key": [
-      "case",
-      ...structures.filter(info => info.outline_color).map((info, i) => [info.filter, i]).flat(),
-      0
-    ]
-  },
-  "paint": {
-    "line-opacity": [
-      "case",
-      [">", ["to-number", ["get", "layer"], "0"], 0], 0.75,
-      1
-    ],
-    "line-width": 0.5,
-    "line-color": [
-      "case",
-      ...structures.filter(info => info.outline_color).toReversed().map(info => [info.filter, info.outline_color]).flat(),
-      "red"
-    ]
-  }
-};
-
 let diegeticPointLayer = {
   "id": "diegetic-point",
   "source": "beefsteak",
@@ -854,10 +753,20 @@ function expressionForFeature(feature) {
   return exp;
 }
 
-export async function generateStyle(baseStyleJson, theme) {
-
+export async function generateStyle(baseStyleJson, opts) {
+  
+  const theme = opts.theme;
+  const langs = opts.langs;
+  const render3d = opts.render3d;
   // parse anew every time to avoid object references
   const style = JSON.parse(JSON.stringify(baseStyleJson));
+
+  if (render3d) {
+    style.terrain = {
+      "source": "mapterhorn",
+      "exaggeration": 1
+    };
+  }
 
   const themePointFeatures = theme ? theme.features.filter(feature => {
     if (!feature.geometry) return true;
@@ -887,10 +796,9 @@ export async function generateStyle(baseStyleJson, theme) {
     return ["image", id];
   }
 
-  const userLangs = navigator.languages ? navigator.languages : navigator.language ? [navigator.language] : [];
   const osmLangSuffixes = [];
-  userLangs.forEach(userLang => {
-    const parts = userLang.split('-');
+  langs.forEach(lang => {
+    const parts = lang.split('-');
     while (parts.length) {
       const builtLang = ':' + parts.join('-');
       if (!osmLangSuffixes.includes(builtLang)) osmLangSuffixes.push(builtLang);
@@ -913,6 +821,111 @@ export async function generateStyle(baseStyleJson, theme) {
   //   ], ["format", localizedName, {},"\n", {}, nativeName, {"font-scale": 0.85}],
   //   localizedName
   // ];
+
+  const structures = [
+    {
+      filter: filters.is_water_structure,
+      fill_color: colors.water_fill,
+      outline_color: colors.water_outline
+    },
+    {
+      filter: filters.is_pier,
+      fill_color: colors.pier_fill,
+      text_color: colors.text,
+    },
+    {
+      filter: filters.is_bridge,
+      fill_color: colors.highway_casing,
+      text_color: colors.text,
+      fill_opacity: 0.4
+    },
+    {
+      filter: filters.is_parking_lot,
+      fill_color: colors.parking_fill,
+      text_color: colors.text
+    },
+    {
+      filter: filters.is_barrier,
+      fill_color: colors.barrier_fill,
+      text_color: colors.text
+    },
+    {
+      filter: filters.is_swimming_pool,
+      fill_color: colors.swimming_pool_fill,
+      outline_color: colors.swimming_pool_outline,
+      text_color: colors.swimming_pool_text
+    }
+  ];
+
+  if (!render3d) {
+    structures.push({
+      filter: filters.is_building,
+      fill_color: colors.building_fill,
+      fill_opacity: 0.5
+    });
+  }
+
+  const structureLayer = {
+    "id": "structure-fill",
+    "source": "beefsteak",
+    "source-layer": "area",
+    "type": "fill",
+    "filter": [
+      "any",
+      ...structures.filter(info => info.fill_color).map(info => info.filter)
+    ],
+    "layout": {
+      "fill-sort-key": [
+        "case",
+        ...structures.filter(info => info.fill_color).map((info, i) => [info.filter, i]).flat(),
+        0
+      ]
+    },
+    "paint": {
+      "fill-opacity": [
+        "case",
+        ...structures.filter(info => info.fill_color && info.fill_opacity).toReversed().map(info => [info.filter, info.fill_opacity]).flat(),
+        [">", ["to-number", ["get", "layer"], "0"], 0], 0.6,
+        1
+      ],
+      "fill-color": [
+        "case",
+        ...structures.filter(info => info.fill_color).toReversed().map(info => [info.filter, info.fill_color]).flat(),
+        "red"
+      ]
+    }
+  };
+
+  const structureOutlineLayer = {
+    "id": "structure-outline",
+    "source": "beefsteak",
+    "source-layer": "area",
+    "type": "line",
+    "filter": [
+      "any",
+      ...structures.filter(info => info.outline_color).map(info => info.filter)
+    ],
+    "layout": {
+      "line-sort-key": [
+        "case",
+        ...structures.filter(info => info.outline_color).map((info, i) => [info.filter, i]).flat(),
+        0
+      ]
+    },
+    "paint": {
+      "line-opacity": [
+        "case",
+        [">", ["to-number", ["get", "layer"], "0"], 0], 0.75,
+        1
+      ],
+      "line-width": 0.5,
+      "line-color": [
+        "case",
+        ...structures.filter(info => info.outline_color).toReversed().map(info => [info.filter, info.outline_color]).flat(),
+        "red"
+      ]
+    }
+  };
 
   function addLayer(layer) {
     style.layers.push(layer);
@@ -1054,6 +1067,19 @@ export async function generateStyle(baseStyleJson, theme) {
     }
   });
 
+  if (render3d) {
+    addLayer({
+      "id": "hillshade",
+      "type": "hillshade",
+      "source": "mapterhorn",
+      "paint": {
+        "hillshade-method": "igor",
+        "hillshade-shadow-color": "#ccc"
+      },
+      "minzoom": 12
+    });
+  }
+
   function forTagLayer(layer, tagLayer) {
     let newLayer = Object.assign({}, layer);
     newLayer.id += tagLayer;
@@ -1087,6 +1113,72 @@ export async function generateStyle(baseStyleJson, theme) {
     addLayer(forTagLayer(lineOverlayLayer, tagLayer));
     addLayer(forTagLayer(diegeticPointLayer, tagLayer));
   });
+
+  if (render3d) {
+    addLayer({
+      "id": "building",
+      "source": "beefsteak",
+      "source-layer": "area",
+      "type": "fill-extrusion",
+      "filter": [
+        "step", ["zoom"], filters.is_building,
+        16, [
+          "any",
+          [
+            "all",
+            filters.is_building,
+            [
+              "!",
+              [
+                "all",
+                ["has", "building:parts"],
+                ["!", ["==", ["get", "building:parts"], "no"]]
+              ]
+            ]
+          ],
+          filters.is_building_part
+        ]
+      ],
+      "paint": {
+        "fill-extrusion-color": colors.building_fill,
+        "fill-extrusion-opacity": 0.4,
+        "fill-extrusion-height": [
+          "coalesce",
+          [
+            "case",
+            ["has", "height"], [
+              "case",
+              // explicit meters
+              ["in", " m", ["get", "height"]], ["to-number", ["slice", ["get", "height"], 0, ["-", ["length", ["get", "height"]], 2]]],
+              // feet
+              ["in", " ft", ["get", "height"]], ["*", ["to-number", ["slice", ["get", "height"], 0, ["-", ["length", ["get", "height"]], 3]]], 1/0.3048],
+              // also feet
+              ["in", "'", ["get", "height"]], ["*", ["to-number", ["slice", ["get", "height"], 0, ["-", ["length", ["get", "height"]], 1]]], 1/0.3048],
+              // implicit meters
+              ["to-number", ["get", "height"]]
+            ],
+            3.5
+          ],
+          ["*", ["to-number", ["get", "building:levels"], 1], 3.5],
+        ],
+        "fill-extrusion-base": [
+          "case",
+          ["has", "min_height"], [
+            "case",
+            // explicit meters
+            ["in", " m", ["get", "min_height"]], ["to-number", ["slice", ["get", "min_height"], 0, ["-", ["length", ["get", "min_height"]], 2]]],
+            // feet
+            ["in", " ft", ["get", "min_height"]], ["*", ["to-number", ["slice", ["get", "min_height"], 0, ["-", ["length", ["get", "min_height"]], 3]]], 1/0.3048],
+            // also feet
+            ["in", "'", ["get", "min_height"]], ["*", ["to-number", ["slice", ["get", "min_height"], 0, ["-", ["length", ["get", "min_height"]], 1]]], 1/0.3048],
+            // implicit meters
+            ["to-number", ["get", "min_height"]]
+          ],
+          0
+        ]
+      }
+    });
+  }
 
   addLayer({
     "id": "boundary-casing",
