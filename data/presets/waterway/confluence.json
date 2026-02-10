@@ -1,0 +1,10 @@
+{
+    "name": "confluence",
+    "plural": "confluences",
+    "tags": {
+        "waterway": "confluence"
+    },
+    "geometry": [
+        "vertex"
+    ]
+}
