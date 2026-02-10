@@ -24,7 +24,6 @@ const filters = {
     ],
     ["in", ["get", "surface"], ["literal", ["asphalt", "paved", "paving_stones", "concrete", "concrete:lanes", "concrete:plates", "wood", "metal", "metal_grid", "sett", "bricks", "cobblestone"]]]
   ],
-  has_prominence: ["has", "prominence"],
   has_subsurface_location: ["in", ["get", "location"], ["literal", ["underground", "underwater", "indoor"]]],
   has_tunnel: [
     "all",
@@ -1407,19 +1406,13 @@ export async function generateStyle(baseStyleJson, opts) {
       [
         "all",
         filters.is_peak,
+        filters.has_elevation,
         [
           "any",
           [
             "all",
-            filters.has_elevation,
-            filters.has_prominence,
-            [
-              "any",
-              // If prominence is equal to ele then the peak is the highest on the landmass (island or
-              // continent) and is therefore interesting to show no matter how short it may be.
-              ["==", ["to-number", ["get", "prominence"], "0"], ["to-number", ["get", "ele"], "-1"]],
-              [">=", ["to-number", ["get", "prominence"], "0"], 100]
-            ]
+            ["has", "prominence"],
+            [">=", ["to-number", ["get", "prominence"], "0"], 100]
           ],
           ["in", ["get", "highest_point"], ["literal", ["1", "2", "3", "4"]]],
           [">=", ["zoom"], 12],
