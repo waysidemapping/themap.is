@@ -207,6 +207,7 @@ const filters = {
     ["<=", ["to-number", ["get", "layer"], "0"], 0]
   ],
   is_watercourse: ["in", ["get", "waterway"], ["literal", ["canal", "ditch", "drain", "fish_pass", "river", "stream", "tidal_channel"]]],
+  is_waterfall: ["==", ["get", "waterway"], "waterfall"],
 };
 
 const landuses = [
@@ -666,7 +667,9 @@ function getSublabelExpressions(items) {
         ],
         ""
       ]);
-    filters.push({});
+    filters.push({
+      "text-font": item.font ? ["literal", [item.font]] : undefined
+    });
   }
   return filters;
 }
@@ -1321,6 +1324,21 @@ export async function generateStyle(baseStyleJson, opts) {
 
   const highZoomPointLabels = [
     {
+      caseSelector: filters.is_waterfall,
+      selector: hasLocalizedName,
+      label: localizedName,
+      sublabels: [
+        {
+          selector: ["has", "height"],
+          label:  ["concat", [
+            "number-format",
+            ["/", ["to-number", ['get', 'height'], "0"], 0.3048],
+            { "max-fraction-digits": 0.1 }
+          ], " ft ↕︎"],
+        }
+      ]
+    },
+    {
       caseSelector: [
         "any",
         filters.is_peak,
@@ -1427,6 +1445,7 @@ export async function generateStyle(baseStyleJson, opts) {
           [">=", ["zoom"], 12]
         ]
       ],
+      filters.is_waterfall,
       anyThemePointFeatureExp
     ],
     "layout": {
@@ -1477,6 +1496,11 @@ export async function generateStyle(baseStyleJson, opts) {
             iconExp(feature.icon)
           ]];
         }).flat(),
+        filters.is_waterfall, iconExp({
+          file: "waterfall",
+          fill: colors.water_minor_icon,
+          halo: colors.background
+        }),
         filters.is_peak, iconExp({
           file: "triangle_up",
           fill: colors.peak
@@ -1505,6 +1529,7 @@ export async function generateStyle(baseStyleJson, opts) {
         ...themePointFeatures.filter(feature => feature.icon && !feature.icon?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]]]
         }).flat(),
+        ["any", filters.is_waterfall], ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]],
         ["any", filters.is_survey_point, filters.is_peak], ["literal", ["left", [0.5, 0], "right", [-0.5, 0]]],
         ["literal", ["center", [0, 0]]]
       ] : ["literal", ["center", [0, 0]]],
@@ -1546,9 +1571,10 @@ export async function generateStyle(baseStyleJson, opts) {
         ["any",["in", ["get", "place"], ["literal", ["city"]]],["in", ["get", "boundary"], ["literal", ["administrative"]]]], ["literal", ["Noto Sans Bold"]],
         [
           "any",
-          filters.is_peak,
           filters.is_continent,
           filters.is_landform_area_poi,
+          filters.is_peak,
+          filters.is_waterfall,
         ], ["literal", ["Noto Serif Medium Italic"]],
         [
           "any",
@@ -1582,6 +1608,7 @@ export async function generateStyle(baseStyleJson, opts) {
     "paint": {
       "text-color":[
         "case",
+        filters.is_waterfall, colors.water_minor_text,
         anyThemePointFeatureExp, colors.primary_text,
         [
           "all",
