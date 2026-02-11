@@ -1,0 +1,42 @@
+{
+  "groupType": "feature_type",
+  "features": [
+    {
+      "presets": [
+        "leisure/slipway"
+      ],
+      "access": [{
+        "keys": ["canoe", "boat", "access"],
+        "allowedByDefault": true
+      }, {
+        "keys": ["trailer"],
+        "allowedByDefault": true
+      }],
+      "showOnlyAccess": "allowed",
+      "geometry": ["vertex"],
+      "icon": "slipway-canoe-trailer"
+    },
+    {
+      "presets": [
+        "leisure/slipway"
+      ],
+      "access": [{
+        "keys": ["canoe", "boat", "access"],
+        "allowedByDefault": true
+      }],
+      "geometry": ["vertex"],
+      "icon": "slipway-canoe"
+    },
+    {
+      "presets": [
+        "waterway/access_point"
+      ],
+      "access": [{
+        "keys": ["canoe", "boat", "access"],
+        "allowedByDefault": true
+      }],
+      "geometry": ["vertex"],
+      "icon": "canoer-water"
+    }
+  ]
+}

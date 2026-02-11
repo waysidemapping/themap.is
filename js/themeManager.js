@@ -1,195 +1,143 @@
 import { colors } from './colors.js';
+import chroma from './../node_modules/chroma-js/index.js';
 
 const featureDefaultsByGroup = {
   aboriginal_lands: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.aboriginal_lands_icon,
       fill: colors.text_halo
     }
   },
   adult_amusement: {
-    icon: { 
+    iconInfo: { 
       bg_fill: "#33145e",
       fill: colors.text_halo
     }
   },
   amusement: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.amusement_icon,
       fill: colors.text_halo
     }
   },
   barriers: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.barrier_icon,
       fill: colors.text_halo
     }
   },
   bathing_water: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.swimming_pool_icon,
       fill: colors.text_halo
     }
   },
   craft: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.craft_icon,
       fill: colors.text_halo
     }
   },
   education: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.education_icon,
       fill: colors.text_halo
     }
   },
   food: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.food_icon,
       fill: colors.text_halo
     }
   },
   healthcare: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.healthcare_icon,
       fill: colors.text_halo
     }
   },
   ice: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.ice_text,
       fill: colors.text_halo
     }
   },
   indoor_lodging: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.indoor_lodging_icon,
       fill: colors.text_halo
     }
   },
   offices: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.office_icon,
       fill: colors.text_halo
     }
   },
   outdoor_recreation: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.outdoor_recreation_icon,
       fill: colors.text_halo
     }
   },
   parks: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.park_icon,
       fill: colors.text_halo
     }
   },
   plants: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.plants_icon,
       fill: colors.text_halo
     }
   },
   power: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.power_icon,
       fill: colors.text_halo
     }
   },
   religious: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.religious_icon,
       fill: colors.text_halo
     }
   },
   sports: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.outdoor_sports_facility_icon,
       fill: colors.text_halo
     }
   },
   stores: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.shop_icon,
       fill: colors.text_halo
     }
   },
   transport: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.station_icon,
       fill: colors.text_halo
     }
   },
   water: {
-    icon: { 
+    iconInfo: { 
       bg_fill: colors.water_text,
+      fill: colors.text_halo
+    }
+  },
+  hazard: {
+    disallowedAccessIconInfo: { 
+      bg_fill: colors.hazard_icon,
       fill: colors.text_halo
     }
   }
 };
 
-async function loadData() {
-
-  const themesById = {};
-
-  function addTheme(id, theme) {
-    if (themesById[id]) {
-      console.error(`Duplicate theme id ${id}`);
-    } else {
-      theme.id = id;
-      if (!theme.name) theme.name = theme.id.replaceAll('_', ' ');
-      theme.searchName = theme.name.toLowerCase()
-        // strip diacritics
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      themesById[id] = theme;
-    }
-  }
-
-  const themesByIdFromFile = await fetch('/dist/themes.json').then(response => response.json());
-  for (let id in themesByIdFromFile) {
-    if (!themesByIdFromFile[id].groupType) themesByIdFromFile[id].groupType = 'theme';
-    addTheme(id, themesByIdFromFile[id]);
-  }
-
-  const presetIdsByTag = {};
-  const presetsById = await fetch('/dist/presets.json').then(response => response.json());
-  for (let presetId in presetsById) {
-    let preset = presetsById[presetId];
-    preset.id = presetId;
-    for (const key in preset.tags) {
-      const tagString = key + '=' + preset.tags[key];
-      if (!presetIdsByTag[tagString]) presetIdsByTag[tagString] = [];
-      presetIdsByTag[tagString].push(presetId);
-    }
-    if (preset.autoTheme !== false) {
-      // id normalization needs to match those in urlController.js
-      const themeId = preset.plural
-        .replaceAll(' ', '_')
-        .toLowerCase()
-        // strip diacritics
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-      addTheme(themeId, {
-          name: preset.plural,
-          groupType: "feature_type",
-          features: [
-            {
-              presets: [presetId]
-            }
-          ]
-        });
-    }
-  }
-
-  for (let presetId in presetsById) {
-    if (!presetsById[presetId].icon) {
-      const parentIdForIcon = presetsById[presetId].parents?.find(parentId => presetsById[parentId].icon);
-      if (parentIdForIcon) presetsById[presetId].icon = presetsById[parentIdForIcon].icon;
-    }
-  }
-
-  // Collapse down features referencing foreign themes, e.g. {"themes": ["brazilian_cuisine"]}
+// Collapse down features referencing foreign themes, e.g. {"themes": ["brazilian_cuisine"]}
+function resolveForeignThemeReferences(themesById) {
   while (Object.values(themesById).some(theme => theme.features.some(feature => feature.themes))) {
     for (const id in themesById) {
       const theme = themesById[id];
@@ -219,12 +167,29 @@ async function loadData() {
       theme.features = expandedFeatures;
     }
   }
+  return themesById;
+}
 
-  for (let id in themesById) {
-    let theme = themesById[id];
+function resolvePresetReferences(themesById, presetsById) {
+  const presetIdsByTag = {};
+  for (const presetId in presetsById) {
+    const preset = presetsById[presetId];
+    for (const key in preset.tags) {
+      const tagString = key + '=' + preset.tags[key];
+      if (!presetIdsByTag[tagString]) presetIdsByTag[tagString] = [];
+      presetIdsByTag[tagString].push(presetId);
+    }
+  }
 
+  for (const id in themesById) {
+    const theme = themesById[id];
+    theme.features = getExpandedFeatures(theme);
+  }
+  return themesById;
+
+  function getExpandedFeatures(theme) {
     let expandedFeatures = [];
-    for (let i in theme.features) {
+    for (const i in theme.features) {
 
       if (!theme.features[i].presets && theme.features[i].tags) {
         let presetsMatchingAllTags = null;
@@ -243,8 +208,8 @@ async function loadData() {
       }
 
       if (theme.features[i].presets) {
-        for (let j in theme.features[i].presets) {
-          let presetId = theme.features[i].presets[j];
+        for (const j in theme.features[i].presets) {
+          const presetId = theme.features[i].presets[j];
           //if (presetId.endsWith('/')) {
             Object.keys(presetsById)
               .filter(id => id === presetId || id.startsWith(presetId + '/'))
@@ -257,47 +222,146 @@ async function loadData() {
                 delete feature.presets;
                 expandedFeatures.push(feature);
               });
-         // }
+        // }
         }
       }
-      if (theme.features[i].tags || theme.features[i].filterAccessKeys) {
+      if (theme.features[i].tags) {
         // always include the tags at the end even if we matched them to a preset, assuming the tags are more generalized
         expandedFeatures.push(theme.features[i]);
       }
     }
-    theme.features = expandedFeatures;
+    return expandedFeatures;
+  }
+}
 
-    for (let i in theme.features) {
-      let feature = theme.features[i];
-      if (typeof feature.icon === 'string') feature.icon = { file: feature.icon };
-      if (!feature.icon) feature.icon = {};
-      if (!feature.icon.bg_fill) feature.icon.bg_fill = colors.text;
-      if (!feature.icon.fill) feature.icon.fill = colors.text_halo;
-      if (feature.groups) {
-        let groupDefaults = feature.groups.map(group => featureDefaultsByGroup[group]).filter(Boolean).at(0);
-        if (groupDefaults) {
-          if (groupDefaults.icon) {
-            Object.assign(feature.icon, groupDefaults.icon);
+function loadDefaultThemeProperties(themesById) {
+
+  for (const themeId in themesById) {
+    const theme = themesById[themeId];
+    for (const i in theme.features) {
+      const feature = theme.features[i];
+      loadGroupDefaults(feature);
+      loadIconDefaults(feature);
+    }
+    loadThemeDefaults(theme);
+  }
+  return themesById;
+
+  function loadThemeDefaults(theme) {
+    if (!theme.groupType) theme.groupType = 'theme';
+
+    const sortedFeatures = theme.features.toSorted((a, b) => (a.parents?.length || 0) - (b.parents?.length || 0))
+    if (!theme.icon) {
+      theme.icon = sortedFeatures.find(feature => feature.iconInfo?.file)?.iconInfo?.file;
+    }
+    if (!theme.primaryColor) {
+      theme.primaryColor = sortedFeatures.map(feature => feature.iconInfo?.bg_fill || feature.iconInfo?.fill).filter(Boolean).at(0);
+    }
+  }
+
+  function loadGroupDefaults(feature) {
+    if (feature.groups) {
+      const groupDefaults = feature.groups.map(group => featureDefaultsByGroup[group]).filter(Boolean);
+      for (const i in groupDefaults) {
+        const defaults = groupDefaults[i];
+        for (const prop in defaults) {
+          if (!feature[prop]) {
+            feature[prop] = Object.assign({}, defaults[prop]);
           }
         }
       }
-
-      // if (feature.class !== 'minor') {
-      //   feature.icon.bg_fill = feature.icon.fill;
-      //   feature.icon.fill = colors.text_halo;
-      //   delete feature.icon.halo;
-      // }
-    }
-    let sortedFeatures = theme.features.toSorted((a, b) => (a.parents?.length || 0) - (b.parents?.length || 0))
-    if (!theme.icon) {
-      theme.icon = sortedFeatures.find(feature => feature.icon?.file)?.icon?.file;
-    }
-    if (!theme.primaryColor) {
-      theme.primaryColor = sortedFeatures.map(feature => feature.icon?.bg_fill || feature.icon?.fill).filter(Boolean).at(0);
     }
   }
+
+  function loadIconDefaults(feature) {
+    if (!feature.iconInfo) feature.iconInfo = {};
+    if (feature.icon) feature.iconInfo.file = feature.icon;
+    if (!feature.iconInfo.fill && !feature.iconInfo.bg_fill) {
+      feature.iconInfo.bg_fill = colors.text;
+      feature.iconInfo.fill = colors.text_halo;
+    }
+
+    if (!feature.disallowedAccessIconInfo) feature.disallowedAccessIconInfo = {};
+    if (!feature.disallowedAccessIconInfo.file) {
+      feature.disallowedAccessIconInfo.file = feature.iconInfo.file;
+    }
+    if (!feature.disallowedAccessIconInfo.fill && !feature.disallowedAccessIconInfo.bg_fill) {
+      if (feature.iconInfo.fill) feature.disallowedAccessIconInfo.fill = chroma.mix(feature.iconInfo.fill, "#eee", 0.5, "rgb").hex();
+      if (feature.iconInfo.bg_fill) feature.disallowedAccessIconInfo.bg_fill = chroma.mix(feature.iconInfo.bg_fill, "#eee", 0.5, "rgb").hex();
+    }
+  }
+}
+
+async function fetchPresetById() {
+  const presetsById = await fetch('/dist/presets.json')
+    .then(response => response.json());
+  for (const presetId in presetsById) {
+    const preset = presetsById[presetId];
+    preset.id = presetId;
+    if (!presetsById[presetId].icon) {
+      const parentIdForIcon = presetsById[presetId].parents?.find(parentId => presetsById[parentId].icon);
+      if (parentIdForIcon) presetsById[presetId].icon = presetsById[parentIdForIcon].icon;
+    }
+  }
+  return presetsById;
+}
+
+async function fetchThemesById() {
+
+  const themesById = {};
+
+  function addTheme(id, theme) {
+    if (themesById[id]) {
+      console.error(`Duplicate theme id ${id}`);
+    } else {
+      theme.id = id;
+      if (!theme.name) theme.name = theme.id.replaceAll('_', ' ');
+      theme.searchName = theme.name.toLowerCase()
+        // strip diacritics
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      themesById[id] = theme;
+    }
+  }
+
+  function addThemeForPreset(preset) {
+    if (preset.autoTheme === false) return;
+    
+    // id normalization needs to match those in urlController.js
+    const themeId = preset.plural
+      .replaceAll(' ', '_')
+      .toLowerCase()
+      // strip diacritics
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    addTheme(themeId, {
+      name: preset.plural,
+      groupType: "feature_type",
+      features: [
+        {
+          presets: [preset.id]
+        }
+      ]
+    });
+  }
+
+  const themesByIdFromFile = await fetch('/dist/themes.json')
+    .then(response => response.json());
+
+  for (const id in themesByIdFromFile) {
+    addTheme(id, themesByIdFromFile[id]);
+  }
+
+  const presetsById = await fetchPresetById();
+  for (const presetId in presetsById) {
+    addThemeForPreset(presetsById[presetId]);
+  }
+
+  resolveForeignThemeReferences(themesById);
+  resolvePresetReferences(themesById, presetsById);
+  loadDefaultThemeProperties(themesById);
+
   console.log(Object.keys(themesById).length + ' themes');
   return themesById;
 }
 
-export const themesPromise = loadData();
+export const themesPromise = fetchThemesById();

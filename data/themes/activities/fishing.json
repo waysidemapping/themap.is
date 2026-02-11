@@ -8,7 +8,12 @@
       ]
     },
     {
-      "filterAccessKeys": ["fishing"],
+      "tags": {
+        "fishing": "*"
+      },
+      "access": [{
+        "keys": ["fishing"]
+      }],
       "geometry": ["vertex", "point", "area"]
     },
     {

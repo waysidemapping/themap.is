@@ -1,11 +1,9 @@
-import chroma from './../node_modules/chroma-js/index.js';
 import { colors } from "./colors.js";
 
 import { registerSvg } from './svgManager.js';
 import { getSpritesheets } from './spritesheetGenerator.js';
 
 const yesAccessValsLiteral = ["literal", ["yes", "designated", "customers", "permissive", "permit", "destination"]];
-const noAccessValsLiteral = ["literal", ["no", "private", "discouraged", "limited"]]; // `limited` for `wheelchair`
 
 const filters = {
   has_bridge: [
@@ -173,7 +171,7 @@ const filters = {
     ["!", ["all", ["has", "indoor"], ["!", ["==", ["get", "indoor"], "no"]]]],
     [
       "any",
-      ["in", ["get", "amenity"], ["literal", ["place_of_worship", "monastery"]]],
+      ["in", ["get", "amenity"], ["literal", ["place_of_worship", "monastery", "grave_yard"]]],
       ["in", ["get", "landuse"], ["literal", ["cemetery"]]]
     ]
   ],
@@ -674,7 +672,7 @@ function getSublabelExpressions(items) {
   return filters;
 }
 
-function tagsExp(tags) {
+function getTagsExp(tags) {
   let exp = [];
   for (let key in tags) {
     let value = tags[key];
@@ -708,7 +706,7 @@ function tagsExp(tags) {
   }
 }
 
-function rTagsExp(tags) {
+function getRTagsExp(tags) {
   let exp = [];
   for (let key in tags) {
     let value = tags[key];
@@ -726,31 +724,60 @@ function rTagsExp(tags) {
   }
 }
 
-function expressionForFeature(feature) {
-  let exp;
-  if (feature.tags) {
-    exp = feature.geometry?.includes('relation') ? rTagsExp(feature.tags) : tagsExp(feature.tags);
-  }
-  if (feature.filterAccessKeys) {
-    let accessExp = feature.filterAccessKeys.map(key => [
-      "all",
-      ["has", key],
-      ["in", ["get", key], yesAccessValsLiteral]
-    ]);
-    if (feature.filterAccessKeys.length > 1) {
-      accessExp = ["all", ...accessExp];
-    } else {
-      accessExp = accessExp[0];
-    }
-    if (exp) {
-      if (exp.at(0) === "any") {
-        exp.push(accessExp);
-      } else {
-        exp = ["any", accessExp];
+function getAccessExp(accessInfos) {
+
+  let fullExp = [];
+  
+  for (const j in accessInfos) {
+    const accessInfo = accessInfos[j];
+    const accessKeys = accessInfo.keys;
+    const allowedByDefault = accessInfo.allowedByDefault;
+
+    let exp = [];
+  
+    for (const i in accessKeys) {
+      const accessKey = accessKeys[i];
+      let expForKey = ["in", ["get", accessKey], yesAccessValsLiteral];
+      if (allowedByDefault) {
+        expForKey = [
+          "any",
+          ["!", ["has", accessKey]],
+          expForKey
+        ];
       }
-    } else {
-      exp = accessExp;
+      const moreProminentKeys = accessKeys.slice(0, parseInt(i));
+      if (moreProminentKeys.length > 0) {
+        expForKey = [
+          "all",
+          ...moreProminentKeys.map(key => ["!", ["has", key]]),
+          expForKey
+        ];
+      }
+      exp.push(expForKey);
     }
+    if (exp.length > 1) {
+      exp.unshift("any");
+    } else {
+      exp = exp[0];
+    }
+    fullExp.push(exp);
+  }
+  if (fullExp.length > 1) {
+    fullExp.unshift("all");
+  } else {
+    fullExp = fullExp[0];
+  }
+  return fullExp;
+}
+
+function expressionForFeature(feature) {
+  let exp = feature.geometry?.includes('relation') ? getRTagsExp(feature.tags) : getTagsExp(feature.tags);
+  if (feature.access && feature.showOnlyAccess) {
+    let accessExp = getAccessExp(feature.access);
+    if (feature.showOnlyAccess === "disallowed") {
+      accessExp = ["!", accessExp];
+    }
+    exp = ["all", exp, accessExp];
   }
   return exp;
 }
@@ -1459,41 +1486,26 @@ export async function generateStyle(baseStyleJson, opts) {
           ["-", -1.6e15, ["coalesce", ["get", "c.area"], 0]],
         ["-", ["coalesce", ["get", "c.area"], 0]]
       ],
-      "icon-image": themePointFeatures.filter(feature => feature.icon).length ? [
+      "icon-image": themePointFeatures.filter(feature => feature.iconInfo).length ? [
         "case",
-        ...themePointFeatures.filter(feature => feature.icon).map(feature => {
-          let styleAccessKeys = (feature.styleAccessKeys || []).concat(['access']);
-          let noAccessExp = [];
-          for (let i in styleAccessKeys) {
-            let accessKey = styleAccessKeys[i];
-            let exp = ["in", ["get", accessKey], noAccessValsLiteral];
-            let moreProminentKeys = styleAccessKeys.slice(0, parseInt(i));
-            if (moreProminentKeys.length > 0) {
-              exp = [
-                "all",
-                ...moreProminentKeys.map(key => ["!", ["has", key]]),
-                exp
-              ];
-            }
-            noAccessExp.push(exp);
+        ...themePointFeatures.filter(feature => feature.iconInfo).map(feature => {
+
+          if (feature.showOnlyAccess === "allowed") {
+            return [feature.exp, iconExp(feature.iconInfo)];
           }
-          if (noAccessExp.length > 1) {
-            noAccessExp.unshift("any");
-          } else {
-            noAccessExp = noAccessExp[0];
+          if (feature.showOnlyAccess === "disallowed") {
+            return [feature.exp, iconExp(noAccessIcon)];
           }
-          let noAccessIcon = Object.assign({}, feature.icon);
-          if (noAccessIcon.fill) {
-            noAccessIcon.fill = chroma.mix(noAccessIcon.fill, "#eee", 0.5, "rgb").hex();
-          }
-          if (noAccessIcon.bg_fill) {
-            noAccessIcon.bg_fill = chroma.mix(noAccessIcon.bg_fill, "#eee", 0.5, "rgb").hex();
-          }
+
+          const accessInfo = feature.access || [{
+            keys: ['access'],
+            allowedByDefault: true
+          }];
+
           return [feature.exp, [
             "case",
-            noAccessExp,
-              iconExp(noAccessIcon),
-            iconExp(feature.icon)
+            getAccessExp(accessInfo), iconExp(feature.iconInfo),
+            iconExp(feature.disallowedAccessIconInfo)
           ]];
         }).flat(),
         filters.is_waterfall, iconExp({
@@ -1521,12 +1533,12 @@ export async function generateStyle(baseStyleJson, opts) {
         ],
         22, 1
       ],
-      "text-variable-anchor-offset": themePointFeatures.filter(feature => feature.icon).length ? [
+      "text-variable-anchor-offset": themePointFeatures.filter(feature => feature.iconInfo).length ? [
         "case",
-        ...themePointFeatures.filter(feature => feature.icon && feature.icon?.fill).map(feature => {
+        ...themePointFeatures.filter(feature => feature.iconInfo && feature.iconInfo?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [1.1, 0], "right", [-1.1, 0]]]]
         }).flat(),
-        ...themePointFeatures.filter(feature => feature.icon && !feature.icon?.fill).map(feature => {
+        ...themePointFeatures.filter(feature => feature.iconInfo && !feature.iconInfo?.fill).map(feature => {
           return [feature.exp, ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]]]
         }).flat(),
         ["any", filters.is_waterfall], ["literal", ["left", [0.8, 0], "right", [-0.8, 0]]],
@@ -1620,7 +1632,6 @@ export async function generateStyle(baseStyleJson, opts) {
     "paint": {
       "text-color":[
         "case",
-        filters.is_waterfall, colors.water_minor_text,
         anyThemePointFeatureExp, colors.primary_text,
         [
           "all",
@@ -1630,6 +1641,7 @@ export async function generateStyle(baseStyleJson, opts) {
         ...structures.filter(info => info.text_color).toReversed().map(info => [info.filter, info.text_color]).flat(),
         ...landuses.filter(info => info.text_color).toReversed().map(info => [info.filter, info.text_color]).flat(),
         filters.is_water_area_poi, colors.water_text,
+        filters.is_waterfall, colors.water_minor_text,
         colors.text
       ],
       "text-halo-color": colors.text_halo,

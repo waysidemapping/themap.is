@@ -8,7 +8,12 @@
       ]
     },
     {
-      "filterAccessKeys": ["hunting"],
+      "tags": {
+        "hunting": "*"
+      },
+      "access": [{
+        "keys": ["hunting"]
+      }],
       "geometry": ["vertex", "point", "area"]
     },
     {

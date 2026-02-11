@@ -3,29 +3,50 @@
   "features": [
     {
       "themes": [
+        "canoe_launches"
+      ]
+    },
+    {
+      "themes": [
         "dams"
+      ],
+      "access": [{
+        "keys": ["canoe"]
+      }],
+      "groups": [
+        "water",
+        "hazard"
+      ]
+    },
+    {
+      "presets": [
+        "waterway/waterfall"
+      ],
+      "access": [{
+        "keys": ["canoe"]
+      }],
+      "groups": [
+        "hazard"
       ]
     },
     {
       "presets": [
         "natural/water/lock"
       ],
-      "styleAccessKeys": ["canoe"],
+      "access": [{
+        "keys": ["canoe"]
+      }],
       "geometry": ["area"]
-    },
-    {
-      "themes": [
-        "waterway_access"
-      ],
-      "styleAccessKeys": ["canoe"],
-      "geometry": ["vertex"]
     },
     {
       "tags": {
         "waterway": "*",
         "canoe": "*"
       },
-      "filterAccessKeys": ["canoe"],
+      "access": [{
+        "keys": ["canoe"]
+      }],
+      "showOnlyAccess": "allowed",
       "geometry": ["line"]
     },
     {
@@ -33,7 +54,10 @@
         "highway": "*",
         "portage": "*"
       },
-      "filterAccessKeys": ["portage"],
+      "access": [{
+        "keys": ["portage"]
+      }],
+      "showOnlyAccess": "allowed",
       "geometry": ["line"]
     }
   ],
