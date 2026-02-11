@@ -91,6 +91,7 @@ export const colors = {
   watercourse_stroke: "#D4EEFF",
   watercourse_tunnel_stroke: "#C8E0F0",
   water_fill: "#D4EEFF",
+  intermittent_water_fill: "#eaf7ff",
   water_outline: "#BFD3E0",
   water_minor_icon: "#64899e",
   water_minor_text: "#52748a",

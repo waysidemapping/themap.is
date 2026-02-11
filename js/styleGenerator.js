@@ -204,6 +204,12 @@ const filters = {
     ["==", ["get", "natural"], "water"],
     ["<=", ["to-number", ["get", "layer"], "0"], 0]
   ],
+  is_water_surface_intermittent: [
+    "all",
+    ["==", ["get", "intermittent"], "yes"],
+    ["==", ["get", "natural"], "water"],
+    ["<=", ["to-number", ["get", "layer"], "0"], 0]
+  ],
   is_watercourse: ["in", ["get", "waterway"], ["literal", ["canal", "ditch", "drain", "fish_pass", "river", "stream", "tidal_channel"]]],
   is_waterfall: ["==", ["get", "waterway"], "waterfall"],
 };
@@ -284,6 +290,12 @@ const landuses = [
   {
     filter: filters.is_water_coastal,
     fill_color: colors.water_fill,
+    high_zoom: true
+  },
+  {
+    filter: filters.is_water_surface_intermittent,
+    fill_color: colors.intermittent_water_fill,
+    outline_color: colors.water_outline,
     high_zoom: true
   },
   {
@@ -852,6 +864,11 @@ export async function generateStyle(baseStyleJson, opts) {
   // ];
 
   const structures = [
+    {
+      filter: filters.is_water_surface_intermittent,
+      fill_color: colors.intermittent_water_fill,
+      outline_color: colors.water_outline
+    },
     {
       filter: filters.is_water_structure,
       fill_color: colors.water_fill,
