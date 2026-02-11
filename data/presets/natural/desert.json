@@ -1,0 +1,11 @@
+{
+    "name": "desert",
+    "plural": "deserts",
+    "tags": {
+        "natural": "desert"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ]
+}

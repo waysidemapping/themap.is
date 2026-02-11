@@ -1,0 +1,12 @@
+{
+    "name": "mountain range",
+    "plural": "mountain ranges",
+    "tags": {
+        "natural": "mountain_range"
+    },
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "icon": "mountain_range"
+}
