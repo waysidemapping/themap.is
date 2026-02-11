@@ -1499,7 +1499,7 @@ export async function generateStyle(baseStyleJson, opts) {
         filters.is_waterfall, iconExp({
           file: "waterfall",
           fill: colors.water_minor_icon,
-          halo: colors.background
+          halo: colors.text_halo
         }),
         filters.is_peak, iconExp({
           file: "triangle_up",
@@ -1533,12 +1533,13 @@ export async function generateStyle(baseStyleJson, opts) {
         ["any", filters.is_survey_point, filters.is_peak], ["literal", ["left", [0.5, 0], "right", [-0.5, 0]]],
         ["literal", ["center", [0, 0]]]
       ] : ["literal", ["center", [0, 0]]],
-      "text-size":[
+      "text-size": [
         "case",
+        anyThemePointFeatureExp, 10.5,
         [
           "any",
-          filters.is_ice,
           filters.is_continent,
+          filters.is_ice,
           filters.is_landform_area_poi,
           filters.is_water_area_poi
         ], 10,
@@ -1546,6 +1547,7 @@ export async function generateStyle(baseStyleJson, opts) {
       ],
       "text-transform":[
         "case",
+        anyThemePointFeatureExp, "none",
         [
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
@@ -1553,8 +1555,8 @@ export async function generateStyle(baseStyleJson, opts) {
         ], "uppercase",
         [
           "any",
-          filters.is_ice,
           filters.is_continent,
+          filters.is_ice,
           filters.is_landform_area_poi,
           filters.is_water_area_poi
         ], "uppercase",
@@ -1566,9 +1568,18 @@ export async function generateStyle(baseStyleJson, opts) {
         [
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
-          ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
+          ["in", ["get", "admin_level"], ["literal", ["2"]]]
+        ], ["literal", ["Noto Sans Bold"]],
+        [
+          "all",
+          ["in", ["get", "boundary"], ["literal", ["administrative"]]],
+          ["in", ["get", "admin_level"], ["literal", ["4"]]]
         ], ["literal", ["Noto Sans Medium"]],
-        ["any",["in", ["get", "place"], ["literal", ["city"]]],["in", ["get", "boundary"], ["literal", ["administrative"]]]], ["literal", ["Noto Sans Bold"]],
+        [
+          "any",
+          ["in", ["get", "place"], ["literal", ["city"]]],
+          ["in", ["get", "boundary"], ["literal", ["administrative"]]]
+        ], ["literal", ["Noto Sans SemiBold"]],
         [
           "any",
           filters.is_continent,
@@ -1585,6 +1596,7 @@ export async function generateStyle(baseStyleJson, opts) {
       ],
       "text-letter-spacing":[
         "case",
+        anyThemePointFeatureExp, 0,
         [
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
@@ -1614,7 +1626,7 @@ export async function generateStyle(baseStyleJson, opts) {
           "all",
           ["in", ["get", "boundary"], ["literal", ["administrative"]]],
           ["in", ["get", "admin_level"], ["literal", ["2", "4"]]]
-        ], colors.admin_boundary_major_text,
+        ], colors.text,
         ...structures.filter(info => info.text_color).toReversed().map(info => [info.filter, info.text_color]).flat(),
         ...landuses.filter(info => info.text_color).toReversed().map(info => [info.filter, info.text_color]).flat(),
         filters.is_water_area_poi, colors.water_text,
