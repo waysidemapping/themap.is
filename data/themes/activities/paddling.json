@@ -3,11 +3,6 @@
   "features": [
     {
       "themes": [
-        "canoe_launches"
-      ]
-    },
-    {
-      "themes": [
         "dams"
       ],
       "access": [{
@@ -17,6 +12,17 @@
         "water",
         "hazard"
       ]
+    },
+    {
+      "themes": [
+        "canoe_launches"
+      ]
+    },
+    {
+      "themes": [
+        "water_level_monitoring"
+      ],
+      "icon": "antenna"
     },
     {
       "presets": [
