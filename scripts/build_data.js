@@ -62,7 +62,7 @@ function checkPreset(id, json) {
 
   if (json.icon) {
     if (!fs.existsSync(`icons/${json.icon}.svg`)) {
-      console.log(`🛑 Missing icon file "${json.icon}.svg" for ${id}`);
+      console.log(`🛑 Missing icon file "${json.icon}.svg" for ./data/presets/${id}.json`);
       return false;
     }
   }
