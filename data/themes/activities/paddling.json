@@ -14,18 +14,6 @@
       ]
     },
     {
-      "themes": [
-        "canoe_launches"
-      ]
-    },
-    {
-      "themes": [
-        "water_level_monitoring"
-      ],
-      "class": "minor",
-      "icon": "circle_pinwheel"
-    },
-    {
       "presets": [
         "waterway/waterfall"
       ],
@@ -35,6 +23,19 @@
       "groups": [
         "hazard"
       ]
+    },
+    {
+      "themes": [
+        "canoe_launches",
+        "camping"
+      ]
+    },
+    {
+      "themes": [
+        "water_level_monitoring"
+      ],
+      "class": "minor",
+      "icon": "circle_pinwheel"
     },
     {
       "presets": [
