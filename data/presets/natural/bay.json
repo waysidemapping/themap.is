@@ -9,7 +9,6 @@
     },
     "geometry": [
         "point",
-        "line",
         "area"
     ],
     "terms": [
