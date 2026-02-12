@@ -12,5 +12,6 @@
         "dive guide",
         "mountain guide",
         "tour guide"
-    ]
+    ],
+    "icon": "people-pointer"
 }
