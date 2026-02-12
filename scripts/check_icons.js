@@ -130,9 +130,9 @@ function checkIcons() {
       // Checks for deeper levels
       } else {
         // convert ellipses to paths
-        if (node.nodeName === 'ellipse') {
+        if (node.nodeName === 'ellipse' || node.nodeName === 'circle') {
           const attr = (name) => parseFloat(node.getAttribute(name));
-          pathDataToAdd.add(ellipseAttrsToPathD(attr('rx'), attr('cx'), attr('ry'), attr('cy')));
+          pathDataToAdd.add(ellipseAttrsToPathD(attr('rx') || attr('r'), attr('cx'), attr('ry') || attr('r'), attr('cy')));
           childrenToRemove.add(child);
           return;
         // convert rects to paths
