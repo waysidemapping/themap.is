@@ -1,0 +1,17 @@
+{
+    "name": "massif",
+    "plural": "massifs",
+    "autoTheme": false,
+    "tags": {
+        "natural": "massif"
+    },
+    "geometry": [
+        "vertex",
+        "point",
+        "line"
+    ],
+    "terms": [
+        "mountain"
+    ],
+    "icon": "mountain"
+}
