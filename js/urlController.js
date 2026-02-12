@@ -4,12 +4,18 @@ import { themesPromise } from "./themeManager.js";
 const defaultThemeIds = ['parks', 'restaurants'];
 
 function updateUrlForApp() {
-  let themeId = state.theme?.id || '';
-  let desiredPathname = '/' + encodeURI(themeId);
+  const themeId = state.theme?.id || '';
+  const desiredPathname = '/' + encodeURI(themeId);
   const url = new URL(window.location.href);
   if (url.pathname !== desiredPathname) {
-    url.pathname = encodeURI(desiredPathname);
+    url.pathname = desiredPathname;
     history.replaceState({}, "", url);
+  }
+
+  const themeName = state.theme?.name ? state.theme.name + ' ' : '';
+  const desiredTitle = `the map is ${themeName}by Wayside Mapping`;
+  if (document.title !== desiredTitle) {
+    document.title = desiredTitle;
   }
 }
 
