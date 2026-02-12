@@ -1,0 +1,8 @@
+{
+    "name": "fire extinguisher",
+    "plural": "fire extinguishers",
+    "tags": {
+        "emergency": "fire_extinguisher"
+    },
+    "icon": "fire_extinguisher"
+}
