@@ -22,7 +22,8 @@
       "themes": [
         "water_level_monitoring"
       ],
-      "icon": "antenna"
+      "class": "minor",
+      "icon": "circle_pinwheel"
     },
     {
       "presets": [

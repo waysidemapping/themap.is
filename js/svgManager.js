@@ -142,10 +142,16 @@ function buildSvg(svgString, opts) {
     string = string.replace(/<\/svg>/, `${haloPathsString}\n</svg>`);
 
     const borderD = rectToPath(x, y, w, h);
-    const allPathsD = [...iconPaths.join('').matchAll(/<path\b[^>]*\bd="([^"]*)"/gi)].map(match => match[1]).join(' ');
-      // we need to collapse all the paths, plus the border, into a single path in order for the clip-rule to work
-    const clipPathInnerString = `<path clip-rule="evenodd" d="${borderD} ${allPathsD}"/>`;
+    const allPathsDs = [...iconPaths.join('').matchAll(/<path\b[^>]*\bd="([^"]*)"/gi)].map(match => match[1]);
+    
+    // Collapse all the paths, plus the border, into a single path in order for the clip-rule to work
+    const clipPathInnerString = `<path clip-rule="evenodd" d="${borderD} ${allPathsDs.join('')}"/>`;
     string = string.replace(/<\/svg>/, `<clipPath id="halo">${clipPathInnerString}</clipPath></svg>`);
+
+    // Fill in any inner rings with the halo color, with the assumption that we don't want a "windowframe" effect
+    const allDRings = allPathsDs.map(d => d.match(/M[\s\S]*?Z/gi) || []).flat();
+    const occlusionPaths = allDRings.map(d => `<path fill="${opts.halo}" d="${d}"/>`).join('\n');
+    string = string.replace(/(<svg\b[^>]*>)/i, `$1\n${occlusionPaths}`);
   }
   if (opts.bg_fill) {
     let bgRect = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="4" fill="${opts.bg_fill}"/>`;

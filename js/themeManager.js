@@ -281,6 +281,12 @@ function loadDefaultThemeProperties(themesById) {
       feature.iconInfo.fill = colors.text_halo;
     }
 
+    if (feature.class === "minor" && feature.iconInfo.bg_fill) {
+      feature.iconInfo.halo = feature.iconInfo.fill || colors.text_halo;
+      feature.iconInfo.fill = feature.iconInfo.bg_fill;
+      delete feature.iconInfo.bg_fill;
+    }
+
     if (!feature.disallowedAccessIconInfo) feature.disallowedAccessIconInfo = {};
     if (!feature.disallowedAccessIconInfo.file) {
       feature.disallowedAccessIconInfo.file = feature.iconInfo.file;
