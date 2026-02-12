@@ -126,7 +126,7 @@ const filters = {
   is_landform_area_poi: [
     "any",
     ["in", ["get", "place"], ["literal", ["island", "islet", "archipelago"]]],
-    ["in", ["get", "natural"], ["literal", ["desert", "gorge", "massif", "mountain_range", "peninsula", "valley"]]]
+    ["in", ["get", "natural"], ["literal", ["desert", "gorge", "massif", "mountain_range", "peninsula", "valley", "volcano"]]]
   ],
   is_maritime_park: [
     "all",
