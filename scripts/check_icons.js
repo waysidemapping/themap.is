@@ -2,8 +2,8 @@
 // https://github.com/rapideditor/temaki/blob/49b592fdc0840ff20052affa20677da5ddd0f809/scripts/check.js
 
 import chalk from 'chalk';
-import path from 'path';
-import fs from 'node:fs';
+import { parse } from 'path';
+import { globSync, writeFileSync, readFileSync } from 'fs';
 import svgPathParse from 'svg-path-parse';
 import xmlbuilder2 from 'xmlbuilder2';
 
@@ -68,8 +68,8 @@ function checkIcons() {
   const iconIds = {};
   const iconIdParts = {};
 
-  fs.globSync(`./icons/**/*.svg`).forEach(file => {
-    const contents = fs.readFileSync(file, 'utf8');
+  globSync(`./icons/**/*.svg`).forEach(file => {
+    const contents = readFileSync(file, 'utf8');
     let xml;
     try {
       xml = xmlbuilder2.create(contents);
@@ -80,7 +80,7 @@ function checkIcons() {
       process.exit(1);
     }
 
-    const id = path.parse(file).name;
+    const id = parse(file).name;
     iconIds[id] = true;
     const parts = id.split('-');
     if (parts[0] !== id) parts.forEach(part => iconIdParts[part] = true);
@@ -218,7 +218,7 @@ function checkIcons() {
       console.warn('');
     }
 
-    fs.writeFileSync(file, xml.end({ prettyPrint: true }));
+    writeFileSync(file, xml.end({ prettyPrint: true }));
 
   });
 
