@@ -1,0 +1,23 @@
+{
+    "name": "axe throwing center",
+    "plural": "axe throwing centers",
+    "groups": [
+        "sports"
+    ],
+    "tags": {
+        "leisure": "sports_centre",
+        "sport": "axe_throwing"
+    },
+    "reference": {
+        "key": "sport",
+        "value": "axe_throwing"
+    },
+    "geometry": [
+        "area",
+        "point"
+    ],
+    "terms": [
+        "hatchet"
+    ],
+    "icon": "axe"
+}
