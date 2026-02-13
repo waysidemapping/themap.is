@@ -14,7 +14,7 @@
       }],
       "showOnlyAccess": "allowed",
       "geometry": ["vertex"],
-      "icon": "slipway-canoe-trailer"
+      "icon": "canoe-trailer-ramp-water"
     },
     {
       "presets": [
@@ -25,7 +25,7 @@
         "allowedByDefault": true
       }],
       "geometry": ["vertex"],
-      "icon": "slipway-canoe"
+      "icon": "canoe-ramp-water"
     },
     {
       "presets": [
