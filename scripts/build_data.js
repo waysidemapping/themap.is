@@ -61,7 +61,7 @@ function checkPreset(id, json) {
   }
 
   if (json.icon) {
-    if (!fs.existsSync(`icons/${json.icon}.svg`)) {
+    if (!fs.existsSync(`dist/icons/${json.icon}.svg`)) {
       console.log(`🛑 Missing icon file "${json.icon}.svg" for ./data/presets/${id}.json`);
       return false;
     }
@@ -134,7 +134,7 @@ function addDerivedDataToPreset(id, json) {
 function checkTheme(id, json) {
 
   if (json.icon) {
-    if (!fs.existsSync(`icons/${json.icon}.svg`)) {
+    if (!fs.existsSync(`dist/icons/${json.icon}.svg`)) {
       console.log(`🛑 Missing icon file "${json.icon}.svg" for ${id}`);
       return false;
     }

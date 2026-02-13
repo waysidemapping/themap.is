@@ -45,7 +45,7 @@ export function registerSvg(opts) {
 
 function fetchSvgFile(file) {
   if (!fetchPromisesByUrl[file]) {
-    fetchPromisesByUrl[file] = file ? fetch('/icons/' + file + '.svg')
+    fetchPromisesByUrl[file] = file ? fetch('/dist/icons/' + file + '.svg')
       .then(resp => resp.text())
       .then(svgString => {
         const svgInfo = getSvgDimensions(svgString);
