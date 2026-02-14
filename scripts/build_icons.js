@@ -2,7 +2,7 @@
 import { existsSync, rmSync, mkdirSync, readdirSync, copyFileSync } from 'fs';
 import { join, basename, extname } from 'path';
 
-const sourceDir = './icons';
+const sourceDir = './pinhead-map-icons/svg';
 const targetDir = './dist/icons';
 
 function ensureEmptyDir(dir) {
