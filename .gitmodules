@@ -1,4 +1,0 @@
-[submodule "pinhead-map-icons"]
-	path = pinhead-map-icons
-	url = https://github.com/waysidemapping/pinhead-map-icons
-	branch = main

@@ -11,6 +11,6 @@
         "shop building",
         "store building"
     ],
-    "icon": "building_commercial",
+    "icon": "commercial_building",
     "matchScore": 0.5
 }

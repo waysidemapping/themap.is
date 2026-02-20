@@ -8,6 +8,6 @@
         "parking spot",
         "parking stall"
     ],
-    "icon": "parking_space",
+    "icon": "parking_stall_markings",
     "matchScore": 0.95
 }

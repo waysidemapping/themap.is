@@ -147,6 +147,12 @@ function checkTheme(id, json) {
 
   for (let i in json.features) {
     let featuresJson = json.features[i];
+    if (featuresJson.icon) {
+      if (!fs.existsSync(`dist/icons/${featuresJson.icon}.svg`)) {
+        console.log(`🛑 Missing icon file "${featuresJson.icon}.svg" specified in theme ${id}`);
+        return false;
+      }
+    }
     if (featuresJson.tags) {
       for (let key in featuresJson.tags) {
         if (!knownKeys.includes(key) && !key.match(prefixRegex)) {

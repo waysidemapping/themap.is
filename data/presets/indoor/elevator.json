@@ -13,6 +13,6 @@
         "elevator",
         "lift"
     ],
-    "icon": "elevator",
+    "icon": "elevator_rider",
     "matchScore": 0.8
 }

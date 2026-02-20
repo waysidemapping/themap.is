@@ -1535,7 +1535,7 @@ export async function generateStyle(baseStyleJson, opts) {
           fill: colors.peak
         }),
         filters.is_survey_point, iconExp({
-          file: "plus_thin_short",
+          file: "plus_squat",
           fill: colors.text
         }),
         ["image", ""]

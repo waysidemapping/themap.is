@@ -36,7 +36,7 @@ export const header = createElement('div')
               .setAttribute('class', 'icon')
               .setAttribute('style', "width:15px;height:15px;")
               .append(
-                parser.parseFromString((await getSvg({file: 'ellipsis', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+                parser.parseFromString((await getSvg({file: 'three_dot_horizontal_line', fill: 'currentColor'})).string, "image/svg+xml").documentElement
               ),
             closeIcon = createElement('div')
               .setAttribute('class', 'icon')
@@ -68,7 +68,7 @@ async function reload() {
       .setAttribute('class', 'icon')
       .setAttribute('style', "width:8px;height:8px;font-size:0.5em;")
       .append(
-        parser.parseFromString((await getSvg({file: 'triangle_isosceles_down_rounded', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+        parser.parseFromString((await getSvg({file: 'triangle_down_squat', fill: 'currentColor'})).string, "image/svg+xml").documentElement
       )
   );
   updateForInspectorOpen();

@@ -20,6 +20,6 @@
         "kerb ramp",
         "pram ramp"
     ],
-    "icon": "kerb_lowered",
+    "icon": "kerb_lowered_under_shoe",
     "matchScore": 0.55
 }

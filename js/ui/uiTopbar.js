@@ -22,7 +22,7 @@ export const topbar = createElement('div')
               .setAttribute('class', 'icon')
               .setAttribute('style', "width:12px;height:12px;")
               .append(
-                new DOMParser().parseFromString((await getSvg({file: 'pencil-square', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+                new DOMParser().parseFromString((await getSvg({file: 'pencil_bottom_left_to_square_outline', fill: 'currentColor'})).string, "image/svg+xml").documentElement
               ),
             createElement('span')
               .append('Edit')
@@ -36,7 +36,7 @@ export const topbar = createElement('div')
               .setAttribute('class', 'icon')
               .setAttribute('style', "width:12px;height:12px;")
               .append(
-                new DOMParser().parseFromString((await getSvg({file: 'arrow_top_right-square', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+                new DOMParser().parseFromString((await getSvg({file: 'arrow_top_right_from_square_outline', fill: 'currentColor'})).string, "image/svg+xml").documentElement
               ),
             createElement('span')
               .append('Open In…')
@@ -77,7 +77,7 @@ export const topbar = createElement('div')
           .setAttribute('class', 'icon')
           .setAttribute('style', "width:12px;height:12px;")
           .append(
-            new DOMParser().parseFromString((await getSvg({file: 'arrow_up-rect', fill: 'currentColor'})).string, "image/svg+xml").documentElement
+            new DOMParser().parseFromString((await getSvg({file: 'arrow_up_from_down_bracket', fill: 'currentColor'})).string, "image/svg+xml").documentElement
           ),
         shareButtonLabel = createElement('span')
               .append('Share')

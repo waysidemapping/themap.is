@@ -18,6 +18,6 @@
         "level curb",
         "tactile curb"
     ],
-    "icon": "kerb_flush",
+    "icon": "kerb_flush_under_shoe",
     "matchScore": 0.55
 }

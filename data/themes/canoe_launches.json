@@ -14,7 +14,7 @@
       }],
       "showOnlyAccess": "allowed",
       "geometry": ["vertex"],
-      "icon": "canoe-trailer-ramp-water"
+      "icon": "canoe_on_trailer_on_ramp_on_water"
     },
     {
       "presets": [
@@ -25,7 +25,7 @@
         "allowedByDefault": true
       }],
       "geometry": ["vertex"],
-      "icon": "canoe-ramp-water"
+      "icon": "canoe_on_ramp_on_water"
     },
     {
       "presets": [
@@ -36,7 +36,7 @@
         "allowedByDefault": true
       }],
       "geometry": ["vertex"],
-      "icon": "hand_launch-raft-water"
+      "icon": "person_on_ground_dragging_raft_to_water"
     }
   ]
 }

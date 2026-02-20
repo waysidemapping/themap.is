@@ -35,7 +35,7 @@
         "water_level_monitoring"
       ],
       "class": "minor",
-      "icon": "circle_pinwheel"
+      "icon": "circle_outline_with_top_left_quarter_and_bottom_right_quarter"
     },
     {
       "presets": [
@@ -69,5 +69,5 @@
       "geometry": ["line"]
     }
   ],
-  "icon": "canoer-water"
+  "icon": "person_paddling_canoe_on_water"
 }

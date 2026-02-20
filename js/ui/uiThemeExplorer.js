@@ -26,7 +26,7 @@ export const themeExplorer = createElement('div')
           createElement('img')
             .setAttribute('class', 'icon')
             .setAttribute('style', "width:15px;height:15px;")
-            .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg({file: 'magnifying_glass', fill: '#666'})).string)}`),
+            .setAttribute('src', `data:image/svg+xml;utf8,${encodeURIComponent((await getSvg({file: 'magnifying_glass_for_search_ui', fill: '#666'})).string)}`),
           searchInput = createElement('input')
             .setAttribute('class', 'search')
             .setAttribute('type', 'search')
