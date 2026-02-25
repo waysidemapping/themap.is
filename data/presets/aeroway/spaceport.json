@@ -15,5 +15,6 @@
         "rocket launch site",
         "rocket range",
         "space port"
-    ]
+    ],
+    "icon": "rocketship"
 }
