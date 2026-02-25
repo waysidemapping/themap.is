@@ -12,6 +12,6 @@
         "transit",
         "transportation"
     ],
-    "icon": "local_transit_vehicle",
+    "icon": "transit_vehicle_with_destination_display",
     "matchScore": 0.2
 }
