@@ -9,9 +9,9 @@
         "build_icons": "cp -rf node_modules/@waysidemapping/pinhead/dist/icons dist/icons"
     },
     "dependencies": {
-        "@waysidemapping/pinhead": "15.15.0",
+        "@waysidemapping/pinhead": "15.16.0",
         "chroma-js": "^3.2.0",
-        "maplibre-gl": "~5.20.0",
+        "maplibre-gl": "~5.20.1",
         "potpack": "~2.1.0"
     }
 }
