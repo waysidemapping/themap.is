@@ -710,7 +710,7 @@ function getRTagsExp(tags) {
     if (value === '*') {
       exp.push(["has", `r.${key}`]);
     } else {
-      exp.push(["in", `${value}`, ["split", ["coalesce", ["get", `r.${key}`], ""], "┃"]]);
+      exp.push(["in", value, ["split", ["coalesce", ["get", `r.${key}`], ""], "┃"]]);
     }
   }
   if (exp.length === 1) {
