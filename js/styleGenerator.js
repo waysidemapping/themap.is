@@ -691,23 +691,7 @@ function getTagsExp(tags) {
     if (value === '*') {
       exp.push(["has", key]);
     } else {
-      exp.push(
-        [
-          "all",
-          ["has", key],
-          [
-            "any",
-            // check if exact match (one item in list)
-            ["==", ["get", key], value],
-            // check if item is listed between others
-            ["in", `;${value};`, ["get", key]],
-            // check if item is first in list
-            ["==", ["slice", ["get", key], 0, ["length", `${value};`]], `${value};`],
-            // check if item is last in list
-            ["==", ["slice", ["get", key], ["-", ["length", ["get", key]], ["length", `;${value}`]]], `;${value}`]
-          ]
-        ]
-      );
+      exp.push(["in", value, ["split", ["get", key], ";"]]);
     }
   }
   if (exp.length === 1) {
