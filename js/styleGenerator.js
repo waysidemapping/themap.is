@@ -80,8 +80,8 @@ const filters = {
     ["has", "highway"],
     [
       "any",
-      ["in", "┃hiking┃", ["get", "r.route"]],
-      ["in", "┃foot┃", ["get", "r.route"]]
+      ["in", "hiking", ["split", ["get", "r.route"], "┃"]],
+      ["in", "foot", ["split", ["get", "r.route"], "┃"]],
     ]
   ],
   is_parking_lot: [
@@ -446,7 +446,7 @@ const lineLayer = {
       [
         "any",
         [">=", ["zoom"], 12],
-        ["in", "┃road┃", ["get", "r.route"]]
+        ["in", "road", ["split", ["get", "r.route"], "┃"]]
       ]
     ],
     filters.is_watercourse,
@@ -725,7 +725,7 @@ function getRTagsExp(tags) {
     if (value === '*') {
       exp.push(["has", `r.${key}`]);
     } else {
-      exp.push(["in", `┃${value}┃`, ["get", `r.${key}`]]);
+      exp.push(["in", `${value}`, ["split", ["get", `r.${key}`], "┃"]]);
     }
   }
   if (exp.length === 1) {
@@ -1233,13 +1233,13 @@ export async function generateStyle(baseStyleJson, opts) {
     "type": "line",
     "filter": [
         "all",
-        ["in", "┃administrative┃", ["get", "r.boundary"]],
+        ["in", "administrative", ["split", ["get", "r.boundary"], "┃"]],
         [
           "any",
-          ["in", "┃2┃", ["get", "r.admin_level"]],
-          ["in", "┃4┃", ["get", "r.admin_level"]],
-          ["in", "┃6┃", ["get", "r.admin_level"]],
-          ["in", "┃8┃", ["get", "r.admin_level"]]
+          ["in", "2", ["split", ["get", "r.admin_level"], "┃"]],
+          ["in", "4", ["split", ["get", "r.admin_level"], "┃"]],
+          ["in", "6", ["split", ["get", "r.admin_level"], "┃"]],
+          ["in", "8", ["split", ["get", "r.admin_level"], "┃"]]
         ],
         ["!", ["==", ["get", "maritime"], "yes"]]
     ],
@@ -1250,10 +1250,10 @@ export async function generateStyle(baseStyleJson, opts) {
         "case",
         [
           "any",
-          ["in", "┃6┃", ["get", "r.admin_level"]],
-          ["in", "┃8┃", ["get", "r.admin_level"]]
+          ["in", "6", ["split", ["get", "r.admin_level"], "┃"]],
+          ["in", "8", ["split", ["get", "r.admin_level"], "┃"]]
         ], 2,
-        ["in", "┃4┃", ["get", "r.admin_level"]], 2.5,
+        ["in", "4", ["split", ["get", "r.admin_level"], "┃"]], 2.5,
         3
       ]
     }
@@ -1265,13 +1265,13 @@ export async function generateStyle(baseStyleJson, opts) {
     "type": "line",
     "filter": [
       "all",
-      ["in", "┃administrative┃", ["get", "r.boundary"]],
+      ["in", "administrative", ["split", ["get", "r.boundary"], "┃"]],
       [
         "any",
-        ["in", "┃2┃", ["get", "r.admin_level"]],
-        ["in", "┃4┃", ["get", "r.admin_level"]],
-        ["in", "┃6┃", ["get", "r.admin_level"]],
-        ["in", "┃8┃", ["get", "r.admin_level"]]
+        ["in", "2", ["split", ["get", "r.admin_level"], "┃"]],
+        ["in", "4", ["split", ["get", "r.admin_level"], "┃"]],
+        ["in", "6", ["split", ["get", "r.admin_level"], "┃"]],
+        ["in", "8", ["split", ["get", "r.admin_level"], "┃"]]
       ],
       ["!", ["==", ["get", "maritime"], "yes"]]
     ],
@@ -1279,14 +1279,14 @@ export async function generateStyle(baseStyleJson, opts) {
       "line-color": colors.admin_boundary_stroke,
       "line-width": [
         "case",
-        ["in", "┃2┃", ["get", "r.admin_level"]], 1.75,
-        ["in", "┃4┃", ["get", "r.admin_level"]], 1.5,
+        ["in", "2", ["split", ["get", "r.admin_level"], "┃"]], 1.75,
+        ["in", "4", ["split", ["get", "r.admin_level"], "┃"]], 1.5,
         1
       ],
       "line-dasharray": [
         "case",
-        ["in", "┃2┃", ["get", "r.admin_level"]], ["literal", [10, 1, 2, 1]],
-        ["in", "┃4┃", ["get", "r.admin_level"]], ["literal", [6, 1, 2, 1, 2, 1]],
+        ["in", "2", ["split", ["get", "r.admin_level"], "┃"]], ["literal", [10, 1, 2, 1]],
+        ["in", "4", ["split", ["get", "r.admin_level"], "┃"]], ["literal", [6, 1, 2, 1, 2, 1]],
         ["literal", [6, 3, 3, 3]]
       ]
     }
