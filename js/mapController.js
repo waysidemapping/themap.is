@@ -223,7 +223,7 @@ function keyValueMapForFeatures(features) {
       if (typeof rawValue === 'string') {
         let values = rawValue.split('┃').filter(Boolean).map(value => value.split(';')).flat();
         for (let j in values) {
-          let kv = key + '=' +  values[j];
+          let kv = key + '=' + values[j];
           if (!featuresByKeyValue[kv]) {
             featuresByKeyValue[kv] = new Set([featureId]);
           } else {
