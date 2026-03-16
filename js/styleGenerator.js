@@ -78,6 +78,7 @@ const filters = {
   is_foot_route: [
     "all",
     ["has", "highway"],
+    ["has", "r.route"],
     [
       "any",
       ["in", "hiking", ["split", ["get", "r.route"], "┃"]],
@@ -446,7 +447,7 @@ const lineLayer = {
       [
         "any",
         [">=", ["zoom"], 12],
-        ["in", "road", ["split", ["get", "r.route"], "┃"]]
+        ["in", "road", ["split", ["coalesce", ["get", "r.route"], ""], "┃"]]
       ]
     ],
     filters.is_watercourse,
@@ -691,7 +692,7 @@ function getTagsExp(tags) {
     if (value === '*') {
       exp.push(["has", key]);
     } else {
-      exp.push(["in", value, ["split", ["get", key], ";"]]);
+      exp.push(["in", value, ["split", ["coalesce", ["get", key], ""], ";"]]);
     }
   }
   if (exp.length === 1) {
@@ -709,7 +710,7 @@ function getRTagsExp(tags) {
     if (value === '*') {
       exp.push(["has", `r.${key}`]);
     } else {
-      exp.push(["in", `${value}`, ["split", ["get", `r.${key}`], "┃"]]);
+      exp.push(["in", `${value}`, ["split", ["coalesce", ["get", `r.${key}`], ""], "┃"]]);
     }
   }
   if (exp.length === 1) {
@@ -1217,6 +1218,8 @@ export async function generateStyle(baseStyleJson, opts) {
     "type": "line",
     "filter": [
         "all",
+        ["has", "r.boundary"],
+        ["has", "r.admin_level"],
         ["in", "administrative", ["split", ["get", "r.boundary"], "┃"]],
         [
           "any",
@@ -1249,6 +1252,8 @@ export async function generateStyle(baseStyleJson, opts) {
     "type": "line",
     "filter": [
       "all",
+      ["has", "r.boundary"],
+      ["has", "r.admin_level"],
       ["in", "administrative", ["split", ["get", "r.boundary"], "┃"]],
       [
         "any",
