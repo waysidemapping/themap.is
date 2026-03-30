@@ -19,5 +19,6 @@
         "juice",
         "pop",
         "soda"
-    ]
+    ],
+    "icon": "vending_machine_with_drink_can"
 }

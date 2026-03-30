@@ -4,6 +4,6 @@
     "tags": {
         "amenity": "vending_machine"
     },
-    "icon": "vending_machine",
+    "icon": "vending_machine_with_shelves",
     "matchScore": 0.9
 }

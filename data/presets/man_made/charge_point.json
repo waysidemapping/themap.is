@@ -13,5 +13,6 @@
         "charging station",
         "electric vehicle",
         "ev"
-    ]
+    ],
+    "icon": "charging_station_with_bolt"
 }

@@ -17,5 +17,6 @@
         "mail",
         "postage",
         "stamp"
-    ]
+    ],
+    "icon": "vending_machine_with_postage_stamp"
 }

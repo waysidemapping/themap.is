@@ -10,5 +10,6 @@
         "electric vehicle",
         "ev",
         "supercharger"
-    ]
+    ],
+    "icon": "charging_station_with_bolt"
 }

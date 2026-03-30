@@ -1,0 +1,16 @@
+{
+    "name": "pretzel shop",
+    "plural": "pretzel shops",
+    "tags": {
+        "amenity": "fast_food",
+        "cuisine": "pretzel"
+    },
+    "reference": {
+        "key": "cuisine",
+        "value": "pretzel"
+    },
+    "terms": [
+        "Brezel"
+    ],
+    "icon": "pretzel_with_salt"
+}

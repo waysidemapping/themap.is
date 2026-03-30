@@ -1,0 +1,13 @@
+{
+  "name": "Russian Orthodoxy",
+  "groupType": "theme",
+  "features": [
+    {
+      "tags": {
+        "religion": "christian",
+        "denomination": "russian_orthodox"
+      }
+    }
+  ],
+  "icon": "russian_orthodox_cross"
+}
