@@ -1,4 +1,4 @@
-import { colors } from './colors.js';
+import { colors } from './style/colors.js';
 import chroma from './../node_modules/chroma-js/index.js';
 
 const featureDefaultsByGroup = {

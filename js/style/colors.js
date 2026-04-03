@@ -36,6 +36,7 @@ export const colors = {
   highway_minor_high_zoom_stroke: "#fff",
   highway_minor_high_zoom_tunnel_stroke: "#e6e6e6",
   highway_casing: "#d0d0d0",
+  hillshade_shadow: "#ccc",
   ice_fill: "#FAFDFF",
   ice_outline: "#C2DEED",
   ice_text: "#6193AE",

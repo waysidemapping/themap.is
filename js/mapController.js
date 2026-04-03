@@ -1,4 +1,4 @@
-import { generateStyle } from './styleGenerator.js'; 
+import { generateStyle } from './style/styleGenerator.js'; 
 import { state } from "./stateController.js";
 import { ExtrusionControl } from './ui/ExtrusionControl.js';
 import { beefsteakProtocolFunction } from "https://cdn.jsdelivr.net/gh/waysidemapping/beefsteak-map-tiles/demo/src/beefsteak-protocol.js";

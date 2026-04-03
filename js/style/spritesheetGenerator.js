@@ -1,4 +1,4 @@
-import { getSvg } from './svgManager.js';
+import { getSvg } from '../svgManager.js';
 import potpack from 'https://cdn.skypack.dev/potpack';
 
 async function rasterizeIcons(icons, scale) {
