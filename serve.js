@@ -8,11 +8,14 @@ const port = 4417;
 
 http.createServer(function (request, response) {
     try {
-     
-        let requestUrl = url.parse(request.url)
 
-        // need to use path.normalize so people can't access directories underneath baseDirectory
-        let fsPath = baseDirectory + path.normalize(requestUrl.pathname)
+        const url = new URL(request.url, 'http://localhost');
+        const safePath = path.normalize(url.pathname);
+        let fsPath = path.join(baseDirectory, safePath);
+
+        if (!fsPath.startsWith(path.join(baseDirectory))) {
+          throw new Error('Invalid path');
+        }
 
         // default 404 page
         if(!fs.existsSync(fsPath)) fsPath = baseDirectory + '/404.html';
