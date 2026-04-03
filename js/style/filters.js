@@ -205,5 +205,7 @@ export const filters = {
     ["<=", ["to-number", ["get", "layer"], "0"], 0]
   ],
   is_watercourse: ["in", ["get", "waterway"], ["literal", ["canal", "ditch", "drain", "fish_pass", "river", "stream", "tidal_channel"]]],
+  is_waterway_network_edge: ["in", ["get", "waterway"], ["literal", ["canal", "ditch", "drain", "fairway", "fish_pass", "flowline", "link", "river", "stream", "tidal_channel"]]],
+  is_flowline: ["==", ["get", "waterway"], "flowline"],
   is_waterfall: ["==", ["get", "waterway"], "waterfall"],
 };

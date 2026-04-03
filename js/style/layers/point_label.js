@@ -301,7 +301,7 @@ export function getLayer(opts) {
         ], ["literal", ["Noto Serif Medium Italic"]],
         ["literal", ["Noto Sans Medium"]]
       ],
-      "text-letter-spacing":[
+      "text-letter-spacing": [
         "case",
         anyThemePointFeatureExp, 0,
         [
