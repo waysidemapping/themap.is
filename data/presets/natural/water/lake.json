@@ -1,7 +1,6 @@
 {
     "name": "lake",
     "plural": "lakes",
-    "autoTheme": false,
     "tags": {
         "natural": "water",
         "water": "lake"
@@ -17,5 +16,6 @@
         "lakelet",
         "loch",
         "mere"
-    ]
+    ],
+    "icon": "waters"
 }
