@@ -185,7 +185,7 @@ export const filters = {
   is_water_area_poi: [
     "any",
     ["in", ["get", "place"], ["literal", ["ocean", "sea"]]],
-    ["in", ["get", "natural"], ["literal", ["bay", "strait", "water"]]]
+    ["in", ["get", "natural"], ["literal", ["bay", "reef", "strait", "water"]]]
   ],
   is_water_coastal: ["==", ["get", "natural"], "coastline"],
   is_water_structure: [
